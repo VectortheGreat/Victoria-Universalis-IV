@@ -1,16 +1,10 @@
 window = {
-    name = "vegui"
+    name = "ve_religion"
     parentanchor = center
     layer = windows_layer
     size = { 100% 100% }
     using = Window_Background
     movable = no
-    state = {
-		name = 1
-		trigger_on_create = yes
-		on_start = "[GetVariableSystem.Clear('ve_last_tab')]"
-	}
-
     vbox = {
         layoutpolicy_horizontal = expanding
         layoutpolicy_vertical = expanding
@@ -27,7 +21,6 @@ window = {
             blockoverride "button_close"
             {
                 onclick = "[ExecuteConsoleCommand('gui.clearwidgets')]"
-                onclick = "[GetVariableSystem.Clear('ve_last_tab')]"
             }
         }
 
@@ -38,6 +31,8 @@ window = {
                 vbox = {
                     layoutpolicy_horizontal = expanding
                     layoutpolicy_vertical = expanding
+
+
                     tab_buttons_fullscreen = {
                         blockoverride "first_button" {
                             text = "IDEAS"
@@ -90,9 +85,54 @@ window = {
                             text = "MS_POPS"
                         }
                     }
-                    fancy_flag = {
-						datacontext = "[GetPlayer]"
-					}
+
+
+                    hbox = { 
+                        layoutpolicy_horizontal = expanding
+                        margin = { 0 20 }
+                        hbox = {
+                            using = main_bg
+                            vbox = {
+                                spacing = 10
+                                margin = { 0 10 }
+                                icon = {
+                                    texture = "gfx/interface/icons/\religion_icons/catholic.dds"
+                                    size = { 120 120 }
+                                }
+                                textbox = {
+                                    text = "catholic_religion"
+                                    using = fontsize_xxl
+                                    align = nobaseline
+                                    elide = left
+                                    autoresize = yes
+                                }
+                            }
+                        }
+                        hbox = {
+                            using = main_bg
+                            layoutpolicy_horizontal = expanding
+                            hbox = {
+                                margin = { 0 75 }
+                                spacing = 10
+                                layoutpolicy_horizontal = expanding
+                                textbox = {
+                                    text = "catholic_religion"
+                                    using = fontsize_xxl
+                                    align = nobaseline
+                                    elide = left
+                                    autoresize = yes
+                                }
+                                textbox = {
+                                    text = "catholic_religion"
+                                    using = fontsize_xxl
+                                    align = nobaseline
+                                    elide = left
+                                    autoresize = yes
+                                }
+                            }
+                        }
+                        
+                    }
                     expand = { }
                 }
             }

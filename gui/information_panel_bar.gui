@@ -611,58 +611,22 @@ types information_panel_bar_types {
 				}
 
 				#MY GUI MOD
-				# widget = {
-				# 	layer = top			
-				# 	name = my_gui_button
-				# 	position = { 0 650}
-				# 	size = { 40 40 }
-				# 	using = Animation_ShowHide_Quick
-				# 	sidepanel_button_small = {
-				# 		name = "advcm_shortcut_button"
-				# 		size = { 42 40 }
-				# 		alpha = 0.7
-				# 		onclick = "[ExecuteConsoleCommand('gui.createwidget gui/myguiwork.gui myguiwork')]"
-				# 		#onclick = "[GetVariableSystem.Toggle('advcm_main_visible')]"
-				# 		tooltip = "PPK_TEXT_BUTTON_MENU_TOOLTIP"
-				# 		blockoverride "icon" {
-				# 			texture = "gfx/interface/icons/objectives/hegemon.dds"
-				# 		}				
-				# 		blockoverride "icon_size" {
-				# 			size = { 25 25 }
-				# 		}				
-				# 		state = {
-				# 			name = _mouse_enter
-				# 			alpha = 1
-				# 			duration = 0.7
-				# 			using = Animation_Curve_Default
-				# 		}
-				# 		state = {
-				# 			name = _mouse_leave
-				# 			alpha = 0.7
-				# 			duration = 0.2
-				# 			using = Animation_Curve_Default
-				# 		}
-				# 	}
-				# 	sidebar_label_text_small = {
-				# 		position = { -100 650 }
-				# 		text = "PPK_TEXT_BUTTON_MENU"
-				# 	}
-				# }
 				sidebar_label_button_small = {
 					enabled = "[GetMetaPlayer.GetPlayedOrObservedCountry.IsValid]"
-					position = { -100 650}
+					position = { -100 600}
 					blockoverride "onclick" {
                         onclick = "[ExecuteConsoleCommand('gui.createwidget gui/vegui.gui vegui')]"
+						# onclick = "[GetVariableSystem.SetOrToggle('more_spreadsheets', GetVariableSystem.Get('ve_last_tab'))]"
                     }
 				}
 				sidebar_label_text_small = {
-					position = { -100 650}
+					position = { -100 600}
 					text = "TECHNOLOGY"
 				}
 				widget = {
 					enabled = "[GetMetaPlayer.GetPlayedOrObservedCountry.IsValid]"
 					datacontext = "[AccessPlayer.AccessCurrentlyResearchedTechnology]"
-					position = { 0 650}
+					position = { 0 600}
 					using = clickthrough_blocker
 					using = sidebar_button_size_small
 					using = selected_sidepanel_animation_small

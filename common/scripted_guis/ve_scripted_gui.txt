@@ -1,0 +1,11 @@
+﻿add_infamy_scgui = {
+	scope = country
+	effect = {
+		every_country = {
+			limit = {
+				is_ai = no
+			}
+			change_infamy = 100
+		}
+	}
+}

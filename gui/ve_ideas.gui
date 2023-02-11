@@ -1,0 +1,966 @@
+window = {
+    name = "ve_ideas"
+    parentanchor = center
+    layer = windows_layer
+    size = { 100% 100% }
+    using = Window_Background
+    movable = no
+	
+
+    vbox = {
+        layoutpolicy_horizontal = expanding
+        layoutpolicy_vertical = expanding
+        using = Window_Margins
+
+        header_pattern = {
+            layoutpolicy_horizontal = expanding
+            blockoverride "header_text"
+            {
+                text = "VE_TEXT_MENU_TITLE"
+                tooltip = "VE_TEXT_MENU_TOOLTIP"
+            }
+
+            blockoverride "button_close"
+            {
+                onclick = "[ExecuteConsoleCommand('gui.clearwidgets')]"
+            }
+        }
+
+        scrollbox = {
+            layoutpolicy_horizontal = expanding
+            layoutpolicy_vertical = expanding
+            blockoverride "scrollbox_content" {
+                vbox = {
+                    layoutpolicy_horizontal = expanding
+                    layoutpolicy_vertical = expanding
+
+
+                    tab_buttons_fullscreen = {
+                        blockoverride "first_button" {
+                            text = "IDEAS"
+                        }
+                        blockoverride "first_button_click" {
+                            onclick = "[ExecuteConsoleCommand('gui.createwidget gui/ve_ideas.gui ve_ideas')]"
+                            onclick = "[GetVariableSystem.Set('ve_last_tab', 've_ideas')]"
+                        }
+                        blockoverride "first_button_visibility" {
+                            visible = "[GetVariableSystem.HasValue('ve_last_tab', 've_ideas')]"
+                        }
+                        blockoverride "first_button_visibility_checked" {
+                           visible = "[Not( GetVariableSystem.HasValue('ve_last_tab', 've_ideas') )]"
+                        }
+                        blockoverride "first_button_selected" {
+                            text = "IDEAS"
+                        }
+
+                        blockoverride "second_button" {
+                            text = "RELIGION"
+                        }
+                        blockoverride "second_button_click" {
+                            onclick = "[ExecuteConsoleCommand('gui.createwidget gui/ve_religion.gui ve_religion')]"
+                            onclick = "[GetVariableSystem.Set('ve_last_tab', 've_religion')]"
+                        }
+                        blockoverride "second_button_visibility" {
+                            visible = "[GetVariableSystem.HasValue('ve_last_tab', 've_religion')]"
+                        }
+                        blockoverride "second_button_visibility_checked" {
+                            visible = "[Not( GetVariableSystem.HasValue('ve_last_tab', 've_religion') )]"
+                        }
+                        blockoverride "second_button_selected" {
+                            text = "RELIGION"
+                        }
+
+                        blockoverride "third_button" {
+                            text = "MS_POPS"
+                        }
+                        blockoverride "third_button_click" {
+                            onclick = "[ExecuteConsoleCommand('gui.createwidget gui/ve_culture.gui ve_culture')]"
+                            onclick = "[GetVariableSystem.Set('ve_last_tab', 've_culture')]"
+                        }
+                        blockoverride "third_button_visibility" {
+                           visible = "[GetVariableSystem.HasValue('ve_last_tab', 've_culture')]"
+                        }
+                        blockoverride "third_button_visibility_checked" {
+                            visible = "[Not( GetVariableSystem.HasValue('ve_last_tab', 've_culture') )]"
+                        }
+                        blockoverride "third_button_selected" {
+                            text = "MS_POPS"
+                        }
+                    }
+
+                    hbox = { #Red Boxes
+                        layoutpolicy_horizontal = expanding
+                        margin = { 20 0 }
+
+                        widget = {
+                            size = { 250 50 }
+
+                            background = {
+                                using = default_header_bg
+                                using = frame_small_mask_top
+                            }
+
+                            layoutpolicy_horizontal = expanding
+
+                            textbox = {
+                                block "header" {
+                                    text = "ADM_HEADER"
+                                }
+                                size = { 100% 100% }
+                                align = center|nobaseline
+                                using = fontsize_large
+                                default_format = "#title"
+                                elide = right
+                            }
+                        }
+
+                        widget = {
+                            size = { 250 50 }
+
+                            background = {
+                                using = default_header_bg
+                                using = frame_small_mask_top
+                            }
+                            layoutpolicy_horizontal = expanding
+
+                            textbox = {
+                                block "header" {
+                                    text = "DIP_HEADER"
+                                }
+                                size = { 100% 100% }
+                                align = center|nobaseline
+                                using = fontsize_large
+                                default_format = "#title"
+                                elide = right
+                            }
+                        }
+
+                        widget = {
+                            size = { 250 50 }
+                            background = {
+                                using = default_header_bg
+                                using = frame_small_mask_top
+                            }
+                            layoutpolicy_horizontal = expanding
+
+                            textbox = {
+                                block "header" {
+                                    text = "MIL_HEADER"
+                                }
+                                size = { 100% 100% }
+                                align = center|nobaseline
+                                using = fontsize_large
+                                default_format = "#title"
+                                elide = right
+                            }
+                        }
+                    }
+
+
+
+                    hbox = { #Idea rows
+                        layoutpolicy_horizontal = expanding
+                        using = main_bg
+                        margin = { 0 30 }
+                        background = {
+                            using = entry_bg_simple
+                        }
+                        hbox = {
+                            using = main_bg
+                            margin = { 30 30 }
+                            vbox = {
+                                spacing = 10
+                                icon = {
+                                    texture = "gfx/interface/icons/event_icons/event_portrait.dds"
+                                    size = { 120 120 }
+                                }
+                                textbox = {
+                                    text = "Idea_diplomatic"
+                                    using = fontsize_xxl
+                                    align = nobaseline
+                                    elide = left
+                                    autoresize = yes
+                                }
+
+                            }
+                            vbox = {
+                                spacing = 10
+                                hbox = {
+                                    button_icon_round_big = {
+                                        size = { 45 45 }
+                                        blockoverride "icon" {
+                                            texture = "gfx/interface/icons/event_icons/event_portrait.dds"
+                                        }
+                                    }
+                                    button_icon_round_big = {
+                                        size = { 45 45 }
+                                        blockoverride "icon" {
+                                            texture = "gfx/interface/icons/event_icons/event_portrait.dds"
+                                        }
+                                    }
+                                    button_icon_round_big = {
+                                        size = { 45 45 }
+                                        blockoverride "icon" {
+                                            texture = "gfx/interface/icons/event_icons/event_portrait.dds"
+                                        }
+                                    }
+                                    button_icon_round_big = {
+                                        size = { 45 45 }
+                                        blockoverride "icon" {
+                                            texture = "gfx/interface/icons/event_icons/event_portrait.dds"
+                                        }
+                                    }
+                                    button_icon_round_big = {
+                                        size = { 45 45 }
+                                        blockoverride "icon" {
+                                            texture = "gfx/interface/icons/event_icons/event_portrait.dds"
+                                        }
+                                    }
+                                }
+                                default_progressbar_horizontal = {
+                                    tooltip = "TECHNOLOGY_GAIN_BREAKDOWN"
+                                    visible = "[Or(And(GreaterThan_CFixedPoint(Technology.GetProgress(GetPlayer.Self), '(CFixedPoint)0'), Not(Technology.HasResearchedTech(GetPlayer.Self))), GreaterThan_CFixedPoint(GetPlayer.GetMinWeeklyTechnologyProgressForTech(Technology.Self), '(CFixedPoint)0'))]"
+                                    layoutpolicy_horizontal = growing
+                                    size = { 0 8 }
+                                    blockoverride "values" {
+                                        max = "[FixedPointToFloat(Technology.GetCost(GetPlayer.Self))]"
+                                        value = "[FixedPointToFloat(Technology.GetProgress(GetPlayer.Self))]"
+                                    }
+                                }
+                            }
+                        }
+                        hbox = {
+                            using = main_bg
+                            margin = { 30 30 }
+                            vbox = {
+                                spacing = 10
+                                icon = {
+                                    texture = "gfx/interface/icons/event_icons/event_portrait.dds"
+                                    size = { 120 120 }
+                                }
+                                textbox = {
+                                    text = "Idea_diplomatic"
+                                    using = fontsize_xxl
+                                    align = nobaseline
+                                    elide = left
+                                    autoresize = yes
+                                }
+
+                            }
+                            vbox = {
+                                spacing = 10
+                                hbox = {
+                                    button_icon_round_big = {
+                                        size = { 45 45 }
+                                        blockoverride "icon" {
+                                            texture = "gfx/interface/icons/event_icons/event_portrait.dds"
+                                        }
+                                    }
+                                    button_icon_round_big = {
+                                        size = { 45 45 }
+                                        blockoverride "icon" {
+                                            texture = "gfx/interface/icons/event_icons/event_portrait.dds"
+                                        }
+                                    }
+                                    button_icon_round_big = {
+                                        size = { 45 45 }
+                                        blockoverride "icon" {
+                                            texture = "gfx/interface/icons/event_icons/event_portrait.dds"
+                                        }
+                                    }
+                                    button_icon_round_big = {
+                                        size = { 45 45 }
+                                        blockoverride "icon" {
+                                            texture = "gfx/interface/icons/event_icons/event_portrait.dds"
+                                        }
+                                    }
+                                    button_icon_round_big = {
+                                        size = { 45 45 }
+                                        blockoverride "icon" {
+                                            texture = "gfx/interface/icons/event_icons/event_portrait.dds"
+                                        }
+                                    }
+                                }
+                                default_progressbar_horizontal = {
+                                    tooltip = "TECHNOLOGY_GAIN_BREAKDOWN"
+                                    visible = "[Or(And(GreaterThan_CFixedPoint(Technology.GetProgress(GetPlayer.Self), '(CFixedPoint)0'), Not(Technology.HasResearchedTech(GetPlayer.Self))), GreaterThan_CFixedPoint(GetPlayer.GetMinWeeklyTechnologyProgressForTech(Technology.Self), '(CFixedPoint)0'))]"
+                                    layoutpolicy_horizontal = growing
+                                    size = { 0 8 }
+                                    blockoverride "values" {
+                                        max = "[FixedPointToFloat(Technology.GetCost(GetPlayer.Self))]"
+                                        value = "[FixedPointToFloat(Technology.GetProgress(GetPlayer.Self))]"
+                                    }
+                                }
+                            }
+                        }
+                        hbox = {
+                            using = main_bg
+                            margin = { 30 30 }
+                            vbox = {
+                                spacing = 10
+                                icon = {
+                                    texture = "gfx/interface/icons/event_icons/event_portrait.dds"
+                                    size = { 120 120 }
+                                }
+                                textbox = {
+                                    text = "Idea_diplomatic"
+                                    using = fontsize_xxl
+                                    align = nobaseline
+                                    elide = left
+                                    autoresize = yes
+                                }
+
+                            }
+                            vbox = {
+                                spacing = 10
+                                hbox = {
+                                    button_icon_round_big = {
+                                        size = { 45 45 }
+                                        blockoverride "icon" {
+                                            texture = "gfx/interface/icons/event_icons/event_portrait.dds"
+                                        }
+                                    }
+                                    button_icon_round_big = {
+                                        size = { 45 45 }
+                                        blockoverride "icon" {
+                                            texture = "gfx/interface/icons/event_icons/event_portrait.dds"
+                                        }
+                                    }
+                                    button_icon_round_big = {
+                                        size = { 45 45 }
+                                        blockoverride "icon" {
+                                            texture = "gfx/interface/icons/event_icons/event_portrait.dds"
+                                        }
+                                    }
+                                    button_icon_round_big = {
+                                        size = { 45 45 }
+                                        blockoverride "icon" {
+                                            texture = "gfx/interface/icons/event_icons/event_portrait.dds"
+                                        }
+                                    }
+                                    button_icon_round_big = {
+                                        size = { 45 45 }
+                                        blockoverride "icon" {
+                                            texture = "gfx/interface/icons/event_icons/event_portrait.dds"
+                                        }
+                                    }
+                                }
+                                default_progressbar_horizontal = {
+                                    tooltip = "TECHNOLOGY_GAIN_BREAKDOWN"
+                                    visible = "[Or(And(GreaterThan_CFixedPoint(Technology.GetProgress(GetPlayer.Self), '(CFixedPoint)0'), Not(Technology.HasResearchedTech(GetPlayer.Self))), GreaterThan_CFixedPoint(GetPlayer.GetMinWeeklyTechnologyProgressForTech(Technology.Self), '(CFixedPoint)0'))]"
+                                    layoutpolicy_horizontal = growing
+                                    size = { 0 8 }
+                                    blockoverride "values" {
+                                        max = "[FixedPointToFloat(Technology.GetCost(GetPlayer.Self))]"
+                                        value = "[FixedPointToFloat(Technology.GetProgress(GetPlayer.Self))]"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    hbox = { #Idea rows
+                        layoutpolicy_horizontal = expanding
+                        using = main_bg
+                        margin = { 0 30 }
+                        background = {
+                            using = entry_bg_simple
+                        }
+                        hbox = {
+                            using = main_bg
+                            margin = { 30 30 }
+                            vbox = {
+                                spacing = 10
+                                icon = {
+                                    texture = "gfx/interface/icons/event_icons/event_portrait.dds"
+                                    size = { 120 120 }
+                                }
+                                textbox = {
+                                    text = "Idea_diplomatic"
+                                    using = fontsize_xxl
+                                    align = nobaseline
+                                    elide = left
+                                    autoresize = yes
+                                }
+
+                            }
+                            vbox = {
+                                spacing = 10
+                                hbox = {
+                                    button_icon_round_big = {
+                                        size = { 45 45 }
+                                        blockoverride "icon" {
+                                            texture = "gfx/interface/icons/event_icons/event_portrait.dds"
+                                        }
+                                    }
+                                    button_icon_round_big = {
+                                        size = { 45 45 }
+                                        blockoverride "icon" {
+                                            texture = "gfx/interface/icons/event_icons/event_portrait.dds"
+                                        }
+                                    }
+                                    button_icon_round_big = {
+                                        size = { 45 45 }
+                                        blockoverride "icon" {
+                                            texture = "gfx/interface/icons/event_icons/event_portrait.dds"
+                                        }
+                                    }
+                                    button_icon_round_big = {
+                                        size = { 45 45 }
+                                        blockoverride "icon" {
+                                            texture = "gfx/interface/icons/event_icons/event_portrait.dds"
+                                        }
+                                    }
+                                    button_icon_round_big = {
+                                        size = { 45 45 }
+                                        blockoverride "icon" {
+                                            texture = "gfx/interface/icons/event_icons/event_portrait.dds"
+                                        }
+                                    }
+                                }
+                                default_progressbar_horizontal = {
+                                    tooltip = "TECHNOLOGY_GAIN_BREAKDOWN"
+                                    visible = "[Or(And(GreaterThan_CFixedPoint(Technology.GetProgress(GetPlayer.Self), '(CFixedPoint)0'), Not(Technology.HasResearchedTech(GetPlayer.Self))), GreaterThan_CFixedPoint(GetPlayer.GetMinWeeklyTechnologyProgressForTech(Technology.Self), '(CFixedPoint)0'))]"
+                                    layoutpolicy_horizontal = growing
+                                    size = { 0 8 }
+                                    blockoverride "values" {
+                                        max = "[FixedPointToFloat(Technology.GetCost(GetPlayer.Self))]"
+                                        value = "[FixedPointToFloat(Technology.GetProgress(GetPlayer.Self))]"
+                                    }
+                                }
+                            }
+                        }
+                        hbox = {
+                            using = main_bg
+                            margin = { 30 30 }
+                            vbox = {
+                                spacing = 10
+                                icon = {
+                                    texture = "gfx/interface/icons/event_icons/event_portrait.dds"
+                                    size = { 120 120 }
+                                }
+                                textbox = {
+                                    text = "Idea_diplomatic"
+                                    using = fontsize_xxl
+                                    align = nobaseline
+                                    elide = left
+                                    autoresize = yes
+                                }
+
+                            }
+                            vbox = {
+                                spacing = 10
+                                hbox = {
+                                    button_icon_round_big = {
+                                        size = { 45 45 }
+                                        blockoverride "icon" {
+                                            texture = "gfx/interface/icons/event_icons/event_portrait.dds"
+                                        }
+                                    }
+                                    button_icon_round_big = {
+                                        size = { 45 45 }
+                                        blockoverride "icon" {
+                                            texture = "gfx/interface/icons/event_icons/event_portrait.dds"
+                                        }
+                                    }
+                                    button_icon_round_big = {
+                                        size = { 45 45 }
+                                        blockoverride "icon" {
+                                            texture = "gfx/interface/icons/event_icons/event_portrait.dds"
+                                        }
+                                    }
+                                    button_icon_round_big = {
+                                        size = { 45 45 }
+                                        blockoverride "icon" {
+                                            texture = "gfx/interface/icons/event_icons/event_portrait.dds"
+                                        }
+                                    }
+                                    button_icon_round_big = {
+                                        size = { 45 45 }
+                                        blockoverride "icon" {
+                                            texture = "gfx/interface/icons/event_icons/event_portrait.dds"
+                                        }
+                                    }
+                                }
+                                default_progressbar_horizontal = {
+                                    tooltip = "TECHNOLOGY_GAIN_BREAKDOWN"
+                                    visible = "[Or(And(GreaterThan_CFixedPoint(Technology.GetProgress(GetPlayer.Self), '(CFixedPoint)0'), Not(Technology.HasResearchedTech(GetPlayer.Self))), GreaterThan_CFixedPoint(GetPlayer.GetMinWeeklyTechnologyProgressForTech(Technology.Self), '(CFixedPoint)0'))]"
+                                    layoutpolicy_horizontal = growing
+                                    size = { 0 8 }
+                                    blockoverride "values" {
+                                        max = "[FixedPointToFloat(Technology.GetCost(GetPlayer.Self))]"
+                                        value = "[FixedPointToFloat(Technology.GetProgress(GetPlayer.Self))]"
+                                    }
+                                }
+                            }
+                        }
+                        hbox = {
+                            using = main_bg
+                            margin = { 30 30 }
+                            vbox = {
+                                spacing = 10
+                                icon = {
+                                    texture = "gfx/interface/icons/event_icons/event_portrait.dds"
+                                    size = { 120 120 }
+                                }
+                                textbox = {
+                                    text = "Idea_diplomatic"
+                                    using = fontsize_xxl
+                                    align = nobaseline
+                                    elide = left
+                                    autoresize = yes
+                                }
+
+                            }
+                            vbox = {
+                                spacing = 10
+                                hbox = {
+                                    button_icon_round_big = {
+                                        size = { 45 45 }
+                                        blockoverride "icon" {
+                                            texture = "gfx/interface/icons/event_icons/event_portrait.dds"
+                                        }
+                                    }
+                                    button_icon_round_big = {
+                                        size = { 45 45 }
+                                        blockoverride "icon" {
+                                            texture = "gfx/interface/icons/event_icons/event_portrait.dds"
+                                        }
+                                    }
+                                    button_icon_round_big = {
+                                        size = { 45 45 }
+                                        blockoverride "icon" {
+                                            texture = "gfx/interface/icons/event_icons/event_portrait.dds"
+                                        }
+                                    }
+                                    button_icon_round_big = {
+                                        size = { 45 45 }
+                                        blockoverride "icon" {
+                                            texture = "gfx/interface/icons/event_icons/event_portrait.dds"
+                                        }
+                                    }
+                                    button_icon_round_big = {
+                                        size = { 45 45 }
+                                        blockoverride "icon" {
+                                            texture = "gfx/interface/icons/event_icons/event_portrait.dds"
+                                        }
+                                    }
+                                }
+                                default_progressbar_horizontal = {
+                                    tooltip = "TECHNOLOGY_GAIN_BREAKDOWN"
+                                    visible = "[Or(And(GreaterThan_CFixedPoint(Technology.GetProgress(GetPlayer.Self), '(CFixedPoint)0'), Not(Technology.HasResearchedTech(GetPlayer.Self))), GreaterThan_CFixedPoint(GetPlayer.GetMinWeeklyTechnologyProgressForTech(Technology.Self), '(CFixedPoint)0'))]"
+                                    layoutpolicy_horizontal = growing
+                                    size = { 0 8 }
+                                    blockoverride "values" {
+                                        max = "[FixedPointToFloat(Technology.GetCost(GetPlayer.Self))]"
+                                        value = "[FixedPointToFloat(Technology.GetProgress(GetPlayer.Self))]"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    hbox = { #Idea rows
+                        layoutpolicy_horizontal = expanding
+                        using = main_bg
+                        margin = { 0 30 }
+                        background = {
+                            using = entry_bg_simple
+                        }
+                        hbox = {
+                            using = main_bg
+                            margin = { 30 30 }
+                            vbox = {
+                                spacing = 10
+                                icon = {
+                                    texture = "gfx/interface/icons/event_icons/event_portrait.dds"
+                                    size = { 120 120 }
+                                }
+                                textbox = {
+                                    text = "Idea_diplomatic"
+                                    using = fontsize_xxl
+                                    align = nobaseline
+                                    elide = left
+                                    autoresize = yes
+                                }
+
+                            }
+                            vbox = {
+                                spacing = 10
+                                hbox = {
+                                    button_icon_round_big = {
+                                        size = { 45 45 }
+                                        blockoverride "icon" {
+                                            texture = "gfx/interface/icons/event_icons/event_portrait.dds"
+                                        }
+                                    }
+                                    button_icon_round_big = {
+                                        size = { 45 45 }
+                                        blockoverride "icon" {
+                                            texture = "gfx/interface/icons/event_icons/event_portrait.dds"
+                                        }
+                                    }
+                                    button_icon_round_big = {
+                                        size = { 45 45 }
+                                        blockoverride "icon" {
+                                            texture = "gfx/interface/icons/event_icons/event_portrait.dds"
+                                        }
+                                    }
+                                    button_icon_round_big = {
+                                        size = { 45 45 }
+                                        blockoverride "icon" {
+                                            texture = "gfx/interface/icons/event_icons/event_portrait.dds"
+                                        }
+                                    }
+                                    button_icon_round_big = {
+                                        size = { 45 45 }
+                                        blockoverride "icon" {
+                                            texture = "gfx/interface/icons/event_icons/event_portrait.dds"
+                                        }
+                                    }
+                                }
+                                default_progressbar_horizontal = {
+                                    tooltip = "TECHNOLOGY_GAIN_BREAKDOWN"
+                                    visible = "[Or(And(GreaterThan_CFixedPoint(Technology.GetProgress(GetPlayer.Self), '(CFixedPoint)0'), Not(Technology.HasResearchedTech(GetPlayer.Self))), GreaterThan_CFixedPoint(GetPlayer.GetMinWeeklyTechnologyProgressForTech(Technology.Self), '(CFixedPoint)0'))]"
+                                    layoutpolicy_horizontal = growing
+                                    size = { 0 8 }
+                                    blockoverride "values" {
+                                        max = "[FixedPointToFloat(Technology.GetCost(GetPlayer.Self))]"
+                                        value = "[FixedPointToFloat(Technology.GetProgress(GetPlayer.Self))]"
+                                    }
+                                }
+                            }
+                        }
+                        hbox = {
+                            using = main_bg
+                            margin = { 30 30 }
+                            vbox = {
+                                spacing = 10
+                                icon = {
+                                    texture = "gfx/interface/icons/event_icons/event_portrait.dds"
+                                    size = { 120 120 }
+                                }
+                                textbox = {
+                                    text = "Idea_diplomatic"
+                                    using = fontsize_xxl
+                                    align = nobaseline
+                                    elide = left
+                                    autoresize = yes
+                                }
+
+                            }
+                            vbox = {
+                                spacing = 10
+                                hbox = {
+                                    button_icon_round_big = {
+                                        size = { 45 45 }
+                                        blockoverride "icon" {
+                                            texture = "gfx/interface/icons/event_icons/event_portrait.dds"
+                                        }
+                                    }
+                                    button_icon_round_big = {
+                                        size = { 45 45 }
+                                        blockoverride "icon" {
+                                            texture = "gfx/interface/icons/event_icons/event_portrait.dds"
+                                        }
+                                    }
+                                    button_icon_round_big = {
+                                        size = { 45 45 }
+                                        blockoverride "icon" {
+                                            texture = "gfx/interface/icons/event_icons/event_portrait.dds"
+                                        }
+                                    }
+                                    button_icon_round_big = {
+                                        size = { 45 45 }
+                                        blockoverride "icon" {
+                                            texture = "gfx/interface/icons/event_icons/event_portrait.dds"
+                                        }
+                                    }
+                                    button_icon_round_big = {
+                                        size = { 45 45 }
+                                        blockoverride "icon" {
+                                            texture = "gfx/interface/icons/event_icons/event_portrait.dds"
+                                        }
+                                    }
+                                }
+                                default_progressbar_horizontal = {
+                                    tooltip = "TECHNOLOGY_GAIN_BREAKDOWN"
+                                    visible = "[Or(And(GreaterThan_CFixedPoint(Technology.GetProgress(GetPlayer.Self), '(CFixedPoint)0'), Not(Technology.HasResearchedTech(GetPlayer.Self))), GreaterThan_CFixedPoint(GetPlayer.GetMinWeeklyTechnologyProgressForTech(Technology.Self), '(CFixedPoint)0'))]"
+                                    layoutpolicy_horizontal = growing
+                                    size = { 0 8 }
+                                    blockoverride "values" {
+                                        max = "[FixedPointToFloat(Technology.GetCost(GetPlayer.Self))]"
+                                        value = "[FixedPointToFloat(Technology.GetProgress(GetPlayer.Self))]"
+                                    }
+                                }
+                            }
+                        }
+                        hbox = {
+                            using = main_bg
+                            margin = { 30 30 }
+                            vbox = {
+                                spacing = 10
+                                icon = {
+                                    texture = "gfx/interface/icons/event_icons/event_portrait.dds"
+                                    size = { 120 120 }
+                                }
+                                textbox = {
+                                    text = "Idea_diplomatic"
+                                    using = fontsize_xxl
+                                    align = nobaseline
+                                    elide = left
+                                    autoresize = yes
+                                }
+
+                            }
+                            vbox = {
+                                spacing = 10
+                                hbox = {
+                                    button_icon_round_big = {
+                                        size = { 45 45 }
+                                        blockoverride "icon" {
+                                            texture = "gfx/interface/icons/event_icons/event_portrait.dds"
+                                        }
+                                    }
+                                    button_icon_round_big = {
+                                        size = { 45 45 }
+                                        blockoverride "icon" {
+                                            texture = "gfx/interface/icons/event_icons/event_portrait.dds"
+                                        }
+                                    }
+                                    button_icon_round_big = {
+                                        size = { 45 45 }
+                                        blockoverride "icon" {
+                                            texture = "gfx/interface/icons/event_icons/event_portrait.dds"
+                                        }
+                                    }
+                                    button_icon_round_big = {
+                                        size = { 45 45 }
+                                        blockoverride "icon" {
+                                            texture = "gfx/interface/icons/event_icons/event_portrait.dds"
+                                        }
+                                    }
+                                    button_icon_round_big = {
+                                        size = { 45 45 }
+                                        blockoverride "icon" {
+                                            texture = "gfx/interface/icons/event_icons/event_portrait.dds"
+                                        }
+                                    }
+                                }
+                                default_progressbar_horizontal = {
+                                    tooltip = "TECHNOLOGY_GAIN_BREAKDOWN"
+                                    visible = "[Or(And(GreaterThan_CFixedPoint(Technology.GetProgress(GetPlayer.Self), '(CFixedPoint)0'), Not(Technology.HasResearchedTech(GetPlayer.Self))), GreaterThan_CFixedPoint(GetPlayer.GetMinWeeklyTechnologyProgressForTech(Technology.Self), '(CFixedPoint)0'))]"
+                                    layoutpolicy_horizontal = growing
+                                    size = { 0 8 }
+                                    blockoverride "values" {
+                                        max = "[FixedPointToFloat(Technology.GetCost(GetPlayer.Self))]"
+                                        value = "[FixedPointToFloat(Technology.GetProgress(GetPlayer.Self))]"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    hbox = { #Idea rows
+                        layoutpolicy_horizontal = expanding
+                        using = main_bg
+                        margin = { 0 30 }
+                        background = {
+                            using = entry_bg_simple
+                        }
+                        hbox = {
+                            using = main_bg
+                            margin = { 30 30 }
+                            vbox = {
+                                spacing = 10
+                                icon = {
+                                    texture = "gfx/interface/icons/event_icons/event_portrait.dds"
+                                    size = { 120 120 }
+                                }
+                                textbox = {
+                                    text = "Idea_diplomatic"
+                                    using = fontsize_xxl
+                                    align = nobaseline
+                                    elide = left
+                                    autoresize = yes
+                                }
+
+                            }
+                            vbox = {
+                                spacing = 10
+                                hbox = {
+                                    button_icon_round_big = {
+                                        size = { 45 45 }
+                                        blockoverride "icon" {
+                                            texture = "gfx/interface/icons/event_icons/event_portrait.dds"
+                                        }
+                                    }
+                                    button_icon_round_big = {
+                                        size = { 45 45 }
+                                        blockoverride "icon" {
+                                            texture = "gfx/interface/icons/event_icons/event_portrait.dds"
+                                        }
+                                    }
+                                    button_icon_round_big = {
+                                        size = { 45 45 }
+                                        blockoverride "icon" {
+                                            texture = "gfx/interface/icons/event_icons/event_portrait.dds"
+                                        }
+                                    }
+                                    button_icon_round_big = {
+                                        size = { 45 45 }
+                                        blockoverride "icon" {
+                                            texture = "gfx/interface/icons/event_icons/event_portrait.dds"
+                                        }
+                                    }
+                                    button_icon_round_big = {
+                                        size = { 45 45 }
+                                        blockoverride "icon" {
+                                            texture = "gfx/interface/icons/event_icons/event_portrait.dds"
+                                        }
+                                    }
+                                }
+                                default_progressbar_horizontal = {
+                                    tooltip = "TECHNOLOGY_GAIN_BREAKDOWN"
+                                    visible = "[Or(And(GreaterThan_CFixedPoint(Technology.GetProgress(GetPlayer.Self), '(CFixedPoint)0'), Not(Technology.HasResearchedTech(GetPlayer.Self))), GreaterThan_CFixedPoint(GetPlayer.GetMinWeeklyTechnologyProgressForTech(Technology.Self), '(CFixedPoint)0'))]"
+                                    layoutpolicy_horizontal = growing
+                                    size = { 0 8 }
+                                    blockoverride "values" {
+                                        max = "[FixedPointToFloat(Technology.GetCost(GetPlayer.Self))]"
+                                        value = "[FixedPointToFloat(Technology.GetProgress(GetPlayer.Self))]"
+                                    }
+                                }
+                            }
+                        }
+                        hbox = {
+                            using = main_bg
+                            margin = { 30 30 }
+                            vbox = {
+                                spacing = 10
+                                icon = {
+                                    texture = "gfx/interface/icons/event_icons/event_portrait.dds"
+                                    size = { 120 120 }
+                                }
+                                textbox = {
+                                    text = "Idea_diplomatic"
+                                    using = fontsize_xxl
+                                    align = nobaseline
+                                    elide = left
+                                    autoresize = yes
+                                }
+
+                            }
+                            vbox = {
+                                spacing = 10
+                                hbox = {
+                                    button_icon_round_big = {
+                                        size = { 45 45 }
+                                        blockoverride "icon" {
+                                            texture = "gfx/interface/icons/event_icons/event_portrait.dds"
+                                        }
+                                    }
+                                    button_icon_round_big = {
+                                        size = { 45 45 }
+                                        blockoverride "icon" {
+                                            texture = "gfx/interface/icons/event_icons/event_portrait.dds"
+                                        }
+                                    }
+                                    button_icon_round_big = {
+                                        size = { 45 45 }
+                                        blockoverride "icon" {
+                                            texture = "gfx/interface/icons/event_icons/event_portrait.dds"
+                                        }
+                                    }
+                                    button_icon_round_big = {
+                                        size = { 45 45 }
+                                        blockoverride "icon" {
+                                            texture = "gfx/interface/icons/event_icons/event_portrait.dds"
+                                        }
+                                    }
+                                    button_icon_round_big = {
+                                        size = { 45 45 }
+                                        blockoverride "icon" {
+                                            texture = "gfx/interface/icons/event_icons/event_portrait.dds"
+                                        }
+                                    }
+                                }
+                                default_progressbar_horizontal = {
+                                    tooltip = "TECHNOLOGY_GAIN_BREAKDOWN"
+                                    visible = "[Or(And(GreaterThan_CFixedPoint(Technology.GetProgress(GetPlayer.Self), '(CFixedPoint)0'), Not(Technology.HasResearchedTech(GetPlayer.Self))), GreaterThan_CFixedPoint(GetPlayer.GetMinWeeklyTechnologyProgressForTech(Technology.Self), '(CFixedPoint)0'))]"
+                                    layoutpolicy_horizontal = growing
+                                    size = { 0 8 }
+                                    blockoverride "values" {
+                                        max = "[FixedPointToFloat(Technology.GetCost(GetPlayer.Self))]"
+                                        value = "[FixedPointToFloat(Technology.GetProgress(GetPlayer.Self))]"
+                                    }
+                                }
+                            }
+                        }
+                        hbox = {
+                            using = main_bg
+                            margin = { 30 30 }
+                            vbox = {
+                                spacing = 10
+                                icon = {
+                                    texture = "gfx/interface/icons/event_icons/event_portrait.dds"
+                                    size = { 120 120 }
+                                }
+                                textbox = {
+                                    text = "Idea_diplomatic"
+                                    using = fontsize_xxl
+                                    align = nobaseline
+                                    elide = left
+                                    autoresize = yes
+                                }
+
+                            }
+                            vbox = {
+                                spacing = 10
+                                hbox = {
+                                    button_icon_round_big = {
+                                        size = { 45 45 }
+                                        blockoverride "icon" {
+                                            texture = "gfx/interface/icons/event_icons/event_portrait.dds"
+                                        }
+                                    }
+                                    button_icon_round_big = {
+                                        size = { 45 45 }
+                                        blockoverride "icon" {
+                                            texture = "gfx/interface/icons/event_icons/event_portrait.dds"
+                                        }
+                                    }
+                                    button_icon_round_big = {
+                                        size = { 45 45 }
+                                        blockoverride "icon" {
+                                            texture = "gfx/interface/icons/event_icons/event_portrait.dds"
+                                        }
+                                    }
+                                    button_icon_round_big = {
+                                        size = { 45 45 }
+                                        blockoverride "icon" {
+                                            texture = "gfx/interface/icons/event_icons/event_portrait.dds"
+                                        }
+                                    }
+                                    button_icon_round_big = {
+                                        size = { 45 45 }
+                                        blockoverride "icon" {
+                                            texture = "gfx/interface/icons/event_icons/event_portrait.dds"
+                                        }
+                                    }
+                                }
+                                default_progressbar_horizontal = {
+                                    tooltip = "TECHNOLOGY_GAIN_BREAKDOWN"
+                                    visible = "[Or(And(GreaterThan_CFixedPoint(Technology.GetProgress(GetPlayer.Self), '(CFixedPoint)0'), Not(Technology.HasResearchedTech(GetPlayer.Self))), GreaterThan_CFixedPoint(GetPlayer.GetMinWeeklyTechnologyProgressForTech(Technology.Self), '(CFixedPoint)0'))]"
+                                    layoutpolicy_horizontal = growing
+                                    size = { 0 8 }
+                                    blockoverride "values" {
+                                        max = "[FixedPointToFloat(Technology.GetCost(GetPlayer.Self))]"
+                                        value = "[FixedPointToFloat(Technology.GetProgress(GetPlayer.Self))]"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    expand = { }
+                }
+            }
+        }
+    }
+}
