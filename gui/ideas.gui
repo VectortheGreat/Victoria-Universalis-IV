@@ -1,0 +1,746 @@
+@secondary_icon_size = 25
+@line_height = 35
+@item_height = 32
+@item_right_margin_inside = 8
+@item_right_margin_outside = 6
+
+types spreadsheets_panel_types
+{
+    type spreadsheets_panel_states = vbox {
+		layoutpolicy_horizontal = expanding
+		layoutpolicy_vertical = expanding
+
+		background = {
+			using = light_bg
+			alpha = 0.65
+
+			modify_texture = {
+				texture = "gfx/interface/masks/fade_vertical_center.dds"
+				spriteType = Corneredstretched
+				spriteborder = { 0 0 }
+				blend_mode = alphamultiply
+			}
+			modify_texture = {
+				texture = "gfx/interface/masks/fade_horizontal_less_left.dds"
+				spriteType = Corneredstretched
+				spriteborder = { 0 0 }
+				blend_mode = alphamultiply
+			}
+		}
+
+		vbox = {
+			layoutpolicy_horizontal = expanding
+			margin = { 20 10 }
+			spacing = 10
+
+			### SORTING BUTTONS
+			hbox = {
+				layoutpolicy_horizontal = expanding
+
+				# Name
+				sort_button = {
+					layoutstretchfactor_horizontal = 2
+					layoutpolicy_horizontal = expanding
+					size = { 0 @item_height }
+					onclick = "[AccessPlayer.SortStates('name')]"
+
+					text = "STATE_TITLE"
+					align = left|nobaseline
+
+					tooltip = STATE_EXPLAINER
+				}
+
+				### POPULATION STUFF
+				# Population
+				sort_button = {
+					layoutstretchfactor_horizontal = 1
+					layoutpolicy_horizontal = expanding
+					size = { 0 @item_height }
+					enabled = no
+
+					icon = {
+						texture = "gfx/interface/icons/generic_icons/population.dds"
+						size = { @secondary_icon_size @secondary_icon_size }
+						parentanchor = vcenter
+					}
+
+					text = "MS_POP"
+					tooltip = "MS_POP"
+					align = right|nobaseline
+					using = fontsize_medium
+				}
+
+				# Peasants
+				sort_button = {
+					layoutstretchfactor_horizontal = 1
+					layoutpolicy_horizontal = expanding
+					size = { 0 @item_height }
+					enabled = no
+
+					icon = {
+						texture = "gfx/interface/icons/pops_icons/peasants.dds"
+						size = { @secondary_icon_size @secondary_icon_size }
+						parentanchor = hcenter|vcenter
+					}
+
+					text = ""
+					tooltip = "MS_PEASANT"
+					align = right|nobaseline
+					using = fontsize_medium
+				}
+
+				# Unemployed
+				sort_button = {
+					layoutstretchfactor_horizontal = 1
+					layoutpolicy_horizontal = expanding
+					size = { 0 @item_height }
+					enabled = no
+
+					icon = {
+						texture = "gfx/interface/icons/pops_icons/unemployed.dds"
+						size = { @secondary_icon_size @secondary_icon_size }
+						parentanchor = hcenter|vcenter
+					}
+
+					text = ""
+					tooltip = "[concept_unemployed]"
+					align = right|nobaseline
+					using = fontsize_medium
+				}
+
+				# Radicals
+				sort_button = {
+					size = { 60 @item_height }
+					enabled = no
+
+					icon = {
+						texture = "gfx/interface/icons/generic_icons/population_radical.dds"
+						size = { @secondary_icon_size @secondary_icon_size }
+						parentanchor = hcenter|vcenter
+					}
+					text = ""
+					tooltip = "MS_RADICAL"
+					align = right|nobaseline
+					using = fontsize_medium
+				}
+
+				# Loyalists
+				sort_button = {
+					size = { 60 @item_height }
+					enabled = no
+
+					icon = {
+						texture = "gfx/interface/icons/generic_icons/population_loyalist.dds"
+						size = { @secondary_icon_size @secondary_icon_size }
+						parentanchor = hcenter|vcenter
+					}
+					text = ""
+					tooltip = "MS_LOYALIST"
+					align = right|nobaseline
+					using = fontsize_medium
+				}
+
+				# Literacy
+				sort_button = {
+					layoutstretchfactor_horizontal = 1
+					layoutpolicy_horizontal = expanding
+					size = { 0 @item_height }
+					enabled = no
+
+					icon = {
+						texture = "gfx/interface/icons/generic_icons/literacy.dds"
+						size = { @secondary_icon_size @secondary_icon_size }
+						parentanchor = vcenter
+					}
+
+					text = "MS_LITERACY"
+					tooltip = "MS_LITERACY"
+					align = right|nobaseline
+					using = fontsize_medium
+				}
+
+				# Avg Wage
+				sort_button = {
+					layoutstretchfactor_horizontal = 1
+					layoutpolicy_horizontal = expanding
+					size = { 0 @item_height }
+					onclick = "[AccessPlayer.SortStates('averagepopwage')]"
+
+					text = "MS_WAGES"
+					align = right|nobaseline
+
+					tooltip = AVERAGE_POP_WAGE_EXPLAINER
+					using = fontsize_medium
+				}
+
+				# SoL
+				sort_button = {
+					layoutstretchfactor_horizontal = 1
+					layoutpolicy_horizontal = expanding
+					size = { 0 @item_height }
+					enabled = no
+
+					icon = {
+						texture = "gfx/interface/icons/generic_icons/sol_icon.dds"
+						size = { @secondary_icon_size @secondary_icon_size }
+						parentanchor = vcenter
+					}
+
+					text = "MS_SOL"
+					tooltip = "MS_SOL"
+					align = right|nobaseline
+					using = fontsize_medium
+				}
+
+				# Qualifications
+				sort_button = {
+					size = { 35 @item_height }
+					enabled = no
+
+					text = "MS_QUALIFICATIONS"
+					tooltip = "MS_QUALIFICATIONS_TOOLTIP"
+					align = right|nobaseline
+					using = fontsize_medium
+				}
+
+				### USAGE STUFF
+				# Urbanization
+				sort_button = {
+					layoutstretchfactor_horizontal = 1
+					layoutpolicy_horizontal = expanding
+					size = { 0 @item_height }
+					enabled = no
+
+					text = "MS_URBANIZATION"
+					tooltip = "MS_URBANIZATION"
+					align = right|nobaseline
+					using = fontsize_medium
+				}
+
+				# Arable
+				sort_button = {
+					layoutstretchfactor_horizontal = 1
+					layoutpolicy_horizontal = expanding
+					size = { 0 @item_height }
+					enabled = no
+
+					text = "MS_ARABLE"
+					tooltip = "MS_ARABLE"
+					align = right|nobaseline
+					using = fontsize_medium
+				}
+
+				# Infrastructure
+				sort_button = {
+					layoutstretchfactor_horizontal = 1
+					layoutpolicy_horizontal = expanding
+					size = { 0 @item_height }
+					enabled = no
+
+					text = "MS_INFRA"
+					tooltip = "MS_INFRA"
+					align = right|nobaseline
+					using = fontsize_medium
+				}
+
+				# Infrastructure Balance
+				sort_button = {
+					size = { 45 @item_height }
+					enabled = no
+
+					icon = {
+						texture = "gfx/interface/icons/state_status_icons/state_infrastructure.dds"
+						size = { @secondary_icon_size @secondary_icon_size }
+						parentanchor = hcenter|vcenter
+					}
+
+					text = ""
+					tooltip = "MS_INFRA"
+					align = right|nobaseline
+					using = fontsize_medium
+				}
+
+				# Tax Cap
+				sort_button = {
+					layoutstretchfactor_horizontal = 1
+					layoutpolicy_horizontal = expanding
+					size = { 0 @item_height }
+					enabled = no
+
+					text = "MS_TAXCAP"
+					tooltip = "MS_TAXCAP"
+					align = right|nobaseline
+					using = fontsize_medium
+				}
+
+				# Tax Cap Balance
+				sort_button = {
+					size = { 45 @item_height }
+					enabled = no
+
+					icon = {
+						texture = "gfx/interface/icons/state_status_icons/state_tax_capacity.dds"
+						size = { @secondary_icon_size @secondary_icon_size }
+						parentanchor = hcenter|vcenter
+					}
+
+					text = ""
+					tooltip = "MS_TAXCAP"
+					align = right|nobaseline
+					using = fontsize_medium
+				}
+
+				# Turmoil
+				sort_button = {
+					layoutstretchfactor_horizontal = 1
+					layoutpolicy_horizontal = expanding
+					size = { 0 @item_height }
+					enabled = no
+
+					icon = {
+						texture = "gfx/interface/icons/state_status_icons/has_turmoil.dds"
+						size = { @secondary_icon_size @secondary_icon_size }
+						parentanchor = hcenter|vcenter
+					}
+
+					text = ""
+					tooltip = "MS_TURMOIL"
+					align = right|nobaseline
+					using = fontsize_medium
+				}
+
+				### FINANCES
+				# GDP
+				sort_button = {
+					layoutstretchfactor_horizontal = 1
+					layoutpolicy_horizontal = expanding
+					size = { 0 @item_height }
+					enabled = no
+
+					icon = {
+						texture = "gfx/interface/icons/generic_icons/gdp.dds"
+						size = { @secondary_icon_size @secondary_icon_size }
+						parentanchor = vcenter
+					}
+
+					text = "MS_GDP"
+					tooltip = "MS_GDP"
+					align = right|nobaseline
+					using = fontsize_medium
+				}
+
+				# Gov Expenses
+				sort_button = {
+					layoutstretchfactor_horizontal = 1
+					layoutpolicy_horizontal = expanding
+					size = { 0 @item_height }
+					onclick = "[AccessPlayer.SortStates('governmentexpenses')]"
+
+					text = "MS_EXPENSES"
+					align = right|nobaseline
+
+					tooltip = EXPENSES_EXPLAINER
+					using = fontsize_medium
+				}
+
+				# Tax Contrib
+				sort_button = {
+					layoutstretchfactor_horizontal = 1
+					layoutpolicy_horizontal = expanding
+					size = { 0 @item_height }
+					onclick = "[AccessPlayer.SortStates('taxrevenue')]"
+
+					text = "MS_TAXES"
+					align = right|nobaseline
+
+					tooltip = STATE_INCOME_TAX_REVENUE_EXPLAINER
+					using = fontsize_medium
+				}
+
+				### MIGRATION
+				# Growth
+				sort_button = {
+					layoutstretchfactor_horizontal = 1
+					layoutpolicy_horizontal = expanding
+					size = { 0 @item_height }
+					enabled = no
+
+					text = "MS_GROWTH"
+					tooltip = "MS_GROWTH"
+					align = right|nobaseline
+					using = fontsize_medium
+				}
+
+				# Migration
+				sort_button = {
+					layoutstretchfactor_horizontal = 1
+					layoutpolicy_horizontal = expanding
+					size = { 0 @item_height }
+					enabled = no
+
+					text = "MS_MIGRATION"
+					tooltip = "MS_MIGRATION"
+					align = right|nobaseline
+					using = fontsize_medium
+				}
+
+				# Migration Attraction
+				sort_button = {
+					size = { 120 @item_height }
+					enabled = no
+
+					text = "MS_MIGRATION_ATTRACTION"
+					tooltip = "MS_MIGRATION_ATTRACTION"
+					align = right|nobaseline
+					using = fontsize_medium
+				}
+
+				### TRAITS
+				sort_button = {
+					size = { 90 @item_height }
+					enabled = no
+
+					align = right|nobaseline
+					text = "MS_TRAITS"
+					tooltip = "MS_TRAITS"
+					using = fontsize_medium
+				}
+			}
+
+			vbox = {
+				spacing = 1
+				layoutpolicy_horizontal = expanding
+				datamodel = "[AccessPlayer.AccessStates]"
+
+				item = {
+					button = {
+						using = clean_button
+						layoutpolicy_horizontal = expanding
+						size = { 0 @line_height }
+						onclick = "[InformationPanelBar.OpenStatePanel( State.AccessSelf )]"
+						onrightclick = "[RightClickMenuManager.ShowForState(State.AccessSelf)]"
+						alwaystransparent = no
+
+						hbox = {
+							layoutpolicy_horizontal = expanding
+
+							# Name
+							textbox = {
+								layoutstretchfactor_horizontal = 2
+								layoutpolicy_horizontal = expanding
+								size = { 0 @item_height }
+								margin_left = @item_right_margin_outside
+
+								align = left|nobaseline
+								text = "#bold [State.GetNameNoFormatting]#!"
+
+								multiline = yes
+
+								tooltipwidget = {
+									FancyTooltip_State = {}
+								}
+							}
+
+							### POPULATION STUFF
+							# Population
+							textbox = {
+								layoutstretchfactor_horizontal = 1
+								layoutpolicy_horizontal = expanding
+								size = { 0 @item_height }
+								margin_right = @item_right_margin_inside
+
+								align = right|nobaseline
+								text = "[State.GetPopulationSize|Kv]"
+								tooltip = "TOOLTIP_STATE_POPULATION"
+							}
+
+							# Peasants
+							textbox = {
+								layoutstretchfactor_horizontal = 1
+								layoutpolicy_horizontal = expanding
+								size = { 0 @item_height }
+								margin_right = @item_right_margin_inside
+
+								align = right|nobaseline
+								text = "[State.GetNumSubsistenceWorkingAdults|D]"
+								tooltip = "STATE_AVAILABLE_LABOR_TOOLTIP"
+							}
+
+							# Unemployed
+							textbox = {
+								layoutstretchfactor_horizontal = 1
+								layoutpolicy_horizontal = expanding
+								size = { 0 @item_height }
+								margin_right = @item_right_margin_inside
+
+								align = right|nobaseline
+								text = "[State.GetNumUnemployedWorkingAdults|D]"
+								tooltip = "STATE_AVAILABLE_LABOR_TOOLTIP"
+							}
+
+							# Radicals
+							textbox = {
+								size = { 60 @item_height }
+								margin_right = @item_right_margin_inside
+
+								align = right|nobaseline
+								text = "[State.GetNumRadicals|d]"
+							}
+
+							# Loyalists
+							textbox = {
+								size = { 60 @item_height }
+								margin_right = @item_right_margin_inside
+
+								align = right|nobaseline
+								text = "[State.GetNumLoyalists|d]"
+							}
+
+							# Literacy
+							textbox = {
+								layoutstretchfactor_horizontal = 1
+								layoutpolicy_horizontal = expanding
+								size = { 0 @item_height }
+								margin_right = @item_right_margin_inside
+
+								align = right|nobaseline
+								text = "[State.GetLiteracy|%v1]"
+								tooltip = "STATE_LITERACY"
+							}
+
+							# Avg Wage
+							textbox = {
+								layoutstretchfactor_horizontal = 1
+								layoutpolicy_horizontal = expanding
+								size = { 0 @item_height }
+								margin_right = @item_right_margin_inside
+
+								align = right|nobaseline
+								text = "@money![State.GetAverageAnnualWage|Dv]"
+								tooltip = "[State.GetAverageAnnualWageDesc]"
+							}
+
+							# SoL
+							textbox = {
+								layoutstretchfactor_horizontal = 1
+								layoutpolicy_horizontal = expanding
+								size = { 0 @item_height }
+								margin_right = @item_right_margin_inside
+
+								align = right|nobaseline
+								text = "[State.GetAverageStandardOfLivingAll|v1]"
+								tooltip = "NUM_SOL"
+							}
+
+							# Qualifications
+							textbox = {
+								visible = "[Not(State.HasInsufficientQualificationsForAvailablePositions)]"
+								text = "@green_checkmark!"
+								size = { 35 @item_height }
+								align = right|nobaseline
+								tooltip = "[State.GetPotentialQualificationsDesc]"
+							}
+
+							textbox = {
+								visible = "[State.HasInsufficientQualificationsForAvailablePositions]"
+								text = "@red_cross!"
+								size = { 35 @item_height }
+								align = right|nobaseline
+								tooltip = "[State.GetPotentialQualificationsDesc]"
+							}
+
+
+							### USAGE STUFF
+							# Urbanization
+							textbox = {
+								layoutstretchfactor_horizontal = 1
+								layoutpolicy_horizontal = expanding
+								size = { 0 @item_height }
+								margin_right = @item_right_margin_inside
+
+								align = right|nobaseline
+								text = "[State.CalcTotalUrbanization]"
+								tooltip = "URBANIZATION_TOOLTIP"
+							}
+
+							# Arable
+							textbox = {
+								layoutstretchfactor_horizontal = 1
+								layoutpolicy_horizontal = expanding
+								size = { 0 @item_height }
+								margin_right = @item_right_margin_inside
+
+								align = right|nobaseline
+								text = "[State.GetNumFreeArableLand]/[State.GetArableLandCapacity]"
+								tooltip = "LAND_TEXT_TOOLTIP"
+							}
+
+							# Infrastructure
+							textbox = {
+								layoutstretchfactor_horizontal = 1
+								layoutpolicy_horizontal = expanding
+								size = { 0 @item_height }
+								margin_right = @item_right_margin_inside
+
+								align = right|nobaseline
+								tooltip = "STATE_INFRASTRUCTURE_DESC"
+								text = "[SelectLocalization(GreaterThan_CFixedPoint(State.GetInfrastructureUsage,State.GetInfrastructure), 'WARNING', '')][State.GetInfrastructureUsage|0v] / [State.GetInfrastructure|0v]"
+							}
+
+							# Infrastructure Balance
+							textbox = {
+								size = { 45 @item_height }
+								margin_right = @item_right_margin_inside
+
+								align = right|nobaseline
+								tooltip = "STATE_INFRASTRUCTURE_DESC"
+								text = "[State.GetInfrastructureBalance|0+=]"
+							}
+
+							# Tax Cap
+							textbox = {
+								layoutstretchfactor_horizontal = 1
+								layoutpolicy_horizontal = expanding
+								size = { 0 @item_height }
+								margin_right = @item_right_margin_inside
+
+								align = right|nobaseline
+								tooltip = "STATE_TAX_CAPACITY_DESC"
+								text = "[SelectLocalization(GreaterThan_CFixedPoint(State.CalcTaxCapacityUsage,State.CalcTaxCapacity), 'WARNING', '')][State.CalcTaxCapacityUsage|0] / [State.CalcTaxCapacity|0]"
+							}
+
+							# Tax Cap Balance
+							textbox = {
+								size = { 45 @item_height }
+								margin_right = @item_right_margin_inside
+
+								align = right|nobaseline
+								tooltip = "STATE_TAX_CAPACITY_DESC"
+								text = "[State.CalcTaxCapacityBalance|0+=]"
+							}
+
+							# Turmoil
+							textbox = {
+								layoutstretchfactor_horizontal = 1
+								layoutpolicy_horizontal = expanding
+								size = { 0 @item_height }
+								margin_right = @item_right_margin_inside
+
+								align = right|nobaseline
+								text = "STATE_TURMOIL_CONDENSED"
+								tooltip = "TOOLTIP_STATE_TURMOIL"
+							}
+
+							### FINANCES
+							# GDP
+							textbox = {
+								layoutstretchfactor_horizontal = 1
+								layoutpolicy_horizontal = expanding
+								size = { 0 @item_height }
+								margin_right = @item_right_margin_inside
+
+								align = right|nobaseline
+								text = " @money![State.GetGDPContribution|Dv]"
+								tooltip = "CURRENT_GDP_STATE"
+							}
+
+							# Gov Expenses
+							textbox = {
+								layoutstretchfactor_horizontal = 1
+								layoutpolicy_horizontal = expanding
+								size = { 0 @item_height }
+								margin_right = @item_right_margin_inside
+
+								align = right|nobaseline
+								text = "#variable @money![State.GetGovernmentExpenses|+d]#!"
+								tooltip = "[State.GetGovernmentExpensesTooltip]"
+								alpha = "[TransparentIfZero(State.GetGovernmentExpenses)]"
+							}
+
+							# Tax Contrib
+							textbox = {
+								layoutstretchfactor_horizontal = 1
+								layoutpolicy_horizontal = expanding
+								size = { 0 @item_height }
+								margin_right = @item_right_margin_inside
+
+								align = right|nobaseline
+								text = "#variable @money![State.GetTaxationRevenue|=+D]#!"
+								tooltip = "[State.GetTaxationRevenueTooltip]"
+								alpha = "[TransparentIfZero(State.GetTaxationRevenue)]"
+							}
+
+							### MIGRATION
+							# Growth
+							textbox = {
+								layoutstretchfactor_horizontal = 1
+								layoutpolicy_horizontal = expanding
+								size = { 0 @item_height }
+								margin_right = @item_right_margin_inside
+
+								align = right|nobaseline
+								text = "#v [State.GetPopNetGrowth|K=+]#!"
+								tooltip = "TOOLTIP_STATE_POPULATION"
+							}
+
+							# Migration
+							textbox = {
+								layoutstretchfactor_horizontal = 1
+								layoutpolicy_horizontal = expanding
+								size = { 0 @item_height }
+								margin_right = @item_right_margin_inside
+
+								align = right|nobaseline
+								text = "#v [State.GetPopNetMigration|K=+]#!"
+								tooltip = "TOOLTIP_STATE_MIGRATION"
+							}
+
+							# Migration Attraction
+							textbox = {
+								size = { 120 @item_height }
+								margin_right = @item_right_margin_inside
+
+								align = right|nobaseline
+								text = "[State.GetMigrationLabel]"
+							}
+
+							### TRAITS
+							flowcontainer = {
+								direction = vertical
+
+								widget = {
+									size = { 90 @line_height }
+
+									flowcontainer = {
+										datamodel = "[State.AccessStateRegion.AccessTraits]"
+										spacing = 3
+										margin = { @item_right_margin_outside 0 }
+										parentanchor = right|vcenter
+
+										item = {
+											icon = {
+												parentanchor = vcenter
+												size = { @secondary_icon_size @secondary_icon_size }
+												tooltip = TOOLTIP_STATE_TRAIT
+												onmousehierarchyenter = "[AccessHighlightManager.HighlightStateTrait(StateTrait.Self)]"
+												onmousehierarchyleave = "[AccessHighlightManager.RemoveHighlight]"
+												alwaystransparent = no
+												texture = "[StateTrait.GetTexture]"
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+
+		# Push everything up
+		widget = {
+			layoutpolicy_horizontal = expanding
+			layoutpolicy_vertical = expanding
+		}
+	}
+}

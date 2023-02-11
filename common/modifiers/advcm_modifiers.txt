@@ -1,0 +1,321 @@
+﻿advcm_add_bureaucracy = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
+	country_bureaucracy_add = 5000
+}
+
+advcm_add_authority = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
+	country_authority_add = 5000
+}
+
+advcm_add_influence = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
+	country_influence_add = 5000
+}
+
+advcm_add_tech_spread = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
+	country_tech_spread_add = 5000
+}
+
+advcm_add_birth_rate = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
+	state_birth_rate_mult = 0.5
+}
+
+advcm_add_efficiency = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
+	building_input_mult = -0.999
+}
+
+advcm_add_throughput = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
+	building_throughput_mult = 5.0
+}
+
+advcm_add_income = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
+	country_minting_add = 1000000.0
+}
+
+advcm_add_killrate = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
+	unit_kill_rate_add = 2.0
+}
+
+advcm_add_attack = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
+	unit_navy_offense_mult = 2.0
+	unit_offense_mult = 2.0
+}
+
+advcm_add_defense = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
+	unit_navy_defense_mult = 2.0
+	unit_defense_mult = 2.0
+}
+
+advcm_add_recovery = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
+	unit_recovery_rate_add = 2.0
+}
+
+advcm_add_recovery = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
+	unit_recovery_rate_add = 2.0
+}
+#军队
+advcm_add_PPK_JD = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
+	interest_group_ig_armed_forces_pol_str_mult = 0.5
+}
+advcm_add_PPK_JD_X = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
+	interest_group_ig_armed_forces_pol_str_mult = -0.5
+}
+#宗教
+advcm_add_PPK_ZJ = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
+	interest_group_ig_devout_pol_str_mult = 0.5
+}
+advcm_add_PPK_ZJ_X = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
+	interest_group_ig_devout_pol_str_mult = -0.5
+}
+#实业家
+advcm_add_PPK_SY = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
+	interest_group_ig_industrialists_pol_str_mult = 0.5
+}
+advcm_add_PPK_SY_X = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
+	interest_group_ig_industrialists_pol_str_mult = -0.5
+}
+#知识分子
+advcm_add_PPK_ZS = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
+	interest_group_ig_intelligentsia_pol_str_mult = 0.5
+}
+advcm_add_PPK_ZS_X = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
+	interest_group_ig_intelligentsia_pol_str_mult = -0.5
+}
+#地主
+advcm_add_PPK_DZ = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
+	interest_group_ig_landowners_pol_str_mult = 0.5
+}
+advcm_add_PPK_DZ_X = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
+	interest_group_ig_landowners_pol_str_mult = -0.5
+}
+#小市民
+advcm_add_PPK_XZ = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
+	interest_group_ig_petty_bourgeoisie_pol_str_mult = 0.5
+}
+advcm_add_PPK_XZ_X = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
+	interest_group_ig_petty_bourgeoisie_pol_str_mult = -0.5
+}
+#农民
+advcm_add_PPK_NM = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
+	interest_group_ig_rural_folk_pol_str_mult = 0.5
+}
+advcm_add_PPK_NM_X = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
+	interest_group_ig_rural_folk_pol_str_mult = -0.5
+}
+#工会
+advcm_add_PPK_GH = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
+	interest_group_ig_trade_unions_pol_str_mult = 0.5
+}
+advcm_add_PPK_GH_X = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
+	interest_group_ig_trade_unions_pol_str_mult = -0.5
+}
+#军队==================支持度
+advcm_add_PPK_Z_JD = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
+	interest_group_ig_armed_forces_approval_add = 5
+}
+advcm_add_PPK_Z_JD_X = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
+	interest_group_ig_armed_forces_approval_add = -5
+}
+#宗教
+advcm_add_PPK_Z_ZJ = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
+	interest_group_ig_devout_approval_add = 5
+}
+advcm_add_PPK_Z_ZJ_X = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
+	interest_group_ig_devout_approval_add = -5
+}
+#实业家
+advcm_add_PPK_Z_SY = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
+	interest_group_ig_industrialists_approval_add = 5
+}
+advcm_add_PPK_Z_SY_X = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
+	interest_group_ig_industrialists_approval_add = -5
+}
+#知识分子
+advcm_add_PPK_Z_ZS = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
+	interest_group_ig_intelligentsia_approval_add = 5
+}
+advcm_add_PPK_Z_ZS_X = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
+	interest_group_ig_intelligentsia_approval_add = -5
+}
+#地主
+advcm_add_PPK_Z_DZ = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
+	interest_group_ig_landowners_approval_add = 5
+}
+advcm_add_PPK_Z_DZ_X = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
+	interest_group_ig_landowners_approval_add = -5
+}
+#小市民
+advcm_add_PPK_Z_XZ = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
+	interest_group_ig_petty_bourgeoisie_approval_add = 5
+}
+advcm_add_PPK_Z_XZ_X = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
+	interest_group_ig_petty_bourgeoisie_approval_add = -5
+}
+#农民
+advcm_add_PPK_Z_NM = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
+	interest_group_ig_rural_folk_approval_add = 5
+}
+advcm_add_PPK_Z_NM_X = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
+	interest_group_ig_rural_folk_approval_add = -5
+}
+#工会
+advcm_add_PPK_Z_GH = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
+	interest_group_ig_trade_unions_approval_add = 5
+}
+advcm_add_PPK_Z_GH_X = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
+	interest_group_ig_trade_unions_approval_add = -5
+}
+
+
+#全部集团加忠诚
+advcm_add_PPK_Z_QB = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
+	interest_group_approval_add = 100
+}
+advcm_add_PPK_Z_QB_X = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
+	interest_group_approval_add = -100
+}
+#执政集团
+advcm_add_PPK_Z_ZZ = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
+	interest_group_in_government_approval_add = 5
+}
+advcm_add_PPK_Z_ZZ_X = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
+	interest_group_in_government_approval_add = -5
+}
+#在野非执政集团
+advcm_add_PPK_Z_ZY = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
+	interest_group_in_opposition_approval_add = 5
+}
+advcm_add_PPK_Z_ZY_X = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
+	interest_group_in_opposition_approval_add = -5
+}
+
+#-============
+#建造力
+advcm_add_PPK_JZL = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
+	country_construction_add = 100
+}
+advcm_add_PPK_JZL_X = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
+	country_construction_add = -100
+}
+#征税力
+advcm_add_PPK_ZSL = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
+	state_tax_capacity_add = 100
+}
+advcm_add_PPK_ZSL_X = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
+	state_tax_capacity_add = -100
+}
+#基础设施
+advcm_add_PPK_JCS = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
+	state_infrastructure_add = 100
+}
+advcm_add_PPK_JCS_X = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
+	state_infrastructure_add = -100
+}
+#创新力
+advcm_add_PPK_CXL = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
+	country_weekly_innovation_add = 100
+	country_weekly_innovation_max_add = 100
+}
+advcm_add_PPK_CXL_X = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
+	country_weekly_innovation_add = -100
+	country_weekly_innovation_max_add = -100
+}
+#移民吸引
+advcm_add_PPK_YML = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
+	state_migration_pull_mult = 0.5
+}
+advcm_add_PPK_YML_X = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
+	state_migration_pull_mult = -0.5
+}
+#国家威望
+advcm_add_PPK_GJW = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
+	country_prestige_add = 100
+}
+advcm_add_PPK_GJW_X = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
+	country_prestige_add = -100
+}
+#合法性
+advcm_add_PPK_HFX = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
+	country_legitimacy_base_add = 10
+}
+advcm_add_PPK_HFX_X = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
+	country_legitimacy_base_add = -10
+}
+#同化加成
+advcm_add_PPK_THJ = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
+	state_assimilation_mult = 0.5
+}
+advcm_add_PPK_THJ_X = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
+	state_assimilation_mult = 0.5
+}
+#瞬间立法（不用控制台，真不错，皮凯我居然成功实现）
+advcm_add_PPK_LFC = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
+	country_law_enactment_success_add = 100
+	country_law_enactment_time_mult = -1
+}
