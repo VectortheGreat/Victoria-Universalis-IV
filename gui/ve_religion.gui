@@ -94,13 +94,13 @@ window = {
                             using = main_bg
                             vbox = {
                                 spacing = 10
-                                margin = { 0 10 }
+                                margin = { 30 10 }
                                 icon = {
-                                    texture = "gfx/interface/icons/\religion_icons/catholic.dds"
+                                    texture = "[GetPlayer.GetStateReligion.GetTexture]"
                                     size = { 120 120 }
                                 }
                                 textbox = {
-                                    text = "catholic_religion"
+                                    text = "#v [GetPlayer.GetStateReligion.GetName]#!"
                                     using = fontsize_xxl
                                     align = nobaseline
                                     elide = left
@@ -108,30 +108,544 @@ window = {
                                 }
                             }
                         }
-                        hbox = {
+                        hbox = {    #Religion Info
                             using = main_bg
                             layoutpolicy_horizontal = expanding
                             hbox = {
                                 margin = { 0 75 }
                                 spacing = 10
                                 layoutpolicy_horizontal = expanding
-                                textbox = {
-                                    text = "catholic_religion"
-                                    using = fontsize_xxl
-                                    align = nobaseline
-                                    elide = left
-                                    autoresize = yes
+                                vbox = {
+                                    spacing = 10
+                                    textbox = {
+                                        text = "ve_gecici_1"
+                                        default_format = "#tooltip_header"
+                                        using = fontsize_xxl
+                                        align = nobaseline
+                                        elide = left
+                                        autoresize = yes
+                                    }
+                                    textbox = {
+                                        text = "ve_gecici_2"
+                                        default_format = "#instruction"
+                                        using = fontsize_xxl
+                                        align = nobaseline
+                                        elide = left
+                                        autoresize = yes
+                                    }
                                 }
-                                textbox = {
-                                    text = "catholic_religion"
-                                    using = fontsize_xxl
-                                    align = nobaseline
-                                    elide = left
-                                    autoresize = yes
+                                vbox = {
+                                    spacing = 10
+                                    textbox = {
+                                        text = "ve_gecici_3"
+                                        default_format = "#tooltip_header"
+                                        using = fontsize_xxl
+                                        align = nobaseline
+                                        elide = left
+                                        autoresize = yes
+                                    }
+                                    textbox = {
+                                        text = "ve_gecici_4"
+                                        default_format = "#instruction"
+                                        using = fontsize_xxl
+                                        align = nobaseline
+                                        elide = left
+                                        autoresize = yes
+                                    }
+                                }
+                                vbox = {
+                                    spacing = 10
+                                    textbox = {
+                                        text = "ve_gecici_5"
+                                        default_format = "#tooltip_header"
+                                        using = fontsize_xxl
+                                        align = nobaseline
+                                        elide = left
+                                        autoresize = yes
+                                    }
+                                    textbox = {
+                                        text = "ve_gecici_6"
+                                        default_format = "#instruction"
+                                        using = fontsize_xxl
+                                        align = nobaseline
+                                        elide = left
+                                        autoresize = yes
+                                    }
+                                }
+                                vbox = {
+                                    spacing = 10
+                                    textbox = {
+                                        text = "ve_gecici_7"
+                                        default_format = "#tooltip_header"
+                                        using = fontsize_xxl
+                                        align = nobaseline
+                                        elide = left
+                                        autoresize = yes
+                                    }
+                                    textbox = {
+                                        text = "ve_gecici_8"
+                                        default_format = "#instruction"
+                                        using = fontsize_xxl
+                                        align = nobaseline
+                                        elide = left
+                                        autoresize = yes
+                                    }
                                 }
                             }
                         }
                         
+                    }
+                    vbox = {    #Aspects
+                        spacing = 15
+                        layoutpolicy_horizontal = expanding
+                        hbox = {    #Aspect Modifiers
+                            using = main_bg
+                            layoutpolicy_horizontal = expanding
+                            margin = { 0 20 }
+                            hbox = {   
+                                layoutpolicy_horizontal = expanding
+                                vbox = {
+                                    spacing = 10
+                                    margin = { 0 15 }
+                                    textbox = {
+                                        text = "ve_gecici_14"
+                                        default_format = "#tooltippable_concept"
+                                        using = fontsize_xxl
+                                        align = center
+                                        elide = left
+                                        minimumsize = { 10 -1 }
+                                        maximumsize = { 150 -1 }
+                                        multiline = yes
+                                        autoresize = yes
+                                    }
+                                }
+                                vbox = {
+                                    spacing = 10
+                                    margin = { 15 15 }
+                                    button_icon_round_big_map_interaction = {
+                                        size = { 100 100 }
+                                        enabled = "[IsValid(ChangeAllConstructionSpeed(ProductionMethod.Self))]"
+                                        blockoverride "icon" {
+                                            texture = "gfx/interface/icons/religion_icons/catholic.dds"
+                                        }
+                                        onclick = "[GetScriptedGui('add_infamy_scgui').Execute(GuiScope.End)]"
+                                        # state = { ###Yanıp Sönme
+                                        #     trigger_on_create = yes
+                                        #     name = 1
+                                        #     next = 2
+                                        #     alpha = 0.3
+                                        #     duration = 0.5
+                                        #     using = Animation_Curve_Default
+                                        # }
+                                        # state = {
+                                        #     name = 2
+                                        #     next = 1
+                                        #     alpha = 1
+                                        #     duration = 0.5
+                                        #     using = Animation_Curve_Default
+                                        # }
+                                    }
+                                    textbox = {
+                                        text = "ve_gecici_9"
+                                        using = fontsize_xxl
+                                        align = nobaseline
+                                        elide = left
+                                        autoresize = yes
+                                    }                                
+                                }
+                                vbox = {
+                                    spacing = 10
+                                    margin = { 15 15 }
+                                    button_icon_round_big_map_interaction = {
+                                        size = { 100 100 }
+                                        blockoverride "icon" {
+                                            texture = "gfx/interface/icons/religion_icons/catholic.dds"
+                                        }
+                                        onclick = "[GetScriptedGui('add_infamy_scgui').Execute(GuiScope.End)]"
+                                    }
+                                    textbox = {
+                                        text = "ve_gecici_10"
+                                        using = fontsize_xxl
+                                        align = nobaseline
+                                        elide = left
+                                        autoresize = yes
+                                    }                          
+                                }
+                                vbox = {
+                                    spacing = 10
+                                    margin = { 15 15 }
+                                    button_icon_round_big_map_interaction = {
+                                        size = { 100 100 }
+                                        blockoverride "icon" {
+                                            texture = "gfx/interface/icons/religion_icons/catholic.dds"
+                                        }
+                                        onclick = "[GetScriptedGui('add_infamy_scgui').Execute(GuiScope.End)]"
+                                    }
+                                    textbox = {
+                                        text = "ve_gecici_11"
+                                        using = fontsize_xxl
+                                        align = nobaseline
+                                        elide = left
+                                        autoresize = yes
+                                    }                                
+                                }
+                                vbox = {
+                                    spacing = 10
+                                    margin = { 15 15 }
+                                    button_icon_round_big_map_interaction = {
+                                        size = { 100 100 }
+                                        blockoverride "icon" {
+                                            texture = "gfx/interface/icons/religion_icons/catholic.dds"
+                                        }
+                                        onclick = "[GetScriptedGui('add_infamy_scgui').Execute(GuiScope.End)]"
+                                    }
+                                    textbox = {
+                                        text = "ve_gecici_12"
+                                        using = fontsize_xxl
+                                        align = nobaseline
+                                        elide = left
+                                        autoresize = yes
+                                    }
+                                    
+                                }
+                                vbox = {
+                                    spacing = 10
+                                    margin = { 15 15 }
+                                    button_icon_round_big_map_interaction = {
+                                        size = { 100 100 }
+                                        blockoverride "icon" {
+                                            texture = "gfx/interface/icons/religion_icons/catholic.dds"
+                                        }
+                                        onclick = "[GetScriptedGui('add_infamy_scgui').Execute(GuiScope.End)]"
+                                    }
+                                    textbox = {
+                                        text = "ve_gecici_13"
+                                        default_format = "#instruction"
+                                        using = fontsize_xxl
+                                        align = nobaseline
+                                        elide = left
+                                        autoresize = yes
+                                    }
+                                    
+                                }
+                            }
+                        }
+                        hbox = {    #Aspect Effects
+                            using = main_bg
+                            layoutpolicy_horizontal = expanding
+                            margin = { 0 20 }
+                            hbox = {   
+                                layoutpolicy_horizontal = expanding
+                                vbox = {
+                                    spacing = 10
+                                    margin = { 15 15 }
+                                    textbox = {
+                                        text = "ve_gecici_15"
+                                        default_format = "#tooltippable_concept"
+                                        using = fontsize_xxl
+                                        align = center
+                                        elide = left
+                                        minimumsize = { 10 -1 }
+                                        maximumsize = { 120 -1 }
+                                        multiline = yes
+                                        autoresize = yes
+                                    }
+                                }
+                                vbox = {
+                                    spacing = 10
+                                    margin = { 15 15 }
+                                    button_icon_round_big_map_interaction = {
+                                        size = { 100 100 }
+                                        enabled = "[IsValid(ChangeAllConstructionSpeed(ProductionMethod.Self))]"
+                                        blockoverride "icon" {
+                                            texture = "gfx/interface/icons/religion_icons/catholic.dds"
+                                        }
+                                        onclick = "[GetScriptedGui('add_infamy_scgui').Execute(GuiScope.End)]"
+                                        # state = { ###Yanıp Sönme
+                                        #     trigger_on_create = yes
+                                        #     name = 1
+                                        #     next = 2
+                                        #     alpha = 0.3
+                                        #     duration = 0.5
+                                        #     using = Animation_Curve_Default
+                                        # }
+                                        # state = {
+                                        #     name = 2
+                                        #     next = 1
+                                        #     alpha = 1
+                                        #     duration = 0.5
+                                        #     using = Animation_Curve_Default
+                                        # }
+                                    }
+                                    textbox = {
+                                        text = "ve_gecici_9"
+                                        using = fontsize_xxl
+                                        align = nobaseline
+                                        elide = left
+                                        autoresize = yes
+                                    }                                
+                                }
+                                vbox = {
+                                    spacing = 10
+                                    margin = { 15 15 }
+                                    button_icon_round_big_map_interaction = {
+                                        size = { 100 100 }
+                                        blockoverride "icon" {
+                                            texture = "gfx/interface/icons/religion_icons/catholic.dds"
+                                        }
+                                        onclick = "[GetScriptedGui('add_infamy_scgui').Execute(GuiScope.End)]"
+                                    }
+                                    textbox = {
+                                        text = "ve_gecici_10"
+                                        using = fontsize_xxl
+                                        align = nobaseline
+                                        elide = left
+                                        autoresize = yes
+                                    }                          
+                                }
+                                vbox = {
+                                    spacing = 10
+                                    margin = { 15 15 }
+                                    button_icon_round_big_map_interaction = {
+                                        size = { 100 100 }
+                                        blockoverride "icon" {
+                                            texture = "gfx/interface/icons/religion_icons/catholic.dds"
+                                        }
+                                        onclick = "[GetScriptedGui('add_infamy_scgui').Execute(GuiScope.End)]"
+                                    }
+                                    textbox = {
+                                        text = "ve_gecici_11"
+                                        using = fontsize_xxl
+                                        align = nobaseline
+                                        elide = left
+                                        autoresize = yes
+                                    }                                
+                                }
+                                vbox = {
+                                    spacing = 10
+                                    margin = { 15 15 }
+                                    button_icon_round_big_map_interaction = {
+                                        size = { 100 100 }
+                                        blockoverride "icon" {
+                                            texture = "gfx/interface/icons/religion_icons/catholic.dds"
+                                        }
+                                        onclick = "[GetScriptedGui('add_infamy_scgui').Execute(GuiScope.End)]"
+                                    }
+                                    textbox = {
+                                        text = "ve_gecici_12"
+                                        using = fontsize_xxl
+                                        align = nobaseline
+                                        elide = left
+                                        autoresize = yes
+                                    }
+                                    
+                                }
+                                vbox = {
+                                    spacing = 10
+                                    margin = { 15 15 }
+                                    button_icon_round_big_map_interaction = {
+                                        size = { 100 100 }
+                                        blockoverride "icon" {
+                                            texture = "gfx/interface/icons/religion_icons/catholic.dds"
+                                        }
+                                        onclick = "[GetScriptedGui('add_infamy_scgui').Execute(GuiScope.End)]"
+                                    }
+                                    textbox = {
+                                        text = "ve_gecici_13"
+                                        default_format = "#instruction"
+                                        using = fontsize_xxl
+                                        align = nobaseline
+                                        elide = left
+                                        autoresize = yes
+                                    }
+                                    
+                                }
+                            }
+                        }
+                    }
+                    vbox = {    #Defender of The Faith
+                        margin = { 0 15 }
+                        spacing = 5
+                        layoutpolicy_horizontal = expanding
+                        header_pattern = {
+                            layoutpolicy_horizontal = expanding
+                            blockoverride "header_text"
+                            {
+                                text = "ve_defender_of_faith"
+                            }
+                            blockoverride "button_close"
+                            {
+                                visible = no
+                            }
+                        }
+                        hbox = {
+                            using = main_bg
+                            layoutpolicy_horizontal = expanding
+                            margin = { 0 20 }
+                            hbox = {   
+                                layoutpolicy_horizontal = expanding
+                                vbox = {
+                                    spacing = 10
+                                    margin = { 0 15 }
+                                    character_portrait_large_torso = {
+                                        datacontext = "[AccessPlayer.AccessRuler]"
+                                        position = { 25 125 }
+                                        blockoverride "show_hat" {}
+                                        blockoverride "highlight" {}
+                                    }
+                                     textbox = {
+                                        text = "[GetPlayer.GetName]"
+                                        using = fontsize_xxl
+                                        align = nobaseline
+                                        elide = left
+                                        autoresize = yes
+                                    }
+                                }
+                                vbox = {
+                                    spacing = 10
+                                    margin = { 15 15 }
+                                    button_icon_round_big_map_interaction = {
+                                        size = { 100 100 }
+                                        enabled = "[IsValid(ChangeAllConstructionSpeed(ProductionMethod.Self))]"
+                                        blockoverride "icon" {
+                                            texture = "gfx/interface/icons/religion_icons/catholic.dds"
+                                        }
+                                        onclick = "[GetScriptedGui('add_infamy_scgui').Execute(GuiScope.End)]"
+                                    }
+                                    textbox = {
+                                        text = "ve_gecici_16"
+                                        using = fontsize_xxl
+                                        align = nobaseline
+                                        elide = left
+                                        autoresize = yes
+                                    }                                
+                                }
+                            }
+                        }
+                    }
+                    vbox = {    #Holy Cities
+                        margin = { 0 15 }
+                        spacing = 5
+                        layoutpolicy_horizontal = expanding
+                        header_pattern = {
+                            layoutpolicy_horizontal = expanding
+                            blockoverride "header_text"
+                            {
+                                text = "ve_holy_cities"
+                            }
+                            blockoverride "button_close"
+                            {
+                                visible = no
+                            }
+                        }
+                        hbox = {
+                            using = main_bg
+                            layoutpolicy_horizontal = expanding
+                            margin = { 0 20 }
+                            hbox = {   
+                                layoutpolicy_horizontal = expanding
+                                vbox = {
+                                    spacing = 10
+                                    margin = { 15 15 }
+                                    button = {
+                                        position = { 0 0 }
+                                        size = { 152 152 }
+                                        icon = {
+                                            alpha = "[TransparentIfFalse(Building.IsActive)]"
+                                            texture = "gfx/interface/icons/building_icons/taj_mahal.dds"
+                                            size = { 100% 100% }
+                                        }
+                                    }
+                                    textbox = {
+                                        text = "ve_gecici_17"
+                                        using = fontsize_xxl
+                                        align = nobaseline
+                                        elide = left
+                                        autoresize = yes
+                                    }                                
+                                }
+                                vbox = {
+                                    spacing = 10
+                                    margin = { 15 15 }
+                                    button = {
+                                        position = { 0 0 }
+                                        size = { 152 152 }
+                                        icon = {
+                                            alpha = "[TransparentIfFalse(Building.IsActive)]"
+                                            texture = "gfx/interface/icons/building_icons/taj_mahal.dds"
+                                            size = { 100% 100% }
+                                        }
+                                    }
+                                    textbox = {
+                                        text = "ve_gecici_18"
+                                        using = fontsize_xxl
+                                        align = nobaseline
+                                        elide = left
+                                        autoresize = yes
+                                    }                                
+                                }
+                                vbox = {
+                                    spacing = 10
+                                    margin = { 15 15 }
+                                    button = {
+                                        position = { 0 0 }
+                                        size = { 152 152 }
+                                        icon = {
+                                            alpha = "[TransparentIfFalse(Building.IsActive)]"
+                                            texture = "gfx/interface/icons/building_icons/taj_mahal.dds"
+                                            size = { 100% 100% }
+                                        }
+                                    }
+                                    textbox = {
+                                        text = "ve_gecici_19"
+                                        using = fontsize_xxl
+                                        align = nobaseline
+                                        elide = left
+                                        autoresize = yes
+                                    }                                
+                                }
+                                vbox = {
+                                    spacing = 10
+                                    margin = { 15 15 }
+                                    button = {
+                                        position = { 0 0 }
+                                        size = { 152 152 }
+                                        icon = {
+                                            alpha = "[TransparentIfFalse(Building.IsActive)]"
+                                            texture = "gfx/interface/icons/building_icons/taj_mahal.dds"
+                                            size = { 100% 100% }
+                                        }
+                                    }
+                                    textbox = {
+                                        text = "ve_gecici_20"
+                                        using = fontsize_xxl
+                                        align = nobaseline
+                                        elide = left
+                                        autoresize = yes
+                                    }                                
+                                }
+                                vbox = {
+                                    spacing = 10
+                                    margin = { 15 15 }
+                                    button = {
+                                        position = { 0 0 }
+                                        size = { 152 152 }
+                                        icon = {
+                                            alpha = "[TransparentIfFalse(Building.IsActive)]"
+                                            texture = "gfx/interface/icons/building_icons/taj_mahal.dds"
+                                            size = { 100% 100% }
+                                        }
+                                    }
+                                    textbox = {
+                                        text = "ve_gecici_21"
+                                        using = fontsize_xxl
+                                        align = nobaseline
+                                        elide = left
+                                        autoresize = yes
+                                    }                                
+                                }
+                            }
+                        }
                     }
                     expand = { }
                 }

@@ -1,11 +1,45 @@
-﻿add_infamy_scgui = {
+﻿add_scgui = {
 	scope = country
 	effect = {
 		every_country = {
 			limit = {
 				is_ai = no
 			}
-			change_infamy = 100
+			if = {
+				limit = {
+					NOT = {
+						has_modifier = alaska_usa_big_money
+					}
+				}
+				add_modifier = {
+					name = alaska_usa_big_money
+					months = -1
+				}
+			}
+		}
+	}
+}
+
+remove_scgui = {
+	scope = country
+	effect = {
+		every_country = {
+			limit = {
+				is_ai = no
+			}
+			remove_modifier = alaska_usa_big_money
+		}
+	}
+}
+
+check_scgui = {
+	scope = country
+	is_valid = {
+		any_country = {
+			is_ai = no
+			NOT = {
+				has_modifier = alaska_usa_big_money
+			}
 		}
 	}
 }

@@ -116,16 +116,13 @@ window = {
                                         blockoverride "icon" {
                                             texture = "gfx/interface/icons/event_icons/event_portrait.dds"
                                         }
-                                        onclick = "[GetScriptedGui('add_infamy_scgui').Execute(GuiScope.End)]"
-                                        # onclick = "[ScriptedGui.Execute( GuiScope.AddScope('player_credit',MakeScopeValue(GetPlayer.GetMaxCredit)).End )]"
-                                        # datacontext = "[GetScriptedGui('add_infamy_scgui')]"
-                                        # onclick = "[ScriptedGui.Execute( GuiScope.End )]"
+                                        onclick = "[GetScriptedGui('add_scgui').Execute(GuiScope.End)]"
+                                        enabled = "[GetScriptedGui('check_scgui').IsValid( GuiScope.End )]"
                                     }
                                     button_standard = {
                                         blockoverride "primary_visible" {}
                                         name = "advcm_treasury"
-                                        datacontext = "[GetScriptedGui('add_infamy_scgui')]"
-                                         onclick = "[ScriptedGui.Execute( GuiScope.End )]"
+                                        onclick = "[GetScriptedGui('remove_scgui').Execute(GuiScope.End)]"  
                                         button_ignore = none
                                         tooltip = "PPK_TEXT_BUTTON_2_TOOLTIP"
                                         using = tooltip_ne
