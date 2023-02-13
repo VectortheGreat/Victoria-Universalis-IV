@@ -1,0 +1,649 @@
+window = {
+	name = "ve_age_bonusses"
+	parentanchor = center
+	layer = windows_layer
+	size = {
+		100%
+		100%
+	}
+	using = Window_Background
+	movable = no
+	vbox = {
+		layoutpolicy_horizontal = expanding
+		layoutpolicy_vertical = expanding
+		using = Window_Margins
+		header_pattern = {
+			layoutpolicy_horizontal = expanding
+			blockoverride
+			"header_text"
+			{
+				text = "VE_TEXT_MENU_TITLE"
+				default_format = "#tooltip_header"
+			}
+			blockoverride
+			"button_close"
+			{
+				onclick = "[ExecuteConsoleCommand('gui.clearwidgets')]"
+			}
+		}
+		scrollbox = {
+			layoutpolicy_horizontal = expanding
+			layoutpolicy_vertical = expanding
+			blockoverride
+			"scrollbox_content"
+			{
+				vbox = {
+					layoutpolicy_horizontal = expanding
+					layoutpolicy_vertical = expanding
+					tab_buttons_fullscreen = {
+						blockoverride
+						"first_button"
+						{
+							text = "IDEAS"
+						}
+						blockoverride
+						"first_button_click"
+						{
+							onclick = "[ExecuteConsoleCommand('gui.createwidget gui/ve_ideas.gui ve_ideas')]"
+							onclick = "[GetVariableSystem.Set('ve_last_tab', 've_ideas')]"
+						}
+						blockoverride
+						"first_button_visibility"
+						{
+							visible = "[GetVariableSystem.HasValue('ve_last_tab', 've_ideas')]"
+						}
+						blockoverride
+						"first_button_visibility_checked"
+						{
+							visible = "[Not( GetVariableSystem.HasValue('ve_last_tab', 've_ideas') )]"
+						}
+						blockoverride
+						"first_button_selected"
+						{
+							text = "IDEAS"
+						}
+						blockoverride
+						"second_button"
+						{
+							text = "RELIGION"
+						}
+						blockoverride
+						"second_button_click"
+						{
+							onclick = "[ExecuteConsoleCommand('gui.createwidget gui/ve_religion.gui ve_religion')]"
+							onclick = "[GetVariableSystem.Set('ve_last_tab', 've_religion')]"
+						}
+						blockoverride
+						"second_button_visibility"
+						{
+							visible = "[GetVariableSystem.HasValue('ve_last_tab', 've_religion')]"
+						}
+						blockoverride
+						"second_button_visibility_checked"
+						{
+							visible = "[Not( GetVariableSystem.HasValue('ve_last_tab', 've_religion') )]"
+						}
+						blockoverride
+						"second_button_selected"
+						{
+							text = "RELIGION"
+						}
+						blockoverride
+						"third_button"
+						{
+							text = "MS_POPS"
+						}
+						blockoverride
+						"third_button_click"
+						{
+							onclick = "[ExecuteConsoleCommand('gui.createwidget gui/ve_culture.gui ve_culture')]"
+							onclick = "[GetVariableSystem.Set('ve_last_tab', 've_culture')]"
+						}
+						blockoverride
+						"third_button_visibility"
+						{
+							visible = "[GetVariableSystem.HasValue('ve_last_tab', 've_culture')]"
+						}
+						blockoverride
+						"third_button_visibility_checked"
+						{
+							visible = "[Not( GetVariableSystem.HasValue('ve_last_tab', 've_culture') )]"
+						}
+						blockoverride
+						"third_button_selected"
+						{
+							text = "MS_POPS"
+						}
+						blockoverride
+						"fourth_button"
+						{
+							text = "VE_AGE_BONUS"
+						}
+						blockoverride
+						"fourth_button_click"
+						{
+							onclick = "[ExecuteConsoleCommand('gui.createwidget gui/ve_age_bonusses.gui ve_age_bonusses')]"
+							onclick = "[GetVariableSystem.Set('ve_last_tab', 've_age_bonusses')]"
+						}
+						blockoverride
+						"fourth_button_visibility"
+						{
+							visible = "[GetVariableSystem.HasValue('ve_last_tab', 've_age_bonusses')]"
+						}
+						blockoverride
+						"fourth_button_visibility_checked"
+						{
+							visible = "[Not( GetVariableSystem.HasValue('ve_last_tab', 've_age_bonusses') )]"
+						}
+						blockoverride
+						"fourth_button_selected"
+						{
+							text = "VE_AGE_BONUS"
+						}
+					}
+					vbox = {	#Up
+						spacing =  10
+						layoutpolicy_horizontal = expanding
+						hbox = {	#Age Info
+							layoutpolicy_horizontal = fixed
+							using = main_bg
+							margin = {
+								200
+								20
+							}
+							hbox = {	#Sections									
+								vbox = {	#Middle Section
+									spacing = 10
+									vbox = {
+										header_pattern = {
+											layoutpolicy_horizontal = expanding
+											blockoverride
+											"header_text"
+											{
+												text = "ve_gecici_25"
+												default_format = "#tooltip_header"
+											}
+											blockoverride
+											"button_close"
+											{
+												visible = no
+											}
+										}
+										hbox = {											
+											vbox = {	#Left Age
+												spacing = 50
+												layoutpolicy_vertical = fixed
+												widget = {								
+												}							
+												widget = {
+													size = { 75 75 }
+													icon = {
+														size = { 100% 100% }
+														texture = "gfx/interface/backgrounds/round_frame_dec.dds"
+														using = default_fade_in_out
+													}
+												}
+												widget = {
+													size = { 75 75 }
+													icon = {
+														size = { 100% 100% }
+														texture = "gfx/interface/backgrounds/round_frame_dec.dds"
+														using = default_fade_in_out
+													}
+												}
+											}
+											vbox = {
+												icon = {
+													texture = "gfx/interface/victoria_age.dds"
+													size = {
+														700
+														300
+													}
+													using = frame_small_mask
+												}
+												hbox = {
+													button = {
+														using = default_button_action
+														size = { 100% 40 }
+														text = "ve_golden_age"
+														onclick = "[Execute(PauseAllConstruction)]"
+														enabled = "[IsValid(PauseAllConstruction)]"
+														using = tooltip_above
+														using = budget_pause_all_button_sound
+													}
+												}
+											}
+											vbox = {	#Right Ages
+												spacing = 50
+												layoutpolicy_vertical = fixed
+					
+												widget = {
+													
+												}
+												widget = {
+													size = { 75 75 }
+													icon = {
+														size = { 100% 100% }
+														texture = "gfx/interface/backgrounds/round_frame_dec.dds"
+														using = default_fade_in_out
+													}
+												}
+											}
+										}										
+									}
+									hbox = {
+										textbox = {
+											text = "ve_gecici_26"
+											default_format = "#tooltip_header"
+											using = fontsize_x
+											align = nobaseline
+											elide = left
+											minimumsize = {
+												100
+												-1
+											}
+											maximumsize = {
+												700
+												-1
+											}
+											multiline = yes
+											autoresize = yes
+										}
+									}
+									
+								}
+								
+							}
+						}
+						hbox = {	#Age Bonuses
+							layoutpolicy_horizontal = fixed
+							spacing = 10
+							using = main_bg
+							margin = { 25 15 }
+							button_icon_square = {
+								size = {
+									100
+									100
+								}
+								blockoverride
+								"icon"
+								{
+									texture = "gfx/interface/icons/religion_icons/catholic.dds"
+								}
+								onclick = "[GetScriptedGui('add_infamy_scgui').Execute(GuiScope.End)]"
+							}
+							button_icon_square = {
+								size = {
+									100
+									100
+								}
+								blockoverride
+								"icon"
+								{
+									texture = "gfx/interface/icons/religion_icons/catholic.dds"
+								}
+								onclick = "[GetScriptedGui('add_infamy_scgui').Execute(GuiScope.End)]"
+							}
+							button_icon_square = {
+								size = {
+									100
+									100
+								}
+								blockoverride
+								"icon"
+								{
+									texture = "gfx/interface/icons/religion_icons/catholic.dds"
+								}
+								onclick = "[GetScriptedGui('add_infamy_scgui').Execute(GuiScope.End)]"
+							}
+							button_icon_square = {
+								size = {
+									100
+									100
+								}
+								blockoverride
+								"icon"
+								{
+									texture = "gfx/interface/icons/religion_icons/catholic.dds"
+								}
+								onclick = "[GetScriptedGui('add_infamy_scgui').Execute(GuiScope.End)]"
+							}
+							button_icon_square = {
+								size = {
+									100
+									100
+								}
+								blockoverride
+								"icon"
+								{
+									texture = "gfx/interface/icons/religion_icons/catholic.dds"
+								}
+								onclick = "[GetScriptedGui('add_infamy_scgui').Execute(GuiScope.End)]"
+							}
+							button_icon_square = {
+								size = {
+									100
+									100
+								}
+								blockoverride
+								"icon"
+								{
+									texture = "gfx/interface/icons/religion_icons/catholic.dds"
+								}
+								onclick = "[GetScriptedGui('add_infamy_scgui').Execute(GuiScope.End)]"
+							}
+							button_icon_square = {
+								size = {
+									100
+									100
+								}
+								blockoverride
+								"icon"
+								{
+									texture = "gfx/interface/icons/religion_icons/catholic.dds"
+								}
+								onclick = "[GetScriptedGui('add_infamy_scgui').Execute(GuiScope.End)]"
+							}
+							button_icon_square = {
+								size = {
+									100
+									100
+								}
+								blockoverride
+								"icon"
+								{
+									texture = "gfx/interface/icons/religion_icons/catholic.dds"
+								}
+								onclick = "[GetScriptedGui('add_infamy_scgui').Execute(GuiScope.End)]"
+							}
+							button_icon_square = {
+								size = {
+									100
+									100
+								}
+								blockoverride
+								"icon"
+								{
+									texture = "gfx/interface/icons/religion_icons/catholic.dds"
+								}
+								onclick = "[GetScriptedGui('add_infamy_scgui').Execute(GuiScope.End)]"
+							}
+							button_icon_square = {
+								size = {
+									100
+									100
+								}
+								blockoverride
+								"icon"
+								{
+									texture = "gfx/interface/icons/religion_icons/catholic.dds"
+								}
+								onclick = "[GetScriptedGui('add_infamy_scgui').Execute(GuiScope.End)]"
+							}
+							button_icon_square = {
+								size = {
+									100
+									100
+								}
+								blockoverride
+								"icon"
+								{
+									texture = "gfx/interface/icons/religion_icons/catholic.dds"
+								}
+								onclick = "[GetScriptedGui('add_infamy_scgui').Execute(GuiScope.End)]"
+							}
+						}
+						vbox = {	#Age Objectives
+							layoutpolicy_horizontal = expanding
+							spacing = 0
+							using = main_bg
+							margin = { 0 15 }
+							header_pattern = {
+								layoutpolicy_horizontal = expanding
+								blockoverride
+								"header_text"
+								{
+									text = "ve_obj_header"
+									default_format = "#tooltip_header"
+								}
+								blockoverride
+								"button_close"
+								{
+									visible = no
+								}
+							}
+							hbox = {	#Age Objective Rows
+								layoutpolicy_horizontal = preferred
+								margin = { 10 0 }
+								hbox = {
+									using = main_bg
+									icon = {
+										texture = "gfx/interface/icons/event_icons/event_portrait.dds"
+										size = {
+											120
+											120
+										}
+									}
+								}
+								vbox = {
+									using = main_bg
+									layoutpolicy_horizontal = expanding
+									layoutpolicy_vertical = expanding
+									margin = { 30 0 }
+									textbox = {
+										text = "ve_obj_title"
+										using = fontsize_xxl
+										align = left|nobaseline
+										parentanchor = left|hcenter
+									}
+									textbox = {
+										text = "ve_obj_desc"
+										using = fontsize_x
+										align = left|nobaseline
+										parentanchor = left|hcenter
+									}
+								}
+							}
+							hbox = {	#Age Objective Rows
+								layoutpolicy_horizontal = preferred
+								margin = { 10 0 }
+								hbox = {
+									using = main_bg
+									icon = {
+										texture = "gfx/interface/icons/event_icons/event_portrait.dds"
+										size = {
+											120
+											120
+										}
+									}
+								}
+								vbox = {
+									using = main_bg
+									layoutpolicy_horizontal = expanding
+									layoutpolicy_vertical = expanding
+									margin = { 30 0 }
+									textbox = {
+										text = "ve_obj_title"
+										using = fontsize_xxl
+										align = left|nobaseline
+										parentanchor = left|hcenter
+									}
+									textbox = {
+										text = "ve_obj_desc"
+										using = fontsize_x
+										align = left|nobaseline
+										parentanchor = left|hcenter
+									}
+								}
+							}
+							hbox = {	#Age Objective Rows
+								layoutpolicy_horizontal = preferred
+								margin = { 10 0 }
+								hbox = {
+									using = main_bg
+									icon = {
+										texture = "gfx/interface/icons/event_icons/event_portrait.dds"
+										size = {
+											120
+											120
+										}
+									}
+								}
+								vbox = {
+									using = main_bg
+									layoutpolicy_horizontal = expanding
+									layoutpolicy_vertical = expanding
+									margin = { 30 0 }
+									textbox = {
+										text = "ve_obj_title"
+										using = fontsize_xxl
+										align = left|nobaseline
+										parentanchor = left|hcenter
+									}
+									textbox = {
+										text = "ve_obj_desc"
+										using = fontsize_x
+										align = left|nobaseline
+										parentanchor = left|hcenter
+									}
+								}
+							}
+							hbox = {	#Age Objective Rows
+								layoutpolicy_horizontal = preferred
+								margin = { 10 0 }
+								hbox = {
+									using = main_bg
+									icon = {
+										texture = "gfx/interface/icons/event_icons/event_portrait.dds"
+										size = {
+											120
+											120
+										}
+									}
+								}
+								vbox = {
+									using = main_bg
+									layoutpolicy_horizontal = expanding
+									layoutpolicy_vertical = expanding
+									margin = { 30 0 }
+									textbox = {
+										text = "ve_obj_title"
+										using = fontsize_xxl
+										align = left|nobaseline
+										parentanchor = left|hcenter
+									}
+									textbox = {
+										text = "ve_obj_desc"
+										using = fontsize_x
+										align = left|nobaseline
+										parentanchor = left|hcenter
+									}
+								}
+							}
+							hbox = {	#Age Objective Rows
+								layoutpolicy_horizontal = preferred
+								margin = { 10 0 }
+								hbox = {
+									using = main_bg
+									icon = {
+										texture = "gfx/interface/icons/event_icons/event_portrait.dds"
+										size = {
+											120
+											120
+										}
+									}
+								}
+								vbox = {
+									using = main_bg
+									layoutpolicy_horizontal = expanding
+									layoutpolicy_vertical = expanding
+									margin = { 30 0 }
+									textbox = {
+										text = "ve_obj_title"
+										using = fontsize_xxl
+										align = left|nobaseline
+										parentanchor = left|hcenter
+									}
+									textbox = {
+										text = "ve_obj_desc"
+										using = fontsize_x
+										align = left|nobaseline
+										parentanchor = left|hcenter
+									}
+								}
+							}
+							hbox = {	#Age Objective Rows
+								layoutpolicy_horizontal = preferred
+								margin = { 10 0 }
+								hbox = {
+									using = main_bg
+									icon = {
+										texture = "gfx/interface/icons/event_icons/event_portrait.dds"
+										size = {
+											120
+											120
+										}
+									}
+								}
+								vbox = {
+									using = main_bg
+									layoutpolicy_horizontal = expanding
+									layoutpolicy_vertical = expanding
+									margin = { 30 0 }
+									textbox = {
+										text = "ve_obj_title"
+										using = fontsize_xxl
+										align = left|nobaseline
+										parentanchor = left|hcenter
+									}
+									textbox = {
+										text = "ve_obj_desc"
+										using = fontsize_x
+										align = left|nobaseline
+										parentanchor = left|hcenter
+									}
+								}
+							}
+							hbox = {	#Age Objective Rows
+								layoutpolicy_horizontal = preferred
+								margin = { 10 0 }
+								hbox = {
+									using = main_bg
+									icon = {
+										texture = "gfx/interface/icons/event_icons/event_portrait.dds"
+										size = {
+											120
+											120
+										}
+									}
+								}
+								vbox = {
+									using = main_bg
+									layoutpolicy_horizontal = expanding
+									layoutpolicy_vertical = expanding
+									margin = { 30 0 }
+									textbox = {
+										text = "ve_obj_title"
+										using = fontsize_xxl
+										align = left|nobaseline
+										parentanchor = left|hcenter
+									}
+									textbox = {
+										text = "ve_obj_desc"
+										using = fontsize_x
+										align = left|nobaseline
+										parentanchor = left|hcenter
+									}
+								}
+							}
+						}
+					}
+					
+					
+					expand = {
+					}
+				}
+			}
+		}
+	}
+}

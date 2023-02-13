@@ -1,7 +1,0 @@
-types international_panel
-{
-    type international_panel = default_block_window {
-        visible = "[GetVariableSystem.Exists('international_open')]"
-        name = "international_panel"
-	}
-}

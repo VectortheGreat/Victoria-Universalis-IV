@@ -1,269 +1,673 @@
 window = {
-    name = "ve_culture"
-    parentanchor = center
-    layer = windows_layer
-    size = { 100% 100% }
-    using = Window_Background
-    movable = no
-    vbox = {
-        layoutpolicy_horizontal = expanding
-        layoutpolicy_vertical = expanding
-        using = Window_Margins
+	name = "ve_culture"
+	parentanchor = center
+	layer = windows_layer
+	size = {
+		100%
+		100%
+	}
+	using = Window_Background
+	movable = no
+	vbox = {
+		layoutpolicy_horizontal = expanding
+		layoutpolicy_vertical = expanding
+		using = Window_Margins
+		header_pattern = {
+			layoutpolicy_horizontal = expanding
+			blockoverride
+			"header_text"
+			{
+				text = "VE_TEXT_MENU_TITLE"
+				default_format = "#tooltip_header"
+			}
+			blockoverride
+			"button_close"
+			{
+				onclick = "[ExecuteConsoleCommand('gui.clearwidgets')]"
+			}
+		}
+		scrollbox = {
+			layoutpolicy_horizontal = expanding
+			layoutpolicy_vertical = expanding
+			blockoverride
+			"scrollbox_content"
+			{
+				vbox = {
+					layoutpolicy_horizontal = expanding
+					layoutpolicy_vertical = expanding
+					tab_buttons_fullscreen = {
+						blockoverride
+						"first_button"
+						{
+							text = "IDEAS"
+						}
+						blockoverride
+						"first_button_click"
+						{
+							onclick = "[ExecuteConsoleCommand('gui.createwidget gui/ve_ideas.gui ve_ideas')]"
+							onclick = "[GetVariableSystem.Set('ve_last_tab', 've_ideas')]"
+						}
+						blockoverride
+						"first_button_visibility"
+						{
+							visible = "[GetVariableSystem.HasValue('ve_last_tab', 've_ideas')]"
+						}
+						blockoverride
+						"first_button_visibility_checked"
+						{
+							visible = "[Not( GetVariableSystem.HasValue('ve_last_tab', 've_ideas') )]"
+						}
+						blockoverride
+						"first_button_selected"
+						{
+							text = "IDEAS"
+						}
+						blockoverride
+						"second_button"
+						{
+							text = "RELIGION"
+						}
+						blockoverride
+						"second_button_click"
+						{
+							onclick = "[ExecuteConsoleCommand('gui.createwidget gui/ve_religion.gui ve_religion')]"
+							onclick = "[GetVariableSystem.Set('ve_last_tab', 've_religion')]"
+						}
+						blockoverride
+						"second_button_visibility"
+						{
+							visible = "[GetVariableSystem.HasValue('ve_last_tab', 've_religion')]"
+						}
+						blockoverride
+						"second_button_visibility_checked"
+						{
+							visible = "[Not( GetVariableSystem.HasValue('ve_last_tab', 've_religion') )]"
+						}
+						blockoverride
+						"second_button_selected"
+						{
+							text = "RELIGION"
+						}
+						blockoverride
+						"third_button"
+						{
+							text = "MS_POPS"
+						}
+						blockoverride
+						"third_button_click"
+						{
+							onclick = "[ExecuteConsoleCommand('gui.createwidget gui/ve_culture.gui ve_culture')]"
+							onclick = "[GetVariableSystem.Set('ve_last_tab', 've_culture')]"
+						}
+						blockoverride
+						"third_button_visibility"
+						{
+							visible = "[GetVariableSystem.HasValue('ve_last_tab', 've_culture')]"
+						}
+						blockoverride
+						"third_button_visibility_checked"
+						{
+							visible = "[Not( GetVariableSystem.HasValue('ve_last_tab', 've_culture') )]"
+						}
+						blockoverride
+						"third_button_selected"
+						{
+							text = "MS_POPS"
+						}
+						blockoverride
+						"fourth_button"
+						{
+							text = "VE_AGE_BONUS"
+						}
+						blockoverride
+						"fourth_button_click"
+						{
+							onclick = "[ExecuteConsoleCommand('gui.createwidget gui/ve_age_bonusses.gui ve_age_bonusses')]"
+							onclick = "[GetVariableSystem.Set('ve_last_tab', 've_age_bonusses')]"
+						}
+						blockoverride
+						"fourth_button_visibility"
+						{
+							visible = "[GetVariableSystem.HasValue('ve_last_tab', 've_age_bonusses')]"
+						}
+						blockoverride
+						"fourth_button_visibility_checked"
+						{
+							visible = "[Not( GetVariableSystem.HasValue('ve_last_tab', 've_age_bonusses') )]"
+						}
+						blockoverride
+						"fourth_button_selected"
+						{
+							text = "VE_AGE_BONUS"
+						}
+					}
+					hbox = {
+						layoutpolicy_horizontal = expanding
+						margin = {
+							0
+							20
+						}
+						hbox = {
+							using = main_bg
+							vbox = {
+								spacing = 10
+								margin = {
+									30
+									10
+								}
+								icon = {
+									texture = "gfx/interface/population/pop_culture.dds"
+									size = {
+										120
+										120
+									}
+								}
+								textbox = {
+									text = "#v [GetPlayer.GetPrimaryCulturesDesc]#!"
+									using = fontsize_xxl
+									align = center
+									elide = left
+									minimumsize = {
+										100
+										-1
+									}
+									maximumsize = {
+										500
+										-1
+									}
+									multiline = yes
+									autoresize = yes
+								}
+							}
+						}
+						hbox = {
+							#Culture Info
+							using = main_bg
+							layoutpolicy_horizontal = expanding
+							hbox = {
+								margin = {
+									0
+									75
+								}
+								spacing = 10
+								layoutpolicy_horizontal = expanding
+								vbox = {
+									#Accepted Cultures
+									spacing = 10
+									textbox = {
+										text = "ve_gecici_1"
+										default_format = "#tooltip_header"
+										using = fontsize_xxl
+										align = nobaseline
+										elide = left
+										autoresize = yes
+									}
+									textbox = {
+										text = "ve_gecici_2"
+										default_format = "#instruction"
+										using = fontsize_xxl
+										align = center
+										elide = center
+										minimumsize = {
+											100
+											-1
+										}
+										maximumsize = {
+											500
+											-1
+										}
+										multiline = yes
+										autoresize = yes
+									}
+								}
+								vbox = {
+									spacing = 10
+									textbox = {
+										text = "ve_gecici_3"
+										default_format = "#tooltip_header"
+										using = fontsize_xxl
+										align = nobaseline
+										elide = left
+										autoresize = yes
+									}
+									textbox = {
+										text = "ve_gecici_4"
+										default_format = "#instruction"
+										using = fontsize_xxl
+										align = nobaseline
+										elide = left
+										autoresize = yes
+									}
+								}
+								vbox = {
+									spacing = 10
+									textbox = {
+										text = "ve_gecici_24"
+										default_format = "#tooltip_header"
+										using = fontsize_xxl
+										align = nobaseline
+										elide = left
+										autoresize = yes
+									}
+									textbox = {
+										text = "ve_gecici_6"
+										default_format = "#instruction"
+										using = fontsize_xxl
+										align = nobaseline
+										elide = left
+										autoresize = yes
+									}
+								}
+								vbox = {
+									spacing = 10
+									textbox = {
+										text = "ve_gecici_23"
+										default_format = "#tooltip_header"
+										using = fontsize_xxl
+										align = nobaseline
+										elide = left
+										autoresize = yes
+									}
+									textbox = {
+										text = "ve_gecici_8"
+										default_format = "#instruction"
+										using = fontsize_xxl
+										align = nobaseline
+										elide = left
+										autoresize = yes
+									}
+								}
+							}
+						}
+					}
+					vbox = {
+						#Culture Policies
+						spacing = 15
+						layoutpolicy_horizontal = expanding
+						header_pattern = {
+							layoutpolicy_horizontal = expanding
+							blockoverride
+							"header_text"
+							{
+								text = "ve_culture_policy"
+								default_format = "#tooltip_header"
+							}
+							blockoverride
+							"button_close"
+							{
+								visible = no
+							}
+						}
+						hbox = {	#Progress Bar
+							using = main_bg
+							layoutpolicy_horizontal = growing
+							margin = {
+								0
+								20
+							}
+							hbox ={
+								spacing = 20
+								textbox = {
+										text = "ve_intellectual_nation_policy"
 
-        header_pattern = {
-            layoutpolicy_horizontal = expanding
-            blockoverride "header_text"
-            {
-                text = "VE_TEXT_MENU_TITLE"
-                tooltip = "VE_TEXT_MENU_TOOLTIP"
-            }
-
-            blockoverride "button_close"
-            {
-                onclick = "[ExecuteConsoleCommand('gui.clearwidgets')]"
-            }
-        }
-
-        scrollbox = {
-            layoutpolicy_horizontal = expanding
-            layoutpolicy_vertical = expanding
-            blockoverride "scrollbox_content" {
-                vbox = {
-                    layoutpolicy_horizontal = expanding
-                    layoutpolicy_vertical = expanding
-                    tab_buttons_fullscreen = {
-                        blockoverride "first_button" {
-                            text = "IDEAS"
-                        }
-                        blockoverride "first_button_click" {
-                            onclick = "[ExecuteConsoleCommand('gui.createwidget gui/ve_ideas.gui ve_ideas')]"
-                            onclick = "[GetVariableSystem.Set('ve_last_tab', 've_ideas')]"
-                        }
-                        blockoverride "first_button_visibility" {
-                            visible = "[GetVariableSystem.HasValue('ve_last_tab', 've_ideas')]"
-                        }
-                        blockoverride "first_button_visibility_checked" {
-                           visible = "[Not( GetVariableSystem.HasValue('ve_last_tab', 've_ideas') )]"
-                        }
-                        blockoverride "first_button_selected" {
-                            text = "IDEAS"
-                        }
-
-                        blockoverride "second_button" {
-                            text = "RELIGION"
-                        }
-                        blockoverride "second_button_click" {
-                            onclick = "[ExecuteConsoleCommand('gui.createwidget gui/ve_religion.gui ve_religion')]"
-                            onclick = "[GetVariableSystem.Set('ve_last_tab', 've_religion')]"
-                        }
-                        blockoverride "second_button_visibility" {
-                            visible = "[GetVariableSystem.HasValue('ve_last_tab', 've_religion')]"
-                        }
-                        blockoverride "second_button_visibility_checked" {
-                            visible = "[Not( GetVariableSystem.HasValue('ve_last_tab', 've_religion') )]"
-                        }
-                        blockoverride "second_button_selected" {
-                            text = "RELIGION"
-                        }
-
-                        blockoverride "third_button" {
-                            text = "MS_POPS"
-                        }
-                        blockoverride "third_button_click" {
-                            onclick = "[ExecuteConsoleCommand('gui.createwidget gui/ve_culture.gui ve_culture')]"
-                            onclick = "[GetVariableSystem.Set('ve_last_tab', 've_culture')]"
-                        }
-                        blockoverride "third_button_visibility" {
-                           visible = "[GetVariableSystem.HasValue('ve_last_tab', 've_culture')]"
-                        }
-                        blockoverride "third_button_visibility_checked" {
-                            visible = "[Not( GetVariableSystem.HasValue('ve_last_tab', 've_culture') )]"
-                        }
-                        blockoverride "third_button_selected" {
-                            text = "MS_POPS"
-                        }
-                    }
-                    hbox = { #Idea rows
-                        layoutpolicy_horizontal = expanding
-                        using = main_bg
-                        margin = { 0 30 }
-                        background = {
-                            using = entry_bg_simple
-                        }
-                        hbox = {
-                            using = main_bg
-                            margin = { 30 30 }
-                            vbox = {
-                                spacing = 10
-                                icon = {
-                                    texture = "gfx/interface/icons/event_icons/event_portrait.dds"
-                                    size = { 120 120 }
-                                }
-                                textbox = {
-                                    text = "Idea_diplomatic"
-                                    using = fontsize_xxl
-                                    align = nobaseline
-                                    elide = left
-                                    autoresize = yes
-                                }
-
-                            }
-                            vbox = {
-                                spacing = 10
-                                hbox = {
-                                    button_icon_round_big = {
-                                        size = { 45 45 }
-                                        blockoverride "icon" {
-                                            texture = "gfx/interface/icons/event_icons/event_portrait.dds"
-                                        }
-                                        onclick = "[GetScriptedGui('add_scgui').Execute(GuiScope.End)]"
-                                        enabled = "[GetScriptedGui('check_scgui').IsValid( GuiScope.End )]"
-                                    }
-                                    button_standard = {
-                                        blockoverride "primary_visible" {}
-                                        name = "advcm_treasury"
-                                        onclick = "[GetScriptedGui('remove_scgui').Execute(GuiScope.End)]"  
-                                        button_ignore = none
-                                        tooltip = "PPK_TEXT_BUTTON_2_TOOLTIP"
-                                        using = tooltip_ne
-                                        size = { 130 35 }
-                                        text = "PPK_TEXT_BUTTON_2"
-                                    }
-                                }
-                                default_progressbar_horizontal = {
-                                    tooltip = "TECHNOLOGY_GAIN_BREAKDOWN"
-                                    visible = "[Or(And(GreaterThan_CFixedPoint(Technology.GetProgress(GetPlayer.Self), '(CFixedPoint)0'), Not(Technology.HasResearchedTech(GetPlayer.Self))), GreaterThan_CFixedPoint(GetPlayer.GetMinWeeklyTechnologyProgressForTech(Technology.Self), '(CFixedPoint)0'))]"
-                                    layoutpolicy_horizontal = growing
-                                    size = { 0 8 }
-                                    blockoverride "values" {
-                                        max = "[FixedPointToFloat(Technology.GetCost(GetPlayer.Self))]"
-                                        value = "[FixedPointToFloat(Technology.GetProgress(GetPlayer.Self))]"
-                                    }
-                                }
-                            }
-                        }
-                        hbox = {
-                            using = main_bg
-                            margin = { 30 30 }
-                            vbox = {
-                                spacing = 10
-                                icon = {
-                                    texture = "gfx/interface/icons/event_icons/event_portrait.dds"
-                                    size = { 120 120 }
-                                }
-                                textbox = {
-                                    text = "Idea_diplomatic"
-                                    using = fontsize_xxl
-                                    align = nobaseline
-                                    elide = left
-                                    autoresize = yes
-                                }
-                            }
-                            hbox = {
-                                widget = {
-                                    size = { 45 45 }
-                                    icon = {
-                                        texture = "gfx/interface/icons/event_icons/event_portrait.dds"
-                                        size = { 40 40 }
-                                    }
-                                }
-
-                                widget = {
-                                    size = { 45 45 }
-                                    icon = {
-                                        texture = "gfx/interface/icons/event_icons/event_portrait.dds"
-                                        size = { 40 40 }
-                                    }
-                                }
-
-                                widget = {
-                                    size = { 45 45 }
-                                    icon = {
-                                        texture = "gfx/interface/icons/event_icons/event_portrait.dds"
-                                        size = { 40 40 }
-                                    }
-                                }
-
-                                widget = {
-                                    size = { 45 45 }
-                                    icon = {
-                                        texture = "gfx/interface/icons/event_icons/event_portrait.dds"
-                                        size = { 40 40 }
-                                    }
-                                }
-                                widget = {
-                                    size = { 45 45 }
-                                    icon = {
-                                        texture = "gfx/interface/icons/event_icons/event_portrait.dds"
-                                        size = { 40 40 }
-                                    }
-                                }
-
-                            }
-                        }
-                        hbox = {
-                            using = main_bg
-                            margin = { 30 30 }
-                            vbox = {
-                                spacing = 10
-                                icon = {
-                                    texture = "gfx/interface/icons/event_icons/event_portrait.dds"
-                                    size = { 120 120 }
-                                }
-                                textbox = {
-                                    text = "Idea_diplomatic"
-                                    using = fontsize_xxl
-                                    align = nobaseline
-                                    elide = left
-                                    autoresize = yes
-                                }
-                            }
-                            hbox = {
-                                widget = {
-                                    size = { 45 45 }
-                                    icon = {
-                                        texture = "gfx/interface/icons/event_icons/event_portrait.dds"
-                                        size = { 40 40 }
-                                    }
-                                }
-
-                                widget = {
-                                    size = { 45 45 }
-                                    icon = {
-                                        texture = "gfx/interface/icons/event_icons/event_portrait.dds"
-                                        size = { 40 40 }
-                                    }
-                                }
-
-                                widget = {
-                                    size = { 45 45 }
-                                    icon = {
-                                        texture = "gfx/interface/icons/event_icons/event_portrait.dds"
-                                        size = { 40 40 }
-                                    }
-                                }
-
-                                widget = {
-                                    size = { 45 45 }
-                                    icon = {
-                                        texture = "gfx/interface/icons/event_icons/event_portrait.dds"
-                                        size = { 40 40 }
-                                    }
-                                }
-                                widget = {
-                                    size = { 45 45 }
-                                    icon = {
-                                        texture = "gfx/interface/icons/event_icons/event_portrait.dds"
-                                        size = { 40 40 }
-                                    }
-                                }
-
-                            }
-                        }
-                    }
-                    expand = { }
-                }
-            }
-        }
-    }
+										using = fontsize_xxl
+										align = nobaseline
+										elide = left
+										autoresize = yes
+									}
+								double_direction_progressbar = {
+									size = { 500 60 }
+									parentanchor = bottom
+									
+									blockoverride "value_left" {
+										value = "[Negate_float(FixedPointToFloat(GetPlayer.GetDeficitPowerRatioForProgressBar('bureaucracy')))]"
+									}
+									blockoverride "value_right" {
+										value = "[FixedPointToFloat(GetPlayer.GetExcessPowerRatioForProgressBar('bureaucracy'))]"
+									}
+								}
+								textbox = {
+										text = "ve_culture_national_supremacy_policy"
+										using = fontsize_xxl
+										align = nobaseline
+										elide = left
+										autoresize = yes
+									}
+							}
+						}
+						hbox = {
+							#National Supremacy
+							using = main_bg
+							layoutpolicy_horizontal = expanding
+							margin = {
+								0
+								20
+							}
+							vbox = {
+							layoutpolicy_horizontal = expanding
+								header_pattern = {
+									layoutpolicy_horizontal = expanding
+									blockoverride
+									"header_text"
+									{
+										text = "ve_culture_national_supremacy"
+										default_format = "#tooltip_header"
+									}
+									blockoverride
+									"button_close"
+									{
+										visible = no
+									}
+								}
+								hbox = {
+									layoutpolicy_horizontal = fixed
+									vbox = {
+										button = {
+											size = {
+												245
+												500
+											}
+											icon = {
+												texture = "gfx/interface/hitler1933.dds"
+												size = {
+													100%
+													100%
+												}
+											}
+											# enabled = "[GetScriptedGui('check_scgui').IsValid( GuiScope.End )]"
+										}
+									}
+									vbox = {
+										margin = {
+											5
+											15
+										}
+										button = {
+											size = {
+												245
+												500
+											}
+											enabled = "[GetScriptedGui('check_scgui').IsValid( GuiScope.End )]"
+											onclick = "[GetScriptedGui('add_scgui').Execute(GuiScope.End)]"
+											icon = {
+												texture = "gfx/interface/hitler1933.dds"
+												size = {
+													100%
+													100%
+												}
+											}
+										}
+									}
+									vbox = {
+										button = {
+											size = {
+												245
+												500
+											}
+											icon = {
+												texture = "gfx/interface/hitler1933.dds"
+												size = {
+													100%
+													100%
+												}
+											}
+											enabled = "[GetScriptedGui('check_scgui').IsValid( GuiScope.End )]"
+										}
+									}
+									vbox = {
+										margin = {
+											5
+											15
+										}
+										button = {
+											size = {
+												245
+												500
+											}
+											enabled = "[GetScriptedGui('check_scgui').IsValid( GuiScope.End )]"
+											onclick = "[GetScriptedGui('remove_scgui').Execute(GuiScope.End)]"
+											icon = {
+												texture = "gfx/interface/hitler1933.dds"
+												size = {
+													100%
+													100%
+												}
+											}
+										}
+									}
+									vbox = {
+										margin = {
+											5
+											15
+										}
+										button = {
+											size = {
+												245
+												500
+											}
+											enabled = "[GetScriptedGui('check_scgui').IsValid( GuiScope.End )]"
+											icon = {
+												texture = "gfx/interface/hitler1933.dds"
+												size = {
+													100%
+													100%
+												}
+											}
+										}
+									}
+									vbox = {
+										margin = {
+											5
+											15
+										}
+										button = {
+											size = {
+												245
+												500
+											}
+											enabled = "[GetScriptedGui('check_scgui').IsValid( GuiScope.End )]"
+											onclick = "[GetScriptedGui('remove_scgui').Execute(GuiScope.End)]"
+											icon = {
+												texture = "gfx/interface/hitler1933.dds"
+												size = {
+													100%
+													100%
+												}
+											}
+										}
+									}
+									vbox = {
+										margin = {
+											5
+											15
+										}
+										button = {
+											size = {
+												245
+												500
+											}
+											enabled = "[GetScriptedGui('check_scgui').IsValid( GuiScope.End )]"
+											icon = {
+												texture = "gfx/interface/hitler1933.dds"
+												size = {
+													100%
+													100%
+												}
+											}
+										}
+									}
+								}
+							}
+						}
+						hbox = {
+							#National Supremacy
+							using = main_bg
+							layoutpolicy_horizontal = expanding
+							margin = {
+								0
+								20
+							}
+							vbox = {
+							layoutpolicy_horizontal = expanding
+								header_pattern = {
+									layoutpolicy_horizontal = expanding
+									blockoverride
+									"header_text"
+									{
+										text = "ve_intellectual_nation"
+										default_format = "#tooltip_header"
+									}
+									blockoverride
+									"button_close"
+									{
+										visible = no
+									}
+								}
+								hbox = {
+									layoutpolicy_horizontal = fixed
+									vbox = {
+										button = {
+											size = {
+												245
+												500
+											}
+											icon = {
+												texture = "gfx/interface/1701.dds"
+												size = {
+													100%
+													100%
+												}
+											}
+											# enabled = "[GetScriptedGui('check_scgui').IsValid( GuiScope.End )]"
+										}
+									}
+									vbox = {
+										margin = {
+											5
+											15
+										}
+										button = {
+											size = {
+												245
+												500
+											}
+											enabled = "[GetScriptedGui('check_scgui').IsValid( GuiScope.End )]"
+											onclick = "[GetScriptedGui('add_scgui').Execute(GuiScope.End)]"
+											icon = {
+												texture = "gfx/interface/1701.dds"
+												size = {
+													100%
+													100%
+												}
+											}
+										}
+									}
+									vbox = {
+										button = {
+											size = {
+												245
+												500
+											}
+											icon = {
+												texture = "gfx/interface/1701.dds"
+												size = {
+													100%
+													100%
+												}
+											}
+											enabled = "[GetScriptedGui('check_scgui').IsValid( GuiScope.End )]"
+										}
+									}
+									vbox = {
+										margin = {
+											5
+											15
+										}
+										button = {
+											size = {
+												245
+												500
+											}
+											enabled = "[GetScriptedGui('check_scgui').IsValid( GuiScope.End )]"
+											onclick = "[GetScriptedGui('remove_scgui').Execute(GuiScope.End)]"
+											icon = {
+												texture = "gfx/interface/1701.dds"
+												size = {
+													100%
+													100%
+												}
+											}
+										}
+									}
+									vbox = {
+										margin = {
+											5
+											15
+										}
+										button = {
+											size = {
+												245
+												500
+											}
+											enabled = "[GetScriptedGui('check_scgui').IsValid( GuiScope.End )]"
+											icon = {
+												texture = "gfx/interface/1701.dds"
+												size = {
+													100%
+													100%
+												}
+											}
+										}
+									}
+									vbox = {
+										margin = {
+											5
+											15
+										}
+										button = {
+											size = {
+												245
+												500
+											}
+											enabled = "[GetScriptedGui('check_scgui').IsValid( GuiScope.End )]"
+											onclick = "[GetScriptedGui('remove_scgui').Execute(GuiScope.End)]"
+											icon = {
+												texture = "gfx/interface/1701.dds"
+												size = {
+													100%
+													100%
+												}
+											}
+										}
+									}
+									vbox = {
+										margin = {
+											5
+											15
+										}
+										button = {
+											size = {
+												245
+												500
+											}
+											enabled = "[GetScriptedGui('check_scgui').IsValid( GuiScope.End )]"
+											icon = {
+												texture = "gfx/interface/1701.dds"
+												size = {
+													100%
+													100%
+												}
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+					expand = {
+					}
+				}
+			}
+		}
+	}
 }

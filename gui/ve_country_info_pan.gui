@@ -1,5 +1,5 @@
 window = {
-	name = "vegui"
+	name = "ve_country_info_pan"
 	parentanchor = center
 	layer = windows_layer
 	size = {
@@ -8,11 +8,6 @@ window = {
 	}
 	using = Window_Background
 	movable = no
-	state = {
-		name = 1
-		trigger_on_create = yes
-		on_start = "[GetVariableSystem.Clear('ve_last_tab')]"
-	}
 	vbox = {
 		layoutpolicy_horizontal = expanding
 		layoutpolicy_vertical = expanding
@@ -29,7 +24,6 @@ window = {
 			"button_close"
 			{
 				onclick = "[ExecuteConsoleCommand('gui.clearwidgets')]"
-				onclick = "[GetVariableSystem.Clear('ve_last_tab')]"
 			}
 		}
 		scrollbox = {
@@ -41,6 +35,60 @@ window = {
 				vbox = {
 					layoutpolicy_horizontal = expanding
 					layoutpolicy_vertical = expanding
+					tab_buttons_fullscreen = {
+						blockoverride
+						"first_button"
+						{
+							text = "VE_COUNTRY"
+						}
+						blockoverride
+						"first_button_click"
+						{
+							onclick = "[ExecuteConsoleCommand('gui.createwidget gui/ve_country_info_pan.gui ve_country_info_pan')]"
+							onclick = "[GetVariableSystem.Set('ve_last_tab', 've_country_info_pan')]"
+						}
+						blockoverride
+						"first_button_visibility"
+						{
+							visible = "[GetVariableSystem.HasValue('ve_last_tab', 've_country_info_pan')]"
+						}
+						blockoverride
+						"first_button_visibility_checked"
+						{
+							visible = "[Not( GetVariableSystem.HasValue('ve_last_tab', 've_country_info_pan') )]"
+						}
+						blockoverride
+						"first_button_selected"
+						{
+							text = "VE_COUNTRY"
+						}
+						blockoverride
+						"second_button"
+						{
+							text = "VE_AGE_BONUS"
+						}
+						blockoverride
+						"second_button_click"
+						{
+							onclick = "[ExecuteConsoleCommand('gui.createwidget gui/ve_age_bonusses.gui ve_age_bonusses')]"
+							onclick = "[GetVariableSystem.Set('ve_last_tab', 've_age_bonusses')]"
+						}
+						blockoverride
+						"second_button_visibility"
+						{
+							visible = "[GetVariableSystem.HasValue('ve_last_tab', 've_age_bonusses')]"
+						}
+						blockoverride
+						"second_button_visibility_checked"
+						{
+							visible = "[Not( GetVariableSystem.HasValue('ve_last_tab', 've_age_bonusses') )]"
+						}
+						blockoverride
+						"second_button_selected"
+						{
+							text = "VE_AGE_BONUS"
+						}
+					}
 					tab_buttons_fullscreen = {
 						blockoverride
 						"first_button"
@@ -120,36 +168,21 @@ window = {
 						{
 							text = "MS_POPS"
 						}
-						blockoverride
-						"fourth_button"
-						{
-							text = "VE_AGE_BONUS"
-						}
-						blockoverride
-						"fourth_button_click"
-						{
-							onclick = "[ExecuteConsoleCommand('gui.createwidget gui/ve_age_bonusses.gui ve_age_bonusses')]"
-							onclick = "[GetVariableSystem.Set('ve_last_tab', 've_age_bonusses')]"
-						}
-						blockoverride
-						"fourth_button_visibility"
-						{
-							visible = "[GetVariableSystem.HasValue('ve_last_tab', 've_age_bonusses')]"
-						}
-						blockoverride
-						"fourth_button_visibility_checked"
-						{
-							visible = "[Not( GetVariableSystem.HasValue('ve_last_tab', 've_age_bonusses') )]"
-						}
-						blockoverride
-						"fourth_button_selected"
-						{
-							text = "VE_AGE_BONUS"
+					}
+
+					vbox = {	#Up
+						spacing =  10
+						layoutpolicy_horizontal = expanding
+						hbox = {	#Age Info
+							layoutpolicy_horizontal = fixed
+							using = main_bg
+							margin = {
+								200
+								20
+							}
 						}
 					}
-					fancy_flag = {
-						datacontext = "[GetPlayer]"
-					}
+					
 					expand = {
 					}
 				}
