@@ -27,7 +27,7 @@ types information_panel_bar_types {
 		focuspolicy = all
 
 		position = { 0 200 }
-		
+
 		state = {
 			name = _show
 			using = default_show_properties
@@ -37,13 +37,13 @@ types information_panel_bar_types {
 			using = default_hide_properties
 			on_start = "[InformationPanelBar.ClosePanel]"
 		}
-		
+
 		### BACKGROUND FOR LABEL BUTTONS
 		widget = {
 			size = { 100% 100% }
 			using = clickthrough_blocker
 			alpha = 0
-			
+
 			background = {
 				using = dark_area
 				alpha = 1
@@ -51,7 +51,7 @@ types information_panel_bar_types {
 				margin_top = -5
 				margin_left = -25
 				margin_bottom = -5
-				
+
 				modify_texture = {
 					texture = "gfx/interface/masks/fade_horizontal_right.dds"
 					spriteType = Corneredstretched
@@ -59,7 +59,7 @@ types information_panel_bar_types {
 					blend_mode = alphamultiply
 				}
 			}
-			
+
 			state = {
 				name = show_sidebar_labels
 				alpha = 0.7
@@ -83,9 +83,9 @@ types information_panel_bar_types {
 		### SIDEBAR BACKGROUND
 		icon = {
 			texture = "gfx/interface/main_hud/sidebar_bg.dds"
-			size = { 50 620 }
+			size = { 50 670 }
 			position = { 0 -17 }
-			
+
 			using = hud_shiny_effect
 		}
 
@@ -97,12 +97,13 @@ types information_panel_bar_types {
 			margin_right = -8 #margin to trim the hover area for the labels
 			onmousehierarchyenter = "[PdxGuiInterruptThenTriggerAllAnimations('hide_sidebar_labels','show_sidebar_labels')]"
 			onmousehierarchyleave = "[PdxGuiInterruptThenTriggerAllAnimations('show_sidebar_labels','hide_sidebar_labels')]"
-			
+
 			container = {
 				### POLITICS
 				sidebar_label_button = {
 					position = { -100 0 }
 					blockoverride "onclick" {
+						onclick = "[GetVariableSystem.Clear('ve_tab_var')]"
 						onclick = "[InformationPanelBar.OpenPanelCycleTabs('politics', 'overview|interest_groups|laws|institutions')]"
 						shortcut = "open_politics"
 					}
@@ -126,8 +127,9 @@ types information_panel_bar_types {
 						blockoverride "button_selected" {
 							visible = "[InformationPanelBar.IsPanelOpen('politics')]"
 						}
+						onclick = "[GetVariableSystem.Clear('ve_tab_var')]"
 						onclick = "[InformationPanelBar.OpenPanelCycleTabs('politics', 'overview|interest_groups|laws|institutions')]"
-						
+
 						animated_progresspie = {
 							parentanchor = center
 							texture = "gfx/interface/main_hud/sidebar_progress.dds"
@@ -145,11 +147,12 @@ types information_panel_bar_types {
 					tooltip = "BUTTON_POLITICS"
 					shortcut = "open_politics"
 				}
-				
+
 				### BUDGET
 				sidebar_label_button = {
 					position = { -100 @budget_position }
 					blockoverride "onclick" {
+						onclick = "[GetVariableSystem.Clear('ve_tab_var')]"
 						onclick = "[InformationPanelBar.OpenPanelCycleTabs('budget', 'overview|states|assets')]"
 						shortcut = "open_budget"
 					}
@@ -174,6 +177,7 @@ types information_panel_bar_types {
 						blockoverride "button_selected" {
 							visible = "[InformationPanelBar.IsPanelOpen('budget')]"
 						}
+						onclick = "[GetVariableSystem.Clear('ve_tab_var')]"
 						onclick = "[InformationPanelBar.OpenPanelCycleTabs('budget', 'overview|states|assets')]"
 					}
 				}
@@ -182,11 +186,12 @@ types information_panel_bar_types {
 					tooltip = "BUTTON_BUDGET"
 					shortcut = "open_budget"
 				}
-				
+
 				### BUILDINGS
 				sidebar_label_button = {
 					position = { -100 @buildings_position }
 					blockoverride "onclick" {
+						onclick = "[GetVariableSystem.Clear('ve_tab_var')]"
 						onclick = "[InformationPanelBar.OpenPanelCycleTabs('production_methods', 'urban|rural|development|construction_queues')]"
 						shortcut = "open_buildings"
 					}
@@ -211,6 +216,7 @@ types information_panel_bar_types {
 						blockoverride "button_selected" {
 							visible = "[InformationPanelBar.IsPanelOpen('production_methods')]"
 						}
+						onclick = "[GetVariableSystem.Clear('ve_tab_var')]"
 						onclick = "[InformationPanelBar.OpenPanelCycleTabs('production_methods', 'urban|rural|development|construction_queues')]"
 					}
 				}
@@ -219,11 +225,12 @@ types information_panel_bar_types {
 					tooltip = "BUTTON_BUILDINGS"
 					shortcut = "open_buildings"
 				}
-				
+
 				### TRADE OVERVIEW
 				sidebar_label_button = {
 					position = { -100 @trade_position }
 					blockoverride "onclick" {
+						onclick = "[GetVariableSystem.Clear('ve_tab_var')]"
 						onclick = "[InformationPanelBar.OpenMarketPanelCycleTabs(AccessPlayer.AccessFirstMarket, 'market', 'details|trade_routes|states')]"
 						shortcut = "open_market"
 					}
@@ -248,6 +255,7 @@ types information_panel_bar_types {
 						blockoverride "button_selected" {
 							visible = "[InformationPanelBar.IsPanelOpen('market')]"
 						}
+						onclick = "[GetVariableSystem.Clear('ve_tab_var')]"
 						onclick = "[InformationPanelBar.OpenMarketPanelCycleTabs(AccessPlayer.AccessFirstMarket, 'market', 'details|trade_routes|states')]"
 					}
 				}
@@ -256,11 +264,12 @@ types information_panel_bar_types {
 					tooltip = "BUTTON_TRADE_OVERVIEW"
 					shortcut = "open_market"
 				}
-				
+
 				### MILITARY
 				sidebar_label_button = {
 					position = { -100 @military_position }
 					blockoverride "onclick" {
+						onclick = "[GetVariableSystem.Clear('ve_tab_var')]"
 						onclick = "[InformationPanelBar.OpenPanelCycleTabs('military', 'army|garrison|navy')]"
 						shortcut = "open_military"
 					}
@@ -285,6 +294,7 @@ types information_panel_bar_types {
 						blockoverride "button_selected" {
 							visible = "[InformationPanelBar.IsPanelOpen('military')]"
 						}
+						onclick = "[GetVariableSystem.Clear('ve_tab_var')]"
 						onclick = "[InformationPanelBar.OpenPanelCycleTabs('military', 'army|garrison|navy')]"
 					}
 				}
@@ -293,21 +303,22 @@ types information_panel_bar_types {
 					tooltip = "BUTTON_MILITARY"
 					shortcut = "open_military"
 				}
-				
+
 				### SECONDARY BUTTONS
-				
+
 				#widget needed to prevent you from clicking on the map
 				widget = {
 					using = clickthrough_blocker
 					position = { 0 @spacing_widget_1_position }
 					size = { 100% @spacing_widget_size }
 				}
-				
+
 				### DIPLOMATIC
 				sidebar_label_button_small = {
 					enabled = "[GetMetaPlayer.GetPlayedOrObservedCountry.IsValid]"
 					position = { -100 @diplomatic_position }
 					blockoverride "onclick" {
+						onclick = "[GetVariableSystem.Clear('ve_tab_var')]"
 						onclick = "[InformationPanelBar.OpenPanelCycleTabs('diplomatic_overview', 'diplomatic_overview|release_subject')]"
 						shortcut = "open_diplomatic"
 					}
@@ -333,6 +344,7 @@ types information_panel_bar_types {
 						blockoverride "button_selected" {
 							visible = "[InformationPanelBar.IsPanelOpen('diplomatic_overview')]"
 						}
+						onclick = "[GetVariableSystem.Clear('ve_tab_var')]"
 						onclick = "[InformationPanelBar.OpenPanelCycleTabs('diplomatic_overview', 'diplomatic_overview|release_subject')]"
 					}
 				}
@@ -341,12 +353,13 @@ types information_panel_bar_types {
 					tooltip = "BUTTON_DIPLOMATIC_OVERVIEW"
 					shortcut = "open_diplomatic"
 				}
-				
+
 				### TECHNOLOGY
 				sidebar_label_button_small = {
 					enabled = "[GetMetaPlayer.GetPlayedOrObservedCountry.IsValid]"
 					position = { -100 @technology_position }
 					blockoverride "onclick" {
+						onclick = "[GetVariableSystem.Clear('ve_tab_var')]"
 						onclick = "[InformationPanelBar.OpenPanelCycleTabs('tech_tree', 'production|military|society')]"
 						shortcut = "open_technology"
 					}
@@ -372,8 +385,9 @@ types information_panel_bar_types {
 						blockoverride "button_selected" {
 							visible = "[InformationPanelBar.IsPanelOpen('tech_tree')]"
 						}
+						onclick = "[GetVariableSystem.Clear('ve_tab_var')]"
 						onclick = "[InformationPanelBar.OpenPanelCycleTabs('tech_tree', 'production|military|society')]"
-						
+
 						animated_progresspie = {
 							visible = "[Technology.IsValid]"
 							parentanchor = center
@@ -392,12 +406,13 @@ types information_panel_bar_types {
 					tooltip = "BUTTON_TECHNOLOGY"
 					shortcut = "open_technology"
 				}
-				
+
 				### CULTURE
 				sidebar_label_button_small = {
 					enabled = "[GetMetaPlayer.GetPlayedOrObservedCountry.IsValid]"
 					position = { -100 @culture_position }
 					blockoverride "onclick" {
+						onclick = "[GetVariableSystem.Clear('ve_tab_var')]"
 						onclick = "[InformationPanelBar.OpenPanelCycleTabs('culture', 'culture_info|nation_formation')]"
 						shortcut = "open_culture"
 					}
@@ -423,6 +438,7 @@ types information_panel_bar_types {
 						blockoverride "button_selected" {
 							visible = "[InformationPanelBar.IsPanelOpen('culture')]"
 						}
+						onclick = "[GetVariableSystem.Clear('ve_tab_var')]"
 						onclick = "[InformationPanelBar.OpenPanelCycleTabs('culture', 'culture_info|nation_formation')]"
 					}
 				}
@@ -431,12 +447,13 @@ types information_panel_bar_types {
 					tooltip = "BUTTON_CULTURE_OVERVIEW"
 					shortcut = "open_culture"
 				}
-				
+
 				### POPULATION
 				sidebar_label_button_small = {
 					enabled = "[GetMetaPlayer.GetPlayedOrObservedCountry.IsValid]"
 					position = { -100 @population_position }
 					blockoverride "onclick" {
+						onclick = "[GetVariableSystem.Clear('ve_tab_var')]"
 						onclick = "[InformationPanelBar.OpenPanelCycleTabs('pops_overview', 'statistics|pop_list')]"
 						shortcut = "open_population"
 					}
@@ -462,6 +479,7 @@ types information_panel_bar_types {
 						blockoverride "button_selected" {
 							visible = "[InformationPanelBar.IsPanelOpen('pops_overview')]"
 						}
+						onclick = "[GetVariableSystem.Clear('ve_tab_var')]"
 						onclick = "[InformationPanelBar.OpenPanelCycleTabs('pops_overview', 'statistics|pop_list')]"
 					}
 				}
@@ -470,12 +488,13 @@ types information_panel_bar_types {
 					tooltip = "BUTTON_POPULATION"
 					shortcut = "open_population"
 				}
-				
+
 				### JOURNAL
 				sidebar_label_button_small = {
 					enabled = "[GetMetaPlayer.GetPlayedOrObservedCountry.IsValid]"
 					position = { -100 @journal_position }
 					blockoverride "onclick" {
+						onclick = "[GetVariableSystem.Clear('ve_tab_var')]"
 						onclick = "[InformationPanelBar.OpenPanelCycleTabs('journal', 'journal|decisions')]"
 						shortcut = "open_journal"
 					}
@@ -501,6 +520,7 @@ types information_panel_bar_types {
 						blockoverride "button_selected" {
 							visible = "[InformationPanelBar.IsPanelOpen('journal')]"
 						}
+						onclick = "[GetVariableSystem.Clear('ve_tab_var')]"
 						onclick = "[InformationPanelBar.OpenPanelCycleTabs('journal', 'journal|decisions')]"
 					}
 					textbox = {
@@ -528,6 +548,7 @@ types information_panel_bar_types {
 					enabled = "[GetMetaPlayer.GetPlayedOrObservedCountry.IsValid]"
 					position = { -100 @outliner_position }
 					blockoverride "onclick" {
+						onclick = "[GetVariableSystem.Clear('ve_tab_var')]"
 						onclick = "[InformationPanelBar.OpenPanel('outliner')]"
 						shortcut = "open_outliner"
 					}
@@ -554,6 +575,7 @@ types information_panel_bar_types {
 						blockoverride "button_selected" {
 							visible = "[InformationPanelBar.IsPanelOpen('outliner')]"
 						}
+						onclick = "[GetVariableSystem.Clear('ve_tab_var')]"
 						onclick = "[InformationPanelBar.OpenPanel('outliner')]"
 					}
 				}
@@ -562,7 +584,7 @@ types information_panel_bar_types {
 					tooltip = "OUTLINER_TOOLTIP"
 					shortcut = "open_outliner"
 				}
-				
+
 				#widget needed to prevent you from clicking on the map
 				widget = {
 					using = clickthrough_blocker
@@ -575,16 +597,17 @@ types information_panel_bar_types {
 
 					position = { -100 @maplist_position }
 					blockoverride "onclick" {
+						onclick = "[GetVariableSystem.Clear('ve_tab_var')]"
 						onclick = "[MapListPanelManager.ToggleCurrentPanel]"
 						shortcut = map_list
 					}
 				}
-				
+
 				sidebar_label_text_small = {
 					position = { -100 @maplist_position }
 					text = "MAP_LIST"
 				}
-				
+
 				widget = {
 					position = { 0 @maplist_position }
 					using = clickthrough_blocker
@@ -600,6 +623,7 @@ types information_panel_bar_types {
 						blockoverride "button_selected" {
 							visible = "[MapListPanelManager.IsVisible]"
 						}
+						onclick = "[GetVariableSystem.Clear('ve_tab_var')]"
 						onclick = "[MapListPanelManager.ToggleCurrentPanel]"
 					}
 				}
@@ -610,59 +634,62 @@ types information_panel_bar_types {
 					shortcut = map_list
 				}
 
-				#MY GUI MOD
-				sidebar_label_button_small = {
-					enabled = "[GetMetaPlayer.GetPlayedOrObservedCountry.IsValid]"
-					position = { -100 600}
-					blockoverride "onclick" {
-                        onclick = "[ExecuteConsoleCommand('gui.createwidget gui/vegui.gui vegui')]"
-						# onclick = "[GetVariableSystem.SetOrToggle('more_spreadsheets', GetVariableSystem.Get('ve_last_tab'))]"
-                    }
-				}
-				sidebar_label_text_small = {
-					position = { -100 600}
-					text = "TECHNOLOGY"
-				}
+
+                #####################################
+ 				### Victoria Universalis IV - MOD ###
+ 				#####################################
 				widget = {
-					enabled = "[GetMetaPlayer.GetPlayedOrObservedCountry.IsValid]"
-					datacontext = "[AccessPlayer.AccessCurrentlyResearchedTechnology]"
-					position = { 0 600}
+					using = clickthrough_blocker
+					position = { 0 570 }
+					size = { 100% @spacing_widget_size }
+				}
+				sidebar_label_button_small = {
+					position = { -100 590 }
+					blockoverride "onclick" {
+						onclick = "[InformationPanelBar.ClosePanel]"
+						onclick = "[MapListPanelManager.CloseCurrentPanel]"
+						onclick = "[GetVariableSystem.SetOrToggle('ve_tab_var', GetVariableSystem.Get('ve_last_tab'))]"
+					}
+				}
+
+				sidebar_label_text_small = {
+					position = { -100 590 }
+					text = "MS_BTN"
+				}
+
+				widget = {
+					position = { 0 590 }
 					using = clickthrough_blocker
 					using = sidebar_button_size_small
 					using = selected_sidepanel_animation_small
 					blockoverride "selected_visibility" {
-						visible = "[InformationPanelBar.IsPanelOpen('vegui')]"
-					} 
+						visible = "[GetVariableSystem.Exists('ve_tab_var')]"
+					}
 					sidepanel_button_small = {
 						blockoverride "icon" {
-							texture = "gfx/interface/main_hud/tech_btn.dds"
+							texture = "gfx/interface/buttons/button_icons/list.dds"
 						}
 						blockoverride "button_selected" {
-							visible = "[InformationPanelBar.IsPanelOpen('vegui')]"
+							visible = "[GetVariableSystem.Exists('ve_tab_var')]"
 						}
-						onclick = "[ExecuteConsoleCommand('gui.createwidget gui/vegui.gui vegui')]"
-
-						animated_progresspie = {
-							visible = "[Technology.IsValid]"
-							parentanchor = center
-							texture = "gfx/interface/main_hud/sidebar_progress.dds"
-							size = { 100% 100% }
-							framesize = { 100 100 }
-							frame = 2
-							value = "[Technology.GetProgressPercentage(GetPlayer.Self)]"
-							alwaystransparent = yes
-						}
+						onclick = "[InformationPanelBar.ClosePanel]"
+						onclick = "[MapListPanelManager.CloseCurrentPanel]"
+						onclick = "[GetVariableSystem.SetOrToggle('ve_tab_var', GetVariableSystem.Get('ve_last_tab'))]"
 					}
 				}
+
 				sidebar_tooltip_area_small = {
-					datacontext = "[AccessPlayer.AccessCurrentlyResearchedTechnology]"
-					position = { 0 650}
-					tooltip = "BUTTON_TECHNOLOGY"
+					position = { 0 590 }
+					tooltip = "MS_TOOLTIP"
 				}
 			}
-		}	
+		}
+
+		using = cheat_menu_info_panel
 	}
 }
+
+
 
 template sidebar_button_size { 
 	size = { 48 50 } 

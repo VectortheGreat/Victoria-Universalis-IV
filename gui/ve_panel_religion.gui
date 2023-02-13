@@ -1,146 +1,11 @@
-window = {
-	name = "ve_religion"
-	parentanchor = center
-	layer = windows_layer
-	size = {
-		100%
-		100%
-	}
-	using = Window_Background
-	movable = no
-	vbox = {
+types ve_gui_panel_types
+{
+    type ve_panel_religion = vbox {
 		layoutpolicy_horizontal = expanding
 		layoutpolicy_vertical = expanding
-		using = Window_Margins
-		header_pattern = {
-			layoutpolicy_horizontal = expanding
-			blockoverride
-			"header_text"
-			{
-				text = "VE_TEXT_MENU_TITLE"
-				default_format = "#tooltip_header"
-			}
-			blockoverride
-			"button_close"
-			{
-				onclick = "[ExecuteConsoleCommand('gui.clearwidgets')]"
-			}
-		}
-		scrollbox = {
-			layoutpolicy_horizontal = expanding
-			layoutpolicy_vertical = expanding
-			blockoverride
-			"scrollbox_content"
-			{
 				vbox = {
 					layoutpolicy_horizontal = expanding
 					layoutpolicy_vertical = expanding
-					tab_buttons_fullscreen = {
-						blockoverride
-						"first_button"
-						{
-							text = "IDEAS"
-						}
-						blockoverride
-						"first_button_click"
-						{
-							onclick = "[ExecuteConsoleCommand('gui.createwidget gui/ve_ideas.gui ve_ideas')]"
-							onclick = "[GetVariableSystem.Set('ve_last_tab', 've_ideas')]"
-						}
-						blockoverride
-						"first_button_visibility"
-						{
-							visible = "[GetVariableSystem.HasValue('ve_last_tab', 've_ideas')]"
-						}
-						blockoverride
-						"first_button_visibility_checked"
-						{
-							visible = "[Not( GetVariableSystem.HasValue('ve_last_tab', 've_ideas') )]"
-						}
-						blockoverride
-						"first_button_selected"
-						{
-							text = "IDEAS"
-						}
-						blockoverride
-						"second_button"
-						{
-							text = "RELIGION"
-						}
-						blockoverride
-						"second_button_click"
-						{
-							onclick = "[ExecuteConsoleCommand('gui.createwidget gui/ve_religion.gui ve_religion')]"
-							onclick = "[GetVariableSystem.Set('ve_last_tab', 've_religion')]"
-						}
-						blockoverride
-						"second_button_visibility"
-						{
-							visible = "[GetVariableSystem.HasValue('ve_last_tab', 've_religion')]"
-						}
-						blockoverride
-						"second_button_visibility_checked"
-						{
-							visible = "[Not( GetVariableSystem.HasValue('ve_last_tab', 've_religion') )]"
-						}
-						blockoverride
-						"second_button_selected"
-						{
-							text = "RELIGION"
-						}
-						blockoverride
-						"third_button"
-						{
-							text = "MS_POPS"
-						}
-						blockoverride
-						"third_button_click"
-						{
-							onclick = "[ExecuteConsoleCommand('gui.createwidget gui/ve_culture.gui ve_culture')]"
-							onclick = "[GetVariableSystem.Set('ve_last_tab', 've_culture')]"
-						}
-						blockoverride
-						"third_button_visibility"
-						{
-							visible = "[GetVariableSystem.HasValue('ve_last_tab', 've_culture')]"
-						}
-						blockoverride
-						"third_button_visibility_checked"
-						{
-							visible = "[Not( GetVariableSystem.HasValue('ve_last_tab', 've_culture') )]"
-						}
-						blockoverride
-						"third_button_selected"
-						{
-							text = "MS_POPS"
-						}
-						blockoverride
-						"fourth_button"
-						{
-							text = "VE_AGE_BONUS"
-						}
-						blockoverride
-						"fourth_button_click"
-						{
-							onclick = "[ExecuteConsoleCommand('gui.createwidget gui/ve_age_bonusses.gui ve_age_bonusses')]"
-							onclick = "[GetVariableSystem.Set('ve_last_tab', 've_age_bonusses')]"
-						}
-						blockoverride
-						"fourth_button_visibility"
-						{
-							visible = "[GetVariableSystem.HasValue('ve_last_tab', 've_age_bonusses')]"
-						}
-						blockoverride
-						"fourth_button_visibility_checked"
-						{
-							visible = "[Not( GetVariableSystem.HasValue('ve_last_tab', 've_age_bonusses') )]"
-						}
-						blockoverride
-						"fourth_button_selected"
-						{
-							text = "VE_AGE_BONUS"
-						}
-					}
 					hbox = {
 						layoutpolicy_horizontal = expanding
 						margin = {
@@ -919,7 +784,7 @@ window = {
 					expand = {
 					}
 				}
-			}
-		}
+			
+		
 	}
 }
