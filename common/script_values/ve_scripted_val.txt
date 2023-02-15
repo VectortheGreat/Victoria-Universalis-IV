@@ -1,16 +1,4 @@
-﻿idea_1_bar_point_value = {
-	value = var:idea_1_bar_point
-	every_country = {
-		limit = {
-			is_ai = no
-		}
-		add = var:idea_1_bar_point
-	}
-	max = idea_1_bar_point_value_max
-}
-
-idea_1_bar_point_value_max = 70
-ve_idea_pool_value = {
+﻿ve_idea_pool_value = {
 	value = var:idea_point_pool
 	every_country = {
 		limit = {
@@ -46,3 +34,170 @@ national_idea_pool_value = {
 }
 
 national_idea_pool_value_max = 21
+#IDEA BARS
+idea_1_bar_point_value = {
+	value = var:idea_1_bar_point
+	every_country = {
+		limit = {
+			is_ai = no
+		}
+		add = var:idea_1_bar_point
+	}
+	max = idea_1_bar_point_value_max
+}
+
+idea_1_bar_point_value_max = 70
+idea_2_bar_point_value = {
+	value = var:idea_2_bar_point
+	every_country = {
+		limit = {
+			is_ai = no
+		}
+		add = var:idea_2_bar_point
+	}
+	max = idea_2_bar_point_value_max
+}
+
+idea_2_bar_point_value_max = 70
+idea_3_bar_point_value = {
+	value = var:idea_3_bar_point
+	every_country = {
+		limit = {
+			is_ai = no
+		}
+		add = var:idea_3_bar_point
+	}
+	max = idea_3_bar_point_value_max
+}
+
+idea_3_bar_point_value_max = 70
+idea_4_bar_point_value = {
+	value = var:idea_4_bar_point
+	every_country = {
+		limit = {
+			is_ai = no
+		}
+		add = var:idea_4_bar_point
+	}
+	max = idea_4_bar_point_value_max
+}
+
+idea_4_bar_point_value_max = 70
+idea_5_bar_point_value = {
+	value = var:idea_5_bar_point
+	every_country = {
+		limit = {
+			is_ai = no
+		}
+		add = var:idea_5_bar_point
+	}
+	max = idea_5_bar_point_value_max
+}
+
+idea_5_bar_point_value_max = 70
+idea_6_bar_point_value = {
+	value = var:idea_6_bar_point
+	every_country = {
+		limit = {
+			is_ai = no
+		}
+		add = var:idea_6_bar_point
+	}
+	max = idea_6_bar_point_value_max
+}
+
+idea_6_bar_point_value_max = 70
+idea_7_bar_point_value = {
+	value = var:idea_7_bar_point
+	every_country = {
+		limit = {
+			is_ai = no
+		}
+		add = var:idea_7_bar_point
+	}
+	max = idea_7_bar_point_value_max
+}
+
+idea_7_bar_point_value_max = 70
+idea_8_bar_point_value = {
+	value = var:idea_8_bar_point
+	every_country = {
+		limit = {
+			is_ai = no
+		}
+		add = var:idea_8_bar_point
+	}
+	max = idea_8_bar_point_value_max
+}
+
+idea_8_bar_point_value_max = 70
+idea_9_bar_point_value = {
+	value = var:idea_9_bar_point
+	every_country = {
+		limit = {
+			is_ai = no
+		}
+		add = var:idea_9_bar_point
+	}
+	max = idea_9_bar_point_value_max
+}
+
+idea_9_bar_point_value_max = 70
+idea_10_bar_point_value = {
+	value = var:idea_10_bar_point
+	every_country = {
+		limit = {
+			is_ai = no
+		}
+		add = var:idea_10_bar_point
+	}
+	max = idea_10_bar_point_value_max
+}
+
+idea_10_bar_point_value_max = 70
+idea_11_bar_point_value = {
+	value = var:idea_11_bar_point
+	every_country = {
+		limit = {
+			is_ai = no
+		}
+		add = var:idea_11_bar_point
+	}
+	max = idea_11_bar_point_value_max
+}
+
+idea_11_bar_point_value_max = 70
+idea_12_bar_point_value = {
+	value = var:idea_12_bar_point
+	every_country = {
+		limit = {
+			is_ai = no
+		}
+		add = var:idea_12_bar_point
+	}
+	max = idea_12_bar_point_value_max
+}
+
+idea_12_bar_point_value_max = 70
+#Religion
+religion_piety_bar_point_value = {
+	value = var:piety_bar_point
+	every_country = {
+		limit = {
+			is_ai = no
+		}
+		add = var:piety_bar_point
+	}
+	max = piety_bar_point_value_max
+}
+
+piety_bar_point_value_max = 200
+religion_missionary_value = {
+	value = var:avaible_missionaries
+	every_country = {
+		limit = {
+			is_ai = no
+		}
+		add = var:avaible_missionaries
+	}
+}

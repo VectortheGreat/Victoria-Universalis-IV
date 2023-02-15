@@ -175,28 +175,30 @@ dev.2 = {
 	trigger = {
 		has_variable = idea_1_embraced
 		var:idea_1_bar_point >= 10
+		country_or_subject_owns_entire_state_region = STATE_HEDJAZ
 	}
 	option = {
 		name = dev.1.a
 		default_option = yes
 		change_variable = {
-			name = national_idea_pool
-			add = 3
+			name = piety_bar_point
+			add = 100
 		}
 	}
 	option = {
 		name = dev.1.b
-		default_option = yes
-		change_variable = {
-			name = national_idea_pool
-			subtract = 10
-		}
+		remove_variable = idea_1_but_1_completed
+		remove_variable = idea_1_but_2_completed
+		remove_variable = idea_1_but_3_completed
+		remove_variable = idea_1_but_4_completed
+		remove_variable = idea_1_but_5_completed
+		remove_variable = idea_1_but_6_completed
+		remove_variable = idea_1_but_7_completed
 	}
 	option = {
 		name = dev.1.c
-		default_option = yes
 		set_variable = {
-			name = national_idea_pool
+			name = piety_bar_point
 			value = 0
 		}
 	}

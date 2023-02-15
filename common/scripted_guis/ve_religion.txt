@@ -1,0 +1,300 @@
+ve_aspect_button_1 = {
+	scope = country
+	is_shown = {
+		any_country = {
+			is_ai = no
+			var:piety_bar_point >= 100
+		}
+	}
+	is_valid = {
+		any_country = {
+			is_ai = no
+			var:piety_bar_point >= 100
+		}
+	}
+	effect = {
+		every_country = {
+			limit = {
+				is_ai = no
+			}
+			change_variable = {
+				name = piety_bar_point
+				subtract = 100
+			}
+		}
+	}
+}
+
+ve_aspect_button_2 = {
+	scope = country
+	is_shown = {
+		any_country = {
+			is_ai = no
+			var:piety_bar_point >= 100
+		}
+	}
+	is_valid = {
+		any_country = {
+			is_ai = no
+			var:piety_bar_point >= 100
+		}
+	}
+	effect = {
+		every_country = {
+			limit = {
+				is_ai = no
+			}
+			change_variable = {
+				name = piety_bar_point
+				subtract = 100
+			}
+		}
+	}
+}
+
+ve_aspect_button_3 = {
+	scope = country
+	is_shown = {
+		any_country = {
+			is_ai = no
+			var:piety_bar_point >= 100
+		}
+	}
+	is_valid = {
+		any_country = {
+			is_ai = no
+			var:piety_bar_point >= 100
+		}
+	}
+	effect = {
+		every_country = {
+			limit = {
+				is_ai = no
+			}
+			change_variable = {
+				name = piety_bar_point
+				subtract = 100
+			}
+		}
+	}
+}
+
+ve_aspect_button_4 = {
+	scope = country
+	is_shown = {
+		any_country = {
+			is_ai = no
+			var:piety_bar_point >= 100
+		}
+	}
+	is_valid = {
+		any_country = {
+			is_ai = no
+			var:piety_bar_point >= 100
+		}
+	}
+	effect = {
+		every_country = {
+			limit = {
+				is_ai = no
+			}
+			change_variable = {
+				name = piety_bar_point
+				subtract = 100
+			}
+		}
+	}
+}
+
+ve_aspect_button_5 = {
+	scope = country
+	is_shown = {
+		any_country = {
+			is_ai = no
+			var:piety_bar_point >= 100
+		}
+	}
+	is_valid = {
+		any_country = {
+			is_ai = no
+			var:piety_bar_point >= 100
+		}
+	}
+	effect = {
+		every_country = {
+			limit = {
+				is_ai = no
+			}
+			change_variable = {
+				name = piety_bar_point
+				subtract = 100
+			}
+		}
+	}
+}
+
+ve_aspect_button_6 = {
+	scope = country
+	is_shown = {
+		any_country = {
+			is_ai = no
+			var:piety_bar_point >= 100
+		}
+	}
+	is_valid = {
+		any_country = {
+			is_ai = no
+			var:piety_bar_point >= 100
+		}
+	}
+	effect = {
+		every_country = {
+			limit = {
+				is_ai = no
+			}
+			change_variable = {
+				name = piety_bar_point
+				subtract = 100
+			}
+		}
+	}
+}
+
+ve_aspect_button_7 = {
+	scope = country
+	is_shown = {
+		any_country = {
+			is_ai = no
+			var:piety_bar_point >= 100
+		}
+	}
+	is_valid = {
+		any_country = {
+			is_ai = no
+			var:piety_bar_point >= 100
+		}
+	}
+	effect = {
+		every_country = {
+			limit = {
+				is_ai = no
+			}
+			change_variable = {
+				name = piety_bar_point
+				subtract = 100
+			}
+		}
+	}
+}
+
+ve_aspect_button_8 = {
+	scope = country
+	is_shown = {
+		any_country = {
+			is_ai = no
+			var:piety_bar_point >= 100
+		}
+	}
+	is_valid = {
+		any_country = {
+			is_ai = no
+			var:piety_bar_point >= 100
+		}
+	}
+	effect = {
+		every_country = {
+			limit = {
+				is_ai = no
+			}
+			change_variable = {
+				name = piety_bar_point
+				subtract = 100
+			}
+		}
+	}
+}
+
+ve_aspect_button_9 = {
+	scope = country
+	is_shown = {
+		any_country = {
+			is_ai = no
+			var:piety_bar_point >= 100
+		}
+	}
+	is_valid = {
+		any_country = {
+			is_ai = no
+			var:piety_bar_point >= 100
+		}
+	}
+	effect = {
+		every_country = {
+			limit = {
+				is_ai = no
+			}
+			change_variable = {
+				name = piety_bar_point
+				subtract = 100
+			}
+		}
+	}
+}
+
+ve_aspect_button_10 = {
+	scope = country
+	is_shown = {
+		any_country = {
+			is_ai = no
+			var:piety_bar_point >= 100
+		}
+	}
+	is_valid = {
+		any_country = {
+			is_ai = no
+			var:piety_bar_point >= 100
+		}
+	}
+	effect = {
+		every_country = {
+			limit = {
+				is_ai = no
+			}
+			change_variable = {
+				name = piety_bar_point
+				subtract = 100
+			}
+		}
+	}
+}
+
+####################
+###  Holy Sites  ###
+####################
+ve_holy_site_1 = {
+	scope = country
+	is_shown = {
+		any_country = {
+			is_ai = no
+			trigger_if = {
+				limit = {
+					religion = rel:catholic
+				}
+				owns_entire_state_region = STATE_LAZIO
+			}
+			trigger_else_if = {
+				limit = {
+					religion = rel:sunni
+				}
+				owns_entire_state_region = STATE_HEDJAZ
+			}
+		}
+	}
+	effect = {
+		every_country = {
+			limit = {
+				is_ai = no
+			}
+		}
+	}
+}

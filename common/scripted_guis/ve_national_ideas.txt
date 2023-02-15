@@ -1,0 +1,85 @@
+ve_national_idea_1 = {
+	scope = country
+	is_valid = {
+		any_country = {
+			is_ai = no
+			var:national_idea_pool >= 3
+		}
+	}
+}
+
+ve_national_idea_2 = {
+	scope = country
+	is_valid = {
+		any_country = {
+			is_ai = no
+			var:national_idea_pool >= 6
+		}
+	}
+}
+
+ve_national_idea_3 = {
+	scope = country
+	is_valid = {
+		any_country = {
+			is_ai = no
+			var:national_idea_pool >= 9
+		}
+	}
+}
+
+ve_national_idea_4 = {
+	scope = country
+	is_valid = {
+		any_country = {
+			is_ai = no
+			var:national_idea_pool >= 12
+		}
+	}
+}
+
+ve_national_idea_5 = {
+	scope = country
+	is_valid = {
+		any_country = {
+			is_ai = no
+			var:national_idea_pool >= 15
+		}
+	}
+}
+
+ve_national_idea_6 = {
+	scope = country
+	is_valid = {
+		any_country = {
+			is_ai = no
+			var:national_idea_pool >= 18
+		}
+	}
+}
+
+ve_national_idea_7 = {
+	scope = country
+	is_shown = {
+		any_country = {
+			is_ai = no
+			var:national_idea_pool >= 21
+		}
+	}
+	is_valid = {
+		any_country = {
+			is_ai = no
+			var:national_idea_pool >= 21
+		}
+	}
+}
+
+ve_national_idea_1_visibility = {
+	scope = country
+	is_shown = {
+		any_country = {
+			is_ai = no
+			var:national_idea_pool >= 3
+		}
+	}
+}

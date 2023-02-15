@@ -96,7 +96,7 @@ types ve_gui_panel_types
 										autoresize = yes
 									}
 									textbox = {
-										text = "ve_gecici_6"
+										text = "[FixedPointToFloat(GuiScope .ScriptValue('religion_missionary_value'))]"
 										default_format = "#instruction"
 										using = fontsize_xxl
 										align = nobaseline
@@ -115,12 +115,25 @@ types ve_gui_panel_types
 										autoresize = yes
 									}
 									textbox = {
-										text = "ve_gecici_8"
+										text = "[FixedPointToFloat(GuiScope .ScriptValue('religion_piety_bar_point_value'))]"
 										default_format = "#instruction"
 										using = fontsize_xxl
 										align = nobaseline
 										elide = left
 										autoresize = yes
+									}
+									white_progressbar_horizontal = {
+										size = {
+											80
+											15
+										}
+										tooltip = "BUILDING_PROGRESS_TOOLTIP"
+										blockoverride
+										"values"
+										{
+											max = "[FixedPointToFloat(GuiScope .ScriptValue('piety_bar_point_value_max'))]"
+											value = "[FixedPointToFloat(GuiScope .ScriptValue('religion_piety_bar_point_value'))]"
+										}
 									}
 								}
 							}
@@ -164,7 +177,7 @@ types ve_gui_panel_types
 										autoresize = yes
 									}
 								}
-								vbox = {
+								vbox = {	#Aspect 1
 									spacing = 10
 									margin = {
 										15
@@ -175,28 +188,30 @@ types ve_gui_panel_types
 											100
 											100
 										}
-										enabled = "[IsValid(ChangeAllConstructionSpeed(ProductionMethod.Self))]"
-										blockoverride
-										"icon"
-										{
-											texture = "gfx/interface/icons/religion_icons/catholic.dds"
+										onclick = "[GetScriptedGui('ve_aspect_button_1').Execute(GuiScope.End)]"
+										enabled = "[GetScriptedGui('ve_aspect_button_1').IsValid( GuiScope.End )]"
+										textbox = {
+											text = "@[Concatenate(GetPlayer.GetStateReligion.GetNameNoFormatting , '_aspect_1')]!"
+											fontsize = 60
+											align = center|nobaseline
+											parentanchor = vcenter
+											visible = "[GetScriptedGui('ve_aspect_button_1').IsShown( GuiScope.End )]"
+											size = {
+												100%
+												100%
+											}
 										}
-										onclick = "[GetScriptedGui('add_infamy_scgui').Execute(GuiScope.End)]"
-										# state = { ###Yanıp Sönme
-										#     trigger_on_create = yes
-										#     name = 1
-										#     next = 2
-										#     alpha = 0.3
-										#     duration = 0.5
-										#     using = Animation_Curve_Default
-										# }
-										# state = {
-										#     name = 2
-										#     next = 1
-										#     alpha = 1
-										#     duration = 0.5
-										#     using = Animation_Curve_Default
-										# }
+										textbox = {
+											text = "@[Concatenate(GetPlayer.GetStateReligion.GetNameNoFormatting , '_aspect_1_black')]!"
+											fontsize = 60
+											align = center|nobaseline
+											parentanchor = vcenter
+											visible = "[Not(GetScriptedGui('ve_aspect_button_1').IsShown( GuiScope.End ))]"
+											size = {
+												100%
+												100%
+											}
+										}
 									}
 									textbox = {
 										text = "ve_gecici_9"
@@ -206,7 +221,7 @@ types ve_gui_panel_types
 										autoresize = yes
 									}
 								}
-								vbox = {
+								vbox = {	#Aspect 2
 									spacing = 10
 									margin = {
 										15
@@ -217,12 +232,30 @@ types ve_gui_panel_types
 											100
 											100
 										}
-										blockoverride
-										"icon"
-										{
-											texture = "gfx/interface/icons/religion_icons/catholic.dds"
+										onclick = "[GetScriptedGui('ve_aspect_button_2').Execute(GuiScope.End)]"
+										enabled = "[GetScriptedGui('ve_aspect_button_2').IsValid( GuiScope.End )]"
+										textbox = {
+											text = "@[Concatenate(GetPlayer.GetStateReligion.GetNameNoFormatting , '_aspect_2')]!"
+											fontsize = 60
+											align = center|nobaseline
+											parentanchor = vcenter
+											visible = "[GetScriptedGui('ve_aspect_button_2').IsShown( GuiScope.End )]"
+											size = {
+												100%
+												100%
+											}
 										}
-										onclick = "[GetScriptedGui('add_infamy_scgui').Execute(GuiScope.End)]"
+										textbox = {
+											text = "@[Concatenate(GetPlayer.GetStateReligion.GetNameNoFormatting , '_aspect_2_black')]!"
+											fontsize = 60
+											align = center|nobaseline
+											parentanchor = vcenter
+											visible = "[Not(GetScriptedGui('ve_aspect_button_2').IsShown( GuiScope.End ))]"
+											size = {
+												100%
+												100%
+											}
+										}
 									}
 									textbox = {
 										text = "ve_gecici_10"
@@ -232,7 +265,7 @@ types ve_gui_panel_types
 										autoresize = yes
 									}
 								}
-								vbox = {
+								vbox = {	#Aspect 3
 									spacing = 10
 									margin = {
 										15
@@ -243,12 +276,30 @@ types ve_gui_panel_types
 											100
 											100
 										}
-										blockoverride
-										"icon"
-										{
-											texture = "gfx/interface/icons/religion_icons/catholic.dds"
+										onclick = "[GetScriptedGui('ve_aspect_button_3').Execute(GuiScope.End)]"
+										enabled = "[GetScriptedGui('ve_aspect_button_3').IsValid( GuiScope.End )]"
+										textbox = {
+											text = "@[Concatenate(GetPlayer.GetStateReligion.GetNameNoFormatting , '_aspect_3')]!"
+											fontsize = 60
+											align = center|nobaseline
+											parentanchor = vcenter
+											visible = "[GetScriptedGui('ve_aspect_button_3').IsShown( GuiScope.End )]"
+											size = {
+												100%
+												100%
+											}
 										}
-										onclick = "[GetScriptedGui('add_infamy_scgui').Execute(GuiScope.End)]"
+										textbox = {
+											text = "@[Concatenate(GetPlayer.GetStateReligion.GetNameNoFormatting , '_aspect_3_black')]!"
+											fontsize = 60
+											align = center|nobaseline
+											parentanchor = vcenter
+											visible = "[Not(GetScriptedGui('ve_aspect_button_3').IsShown( GuiScope.End ))]"
+											size = {
+												100%
+												100%
+											}
+										}
 									}
 									textbox = {
 										text = "ve_gecici_11"
@@ -258,7 +309,7 @@ types ve_gui_panel_types
 										autoresize = yes
 									}
 								}
-								vbox = {
+								vbox = {	#Aspect 4
 									spacing = 10
 									margin = {
 										15
@@ -269,12 +320,30 @@ types ve_gui_panel_types
 											100
 											100
 										}
-										blockoverride
-										"icon"
-										{
-											texture = "gfx/interface/icons/religion_icons/catholic.dds"
+										onclick = "[GetScriptedGui('ve_aspect_button_4').Execute(GuiScope.End)]"
+										enabled = "[GetScriptedGui('ve_aspect_button_4').IsValid( GuiScope.End )]"
+										textbox = {
+											text = "@[Concatenate(GetPlayer.GetStateReligion.GetNameNoFormatting , '_aspect_4')]!"
+											fontsize = 60
+											align = center|nobaseline
+											parentanchor = vcenter
+											visible = "[GetScriptedGui('ve_aspect_button_4').IsShown( GuiScope.End )]"
+											size = {
+												100%
+												100%
+											}
 										}
-										onclick = "[GetScriptedGui('add_infamy_scgui').Execute(GuiScope.End)]"
+										textbox = {
+											text = "@[Concatenate(GetPlayer.GetStateReligion.GetNameNoFormatting , '_aspect_4_black')]!"
+											fontsize = 60
+											align = center|nobaseline
+											parentanchor = vcenter
+											visible = "[Not(GetScriptedGui('ve_aspect_button_4').IsShown( GuiScope.End ))]"
+											size = {
+												100%
+												100%
+											}
+										}
 									}
 									textbox = {
 										text = "ve_gecici_12"
@@ -284,7 +353,7 @@ types ve_gui_panel_types
 										autoresize = yes
 									}
 								}
-								vbox = {
+								vbox = {	#Aspect 5
 									spacing = 10
 									margin = {
 										15
@@ -295,12 +364,30 @@ types ve_gui_panel_types
 											100
 											100
 										}
-										blockoverride
-										"icon"
-										{
-											texture = "gfx/interface/icons/religion_icons/catholic.dds"
+										onclick = "[GetScriptedGui('ve_aspect_button_5').Execute(GuiScope.End)]"
+										enabled = "[GetScriptedGui('ve_aspect_button_5').IsValid( GuiScope.End )]"
+										textbox = {
+											text = "@[Concatenate(GetPlayer.GetStateReligion.GetNameNoFormatting , '_aspect_5')]!"
+											fontsize = 60
+											align = center|nobaseline
+											parentanchor = vcenter
+											visible = "[GetScriptedGui('ve_aspect_button_5').IsShown( GuiScope.End )]"
+											size = {
+												100%
+												100%
+											}
 										}
-										onclick = "[GetScriptedGui('add_infamy_scgui').Execute(GuiScope.End)]"
+										textbox = {
+											text = "@[Concatenate(GetPlayer.GetStateReligion.GetNameNoFormatting , '_aspect_5_black')]!"
+											fontsize = 60
+											align = center|nobaseline
+											parentanchor = vcenter
+											visible = "[Not(GetScriptedGui('ve_aspect_button_5').IsShown( GuiScope.End ))]"
+											size = {
+												100%
+												100%
+											}
+										}
 									}
 									textbox = {
 										text = "ve_gecici_13"
@@ -347,7 +434,7 @@ types ve_gui_panel_types
 										autoresize = yes
 									}
 								}
-								vbox = {
+								vbox = {	#Aspect 6
 									spacing = 10
 									margin = {
 										15
@@ -358,28 +445,30 @@ types ve_gui_panel_types
 											100
 											100
 										}
-										enabled = "[IsValid(ChangeAllConstructionSpeed(ProductionMethod.Self))]"
-										blockoverride
-										"icon"
-										{
-											texture = "gfx/interface/icons/religion_icons/catholic.dds"
+										onclick = "[GetScriptedGui('ve_aspect_button_6').Execute(GuiScope.End)]"
+										enabled = "[GetScriptedGui('ve_aspect_button_6').IsValid( GuiScope.End )]"
+										textbox = {
+											text = "@[Concatenate(GetPlayer.GetStateReligion.GetNameNoFormatting , '_aspect_6')]!"
+											fontsize = 60
+											align = center|nobaseline
+											parentanchor = vcenter
+											visible = "[GetScriptedGui('ve_aspect_button_6').IsShown( GuiScope.End )]"
+											size = {
+												100%
+												100%
+											}
 										}
-										onclick = "[GetScriptedGui('add_infamy_scgui').Execute(GuiScope.End)]"
-										# state = { ###Yanıp Sönme
-										#     trigger_on_create = yes
-										#     name = 1
-										#     next = 2
-										#     alpha = 0.3
-										#     duration = 0.5
-										#     using = Animation_Curve_Default
-										# }
-										# state = {
-										#     name = 2
-										#     next = 1
-										#     alpha = 1
-										#     duration = 0.5
-										#     using = Animation_Curve_Default
-										# }
+										textbox = {
+											text = "@[Concatenate(GetPlayer.GetStateReligion.GetNameNoFormatting , '_aspect_6_black')]!"
+											fontsize = 60
+											align = center|nobaseline
+											parentanchor = vcenter
+											visible = "[Not(GetScriptedGui('ve_aspect_button_6').IsShown( GuiScope.End ))]"
+											size = {
+												100%
+												100%
+											}
+										}
 									}
 									textbox = {
 										text = "ve_gecici_9"
@@ -389,7 +478,7 @@ types ve_gui_panel_types
 										autoresize = yes
 									}
 								}
-								vbox = {
+								vbox = {	#Aspect 7
 									spacing = 10
 									margin = {
 										15
@@ -400,12 +489,30 @@ types ve_gui_panel_types
 											100
 											100
 										}
-										blockoverride
-										"icon"
-										{
-											texture = "gfx/interface/icons/religion_icons/catholic.dds"
+										onclick = "[GetScriptedGui('ve_aspect_button_7').Execute(GuiScope.End)]"
+										enabled = "[GetScriptedGui('ve_aspect_button_7').IsValid( GuiScope.End )]"
+										textbox = {
+											text = "@[Concatenate(GetPlayer.GetStateReligion.GetNameNoFormatting , '_aspect_7')]!"
+											fontsize = 60
+											align = center|nobaseline
+											parentanchor = vcenter
+											visible = "[GetScriptedGui('ve_aspect_button_7').IsShown( GuiScope.End )]"
+											size = {
+												100%
+												100%
+											}
 										}
-										onclick = "[GetScriptedGui('add_infamy_scgui').Execute(GuiScope.End)]"
+										textbox = {
+											text = "@[Concatenate(GetPlayer.GetStateReligion.GetNameNoFormatting , '_aspect_7_black')]!"
+											fontsize = 60
+											align = center|nobaseline
+											parentanchor = vcenter
+											visible = "[Not(GetScriptedGui('ve_aspect_button_7').IsShown( GuiScope.End ))]"
+											size = {
+												100%
+												100%
+											}
+										}
 									}
 									textbox = {
 										text = "ve_gecici_10"
@@ -415,7 +522,7 @@ types ve_gui_panel_types
 										autoresize = yes
 									}
 								}
-								vbox = {
+								vbox = {	#Aspect 8
 									spacing = 10
 									margin = {
 										15
@@ -426,12 +533,30 @@ types ve_gui_panel_types
 											100
 											100
 										}
-										blockoverride
-										"icon"
-										{
-											texture = "gfx/interface/icons/religion_icons/catholic.dds"
+										onclick = "[GetScriptedGui('ve_aspect_button_8').Execute(GuiScope.End)]"
+										enabled = "[GetScriptedGui('ve_aspect_button_8').IsValid( GuiScope.End )]"
+										textbox = {
+											text = "@[Concatenate(GetPlayer.GetStateReligion.GetNameNoFormatting , '_aspect_8')]!"
+											fontsize = 60
+											align = center|nobaseline
+											parentanchor = vcenter
+											visible = "[GetScriptedGui('ve_aspect_button_8').IsShown( GuiScope.End )]"
+											size = {
+												100%
+												100%
+											}
 										}
-										onclick = "[GetScriptedGui('add_infamy_scgui').Execute(GuiScope.End)]"
+										textbox = {
+											text = "@[Concatenate(GetPlayer.GetStateReligion.GetNameNoFormatting , '_aspect_8_black')]!"
+											fontsize = 60
+											align = center|nobaseline
+											parentanchor = vcenter
+											visible = "[Not(GetScriptedGui('ve_aspect_button_8').IsShown( GuiScope.End ))]"
+											size = {
+												100%
+												100%
+											}
+										}
 									}
 									textbox = {
 										text = "ve_gecici_11"
@@ -441,7 +566,7 @@ types ve_gui_panel_types
 										autoresize = yes
 									}
 								}
-								vbox = {
+								vbox = {	#Aspect 9
 									spacing = 10
 									margin = {
 										15
@@ -452,12 +577,30 @@ types ve_gui_panel_types
 											100
 											100
 										}
-										blockoverride
-										"icon"
-										{
-											texture = "gfx/interface/icons/religion_icons/catholic.dds"
+										onclick = "[GetScriptedGui('ve_aspect_button_9').Execute(GuiScope.End)]"
+										enabled = "[GetScriptedGui('ve_aspect_button_9').IsValid( GuiScope.End )]"
+										textbox = {
+											text = "@[Concatenate(GetPlayer.GetStateReligion.GetNameNoFormatting , '_aspect_9')]!"
+											fontsize = 60
+											align = center|nobaseline
+											parentanchor = vcenter
+											visible = "[GetScriptedGui('ve_aspect_button_9').IsShown( GuiScope.End )]"
+											size = {
+												100%
+												100%
+											}
 										}
-										onclick = "[GetScriptedGui('add_infamy_scgui').Execute(GuiScope.End)]"
+										textbox = {
+											text = "@[Concatenate(GetPlayer.GetStateReligion.GetNameNoFormatting , '_aspect_9_black')]!"
+											fontsize = 60
+											align = center|nobaseline
+											parentanchor = vcenter
+											visible = "[Not(GetScriptedGui('ve_aspect_button_9').IsShown( GuiScope.End ))]"
+											size = {
+												100%
+												100%
+											}
+										}
 									}
 									textbox = {
 										text = "ve_gecici_12"
@@ -467,7 +610,7 @@ types ve_gui_panel_types
 										autoresize = yes
 									}
 								}
-								vbox = {
+								vbox = {	#Aspect 10
 									spacing = 10
 									margin = {
 										15
@@ -478,12 +621,30 @@ types ve_gui_panel_types
 											100
 											100
 										}
-										blockoverride
-										"icon"
-										{
-											texture = "gfx/interface/icons/religion_icons/catholic.dds"
+										onclick = "[GetScriptedGui('ve_aspect_button_10').Execute(GuiScope.End)]"
+										enabled = "[GetScriptedGui('ve_aspect_button_10').IsValid( GuiScope.End )]"
+										textbox = {
+											text = "@[Concatenate(GetPlayer.GetStateReligion.GetNameNoFormatting , '_aspect_10')]!"
+											fontsize = 60
+											align = center|nobaseline
+											parentanchor = vcenter
+											visible = "[GetScriptedGui('ve_aspect_button_10').IsShown( GuiScope.End )]"
+											size = {
+												100%
+												100%
+											}
 										}
-										onclick = "[GetScriptedGui('add_infamy_scgui').Execute(GuiScope.End)]"
+										textbox = {
+											text = "@[Concatenate(GetPlayer.GetStateReligion.GetNameNoFormatting , '_aspect_10_black')]!"
+											fontsize = 60
+											align = center|nobaseline
+											parentanchor = vcenter
+											visible = "[Not(GetScriptedGui('ve_aspect_button_10').IsShown( GuiScope.End ))]"
+											size = {
+												100%
+												100%
+											}
+										}
 									}
 									textbox = {
 										text = "ve_gecici_13"
@@ -588,7 +749,7 @@ types ve_gui_panel_types
 					# 	}
 					# }
 					vbox = {
-						#Holy Cities
+						#Holy Sites
 						margin = {
 							0
 							15
@@ -600,7 +761,7 @@ types ve_gui_panel_types
 							blockoverride
 							"header_text"
 							{
-								text = "ve_holy_cities"
+								text = "ve_holy_sites"
 								default_format = "#tooltip_header"
 							}
 							blockoverride
@@ -624,18 +785,28 @@ types ve_gui_panel_types
 										15
 										15
 									}
-									button = {
-										position = {
-											0
-											0
-										}
+									widget = {
 										size = {
-											152
-											152
+											100
+											100
 										}
-										icon = {
-											alpha = "[TransparentIfFalse(Building.IsActive)]"
-											texture = "gfx/interface/icons/building_icons/taj_mahal.dds"
+										textbox = {
+											text = "@[Concatenate(GetPlayer.GetStateReligion.GetNameNoFormatting , '_holy_site_1')]!"
+											fontsize = 60
+											align = center|nobaseline
+											parentanchor = vcenter
+											visible = "[GetScriptedGui('ve_holy_site_1').IsShown( GuiScope.End )]"
+											size = {
+												100%
+												100%
+											}
+										}
+										textbox = {
+											text = "@[Concatenate(GetPlayer.GetStateReligion.GetNameNoFormatting , '_holy_site_1_black')]!"
+											fontsize = 60
+											align = center|nobaseline
+											parentanchor = vcenter
+											visible = "[Not(GetScriptedGui('ve_holy_site_1').IsShown( GuiScope.End ))]"
 											size = {
 												100%
 												100%
@@ -643,7 +814,8 @@ types ve_gui_panel_types
 										}
 									}
 									textbox = {
-										text = "ve_gecici_17"
+										# text = "ve_gecici_17"
+										text = "[GetPlayer.GetStateReligion.GetNameNoFormatting]"
 										using = fontsize_xxl
 										align = nobaseline
 										elide = left
@@ -656,18 +828,28 @@ types ve_gui_panel_types
 										15
 										15
 									}
-									button = {
-										position = {
-											0
-											0
-										}
+									widget = {
 										size = {
-											152
-											152
+											100
+											100
 										}
-										icon = {
-											alpha = "[TransparentIfFalse(Building.IsActive)]"
-											texture = "gfx/interface/icons/building_icons/taj_mahal.dds"
+										textbox = {
+											text = "@[Concatenate(GetPlayer.GetStateReligion.GetNameNoFormatting , '_holy_site_1')]!"
+											fontsize = 60
+											align = center|nobaseline
+											parentanchor = vcenter
+											visible = "[GetScriptedGui('ve_holy_site_1').IsShown( GuiScope.End )]"
+											size = {
+												100%
+												100%
+											}
+										}
+										textbox = {
+											text = "@[Concatenate(GetPlayer.GetStateReligion.GetNameNoFormatting , '_holy_site_1_black')]!"
+											fontsize = 60
+											align = center|nobaseline
+											parentanchor = vcenter
+											visible = "[Not(GetScriptedGui('ve_holy_site_1').IsShown( GuiScope.End ))]"
 											size = {
 												100%
 												100%
@@ -688,18 +870,28 @@ types ve_gui_panel_types
 										15
 										15
 									}
-									button = {
-										position = {
-											0
-											0
-										}
+									widget = {
 										size = {
-											152
-											152
+											100
+											100
 										}
-										icon = {
-											alpha = "[TransparentIfFalse(Building.IsActive)]"
-											texture = "gfx/interface/icons/building_icons/taj_mahal.dds"
+										textbox = {
+											text = "@[Concatenate(GetPlayer.GetStateReligion.GetNameNoFormatting , '_holy_site_1')]!"
+											fontsize = 60
+											align = center|nobaseline
+											parentanchor = vcenter
+											visible = "[GetScriptedGui('ve_holy_site_1').IsShown( GuiScope.End )]"
+											size = {
+												100%
+												100%
+											}
+										}
+										textbox = {
+											text = "@[Concatenate(GetPlayer.GetStateReligion.GetNameNoFormatting , '_holy_site_1_black')]!"
+											fontsize = 60
+											align = center|nobaseline
+											parentanchor = vcenter
+											visible = "[Not(GetScriptedGui('ve_holy_site_1').IsShown( GuiScope.End ))]"
 											size = {
 												100%
 												100%
@@ -720,18 +912,28 @@ types ve_gui_panel_types
 										15
 										15
 									}
-									button = {
-										position = {
-											0
-											0
-										}
+									widget = {
 										size = {
-											152
-											152
+											100
+											100
 										}
-										icon = {
-											alpha = "[TransparentIfFalse(Building.IsActive)]"
-											texture = "gfx/interface/icons/building_icons/taj_mahal.dds"
+										textbox = {
+											text = "@[Concatenate(GetPlayer.GetStateReligion.GetNameNoFormatting , '_holy_site_1')]!"
+											fontsize = 60
+											align = center|nobaseline
+											parentanchor = vcenter
+											visible = "[GetScriptedGui('ve_holy_site_1').IsShown( GuiScope.End )]"
+											size = {
+												100%
+												100%
+											}
+										}
+										textbox = {
+											text = "@[Concatenate(GetPlayer.GetStateReligion.GetNameNoFormatting , '_holy_site_1_black')]!"
+											fontsize = 60
+											align = center|nobaseline
+											parentanchor = vcenter
+											visible = "[Not(GetScriptedGui('ve_holy_site_1').IsShown( GuiScope.End ))]"
 											size = {
 												100%
 												100%
@@ -752,18 +954,28 @@ types ve_gui_panel_types
 										15
 										15
 									}
-									button = {
-										position = {
-											0
-											0
-										}
+									widget = {
 										size = {
-											152
-											152
+											100
+											100
 										}
-										icon = {
-											alpha = "[TransparentIfFalse(Building.IsActive)]"
-											texture = "gfx/interface/icons/building_icons/taj_mahal.dds"
+										textbox = {
+											text = "@[Concatenate(GetPlayer.GetStateReligion.GetNameNoFormatting , '_holy_site_1')]!"
+											fontsize = 60
+											align = center|nobaseline
+											parentanchor = vcenter
+											visible = "[GetScriptedGui('ve_holy_site_1').IsShown( GuiScope.End )]"
+											size = {
+												100%
+												100%
+											}
+										}
+										textbox = {
+											text = "@[Concatenate(GetPlayer.GetStateReligion.GetNameNoFormatting , '_holy_site_1_black')]!"
+											fontsize = 60
+											align = center|nobaseline
+											parentanchor = vcenter
+											visible = "[Not(GetScriptedGui('ve_holy_site_1').IsShown( GuiScope.End ))]"
 											size = {
 												100%
 												100%
