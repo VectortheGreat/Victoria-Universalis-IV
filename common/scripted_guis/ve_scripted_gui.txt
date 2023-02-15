@@ -1,5 +1,16 @@
-﻿add_scgui = {
+﻿###################
+### Group Ideas ###
+###################
+ve_idea_1_embraced_idea = {
 	scope = country
+	is_valid = {
+		any_country = {
+			is_ai = no
+			NOT = {
+				has_variable = idea_1_embraced
+			}
+		}
+	}
 	effect = {
 		every_country = {
 			limit = {
@@ -8,37 +19,606 @@
 			if = {
 				limit = {
 					NOT = {
-						has_modifier = alaska_usa_big_money
+						has_variable = idea_1_embraced
 					}
 				}
-				add_modifier = {
-					name = alaska_usa_big_money
-					months = -1
-				}
+				set_variable = idea_1_embraced
+			}
+			set_variable = {
+				name = idea_1_bar_point
+				value = 0
 			}
 		}
 	}
 }
 
-remove_scgui = {
+ve_idea_1_cancel_embrace_idea = {
 	scope = country
+	is_valid = {
+		any_country = {
+			is_ai = no
+			has_variable = idea_1_embraced
+		}
+	}
 	effect = {
 		every_country = {
 			limit = {
 				is_ai = no
 			}
-			remove_modifier = alaska_usa_big_money
+			if = {
+				limit = {
+					has_variable = idea_1_embraced
+				}
+				remove_variable = idea_1_embraced
+			}
+			remove_variable = idea_1_bar_point
+			if = {
+				limit = {
+					has_variable = idea_1_but_1_completed
+				}
+				remove_variable = idea_1_but_1_completed
+				change_variable = {
+					name = national_idea_pool
+					subtract = 1
+				}
+			}
+			if = {
+				limit = {
+					has_variable = idea_1_but_2_completed
+				}
+				remove_variable = idea_1_but_2_completed
+				change_variable = {
+					name = national_idea_pool
+					subtract = 1
+				}
+			}
+			if = {
+				limit = {
+					has_variable = idea_1_but_3_completed
+				}
+				remove_variable = idea_1_but_3_completed
+				change_variable = {
+					name = national_idea_pool
+					subtract = 1
+				}
+			}
+			if = {
+				limit = {
+					has_variable = idea_1_but_4_completed
+				}
+				remove_variable = idea_1_but_4_completed
+				change_variable = {
+					name = national_idea_pool
+					subtract = 1
+				}
+			}
+			if = {
+				limit = {
+					has_variable = idea_1_but_5_completed
+				}
+				remove_variable = idea_1_but_5_completed
+				change_variable = {
+					name = national_idea_pool
+					subtract = 1
+				}
+			}
+			if = {
+				limit = {
+					has_variable = idea_1_but_6_completed
+				}
+				remove_variable = idea_1_but_6_completed
+				change_variable = {
+					name = national_idea_pool
+					subtract = 1
+				}
+			}
+			if = {
+				limit = {
+					has_variable = idea_1_but_7_completed
+				}
+				remove_variable = idea_1_but_7_completed
+				change_variable = {
+					name = national_idea_pool
+					subtract = 1
+				}
+			}
 		}
 	}
 }
 
-check_scgui = {
+ve_national_idea_1 = {
 	scope = country
 	is_valid = {
 		any_country = {
 			is_ai = no
+			var:national_idea_pool >= 3
+		}
+	}
+}
+
+ve_national_idea_2 = {
+	scope = country
+	is_valid = {
+		any_country = {
+			is_ai = no
+			var:national_idea_pool >= 6
+		}
+	}
+}
+
+ve_national_idea_3 = {
+	scope = country
+	is_valid = {
+		any_country = {
+			is_ai = no
+			var:national_idea_pool >= 9
+		}
+	}
+}
+
+ve_national_idea_4 = {
+	scope = country
+	is_valid = {
+		any_country = {
+			is_ai = no
+			var:national_idea_pool >= 12
+		}
+	}
+}
+
+ve_national_idea_5 = {
+	scope = country
+	is_valid = {
+		any_country = {
+			is_ai = no
+			var:national_idea_pool >= 15
+		}
+	}
+}
+
+ve_national_idea_6 = {
+	scope = country
+	is_valid = {
+		any_country = {
+			is_ai = no
+			var:national_idea_pool >= 18
+		}
+	}
+}
+
+ve_national_idea_7 = {
+	scope = country
+	is_shown = {
+		any_country = {
+			is_ai = no
+			var:national_idea_pool >= 21
+		}
+	}
+	is_valid = {
+		any_country = {
+			is_ai = no
+			var:national_idea_pool >= 21
+		}
+	}
+}
+
+ve_idea_1_but_1 = {
+	scope = country
+	is_shown = {
+		any_country = {
+			is_ai = no
 			NOT = {
-				has_modifier = alaska_usa_big_money
+				has_variable = idea_1_but_1_completed
+			}
+		}
+	}
+	is_valid = {
+		any_country = {
+			is_ai = no
+			has_variable = idea_1_embraced
+			NOT = {
+				has_variable = idea_1_but_1_completed
+			}
+			var:idea_point_pool >= 300
+		}
+	}
+	effect = {
+		every_country = {
+			limit = {
+				is_ai = no
+			}
+			if = {
+				limit = {
+					NOT = {
+						has_variable = idea_1_but_1_completed
+					}
+				}
+				set_variable = idea_1_but_1_completed
+				change_variable = {
+					name = idea_1_bar_point
+					add = 10
+				}
+				change_variable = {
+					name = idea_point_pool
+					subtract = 300
+				}
+				if = {
+					limit = {
+						var:national_idea_pool < 21
+					}
+					change_variable = {
+						name = national_idea_pool
+						add = 1
+					}
+				}
+			}
+		}
+	}
+}
+
+ve_idea_1_but_2 = {
+	scope = country
+	is_shown = {
+		any_country = {
+			is_ai = no
+			NOT = {
+				has_variable = idea_1_but_2_completed
+			}
+		}
+	}
+	is_valid = {
+		any_country = {
+			is_ai = no
+			has_variable = idea_1_but_1_completed
+			has_variable = idea_1_embraced
+			var:idea_point_pool >= 300
+			NOT = {
+				has_variable = idea_1_but_2_completed
+			}
+		}
+	}
+	effect = {
+		every_country = {
+			limit = {
+				is_ai = no
+			}
+			if = {
+				limit = {
+					NOT = {
+						has_variable = idea_1_but_2_completed
+					}
+				}
+				set_variable = idea_1_but_2_completed
+				change_variable = {
+					name = idea_1_bar_point
+					add = 10
+				}
+				change_variable = {
+					name = idea_point_pool
+					subtract = 300
+				}
+				if = {
+					limit = {
+						var:national_idea_pool < 21
+					}
+					change_variable = {
+						name = national_idea_pool
+						add = 1
+					}
+				}
+			}
+		}
+	}
+}
+
+ve_idea_1_but_3 = {
+	scope = country
+	is_shown = {
+		any_country = {
+			is_ai = no
+			NOT = {
+				has_variable = idea_1_but_3_completed
+			}
+		}
+	}
+	is_valid = {
+		any_country = {
+			is_ai = no
+			has_variable = idea_1_but_2_completed
+			has_variable = idea_1_embraced
+			var:idea_point_pool >= 300
+			NOT = {
+				has_variable = idea_1_but_3_completed
+			}
+		}
+	}
+	effect = {
+		every_country = {
+			limit = {
+				is_ai = no
+			}
+			if = {
+				limit = {
+					NOT = {
+						has_variable = idea_1_but_3_completed
+					}
+				}
+				set_variable = idea_1_but_3_completed
+				change_variable = {
+					name = idea_1_bar_point
+					add = 10
+				}
+				change_variable = {
+					name = idea_point_pool
+					subtract = 300
+				}
+				if = {
+					limit = {
+						var:national_idea_pool < 21
+					}
+					change_variable = {
+						name = national_idea_pool
+						add = 1
+					}
+				}
+			}
+		}
+	}
+}
+
+ve_idea_1_but_4 = {
+	scope = country
+	is_shown = {
+		any_country = {
+			is_ai = no
+			NOT = {
+				has_variable = idea_1_but_4_completed
+			}
+		}
+	}
+	is_valid = {
+		any_country = {
+			is_ai = no
+			has_variable = idea_1_but_3_completed
+			has_variable = idea_1_embraced
+			var:idea_point_pool >= 300
+			NOT = {
+				has_variable = idea_1_but_4_completed
+			}
+		}
+	}
+	effect = {
+		every_country = {
+			limit = {
+				is_ai = no
+			}
+			if = {
+				limit = {
+					NOT = {
+						has_variable = idea_1_but_4_completed
+					}
+				}
+				set_variable = idea_1_but_4_completed
+				change_variable = {
+					name = idea_1_bar_point
+					add = 10
+				}
+				change_variable = {
+					name = idea_point_pool
+					subtract = 300
+				}
+				if = {
+					limit = {
+						var:national_idea_pool < 21
+					}
+					change_variable = {
+						name = national_idea_pool
+						add = 1
+					}
+				}
+			}
+		}
+	}
+}
+
+ve_idea_1_but_5 = {
+	scope = country
+	is_shown = {
+		any_country = {
+			is_ai = no
+			NOT = {
+				has_variable = idea_1_but_5_completed
+			}
+		}
+	}
+	is_valid = {
+		any_country = {
+			is_ai = no
+			has_variable = idea_1_but_4_completed
+			has_variable = idea_1_embraced
+			var:idea_point_pool >= 300
+			NOT = {
+				has_variable = idea_1_but_5_completed
+			}
+		}
+	}
+	effect = {
+		every_country = {
+			limit = {
+				is_ai = no
+			}
+			if = {
+				limit = {
+					NOT = {
+						has_variable = idea_1_but_5_completed
+					}
+				}
+				set_variable = idea_1_but_5_completed
+				change_variable = {
+					name = idea_1_bar_point
+					add = 10
+				}
+				change_variable = {
+					name = idea_point_pool
+					subtract = 300
+				}
+				if = {
+					limit = {
+						var:national_idea_pool < 21
+					}
+					change_variable = {
+						name = national_idea_pool
+						add = 1
+					}
+				}
+			}
+		}
+	}
+}
+
+ve_idea_1_but_6 = {
+	scope = country
+	is_shown = {
+		any_country = {
+			is_ai = no
+			NOT = {
+				has_variable = idea_1_but_6_completed
+			}
+		}
+	}
+	is_valid = {
+		any_country = {
+			is_ai = no
+			has_variable = idea_1_but_5_completed
+			has_variable = idea_1_embraced
+			var:idea_point_pool >= 300
+			NOT = {
+				has_variable = idea_1_but_6_completed
+			}
+		}
+	}
+	effect = {
+		every_country = {
+			limit = {
+				is_ai = no
+			}
+			if = {
+				limit = {
+					NOT = {
+						has_variable = idea_1_but_6_completed
+					}
+				}
+				set_variable = idea_1_but_6_completed
+				change_variable = {
+					name = idea_1_bar_point
+					add = 10
+				}
+				change_variable = {
+					name = idea_point_pool
+					subtract = 300
+				}
+				if = {
+					limit = {
+						var:national_idea_pool < 21
+					}
+					change_variable = {
+						name = national_idea_pool
+						add = 1
+					}
+				}
+			}
+		}
+	}
+}
+
+ve_idea_1_but_7 = {
+	scope = country
+	is_shown = {
+		any_country = {
+			is_ai = no
+			NOT = {
+				has_variable = idea_1_but_7_completed
+			}
+		}
+	}
+	is_valid = {
+		any_country = {
+			is_ai = no
+			has_variable = idea_1_but_6_completed
+			has_variable = idea_1_embraced
+			var:idea_point_pool >= 300
+			NOT = {
+				has_variable = idea_1_but_7_completed
+			}
+		}
+	}
+	effect = {
+		every_country = {
+			limit = {
+				is_ai = no
+			}
+			if = {
+				limit = {
+					NOT = {
+						has_variable = idea_1_but_7_completed
+					}
+				}
+				set_variable = idea_1_but_7_completed
+				change_variable = {
+					name = idea_1_bar_point
+					add = 10
+				}
+				change_variable = {
+					name = idea_point_pool
+					subtract = 300
+				}
+				if = {
+					limit = {
+						var:national_idea_pool < 21
+					}
+					change_variable = {
+						name = national_idea_pool
+						add = 1
+					}
+				}
+			}
+		}
+	}
+}
+
+arttiroglum = {
+	effect = {
+		every_country = {
+			limit = {
+				is_ai = no
+			}
+			if = {
+				limit = {
+					var:idea_point_pool < 999
+				}
+				change_variable = {
+					name = idea_point_pool
+					add = 300
+				}
+			}
+		}
+	}
+}
+
+azaltoglum = {
+	effect = {
+		every_country = {
+			limit = {
+				is_ai = no
+			}
+			if = {
+				limit = {
+					var:idea_point_pool > 0
+				}
+				change_variable = {
+					name = idea_point_pool
+					subtract = 300
+				}
 			}
 		}
 	}

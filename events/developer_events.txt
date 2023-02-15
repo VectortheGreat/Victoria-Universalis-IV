@@ -1,0 +1,203 @@
+﻿namespace = dev
+dev.1 = {
+	type = country_event
+	event_image = {
+		video = "gfx/event_pictures/middleeast_oil_derricks.bk2"
+	}
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/unspecific/world_fair"
+	icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+	title = dev.1.t
+	desc = dev.1.d
+	flavor = dev.1.f
+	duration = 0
+	option = {
+		name = dev.1.a
+		default_option = yes
+		every_scope_state = {
+			limit = {
+				region = sr:region_anatolia
+			}
+			create_building = {
+				building = building_university
+				level = 5
+			}
+		}
+	}
+	option = {
+		name = deb.1.b
+		ig:ig_intelligentsia = {
+			add_ideology = ideology_liberal
+		}
+	}
+	option = {
+		name = deb.1.c
+		change_variable = {
+			name = otto_egypt_crisis
+			add = 50
+		}
+	}
+	option = {
+		name = deb.1.f
+		random_state = {
+			limit = {
+				owner = c:TUR
+			}
+			every_scope_pop = {
+				set_pop_literacy = {
+					literacy_rate = 1
+				}
+			}
+		}
+		random_state = {
+			limit = {
+				owner = c:TUR
+			}
+			every_scope_pop = {
+				set_pop_literacy = {
+					literacy_rate = 1
+				}
+			}
+		}
+		random_state = {
+			limit = {
+				owner = c:TUR
+			}
+			every_scope_pop = {
+				set_pop_literacy = {
+					literacy_rate = 1
+				}
+			}
+		}
+		random_state = {
+			limit = {
+				owner = c:TUR
+			}
+			every_scope_pop = {
+				set_pop_literacy = {
+					literacy_rate = 1
+				}
+			}
+		}
+	}
+	option = {
+		name = deb.1.g
+		add_technology_researched = pan-nationalism
+	}
+	option = {
+		name = deb.1.h
+		c:TUR = {
+			end_truce = {
+				tcountry = c:EGY
+			}
+		}
+		create_diplomatic_pact = {
+			country = c:PER
+			type = puppet
+		}
+	}
+	option = {
+		name = deb.1.i
+		add_technology_researched = line_infantry
+		add_technology_researched = napoleonic_warfare
+		add_technology_researched = army_reserves
+		add_technology_researched = general_staff
+		add_technology_researched = shell_gun
+		add_technology_researched = breech_loading_artillery
+		add_technology_researched = percussion_cap
+		add_technology_researched = rifling
+	}
+	option = {
+		name = deb.1.j
+		add_primary_culture = cu:azerbaijani
+		add_primary_culture = cu:armenian
+		add_primary_culture = cu:greek
+		add_primary_culture = cu:serbian
+		add_primary_culture = cu:albanian
+		add_primary_culture = cu:romanian
+	}
+	option = {
+		name = deb.1.k
+		ig:ig_armed_forces = {
+			remove_ideology = ideology_royalist
+			leader = {
+				remove_ideology = ideology_royalist
+			}
+		}
+	}
+	option = {
+		name = deb.1.l
+		change_infamy = -100
+	}
+	option = {
+		name = deb.1.l
+		add_journal_entry = {
+			type = je_sick_man_syria
+		}
+	}
+	option = {
+		name = deb.1.m
+		s:STATE_ERZURUM.region_state:TUR = {
+			every_scope_pop = {
+				change_pop_culture = {
+					value = 0.1
+					target = cu:turkish
+				}
+			}
+		}
+	}
+	option = {
+		name = deb.1.n
+		s:STATE_ERZURUM.region_state:TUR = {
+			every_scope_pop = {
+				change_pop_culture = {
+					value = 0.4
+					target = cu:armenian
+				}
+			}
+		}
+	}
+}
+
+dev.2 = {
+	type = country_event
+	event_image = {
+		video = "gfx/event_pictures/middleeast_oil_derricks.bk2"
+	}
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/unspecific/world_fair"
+	icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+	title = dev.1.t
+	desc = dev.1.d
+	flavor = dev.1.f
+	placement = scope:diyarbakir_scope
+	duration = 0
+	trigger = {
+		has_variable = idea_1_embraced
+		var:idea_1_bar_point >= 10
+	}
+	option = {
+		name = dev.1.a
+		default_option = yes
+		change_variable = {
+			name = national_idea_pool
+			add = 3
+		}
+	}
+	option = {
+		name = dev.1.b
+		default_option = yes
+		change_variable = {
+			name = national_idea_pool
+			subtract = 10
+		}
+	}
+	option = {
+		name = dev.1.c
+		default_option = yes
+		set_variable = {
+			name = national_idea_pool
+			value = 0
+		}
+	}
+}

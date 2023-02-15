@@ -1,0 +1,48 @@
+﻿idea_1_bar_point_value = {
+	value = var:idea_1_bar_point
+	every_country = {
+		limit = {
+			is_ai = no
+		}
+		add = var:idea_1_bar_point
+	}
+	max = idea_1_bar_point_value_max
+}
+
+idea_1_bar_point_value_max = 70
+ve_idea_pool_value = {
+	value = var:idea_point_pool
+	every_country = {
+		limit = {
+			is_ai = no
+		}
+		add = var:idea_point_pool
+	}
+	max = idea_point_pool_value_max
+}
+
+idea_point_pool_value_max = 999
+ve_max_idea_slot_bar_value = {
+	value = var:ve_max_idea_slot_bar
+	every_country = {
+		limit = {
+			is_ai = no
+		}
+		add = var:ve_max_idea_slot_bar
+	}
+	max = ve_max_idea_slot_bar_value_max
+}
+
+ve_max_idea_slot_bar_value_max = 8
+national_idea_pool_value = {
+	value = var:national_idea_pool
+	every_country = {
+		limit = {
+			is_ai = no
+		}
+		add = var:national_idea_pool
+	}
+	max = national_idea_pool_value_max
+}
+
+national_idea_pool_value_max = 21

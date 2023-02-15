@@ -8,7 +8,7 @@
  DIP_HEADER:0 "Diplomatic Ideas"
  MIL_HEADER:0 "Military Ideas"
  ACTIVE_LAWS_DESC:0 "BLALBA"
- Idea_diplomatic:0 "Diplomatic Idea"
+ Idea_diplomatic:0 "Diplomatic"
  ve_gecici_1:0 "World Wide Population"
  ve_gecici_2:0 "0M"
  ve_gecici_3:0 "Country Population"
@@ -47,3 +47,4 @@
  ve_obj_desc:0 "Objective Description"
  ve_obj_header:0 "Age Objectives"
  ve_gecici_27:0 " National Ideas"
+ deneme:0 "[FixedPointToFloat(GuiScope .ScriptValue('ve_max_idea_slot_bar_value'))] / 8"
