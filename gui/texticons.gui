@@ -53,7 +53,7 @@ texticon = {
   iconsize = {
     offset = { 0 15 }
     texture = "gfx/interface/ve_rome_owned.dds"
-    fontsize = 120
+    fontsize = 50
   }
 }
 texticon = {
@@ -61,7 +61,7 @@ texticon = {
   iconsize = {
     offset = { 0 15 }
     texture = "gfx/interface/ve_rome_not_owned.dds"
-    fontsize = 120
+    fontsize = 50
   }
 }
 texticon = {
@@ -69,7 +69,7 @@ texticon = {
   iconsize = {
     offset = { 0 15 }
     texture = "gfx/interface/ve_rome_owned.dds"
-    fontsize = 120
+    fontsize = 50
   }
 }
 texticon = {
@@ -77,7 +77,7 @@ texticon = {
   iconsize = {
     offset = { 0 15 }
     texture = "gfx/interface/ve_rome_not_owned.dds"
-    fontsize = 120
+    fontsize = 50
   }
 }
 

@@ -1,0 +1,448 @@
+ve_supremacy_1 = {
+	scope = country
+	is_valid = {
+		any_country = {
+			is_ai = no
+			var:culture_reform_point >= 750
+			var:selected_reform_value < 7
+		}
+	}
+	effect = {
+		every_country = {
+			limit = {
+				is_ai = no
+			}
+			change_variable = {
+				#Eats Reform Point
+				name = culture_reform_point
+				subtract = 750
+			}
+			change_variable = {
+				#Increase Bar Value
+				name = culture_reform_value
+				add = 1
+			}
+			if = {
+				#A variable to chechk reforms. Max 7 reforms can be selected
+				limit = {
+					NOT = {
+						has_variable = selected_reform_value
+					}
+				}
+				set_variable = {
+					name = selected_reform_value
+					value = 1
+				}
+			}
+			else = {
+				change_variable = {
+					name = selected_reform_value
+					add = 1
+				}
+			}
+		}
+	}
+}
+
+ve_supremacy_2 = {
+	scope = country
+	is_valid = {
+		any_country = {
+			is_ai = no
+			var:culture_reform_point >= 750
+			var:selected_reform_value < 7
+		}
+	}
+	effect = {
+		every_country = {
+			limit = {
+				is_ai = no
+			}
+			change_variable = {
+				name = culture_reform_point
+				subtract = 750
+			}
+			change_variable = {
+				name = culture_reform_value
+				add = 1
+			}
+			change_variable = {
+				name = selected_reform_value
+				add = 1
+			}
+		}
+	}
+}
+
+ve_supremacy_3 = {
+	scope = country
+	is_valid = {
+		any_country = {
+			is_ai = no
+			var:culture_reform_point >= 750
+			var:selected_reform_value < 7
+		}
+	}
+	effect = {
+		every_country = {
+			limit = {
+				is_ai = no
+			}
+			change_variable = {
+				name = culture_reform_point
+				subtract = 750
+			}
+			change_variable = {
+				name = culture_reform_value
+				add = 1
+			}
+			change_variable = {
+				name = selected_reform_value
+				add = 1
+			}
+		}
+	}
+}
+
+ve_supremacy_4 = {
+	scope = country
+	is_valid = {
+		any_country = {
+			is_ai = no
+			var:culture_reform_point >= 750
+			var:selected_reform_value < 7
+		}
+	}
+	effect = {
+		every_country = {
+			limit = {
+				is_ai = no
+			}
+			change_variable = {
+				name = culture_reform_point
+				subtract = 750
+			}
+			change_variable = {
+				name = culture_reform_value
+				add = 1
+			}
+			change_variable = {
+				name = selected_reform_value
+				add = 1
+			}
+		}
+	}
+}
+
+ve_supremacy_5 = {
+	scope = country
+	is_valid = {
+		any_country = {
+			is_ai = no
+			var:culture_reform_point >= 750
+			var:selected_reform_value < 7
+		}
+	}
+	effect = {
+		every_country = {
+			limit = {
+				is_ai = no
+			}
+			change_variable = {
+				name = culture_reform_point
+				subtract = 750
+			}
+			change_variable = {
+				name = culture_reform_value
+				add = 1
+			}
+			change_variable = {
+				name = selected_reform_value
+				add = 1
+			}
+		}
+	}
+}
+
+ve_supremacy_6 = {
+	scope = country
+	is_valid = {
+		any_country = {
+			is_ai = no
+			var:culture_reform_point >= 750
+			var:selected_reform_value < 7
+		}
+	}
+	effect = {
+		every_country = {
+			limit = {
+				is_ai = no
+			}
+			change_variable = {
+				name = culture_reform_point
+				subtract = 750
+			}
+			change_variable = {
+				name = culture_reform_value
+				add = 1
+			}
+			change_variable = {
+				name = selected_reform_value
+				add = 1
+			}
+		}
+	}
+}
+
+ve_supremacy_7 = {
+	scope = country
+	is_valid = {
+		any_country = {
+			is_ai = no
+			var:culture_reform_point >= 750
+			var:selected_reform_value < 7
+		}
+	}
+	effect = {
+		every_country = {
+			limit = {
+				is_ai = no
+			}
+			change_variable = {
+				name = culture_reform_point
+				subtract = 750
+			}
+			change_variable = {
+				name = culture_reform_value
+				add = 1
+			}
+			change_variable = {
+				name = selected_reform_value
+				add = 1
+			}
+		}
+	}
+}
+
+ve_intellectualy_1 = {
+	scope = country
+	is_valid = {
+		any_country = {
+			is_ai = no
+			var:culture_reform_point >= 750
+			var:selected_reform_value < 7
+		}
+	}
+	effect = {
+		every_country = {
+			limit = {
+				is_ai = no
+			}
+			change_variable = {
+				name = culture_reform_point
+				subtract = 750
+			}
+			change_variable = {
+				name = culture_reform_value
+				subtract = 1
+			}
+			if = {
+				limit = {
+					NOT = {
+						has_variable = selected_reform_value
+					}
+				}
+				set_variable = {
+					name = selected_reform_value
+					value = 1
+				}
+			}
+			else = {
+				change_variable = {
+					name = selected_reform_value
+					add = 1
+				}
+			}
+		}
+	}
+}
+
+ve_intellectualy_2 = {
+	scope = country
+	is_valid = {
+		any_country = {
+			is_ai = no
+			var:culture_reform_point >= 750
+			var:selected_reform_value < 7
+		}
+	}
+	effect = {
+		every_country = {
+			limit = {
+				is_ai = no
+			}
+			change_variable = {
+				name = culture_reform_point
+				subtract = 750
+			}
+			change_variable = {
+				name = culture_reform_value
+				subtract = 1
+			}
+			change_variable = {
+				name = selected_reform_value
+				add = 1
+			}
+		}
+	}
+}
+
+ve_intellectualy_3 = {
+	scope = country
+	is_valid = {
+		any_country = {
+			is_ai = no
+			var:culture_reform_point >= 750
+			var:selected_reform_value < 7
+		}
+	}
+	effect = {
+		every_country = {
+			limit = {
+				is_ai = no
+			}
+			change_variable = {
+				name = culture_reform_point
+				subtract = 750
+			}
+			change_variable = {
+				name = culture_reform_value
+				subtract = 1
+			}
+			change_variable = {
+				name = selected_reform_value
+				add = 1
+			}
+		}
+	}
+}
+
+ve_intellectualy_4 = {
+	scope = country
+	is_valid = {
+		any_country = {
+			is_ai = no
+			var:culture_reform_point >= 750
+			var:selected_reform_value < 7
+		}
+	}
+	effect = {
+		every_country = {
+			limit = {
+				is_ai = no
+			}
+			change_variable = {
+				name = culture_reform_point
+				subtract = 750
+			}
+			change_variable = {
+				name = culture_reform_value
+				subtract = 1
+			}
+			change_variable = {
+				name = selected_reform_value
+				add = 1
+			}
+		}
+	}
+}
+
+ve_intellectualy_5 = {
+	scope = country
+	is_valid = {
+		any_country = {
+			is_ai = no
+			var:culture_reform_point >= 750
+			var:selected_reform_value < 7
+		}
+	}
+	effect = {
+		every_country = {
+			limit = {
+				is_ai = no
+			}
+			change_variable = {
+				name = culture_reform_point
+				subtract = 750
+			}
+			change_variable = {
+				name = culture_reform_value
+				subtract = 1
+			}
+			change_variable = {
+				name = selected_reform_value
+				add = 1
+			}
+		}
+	}
+}
+
+ve_intellectualy_6 = {
+	scope = country
+	is_valid = {
+		any_country = {
+			is_ai = no
+			var:culture_reform_point >= 750
+			var:selected_reform_value < 7
+		}
+	}
+	effect = {
+		every_country = {
+			limit = {
+				is_ai = no
+			}
+			change_variable = {
+				name = culture_reform_point
+				subtract = 750
+			}
+			change_variable = {
+				name = culture_reform_value
+				subtract = 1
+			}
+			change_variable = {
+				name = selected_reform_value
+				add = 1
+			}
+		}
+	}
+}
+
+ve_intellectualy_7 = {
+	scope = country
+	is_valid = {
+		any_country = {
+			is_ai = no
+			var:culture_reform_point >= 750
+			var:selected_reform_value < 7
+		}
+	}
+	effect = {
+		every_country = {
+			limit = {
+				is_ai = no
+			}
+			change_variable = {
+				name = culture_reform_point
+				subtract = 750
+			}
+			change_variable = {
+				name = culture_reform_value
+				subtract = 1
+			}
+			change_variable = {
+				name = selected_reform_value
+				add = 1
+			}
+		}
+	}
+}

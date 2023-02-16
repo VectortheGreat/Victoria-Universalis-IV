@@ -6,13 +6,13 @@ types ve_gui_panel_types
 				vbox = {
 					layoutpolicy_horizontal = expanding
 					layoutpolicy_vertical = expanding
-					hbox = {
+					hbox = {	#Top Section
 						layoutpolicy_horizontal = expanding
 						margin = {
 							0
 							20
 						}
-						hbox = {
+						hbox = {	#Top-Left
 							using = main_bg
 							vbox = {
 								spacing = 10
@@ -52,58 +52,10 @@ types ve_gui_panel_types
 							hbox = {
 								margin = {
 									0
-									75
+									41
 								}
 								spacing = 10
 								layoutpolicy_horizontal = expanding
-								vbox = {
-									#Accepted Cultures
-									spacing = 10
-									textbox = {
-										text = "ve_gecici_1"
-										default_format = "#tooltip_header"
-										using = fontsize_xxl
-										align = nobaseline
-										elide = left
-										autoresize = yes
-									}
-									textbox = {
-										text = "ve_gecici_2"
-										default_format = "#instruction"
-										using = fontsize_xxl
-										align = center
-										elide = center
-										minimumsize = {
-											100
-											-1
-										}
-										maximumsize = {
-											500
-											-1
-										}
-										multiline = yes
-										autoresize = yes
-									}
-								}
-								vbox = {
-									spacing = 10
-									textbox = {
-										text = "ve_gecici_3"
-										default_format = "#tooltip_header"
-										using = fontsize_xxl
-										align = nobaseline
-										elide = left
-										autoresize = yes
-									}
-									textbox = {
-										text = "ve_gecici_4"
-										default_format = "#instruction"
-										using = fontsize_xxl
-										align = nobaseline
-										elide = left
-										autoresize = yes
-									}
-								}
 								vbox = {
 									spacing = 10
 									textbox = {
@@ -115,7 +67,7 @@ types ve_gui_panel_types
 										autoresize = yes
 									}
 									textbox = {
-										text = "ve_gecici_6"
+										text = "[FixedPointToFloat(GuiScope .ScriptValue('culture_missionary_value'))]"
 										default_format = "#instruction"
 										using = fontsize_xxl
 										align = nobaseline
@@ -134,12 +86,25 @@ types ve_gui_panel_types
 										autoresize = yes
 									}
 									textbox = {
-										text = "ve_gecici_8"
+										text = "[FixedPointToFloat(GuiScope .ScriptValue('culture_reform_point_value'))]"
 										default_format = "#instruction"
 										using = fontsize_xxl
 										align = nobaseline
 										elide = left
 										autoresize = yes
+									}
+									white_progressbar_horizontal = {
+										size = {
+											80
+											15
+										}
+										tooltip = "BUILDING_PROGRESS_TOOLTIP"
+										blockoverride
+										"values"
+										{
+											max = "[FixedPointToFloat(GuiScope .ScriptValue('culture_reform_point_value_max'))]"
+											value = "[FixedPointToFloat(GuiScope .ScriptValue('culture_reform_point_value'))]"
+										}
 									}
 								}
 							}
@@ -180,15 +145,24 @@ types ve_gui_panel_types
 										elide = left
 										autoresize = yes
 									}
-								double_direction_progressbar = {
+								double_direction_progressbar_gold = {
 									size = { 500 60 }
 									parentanchor = bottom
 									
 									blockoverride "value_left" {
-										value = "[Negate_float(FixedPointToFloat(GetPlayer.GetDeficitPowerRatioForProgressBar('bureaucracy')))]"
+										value = "[FixedPointToFloat(GuiScope .ScriptValue('culture_reform_progress_bar_value'))]"
 									}
 									blockoverride "value_right" {
-										value = "[FixedPointToFloat(GetPlayer.GetExcessPowerRatioForProgressBar('bureaucracy'))]"
+										value = "[FixedPointToFloat(GuiScope .ScriptValue('culture_reform_progress_bar_value'))]"
+									}
+									blockoverride "negative_min_max_values" {
+										min = -7
+										max = 0
+									}
+
+									blockoverride "positive_min_max_values" {
+										min = 0
+										max = 7
 									}
 								}
 								textbox = {
@@ -239,7 +213,8 @@ types ve_gui_panel_types
 													100%
 												}
 											}
-											# enabled = "[GetScriptedGui('check_scgui').IsValid( GuiScope.End )]"
+											onclick = "[GetScriptedGui('ve_supremacy_1').Execute(GuiScope.End)]"
+											enabled = "[GetScriptedGui('ve_supremacy_1').IsValid( GuiScope.End )]"
 										}
 									}
 									vbox = {
@@ -252,8 +227,6 @@ types ve_gui_panel_types
 												245
 												500
 											}
-											enabled = "[GetScriptedGui('check_scgui').IsValid( GuiScope.End )]"
-											onclick = "[GetScriptedGui('add_scgui').Execute(GuiScope.End)]"
 											icon = {
 												texture = "gfx/interface/hitler1933.dds"
 												size = {
@@ -261,6 +234,8 @@ types ve_gui_panel_types
 													100%
 												}
 											}
+											onclick = "[GetScriptedGui('ve_supremacy_2').Execute(GuiScope.End)]"
+											enabled = "[GetScriptedGui('ve_supremacy_2').IsValid( GuiScope.End )]"
 										}
 									}
 									vbox = {
@@ -276,28 +251,8 @@ types ve_gui_panel_types
 													100%
 												}
 											}
-											enabled = "[GetScriptedGui('check_scgui').IsValid( GuiScope.End )]"
-										}
-									}
-									vbox = {
-										margin = {
-											5
-											15
-										}
-										button = {
-											size = {
-												245
-												500
-											}
-											enabled = "[GetScriptedGui('check_scgui').IsValid( GuiScope.End )]"
-											onclick = "[GetScriptedGui('remove_scgui').Execute(GuiScope.End)]"
-											icon = {
-												texture = "gfx/interface/hitler1933.dds"
-												size = {
-													100%
-													100%
-												}
-											}
+											onclick = "[GetScriptedGui('ve_supremacy_3').Execute(GuiScope.End)]"
+											enabled = "[GetScriptedGui('ve_supremacy_3').IsValid( GuiScope.End )]"
 										}
 									}
 									vbox = {
@@ -310,7 +265,6 @@ types ve_gui_panel_types
 												245
 												500
 											}
-											enabled = "[GetScriptedGui('check_scgui').IsValid( GuiScope.End )]"
 											icon = {
 												texture = "gfx/interface/hitler1933.dds"
 												size = {
@@ -318,6 +272,8 @@ types ve_gui_panel_types
 													100%
 												}
 											}
+											onclick = "[GetScriptedGui('ve_supremacy_4').Execute(GuiScope.End)]"
+											enabled = "[GetScriptedGui('ve_supremacy_4').IsValid( GuiScope.End )]"
 										}
 									}
 									vbox = {
@@ -330,8 +286,6 @@ types ve_gui_panel_types
 												245
 												500
 											}
-											enabled = "[GetScriptedGui('check_scgui').IsValid( GuiScope.End )]"
-											onclick = "[GetScriptedGui('remove_scgui').Execute(GuiScope.End)]"
 											icon = {
 												texture = "gfx/interface/hitler1933.dds"
 												size = {
@@ -339,6 +293,8 @@ types ve_gui_panel_types
 													100%
 												}
 											}
+											onclick = "[GetScriptedGui('ve_supremacy_5').Execute(GuiScope.End)]"
+											enabled = "[GetScriptedGui('ve_supremacy_5').IsValid( GuiScope.End )]"
 										}
 									}
 									vbox = {
@@ -351,7 +307,6 @@ types ve_gui_panel_types
 												245
 												500
 											}
-											enabled = "[GetScriptedGui('check_scgui').IsValid( GuiScope.End )]"
 											icon = {
 												texture = "gfx/interface/hitler1933.dds"
 												size = {
@@ -359,13 +314,36 @@ types ve_gui_panel_types
 													100%
 												}
 											}
+											onclick = "[GetScriptedGui('ve_supremacy_6').Execute(GuiScope.End)]"
+											enabled = "[GetScriptedGui('ve_supremacy_6').IsValid( GuiScope.End )]"
+										}
+									}
+									vbox = {
+										margin = {
+											5
+											15
+										}
+										button = {
+											size = {
+												245
+												500
+											}
+											icon = {
+												texture = "gfx/interface/hitler1933.dds"
+												size = {
+													100%
+													100%
+												}
+											}
+											onclick = "[GetScriptedGui('ve_supremacy_7').Execute(GuiScope.End)]"
+											enabled = "[GetScriptedGui('ve_supremacy_7').IsValid( GuiScope.End )]"
 										}
 									}
 								}
 							}
 						}
 						hbox = {
-							#National Supremacy
+							#Intellectual Nation
 							using = main_bg
 							layoutpolicy_horizontal = expanding
 							margin = {
@@ -403,7 +381,8 @@ types ve_gui_panel_types
 													100%
 												}
 											}
-											# enabled = "[GetScriptedGui('check_scgui').IsValid( GuiScope.End )]"
+											onclick = "[GetScriptedGui('ve_intellectualy_1').Execute(GuiScope.End)]"
+											enabled = "[GetScriptedGui('ve_intellectualy_1').IsValid( GuiScope.End )]"
 										}
 									}
 									vbox = {
@@ -416,8 +395,6 @@ types ve_gui_panel_types
 												245
 												500
 											}
-											enabled = "[GetScriptedGui('check_scgui').IsValid( GuiScope.End )]"
-											onclick = "[GetScriptedGui('add_scgui').Execute(GuiScope.End)]"
 											icon = {
 												texture = "gfx/interface/1701.dds"
 												size = {
@@ -425,6 +402,8 @@ types ve_gui_panel_types
 													100%
 												}
 											}
+											onclick = "[GetScriptedGui('ve_intellectualy_2').Execute(GuiScope.End)]"
+											enabled = "[GetScriptedGui('ve_intellectualy_2').IsValid( GuiScope.End )]"
 										}
 									}
 									vbox = {
@@ -440,28 +419,8 @@ types ve_gui_panel_types
 													100%
 												}
 											}
-											enabled = "[GetScriptedGui('check_scgui').IsValid( GuiScope.End )]"
-										}
-									}
-									vbox = {
-										margin = {
-											5
-											15
-										}
-										button = {
-											size = {
-												245
-												500
-											}
-											enabled = "[GetScriptedGui('check_scgui').IsValid( GuiScope.End )]"
-											onclick = "[GetScriptedGui('remove_scgui').Execute(GuiScope.End)]"
-											icon = {
-												texture = "gfx/interface/1701.dds"
-												size = {
-													100%
-													100%
-												}
-											}
+											onclick = "[GetScriptedGui('ve_intellectualy_3').Execute(GuiScope.End)]"
+											enabled = "[GetScriptedGui('ve_intellectualy_3').IsValid( GuiScope.End )]"
 										}
 									}
 									vbox = {
@@ -474,7 +433,6 @@ types ve_gui_panel_types
 												245
 												500
 											}
-											enabled = "[GetScriptedGui('check_scgui').IsValid( GuiScope.End )]"
 											icon = {
 												texture = "gfx/interface/1701.dds"
 												size = {
@@ -482,6 +440,8 @@ types ve_gui_panel_types
 													100%
 												}
 											}
+											onclick = "[GetScriptedGui('ve_intellectualy_4').Execute(GuiScope.End)]"
+											enabled = "[GetScriptedGui('ve_intellectualy_4').IsValid( GuiScope.End )]"
 										}
 									}
 									vbox = {
@@ -494,8 +454,6 @@ types ve_gui_panel_types
 												245
 												500
 											}
-											enabled = "[GetScriptedGui('check_scgui').IsValid( GuiScope.End )]"
-											onclick = "[GetScriptedGui('remove_scgui').Execute(GuiScope.End)]"
 											icon = {
 												texture = "gfx/interface/1701.dds"
 												size = {
@@ -503,6 +461,8 @@ types ve_gui_panel_types
 													100%
 												}
 											}
+											onclick = "[GetScriptedGui('ve_intellectualy_5').Execute(GuiScope.End)]"
+											enabled = "[GetScriptedGui('ve_intellectualy_5').IsValid( GuiScope.End )]"
 										}
 									}
 									vbox = {
@@ -515,7 +475,6 @@ types ve_gui_panel_types
 												245
 												500
 											}
-											enabled = "[GetScriptedGui('check_scgui').IsValid( GuiScope.End )]"
 											icon = {
 												texture = "gfx/interface/1701.dds"
 												size = {
@@ -523,6 +482,29 @@ types ve_gui_panel_types
 													100%
 												}
 											}
+											onclick = "[GetScriptedGui('ve_intellectualy_6').Execute(GuiScope.End)]"
+											enabled = "[GetScriptedGui('ve_intellectualy_6').IsValid( GuiScope.End )]"
+										}
+									}
+									vbox = {
+										margin = {
+											5
+											15
+										}
+										button = {
+											size = {
+												245
+												500
+											}
+											icon = {
+												texture = "gfx/interface/1701.dds"
+												size = {
+													100%
+													100%
+												}
+											}
+											onclick = "[GetScriptedGui('ve_intellectualy_7').Execute(GuiScope.End)]"
+											enabled = "[GetScriptedGui('ve_intellectualy_7').IsValid( GuiScope.End )]"
 										}
 									}
 								}

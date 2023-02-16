@@ -1,4 +1,13 @@
-﻿ve_idea_pool_value = {
+﻿# vecalc_pop = {
+# 	value = var:ec_incorporated_population
+# 	every_country = {
+# 		limit = {
+# 			is_ai = no
+# 		}
+# 		add = var:ec_incorporated_population
+# 	}
+# }
+ve_idea_pool_value = {
 	value = var:idea_point_pool
 	every_country = {
 		limit = {
@@ -199,5 +208,49 @@ religion_missionary_value = {
 			is_ai = no
 		}
 		add = var:avaible_missionaries
+	}
+}
+
+#Culture
+culture_reform_progress_bar_value = {
+	value = var:culture_reform_value
+	every_country = {
+		limit = {
+			is_ai = no
+		}
+		add = var:culture_reform_value
+	}
+}
+
+culture_missionary_value = {
+	value = var:avaible_culture_missionaries
+	every_country = {
+		limit = {
+			is_ai = no
+		}
+		add = var:avaible_culture_missionaries
+	}
+}
+
+culture_reform_point_value = {
+	value = var:culture_reform_point
+	every_country = {
+		limit = {
+			is_ai = no
+		}
+		add = var:culture_reform_point
+	}
+	max = culture_reform_point_value_max
+}
+
+culture_reform_point_value_max = 1000
+#Age
+ve_splendor_value = {
+	value = var:ve_splender_points
+	every_country = {
+		limit = {
+			is_ai = no
+		}
+		add = var:ve_splender_points
 	}
 }

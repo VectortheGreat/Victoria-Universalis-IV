@@ -16,7 +16,8 @@ types ve_gui_panel_types
 								200
 								20
 							}
-							hbox = {	#Sections									
+							hbox = {	#Sections - AGE 1	
+								visible = "[GetScriptedGui('ve_age_1').IsShown( GuiScope.End )]"
 								vbox = {	#Middle Section
 									spacing = 10
 									vbox = {
@@ -71,10 +72,233 @@ types ve_gui_panel_types
 														using = default_button_action
 														size = { 100% 40 }
 														text = "ve_golden_age"
-														onclick = "[Execute(PauseAllConstruction)]"
-														enabled = "[IsValid(PauseAllConstruction)]"
-														using = tooltip_above
-														using = budget_pause_all_button_sound
+														onclick = "[GetScriptedGui('ve_golden_age').Execute(GuiScope.End)]"
+														enabled = "[GetScriptedGui('ve_golden_age').IsValid( GuiScope.End )]"
+													}
+												}
+											}
+											vbox = {	#Right Ages
+												spacing = 50
+												layoutpolicy_vertical = fixed
+					
+												widget = {
+													
+												}
+												widget = {
+													size = { 75 75 }
+													icon = {
+														size = { 100% 100% }
+														texture = "gfx/interface/backgrounds/round_frame_dec.dds"
+														using = default_fade_in_out
+													}
+												}
+											}
+										}										
+									}
+									vbox = {
+										spacing = 15
+										textbox = {
+											text = "ve_gecici_26"
+											default_format = "#tooltip_header"
+											using = fontsize_x
+											align = nobaseline
+											elide = left
+											minimumsize = {
+												100
+												-1
+											}
+											maximumsize = {
+												700
+												-1
+											}
+											multiline = yes
+											autoresize = yes
+										}
+										hbox = {
+											spacing = 10
+											margin = {
+												15 5
+											}
+											using = main_bg
+											textbox = {
+												raw_text = "Splendor: "
+												using = fontsize_xxl
+												align = center|nobaseline
+												autoresize = yes
+											}
+											textbox = {
+												text = "[FixedPointToFloat(GuiScope .ScriptValue('ve_splendor_value'))]"
+												default_format = "#positive_value"
+												using = fontsize_xxl
+												align = center|nobaseline
+												autoresize = yes
+											}
+										}
+									}
+									
+								}
+								
+							}
+							hbox = {	#Sections - AGE 2	
+								visible = "[GetScriptedGui('ve_age_2').IsShown( GuiScope.End )]"
+								vbox = {	#Middle Section
+									spacing = 10
+									vbox = {
+										header_pattern = {
+											layoutpolicy_horizontal = expanding
+											blockoverride
+											"header_text"
+											{
+												text = "ve_gecici_25"
+												default_format = "#tooltip_header"
+											}
+											blockoverride
+											"button_close"
+											{
+												visible = no
+											}
+										}
+										hbox = {											
+											vbox = {	#Left Age
+												spacing = 50
+												layoutpolicy_vertical = fixed
+												widget = {								
+												}							
+												widget = {
+													size = { 75 75 }
+													icon = {
+														size = { 100% 100% }
+														texture = "gfx/interface/backgrounds/round_frame_dec.dds"
+														using = default_fade_in_out
+													}
+												}
+												widget = {
+													size = { 75 75 }
+													icon = {
+														size = { 100% 100% }
+														texture = "gfx/interface/backgrounds/round_frame_dec.dds"
+														using = default_fade_in_out
+													}
+												}
+											}
+											vbox = {
+												icon = {
+													texture = "gfx/interface/victoria_age.dds"
+													size = {
+														700
+														300
+													}
+													using = frame_small_mask
+												}
+												hbox = {
+													button = {
+														using = default_button_action
+														size = { 100% 40 }
+														text = "ve_golden_age"
+														onclick = "[GetScriptedGui('ve_golden_age').Execute(GuiScope.End)]"
+														enabled = "[GetScriptedGui('ve_golden_age').IsValid( GuiScope.End )]"
+													}
+												}
+											}
+											vbox = {	#Right Ages
+												spacing = 50
+												layoutpolicy_vertical = fixed
+					
+												widget = {
+													
+												}
+												widget = {
+													size = { 75 75 }
+													icon = {
+														size = { 100% 100% }
+														texture = "gfx/interface/backgrounds/round_frame_dec.dds"
+														using = default_fade_in_out
+													}
+												}
+											}
+										}										
+									}
+									hbox = {
+										textbox = {
+											text = "ve_gecici_26"
+											default_format = "#tooltip_header"
+											using = fontsize_x
+											align = nobaseline
+											elide = left
+											minimumsize = {
+												100
+												-1
+											}
+											maximumsize = {
+												700
+												-1
+											}
+											multiline = yes
+											autoresize = yes
+										}
+									}
+									
+								}
+								
+							}
+							hbox = {	#Sections - AGE 3	
+								visible = "[GetScriptedGui('ve_age_3').IsShown( GuiScope.End )]"
+								vbox = {	#Middle Section
+									spacing = 10
+									vbox = {
+										header_pattern = {
+											layoutpolicy_horizontal = expanding
+											blockoverride
+											"header_text"
+											{
+												text = "ve_gecici_25"
+												default_format = "#tooltip_header"
+											}
+											blockoverride
+											"button_close"
+											{
+												visible = no
+											}
+										}
+										hbox = {											
+											vbox = {	#Left Age
+												spacing = 50
+												layoutpolicy_vertical = fixed
+												widget = {								
+												}							
+												widget = {
+													size = { 75 75 }
+													icon = {
+														size = { 100% 100% }
+														texture = "gfx/interface/backgrounds/round_frame_dec.dds"
+														using = default_fade_in_out
+													}
+												}
+												widget = {
+													size = { 75 75 }
+													icon = {
+														size = { 100% 100% }
+														texture = "gfx/interface/backgrounds/round_frame_dec.dds"
+														using = default_fade_in_out
+													}
+												}
+											}
+											vbox = {
+												icon = {
+													texture = "gfx/interface/victoria_age.dds"
+													size = {
+														700
+														300
+													}
+													using = frame_small_mask
+												}
+												hbox = {
+													button = {
+														using = default_button_action
+														size = { 100% 40 }
+														text = "ve_golden_age"
+														onclick = "[GetScriptedGui('ve_golden_age').Execute(GuiScope.End)]"
+														enabled = "[GetScriptedGui('ve_golden_age').IsValid( GuiScope.End )]"
 													}
 												}
 											}
@@ -120,8 +344,10 @@ types ve_gui_panel_types
 								
 							}
 						}
-						hbox = {	#Age Bonuses
+						hbox = {	#Age Bonuses - AGE 1
 							layoutpolicy_horizontal = fixed
+							visible = "[GetScriptedGui('ve_age_1').IsShown( GuiScope.End )]"
+							
 							spacing = 10
 							using = main_bg
 							margin = { 25 15 }
@@ -135,8 +361,8 @@ types ve_gui_panel_types
 								{
 									texture = "gfx/interface/icons/religion_icons/catholic.dds"
 								}
-								onclick = "[InformationPanelBar.ClosePanel]"
-								onclick = "[MapListPanelManager.CloseCurrentPanel]"
+								enabled = "[GetScriptedGui('ve_age_bonus_1').IsValid( GuiScope.End )]"
+								onclick = "[GetScriptedGui('ve_age_bonus_1').Execute(GuiScope.End)]"
 							}
 							button_icon_square = {
 								size = {
@@ -148,7 +374,8 @@ types ve_gui_panel_types
 								{
 									texture = "gfx/interface/icons/religion_icons/catholic.dds"
 								}
-								onclick = "[GetScriptedGui('add_infamy_scgui').Execute(GuiScope.End)]"
+								enabled = "[GetScriptedGui('ve_age_bonus_2').IsValid( GuiScope.End )]"
+								onclick = "[GetScriptedGui('ve_age_bonus_2').Execute(GuiScope.End)]"
 							}
 							button_icon_square = {
 								size = {
@@ -160,7 +387,8 @@ types ve_gui_panel_types
 								{
 									texture = "gfx/interface/icons/religion_icons/catholic.dds"
 								}
-								onclick = "[GetScriptedGui('add_infamy_scgui').Execute(GuiScope.End)]"
+								enabled = "[GetScriptedGui('ve_age_bonus_3').IsValid( GuiScope.End )]"
+								onclick = "[GetScriptedGui('ve_age_bonus_3').Execute(GuiScope.End)]"
 							}
 							button_icon_square = {
 								size = {
@@ -172,7 +400,8 @@ types ve_gui_panel_types
 								{
 									texture = "gfx/interface/icons/religion_icons/catholic.dds"
 								}
-								onclick = "[GetScriptedGui('add_infamy_scgui').Execute(GuiScope.End)]"
+								enabled = "[GetScriptedGui('ve_age_bonus_4').IsValid( GuiScope.End )]"
+								onclick = "[GetScriptedGui('ve_age_bonus_4').Execute(GuiScope.End)]"
 							}
 							button_icon_square = {
 								size = {
@@ -184,7 +413,8 @@ types ve_gui_panel_types
 								{
 									texture = "gfx/interface/icons/religion_icons/catholic.dds"
 								}
-								onclick = "[GetScriptedGui('add_infamy_scgui').Execute(GuiScope.End)]"
+								enabled = "[GetScriptedGui('ve_age_bonus_5').IsValid( GuiScope.End )]"
+								onclick = "[GetScriptedGui('ve_age_bonus_5').Execute(GuiScope.End)]"
 							}
 							button_icon_square = {
 								size = {
@@ -196,7 +426,8 @@ types ve_gui_panel_types
 								{
 									texture = "gfx/interface/icons/religion_icons/catholic.dds"
 								}
-								onclick = "[GetScriptedGui('add_infamy_scgui').Execute(GuiScope.End)]"
+								enabled = "[GetScriptedGui('ve_age_bonus_6').IsValid( GuiScope.End )]"
+								onclick = "[GetScriptedGui('ve_age_bonus_6').Execute(GuiScope.End)]"
 							}
 							button_icon_square = {
 								size = {
@@ -208,7 +439,8 @@ types ve_gui_panel_types
 								{
 									texture = "gfx/interface/icons/religion_icons/catholic.dds"
 								}
-								onclick = "[GetScriptedGui('add_infamy_scgui').Execute(GuiScope.End)]"
+								enabled = "[GetScriptedGui('ve_age_bonus_7').IsValid( GuiScope.End )]"
+								onclick = "[GetScriptedGui('ve_age_bonus_7').Execute(GuiScope.End)]"
 							}
 							button_icon_square = {
 								size = {
@@ -220,7 +452,8 @@ types ve_gui_panel_types
 								{
 									texture = "gfx/interface/icons/religion_icons/catholic.dds"
 								}
-								onclick = "[GetScriptedGui('add_infamy_scgui').Execute(GuiScope.End)]"
+								enabled = "[GetScriptedGui('ve_age_bonus_8').IsValid( GuiScope.End )]"
+								onclick = "[GetScriptedGui('ve_age_bonus_8').Execute(GuiScope.End)]"
 							}
 							button_icon_square = {
 								size = {
@@ -232,7 +465,8 @@ types ve_gui_panel_types
 								{
 									texture = "gfx/interface/icons/religion_icons/catholic.dds"
 								}
-								onclick = "[GetScriptedGui('add_infamy_scgui').Execute(GuiScope.End)]"
+								enabled = "[GetScriptedGui('ve_age_bonus_9').IsValid( GuiScope.End )]"
+								onclick = "[GetScriptedGui('ve_age_bonus_9').Execute(GuiScope.End)]"
 							}
 							button_icon_square = {
 								size = {
@@ -244,7 +478,8 @@ types ve_gui_panel_types
 								{
 									texture = "gfx/interface/icons/religion_icons/catholic.dds"
 								}
-								onclick = "[GetScriptedGui('add_infamy_scgui').Execute(GuiScope.End)]"
+								enabled = "[GetScriptedGui('ve_age_bonus_10').IsValid( GuiScope.End )]"
+								onclick = "[GetScriptedGui('ve_age_bonus_10').Execute(GuiScope.End)]"
 							}
 							button_icon_square = {
 								size = {
@@ -256,11 +491,314 @@ types ve_gui_panel_types
 								{
 									texture = "gfx/interface/icons/religion_icons/catholic.dds"
 								}
-								onclick = "[GetScriptedGui('add_infamy_scgui').Execute(GuiScope.End)]"
+								enabled = "[GetScriptedGui('ve_age_bonus_11').IsValid( GuiScope.End )]"
+								onclick = "[GetScriptedGui('ve_age_bonus_11').Execute(GuiScope.End)]"
 							}
 						}
-						vbox = {	#Age Objectives
+						hbox = {	#Age Bonuses - AGE 2
+							layoutpolicy_horizontal = fixed
+							visible = "[GetScriptedGui('ve_age_2').IsShown( GuiScope.End )]"
+							spacing = 10
+							using = main_bg
+							margin = { 25 15 }
+							button_icon_square = {
+								size = {
+									100
+									100
+								}
+								blockoverride
+								"icon"
+								{
+									texture = "gfx/interface/icons/religion_icons/catholic.dds"
+								}
+								enabled = "[GetScriptedGui('ve_age_bonus_1').IsValid( GuiScope.End )]"
+								onclick = "[GetScriptedGui('ve_age_bonus_1').Execute(GuiScope.End)]"
+							}
+							button_icon_square = {
+								size = {
+									100
+									100
+								}
+								blockoverride
+								"icon"
+								{
+									texture = "gfx/interface/icons/religion_icons/catholic.dds"
+								}
+								enabled = "[GetScriptedGui('ve_age_bonus_2').IsValid( GuiScope.End )]"
+								onclick = "[GetScriptedGui('ve_age_bonus_2').Execute(GuiScope.End)]"
+							}
+							button_icon_square = {
+								size = {
+									100
+									100
+								}
+								blockoverride
+								"icon"
+								{
+									texture = "gfx/interface/icons/religion_icons/catholic.dds"
+								}
+								enabled = "[GetScriptedGui('ve_age_bonus_3').IsValid( GuiScope.End )]"
+								onclick = "[GetScriptedGui('ve_age_bonus_3').Execute(GuiScope.End)]"
+							}
+							button_icon_square = {
+								size = {
+									100
+									100
+								}
+								blockoverride
+								"icon"
+								{
+									texture = "gfx/interface/icons/religion_icons/catholic.dds"
+								}
+								enabled = "[GetScriptedGui('ve_age_bonus_4').IsValid( GuiScope.End )]"
+								onclick = "[GetScriptedGui('ve_age_bonus_4').Execute(GuiScope.End)]"
+							}
+							button_icon_square = {
+								size = {
+									100
+									100
+								}
+								blockoverride
+								"icon"
+								{
+									texture = "gfx/interface/icons/religion_icons/catholic.dds"
+								}
+								enabled = "[GetScriptedGui('ve_age_bonus_5').IsValid( GuiScope.End )]"
+								onclick = "[GetScriptedGui('ve_age_bonus_5').Execute(GuiScope.End)]"
+							}
+							button_icon_square = {
+								size = {
+									100
+									100
+								}
+								blockoverride
+								"icon"
+								{
+									texture = "gfx/interface/icons/religion_icons/catholic.dds"
+								}
+								enabled = "[GetScriptedGui('ve_age_bonus_6').IsValid( GuiScope.End )]"
+								onclick = "[GetScriptedGui('ve_age_bonus_6').Execute(GuiScope.End)]"
+							}
+							button_icon_square = {
+								size = {
+									100
+									100
+								}
+								blockoverride
+								"icon"
+								{
+									texture = "gfx/interface/icons/religion_icons/catholic.dds"
+								}
+								enabled = "[GetScriptedGui('ve_age_bonus_7').IsValid( GuiScope.End )]"
+								onclick = "[GetScriptedGui('ve_age_bonus_7').Execute(GuiScope.End)]"
+							}
+							button_icon_square = {
+								size = {
+									100
+									100
+								}
+								blockoverride
+								"icon"
+								{
+									texture = "gfx/interface/icons/religion_icons/catholic.dds"
+								}
+								enabled = "[GetScriptedGui('ve_age_bonus_8').IsValid( GuiScope.End )]"
+								onclick = "[GetScriptedGui('ve_age_bonus_8').Execute(GuiScope.End)]"
+							}
+							button_icon_square = {
+								size = {
+									100
+									100
+								}
+								blockoverride
+								"icon"
+								{
+									texture = "gfx/interface/icons/religion_icons/catholic.dds"
+								}
+								enabled = "[GetScriptedGui('ve_age_bonus_9').IsValid( GuiScope.End )]"
+								onclick = "[GetScriptedGui('ve_age_bonus_9').Execute(GuiScope.End)]"
+							}
+							button_icon_square = {
+								size = {
+									100
+									100
+								}
+								blockoverride
+								"icon"
+								{
+									texture = "gfx/interface/icons/religion_icons/catholic.dds"
+								}
+								enabled = "[GetScriptedGui('ve_age_bonus_10').IsValid( GuiScope.End )]"
+								onclick = "[GetScriptedGui('ve_age_bonus_10').Execute(GuiScope.End)]"
+							}
+							button_icon_square = {
+								size = {
+									100
+									100
+								}
+								blockoverride
+								"icon"
+								{
+									texture = "gfx/interface/icons/religion_icons/catholic.dds"
+								}
+								enabled = "[GetScriptedGui('ve_age_bonus_11').IsValid( GuiScope.End )]"
+								onclick = "[GetScriptedGui('ve_age_bonus_11').Execute(GuiScope.End)]"
+							}
+						}
+						hbox = {	#Age Bonuses - AGE 3
+							layoutpolicy_horizontal = fixed
+							visible = "[GetScriptedGui('ve_age_3').IsShown( GuiScope.End )]"
+							spacing = 10
+							using = main_bg
+							margin = { 25 15 }
+							button_icon_square = {
+								size = {
+									100
+									100
+								}
+								blockoverride
+								"icon"
+								{
+									texture = "gfx/interface/icons/religion_icons/catholic.dds"
+								}
+								enabled = "[GetScriptedGui('ve_age_bonus_1').IsValid( GuiScope.End )]"
+								onclick = "[GetScriptedGui('ve_age_bonus_1').Execute(GuiScope.End)]"
+							}
+							button_icon_square = {
+								size = {
+									100
+									100
+								}
+								blockoverride
+								"icon"
+								{
+									texture = "gfx/interface/icons/religion_icons/catholic.dds"
+								}
+								enabled = "[GetScriptedGui('ve_age_bonus_2').IsValid( GuiScope.End )]"
+								onclick = "[GetScriptedGui('ve_age_bonus_2').Execute(GuiScope.End)]"
+							}
+							button_icon_square = {
+								size = {
+									100
+									100
+								}
+								blockoverride
+								"icon"
+								{
+									texture = "gfx/interface/icons/religion_icons/catholic.dds"
+								}
+								enabled = "[GetScriptedGui('ve_age_bonus_3').IsValid( GuiScope.End )]"
+								onclick = "[GetScriptedGui('ve_age_bonus_3').Execute(GuiScope.End)]"
+							}
+							button_icon_square = {
+								size = {
+									100
+									100
+								}
+								blockoverride
+								"icon"
+								{
+									texture = "gfx/interface/icons/religion_icons/catholic.dds"
+								}
+								enabled = "[GetScriptedGui('ve_age_bonus_4').IsValid( GuiScope.End )]"
+								onclick = "[GetScriptedGui('ve_age_bonus_4').Execute(GuiScope.End)]"
+							}
+							button_icon_square = {
+								size = {
+									100
+									100
+								}
+								blockoverride
+								"icon"
+								{
+									texture = "gfx/interface/icons/religion_icons/catholic.dds"
+								}
+								enabled = "[GetScriptedGui('ve_age_bonus_5').IsValid( GuiScope.End )]"
+								onclick = "[GetScriptedGui('ve_age_bonus_5').Execute(GuiScope.End)]"
+							}
+							button_icon_square = {
+								size = {
+									100
+									100
+								}
+								blockoverride
+								"icon"
+								{
+									texture = "gfx/interface/icons/religion_icons/catholic.dds"
+								}
+								enabled = "[GetScriptedGui('ve_age_bonus_6').IsValid( GuiScope.End )]"
+								onclick = "[GetScriptedGui('ve_age_bonus_6').Execute(GuiScope.End)]"
+							}
+							button_icon_square = {
+								size = {
+									100
+									100
+								}
+								blockoverride
+								"icon"
+								{
+									texture = "gfx/interface/icons/religion_icons/catholic.dds"
+								}
+								enabled = "[GetScriptedGui('ve_age_bonus_7').IsValid( GuiScope.End )]"
+								onclick = "[GetScriptedGui('ve_age_bonus_7').Execute(GuiScope.End)]"
+							}
+							button_icon_square = {
+								size = {
+									100
+									100
+								}
+								blockoverride
+								"icon"
+								{
+									texture = "gfx/interface/icons/religion_icons/catholic.dds"
+								}
+								enabled = "[GetScriptedGui('ve_age_bonus_8').IsValid( GuiScope.End )]"
+								onclick = "[GetScriptedGui('ve_age_bonus_8').Execute(GuiScope.End)]"
+							}
+							button_icon_square = {
+								size = {
+									100
+									100
+								}
+								blockoverride
+								"icon"
+								{
+									texture = "gfx/interface/icons/religion_icons/catholic.dds"
+								}
+								enabled = "[GetScriptedGui('ve_age_bonus_9').IsValid( GuiScope.End )]"
+								onclick = "[GetScriptedGui('ve_age_bonus_9').Execute(GuiScope.End)]"
+							}
+							button_icon_square = {
+								size = {
+									100
+									100
+								}
+								blockoverride
+								"icon"
+								{
+									texture = "gfx/interface/icons/religion_icons/catholic.dds"
+								}
+								enabled = "[GetScriptedGui('ve_age_bonus_10').IsValid( GuiScope.End )]"
+								onclick = "[GetScriptedGui('ve_age_bonus_10').Execute(GuiScope.End)]"
+							}
+							button_icon_square = {
+								size = {
+									100
+									100
+								}
+								blockoverride
+								"icon"
+								{
+									texture = "gfx/interface/icons/religion_icons/catholic.dds"
+								}
+								enabled = "[GetScriptedGui('ve_age_bonus_11').IsValid( GuiScope.End )]"
+								onclick = "[GetScriptedGui('ve_age_bonus_11').Execute(GuiScope.End)]"
+							}
+						}
+						vbox = {	#Age Objectives - AGE 1
 							layoutpolicy_horizontal = expanding
+							visible = "[GetScriptedGui('ve_age_1').IsShown( GuiScope.End )]"
+							
 							spacing = 0
 							using = main_bg
 							margin = { 0 15 }
@@ -278,8 +816,9 @@ types ve_gui_panel_types
 									visible = no
 								}
 							}
-							hbox = {	#Age Objective Rows
+							hbox = {	#Age Objective 1
 								layoutpolicy_horizontal = preferred
+								enabled = "[GetScriptedGui('ve_age_obj_1').IsValid( GuiScope.End )]"
 								margin = { 10 0 }
 								hbox = {
 									using = main_bg
@@ -310,8 +849,9 @@ types ve_gui_panel_types
 									}
 								}
 							}
-							hbox = {	#Age Objective Rows
+							hbox = {	#Age Objective 2
 								layoutpolicy_horizontal = preferred
+								enabled = "[GetScriptedGui('ve_age_obj_2').IsValid( GuiScope.End )]"
 								margin = { 10 0 }
 								hbox = {
 									using = main_bg
@@ -342,8 +882,9 @@ types ve_gui_panel_types
 									}
 								}
 							}
-							hbox = {	#Age Objective Rows
+							hbox = {	#Age Objective 3
 								layoutpolicy_horizontal = preferred
+								enabled = "[GetScriptedGui('ve_age_obj_3').IsValid( GuiScope.End )]"
 								margin = { 10 0 }
 								hbox = {
 									using = main_bg
@@ -374,8 +915,9 @@ types ve_gui_panel_types
 									}
 								}
 							}
-							hbox = {	#Age Objective Rows
+							hbox = {	#Age Objective 4
 								layoutpolicy_horizontal = preferred
+								enabled = "[GetScriptedGui('ve_age_obj_4').IsValid( GuiScope.End )]"
 								margin = { 10 0 }
 								hbox = {
 									using = main_bg
@@ -406,8 +948,9 @@ types ve_gui_panel_types
 									}
 								}
 							}
-							hbox = {	#Age Objective Rows
+							hbox = {	#Age Objective 5
 								layoutpolicy_horizontal = preferred
+								enabled = "[GetScriptedGui('ve_age_obj_5').IsValid( GuiScope.End )]"
 								margin = { 10 0 }
 								hbox = {
 									using = main_bg
@@ -438,8 +981,9 @@ types ve_gui_panel_types
 									}
 								}
 							}
-							hbox = {	#Age Objective Rows
+							hbox = {	#Age Objective 6
 								layoutpolicy_horizontal = preferred
+								enabled = "[GetScriptedGui('ve_age_obj_6').IsValid( GuiScope.End )]"
 								margin = { 10 0 }
 								hbox = {
 									using = main_bg
@@ -470,8 +1014,513 @@ types ve_gui_panel_types
 									}
 								}
 							}
-							hbox = {	#Age Objective Rows
+							hbox = {	#Age Objective 7
 								layoutpolicy_horizontal = preferred
+								enabled = "[GetScriptedGui('ve_age_obj_7').IsValid( GuiScope.End )]"
+								margin = { 10 0 }
+								hbox = {
+									using = main_bg
+									icon = {
+										texture = "gfx/interface/icons/event_icons/event_portrait.dds"
+										size = {
+											120
+											120
+										}
+									}
+								}
+								vbox = {
+									using = main_bg
+									layoutpolicy_horizontal = expanding
+									layoutpolicy_vertical = expanding
+									margin = { 30 0 }
+									textbox = {
+										text = "ve_obj_title"
+										using = fontsize_xxl
+										align = left|nobaseline
+										parentanchor = left|hcenter
+									}
+									textbox = {
+										text = "ve_obj_desc"
+										using = fontsize_x
+										align = left|nobaseline
+										parentanchor = left|hcenter
+									}
+								}
+							}
+						}
+						vbox = {	#Age Objectives - AGE 2
+							layoutpolicy_horizontal = expanding
+							visible = "[GetScriptedGui('ve_age_2').IsShown( GuiScope.End )]"
+							spacing = 0
+							using = main_bg
+							margin = { 0 15 }
+							header_pattern = {
+								layoutpolicy_horizontal = expanding
+								blockoverride
+								"header_text"
+								{
+									text = "ve_obj_header"
+									default_format = "#tooltip_header"
+								}
+								blockoverride
+								"button_close"
+								{
+									visible = no
+								}
+							}
+							hbox = {	#Age Objective 1
+								layoutpolicy_horizontal = preferred
+								enabled = "[GetScriptedGui('ve_age_obj_1').IsValid( GuiScope.End )]"
+								margin = { 10 0 }
+								hbox = {
+									using = main_bg
+									icon = {
+										texture = "gfx/interface/icons/event_icons/event_portrait.dds"
+										size = {
+											120
+											120
+										}
+									}
+								}
+								vbox = {
+									using = main_bg
+									layoutpolicy_horizontal = expanding
+									layoutpolicy_vertical = expanding
+									margin = { 30 0 }
+									textbox = {
+										text = "ve_obj_title"
+										using = fontsize_xxl
+										align = left|nobaseline
+										parentanchor = left|hcenter
+									}
+									textbox = {
+										text = "ve_obj_desc"
+										using = fontsize_x
+										align = left|nobaseline
+										parentanchor = left|hcenter
+									}
+								}
+							}
+							hbox = {	#Age Objective 2
+								layoutpolicy_horizontal = preferred
+								enabled = "[GetScriptedGui('ve_age_obj_2').IsValid( GuiScope.End )]"
+								margin = { 10 0 }
+								hbox = {
+									using = main_bg
+									icon = {
+										texture = "gfx/interface/icons/event_icons/event_portrait.dds"
+										size = {
+											120
+											120
+										}
+									}
+								}
+								vbox = {
+									using = main_bg
+									layoutpolicy_horizontal = expanding
+									layoutpolicy_vertical = expanding
+									margin = { 30 0 }
+									textbox = {
+										text = "ve_obj_title"
+										using = fontsize_xxl
+										align = left|nobaseline
+										parentanchor = left|hcenter
+									}
+									textbox = {
+										text = "ve_obj_desc"
+										using = fontsize_x
+										align = left|nobaseline
+										parentanchor = left|hcenter
+									}
+								}
+							}
+							hbox = {	#Age Objective 3
+								layoutpolicy_horizontal = preferred
+								enabled = "[GetScriptedGui('ve_age_obj_3').IsValid( GuiScope.End )]"
+								margin = { 10 0 }
+								hbox = {
+									using = main_bg
+									icon = {
+										texture = "gfx/interface/icons/event_icons/event_portrait.dds"
+										size = {
+											120
+											120
+										}
+									}
+								}
+								vbox = {
+									using = main_bg
+									layoutpolicy_horizontal = expanding
+									layoutpolicy_vertical = expanding
+									margin = { 30 0 }
+									textbox = {
+										text = "ve_obj_title"
+										using = fontsize_xxl
+										align = left|nobaseline
+										parentanchor = left|hcenter
+									}
+									textbox = {
+										text = "ve_obj_desc"
+										using = fontsize_x
+										align = left|nobaseline
+										parentanchor = left|hcenter
+									}
+								}
+							}
+							hbox = {	#Age Objective 4
+								layoutpolicy_horizontal = preferred
+								enabled = "[GetScriptedGui('ve_age_obj_4').IsValid( GuiScope.End )]"
+								margin = { 10 0 }
+								hbox = {
+									using = main_bg
+									icon = {
+										texture = "gfx/interface/icons/event_icons/event_portrait.dds"
+										size = {
+											120
+											120
+										}
+									}
+								}
+								vbox = {
+									using = main_bg
+									layoutpolicy_horizontal = expanding
+									layoutpolicy_vertical = expanding
+									margin = { 30 0 }
+									textbox = {
+										text = "ve_obj_title"
+										using = fontsize_xxl
+										align = left|nobaseline
+										parentanchor = left|hcenter
+									}
+									textbox = {
+										text = "ve_obj_desc"
+										using = fontsize_x
+										align = left|nobaseline
+										parentanchor = left|hcenter
+									}
+								}
+							}
+							hbox = {	#Age Objective 5
+								layoutpolicy_horizontal = preferred
+								enabled = "[GetScriptedGui('ve_age_obj_5').IsValid( GuiScope.End )]"
+								margin = { 10 0 }
+								hbox = {
+									using = main_bg
+									icon = {
+										texture = "gfx/interface/icons/event_icons/event_portrait.dds"
+										size = {
+											120
+											120
+										}
+									}
+								}
+								vbox = {
+									using = main_bg
+									layoutpolicy_horizontal = expanding
+									layoutpolicy_vertical = expanding
+									margin = { 30 0 }
+									textbox = {
+										text = "ve_obj_title"
+										using = fontsize_xxl
+										align = left|nobaseline
+										parentanchor = left|hcenter
+									}
+									textbox = {
+										text = "ve_obj_desc"
+										using = fontsize_x
+										align = left|nobaseline
+										parentanchor = left|hcenter
+									}
+								}
+							}
+							hbox = {	#Age Objective 6
+								layoutpolicy_horizontal = preferred
+								enabled = "[GetScriptedGui('ve_age_obj_6').IsValid( GuiScope.End )]"
+								margin = { 10 0 }
+								hbox = {
+									using = main_bg
+									icon = {
+										texture = "gfx/interface/icons/event_icons/event_portrait.dds"
+										size = {
+											120
+											120
+										}
+									}
+								}
+								vbox = {
+									using = main_bg
+									layoutpolicy_horizontal = expanding
+									layoutpolicy_vertical = expanding
+									margin = { 30 0 }
+									textbox = {
+										text = "ve_obj_title"
+										using = fontsize_xxl
+										align = left|nobaseline
+										parentanchor = left|hcenter
+									}
+									textbox = {
+										text = "ve_obj_desc"
+										using = fontsize_x
+										align = left|nobaseline
+										parentanchor = left|hcenter
+									}
+								}
+							}
+							hbox = {	#Age Objective 7
+								layoutpolicy_horizontal = preferred
+								enabled = "[GetScriptedGui('ve_age_obj_7').IsValid( GuiScope.End )]"
+								margin = { 10 0 }
+								hbox = {
+									using = main_bg
+									icon = {
+										texture = "gfx/interface/icons/event_icons/event_portrait.dds"
+										size = {
+											120
+											120
+										}
+									}
+								}
+								vbox = {
+									using = main_bg
+									layoutpolicy_horizontal = expanding
+									layoutpolicy_vertical = expanding
+									margin = { 30 0 }
+									textbox = {
+										text = "ve_obj_title"
+										using = fontsize_xxl
+										align = left|nobaseline
+										parentanchor = left|hcenter
+									}
+									textbox = {
+										text = "ve_obj_desc"
+										using = fontsize_x
+										align = left|nobaseline
+										parentanchor = left|hcenter
+									}
+								}
+							}
+						}
+						vbox = {	#Age Objectives - AGE 3
+							layoutpolicy_horizontal = expanding
+							visible = "[GetScriptedGui('ve_age_3').IsShown( GuiScope.End )]"
+							spacing = 0
+							using = main_bg
+							margin = { 0 15 }
+							header_pattern = {
+								layoutpolicy_horizontal = expanding
+								blockoverride
+								"header_text"
+								{
+									text = "ve_obj_header"
+									default_format = "#tooltip_header"
+								}
+								blockoverride
+								"button_close"
+								{
+									visible = no
+								}
+							}
+							hbox = {	#Age Objective 1
+								layoutpolicy_horizontal = preferred
+								enabled = "[GetScriptedGui('ve_age_obj_1').IsValid( GuiScope.End )]"
+								margin = { 10 0 }
+								hbox = {
+									using = main_bg
+									icon = {
+										texture = "gfx/interface/icons/event_icons/event_portrait.dds"
+										size = {
+											120
+											120
+										}
+									}
+								}
+								vbox = {
+									using = main_bg
+									layoutpolicy_horizontal = expanding
+									layoutpolicy_vertical = expanding
+									margin = { 30 0 }
+									textbox = {
+										text = "ve_obj_title"
+										using = fontsize_xxl
+										align = left|nobaseline
+										parentanchor = left|hcenter
+									}
+									textbox = {
+										text = "ve_obj_desc"
+										using = fontsize_x
+										align = left|nobaseline
+										parentanchor = left|hcenter
+									}
+								}
+							}
+							hbox = {	#Age Objective 2
+								layoutpolicy_horizontal = preferred
+								enabled = "[GetScriptedGui('ve_age_obj_2').IsValid( GuiScope.End )]"
+								margin = { 10 0 }
+								hbox = {
+									using = main_bg
+									icon = {
+										texture = "gfx/interface/icons/event_icons/event_portrait.dds"
+										size = {
+											120
+											120
+										}
+									}
+								}
+								vbox = {
+									using = main_bg
+									layoutpolicy_horizontal = expanding
+									layoutpolicy_vertical = expanding
+									margin = { 30 0 }
+									textbox = {
+										text = "ve_obj_title"
+										using = fontsize_xxl
+										align = left|nobaseline
+										parentanchor = left|hcenter
+									}
+									textbox = {
+										text = "ve_obj_desc"
+										using = fontsize_x
+										align = left|nobaseline
+										parentanchor = left|hcenter
+									}
+								}
+							}
+							hbox = {	#Age Objective 3
+								layoutpolicy_horizontal = preferred
+								enabled = "[GetScriptedGui('ve_age_obj_3').IsValid( GuiScope.End )]"
+								margin = { 10 0 }
+								hbox = {
+									using = main_bg
+									icon = {
+										texture = "gfx/interface/icons/event_icons/event_portrait.dds"
+										size = {
+											120
+											120
+										}
+									}
+								}
+								vbox = {
+									using = main_bg
+									layoutpolicy_horizontal = expanding
+									layoutpolicy_vertical = expanding
+									margin = { 30 0 }
+									textbox = {
+										text = "ve_obj_title"
+										using = fontsize_xxl
+										align = left|nobaseline
+										parentanchor = left|hcenter
+									}
+									textbox = {
+										text = "ve_obj_desc"
+										using = fontsize_x
+										align = left|nobaseline
+										parentanchor = left|hcenter
+									}
+								}
+							}
+							hbox = {	#Age Objective 4
+								layoutpolicy_horizontal = preferred
+								enabled = "[GetScriptedGui('ve_age_obj_4').IsValid( GuiScope.End )]"
+								margin = { 10 0 }
+								hbox = {
+									using = main_bg
+									icon = {
+										texture = "gfx/interface/icons/event_icons/event_portrait.dds"
+										size = {
+											120
+											120
+										}
+									}
+								}
+								vbox = {
+									using = main_bg
+									layoutpolicy_horizontal = expanding
+									layoutpolicy_vertical = expanding
+									margin = { 30 0 }
+									textbox = {
+										text = "ve_obj_title"
+										using = fontsize_xxl
+										align = left|nobaseline
+										parentanchor = left|hcenter
+									}
+									textbox = {
+										text = "ve_obj_desc"
+										using = fontsize_x
+										align = left|nobaseline
+										parentanchor = left|hcenter
+									}
+								}
+							}
+							hbox = {	#Age Objective 5
+								layoutpolicy_horizontal = preferred
+								enabled = "[GetScriptedGui('ve_age_obj_5').IsValid( GuiScope.End )]"
+								margin = { 10 0 }
+								hbox = {
+									using = main_bg
+									icon = {
+										texture = "gfx/interface/icons/event_icons/event_portrait.dds"
+										size = {
+											120
+											120
+										}
+									}
+								}
+								vbox = {
+									using = main_bg
+									layoutpolicy_horizontal = expanding
+									layoutpolicy_vertical = expanding
+									margin = { 30 0 }
+									textbox = {
+										text = "ve_obj_title"
+										using = fontsize_xxl
+										align = left|nobaseline
+										parentanchor = left|hcenter
+									}
+									textbox = {
+										text = "ve_obj_desc"
+										using = fontsize_x
+										align = left|nobaseline
+										parentanchor = left|hcenter
+									}
+								}
+							}
+							hbox = {	#Age Objective 6
+								layoutpolicy_horizontal = preferred
+								enabled = "[GetScriptedGui('ve_age_obj_6').IsValid( GuiScope.End )]"
+								margin = { 10 0 }
+								hbox = {
+									using = main_bg
+									icon = {
+										texture = "gfx/interface/icons/event_icons/event_portrait.dds"
+										size = {
+											120
+											120
+										}
+									}
+								}
+								vbox = {
+									using = main_bg
+									layoutpolicy_horizontal = expanding
+									layoutpolicy_vertical = expanding
+									margin = { 30 0 }
+									textbox = {
+										text = "ve_obj_title"
+										using = fontsize_xxl
+										align = left|nobaseline
+										parentanchor = left|hcenter
+									}
+									textbox = {
+										text = "ve_obj_desc"
+										using = fontsize_x
+										align = left|nobaseline
+										parentanchor = left|hcenter
+									}
+								}
+							}
+							hbox = {	#Age Objective 7
+								layoutpolicy_horizontal = preferred
+								enabled = "[GetScriptedGui('ve_age_obj_7').IsValid( GuiScope.End )]"
 								margin = { 10 0 }
 								hbox = {
 									using = main_bg

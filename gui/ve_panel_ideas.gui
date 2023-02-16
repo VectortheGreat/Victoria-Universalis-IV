@@ -11,8 +11,7 @@ ve_gui_panel_types
 			layoutpolicy_vertical = expanding
 			hbox = {
 				#National Ideas
-						layoutpolicy_horizontal = expanding
-
+				layoutpolicy_horizontal = expanding
 				margin = {
 					0
 					10
@@ -21,17 +20,16 @@ ve_gui_panel_types
 					spacing = 30					
 					hbox = {
 						layoutpolicy_horizontal = expanding
-						spacing = 80
+						spacing = 20
 						vbox = {
 							layoutpolicy_horizontal = expanding
-							spacing = 10
 							hbox = {
-								spacing = 2
 								large_flag = {
 									datacontext = "[GetPlayer]"
 								}
 							}
 							vbox = {
+								spacing = 8
 								textbox = {
 									raw_text = "Idea Points"
 									using = fontsize_xxl
@@ -42,6 +40,19 @@ ve_gui_panel_types
 									default_format = "#positive_value"
 									using = fontsize_xxl
 									autoresize = yes
+								}
+								white_progressbar_horizontal = {
+									size = {
+										80
+										15
+									}
+									tooltip = "BUILDING_PROGRESS_TOOLTIP"
+									blockoverride
+									"values"
+									{
+										max = "[FixedPointToFloat(GuiScope .ScriptValue('idea_point_pool_value_max'))]"
+										value = "[FixedPointToFloat(GuiScope .ScriptValue('ve_idea_pool_value'))]"
+									}
 								}
 							}
 						}
@@ -69,7 +80,7 @@ ve_gui_panel_types
 								}
 								textbox = {
 									# text = "[FixedPointToFloat(GuiScope .ScriptValue('ve_max_idea_slot_bar_value'))]"
-									text = "deneme"
+									text = "ve_max_idea_text"
 									using = fontsize_x
 									autoresize = yes
 								}

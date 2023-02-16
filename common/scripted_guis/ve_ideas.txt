@@ -10,6 +10,12 @@ ve_idea_1_embraced_idea = {
 			NOT = {
 				has_variable = idea_1_embraced
 			}
+			OR = {
+				var:ve_max_idea_slot_bar < 8
+				NOT = {
+					has_variable = ve_max_idea_slot_bar
+				}
+			}
 		}
 	}
 	effect = {
@@ -38,6 +44,26 @@ ve_idea_1_embraced_idea = {
 				set_variable = {
 					name = national_idea_pool
 					value = 0
+				}
+			}
+			if = {
+				limit = {
+					NOT = {
+						has_variable = ve_max_idea_slot_bar
+					}
+				}
+				set_variable = {
+					name = ve_max_idea_slot_bar
+					value = 0
+				}
+			}
+			if = {
+				limit = {
+					var:ve_max_idea_slot_bar < 8
+				}
+				change_variable = {
+					name = ve_max_idea_slot_bar
+					add = 1
 				}
 			}
 		}
@@ -131,6 +157,15 @@ ve_idea_1_cancel_embrace_idea = {
 				remove_variable = idea_1_but_7_completed
 				change_variable = {
 					name = national_idea_pool
+					subtract = 1
+				}
+			}
+			if = {
+				limit = {
+					var:ve_max_idea_slot_bar > 0
+				}
+				change_variable = {
+					name = ve_max_idea_slot_bar
 					subtract = 1
 				}
 			}
@@ -531,6 +566,12 @@ ve_idea_2_embraced_idea = {
 			NOT = {
 				has_variable = idea_2_embraced
 			}
+			OR = {
+				var:ve_max_idea_slot_bar < 8
+				NOT = {
+					has_variable = ve_max_idea_slot_bar
+				}
+			}
 		}
 	}
 	effect = {
@@ -559,6 +600,26 @@ ve_idea_2_embraced_idea = {
 				set_variable = {
 					name = national_idea_pool
 					value = 0
+				}
+			}
+			if = {
+				limit = {
+					NOT = {
+						has_variable = ve_max_idea_slot_bar
+					}
+				}
+				set_variable = {
+					name = ve_max_idea_slot_bar
+					value = 0
+				}
+			}
+			if = {
+				limit = {
+					var:ve_max_idea_slot_bar < 8
+				}
+				change_variable = {
+					name = ve_max_idea_slot_bar
+					add = 1
 				}
 			}
 		}
@@ -652,6 +713,15 @@ ve_idea_2_cancel_embrace_idea = {
 				remove_variable = idea_2_but_7_completed
 				change_variable = {
 					name = national_idea_pool
+					subtract = 1
+				}
+			}
+			if = {
+				limit = {
+					var:ve_max_idea_slot_bar > 0
+				}
+				change_variable = {
+					name = ve_max_idea_slot_bar
 					subtract = 1
 				}
 			}
@@ -1052,6 +1122,12 @@ ve_idea_3_embraced_idea = {
 			NOT = {
 				has_variable = idea_3_embraced
 			}
+			OR = {
+				var:ve_max_idea_slot_bar < 8
+				NOT = {
+					has_variable = ve_max_idea_slot_bar
+				}
+			}
 		}
 	}
 	effect = {
@@ -1080,6 +1156,26 @@ ve_idea_3_embraced_idea = {
 				set_variable = {
 					name = national_idea_pool
 					value = 0
+				}
+			}
+			if = {
+				limit = {
+					NOT = {
+						has_variable = ve_max_idea_slot_bar
+					}
+				}
+				set_variable = {
+					name = ve_max_idea_slot_bar
+					value = 0
+				}
+			}
+			if = {
+				limit = {
+					var:ve_max_idea_slot_bar < 8
+				}
+				change_variable = {
+					name = ve_max_idea_slot_bar
+					add = 1
 				}
 			}
 		}
@@ -1173,6 +1269,15 @@ ve_idea_3_cancel_embrace_idea = {
 				remove_variable = idea_3_but_7_completed
 				change_variable = {
 					name = national_idea_pool
+					subtract = 1
+				}
+			}
+			if = {
+				limit = {
+					var:ve_max_idea_slot_bar > 0
+				}
+				change_variable = {
+					name = ve_max_idea_slot_bar
 					subtract = 1
 				}
 			}
@@ -1573,6 +1678,12 @@ ve_idea_4_embraced_idea = {
 			NOT = {
 				has_variable = idea_4_embraced
 			}
+			OR = {
+				var:ve_max_idea_slot_bar < 8
+				NOT = {
+					has_variable = ve_max_idea_slot_bar
+				}
+			}
 		}
 	}
 	effect = {
@@ -1601,6 +1712,26 @@ ve_idea_4_embraced_idea = {
 				set_variable = {
 					name = national_idea_pool
 					value = 0
+				}
+			}
+			if = {
+				limit = {
+					NOT = {
+						has_variable = ve_max_idea_slot_bar
+					}
+				}
+				set_variable = {
+					name = ve_max_idea_slot_bar
+					value = 0
+				}
+			}
+			if = {
+				limit = {
+					var:ve_max_idea_slot_bar < 8
+				}
+				change_variable = {
+					name = ve_max_idea_slot_bar
+					add = 1
 				}
 			}
 		}
@@ -1694,6 +1825,15 @@ ve_idea_4_cancel_embrace_idea = {
 				remove_variable = idea_4_but_7_completed
 				change_variable = {
 					name = national_idea_pool
+					subtract = 1
+				}
+			}
+			if = {
+				limit = {
+					var:ve_max_idea_slot_bar > 0
+				}
+				change_variable = {
+					name = ve_max_idea_slot_bar
 					subtract = 1
 				}
 			}
@@ -2094,6 +2234,12 @@ ve_idea_5_embraced_idea = {
 			NOT = {
 				has_variable = idea_5_embraced
 			}
+			OR = {
+				var:ve_max_idea_slot_bar < 8
+				NOT = {
+					has_variable = ve_max_idea_slot_bar
+				}
+			}
 		}
 	}
 	effect = {
@@ -2122,6 +2268,26 @@ ve_idea_5_embraced_idea = {
 				set_variable = {
 					name = national_idea_pool
 					value = 0
+				}
+			}
+			if = {
+				limit = {
+					NOT = {
+						has_variable = ve_max_idea_slot_bar
+					}
+				}
+				set_variable = {
+					name = ve_max_idea_slot_bar
+					value = 0
+				}
+			}
+			if = {
+				limit = {
+					var:ve_max_idea_slot_bar < 8
+				}
+				change_variable = {
+					name = ve_max_idea_slot_bar
+					add = 1
 				}
 			}
 		}
@@ -2215,6 +2381,15 @@ ve_idea_5_cancel_embrace_idea = {
 				remove_variable = idea_5_but_7_completed
 				change_variable = {
 					name = national_idea_pool
+					subtract = 1
+				}
+			}
+			if = {
+				limit = {
+					var:ve_max_idea_slot_bar > 0
+				}
+				change_variable = {
+					name = ve_max_idea_slot_bar
 					subtract = 1
 				}
 			}
@@ -2615,6 +2790,12 @@ ve_idea_6_embraced_idea = {
 			NOT = {
 				has_variable = idea_6_embraced
 			}
+			OR = {
+				var:ve_max_idea_slot_bar < 8
+				NOT = {
+					has_variable = ve_max_idea_slot_bar
+				}
+			}
 		}
 	}
 	effect = {
@@ -2643,6 +2824,26 @@ ve_idea_6_embraced_idea = {
 				set_variable = {
 					name = national_idea_pool
 					value = 0
+				}
+			}
+			if = {
+				limit = {
+					NOT = {
+						has_variable = ve_max_idea_slot_bar
+					}
+				}
+				set_variable = {
+					name = ve_max_idea_slot_bar
+					value = 0
+				}
+			}
+			if = {
+				limit = {
+					var:ve_max_idea_slot_bar < 8
+				}
+				change_variable = {
+					name = ve_max_idea_slot_bar
+					add = 1
 				}
 			}
 		}
@@ -2736,6 +2937,15 @@ ve_idea_6_cancel_embrace_idea = {
 				remove_variable = idea_6_but_7_completed
 				change_variable = {
 					name = national_idea_pool
+					subtract = 1
+				}
+			}
+			if = {
+				limit = {
+					var:ve_max_idea_slot_bar > 0
+				}
+				change_variable = {
+					name = ve_max_idea_slot_bar
 					subtract = 1
 				}
 			}
@@ -3136,6 +3346,12 @@ ve_idea_7_embraced_idea = {
 			NOT = {
 				has_variable = idea_7_embraced
 			}
+			OR = {
+				var:ve_max_idea_slot_bar < 8
+				NOT = {
+					has_variable = ve_max_idea_slot_bar
+				}
+			}
 		}
 	}
 	effect = {
@@ -3164,6 +3380,26 @@ ve_idea_7_embraced_idea = {
 				set_variable = {
 					name = national_idea_pool
 					value = 0
+				}
+			}
+			if = {
+				limit = {
+					NOT = {
+						has_variable = ve_max_idea_slot_bar
+					}
+				}
+				set_variable = {
+					name = ve_max_idea_slot_bar
+					value = 0
+				}
+			}
+			if = {
+				limit = {
+					var:ve_max_idea_slot_bar < 8
+				}
+				change_variable = {
+					name = ve_max_idea_slot_bar
+					add = 1
 				}
 			}
 		}
@@ -3257,6 +3493,15 @@ ve_idea_7_cancel_embrace_idea = {
 				remove_variable = idea_7_but_7_completed
 				change_variable = {
 					name = national_idea_pool
+					subtract = 1
+				}
+			}
+			if = {
+				limit = {
+					var:ve_max_idea_slot_bar > 0
+				}
+				change_variable = {
+					name = ve_max_idea_slot_bar
 					subtract = 1
 				}
 			}
@@ -3657,6 +3902,12 @@ ve_idea_8_embraced_idea = {
 			NOT = {
 				has_variable = idea_8_embraced
 			}
+			OR = {
+				var:ve_max_idea_slot_bar < 8
+				NOT = {
+					has_variable = ve_max_idea_slot_bar
+				}
+			}
 		}
 	}
 	effect = {
@@ -3685,6 +3936,26 @@ ve_idea_8_embraced_idea = {
 				set_variable = {
 					name = national_idea_pool
 					value = 0
+				}
+			}
+			if = {
+				limit = {
+					NOT = {
+						has_variable = ve_max_idea_slot_bar
+					}
+				}
+				set_variable = {
+					name = ve_max_idea_slot_bar
+					value = 0
+				}
+			}
+			if = {
+				limit = {
+					var:ve_max_idea_slot_bar < 8
+				}
+				change_variable = {
+					name = ve_max_idea_slot_bar
+					add = 1
 				}
 			}
 		}
@@ -3778,6 +4049,15 @@ ve_idea_8_cancel_embrace_idea = {
 				remove_variable = idea_8_but_7_completed
 				change_variable = {
 					name = national_idea_pool
+					subtract = 1
+				}
+			}
+			if = {
+				limit = {
+					var:ve_max_idea_slot_bar > 0
+				}
+				change_variable = {
+					name = ve_max_idea_slot_bar
 					subtract = 1
 				}
 			}
@@ -4178,6 +4458,12 @@ ve_idea_9_embraced_idea = {
 			NOT = {
 				has_variable = idea_9_embraced
 			}
+			OR = {
+				var:ve_max_idea_slot_bar < 8
+				NOT = {
+					has_variable = ve_max_idea_slot_bar
+				}
+			}
 		}
 	}
 	effect = {
@@ -4206,6 +4492,26 @@ ve_idea_9_embraced_idea = {
 				set_variable = {
 					name = national_idea_pool
 					value = 0
+				}
+			}
+			if = {
+				limit = {
+					NOT = {
+						has_variable = ve_max_idea_slot_bar
+					}
+				}
+				set_variable = {
+					name = ve_max_idea_slot_bar
+					value = 0
+				}
+			}
+			if = {
+				limit = {
+					var:ve_max_idea_slot_bar < 8
+				}
+				change_variable = {
+					name = ve_max_idea_slot_bar
+					add = 1
 				}
 			}
 		}
@@ -4299,6 +4605,15 @@ ve_idea_9_cancel_embrace_idea = {
 				remove_variable = idea_9_but_7_completed
 				change_variable = {
 					name = national_idea_pool
+					subtract = 1
+				}
+			}
+			if = {
+				limit = {
+					var:ve_max_idea_slot_bar > 0
+				}
+				change_variable = {
+					name = ve_max_idea_slot_bar
 					subtract = 1
 				}
 			}
@@ -4699,6 +5014,12 @@ ve_idea_10_embraced_idea = {
 			NOT = {
 				has_variable = idea_10_embraced
 			}
+			OR = {
+				var:ve_max_idea_slot_bar < 8
+				NOT = {
+					has_variable = ve_max_idea_slot_bar
+				}
+			}
 		}
 	}
 	effect = {
@@ -4727,6 +5048,26 @@ ve_idea_10_embraced_idea = {
 				set_variable = {
 					name = national_idea_pool
 					value = 0
+				}
+			}
+			if = {
+				limit = {
+					NOT = {
+						has_variable = ve_max_idea_slot_bar
+					}
+				}
+				set_variable = {
+					name = ve_max_idea_slot_bar
+					value = 0
+				}
+			}
+			if = {
+				limit = {
+					var:ve_max_idea_slot_bar < 8
+				}
+				change_variable = {
+					name = ve_max_idea_slot_bar
+					add = 1
 				}
 			}
 		}
@@ -4820,6 +5161,15 @@ ve_idea_10_cancel_embrace_idea = {
 				remove_variable = idea_10_but_7_completed
 				change_variable = {
 					name = national_idea_pool
+					subtract = 1
+				}
+			}
+			if = {
+				limit = {
+					var:ve_max_idea_slot_bar > 0
+				}
+				change_variable = {
+					name = ve_max_idea_slot_bar
 					subtract = 1
 				}
 			}
@@ -5220,6 +5570,12 @@ ve_idea_11_embraced_idea = {
 			NOT = {
 				has_variable = idea_11_embraced
 			}
+			OR = {
+				var:ve_max_idea_slot_bar < 8
+				NOT = {
+					has_variable = ve_max_idea_slot_bar
+				}
+			}
 		}
 	}
 	effect = {
@@ -5248,6 +5604,26 @@ ve_idea_11_embraced_idea = {
 				set_variable = {
 					name = national_idea_pool
 					value = 0
+				}
+			}
+			if = {
+				limit = {
+					NOT = {
+						has_variable = ve_max_idea_slot_bar
+					}
+				}
+				set_variable = {
+					name = ve_max_idea_slot_bar
+					value = 0
+				}
+			}
+			if = {
+				limit = {
+					var:ve_max_idea_slot_bar < 8
+				}
+				change_variable = {
+					name = ve_max_idea_slot_bar
+					add = 1
 				}
 			}
 		}
@@ -5341,6 +5717,15 @@ ve_idea_11_cancel_embrace_idea = {
 				remove_variable = idea_11_but_7_completed
 				change_variable = {
 					name = national_idea_pool
+					subtract = 1
+				}
+			}
+			if = {
+				limit = {
+					var:ve_max_idea_slot_bar > 0
+				}
+				change_variable = {
+					name = ve_max_idea_slot_bar
 					subtract = 1
 				}
 			}
@@ -5741,6 +6126,12 @@ ve_idea_12_embraced_idea = {
 			NOT = {
 				has_variable = idea_12_embraced
 			}
+			OR = {
+				var:ve_max_idea_slot_bar < 8
+				NOT = {
+					has_variable = ve_max_idea_slot_bar
+				}
+			}
 		}
 	}
 	effect = {
@@ -5769,6 +6160,26 @@ ve_idea_12_embraced_idea = {
 				set_variable = {
 					name = national_idea_pool
 					value = 0
+				}
+			}
+			if = {
+				limit = {
+					NOT = {
+						has_variable = ve_max_idea_slot_bar
+					}
+				}
+				set_variable = {
+					name = ve_max_idea_slot_bar
+					value = 0
+				}
+			}
+			if = {
+				limit = {
+					var:ve_max_idea_slot_bar < 8
+				}
+				change_variable = {
+					name = ve_max_idea_slot_bar
+					add = 1
 				}
 			}
 		}
@@ -5862,6 +6273,15 @@ ve_idea_12_cancel_embrace_idea = {
 				remove_variable = idea_12_but_7_completed
 				change_variable = {
 					name = national_idea_pool
+					subtract = 1
+				}
+			}
+			if = {
+				limit = {
+					var:ve_max_idea_slot_bar > 0
+				}
+				change_variable = {
+					name = ve_max_idea_slot_bar
 					subtract = 1
 				}
 			}

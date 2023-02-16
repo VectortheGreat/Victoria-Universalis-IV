@@ -173,7 +173,7 @@ dev.2 = {
 	placement = scope:diyarbakir_scope
 	duration = 0
 	trigger = {
-		has_variable = idea_1_embraced
+		has_variable = ec_incorporated_population
 		var:idea_1_bar_point >= 10
 		country_or_subject_owns_entire_state_region = STATE_HEDJAZ
 	}
@@ -181,25 +181,48 @@ dev.2 = {
 		name = dev.1.a
 		default_option = yes
 		change_variable = {
-			name = piety_bar_point
-			add = 100
+			name = ve_splender_points
+			add = 800
 		}
 	}
 	option = {
 		name = dev.1.b
-		remove_variable = idea_1_but_1_completed
-		remove_variable = idea_1_but_2_completed
-		remove_variable = idea_1_but_3_completed
-		remove_variable = idea_1_but_4_completed
-		remove_variable = idea_1_but_5_completed
-		remove_variable = idea_1_but_6_completed
-		remove_variable = idea_1_but_7_completed
+		set_variable = {
+			name = ve_triggered_objectives
+			value = 0
+		}
 	}
 	option = {
 		name = dev.1.c
 		set_variable = {
-			name = piety_bar_point
+			name = ec_incorporated_population
 			value = 0
+		}
+		capital = {
+			save_scope_as = this_state
+			root = {
+				change_variable = {
+					name = ec_incorporated_population
+					add = scope:this_state.state_population
+				}
+			}
+		}
+	}
+	option = {
+		name = dev.1.d
+		random_scope_state = {
+			limit = {
+				owner = c:TUR
+			}
+			every_scope_pop = {
+				limit = {
+					culture = cu:turkish
+				}
+				change_pop_culture = {
+					value = 1
+					target = cu:greek
+				}
+			}
 		}
 	}
 }

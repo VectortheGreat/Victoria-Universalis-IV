@@ -1,0 +1,879 @@
+ve_golden_age = {
+	scope = country
+	is_valid = {
+		any_country = {
+			is_ai = no
+			NOT = {
+				has_variable = clicked_golden_age
+			}
+			var:ve_triggered_objectives >= 3
+		}
+	}
+	effect = {
+		every_country = {
+			limit = {
+				is_ai = no
+			}
+			set_variable = clicked_golden_age
+		}
+	}
+}
+
+ve_age_1 = {
+	scope = country
+	is_shown = {
+		any_country = {
+			is_ai = no
+			NOT = {
+				has_variable = ve_age_2_started
+				has_variable = ve_age_3_started
+			}
+			has_variable = ve_age_1_started
+		}
+	}
+}
+
+ve_age_2 = {
+	scope = country
+	is_shown = {
+		any_country = {
+			is_ai = no
+			NOT = {
+				has_variable = ve_age_1_started
+				has_variable = ve_age_3_started
+			}
+			has_variable = ve_age_2_started
+		}
+	}
+}
+
+ve_age_3 = {
+	scope = country
+	is_shown = {
+		any_country = {
+			is_ai = no
+			NOT = {
+				has_variable = ve_age_1_started
+				has_variable = ve_age_2_started
+			}
+			has_variable = ve_age_3_started
+		}
+	}
+}
+
+ve_age_obj_1 = {
+	scope = country
+	is_valid = {
+		any_country = {
+			is_ai = no
+			trigger_if = {
+				limit = {
+					has_variable = ve_age_1_started
+				}
+				always = no
+			}
+			trigger_else_if = {
+				limit = {
+					has_variable = ve_age_2_started
+				}
+				always = no
+			}
+			trigger_else_if = {
+				limit = {
+					has_variable = ve_age_3_started
+				}
+				always = no
+			}
+		}
+	}
+}
+
+ve_age_obj_2 = {
+	scope = country
+	is_valid = {
+		any_country = {
+			is_ai = no
+			trigger_if = {
+				limit = {
+					has_variable = ve_age_1_started
+				}
+				always = no
+			}
+			trigger_else_if = {
+				limit = {
+					has_variable = ve_age_2_started
+				}
+				always = no
+			}
+			trigger_else_if = {
+				limit = {
+					has_variable = ve_age_3_started
+				}
+				always = no
+			}
+		}
+	}
+}
+
+ve_age_obj_3 = {
+	scope = country
+	is_valid = {
+		any_country = {
+			is_ai = no
+			trigger_if = {
+				limit = {
+					has_variable = ve_age_1_started
+				}
+				always = no
+			}
+			trigger_else_if = {
+				limit = {
+					has_variable = ve_age_2_started
+				}
+				always = no
+			}
+			trigger_else_if = {
+				limit = {
+					has_variable = ve_age_3_started
+				}
+				always = no
+			}
+		}
+	}
+}
+
+ve_age_obj_4 = {
+	scope = country
+	is_valid = {
+		any_country = {
+			is_ai = no
+			trigger_if = {
+				limit = {
+					has_variable = ve_age_1_started
+				}
+				always = no
+			}
+			trigger_else_if = {
+				limit = {
+					has_variable = ve_age_2_started
+				}
+				always = no
+			}
+			trigger_else_if = {
+				limit = {
+					has_variable = ve_age_3_started
+				}
+				always = no
+			}
+		}
+	}
+}
+
+ve_age_obj_5 = {
+	scope = country
+	is_valid = {
+		any_country = {
+			is_ai = no
+			trigger_if = {
+				limit = {
+					has_variable = ve_age_1_started
+				}
+				always = no
+			}
+			trigger_else_if = {
+				limit = {
+					has_variable = ve_age_2_started
+				}
+				always = no
+			}
+			trigger_else_if = {
+				limit = {
+					has_variable = ve_age_3_started
+				}
+				always = no
+			}
+		}
+	}
+}
+
+ve_age_obj_6 = {
+	scope = country
+	is_valid = {
+		any_country = {
+			is_ai = no
+			trigger_if = {
+				limit = {
+					has_variable = ve_age_1_started
+				}
+				always = no
+			}
+			trigger_else_if = {
+				limit = {
+					has_variable = ve_age_2_started
+				}
+				always = no
+			}
+			trigger_else_if = {
+				limit = {
+					has_variable = ve_age_3_started
+				}
+				always = no
+			}
+		}
+	}
+}
+
+ve_age_obj_7 = {
+	scope = country
+	is_valid = {
+		any_country = {
+			is_ai = no
+			trigger_if = {
+				limit = {
+					has_variable = ve_age_1_started
+				}
+				always = no
+			}
+			trigger_else_if = {
+				limit = {
+					has_variable = ve_age_2_started
+				}
+				always = no
+			}
+			trigger_else_if = {
+				limit = {
+					has_variable = ve_age_3_started
+				}
+				always = no
+			}
+		}
+	}
+}
+
+### Age Bonuses
+ve_age_bonus_1 = {
+	scope = country
+	is_valid = {
+		any_country = {
+			is_ai = no
+			var:ve_splender_points >= 800
+			trigger_if = {
+				limit = {
+					has_variable = ve_age_1_started
+				}
+				always = no
+			}
+			trigger_else_if = {
+				limit = {
+					has_variable = ve_age_2_started
+				}
+				always = yes
+			}
+			trigger_else_if = {
+				limit = {
+					has_variable = ve_age_3_started
+				}
+				always = yes
+			}
+		}
+	}
+	effect = {
+		every_country = {
+			limit = {
+				is_ai = no
+			}
+			change_variable = {
+				name = ve_splender_points
+				subtract = 800
+			}
+			if = {
+				limit = {
+					has_variable = ve_age_1_started
+				}
+				#Some modifiers
+			}
+			else_if = {
+				limit = {
+					has_variable = ve_age_2_started
+				}
+				#Some modifiers
+			}
+			else_if = {
+				limit = {
+					has_variable = ve_age_3_started
+				}
+				#Some modifiers
+			}
+		}
+	}
+}
+
+ve_age_bonus_2 = {
+	scope = country
+	is_valid = {
+		any_country = {
+			is_ai = no
+			var:ve_splender_points >= 800
+			trigger_if = {
+				limit = {
+					has_variable = ve_age_1_started
+				}
+				always = yes
+			}
+			trigger_else_if = {
+				limit = {
+					has_variable = ve_age_2_started
+				}
+				always = yes
+			}
+			trigger_else_if = {
+				limit = {
+					has_variable = ve_age_3_started
+				}
+				always = yes
+			}
+		}
+	}
+	effect = {
+		every_country = {
+			limit = {
+				is_ai = no
+			}
+			change_variable = {
+				name = ve_splender_points
+				subtract = 800
+			}
+			if = {
+				limit = {
+					has_variable = ve_age_1_started
+				}
+				#Some modifiers
+			}
+			else_if = {
+				limit = {
+					has_variable = ve_age_2_started
+				}
+				#Some modifiers
+			}
+			else_if = {
+				limit = {
+					has_variable = ve_age_3_started
+				}
+				#Some modifiers
+			}
+		}
+	}
+}
+
+ve_age_bonus_3 = {
+	scope = country
+	is_valid = {
+		any_country = {
+			is_ai = no
+			var:ve_splender_points >= 800
+			trigger_if = {
+				limit = {
+					has_variable = ve_age_1_started
+				}
+				always = no
+			}
+			trigger_else_if = {
+				limit = {
+					has_variable = ve_age_2_started
+				}
+				always = yes
+			}
+			trigger_else_if = {
+				limit = {
+					has_variable = ve_age_3_started
+				}
+				always = yes
+			}
+		}
+	}
+	effect = {
+		every_country = {
+			limit = {
+				is_ai = no
+			}
+			change_variable = {
+				name = ve_splender_points
+				subtract = 800
+			}
+			if = {
+				limit = {
+					has_variable = ve_age_1_started
+				}
+				#Some modifiers
+			}
+			else_if = {
+				limit = {
+					has_variable = ve_age_2_started
+				}
+				#Some modifiers
+			}
+			else_if = {
+				limit = {
+					has_variable = ve_age_3_started
+				}
+				#Some modifiers
+			}
+		}
+	}
+}
+
+ve_age_bonus_4 = {
+	scope = country
+	is_valid = {
+		any_country = {
+			is_ai = no
+			var:ve_splender_points >= 800
+			trigger_if = {
+				limit = {
+					has_variable = ve_age_1_started
+				}
+				always = no
+			}
+			trigger_else_if = {
+				limit = {
+					has_variable = ve_age_2_started
+				}
+				always = yes
+			}
+			trigger_else_if = {
+				limit = {
+					has_variable = ve_age_3_started
+				}
+				always = yes
+			}
+		}
+	}
+	effect = {
+		every_country = {
+			limit = {
+				is_ai = no
+			}
+			change_variable = {
+				name = ve_splender_points
+				subtract = 800
+			}
+			if = {
+				limit = {
+					has_variable = ve_age_1_started
+				}
+				#Some modifiers
+			}
+			else_if = {
+				limit = {
+					has_variable = ve_age_2_started
+				}
+				#Some modifiers
+			}
+			else_if = {
+				limit = {
+					has_variable = ve_age_3_started
+				}
+				#Some modifiers
+			}
+		}
+	}
+}
+
+ve_age_bonus_5 = {
+	scope = country
+	is_valid = {
+		any_country = {
+			is_ai = no
+			var:ve_splender_points >= 800
+			trigger_if = {
+				limit = {
+					has_variable = ve_age_1_started
+				}
+				always = no
+			}
+			trigger_else_if = {
+				limit = {
+					has_variable = ve_age_2_started
+				}
+				always = yes
+			}
+			trigger_else_if = {
+				limit = {
+					has_variable = ve_age_3_started
+				}
+				always = yes
+			}
+		}
+	}
+	effect = {
+		every_country = {
+			limit = {
+				is_ai = no
+			}
+			change_variable = {
+				name = ve_splender_points
+				subtract = 800
+			}
+			if = {
+				limit = {
+					has_variable = ve_age_1_started
+				}
+				#Some modifiers
+			}
+			else_if = {
+				limit = {
+					has_variable = ve_age_2_started
+				}
+				#Some modifiers
+			}
+			else_if = {
+				limit = {
+					has_variable = ve_age_3_started
+				}
+				#Some modifiers
+			}
+		}
+	}
+}
+
+ve_age_bonus_6 = {
+	scope = country
+	is_valid = {
+		any_country = {
+			is_ai = no
+			var:ve_splender_points >= 800
+			trigger_if = {
+				limit = {
+					has_variable = ve_age_1_started
+				}
+				always = no
+			}
+			trigger_else_if = {
+				limit = {
+					has_variable = ve_age_2_started
+				}
+				always = yes
+			}
+			trigger_else_if = {
+				limit = {
+					has_variable = ve_age_3_started
+				}
+				always = yes
+			}
+		}
+	}
+	effect = {
+		every_country = {
+			limit = {
+				is_ai = no
+			}
+			change_variable = {
+				name = ve_splender_points
+				subtract = 800
+			}
+			if = {
+				limit = {
+					has_variable = ve_age_1_started
+				}
+				#Some modifiers
+			}
+			else_if = {
+				limit = {
+					has_variable = ve_age_2_started
+				}
+				#Some modifiers
+			}
+			else_if = {
+				limit = {
+					has_variable = ve_age_3_started
+				}
+				#Some modifiers
+			}
+		}
+	}
+}
+
+ve_age_bonus_7 = {
+	scope = country
+	is_valid = {
+		any_country = {
+			is_ai = no
+			var:ve_splender_points >= 800
+			trigger_if = {
+				limit = {
+					has_variable = ve_age_1_started
+				}
+				always = no
+			}
+			trigger_else_if = {
+				limit = {
+					has_variable = ve_age_2_started
+				}
+				always = yes
+			}
+			trigger_else_if = {
+				limit = {
+					has_variable = ve_age_3_started
+				}
+				always = yes
+			}
+		}
+	}
+	effect = {
+		every_country = {
+			limit = {
+				is_ai = no
+			}
+			change_variable = {
+				name = ve_splender_points
+				subtract = 800
+			}
+			if = {
+				limit = {
+					has_variable = ve_age_1_started
+				}
+				#Some modifiers
+			}
+			else_if = {
+				limit = {
+					has_variable = ve_age_2_started
+				}
+				#Some modifiers
+			}
+			else_if = {
+				limit = {
+					has_variable = ve_age_3_started
+				}
+				#Some modifiers
+			}
+		}
+	}
+}
+
+ve_age_bonus_8 = {
+	scope = country
+	is_valid = {
+		any_country = {
+			is_ai = no
+			var:ve_splender_points >= 800
+			trigger_if = {
+				limit = {
+					has_variable = ve_age_1_started
+				}
+				always = no
+			}
+			trigger_else_if = {
+				limit = {
+					has_variable = ve_age_2_started
+				}
+				always = yes
+			}
+			trigger_else_if = {
+				limit = {
+					has_variable = ve_age_3_started
+				}
+				always = yes
+			}
+		}
+	}
+	effect = {
+		every_country = {
+			limit = {
+				is_ai = no
+			}
+			change_variable = {
+				name = ve_splender_points
+				subtract = 800
+			}
+			if = {
+				limit = {
+					has_variable = ve_age_1_started
+				}
+				#Some modifiers
+			}
+			else_if = {
+				limit = {
+					has_variable = ve_age_2_started
+				}
+				#Some modifiers
+			}
+			else_if = {
+				limit = {
+					has_variable = ve_age_3_started
+				}
+				#Some modifiers
+			}
+		}
+	}
+}
+
+ve_age_bonus_9 = {
+	scope = country
+	is_valid = {
+		any_country = {
+			is_ai = no
+			var:ve_splender_points >= 800
+			trigger_if = {
+				limit = {
+					has_variable = ve_age_1_started
+				}
+				always = no
+			}
+			trigger_else_if = {
+				limit = {
+					has_variable = ve_age_2_started
+				}
+				always = yes
+			}
+			trigger_else_if = {
+				limit = {
+					has_variable = ve_age_3_started
+				}
+				always = yes
+			}
+		}
+	}
+	effect = {
+		every_country = {
+			limit = {
+				is_ai = no
+			}
+			change_variable = {
+				name = ve_splender_points
+				subtract = 800
+			}
+			if = {
+				limit = {
+					has_variable = ve_age_1_started
+				}
+				#Some modifiers
+			}
+			else_if = {
+				limit = {
+					has_variable = ve_age_2_started
+				}
+				#Some modifiers
+			}
+			else_if = {
+				limit = {
+					has_variable = ve_age_3_started
+				}
+				#Some modifiers
+			}
+		}
+	}
+}
+
+ve_age_bonus_10 = {
+	scope = country
+	is_valid = {
+		any_country = {
+			is_ai = no
+			var:ve_splender_points >= 800
+			trigger_if = {
+				limit = {
+					has_variable = ve_age_1_started
+				}
+				always = no
+			}
+			trigger_else_if = {
+				limit = {
+					has_variable = ve_age_2_started
+				}
+				always = yes
+			}
+			trigger_else_if = {
+				limit = {
+					has_variable = ve_age_3_started
+				}
+				always = yes
+			}
+		}
+	}
+	effect = {
+		every_country = {
+			limit = {
+				is_ai = no
+			}
+			change_variable = {
+				name = ve_splender_points
+				subtract = 800
+			}
+			if = {
+				limit = {
+					has_variable = ve_age_1_started
+				}
+				#Some modifiers
+			}
+			else_if = {
+				limit = {
+					has_variable = ve_age_2_started
+				}
+				#Some modifiers
+			}
+			else_if = {
+				limit = {
+					has_variable = ve_age_3_started
+				}
+				#Some modifiers
+			}
+		}
+	}
+}
+
+ve_age_bonus_11 = {
+	scope = country
+	is_valid = {
+		any_country = {
+			is_ai = no
+			var:ve_splender_points >= 800
+			trigger_if = {
+				limit = {
+					has_variable = ve_age_1_started
+				}
+				always = no
+			}
+			trigger_else_if = {
+				limit = {
+					has_variable = ve_age_2_started
+				}
+				always = yes
+			}
+			trigger_else_if = {
+				limit = {
+					has_variable = ve_age_3_started
+				}
+				always = yes
+			}
+		}
+	}
+	effect = {
+		every_country = {
+			limit = {
+				is_ai = no
+			}
+			change_variable = {
+				name = ve_splender_points
+				subtract = 800
+			}
+			if = {
+				limit = {
+					has_variable = ve_age_1_started
+				}
+				#Some modifiers
+			}
+			else_if = {
+				limit = {
+					has_variable = ve_age_2_started
+				}
+				#Some modifiers
+			}
+			else_if = {
+				limit = {
+					has_variable = ve_age_3_started
+				}
+				#Some modifiers
+			}
+		}
+	}
+}
