@@ -127,7 +127,8 @@ types ve_gui_panel_types
 												autoresize = yes
 											}
 											textbox = {
-												text = "[FixedPointToFloat(GuiScope .ScriptValue('ve_splendor_value'))]"
+												# text = "[FixedPointToFloat(GuiScope .ScriptValue('ve_splendor_value'))]"
+												text = "[GuiScope.SetRoot(MakeScopeValue(GetPlayer.GetGDP)).ScriptValue('splendor_points')]"
 												default_format = "#positive_value"
 												using = fontsize_xxl
 												align = center|nobaseline

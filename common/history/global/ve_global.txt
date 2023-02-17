@@ -91,6 +91,73 @@
 		if = {
 			limit = {
 				NOT = {
+					has_variable = national_idea_pool
+				}
+			}
+			set_variable = {
+				name = national_idea_pool
+				value = 0
+			}
+		}
+		set_variable = {
+			name = idea_10_bar_point
+			value = 0
+		}
+		set_variable = {
+			name = idea_1_bar_point
+			value = 0
+		}
+		set_variable = {
+			name = idea_2_bar_point
+			value = 0
+		}
+		set_variable = {
+			name = idea_3_bar_point
+			value = 0
+		}
+		set_variable = {
+			name = idea_4_bar_point
+			value = 0
+		}
+		set_variable = {
+			name = idea_5_bar_point
+			value = 0
+		}
+		set_variable = {
+			name = idea_6_bar_point
+			value = 0
+		}
+		set_variable = {
+			name = idea_7_bar_point
+			value = 0
+		}
+		set_variable = {
+			name = idea_8_bar_point
+			value = 0
+		}
+		set_variable = {
+			name = idea_9_bar_point
+			value = 0
+		}
+		set_variable = {
+			name = idea_11_bar_point
+			value = 0
+		}
+		set_variable = {
+			name = idea_12_bar_point
+			value = 0
+		}
+		set_variable = {
+			name = ve_max_idea_slot_bar
+			value = 0
+		}
+		set_variable = {
+			name = idea_point_pool
+			value = 0
+		}
+		if = {
+			limit = {
+				NOT = {
 					has_variable = ve_triggered_objectives
 				}
 			}

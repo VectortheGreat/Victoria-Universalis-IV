@@ -89,7 +89,10 @@ ve_idea_1_cancel_embrace_idea = {
 				}
 				remove_variable = idea_1_embraced
 			}
-			remove_variable = idea_1_bar_point
+			set_variable = {
+				name = idea_1_bar_point
+				value = 0
+			}
 			if = {
 				limit = {
 					has_variable = idea_1_but_1_completed
@@ -645,7 +648,10 @@ ve_idea_2_cancel_embrace_idea = {
 				}
 				remove_variable = idea_2_embraced
 			}
-			remove_variable = idea_2_bar_point
+			set_variable = {
+				name = idea_2_bar_point
+				value = 0
+			}
 			if = {
 				limit = {
 					has_variable = idea_2_but_1_completed
@@ -1201,7 +1207,10 @@ ve_idea_3_cancel_embrace_idea = {
 				}
 				remove_variable = idea_3_embraced
 			}
-			remove_variable = idea_3_bar_point
+			set_variable = {
+				name = idea_3_bar_point
+				value = 0
+			}
 			if = {
 				limit = {
 					has_variable = idea_3_but_1_completed
@@ -1757,7 +1766,10 @@ ve_idea_4_cancel_embrace_idea = {
 				}
 				remove_variable = idea_4_embraced
 			}
-			remove_variable = idea_4_bar_point
+			set_variable = {
+				name = idea_4_bar_point
+				value = 0
+			}
 			if = {
 				limit = {
 					has_variable = idea_4_but_1_completed
@@ -2313,7 +2325,10 @@ ve_idea_5_cancel_embrace_idea = {
 				}
 				remove_variable = idea_5_embraced
 			}
-			remove_variable = idea_5_bar_point
+			set_variable = {
+				name = idea_5_bar_point
+				value = 0
+			}
 			if = {
 				limit = {
 					has_variable = idea_5_but_1_completed
@@ -2869,7 +2884,10 @@ ve_idea_6_cancel_embrace_idea = {
 				}
 				remove_variable = idea_6_embraced
 			}
-			remove_variable = idea_6_bar_point
+			set_variable = {
+				name = idea_6_bar_point
+				value = 0
+			}
 			if = {
 				limit = {
 					has_variable = idea_6_but_1_completed
@@ -3425,7 +3443,10 @@ ve_idea_7_cancel_embrace_idea = {
 				}
 				remove_variable = idea_7_embraced
 			}
-			remove_variable = idea_7_bar_point
+			set_variable = {
+				name = idea_7_bar_point
+				value = 0
+			}
 			if = {
 				limit = {
 					has_variable = idea_7_but_1_completed
@@ -3981,7 +4002,10 @@ ve_idea_8_cancel_embrace_idea = {
 				}
 				remove_variable = idea_8_embraced
 			}
-			remove_variable = idea_8_bar_point
+			set_variable = {
+				name = idea_8_bar_point
+				value = 0
+			}
 			if = {
 				limit = {
 					has_variable = idea_8_but_1_completed
@@ -4537,7 +4561,10 @@ ve_idea_9_cancel_embrace_idea = {
 				}
 				remove_variable = idea_9_embraced
 			}
-			remove_variable = idea_9_bar_point
+			set_variable = {
+				name = idea_9_bar_point
+				value = 0
+			}
 			if = {
 				limit = {
 					has_variable = idea_9_but_1_completed
@@ -5093,7 +5120,10 @@ ve_idea_10_cancel_embrace_idea = {
 				}
 				remove_variable = idea_10_embraced
 			}
-			remove_variable = idea_10_bar_point
+			set_variable = {
+				name = idea_10_bar_point
+				value = 0
+			}
 			if = {
 				limit = {
 					has_variable = idea_10_but_1_completed
@@ -5649,7 +5679,10 @@ ve_idea_11_cancel_embrace_idea = {
 				}
 				remove_variable = idea_11_embraced
 			}
-			remove_variable = idea_11_bar_point
+			set_variable = {
+				name = idea_11_bar_point
+				value = 0
+			}
 			if = {
 				limit = {
 					has_variable = idea_11_but_1_completed
@@ -6205,7 +6238,10 @@ ve_idea_12_cancel_embrace_idea = {
 				}
 				remove_variable = idea_12_embraced
 			}
-			remove_variable = idea_12_bar_point
+			set_variable = {
+				name = idea_12_bar_point
+				value = 0
+			}
 			if = {
 				limit = {
 					has_variable = idea_12_but_1_completed

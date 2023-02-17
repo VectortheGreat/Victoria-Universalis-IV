@@ -1,17 +1,8 @@
-﻿# vecalc_pop = {
-# 	value = var:ec_incorporated_population
-# 	every_country = {
-# 		limit = {
-# 			is_ai = no
-# 		}
-# 		add = var:ec_incorporated_population
-# 	}
-# }
-ve_idea_pool_value = {
-	value = var:idea_point_pool
+﻿ve_idea_pool_value = {
+	#value = var:idea_point_pool
 	every_country = {
 		limit = {
-			is_ai = no
+			gdp = root
 		}
 		add = var:idea_point_pool
 	}
@@ -20,10 +11,10 @@ ve_idea_pool_value = {
 
 idea_point_pool_value_max = 999
 ve_max_idea_slot_bar_value = {
-	value = var:ve_max_idea_slot_bar
+	#value = var:ve_max_idea_slot_bar
 	every_country = {
 		limit = {
-			is_ai = no
+			gdp = root
 		}
 		add = var:ve_max_idea_slot_bar
 	}
@@ -32,10 +23,10 @@ ve_max_idea_slot_bar_value = {
 
 ve_max_idea_slot_bar_value_max = 8
 national_idea_pool_value = {
-	value = var:national_idea_pool
+	#value = var:national_idea_pool
 	every_country = {
 		limit = {
-			is_ai = no
+			gdp = root
 		}
 		add = var:national_idea_pool
 	}
@@ -45,10 +36,10 @@ national_idea_pool_value = {
 national_idea_pool_value_max = 21
 #IDEA BARS
 idea_1_bar_point_value = {
-	value = var:idea_1_bar_point
+	#value = var:idea_1_bar_point
 	every_country = {
 		limit = {
-			is_ai = no
+			gdp = root
 		}
 		add = var:idea_1_bar_point
 	}
@@ -57,10 +48,10 @@ idea_1_bar_point_value = {
 
 idea_1_bar_point_value_max = 70
 idea_2_bar_point_value = {
-	value = var:idea_2_bar_point
+	# value = var:idea_2_bar_point
 	every_country = {
 		limit = {
-			is_ai = no
+			gdp = root
 		}
 		add = var:idea_2_bar_point
 	}
@@ -69,10 +60,10 @@ idea_2_bar_point_value = {
 
 idea_2_bar_point_value_max = 70
 idea_3_bar_point_value = {
-	value = var:idea_3_bar_point
+	#value = var:idea_3_bar_point
 	every_country = {
 		limit = {
-			is_ai = no
+			gdp = root
 		}
 		add = var:idea_3_bar_point
 	}
@@ -81,10 +72,10 @@ idea_3_bar_point_value = {
 
 idea_3_bar_point_value_max = 70
 idea_4_bar_point_value = {
-	value = var:idea_4_bar_point
+	#value = var:idea_4_bar_point
 	every_country = {
 		limit = {
-			is_ai = no
+			gdp = root
 		}
 		add = var:idea_4_bar_point
 	}
@@ -93,10 +84,10 @@ idea_4_bar_point_value = {
 
 idea_4_bar_point_value_max = 70
 idea_5_bar_point_value = {
-	value = var:idea_5_bar_point
+	#value = var:idea_5_bar_point
 	every_country = {
 		limit = {
-			is_ai = no
+			gdp = root
 		}
 		add = var:idea_5_bar_point
 	}
@@ -105,10 +96,10 @@ idea_5_bar_point_value = {
 
 idea_5_bar_point_value_max = 70
 idea_6_bar_point_value = {
-	value = var:idea_6_bar_point
+	#value = var:idea_6_bar_point
 	every_country = {
 		limit = {
-			is_ai = no
+			gdp = root
 		}
 		add = var:idea_6_bar_point
 	}
@@ -117,10 +108,10 @@ idea_6_bar_point_value = {
 
 idea_6_bar_point_value_max = 70
 idea_7_bar_point_value = {
-	value = var:idea_7_bar_point
+	#value = var:idea_7_bar_point
 	every_country = {
 		limit = {
-			is_ai = no
+			gdp = root
 		}
 		add = var:idea_7_bar_point
 	}
@@ -129,10 +120,10 @@ idea_7_bar_point_value = {
 
 idea_7_bar_point_value_max = 70
 idea_8_bar_point_value = {
-	value = var:idea_8_bar_point
+	#value = var:idea_8_bar_point
 	every_country = {
 		limit = {
-			is_ai = no
+			gdp = root
 		}
 		add = var:idea_8_bar_point
 	}
@@ -141,10 +132,10 @@ idea_8_bar_point_value = {
 
 idea_8_bar_point_value_max = 70
 idea_9_bar_point_value = {
-	value = var:idea_9_bar_point
+	#value = var:idea_9_bar_point
 	every_country = {
 		limit = {
-			is_ai = no
+			gdp = root
 		}
 		add = var:idea_9_bar_point
 	}
@@ -153,10 +144,10 @@ idea_9_bar_point_value = {
 
 idea_9_bar_point_value_max = 70
 idea_10_bar_point_value = {
-	value = var:idea_10_bar_point
+	#value = var:idea_10_bar_point
 	every_country = {
 		limit = {
-			is_ai = no
+			gdp = root
 		}
 		add = var:idea_10_bar_point
 	}
@@ -165,10 +156,10 @@ idea_10_bar_point_value = {
 
 idea_10_bar_point_value_max = 70
 idea_11_bar_point_value = {
-	value = var:idea_11_bar_point
+	#value = var:idea_11_bar_point
 	every_country = {
 		limit = {
-			is_ai = no
+			gdp = root
 		}
 		add = var:idea_11_bar_point
 	}
@@ -177,10 +168,10 @@ idea_11_bar_point_value = {
 
 idea_11_bar_point_value_max = 70
 idea_12_bar_point_value = {
-	value = var:idea_12_bar_point
+	#value = var:idea_12_bar_point
 	every_country = {
 		limit = {
-			is_ai = no
+			gdp = root
 		}
 		add = var:idea_12_bar_point
 	}
@@ -190,10 +181,10 @@ idea_12_bar_point_value = {
 idea_12_bar_point_value_max = 70
 #Religion
 religion_piety_bar_point_value = {
-	value = var:piety_bar_point
+	# value = var:piety_bar_point
 	every_country = {
 		limit = {
-			is_ai = no
+			gdp = root
 		}
 		add = var:piety_bar_point
 	}
@@ -202,10 +193,10 @@ religion_piety_bar_point_value = {
 
 piety_bar_point_value_max = 200
 religion_missionary_value = {
-	value = var:avaible_missionaries
+	# value = var:avaible_missionaries
 	every_country = {
 		limit = {
-			is_ai = no
+			gdp = root
 		}
 		add = var:avaible_missionaries
 	}
@@ -213,30 +204,30 @@ religion_missionary_value = {
 
 #Culture
 culture_reform_progress_bar_value = {
-	value = var:culture_reform_value
+	# value = var:culture_reform_value
 	every_country = {
 		limit = {
-			is_ai = no
+			gdp = root
 		}
 		add = var:culture_reform_value
 	}
 }
 
 culture_missionary_value = {
-	value = var:avaible_culture_missionaries
+	# value = var:avaible_culture_missionaries
 	every_country = {
 		limit = {
-			is_ai = no
+			gdp = root
 		}
 		add = var:avaible_culture_missionaries
 	}
 }
 
 culture_reform_point_value = {
-	value = var:culture_reform_point
+	# value = var:culture_reform_point
 	every_country = {
 		limit = {
-			is_ai = no
+			gdp = root
 		}
 		add = var:culture_reform_point
 	}
@@ -245,11 +236,10 @@ culture_reform_point_value = {
 
 culture_reform_point_value_max = 1000
 #Age
-ve_splendor_value = {
-	value = var:ve_splender_points
+splendor_points = {
 	every_country = {
 		limit = {
-			is_ai = no
+			gdp = root
 		}
 		add = var:ve_splender_points
 	}

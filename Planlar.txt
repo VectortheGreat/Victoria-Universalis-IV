@@ -1,0 +1,436 @@
+#Dinler
+{
+	-Katolik-
+	Pasif:
+	-state_loyalists_from_sol_change_accepted_religion_mult
+	-Misyoner gücü
+	Aspect:
+	1-country_tax_income_add
+	2-country_prestige_mult
+	3-country_loan_interest_rate_mult ve state_capitalists_investment_pool_contribution_mult
+	4-unit_army_offense_add ve unit_army_offense_mult
+	5-country_influence_mult ve country_max_declared_interests_add
+	6-country_trade_route_cost_mult ve country_trade_route_quantity_mult
+	7-state_conscription_rate_mult
+	8-hristiyanlar daha loyal
+	Holy Sites:
+	1-Roma
+	2-Cologne
+	3-Santiago
+	4-Canterbury
+	5-Jerusalem
+
+	-Protestan-
+	Pasif:
+	-country_tax_income_add
+	-country_improve_relations_speed_mult
+	Aspect:
+	1-unit_morale_damage_mult ve unit_morale_protection_mult
+	2-state_migration_pull_mult ve state_mortality_wealth_mult
+	3-country_bureaucracy_mult
+	4-state_colony_growth_creation_mult ve state_colony_growth_speed_mult
+	5-country_trade_route_exports_add ve country_trade_route_imports_add
+	6-state_education_access_add ve 
+	7-country_institution_size_change_speed_mult
+	8-Yıllık Gelirinin %25 Altını elde et
+	Holy Sites:
+	1-Wittenberg
+	2-Cologne
+	3-Prag
+	4-Canterbury
+	5-Jerusalem
+
+	-Ortodoks-
+	Pasif:
+	-state_loyalists_from_sol_change_accepted_religion_mult
+	-country_authority_mult
+	Aspect:
+	1-country_construction_add ve state_infrastructure_add
+	2-political_movement_radicalism_mult ve state_birth_rate_mult
+	3-technology_invention_cost_mult
+	4-unit_army_offense_mult ve state_conscription_rate_mult
+	5-country_infamy_decay_mult ve country_improve_relations_speed_mult
+	6-unit_devastation_mult ve state_turmoil_effects_mult
+	7-Misyoner Gücü ve interest_group_ig_devout_approval_add
+	8-Başkentte rastgele bir binaya üretim bonusu
+	Holy Sites:
+	1-Constantinople
+	2-Alexandria
+	3-Antioch
+	4-Roma
+	5-Jerusalem
+
+	-Coptic-
+	Pasif:
+	-state_loyalists_from_sol_change_accepted_religion_mult
+	-battle_defense_owned_province_mult
+	Aspect:
+	1-country_bureaucracy_investment_cost_factor_mult
+	2-state_conscription_rate_mult ve unit_morale_protection_mult
+	3-unit_army_offense_add ve unit_army_defense_add
+	4-Misyoner Gücü ve interest_group_ig_devout_approval_add
+	5-country_authority_add
+	6-country_tax_income_add
+	7-country_revolution_secession_speed_mult
+	8-state_conversion_mult ve state_assimilation_mult
+	Holy Sites:
+	1-Yerevan
+	2-Alexandria
+	3-Antioch
+	4-Roma
+	5-Aksum
+
+	-Sunni-
+	Pasif:
+	-country_trade_route_cost_mult
+	-country_legitimacy_headofstate_add
+	Aspect:
+	1-country_society_tech_cost_mult
+	2-state_conscription_rate_mult ve unit_morale_recovery_mult
+	3-country_infamy_generation_mult
+	4-country_army_power_projection_mult
+	5-state_education_access_add ve üniversite çıkışlarına bonus
+	6-country_bureaucracy_mult ve country_law_enactment_time_mult
+	7-country_government_wages_mult ve state_tax_capacity_mult
+	8-Kafir Topraklardan %40'lık gelirini al
+	Holy Sites
+	1-Constantinople
+	2-Jerusalem
+	3-Medina
+	4-Baghdad
+	5-Damascus
+
+	-Shia-
+	Pasif:
+	-unit_morale_damage_mult
+	-country_legitimacy_headofstate_add
+	Aspect:
+	1-country_military_tech_cost_mult
+	2-unit_morale_protection_mult ve unit_supply_consumption_mult
+	3-Misyoner Gücü ve interest_group_ig_devout_approval_add
+	4-country_diplomatic_play_maneuvers_add ve country_radicals_from_conquest_mult
+	5-country_trade_route_cost_mult
+	6-country_war_exhaustion_casualties_mult ve unit_defense_developed_add
+	7-country_bureaucracy_mult ve country_law_enactment_time_mult
+	8-Sınırındaki devlete karşı claim al. En yüksek rank da 3 claim al
+	Holy Sites
+	1-Jerusalem
+	2-Nadjaf
+	3-Damascus
+	4-Medina
+	5-Baghdad
+
+	-Jewish-
+	Pasif:
+	-
+	-
+	Aspect:
+	1-
+	2-
+	3-
+	4-
+	5-
+	6-
+	7-
+	8-
+	Holy Sites
+	1-
+	2-
+	3-
+	4-
+	5-
+
+	-Mahayana-
+	Pasif:
+	-
+	-
+	Aspect:
+	1-
+	2-
+	3-
+	4-
+	5-
+	6-
+	7-
+	8-
+	Holy Sites
+	1-
+	2-
+	3-
+	4-
+	5-
+
+	Pasif:
+	-
+	-
+	Aspect:
+	1-
+	2-
+	3-
+	4-
+	5-
+	6-
+	7-
+	8-
+	Holy Sites
+	1-
+	2-
+	3-
+	4-
+	5-
+
+	-Hindu-
+	Pasif:
+	-
+	-
+	Aspect:
+	1-
+	2-
+	3-
+	4-
+	5-
+	6-
+	7-
+	8-
+	Holy Sites
+	1-
+	2-
+	3-
+	4-
+	5-
+
+	-Sikh-
+	Pasif:
+	-
+	-
+	Aspect:
+	1-
+	2-
+	3-
+	4-
+	5-
+	6-
+	7-
+	8-
+	Holy Sites
+	1-
+	2-
+	3-
+	4-
+	5-
+
+	-Animist-
+	Pasif:
+	-
+	-
+	Aspect:
+	1-
+	2-
+	3-
+	4-
+	5-
+	6-
+	7-
+	8-
+	Holy Sites
+	1-
+	2-
+	3-
+	4-
+	5-
+}
+
+#Kültür Reformları
+{
+	National Supremacy:
+	1-
+	2-
+	3-
+	4-
+	5-
+	6-
+	7-
+
+	Intellectual Nation
+	1-
+	2-
+	3-
+	4-
+	5-
+	6-
+	7-
+}
+
+#Çağ Bonusları
+{
+	1-Victorian Age
+	Bonuslar:
+	1-
+	2-
+	3-
+	4-
+	5-
+	6-
+	7-
+	8-
+	9-
+	10-
+	11-
+	Görevler:
+	1-
+	2-
+	3-
+	4-
+	5-
+	6-
+	7-
+
+	2-Emperyalizm Çağı
+	Bonuslar:
+	1-
+	2-
+	3-
+	4-
+	5-
+	6-
+	7-
+	8-
+	9-
+	10-
+	11-
+	Görevler:
+	1-
+	2-
+	3-
+	4-
+	5-
+	6-
+	7-
+
+	3-İmparatorlukların Yıkılışı Çağı
+	Bonuslar:
+	1-
+	2-
+	3-
+	4-
+	5-
+	6-
+	7-
+	8-
+	9-
+	10-
+	11-
+	Görevler:
+	1-
+	2-
+	3-
+	4-
+	5-
+	6-
+	7-
+}
+
+#Grup İdealar
+{
+	İdea 1:
+	1-
+	2-
+	3-
+	4-
+	5-
+	6-
+	7-
+	İdea 2:
+	1-
+	2-
+	3-
+	4-
+	5-
+	6-
+	7-
+	İdea 3:
+	1-
+	2-
+	3-
+	4-
+	5-
+	6-
+	7-
+	İdea 4:
+	1-
+	2-
+	3-
+	4-
+	5-
+	6-
+	7-
+	İdea 5:
+	1-
+	2-
+	3-
+	4-
+	5-
+	6-
+	7-
+	İdea 6:
+	1-
+	2-
+	3-
+	4-
+	5-
+	6-
+	7-
+	İdea 7:
+	2-
+	3-
+	4-
+	1-
+	5-
+	6-
+	7-
+	İdea 8:
+	1-
+	2-
+	3-
+	4-
+	5-
+	6-
+	7-
+	İdea 9:
+	1-
+	2-
+	3-
+	4-
+	5-
+	6-
+	7-
+	İdea 10:
+	1-
+	2-
+	3-
+	4-
+	5-
+	6-
+	7-
+	İdea 11:
+	1-
+	2-
+	3-
+	4-
+	5-
+	6-
+	7-
+	İdea 12:
+	1-
+	2-
+	3-
+	4-
+	5-
+	6-
+	7-
+}
+
+#Ulusal İdealar
+{
+	
+}

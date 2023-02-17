@@ -46,4 +46,4 @@
  ve_obj_desc:0 "Objective Description"
  ve_obj_header:0 "Age Objectives"
  ve_gecici_27:0 " National Ideas"
- ve_max_idea_text:0 "[FixedPointToFloat(GuiScope .ScriptValue('ve_max_idea_slot_bar_value'))] / 8"
+ ve_max_idea_text:0 "[GuiScope.SetRoot(MakeScopeValue(GetPlayer.GetGDP)).ScriptValue('ve_max_idea_slot_bar_value')] / 8"

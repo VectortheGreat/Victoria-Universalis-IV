@@ -183,6 +183,8 @@ types ve_gui_panel_types
 			onclick = "[GetVariableSystem.Clear('ve_tab_var')]"
 		}
 
+		
+
 		blockoverride "close_button_onclick" {
 			onclick = "[GetVariableSystem.Clear('ve_tab_var')]"
 		}

@@ -14,147 +14,180 @@ dev.1 = {
 	option = {
 		name = dev.1.a
 		default_option = yes
-		every_scope_state = {
+		if = {
 			limit = {
-				region = sr:region_anatolia
+				NOT = {
+					has_variable = idea_point_pool
+				}
 			}
-			create_building = {
-				building = building_university
-				level = 5
+			set_variable = {
+				name = idea_point_pool
+				value = 0
 			}
+		}
+		if = {
+			limit = {
+				var:idea_point_pool < 999
+			}
+			change_variable = {
+				name = idea_point_pool
+				add = 300
+			}
+		}
+		change_variable = {
+			name = idea_point_pool
+			add = 9999
 		}
 	}
 	option = {
 		name = deb.1.b
-		ig:ig_intelligentsia = {
-			add_ideology = ideology_liberal
+		if = {
+			limit = {
+				NOT = {
+					has_variable = idea_point_pool
+				}
+			}
+			set_variable = {
+				name = idea_point_pool
+				value = 0
+			}
+		}
+		if = {
+			limit = {
+				var:idea_point_pool > 0
+			}
+			change_variable = {
+				name = idea_point_pool
+				subtract = 300
+			}
 		}
 	}
 	option = {
 		name = deb.1.c
-		change_variable = {
-			name = otto_egypt_crisis
-			add = 50
+		if = {
+			limit = {
+				NOT = {
+					has_variable = piety_bar_point
+				}
+			}
+			set_variable = {
+				name = piety_bar_point
+				value = 0
+			}
+		}
+		if = {
+			limit = {
+				var:piety_bar_point < 200
+			}
+			change_variable = {
+				name = piety_bar_point
+				add = 100
+			}
+		}
+	}
+	option = {
+		name = deb.1.d
+		if = {
+			limit = {
+				NOT = {
+					has_variable = piety_bar_point
+				}
+			}
+			set_variable = {
+				name = piety_bar_point
+				value = 0
+			}
+		}
+		if = {
+			limit = {
+				var:piety_bar_point > 0
+			}
+			change_variable = {
+				name = piety_bar_point
+				subtract = 100
+			}
+		}
+	}
+	option = {
+		name = deb.1.e
+		if = {
+			limit = {
+				NOT = {
+					has_variable = culture_reform_point
+				}
+			}
+			set_variable = {
+				name = culture_reform_point
+				value = 0
+			}
+		}
+		if = {
+			limit = {
+				var:culture_reform_point < 1000
+			}
+			change_variable = {
+				name = culture_reform_point
+				add = 750
+			}
 		}
 	}
 	option = {
 		name = deb.1.f
-		random_state = {
+		if = {
 			limit = {
-				owner = c:TUR
-			}
-			every_scope_pop = {
-				set_pop_literacy = {
-					literacy_rate = 1
+				NOT = {
+					has_variable = culture_reform_point
 				}
+			}
+			set_variable = {
+				name = culture_reform_point
+				value = 0
 			}
 		}
-		random_state = {
+		if = {
 			limit = {
-				owner = c:TUR
+				var:culture_reform_point > 0
 			}
-			every_scope_pop = {
-				set_pop_literacy = {
-					literacy_rate = 1
-				}
-			}
-		}
-		random_state = {
-			limit = {
-				owner = c:TUR
-			}
-			every_scope_pop = {
-				set_pop_literacy = {
-					literacy_rate = 1
-				}
-			}
-		}
-		random_state = {
-			limit = {
-				owner = c:TUR
-			}
-			every_scope_pop = {
-				set_pop_literacy = {
-					literacy_rate = 1
-				}
+			change_variable = {
+				name = culture_reform_point
+				subtract = 750
 			}
 		}
 	}
 	option = {
 		name = deb.1.g
-		add_technology_researched = pan-nationalism
+		if = {
+			limit = {
+				NOT = {
+					has_variable = ve_splender_points
+				}
+			}
+			set_variable = {
+				name = ve_splender_points
+				value = 0
+			}
+		}
+		change_variable = {
+			name = ve_splender_points
+			add = 800
+		}
 	}
 	option = {
 		name = deb.1.h
-		c:TUR = {
-			end_truce = {
-				tcountry = c:EGY
-			}
-		}
-		create_diplomatic_pact = {
-			country = c:PER
-			type = puppet
-		}
-	}
-	option = {
-		name = deb.1.i
-		add_technology_researched = line_infantry
-		add_technology_researched = napoleonic_warfare
-		add_technology_researched = army_reserves
-		add_technology_researched = general_staff
-		add_technology_researched = shell_gun
-		add_technology_researched = breech_loading_artillery
-		add_technology_researched = percussion_cap
-		add_technology_researched = rifling
-	}
-	option = {
-		name = deb.1.j
-		add_primary_culture = cu:azerbaijani
-		add_primary_culture = cu:armenian
-		add_primary_culture = cu:greek
-		add_primary_culture = cu:serbian
-		add_primary_culture = cu:albanian
-		add_primary_culture = cu:romanian
-	}
-	option = {
-		name = deb.1.k
-		ig:ig_armed_forces = {
-			remove_ideology = ideology_royalist
-			leader = {
-				remove_ideology = ideology_royalist
-			}
-		}
-	}
-	option = {
-		name = deb.1.l
-		change_infamy = -100
-	}
-	option = {
-		name = deb.1.l
-		add_journal_entry = {
-			type = je_sick_man_syria
-		}
-	}
-	option = {
-		name = deb.1.m
-		s:STATE_ERZURUM.region_state:TUR = {
-			every_scope_pop = {
-				change_pop_culture = {
-					value = 0.1
-					target = cu:turkish
+		if = {
+			limit = {
+				NOT = {
+					has_variable = ve_splender_points
 				}
 			}
-		}
-	}
-	option = {
-		name = deb.1.n
-		s:STATE_ERZURUM.region_state:TUR = {
-			every_scope_pop = {
-				change_pop_culture = {
-					value = 0.4
-					target = cu:armenian
-				}
+			set_variable = {
+				name = ve_splender_points
+				value = 0
 			}
+		}
+		change_variable = {
+			name = ve_splender_points
+			subtract = 800
 		}
 	}
 }
@@ -170,7 +203,6 @@ dev.2 = {
 	title = dev.1.t
 	desc = dev.1.d
 	flavor = dev.1.f
-	placement = scope:diyarbakir_scope
 	duration = 0
 	trigger = {
 		has_variable = ec_incorporated_population
@@ -186,43 +218,92 @@ dev.2 = {
 		}
 	}
 	option = {
-		name = dev.1.b
+		name = dev.2.b
 		set_variable = {
-			name = ve_triggered_objectives
+			name = ve_max_idea_slot_bar
 			value = 0
 		}
 	}
 	option = {
 		name = dev.1.c
-		set_variable = {
-			name = ec_incorporated_population
-			value = 0
+		change_tag = scope:ve_random_ai
+	}
+	option = {
+		name = dev.1.d
+		random_country = {
+			limit = {
+				is_ai = yes
+			}
+			save_scope_as = ve_random_ai
 		}
-		capital = {
-			save_scope_as = this_state
-			root = {
-				change_variable = {
-					name = ec_incorporated_population
-					add = scope:this_state.state_population
-				}
+	}
+}
+
+dev.3 = {
+	type = country_event
+	event_image = {
+		video = "gfx/event_pictures/middleeast_oil_derricks.bk2"
+	}
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/unspecific/world_fair"
+	icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+	title = dev.1.t
+	desc = dev.1.d
+	flavor = dev.1.f
+	duration = 0
+	cooldown = {
+		months = 1
+	}
+	trigger = {
+		any_country = {
+			is_ai = yes
+		}
+	}
+	immediate = {
+		every_country = {
+			trigger_event = {
+				id = dev.4
 			}
 		}
 	}
 	option = {
-		name = dev.1.d
-		random_scope_state = {
-			limit = {
-				owner = c:TUR
-			}
-			every_scope_pop = {
-				limit = {
-					culture = cu:turkish
-				}
-				change_pop_culture = {
-					value = 1
-					target = cu:greek
-				}
-			}
+		name = dev.2.a
+		default_option = yes
+	}
+}
+
+dev.4 = {
+	type = country_event
+	event_image = {
+		video = "gfx/event_pictures/middleeast_oil_derricks.bk2"
+	}
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/unspecific/world_fair"
+	icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+	title = dev.4.t
+	desc = dev.4.d
+	flavor = dev.4.f
+	duration = 0
+	immediate = {
+		change_variable = {
+			name = ve_splender_points
+			add = 20
 		}
+		change_variable = {
+			name = idea_point_pool
+			add = 2
+		}
+		change_variable = {
+			name = piety_bar_point
+			add = 4
+		}
+		change_variable = {
+			name = culture_reform_point
+			add = 8
+		}
+	}
+	option = {
+		name = dev.4.a
+		default_option = yes
 	}
 }

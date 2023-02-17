@@ -36,7 +36,8 @@ ve_gui_panel_types
 									autoresize = yes
 								}
 								textbox = {
-									text = "[FixedPointToFloat(GuiScope .ScriptValue('ve_idea_pool_value'))]"
+									# text = "[FixedPointToFloat(GuiScope .ScriptValue('ve_idea_pool_value'))]"
+									text = "[GuiScope.SetRoot(MakeScopeValue(GetPlayer.GetGDP)).ScriptValue('ve_idea_pool_value')]"
 									default_format = "#positive_value"
 									using = fontsize_xxl
 									autoresize = yes
@@ -50,8 +51,10 @@ ve_gui_panel_types
 									blockoverride
 									"values"
 									{
-										max = "[FixedPointToFloat(GuiScope .ScriptValue('idea_point_pool_value_max'))]"
-										value = "[FixedPointToFloat(GuiScope .ScriptValue('ve_idea_pool_value'))]"
+										# max = "[FixedPointToFloat(GuiScope .ScriptValue('idea_point_pool_value_max'))]"
+										max = "[GuiScope.SetRoot(MakeScopeValue(GetPlayer.GetGDP)).ScriptValue('idea_point_pool_value_max')]"
+										# value = "[FixedPointToFloat(GuiScope .ScriptValue('ve_idea_pool_value'))]"
+										value = "[GuiScope.SetRoot(MakeScopeValue(GetPlayer.GetGDP)).ScriptValue('ve_idea_pool_value')]"
 									}
 								}
 							}
@@ -68,8 +71,10 @@ ve_gui_panel_types
 									blockoverride
 									"values"
 									{
-										max = "[FixedPointToFloat(GuiScope .ScriptValue('ve_max_idea_slot_bar_value_max'))]"
-										value = "[FixedPointToFloat(GuiScope .ScriptValue('ve_max_idea_slot_bar_value'))]"
+										# max = "[FixedPointToFloat(GuiScope .ScriptValue('ve_max_idea_slot_bar_value_max'))]"
+										max = "[GuiScope.SetRoot(MakeScopeValue(GetPlayer.GetGDP)).ScriptValue('ve_max_idea_slot_bar_value_max')]"
+										# value = "[FixedPointToFloat(GuiScope .ScriptValue('ve_max_idea_slot_bar_value'))]"
+										value = "[GuiScope.SetRoot(MakeScopeValue(GetPlayer.GetGDP)).ScriptValue('ve_max_idea_slot_bar_value')]"
 									}
 								}
 
@@ -287,8 +292,10 @@ ve_gui_panel_types
 									blockoverride
 									"values"
 									{
-										max = "[FixedPointToFloat(GuiScope .ScriptValue('national_idea_pool_value_max'))]"
-										value = "[FixedPointToFloat(GuiScope .ScriptValue('national_idea_pool_value'))]"
+										# max = "[FixedPointToFloat(GuiScope .ScriptValue('national_idea_pool_value_max'))]"
+										# value = "[FixedPointToFloat(GuiScope .ScriptValue('national_idea_pool_value'))]"
+										max = "[GuiScope.SetRoot(MakeScopeValue(GetPlayer.GetGDP)).ScriptValue('national_idea_pool_value_max')]"
+										value = "[GuiScope.SetRoot(MakeScopeValue(GetPlayer.GetGDP)).ScriptValue('national_idea_pool_value')]"
 									}
 								}
 							}
@@ -757,8 +764,10 @@ ve_gui_panel_types
 							blockoverride
 							"values"
 							{
-								max = "[FixedPointToFloat(GuiScope .ScriptValue('idea_1_bar_point_value_max'))]"
-								value = "[FixedPointToFloat(GuiScope .ScriptValue('idea_1_bar_point_value'))]"
+								# max = "[FixedPointToFloat(GuiScope .ScriptValue('idea_1_bar_point_value_max'))]"
+								# value = "[FixedPointToFloat(GuiScope .ScriptValue('idea_1_bar_point_value'))]"
+								max = "[GuiScope.SetRoot(MakeScopeValue(GetPlayer.GetGDP)).ScriptValue('idea_1_bar_point_value_max')]"
+								value = "[GuiScope.SetRoot(MakeScopeValue(GetPlayer.GetGDP)).ScriptValue('idea_1_bar_point_value')]"
 							}
 							visible = "[GetScriptedGui('ve_idea_1_but_7').IsShown( GuiScope.End )]"
 						}
@@ -1054,8 +1063,10 @@ ve_gui_panel_types
 							blockoverride
 							"values"
 							{
-								max = "[FixedPointToFloat(GuiScope .ScriptValue('idea_2_bar_point_value_max'))]"
-								value = "[FixedPointToFloat(GuiScope .ScriptValue('idea_2_bar_point_value'))]"
+								# max = "[FixedPointToFloat(GuiScope .ScriptValue('idea_2_bar_point_value_max'))]"
+								# value = "[FixedPointToFloat(GuiScope .ScriptValue('idea_2_bar_point_value'))]"
+								max = "[GuiScope.SetRoot(MakeScopeValue(GetPlayer.GetGDP)).ScriptValue('idea_2_bar_point_value_max')]"
+								value = "[GuiScope.SetRoot(MakeScopeValue(GetPlayer.GetGDP)).ScriptValue('idea_2_bar_point_value')]"
 							}
 							visible = "[GetScriptedGui('ve_idea_2_but_7').IsShown( GuiScope.End )]"
 						}
@@ -1351,8 +1362,10 @@ ve_gui_panel_types
 							blockoverride
 							"values"
 							{
-								max = "[FixedPointToFloat(GuiScope .ScriptValue('idea_3_bar_point_value_max'))]"
-								value = "[FixedPointToFloat(GuiScope .ScriptValue('idea_3_bar_point_value'))]"
+								# max = "[FixedPointToFloat(GuiScope .ScriptValue('idea_3_bar_point_value_max'))]"
+								# value = "[FixedPointToFloat(GuiScope .ScriptValue('idea_3_bar_point_value'))]"
+								max = "[GuiScope.SetRoot(MakeScopeValue(GetPlayer.GetGDP)).ScriptValue('idea_3_bar_point_value_max')]"
+								value = "[GuiScope.SetRoot(MakeScopeValue(GetPlayer.GetGDP)).ScriptValue('idea_3_bar_point_value')]"
 							}
 							visible = "[GetScriptedGui('ve_idea_3_but_7').IsShown( GuiScope.End )]"
 						}
@@ -1660,8 +1673,10 @@ ve_gui_panel_types
 							blockoverride
 							"values"
 							{
-								max = "[FixedPointToFloat(GuiScope .ScriptValue('idea_4_bar_point_value_max'))]"
-								value = "[FixedPointToFloat(GuiScope .ScriptValue('idea_4_bar_point_value'))]"
+								# max = "[FixedPointToFloat(GuiScope .ScriptValue('idea_4_bar_point_value_max'))]"
+								# value = "[FixedPointToFloat(GuiScope .ScriptValue('idea_4_bar_point_value'))]"
+								max = "[GuiScope.SetRoot(MakeScopeValue(GetPlayer.GetGDP)).ScriptValue('idea_4_bar_point_value_max')]"
+								value = "[GuiScope.SetRoot(MakeScopeValue(GetPlayer.GetGDP)).ScriptValue('idea_4_bar_point_value')]"
 							}
 							visible = "[GetScriptedGui('ve_idea_4_but_7').IsShown( GuiScope.End )]"
 						}
@@ -1957,8 +1972,10 @@ ve_gui_panel_types
 							blockoverride
 							"values"
 							{
-								max = "[FixedPointToFloat(GuiScope .ScriptValue('idea_5_bar_point_value_max'))]"
-								value = "[FixedPointToFloat(GuiScope .ScriptValue('idea_5_bar_point_value'))]"
+								# max = "[FixedPointToFloat(GuiScope .ScriptValue('idea_5_bar_point_value_max'))]"
+								# value = "[FixedPointToFloat(GuiScope .ScriptValue('idea_5_bar_point_value'))]"
+								max = "[GuiScope.SetRoot(MakeScopeValue(GetPlayer.GetGDP)).ScriptValue('idea_5_bar_point_value_max')]"
+								value = "[GuiScope.SetRoot(MakeScopeValue(GetPlayer.GetGDP)).ScriptValue('idea_5_bar_point_value')]"
 							}
 							visible = "[GetScriptedGui('ve_idea_5_but_7').IsShown( GuiScope.End )]"
 						}
@@ -2254,8 +2271,10 @@ ve_gui_panel_types
 							blockoverride
 							"values"
 							{
-								max = "[FixedPointToFloat(GuiScope .ScriptValue('idea_6_bar_point_value_max'))]"
-								value = "[FixedPointToFloat(GuiScope .ScriptValue('idea_6_bar_point_value'))]"
+								# max = "[FixedPointToFloat(GuiScope .ScriptValue('idea_6_bar_point_value_max'))]"
+								# value = "[FixedPointToFloat(GuiScope .ScriptValue('idea_6_bar_point_value'))]"
+								max = "[GuiScope.SetRoot(MakeScopeValue(GetPlayer.GetGDP)).ScriptValue('idea_6_bar_point_value_max')]"
+								value = "[GuiScope.SetRoot(MakeScopeValue(GetPlayer.GetGDP)).ScriptValue('idea_6_bar_point_value')]"
 							}
 							visible = "[GetScriptedGui('ve_idea_6_but_7').IsShown( GuiScope.End )]"
 						}
@@ -2563,8 +2582,10 @@ ve_gui_panel_types
 							blockoverride
 							"values"
 							{
-								max = "[FixedPointToFloat(GuiScope .ScriptValue('idea_7_bar_point_value_max'))]"
-								value = "[FixedPointToFloat(GuiScope .ScriptValue('idea_7_bar_point_value'))]"
+								# max = "[FixedPointToFloat(GuiScope .ScriptValue('idea_7_bar_point_value_max'))]"
+								# value = "[FixedPointToFloat(GuiScope .ScriptValue('idea_7_bar_point_value'))]"
+								max = "[GuiScope.SetRoot(MakeScopeValue(GetPlayer.GetGDP)).ScriptValue('idea_7_bar_point_value_max')]"
+								value = "[GuiScope.SetRoot(MakeScopeValue(GetPlayer.GetGDP)).ScriptValue('idea_7_bar_point_value')]"
 							}
 							visible = "[GetScriptedGui('ve_idea_7_but_7').IsShown( GuiScope.End )]"
 						}
@@ -2860,8 +2881,10 @@ ve_gui_panel_types
 							blockoverride
 							"values"
 							{
-								max = "[FixedPointToFloat(GuiScope .ScriptValue('idea_8_bar_point_value_max'))]"
-								value = "[FixedPointToFloat(GuiScope .ScriptValue('idea_8_bar_point_value'))]"
+								# max = "[FixedPointToFloat(GuiScope .ScriptValue('idea_8_bar_point_value_max'))]"
+								# value = "[FixedPointToFloat(GuiScope .ScriptValue('idea_8_bar_point_value'))]"
+								max = "[GuiScope.SetRoot(MakeScopeValue(GetPlayer.GetGDP)).ScriptValue('idea_8_bar_point_value_max')]"
+								value = "[GuiScope.SetRoot(MakeScopeValue(GetPlayer.GetGDP)).ScriptValue('idea_8_bar_point_value')]"
 							}
 							visible = "[GetScriptedGui('ve_idea_8_but_7').IsShown( GuiScope.End )]"
 						}
@@ -3157,8 +3180,10 @@ ve_gui_panel_types
 							blockoverride
 							"values"
 							{
-								max = "[FixedPointToFloat(GuiScope .ScriptValue('idea_9_bar_point_value_max'))]"
-								value = "[FixedPointToFloat(GuiScope .ScriptValue('idea_9_bar_point_value'))]"
+								# max = "[FixedPointToFloat(GuiScope .ScriptValue('idea_9_bar_point_value_max'))]"
+								# value = "[FixedPointToFloat(GuiScope .ScriptValue('idea_9_bar_point_value'))]"
+								max = "[GuiScope.SetRoot(MakeScopeValue(GetPlayer.GetGDP)).ScriptValue('idea_9_bar_point_value_max')]"
+								value = "[GuiScope.SetRoot(MakeScopeValue(GetPlayer.GetGDP)).ScriptValue('idea_9_bar_point_value')]"
 							}
 							visible = "[GetScriptedGui('ve_idea_9_but_7').IsShown( GuiScope.End )]"
 						}
@@ -3466,8 +3491,10 @@ ve_gui_panel_types
 							blockoverride
 							"values"
 							{
-								max = "[FixedPointToFloat(GuiScope .ScriptValue('idea_10_bar_point_value_max'))]"
-								value = "[FixedPointToFloat(GuiScope .ScriptValue('idea_10_bar_point_value'))]"
+								# max = "[FixedPointToFloat(GuiScope .ScriptValue('idea_10_bar_point_value_max'))]"
+								# value = "[FixedPointToFloat(GuiScope .ScriptValue('idea_10_bar_point_value'))]"
+								max = "[GuiScope.SetRoot(MakeScopeValue(GetPlayer.GetGDP)).ScriptValue('idea_10_bar_point_value_max')]"
+								value = "[GuiScope.SetRoot(MakeScopeValue(GetPlayer.GetGDP)).ScriptValue('idea_10_bar_point_value')]"
 							}
 							visible = "[GetScriptedGui('ve_idea_10_but_7').IsShown( GuiScope.End )]"
 						}
@@ -3763,8 +3790,10 @@ ve_gui_panel_types
 							blockoverride
 							"values"
 							{
-								max = "[FixedPointToFloat(GuiScope .ScriptValue('idea_11_bar_point_value_max'))]"
-								value = "[FixedPointToFloat(GuiScope .ScriptValue('idea_11_bar_point_value'))]"
+								# max = "[FixedPointToFloat(GuiScope .ScriptValue('idea_11_bar_point_value_max'))]"
+								# value = "[FixedPointToFloat(GuiScope .ScriptValue('idea_11_bar_point_value'))]"
+								max = "[GuiScope.SetRoot(MakeScopeValue(GetPlayer.GetGDP)).ScriptValue('idea_11_bar_point_value_max')]"
+								value = "[GuiScope.SetRoot(MakeScopeValue(GetPlayer.GetGDP)).ScriptValue('idea_11_bar_point_value')]"
 							}
 							visible = "[GetScriptedGui('ve_idea_11_but_7').IsShown( GuiScope.End )]"
 						}
@@ -4060,8 +4089,10 @@ ve_gui_panel_types
 							blockoverride
 							"values"
 							{
-								max = "[FixedPointToFloat(GuiScope .ScriptValue('idea_12_bar_point_value_max'))]"
-								value = "[FixedPointToFloat(GuiScope .ScriptValue('idea_12_bar_point_value'))]"
+								# max = "[FixedPointToFloat(GuiScope .ScriptValue('idea_12_bar_point_value_max'))]"
+								# value = "[FixedPointToFloat(GuiScope .ScriptValue('idea_12_bar_point_value'))]"
+								max = "[GuiScope.SetRoot(MakeScopeValue(GetPlayer.GetGDP)).ScriptValue('idea_12_bar_point_value_max')]"
+								value = "[GuiScope.SetRoot(MakeScopeValue(GetPlayer.GetGDP)).ScriptValue('idea_12_bar_point_value')]"
 							}
 							visible = "[GetScriptedGui('ve_idea_12_but_7').IsShown( GuiScope.End )]"
 						}

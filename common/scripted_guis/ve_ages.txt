@@ -256,12 +256,12 @@ ve_age_bonus_1 = {
 	is_valid = {
 		any_country = {
 			is_ai = no
-			var:ve_splender_points >= 800
+			var:ve_splender_points >= 1
 			trigger_if = {
 				limit = {
 					has_variable = ve_age_1_started
 				}
-				always = no
+				always = yes
 			}
 			trigger_else_if = {
 				limit = {
@@ -284,7 +284,7 @@ ve_age_bonus_1 = {
 			}
 			change_variable = {
 				name = ve_splender_points
-				subtract = 800
+				subtract = 1
 			}
 			if = {
 				limit = {

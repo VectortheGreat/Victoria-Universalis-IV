@@ -67,7 +67,8 @@ types ve_gui_panel_types
 										autoresize = yes
 									}
 									textbox = {
-										text = "[FixedPointToFloat(GuiScope .ScriptValue('culture_missionary_value'))]"
+										# text = "[FixedPointToFloat(GuiScope .ScriptValue('culture_missionary_value'))]"
+										text = "[GuiScope.SetRoot(MakeScopeValue(GetPlayer.GetGDP)).ScriptValue('culture_missionary_value')]"
 										default_format = "#instruction"
 										using = fontsize_xxl
 										align = nobaseline
@@ -86,7 +87,8 @@ types ve_gui_panel_types
 										autoresize = yes
 									}
 									textbox = {
-										text = "[FixedPointToFloat(GuiScope .ScriptValue('culture_reform_point_value'))]"
+										# text = "[FixedPointToFloat(GuiScope .ScriptValue('culture_reform_point_value'))]"
+										text = "[GuiScope.SetRoot(MakeScopeValue(GetPlayer.GetGDP)).ScriptValue('culture_reform_point_value')]"
 										default_format = "#instruction"
 										using = fontsize_xxl
 										align = nobaseline
@@ -102,8 +104,10 @@ types ve_gui_panel_types
 										blockoverride
 										"values"
 										{
-											max = "[FixedPointToFloat(GuiScope .ScriptValue('culture_reform_point_value_max'))]"
-											value = "[FixedPointToFloat(GuiScope .ScriptValue('culture_reform_point_value'))]"
+											# max = "[FixedPointToFloat(GuiScope .ScriptValue('culture_reform_point_value_max'))]"
+											# value = "[FixedPointToFloat(GuiScope .ScriptValue('culture_reform_point_value'))]"
+											max = "[GuiScope.SetRoot(MakeScopeValue(GetPlayer.GetGDP)).ScriptValue('culture_reform_point_value_max')]"
+											value = "[GuiScope.SetRoot(MakeScopeValue(GetPlayer.GetGDP)).ScriptValue('culture_reform_point_value')]"
 										}
 									}
 								}
@@ -150,10 +154,12 @@ types ve_gui_panel_types
 									parentanchor = bottom
 									
 									blockoverride "value_left" {
-										value = "[FixedPointToFloat(GuiScope .ScriptValue('culture_reform_progress_bar_value'))]"
+										# value = "[FixedPointToFloat(GuiScope .ScriptValue('culture_reform_progress_bar_value'))]"
+										value = "[GuiScope.SetRoot(MakeScopeValue(GetPlayer.GetGDP)).ScriptValue('culture_reform_progress_bar_value')]"
 									}
 									blockoverride "value_right" {
-										value = "[FixedPointToFloat(GuiScope .ScriptValue('culture_reform_progress_bar_value'))]"
+										# value = "[FixedPointToFloat(GuiScope .ScriptValue('culture_reform_progress_bar_value'))]"
+										value = "[GuiScope.SetRoot(MakeScopeValue(GetPlayer.GetGDP)).ScriptValue('culture_reform_progress_bar_value')]"
 									}
 									blockoverride "negative_min_max_values" {
 										min = -7

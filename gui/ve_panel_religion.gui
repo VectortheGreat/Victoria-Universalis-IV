@@ -62,7 +62,8 @@ ve_gui_panel_types
 								autoresize = yes
 							}
 							textbox = {
-								text = "[FixedPointToFloat(GuiScope .ScriptValue('religion_missionary_value'))]"
+								# text = "[FixedPointToFloat(GuiScope .ScriptValue('religion_missionary_value'))]"
+								text = "[GuiScope.SetRoot(MakeScopeValue(GetPlayer.GetGDP)).ScriptValue('religion_missionary_value')]"
 								default_format = "#instruction"
 								using = fontsize_xxl
 								align = nobaseline
@@ -81,7 +82,8 @@ ve_gui_panel_types
 								autoresize = yes
 							}
 							textbox = {
-								text = "[FixedPointToFloat(GuiScope .ScriptValue('religion_piety_bar_point_value'))]"
+								# text = "[FixedPointToFloat(GuiScope .ScriptValue('religion_piety_bar_point_value'))]"
+								text = "[GuiScope.SetRoot(MakeScopeValue(GetPlayer.GetGDP)).ScriptValue('religion_piety_bar_point_value')]"
 								default_format = "#instruction"
 								using = fontsize_xxl
 								align = nobaseline
@@ -97,8 +99,10 @@ ve_gui_panel_types
 								blockoverride
 								"values"
 								{
-									max = "[FixedPointToFloat(GuiScope .ScriptValue('piety_bar_point_value_max'))]"
-									value = "[FixedPointToFloat(GuiScope .ScriptValue('religion_piety_bar_point_value'))]"
+									# max = "[FixedPointToFloat(GuiScope .ScriptValue('piety_bar_point_value_max'))]"
+									max = "[GuiScope.SetRoot(MakeScopeValue(GetPlayer.GetGDP)).ScriptValue('piety_bar_point_value_max')]"
+									# value = "[FixedPointToFloat(GuiScope .ScriptValue('religion_piety_bar_point_value'))]"
+									value = "[GuiScope.SetRoot(MakeScopeValue(GetPlayer.GetGDP)).ScriptValue('religion_piety_bar_point_value')]"
 								}
 							}
 						}
