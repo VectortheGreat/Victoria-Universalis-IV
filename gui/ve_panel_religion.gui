@@ -17,6 +17,8 @@ ve_gui_panel_types
 				}
 				hbox = {	#Top-Left
 					using = main_bg
+					layoutpolicy_horizontal = preferred
+					layoutpolicy_vertical = expanding
 					vbox = {
 						spacing = 10
 						margin = {
@@ -42,14 +44,14 @@ ve_gui_panel_types
 				hbox = {
 					#Religion Info
 					using = main_bg
-					layoutpolicy_horizontal = expanding
+					 layoutpolicy_horizontal = expanding
 					hbox = {
 						margin = {
 							0
-							41
+							20
 						}
 						spacing = 10
-						layoutpolicy_horizontal = expanding
+						 layoutpolicy_horizontal = expanding
 						vbox = {
 							spacing = 10
 							textbox = {
@@ -104,6 +106,39 @@ ve_gui_panel_types
 									# value = "[FixedPointToFloat(GuiScope .ScriptValue('religion_piety_bar_point_value'))]"
 									value = "[GuiScope.SetRoot(MakeScopeValue(GetPlayer.GetGDP)).ScriptValue('religion_piety_bar_point_value')]"
 								}
+							}
+						}
+						vbox = {
+							layoutpolicy_vertical = expanding
+							spacing = 20
+							margin = {
+								30
+								10
+							}
+							textbox = {
+								# text = "#v [GetPlayer.GetStateReligion.GetName]#!"
+								text = "ve_religion_passive_text"
+								default_format = "#tooltippable_name"
+								using = fontsize_xxl
+								align = nobaseline
+								elide = left
+								autoresize = yes
+							}
+							textbox = {
+								raw_text = "Bonus 1"
+								default_format = "#positive_value"
+								using = fontsize_xxl
+								align = nobaseline
+								elide = left
+								autoresize = yes
+							}
+							textbox = {
+								raw_text = "Bonus 2"
+								default_format = "#positive_value"
+								using = fontsize_xxl
+								align = nobaseline
+								elide = left
+								autoresize = yes
 							}
 						}
 					}
@@ -498,97 +533,6 @@ ve_gui_panel_types
 								autoresize = yes
 							}
 						}
-						vbox = {
-							#Aspect 9
-							spacing = 10
-							margin = {
-								15
-								15
-							}
-							button_icon_round_big_map_interaction = {
-								size = {
-									100
-									100
-								}
-								onclick = "[GetScriptedGui('ve_aspect_button_9').Execute(GuiScope.End)]"
-								enabled = "[GetScriptedGui('ve_aspect_button_9').IsValid( GuiScope.End )]"
-								textbox = {
-									text = "@[Concatenate(GetPlayer.GetStateReligion.GetNameNoFormatting , '_aspect_9')]!"
-									fontsize = 60
-									align = center|nobaseline
-									parentanchor = vcenter
-									visible = "[GetScriptedGui('ve_aspect_button_9').IsShown( GuiScope.End )]"
-									size = {
-										100%
-										100%
-									}
-								}
-								textbox = {
-									text = "@[Concatenate(GetPlayer.GetStateReligion.GetNameNoFormatting , '_aspect_9_black')]!"
-									fontsize = 60
-									align = center|nobaseline
-									parentanchor = vcenter
-									visible = "[Not(GetScriptedGui('ve_aspect_button_9').IsShown( GuiScope.End ))]"
-									size = {
-										100%
-										100%
-									}
-								}
-							}
-							textbox = {
-								raw_text = "Aspect IX"
-								using = fontsize_xxl
-								align = nobaseline
-								elide = left
-								autoresize = yes
-							}
-						}
-						vbox = {
-							#Aspect 10
-							spacing = 10
-							margin = {
-								15
-								15
-							}
-							button_icon_round_big_map_interaction = {
-								size = {
-									100
-									100
-								}
-								onclick = "[GetScriptedGui('ve_aspect_button_10').Execute(GuiScope.End)]"
-								enabled = "[GetScriptedGui('ve_aspect_button_10').IsValid( GuiScope.End )]"
-								textbox = {
-									text = "@[Concatenate(GetPlayer.GetStateReligion.GetNameNoFormatting , '_aspect_10')]!"
-									fontsize = 60
-									align = center|nobaseline
-									parentanchor = vcenter
-									visible = "[GetScriptedGui('ve_aspect_button_10').IsShown( GuiScope.End )]"
-									size = {
-										100%
-										100%
-									}
-								}
-								textbox = {
-									text = "@[Concatenate(GetPlayer.GetStateReligion.GetNameNoFormatting , '_aspect_10_black')]!"
-									fontsize = 60
-									align = center|nobaseline
-									parentanchor = vcenter
-									visible = "[Not(GetScriptedGui('ve_aspect_button_10').IsShown( GuiScope.End ))]"
-									size = {
-										100%
-										100%
-									}
-								}
-							}
-							textbox = {
-								raw_text = "Aspect X"
-								default_format = "#instruction"
-								using = fontsize_xxl
-								align = nobaseline
-								elide = left
-								autoresize = yes
-							}
-						}
 					}
 				}
 			}
@@ -655,7 +599,7 @@ ve_gui_panel_types
 							}
 							textbox = {
 								# text = "ve_gecici_17"
-								text = "[GetPlayer.GetStateReligion.GetNameNoFormatting]"
+								raw_text = "Roma"
 								using = fontsize_xxl
 								align = nobaseline
 								elide = left
@@ -697,7 +641,7 @@ ve_gui_panel_types
 								}
 							}
 							textbox = {
-								text = "ve_gecici_18"
+								raw_text = "Jerusalem"
 								using = fontsize_xxl
 								align = nobaseline
 								elide = left
@@ -739,7 +683,7 @@ ve_gui_panel_types
 								}
 							}
 							textbox = {
-								text = "ve_gecici_19"
+								raw_text = "Cologne"
 								using = fontsize_xxl
 								align = nobaseline
 								elide = left
@@ -781,7 +725,7 @@ ve_gui_panel_types
 								}
 							}
 							textbox = {
-								text = "ve_gecici_20"
+								raw_text = "Santiago"
 								using = fontsize_xxl
 								align = nobaseline
 								elide = left
@@ -823,7 +767,7 @@ ve_gui_panel_types
 								}
 							}
 							textbox = {
-								text = "ve_gecici_21"
+								raw_text = "Notre-Dame"
 								using = fontsize_xxl
 								align = nobaseline
 								elide = left

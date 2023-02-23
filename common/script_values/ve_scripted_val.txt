@@ -179,6 +179,41 @@ idea_12_bar_point_value = {
 }
 
 idea_12_bar_point_value_max = 70
+idea_13_bar_point_value = {
+	every_country = {
+		limit = {
+			gdp = root
+		}
+		add = var:idea_13_bar_point
+	}
+	max = idea_13_bar_point_value_max
+}
+
+idea_13_bar_point_value_max = 70
+idea_14_bar_point_value = {
+	#value = var:idea_12_bar_point
+	every_country = {
+		limit = {
+			gdp = root
+		}
+		add = var:idea_14_bar_point
+	}
+	max = idea_14_bar_point_value_max
+}
+
+idea_14_bar_point_value_max = 70
+idea_15_bar_point_value = {
+	#value = var:idea_12_bar_point
+	every_country = {
+		limit = {
+			gdp = root
+		}
+		add = var:idea_15_bar_point
+	}
+	max = idea_15_bar_point_value_max
+}
+
+idea_15_bar_point_value_max = 70
 #Religion
 religion_piety_bar_point_value = {
 	# value = var:piety_bar_point

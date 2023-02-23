@@ -6708,3 +6708,1680 @@ ve_idea_12_but_7 = {
 		}
 	}
 }
+
+#Idea 13
+ve_idea_13_embraced_idea = {
+	scope = country
+	is_valid = {
+		any_country = {
+			is_ai = no
+			NOT = {
+				has_variable = idea_13_embraced
+			}
+			OR = {
+				var:ve_max_idea_slot_bar < 8
+				NOT = {
+					has_variable = ve_max_idea_slot_bar
+				}
+			}
+		}
+	}
+	effect = {
+		every_country = {
+			limit = {
+				is_ai = no
+			}
+			if = {
+				limit = {
+					NOT = {
+						has_variable = idea_13_embraced
+					}
+				}
+				set_variable = idea_13_embraced
+			}
+			set_variable = {
+				name = idea_13_bar_point
+				value = 0
+			}
+			if = {
+				limit = {
+					NOT = {
+						has_variable = national_idea_pool
+					}
+				}
+				set_variable = {
+					name = national_idea_pool
+					value = 0
+				}
+			}
+			if = {
+				limit = {
+					NOT = {
+						has_variable = ve_max_idea_slot_bar
+					}
+				}
+				set_variable = {
+					name = ve_max_idea_slot_bar
+					value = 0
+				}
+			}
+			if = {
+				limit = {
+					var:ve_max_idea_slot_bar < 8
+				}
+				change_variable = {
+					name = ve_max_idea_slot_bar
+					add = 1
+				}
+			}
+		}
+	}
+}
+
+ve_idea_13_cancel_embrace_idea = {
+	scope = country
+	is_valid = {
+		any_country = {
+			is_ai = no
+			has_variable = idea_13_embraced
+		}
+	}
+	effect = {
+		every_country = {
+			limit = {
+				is_ai = no
+			}
+			if = {
+				limit = {
+					has_variable = idea_13_embraced
+				}
+				remove_variable = idea_13_embraced
+			}
+			set_variable = {
+				name = idea_13_bar_point
+				value = 0
+			}
+			if = {
+				limit = {
+					has_variable = idea_13_but_1_completed
+				}
+				remove_variable = idea_13_but_1_completed
+				change_variable = {
+					name = national_idea_pool
+					subtract = 1
+				}
+			}
+			if = {
+				limit = {
+					has_variable = idea_13_but_2_completed
+				}
+				remove_variable = idea_13_but_2_completed
+				change_variable = {
+					name = national_idea_pool
+					subtract = 1
+				}
+			}
+			if = {
+				limit = {
+					has_variable = idea_13_but_3_completed
+				}
+				remove_variable = idea_13_but_3_completed
+				change_variable = {
+					name = national_idea_pool
+					subtract = 1
+				}
+			}
+			if = {
+				limit = {
+					has_variable = idea_13_but_4_completed
+				}
+				remove_variable = idea_13_but_4_completed
+				change_variable = {
+					name = national_idea_pool
+					subtract = 1
+				}
+			}
+			if = {
+				limit = {
+					has_variable = idea_13_but_5_completed
+				}
+				remove_variable = idea_13_but_5_completed
+				change_variable = {
+					name = national_idea_pool
+					subtract = 1
+				}
+			}
+			if = {
+				limit = {
+					has_variable = idea_13_but_6_completed
+				}
+				remove_variable = idea_13_but_6_completed
+				change_variable = {
+					name = national_idea_pool
+					subtract = 1
+				}
+			}
+			if = {
+				limit = {
+					has_variable = idea_13_but_7_completed
+				}
+				remove_variable = idea_13_but_7_completed
+				change_variable = {
+					name = national_idea_pool
+					subtract = 1
+				}
+			}
+			if = {
+				limit = {
+					var:ve_max_idea_slot_bar > 0
+				}
+				change_variable = {
+					name = ve_max_idea_slot_bar
+					subtract = 1
+				}
+			}
+		}
+	}
+}
+
+ve_idea_13_but_1 = {
+	scope = country
+	is_shown = {
+		any_country = {
+			is_ai = no
+			NOT = {
+				has_variable = idea_13_but_1_completed
+			}
+		}
+	}
+	is_valid = {
+		any_country = {
+			is_ai = no
+			has_variable = idea_13_embraced
+			NOT = {
+				has_variable = idea_13_but_1_completed
+			}
+			var:idea_point_pool >= 300
+		}
+	}
+	effect = {
+		every_country = {
+			limit = {
+				is_ai = no
+			}
+			if = {
+				limit = {
+					NOT = {
+						has_variable = idea_13_but_1_completed
+					}
+				}
+				set_variable = idea_13_but_1_completed
+				change_variable = {
+					name = idea_13_bar_point
+					add = 10
+				}
+				change_variable = {
+					name = idea_point_pool
+					subtract = 300
+				}
+				if = {
+					limit = {
+						var:national_idea_pool < 21
+					}
+					change_variable = {
+						name = national_idea_pool
+						add = 1
+					}
+				}
+			}
+		}
+	}
+}
+
+ve_idea_13_but_2 = {
+	scope = country
+	is_shown = {
+		any_country = {
+			is_ai = no
+			NOT = {
+				has_variable = idea_13_but_2_completed
+			}
+		}
+	}
+	is_valid = {
+		any_country = {
+			is_ai = no
+			has_variable = idea_13_but_1_completed
+			has_variable = idea_13_embraced
+			var:idea_point_pool >= 300
+			NOT = {
+				has_variable = idea_13_but_2_completed
+			}
+		}
+	}
+	effect = {
+		every_country = {
+			limit = {
+				is_ai = no
+			}
+			if = {
+				limit = {
+					NOT = {
+						has_variable = idea_13_but_2_completed
+					}
+				}
+				set_variable = idea_13_but_2_completed
+				change_variable = {
+					name = idea_13_bar_point
+					add = 10
+				}
+				change_variable = {
+					name = idea_point_pool
+					subtract = 300
+				}
+				if = {
+					limit = {
+						var:national_idea_pool < 21
+					}
+					change_variable = {
+						name = national_idea_pool
+						add = 1
+					}
+				}
+			}
+		}
+	}
+}
+
+ve_idea_13_but_3 = {
+	scope = country
+	is_shown = {
+		any_country = {
+			is_ai = no
+			NOT = {
+				has_variable = idea_13_but_3_completed
+			}
+		}
+	}
+	is_valid = {
+		any_country = {
+			is_ai = no
+			has_variable = idea_13_but_2_completed
+			has_variable = idea_13_embraced
+			var:idea_point_pool >= 300
+			NOT = {
+				has_variable = idea_13_but_3_completed
+			}
+		}
+	}
+	effect = {
+		every_country = {
+			limit = {
+				is_ai = no
+			}
+			if = {
+				limit = {
+					NOT = {
+						has_variable = idea_13_but_3_completed
+					}
+				}
+				set_variable = idea_13_but_3_completed
+				change_variable = {
+					name = idea_13_bar_point
+					add = 10
+				}
+				change_variable = {
+					name = idea_point_pool
+					subtract = 300
+				}
+				if = {
+					limit = {
+						var:national_idea_pool < 21
+					}
+					change_variable = {
+						name = national_idea_pool
+						add = 1
+					}
+				}
+			}
+		}
+	}
+}
+
+ve_idea_13_but_4 = {
+	scope = country
+	is_shown = {
+		any_country = {
+			is_ai = no
+			NOT = {
+				has_variable = idea_13_but_4_completed
+			}
+		}
+	}
+	is_valid = {
+		any_country = {
+			is_ai = no
+			has_variable = idea_13_but_3_completed
+			has_variable = idea_13_embraced
+			var:idea_point_pool >= 300
+			NOT = {
+				has_variable = idea_13_but_4_completed
+			}
+		}
+	}
+	effect = {
+		every_country = {
+			limit = {
+				is_ai = no
+			}
+			if = {
+				limit = {
+					NOT = {
+						has_variable = idea_13_but_4_completed
+					}
+				}
+				set_variable = idea_13_but_4_completed
+				change_variable = {
+					name = idea_13_bar_point
+					add = 10
+				}
+				change_variable = {
+					name = idea_point_pool
+					subtract = 300
+				}
+				if = {
+					limit = {
+						var:national_idea_pool < 21
+					}
+					change_variable = {
+						name = national_idea_pool
+						add = 1
+					}
+				}
+			}
+		}
+	}
+}
+
+ve_idea_13_but_5 = {
+	scope = country
+	is_shown = {
+		any_country = {
+			is_ai = no
+			NOT = {
+				has_variable = idea_13_but_5_completed
+			}
+		}
+	}
+	is_valid = {
+		any_country = {
+			is_ai = no
+			has_variable = idea_13_but_4_completed
+			has_variable = idea_13_embraced
+			var:idea_point_pool >= 300
+			NOT = {
+				has_variable = idea_13_but_5_completed
+			}
+		}
+	}
+	effect = {
+		every_country = {
+			limit = {
+				is_ai = no
+			}
+			if = {
+				limit = {
+					NOT = {
+						has_variable = idea_13_but_5_completed
+					}
+				}
+				set_variable = idea_13_but_5_completed
+				change_variable = {
+					name = idea_13_bar_point
+					add = 10
+				}
+				change_variable = {
+					name = idea_point_pool
+					subtract = 300
+				}
+				if = {
+					limit = {
+						var:national_idea_pool < 21
+					}
+					change_variable = {
+						name = national_idea_pool
+						add = 1
+					}
+				}
+			}
+		}
+	}
+}
+
+ve_idea_13_but_6 = {
+	scope = country
+	is_shown = {
+		any_country = {
+			is_ai = no
+			NOT = {
+				has_variable = idea_13_but_6_completed
+			}
+		}
+	}
+	is_valid = {
+		any_country = {
+			is_ai = no
+			has_variable = idea_13_but_5_completed
+			has_variable = idea_13_embraced
+			var:idea_point_pool >= 300
+			NOT = {
+				has_variable = idea_13_but_6_completed
+			}
+		}
+	}
+	effect = {
+		every_country = {
+			limit = {
+				is_ai = no
+			}
+			if = {
+				limit = {
+					NOT = {
+						has_variable = idea_13_but_6_completed
+					}
+				}
+				set_variable = idea_13_but_6_completed
+				change_variable = {
+					name = idea_13_bar_point
+					add = 10
+				}
+				change_variable = {
+					name = idea_point_pool
+					subtract = 300
+				}
+				if = {
+					limit = {
+						var:national_idea_pool < 21
+					}
+					change_variable = {
+						name = national_idea_pool
+						add = 1
+					}
+				}
+			}
+		}
+	}
+}
+
+ve_idea_13_but_7 = {
+	scope = country
+	is_shown = {
+		any_country = {
+			is_ai = no
+			NOT = {
+				has_variable = idea_13_but_7_completed
+			}
+		}
+	}
+	is_valid = {
+		any_country = {
+			is_ai = no
+			has_variable = idea_13_but_6_completed
+			has_variable = idea_13_embraced
+			var:idea_point_pool >= 300
+			NOT = {
+				has_variable = idea_13_but_7_completed
+			}
+		}
+	}
+	effect = {
+		every_country = {
+			limit = {
+				is_ai = no
+			}
+			if = {
+				limit = {
+					NOT = {
+						has_variable = idea_13_but_7_completed
+					}
+				}
+				set_variable = idea_13_but_7_completed
+				change_variable = {
+					name = idea_13_bar_point
+					add = 10
+				}
+				change_variable = {
+					name = idea_point_pool
+					subtract = 300
+				}
+				if = {
+					limit = {
+						var:national_idea_pool < 21
+					}
+					change_variable = {
+						name = national_idea_pool
+						add = 1
+					}
+				}
+			}
+		}
+	}
+}
+
+#Idea 14
+ve_idea_14_embraced_idea = {
+	scope = country
+	is_valid = {
+		any_country = {
+			is_ai = no
+			NOT = {
+				has_variable = idea_14_embraced
+			}
+			OR = {
+				var:ve_max_idea_slot_bar < 8
+				NOT = {
+					has_variable = ve_max_idea_slot_bar
+				}
+			}
+		}
+	}
+	effect = {
+		every_country = {
+			limit = {
+				is_ai = no
+			}
+			if = {
+				limit = {
+					NOT = {
+						has_variable = idea_14_embraced
+					}
+				}
+				set_variable = idea_14_embraced
+			}
+			set_variable = {
+				name = idea_14_bar_point
+				value = 0
+			}
+			if = {
+				limit = {
+					NOT = {
+						has_variable = national_idea_pool
+					}
+				}
+				set_variable = {
+					name = national_idea_pool
+					value = 0
+				}
+			}
+			if = {
+				limit = {
+					NOT = {
+						has_variable = ve_max_idea_slot_bar
+					}
+				}
+				set_variable = {
+					name = ve_max_idea_slot_bar
+					value = 0
+				}
+			}
+			if = {
+				limit = {
+					var:ve_max_idea_slot_bar < 8
+				}
+				change_variable = {
+					name = ve_max_idea_slot_bar
+					add = 1
+				}
+			}
+		}
+	}
+}
+
+ve_idea_14_cancel_embrace_idea = {
+	scope = country
+	is_valid = {
+		any_country = {
+			is_ai = no
+			has_variable = idea_14_embraced
+		}
+	}
+	effect = {
+		every_country = {
+			limit = {
+				is_ai = no
+			}
+			if = {
+				limit = {
+					has_variable = idea_14_embraced
+				}
+				remove_variable = idea_14_embraced
+			}
+			set_variable = {
+				name = idea_14_bar_point
+				value = 0
+			}
+			if = {
+				limit = {
+					has_variable = idea_14_but_1_completed
+				}
+				remove_variable = idea_14_but_1_completed
+				change_variable = {
+					name = national_idea_pool
+					subtract = 1
+				}
+			}
+			if = {
+				limit = {
+					has_variable = idea_14_but_2_completed
+				}
+				remove_variable = idea_14_but_2_completed
+				change_variable = {
+					name = national_idea_pool
+					subtract = 1
+				}
+			}
+			if = {
+				limit = {
+					has_variable = idea_14_but_3_completed
+				}
+				remove_variable = idea_14_but_3_completed
+				change_variable = {
+					name = national_idea_pool
+					subtract = 1
+				}
+			}
+			if = {
+				limit = {
+					has_variable = idea_14_but_4_completed
+				}
+				remove_variable = idea_14_but_4_completed
+				change_variable = {
+					name = national_idea_pool
+					subtract = 1
+				}
+			}
+			if = {
+				limit = {
+					has_variable = idea_14_but_5_completed
+				}
+				remove_variable = idea_14_but_5_completed
+				change_variable = {
+					name = national_idea_pool
+					subtract = 1
+				}
+			}
+			if = {
+				limit = {
+					has_variable = idea_14_but_6_completed
+				}
+				remove_variable = idea_14_but_6_completed
+				change_variable = {
+					name = national_idea_pool
+					subtract = 1
+				}
+			}
+			if = {
+				limit = {
+					has_variable = idea_14_but_7_completed
+				}
+				remove_variable = idea_14_but_7_completed
+				change_variable = {
+					name = national_idea_pool
+					subtract = 1
+				}
+			}
+			if = {
+				limit = {
+					var:ve_max_idea_slot_bar > 0
+				}
+				change_variable = {
+					name = ve_max_idea_slot_bar
+					subtract = 1
+				}
+			}
+		}
+	}
+}
+
+ve_idea_14_but_1 = {
+	scope = country
+	is_shown = {
+		any_country = {
+			is_ai = no
+			NOT = {
+				has_variable = idea_14_but_1_completed
+			}
+		}
+	}
+	is_valid = {
+		any_country = {
+			is_ai = no
+			has_variable = idea_14_embraced
+			NOT = {
+				has_variable = idea_14_but_1_completed
+			}
+			var:idea_point_pool >= 300
+		}
+	}
+	effect = {
+		every_country = {
+			limit = {
+				is_ai = no
+			}
+			if = {
+				limit = {
+					NOT = {
+						has_variable = idea_14_but_1_completed
+					}
+				}
+				set_variable = idea_14_but_1_completed
+				change_variable = {
+					name = idea_14_bar_point
+					add = 10
+				}
+				change_variable = {
+					name = idea_point_pool
+					subtract = 300
+				}
+				if = {
+					limit = {
+						var:national_idea_pool < 21
+					}
+					change_variable = {
+						name = national_idea_pool
+						add = 1
+					}
+				}
+			}
+		}
+	}
+}
+
+ve_idea_14_but_2 = {
+	scope = country
+	is_shown = {
+		any_country = {
+			is_ai = no
+			NOT = {
+				has_variable = idea_14_but_2_completed
+			}
+		}
+	}
+	is_valid = {
+		any_country = {
+			is_ai = no
+			has_variable = idea_14_but_1_completed
+			has_variable = idea_14_embraced
+			var:idea_point_pool >= 300
+			NOT = {
+				has_variable = idea_14_but_2_completed
+			}
+		}
+	}
+	effect = {
+		every_country = {
+			limit = {
+				is_ai = no
+			}
+			if = {
+				limit = {
+					NOT = {
+						has_variable = idea_14_but_2_completed
+					}
+				}
+				set_variable = idea_14_but_2_completed
+				change_variable = {
+					name = idea_14_bar_point
+					add = 10
+				}
+				change_variable = {
+					name = idea_point_pool
+					subtract = 300
+				}
+				if = {
+					limit = {
+						var:national_idea_pool < 21
+					}
+					change_variable = {
+						name = national_idea_pool
+						add = 1
+					}
+				}
+			}
+		}
+	}
+}
+
+ve_idea_14_but_3 = {
+	scope = country
+	is_shown = {
+		any_country = {
+			is_ai = no
+			NOT = {
+				has_variable = idea_14_but_3_completed
+			}
+		}
+	}
+	is_valid = {
+		any_country = {
+			is_ai = no
+			has_variable = idea_14_but_2_completed
+			has_variable = idea_14_embraced
+			var:idea_point_pool >= 300
+			NOT = {
+				has_variable = idea_14_but_3_completed
+			}
+		}
+	}
+	effect = {
+		every_country = {
+			limit = {
+				is_ai = no
+			}
+			if = {
+				limit = {
+					NOT = {
+						has_variable = idea_14_but_3_completed
+					}
+				}
+				set_variable = idea_14_but_3_completed
+				change_variable = {
+					name = idea_14_bar_point
+					add = 10
+				}
+				change_variable = {
+					name = idea_point_pool
+					subtract = 300
+				}
+				if = {
+					limit = {
+						var:national_idea_pool < 21
+					}
+					change_variable = {
+						name = national_idea_pool
+						add = 1
+					}
+				}
+			}
+		}
+	}
+}
+
+ve_idea_14_but_4 = {
+	scope = country
+	is_shown = {
+		any_country = {
+			is_ai = no
+			NOT = {
+				has_variable = idea_14_but_4_completed
+			}
+		}
+	}
+	is_valid = {
+		any_country = {
+			is_ai = no
+			has_variable = idea_14_but_3_completed
+			has_variable = idea_14_embraced
+			var:idea_point_pool >= 300
+			NOT = {
+				has_variable = idea_14_but_4_completed
+			}
+		}
+	}
+	effect = {
+		every_country = {
+			limit = {
+				is_ai = no
+			}
+			if = {
+				limit = {
+					NOT = {
+						has_variable = idea_14_but_4_completed
+					}
+				}
+				set_variable = idea_14_but_4_completed
+				change_variable = {
+					name = idea_14_bar_point
+					add = 10
+				}
+				change_variable = {
+					name = idea_point_pool
+					subtract = 300
+				}
+				if = {
+					limit = {
+						var:national_idea_pool < 21
+					}
+					change_variable = {
+						name = national_idea_pool
+						add = 1
+					}
+				}
+			}
+		}
+	}
+}
+
+ve_idea_14_but_5 = {
+	scope = country
+	is_shown = {
+		any_country = {
+			is_ai = no
+			NOT = {
+				has_variable = idea_14_but_5_completed
+			}
+		}
+	}
+	is_valid = {
+		any_country = {
+			is_ai = no
+			has_variable = idea_14_but_4_completed
+			has_variable = idea_14_embraced
+			var:idea_point_pool >= 300
+			NOT = {
+				has_variable = idea_14_but_5_completed
+			}
+		}
+	}
+	effect = {
+		every_country = {
+			limit = {
+				is_ai = no
+			}
+			if = {
+				limit = {
+					NOT = {
+						has_variable = idea_14_but_5_completed
+					}
+				}
+				set_variable = idea_14_but_5_completed
+				change_variable = {
+					name = idea_14_bar_point
+					add = 10
+				}
+				change_variable = {
+					name = idea_point_pool
+					subtract = 300
+				}
+				if = {
+					limit = {
+						var:national_idea_pool < 21
+					}
+					change_variable = {
+						name = national_idea_pool
+						add = 1
+					}
+				}
+			}
+		}
+	}
+}
+
+ve_idea_14_but_6 = {
+	scope = country
+	is_shown = {
+		any_country = {
+			is_ai = no
+			NOT = {
+				has_variable = idea_14_but_6_completed
+			}
+		}
+	}
+	is_valid = {
+		any_country = {
+			is_ai = no
+			has_variable = idea_14_but_5_completed
+			has_variable = idea_14_embraced
+			var:idea_point_pool >= 300
+			NOT = {
+				has_variable = idea_14_but_6_completed
+			}
+		}
+	}
+	effect = {
+		every_country = {
+			limit = {
+				is_ai = no
+			}
+			if = {
+				limit = {
+					NOT = {
+						has_variable = idea_14_but_6_completed
+					}
+				}
+				set_variable = idea_14_but_6_completed
+				change_variable = {
+					name = idea_14_bar_point
+					add = 10
+				}
+				change_variable = {
+					name = idea_point_pool
+					subtract = 300
+				}
+				if = {
+					limit = {
+						var:national_idea_pool < 21
+					}
+					change_variable = {
+						name = national_idea_pool
+						add = 1
+					}
+				}
+			}
+		}
+	}
+}
+
+ve_idea_14_but_7 = {
+	scope = country
+	is_shown = {
+		any_country = {
+			is_ai = no
+			NOT = {
+				has_variable = idea_14_but_7_completed
+			}
+		}
+	}
+	is_valid = {
+		any_country = {
+			is_ai = no
+			has_variable = idea_14_but_6_completed
+			has_variable = idea_14_embraced
+			var:idea_point_pool >= 300
+			NOT = {
+				has_variable = idea_14_but_7_completed
+			}
+		}
+	}
+	effect = {
+		every_country = {
+			limit = {
+				is_ai = no
+			}
+			if = {
+				limit = {
+					NOT = {
+						has_variable = idea_14_but_7_completed
+					}
+				}
+				set_variable = idea_14_but_7_completed
+				change_variable = {
+					name = idea_14_bar_point
+					add = 10
+				}
+				change_variable = {
+					name = idea_point_pool
+					subtract = 300
+				}
+				if = {
+					limit = {
+						var:national_idea_pool < 21
+					}
+					change_variable = {
+						name = national_idea_pool
+						add = 1
+					}
+				}
+			}
+		}
+	}
+}
+
+#Idea 15
+ve_idea_15_embraced_idea = {
+	scope = country
+	is_valid = {
+		any_country = {
+			is_ai = no
+			NOT = {
+				has_variable = idea_15_embraced
+			}
+			OR = {
+				var:ve_max_idea_slot_bar < 8
+				NOT = {
+					has_variable = ve_max_idea_slot_bar
+				}
+			}
+		}
+	}
+	effect = {
+		every_country = {
+			limit = {
+				is_ai = no
+			}
+			if = {
+				limit = {
+					NOT = {
+						has_variable = idea_15_embraced
+					}
+				}
+				set_variable = idea_15_embraced
+			}
+			set_variable = {
+				name = idea_15_bar_point
+				value = 0
+			}
+			if = {
+				limit = {
+					NOT = {
+						has_variable = national_idea_pool
+					}
+				}
+				set_variable = {
+					name = national_idea_pool
+					value = 0
+				}
+			}
+			if = {
+				limit = {
+					NOT = {
+						has_variable = ve_max_idea_slot_bar
+					}
+				}
+				set_variable = {
+					name = ve_max_idea_slot_bar
+					value = 0
+				}
+			}
+			if = {
+				limit = {
+					var:ve_max_idea_slot_bar < 8
+				}
+				change_variable = {
+					name = ve_max_idea_slot_bar
+					add = 1
+				}
+			}
+		}
+	}
+}
+
+ve_idea_15_cancel_embrace_idea = {
+	scope = country
+	is_valid = {
+		any_country = {
+			is_ai = no
+			has_variable = idea_15_embraced
+		}
+	}
+	effect = {
+		every_country = {
+			limit = {
+				is_ai = no
+			}
+			if = {
+				limit = {
+					has_variable = idea_15_embraced
+				}
+				remove_variable = idea_15_embraced
+			}
+			set_variable = {
+				name = idea_15_bar_point
+				value = 0
+			}
+			if = {
+				limit = {
+					has_variable = idea_15_but_1_completed
+				}
+				remove_variable = idea_15_but_1_completed
+				change_variable = {
+					name = national_idea_pool
+					subtract = 1
+				}
+			}
+			if = {
+				limit = {
+					has_variable = idea_15_but_2_completed
+				}
+				remove_variable = idea_15_but_2_completed
+				change_variable = {
+					name = national_idea_pool
+					subtract = 1
+				}
+			}
+			if = {
+				limit = {
+					has_variable = idea_15_but_3_completed
+				}
+				remove_variable = idea_15_but_3_completed
+				change_variable = {
+					name = national_idea_pool
+					subtract = 1
+				}
+			}
+			if = {
+				limit = {
+					has_variable = idea_15_but_4_completed
+				}
+				remove_variable = idea_15_but_4_completed
+				change_variable = {
+					name = national_idea_pool
+					subtract = 1
+				}
+			}
+			if = {
+				limit = {
+					has_variable = idea_15_but_5_completed
+				}
+				remove_variable = idea_15_but_5_completed
+				change_variable = {
+					name = national_idea_pool
+					subtract = 1
+				}
+			}
+			if = {
+				limit = {
+					has_variable = idea_15_but_6_completed
+				}
+				remove_variable = idea_15_but_6_completed
+				change_variable = {
+					name = national_idea_pool
+					subtract = 1
+				}
+			}
+			if = {
+				limit = {
+					has_variable = idea_15_but_7_completed
+				}
+				remove_variable = idea_15_but_7_completed
+				change_variable = {
+					name = national_idea_pool
+					subtract = 1
+				}
+			}
+			if = {
+				limit = {
+					var:ve_max_idea_slot_bar > 0
+				}
+				change_variable = {
+					name = ve_max_idea_slot_bar
+					subtract = 1
+				}
+			}
+		}
+	}
+}
+
+ve_idea_15_but_1 = {
+	scope = country
+	is_shown = {
+		any_country = {
+			is_ai = no
+			NOT = {
+				has_variable = idea_15_but_1_completed
+			}
+		}
+	}
+	is_valid = {
+		any_country = {
+			is_ai = no
+			has_variable = idea_15_embraced
+			NOT = {
+				has_variable = idea_15_but_1_completed
+			}
+			var:idea_point_pool >= 300
+		}
+	}
+	effect = {
+		every_country = {
+			limit = {
+				is_ai = no
+			}
+			if = {
+				limit = {
+					NOT = {
+						has_variable = idea_15_but_1_completed
+					}
+				}
+				set_variable = idea_15_but_1_completed
+				change_variable = {
+					name = idea_15_bar_point
+					add = 10
+				}
+				change_variable = {
+					name = idea_point_pool
+					subtract = 300
+				}
+				if = {
+					limit = {
+						var:national_idea_pool < 21
+					}
+					change_variable = {
+						name = national_idea_pool
+						add = 1
+					}
+				}
+			}
+		}
+	}
+}
+
+ve_idea_15_but_2 = {
+	scope = country
+	is_shown = {
+		any_country = {
+			is_ai = no
+			NOT = {
+				has_variable = idea_15_but_2_completed
+			}
+		}
+	}
+	is_valid = {
+		any_country = {
+			is_ai = no
+			has_variable = idea_15_but_1_completed
+			has_variable = idea_15_embraced
+			var:idea_point_pool >= 300
+			NOT = {
+				has_variable = idea_15_but_2_completed
+			}
+		}
+	}
+	effect = {
+		every_country = {
+			limit = {
+				is_ai = no
+			}
+			if = {
+				limit = {
+					NOT = {
+						has_variable = idea_15_but_2_completed
+					}
+				}
+				set_variable = idea_15_but_2_completed
+				change_variable = {
+					name = idea_15_bar_point
+					add = 10
+				}
+				change_variable = {
+					name = idea_point_pool
+					subtract = 300
+				}
+				if = {
+					limit = {
+						var:national_idea_pool < 21
+					}
+					change_variable = {
+						name = national_idea_pool
+						add = 1
+					}
+				}
+			}
+		}
+	}
+}
+
+ve_idea_15_but_3 = {
+	scope = country
+	is_shown = {
+		any_country = {
+			is_ai = no
+			NOT = {
+				has_variable = idea_15_but_3_completed
+			}
+		}
+	}
+	is_valid = {
+		any_country = {
+			is_ai = no
+			has_variable = idea_15_but_2_completed
+			has_variable = idea_15_embraced
+			var:idea_point_pool >= 300
+			NOT = {
+				has_variable = idea_15_but_3_completed
+			}
+		}
+	}
+	effect = {
+		every_country = {
+			limit = {
+				is_ai = no
+			}
+			if = {
+				limit = {
+					NOT = {
+						has_variable = idea_15_but_3_completed
+					}
+				}
+				set_variable = idea_15_but_3_completed
+				change_variable = {
+					name = idea_15_bar_point
+					add = 10
+				}
+				change_variable = {
+					name = idea_point_pool
+					subtract = 300
+				}
+				if = {
+					limit = {
+						var:national_idea_pool < 21
+					}
+					change_variable = {
+						name = national_idea_pool
+						add = 1
+					}
+				}
+			}
+		}
+	}
+}
+
+ve_idea_15_but_4 = {
+	scope = country
+	is_shown = {
+		any_country = {
+			is_ai = no
+			NOT = {
+				has_variable = idea_15_but_4_completed
+			}
+		}
+	}
+	is_valid = {
+		any_country = {
+			is_ai = no
+			has_variable = idea_15_but_3_completed
+			has_variable = idea_15_embraced
+			var:idea_point_pool >= 300
+			NOT = {
+				has_variable = idea_15_but_4_completed
+			}
+		}
+	}
+	effect = {
+		every_country = {
+			limit = {
+				is_ai = no
+			}
+			if = {
+				limit = {
+					NOT = {
+						has_variable = idea_15_but_4_completed
+					}
+				}
+				set_variable = idea_15_but_4_completed
+				change_variable = {
+					name = idea_15_bar_point
+					add = 10
+				}
+				change_variable = {
+					name = idea_point_pool
+					subtract = 300
+				}
+				if = {
+					limit = {
+						var:national_idea_pool < 21
+					}
+					change_variable = {
+						name = national_idea_pool
+						add = 1
+					}
+				}
+			}
+		}
+	}
+}
+
+ve_idea_15_but_5 = {
+	scope = country
+	is_shown = {
+		any_country = {
+			is_ai = no
+			NOT = {
+				has_variable = idea_15_but_5_completed
+			}
+		}
+	}
+	is_valid = {
+		any_country = {
+			is_ai = no
+			has_variable = idea_15_but_4_completed
+			has_variable = idea_15_embraced
+			var:idea_point_pool >= 300
+			NOT = {
+				has_variable = idea_15_but_5_completed
+			}
+		}
+	}
+	effect = {
+		every_country = {
+			limit = {
+				is_ai = no
+			}
+			if = {
+				limit = {
+					NOT = {
+						has_variable = idea_15_but_5_completed
+					}
+				}
+				set_variable = idea_15_but_5_completed
+				change_variable = {
+					name = idea_15_bar_point
+					add = 10
+				}
+				change_variable = {
+					name = idea_point_pool
+					subtract = 300
+				}
+				if = {
+					limit = {
+						var:national_idea_pool < 21
+					}
+					change_variable = {
+						name = national_idea_pool
+						add = 1
+					}
+				}
+			}
+		}
+	}
+}
+
+ve_idea_15_but_6 = {
+	scope = country
+	is_shown = {
+		any_country = {
+			is_ai = no
+			NOT = {
+				has_variable = idea_15_but_6_completed
+			}
+		}
+	}
+	is_valid = {
+		any_country = {
+			is_ai = no
+			has_variable = idea_15_but_5_completed
+			has_variable = idea_15_embraced
+			var:idea_point_pool >= 300
+			NOT = {
+				has_variable = idea_15_but_6_completed
+			}
+		}
+	}
+	effect = {
+		every_country = {
+			limit = {
+				is_ai = no
+			}
+			if = {
+				limit = {
+					NOT = {
+						has_variable = idea_15_but_6_completed
+					}
+				}
+				set_variable = idea_15_but_6_completed
+				change_variable = {
+					name = idea_15_bar_point
+					add = 10
+				}
+				change_variable = {
+					name = idea_point_pool
+					subtract = 300
+				}
+				if = {
+					limit = {
+						var:national_idea_pool < 21
+					}
+					change_variable = {
+						name = national_idea_pool
+						add = 1
+					}
+				}
+			}
+		}
+	}
+}
+
+ve_idea_15_but_7 = {
+	scope = country
+	is_shown = {
+		any_country = {
+			is_ai = no
+			NOT = {
+				has_variable = idea_15_but_7_completed
+			}
+		}
+	}
+	is_valid = {
+		any_country = {
+			is_ai = no
+			has_variable = idea_15_but_6_completed
+			has_variable = idea_15_embraced
+			var:idea_point_pool >= 300
+			NOT = {
+				has_variable = idea_15_but_7_completed
+			}
+		}
+	}
+	effect = {
+		every_country = {
+			limit = {
+				is_ai = no
+			}
+			if = {
+				limit = {
+					NOT = {
+						has_variable = idea_15_but_7_completed
+					}
+				}
+				set_variable = idea_15_but_7_completed
+				change_variable = {
+					name = idea_15_bar_point
+					add = 10
+				}
+				change_variable = {
+					name = idea_point_pool
+					subtract = 300
+				}
+				if = {
+					limit = {
+						var:national_idea_pool < 21
+					}
+					change_variable = {
+						name = national_idea_pool
+						add = 1
+					}
+				}
+			}
+		}
+	}
+}

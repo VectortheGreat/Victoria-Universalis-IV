@@ -226,15 +226,17 @@ dev.2 = {
 	}
 	option = {
 		name = dev.1.c
-		change_tag = scope:ve_random_ai
-	}
-	option = {
-		name = dev.1.d
-		random_country = {
-			limit = {
-				is_ai = yes
-			}
-			save_scope_as = ve_random_ai
+		set_variable = {
+			name = idea_13_bar_point
+			value = 0
+		}
+		set_variable = {
+			name = idea_14_bar_point
+			value = 0
+		}
+		set_variable = {
+			name = idea_15_bar_point
+			value = 0
 		}
 	}
 }

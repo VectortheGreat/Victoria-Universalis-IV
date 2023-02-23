@@ -515,7 +515,7 @@ ve_gui_panel_types
 					vbox = {
 						spacing = 20
 						textbox = {
-							text = "Idea_diplomatic"
+							raw_text = "Innovative"
 							using = fontsize_xxl
 							align = center
 							autoresize = yes
@@ -814,7 +814,7 @@ ve_gui_panel_types
 					vbox = {
 						spacing = 20
 						textbox = {
-							text = "Idea_diplomatic"
+							raw_text = "Dıplomatic"
 							using = fontsize_xxl
 							align = center
 							autoresize = yes
@@ -1113,7 +1113,7 @@ ve_gui_panel_types
 					vbox = {
 						spacing = 20
 						textbox = {
-							text = "Idea_diplomatic"
+							raw_text = "Offensive"
 							using = fontsize_xxl
 							align = center
 							autoresize = yes
@@ -1424,7 +1424,7 @@ ve_gui_panel_types
 					vbox = {
 						spacing = 20
 						textbox = {
-							text = "Idea_diplomatic"
+							raw_text = "Economic"
 							using = fontsize_xxl
 							align = center
 							autoresize = yes
@@ -1723,7 +1723,7 @@ ve_gui_panel_types
 					vbox = {
 						spacing = 20
 						textbox = {
-							text = "Idea_diplomatic"
+							raw_text = "Trade"
 							using = fontsize_xxl
 							align = center
 							autoresize = yes
@@ -2022,7 +2022,7 @@ ve_gui_panel_types
 					vbox = {
 						spacing = 20
 						textbox = {
-							text = "Idea_diplomatic"
+							raw_text = "Defensive"
 							using = fontsize_xxl
 							align = center
 							autoresize = yes
@@ -2333,7 +2333,7 @@ ve_gui_panel_types
 					vbox = {
 						spacing = 20
 						textbox = {
-							text = "Idea_diplomatic"
+							raw_text = "Administrative"
 							using = fontsize_xxl
 							align = center
 							autoresize = yes
@@ -2632,7 +2632,7 @@ ve_gui_panel_types
 					vbox = {
 						spacing = 20
 						textbox = {
-							text = "Idea_diplomatic"
+							raw_text = "Qualification"
 							using = fontsize_xxl
 							align = center
 							autoresize = yes
@@ -2931,7 +2931,7 @@ ve_gui_panel_types
 					vbox = {
 						spacing = 20
 						textbox = {
-							text = "Idea_diplomatic"
+							raw_text = "Naval"
 							using = fontsize_xxl
 							align = center
 							autoresize = yes
@@ -3242,7 +3242,7 @@ ve_gui_panel_types
 					vbox = {
 						spacing = 20
 						textbox = {
-							text = "Idea_diplomatic"
+							raw_text = "Ethnocentrism"
 							using = fontsize_xxl
 							align = center
 							autoresize = yes
@@ -3541,7 +3541,7 @@ ve_gui_panel_types
 					vbox = {
 						spacing = 20
 						textbox = {
-							text = "Idea_diplomatic"
+							raw_text = "Humanist"
 							using = fontsize_xxl
 							align = center
 							autoresize = yes
@@ -3840,7 +3840,7 @@ ve_gui_panel_types
 					vbox = {
 						spacing = 20
 						textbox = {
-							text = "Idea_diplomatic"
+							raw_text = "Militarization"
 							using = fontsize_xxl
 							align = center
 							autoresize = yes
@@ -4113,6 +4113,915 @@ ve_gui_panel_types
 							visible = "[GetScriptedGui('ve_idea_12_cancel_embrace_idea').IsValid( GuiScope.End )]"
 							enabled = "[GetScriptedGui('ve_idea_12_cancel_embrace_idea').IsValid( GuiScope.End )]"
 							onclick = "[GetScriptedGui('ve_idea_12_cancel_embrace_idea').Execute(GuiScope.End)]"
+							using = tooltip_above
+							using = budget_pause_all_button_sound
+						}
+					}
+				}
+				
+			}
+			hbox = {
+				#Idea rows - 5
+				layoutpolicy_horizontal = expanding
+				margin = {
+					0
+					10
+				}
+				background = {
+					using = entry_bg_simple
+				}
+				hbox = {	#Idea 1
+					using = main_bg
+					
+					margin = {
+						20
+						20
+					}
+					vbox = {
+						spacing = 10
+						icon = {
+							texture = "gfx/interface/icons/event_icons/event_portrait.dds"
+							size = {
+								120
+								120
+							}
+						}
+						
+					}
+					vbox = {
+						spacing = 20
+						textbox = {
+							raw_text = "Politics"
+							using = fontsize_xxl
+							align = center
+							autoresize = yes
+						}
+						hbox = {
+							vbox = {
+
+								button_icon_round_big = {
+									size = {
+										45
+										45
+									}
+									blockoverride
+									"icon"
+									{
+										texture = "gfx/interface/icons/event_icons/event_portrait.dds"
+									}
+									visible = "[GetScriptedGui('ve_idea_13_but_1').IsShown( GuiScope.End )]"
+									enabled = "[GetScriptedGui('ve_idea_13_but_1').IsValid( GuiScope.End )]"
+									onclick = "[GetScriptedGui('ve_idea_13_but_1').Execute(GuiScope.End)]"
+								}
+								widget = {
+									size = {
+										45
+										45
+									}
+									icon = {
+										texture = "gfx/interface/icons/event_icons/event_portrait.dds"
+										size = {
+											100%
+											100%
+										}
+									}
+									visible = "[Not( GetScriptedGui('ve_idea_13_but_1').IsShown( GuiScope.End) )]"
+									enabled = "[GetScriptedGui('ve_idea_13_but_1').IsValid( GuiScope.End )]"
+									onclick = "[GetScriptedGui('ve_idea_13_but_1').Execute(GuiScope.End)]"
+								}
+							}
+							vbox = {
+
+								button_icon_round_big = {
+									size = {
+										45
+										45
+									}
+									blockoverride
+									"icon"
+									{
+										texture = "gfx/interface/icons/event_icons/event_portrait.dds"
+									}
+									visible = "[GetScriptedGui('ve_idea_13_but_2').IsShown( GuiScope.End )]"
+									enabled = "[GetScriptedGui('ve_idea_13_but_2').IsValid( GuiScope.End )]"
+									onclick = "[GetScriptedGui('ve_idea_13_but_2').Execute(GuiScope.End)]"
+								}
+								widget = {
+									size = {
+										45
+										45
+									}
+									icon = {
+										texture = "gfx/interface/icons/event_icons/event_portrait.dds"
+										size = {
+											100%
+											100%
+										}
+									}
+									visible = "[Not( GetScriptedGui('ve_idea_13_but_2').IsShown( GuiScope.End) )]"
+									enabled = "[GetScriptedGui('ve_idea_13_but_2').IsValid( GuiScope.End )]"
+									onclick = "[GetScriptedGui('ve_idea_13_but_2').Execute(GuiScope.End)]"
+								}
+							}
+							vbox = {
+
+								button_icon_round_big = {
+									size = {
+										45
+										45
+									}
+									blockoverride
+									"icon"
+									{
+										texture = "gfx/interface/icons/event_icons/event_portrait.dds"
+									}
+									visible = "[GetScriptedGui('ve_idea_13_but_3').IsShown( GuiScope.End )]"
+									enabled = "[GetScriptedGui('ve_idea_13_but_3').IsValid( GuiScope.End )]"
+									onclick = "[GetScriptedGui('ve_idea_13_but_3').Execute(GuiScope.End)]"
+								}
+								widget = {
+									size = {
+										45
+										45
+									}
+									icon = {
+										texture = "gfx/interface/icons/event_icons/event_portrait.dds"
+										size = {
+											100%
+											100%
+										}
+									}
+									visible = "[Not( GetScriptedGui('ve_idea_13_but_3').IsShown( GuiScope.End) )]"
+									enabled = "[GetScriptedGui('ve_idea_13_but_3').IsValid( GuiScope.End )]"
+									onclick = "[GetScriptedGui('ve_idea_13_but_3').Execute(GuiScope.End)]"
+								}
+							}
+							vbox = {
+
+								button_icon_round_big = {
+									size = {
+										45
+										45
+									}
+									blockoverride
+									"icon"
+									{
+										texture = "gfx/interface/icons/event_icons/event_portrait.dds"
+									}
+									visible = "[GetScriptedGui('ve_idea_13_but_4').IsShown( GuiScope.End )]"
+									enabled = "[GetScriptedGui('ve_idea_13_but_4').IsValid( GuiScope.End )]"
+									onclick = "[GetScriptedGui('ve_idea_13_but_4').Execute(GuiScope.End)]"
+								}
+								widget = {
+									size = {
+										45
+										45
+									}
+									icon = {
+										texture = "gfx/interface/icons/event_icons/event_portrait.dds"
+										size = {
+											100%
+											100%
+										}
+									}
+									visible = "[Not( GetScriptedGui('ve_idea_13_but_4').IsShown( GuiScope.End) )]"
+									enabled = "[GetScriptedGui('ve_idea_13_but_4').IsValid( GuiScope.End )]"
+									onclick = "[GetScriptedGui('ve_idea_13_but_4').Execute(GuiScope.End)]"
+								}
+							}
+							vbox = {
+
+								button_icon_round_big = {
+									size = {
+										45
+										45
+									}
+									blockoverride
+									"icon"
+									{
+										texture = "gfx/interface/icons/event_icons/event_portrait.dds"
+									}
+									visible = "[GetScriptedGui('ve_idea_13_but_5').IsShown( GuiScope.End )]"
+									enabled = "[GetScriptedGui('ve_idea_13_but_5').IsValid( GuiScope.End )]"
+									onclick = "[GetScriptedGui('ve_idea_13_but_5').Execute(GuiScope.End)]"
+								}
+								widget = {
+									size = {
+										45
+										45
+									}
+									icon = {
+										texture = "gfx/interface/icons/event_icons/event_portrait.dds"
+										size = {
+											100%
+											100%
+										}
+									}
+									visible = "[Not( GetScriptedGui('ve_idea_13_but_5').IsShown( GuiScope.End) )]"
+									enabled = "[GetScriptedGui('ve_idea_13_but_5').IsValid( GuiScope.End )]"
+									onclick = "[GetScriptedGui('ve_idea_13_but_5').Execute(GuiScope.End)]"
+								}
+							}
+							vbox = {
+
+								button_icon_round_big = {
+									size = {
+										45
+										45
+									}
+									blockoverride
+									"icon"
+									{
+										texture = "gfx/interface/icons/event_icons/event_portrait.dds"
+									}
+									visible = "[GetScriptedGui('ve_idea_13_but_6').IsShown( GuiScope.End )]"
+									enabled = "[GetScriptedGui('ve_idea_13_but_6').IsValid( GuiScope.End )]"
+									onclick = "[GetScriptedGui('ve_idea_13_but_6').Execute(GuiScope.End)]"
+								}
+								widget = {
+									size = {
+										45
+										45
+									}
+									icon = {
+										texture = "gfx/interface/icons/event_icons/event_portrait.dds"
+										size = {
+											100%
+											100%
+										}
+									}
+									visible = "[Not( GetScriptedGui('ve_idea_13_but_6').IsShown( GuiScope.End) )]"
+									enabled = "[GetScriptedGui('ve_idea_13_but_6').IsValid( GuiScope.End )]"
+									onclick = "[GetScriptedGui('ve_idea_13_but_6').Execute(GuiScope.End)]"
+								}
+							}
+							vbox = {
+
+								button_icon_round_big = {
+									size = {
+										45
+										45
+									}
+									blockoverride
+									"icon"
+									{
+										texture = "gfx/interface/icons/event_icons/event_portrait.dds"
+									}
+									visible = "[GetScriptedGui('ve_idea_13_but_7').IsShown( GuiScope.End )]"
+									enabled = "[GetScriptedGui('ve_idea_13_but_7').IsValid( GuiScope.End )]"
+									onclick = "[GetScriptedGui('ve_idea_13_but_7').Execute(GuiScope.End)]"
+								}
+								widget = {
+									size = {
+										45
+										45
+									}
+									icon = {
+										texture = "gfx/interface/icons/event_icons/event_portrait.dds"
+										size = {
+											100%
+											100%
+										}
+									}
+									visible = "[Not( GetScriptedGui('ve_idea_13_but_7').IsShown( GuiScope.End) )]"
+									enabled = "[GetScriptedGui('ve_idea_13_but_7').IsValid( GuiScope.End )]"
+									onclick = "[GetScriptedGui('ve_idea_13_but_7').Execute(GuiScope.End)]"
+								}
+							}
+							
+						}
+						default_progressbar_horizontal = {
+							tooltip = "TECHNOLOGY_GAIN_BREAKDOWN"
+							layoutpolicy_horizontal = growing
+							size = {
+								0
+								8
+							}
+							blockoverride
+							"values"
+							{
+								# max = "[FixedPointToFloat(GuiScope .ScriptValue('idea_10_bar_point_value_max'))]"
+								# value = "[FixedPointToFloat(GuiScope .ScriptValue('idea_10_bar_point_value'))]"
+								max = "[GuiScope.SetRoot(MakeScopeValue(GetPlayer.GetGDP)).ScriptValue('idea_13_bar_point_value_max')]"
+								value = "[GuiScope.SetRoot(MakeScopeValue(GetPlayer.GetGDP)).ScriptValue('idea_13_bar_point_value')]"
+							}
+							visible = "[GetScriptedGui('ve_idea_13_but_7').IsShown( GuiScope.End )]"
+						}
+						button = {
+							using = default_button_action
+							size = { 100% 40 }
+							raw_text = "Embrace"
+							visible = "[GetScriptedGui('ve_idea_13_embraced_idea').IsValid( GuiScope.End )]"
+							enabled = "[GetScriptedGui('ve_idea_13_embraced_idea').IsValid( GuiScope.End )]"
+							onclick = "[GetScriptedGui('ve_idea_13_embraced_idea').Execute(GuiScope.End)]"
+							using = tooltip_above
+							using = budget_pause_all_button_sound
+						}
+						button = {
+							using = default_button_action
+							size = { 100% 40 }
+							raw_text = "Cancel"
+							visible = "[GetScriptedGui('ve_idea_13_cancel_embrace_idea').IsValid( GuiScope.End )]"
+							enabled = "[GetScriptedGui('ve_idea_13_cancel_embrace_idea').IsValid( GuiScope.End )]"
+							onclick = "[GetScriptedGui('ve_idea_13_cancel_embrace_idea').Execute(GuiScope.End)]"
+							using = tooltip_above
+							using = budget_pause_all_button_sound
+						}
+					}
+				}
+				hbox = {
+					using = main_bg
+					
+					margin = {
+						20
+						20
+					}
+					vbox = {
+						spacing = 10
+						icon = {
+							texture = "gfx/interface/icons/event_icons/event_portrait.dds"
+							size = {
+								120
+								120
+							}
+						}
+						
+					}
+					vbox = {
+						spacing = 20
+						textbox = {
+							raw_text = "Syndicalism"
+							using = fontsize_xxl
+							align = center
+							autoresize = yes
+						}
+						hbox = {
+							vbox = {
+
+								button_icon_round_big = {
+									size = {
+										45
+										45
+									}
+									blockoverride
+									"icon"
+									{
+										texture = "gfx/interface/icons/event_icons/event_portrait.dds"
+									}
+									visible = "[GetScriptedGui('ve_idea_14_but_1').IsShown( GuiScope.End )]"
+									enabled = "[GetScriptedGui('ve_idea_14_but_1').IsValid( GuiScope.End )]"
+									onclick = "[GetScriptedGui('ve_idea_14_but_1').Execute(GuiScope.End)]"
+								}
+								widget = {
+									size = {
+										45
+										45
+									}
+									icon = {
+										texture = "gfx/interface/icons/event_icons/event_portrait.dds"
+										size = {
+											100%
+											100%
+										}
+									}
+									visible = "[Not( GetScriptedGui('ve_idea_14_but_1').IsShown( GuiScope.End) )]"
+									enabled = "[GetScriptedGui('ve_idea_14_but_1').IsValid( GuiScope.End )]"
+									onclick = "[GetScriptedGui('ve_idea_14_but_1').Execute(GuiScope.End)]"
+								}
+							}
+							vbox = {
+
+								button_icon_round_big = {
+									size = {
+										45
+										45
+									}
+									blockoverride
+									"icon"
+									{
+										texture = "gfx/interface/icons/event_icons/event_portrait.dds"
+									}
+									visible = "[GetScriptedGui('ve_idea_14_but_2').IsShown( GuiScope.End )]"
+									enabled = "[GetScriptedGui('ve_idea_14_but_2').IsValid( GuiScope.End )]"
+									onclick = "[GetScriptedGui('ve_idea_14_but_2').Execute(GuiScope.End)]"
+								}
+								widget = {
+									size = {
+										45
+										45
+									}
+									icon = {
+										texture = "gfx/interface/icons/event_icons/event_portrait.dds"
+										size = {
+											100%
+											100%
+										}
+									}
+									visible = "[Not( GetScriptedGui('ve_idea_14_but_2').IsShown( GuiScope.End) )]"
+									enabled = "[GetScriptedGui('ve_idea_14_but_2').IsValid( GuiScope.End )]"
+									onclick = "[GetScriptedGui('ve_idea_14_but_2').Execute(GuiScope.End)]"
+								}
+							}
+							vbox = {
+
+								button_icon_round_big = {
+									size = {
+										45
+										45
+									}
+									blockoverride
+									"icon"
+									{
+										texture = "gfx/interface/icons/event_icons/event_portrait.dds"
+									}
+									visible = "[GetScriptedGui('ve_idea_14_but_3').IsShown( GuiScope.End )]"
+									enabled = "[GetScriptedGui('ve_idea_14_but_3').IsValid( GuiScope.End )]"
+									onclick = "[GetScriptedGui('ve_idea_14_but_3').Execute(GuiScope.End)]"
+								}
+								widget = {
+									size = {
+										45
+										45
+									}
+									icon = {
+										texture = "gfx/interface/icons/event_icons/event_portrait.dds"
+										size = {
+											100%
+											100%
+										}
+									}
+									visible = "[Not( GetScriptedGui('ve_idea_14_but_3').IsShown( GuiScope.End) )]"
+									enabled = "[GetScriptedGui('ve_idea_14_but_3').IsValid( GuiScope.End )]"
+									onclick = "[GetScriptedGui('ve_idea_14_but_3').Execute(GuiScope.End)]"
+								}
+							}
+							vbox = {
+
+								button_icon_round_big = {
+									size = {
+										45
+										45
+									}
+									blockoverride
+									"icon"
+									{
+										texture = "gfx/interface/icons/event_icons/event_portrait.dds"
+									}
+									visible = "[GetScriptedGui('ve_idea_14_but_4').IsShown( GuiScope.End )]"
+									enabled = "[GetScriptedGui('ve_idea_14_but_4').IsValid( GuiScope.End )]"
+									onclick = "[GetScriptedGui('ve_idea_14_but_4').Execute(GuiScope.End)]"
+								}
+								widget = {
+									size = {
+										45
+										45
+									}
+									icon = {
+										texture = "gfx/interface/icons/event_icons/event_portrait.dds"
+										size = {
+											100%
+											100%
+										}
+									}
+									visible = "[Not( GetScriptedGui('ve_idea_14_but_4').IsShown( GuiScope.End) )]"
+									enabled = "[GetScriptedGui('ve_idea_14_but_4').IsValid( GuiScope.End )]"
+									onclick = "[GetScriptedGui('ve_idea_14_but_4').Execute(GuiScope.End)]"
+								}
+							}
+							vbox = {
+
+								button_icon_round_big = {
+									size = {
+										45
+										45
+									}
+									blockoverride
+									"icon"
+									{
+										texture = "gfx/interface/icons/event_icons/event_portrait.dds"
+									}
+									visible = "[GetScriptedGui('ve_idea_14_but_5').IsShown( GuiScope.End )]"
+									enabled = "[GetScriptedGui('ve_idea_14_but_5').IsValid( GuiScope.End )]"
+									onclick = "[GetScriptedGui('ve_idea_14_but_5').Execute(GuiScope.End)]"
+								}
+								widget = {
+									size = {
+										45
+										45
+									}
+									icon = {
+										texture = "gfx/interface/icons/event_icons/event_portrait.dds"
+										size = {
+											100%
+											100%
+										}
+									}
+									visible = "[Not( GetScriptedGui('ve_idea_14_but_5').IsShown( GuiScope.End) )]"
+									enabled = "[GetScriptedGui('ve_idea_14_but_5').IsValid( GuiScope.End )]"
+									onclick = "[GetScriptedGui('ve_idea_14_but_5').Execute(GuiScope.End)]"
+								}
+							}
+							vbox = {
+
+								button_icon_round_big = {
+									size = {
+										45
+										45
+									}
+									blockoverride
+									"icon"
+									{
+										texture = "gfx/interface/icons/event_icons/event_portrait.dds"
+									}
+									visible = "[GetScriptedGui('ve_idea_14_but_6').IsShown( GuiScope.End )]"
+									enabled = "[GetScriptedGui('ve_idea_14_but_6').IsValid( GuiScope.End )]"
+									onclick = "[GetScriptedGui('ve_idea_14_but_6').Execute(GuiScope.End)]"
+								}
+								widget = {
+									size = {
+										45
+										45
+									}
+									icon = {
+										texture = "gfx/interface/icons/event_icons/event_portrait.dds"
+										size = {
+											100%
+											100%
+										}
+									}
+									visible = "[Not( GetScriptedGui('ve_idea_14_but_6').IsShown( GuiScope.End) )]"
+									enabled = "[GetScriptedGui('ve_idea_14_but_6').IsValid( GuiScope.End )]"
+									onclick = "[GetScriptedGui('ve_idea_14_but_6').Execute(GuiScope.End)]"
+								}
+							}
+							vbox = {
+
+								button_icon_round_big = {
+									size = {
+										45
+										45
+									}
+									blockoverride
+									"icon"
+									{
+										texture = "gfx/interface/icons/event_icons/event_portrait.dds"
+									}
+									visible = "[GetScriptedGui('ve_idea_14_but_7').IsShown( GuiScope.End )]"
+									enabled = "[GetScriptedGui('ve_idea_14_but_7').IsValid( GuiScope.End )]"
+									onclick = "[GetScriptedGui('ve_idea_14_but_7').Execute(GuiScope.End)]"
+								}
+								widget = {
+									size = {
+										45
+										45
+									}
+									icon = {
+										texture = "gfx/interface/icons/event_icons/event_portrait.dds"
+										size = {
+											100%
+											100%
+										}
+									}
+									visible = "[Not( GetScriptedGui('ve_idea_14_but_7').IsShown( GuiScope.End) )]"
+									enabled = "[GetScriptedGui('ve_idea_14_but_7').IsValid( GuiScope.End )]"
+									onclick = "[GetScriptedGui('ve_idea_14_but_7').Execute(GuiScope.End)]"
+								}
+							}
+							
+						}
+						default_progressbar_horizontal = {
+							tooltip = "TECHNOLOGY_GAIN_BREAKDOWN"
+							layoutpolicy_horizontal = growing
+							size = {
+								0
+								8
+							}
+							blockoverride
+							"values"
+							{
+								# max = "[FixedPointToFloat(GuiScope .ScriptValue('idea_14_bar_point_value_max'))]"
+								# value = "[FixedPointToFloat(GuiScope .ScriptValue('idea_14_bar_point_value'))]"
+								max = "[GuiScope.SetRoot(MakeScopeValue(GetPlayer.GetGDP)).ScriptValue('idea_14_bar_point_value_max')]"
+								value = "[GuiScope.SetRoot(MakeScopeValue(GetPlayer.GetGDP)).ScriptValue('idea_14_bar_point_value')]"
+							}
+							visible = "[GetScriptedGui('ve_idea_14_but_7').IsShown( GuiScope.End )]"
+						}
+						button = {
+							using = default_button_action
+							size = { 100% 40 }
+							raw_text = "Embrace"
+							visible = "[GetScriptedGui('ve_idea_14_embraced_idea').IsValid( GuiScope.End )]"
+							enabled = "[GetScriptedGui('ve_idea_14_embraced_idea').IsValid( GuiScope.End )]"
+							onclick = "[GetScriptedGui('ve_idea_14_embraced_idea').Execute(GuiScope.End)]"
+							using = tooltip_above
+							using = budget_pause_all_button_sound
+						}
+						button = {
+							using = default_button_action
+							size = { 100% 40 }
+							raw_text = "Cancel"
+							visible = "[GetScriptedGui('ve_idea_14_cancel_embrace_idea').IsValid( GuiScope.End )]"
+							enabled = "[GetScriptedGui('ve_idea_14_cancel_embrace_idea').IsValid( GuiScope.End )]"
+							onclick = "[GetScriptedGui('ve_idea_14_cancel_embrace_idea').Execute(GuiScope.End)]"
+							using = tooltip_above
+							using = budget_pause_all_button_sound
+						}
+					}
+				}
+				hbox = {
+					using = main_bg
+					
+					margin = {
+						20
+						20
+					}
+					vbox = {
+						spacing = 10
+						icon = {
+							texture = "gfx/interface/icons/event_icons/event_portrait.dds"
+							size = {
+								120
+								120
+							}
+						}
+						
+					}
+					vbox = {
+						spacing = 20
+						textbox = {
+							raw_text = "Imperialist"
+							using = fontsize_xxl
+							align = center
+							autoresize = yes
+						}
+						hbox = {
+							vbox = {
+
+								button_icon_round_big = {
+									size = {
+										45
+										45
+									}
+									blockoverride
+									"icon"
+									{
+										texture = "gfx/interface/icons/event_icons/event_portrait.dds"
+									}
+									visible = "[GetScriptedGui('ve_idea_15_but_1').IsShown( GuiScope.End )]"
+									enabled = "[GetScriptedGui('ve_idea_15_but_1').IsValid( GuiScope.End )]"
+									onclick = "[GetScriptedGui('ve_idea_15_but_1').Execute(GuiScope.End)]"
+								}
+								widget = {
+									size = {
+										45
+										45
+									}
+									icon = {
+										texture = "gfx/interface/icons/event_icons/event_portrait.dds"
+										size = {
+											100%
+											100%
+										}
+									}
+									visible = "[Not( GetScriptedGui('ve_idea_15_but_1').IsShown( GuiScope.End) )]"
+									enabled = "[GetScriptedGui('ve_idea_15_but_1').IsValid( GuiScope.End )]"
+									onclick = "[GetScriptedGui('ve_idea_15_but_1').Execute(GuiScope.End)]"
+								}
+							}
+							vbox = {
+
+								button_icon_round_big = {
+									size = {
+										45
+										45
+									}
+									blockoverride
+									"icon"
+									{
+										texture = "gfx/interface/icons/event_icons/event_portrait.dds"
+									}
+									visible = "[GetScriptedGui('ve_idea_15_but_2').IsShown( GuiScope.End )]"
+									enabled = "[GetScriptedGui('ve_idea_15_but_2').IsValid( GuiScope.End )]"
+									onclick = "[GetScriptedGui('ve_idea_15_but_2').Execute(GuiScope.End)]"
+								}
+								widget = {
+									size = {
+										45
+										45
+									}
+									icon = {
+										texture = "gfx/interface/icons/event_icons/event_portrait.dds"
+										size = {
+											100%
+											100%
+										}
+									}
+									visible = "[Not( GetScriptedGui('ve_idea_15_but_2').IsShown( GuiScope.End) )]"
+									enabled = "[GetScriptedGui('ve_idea_15_but_2').IsValid( GuiScope.End )]"
+									onclick = "[GetScriptedGui('ve_idea_15_but_2').Execute(GuiScope.End)]"
+								}
+							}
+							vbox = {
+
+								button_icon_round_big = {
+									size = {
+										45
+										45
+									}
+									blockoverride
+									"icon"
+									{
+										texture = "gfx/interface/icons/event_icons/event_portrait.dds"
+									}
+									visible = "[GetScriptedGui('ve_idea_15_but_3').IsShown( GuiScope.End )]"
+									enabled = "[GetScriptedGui('ve_idea_15_but_3').IsValid( GuiScope.End )]"
+									onclick = "[GetScriptedGui('ve_idea_15_but_3').Execute(GuiScope.End)]"
+								}
+								widget = {
+									size = {
+										45
+										45
+									}
+									icon = {
+										texture = "gfx/interface/icons/event_icons/event_portrait.dds"
+										size = {
+											100%
+											100%
+										}
+									}
+									visible = "[Not( GetScriptedGui('ve_idea_15_but_3').IsShown( GuiScope.End) )]"
+									enabled = "[GetScriptedGui('ve_idea_15_but_3').IsValid( GuiScope.End )]"
+									onclick = "[GetScriptedGui('ve_idea_15_but_3').Execute(GuiScope.End)]"
+								}
+							}
+							vbox = {
+
+								button_icon_round_big = {
+									size = {
+										45
+										45
+									}
+									blockoverride
+									"icon"
+									{
+										texture = "gfx/interface/icons/event_icons/event_portrait.dds"
+									}
+									visible = "[GetScriptedGui('ve_idea_15_but_4').IsShown( GuiScope.End )]"
+									enabled = "[GetScriptedGui('ve_idea_15_but_4').IsValid( GuiScope.End )]"
+									onclick = "[GetScriptedGui('ve_idea_15_but_4').Execute(GuiScope.End)]"
+								}
+								widget = {
+									size = {
+										45
+										45
+									}
+									icon = {
+										texture = "gfx/interface/icons/event_icons/event_portrait.dds"
+										size = {
+											100%
+											100%
+										}
+									}
+									visible = "[Not( GetScriptedGui('ve_idea_15_but_4').IsShown( GuiScope.End) )]"
+									enabled = "[GetScriptedGui('ve_idea_15_but_4').IsValid( GuiScope.End )]"
+									onclick = "[GetScriptedGui('ve_idea_15_but_4').Execute(GuiScope.End)]"
+								}
+							}
+							vbox = {
+
+								button_icon_round_big = {
+									size = {
+										45
+										45
+									}
+									blockoverride
+									"icon"
+									{
+										texture = "gfx/interface/icons/event_icons/event_portrait.dds"
+									}
+									visible = "[GetScriptedGui('ve_idea_15_but_5').IsShown( GuiScope.End )]"
+									enabled = "[GetScriptedGui('ve_idea_15_but_5').IsValid( GuiScope.End )]"
+									onclick = "[GetScriptedGui('ve_idea_15_but_5').Execute(GuiScope.End)]"
+								}
+								widget = {
+									size = {
+										45
+										45
+									}
+									icon = {
+										texture = "gfx/interface/icons/event_icons/event_portrait.dds"
+										size = {
+											100%
+											100%
+										}
+									}
+									visible = "[Not( GetScriptedGui('ve_idea_15_but_5').IsShown( GuiScope.End) )]"
+									enabled = "[GetScriptedGui('ve_idea_15_but_5').IsValid( GuiScope.End )]"
+									onclick = "[GetScriptedGui('ve_idea_15_but_5').Execute(GuiScope.End)]"
+								}
+							}
+							vbox = {
+
+								button_icon_round_big = {
+									size = {
+										45
+										45
+									}
+									blockoverride
+									"icon"
+									{
+										texture = "gfx/interface/icons/event_icons/event_portrait.dds"
+									}
+									visible = "[GetScriptedGui('ve_idea_15_but_6').IsShown( GuiScope.End )]"
+									enabled = "[GetScriptedGui('ve_idea_15_but_6').IsValid( GuiScope.End )]"
+									onclick = "[GetScriptedGui('ve_idea_15_but_6').Execute(GuiScope.End)]"
+								}
+								widget = {
+									size = {
+										45
+										45
+									}
+									icon = {
+										texture = "gfx/interface/icons/event_icons/event_portrait.dds"
+										size = {
+											100%
+											100%
+										}
+									}
+									visible = "[Not( GetScriptedGui('ve_idea_15_but_6').IsShown( GuiScope.End) )]"
+									enabled = "[GetScriptedGui('ve_idea_15_but_6').IsValid( GuiScope.End )]"
+									onclick = "[GetScriptedGui('ve_idea_15_but_6').Execute(GuiScope.End)]"
+								}
+							}
+							vbox = {
+
+								button_icon_round_big = {
+									size = {
+										45
+										45
+									}
+									blockoverride
+									"icon"
+									{
+										texture = "gfx/interface/icons/event_icons/event_portrait.dds"
+									}
+									visible = "[GetScriptedGui('ve_idea_15_but_7').IsShown( GuiScope.End )]"
+									enabled = "[GetScriptedGui('ve_idea_15_but_7').IsValid( GuiScope.End )]"
+									onclick = "[GetScriptedGui('ve_idea_15_but_7').Execute(GuiScope.End)]"
+								}
+								widget = {
+									size = {
+										45
+										45
+									}
+									icon = {
+										texture = "gfx/interface/icons/event_icons/event_portrait.dds"
+										size = {
+											100%
+											100%
+										}
+									}
+									visible = "[Not( GetScriptedGui('ve_idea_15_but_7').IsShown( GuiScope.End) )]"
+									enabled = "[GetScriptedGui('ve_idea_15_but_7').IsValid( GuiScope.End )]"
+									onclick = "[GetScriptedGui('ve_idea_15_but_7').Execute(GuiScope.End)]"
+								}
+							}
+							
+						}
+						default_progressbar_horizontal = {
+							tooltip = "TECHNOLOGY_GAIN_BREAKDOWN"
+							layoutpolicy_horizontal = growing
+							size = {
+								0
+								8
+							}
+							blockoverride
+							"values"
+							{
+								# max = "[FixedPointToFloat(GuiScope .ScriptValue('idea_15_bar_point_value_max'))]"
+								# value = "[FixedPointToFloat(GuiScope .ScriptValue('idea_15_bar_point_value'))]"
+								max = "[GuiScope.SetRoot(MakeScopeValue(GetPlayer.GetGDP)).ScriptValue('idea_15_bar_point_value_max')]"
+								value = "[GuiScope.SetRoot(MakeScopeValue(GetPlayer.GetGDP)).ScriptValue('idea_15_bar_point_value')]"
+							}
+							visible = "[GetScriptedGui('ve_idea_15_but_7').IsShown( GuiScope.End )]"
+						}
+						button = {
+							using = default_button_action
+							size = { 100% 40 }
+							raw_text = "Embrace"
+							visible = "[GetScriptedGui('ve_idea_15_embraced_idea').IsValid( GuiScope.End )]"
+							enabled = "[GetScriptedGui('ve_idea_15_embraced_idea').IsValid( GuiScope.End )]"
+							onclick = "[GetScriptedGui('ve_idea_15_embraced_idea').Execute(GuiScope.End)]"
+							using = tooltip_above
+							using = budget_pause_all_button_sound
+						}
+						button = {
+							using = default_button_action
+							size = { 100% 40 }
+							raw_text = "Cancel"
+							visible = "[GetScriptedGui('ve_idea_15_cancel_embrace_idea').IsValid( GuiScope.End )]"
+							enabled = "[GetScriptedGui('ve_idea_15_cancel_embrace_idea').IsValid( GuiScope.End )]"
+							onclick = "[GetScriptedGui('ve_idea_15_cancel_embrace_idea').Execute(GuiScope.End)]"
 							using = tooltip_above
 							using = budget_pause_all_button_sound
 						}

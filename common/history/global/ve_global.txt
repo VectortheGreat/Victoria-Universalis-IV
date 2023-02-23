@@ -148,6 +148,18 @@
 			value = 0
 		}
 		set_variable = {
+			name = idea_13_bar_point
+			value = 0
+		}
+		set_variable = {
+			name = idea_14_bar_point
+			value = 0
+		}
+		set_variable = {
+			name = idea_15_bar_point
+			value = 0
+		}
+		set_variable = {
 			name = ve_max_idea_slot_bar
 			value = 0
 		}
