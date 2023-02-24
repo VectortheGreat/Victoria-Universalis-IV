@@ -1,21 +1,18 @@
 ve_golden_age = {
 	scope = country
 	is_valid = {
-		any_country = {
-			is_ai = no
-			NOT = {
-				has_variable = clicked_golden_age
-			}
-			var:ve_triggered_objectives >= 3
+		NOT = {
+			has_variable = clicked_golden_age
 		}
+		# var:ve_triggered_objectives >= 3
+		always = yes
 	}
 	effect = {
-		every_country = {
-			limit = {
-				is_ai = no
-			}
-			set_variable = clicked_golden_age
-		}
+		set_variable = clicked_golden_age
+		add_treasury = 1000000
+	}
+	ai_chance = {
+		base = 100
 	}
 }
 

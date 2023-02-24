@@ -29,14 +29,10 @@ dev.1 = {
 			limit = {
 				var:idea_point_pool < 999
 			}
-			change_variable = {
-				name = idea_point_pool
-				add = 300
-			}
 		}
 		change_variable = {
 			name = idea_point_pool
-			add = 9999
+			add = 999
 		}
 	}
 	option = {
@@ -226,18 +222,8 @@ dev.2 = {
 	}
 	option = {
 		name = dev.1.c
-		set_variable = {
-			name = idea_13_bar_point
-			value = 0
-		}
-		set_variable = {
-			name = idea_14_bar_point
-			value = 0
-		}
-		set_variable = {
-			name = idea_15_bar_point
-			value = 0
-		}
+		debug_log = "debug ve_golden_age"
+		debug_log_scopes = no
 	}
 }
 

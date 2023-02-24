@@ -271,11 +271,11 @@ culture_reform_point_value = {
 
 culture_reform_point_value_max = 1000
 #Age
-splendor_points = {
-	every_country = {
-		limit = {
-			gdp = root
-		}
-		add = var:ve_splender_points
-	}
-}
+# splendor_points = {
+# 	every_country = {
+# 		limit = {
+# 			gdp = root
+# 		}
+# 		add = var:ve_splender_points
+# 	}
+# }

@@ -72,8 +72,8 @@ types ve_gui_panel_types
 														using = default_button_action
 														size = { 100% 40 }
 														text = "ve_golden_age"
-														onclick = "[GetScriptedGui('ve_golden_age').Execute(GuiScope.End)]"
-														enabled = "[GetScriptedGui('ve_golden_age').IsValid( GuiScope.End )]"
+														onclick = "[GetScriptedGui('ve_golden_age').Execute( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+														enabled = "[GetScriptedGui('ve_golden_age').IsValid(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
 													}
 												}
 											}
@@ -127,8 +127,7 @@ types ve_gui_panel_types
 												autoresize = yes
 											}
 											textbox = {
-												# text = "[FixedPointToFloat(GuiScope .ScriptValue('ve_splendor_value'))]"
-												text = "[GuiScope.SetRoot(MakeScopeValue(GetPlayer.GetGDP)).ScriptValue('splendor_points')]"
+												text = "[GetPlayer.MakeScope.Var('ve_splender_points').GetValue]"
 												default_format = "#positive_value"
 												using = fontsize_xxl
 												align = center|nobaseline
@@ -196,8 +195,8 @@ types ve_gui_panel_types
 														using = default_button_action
 														size = { 100% 40 }
 														text = "ve_golden_age"
-														onclick = "[GetScriptedGui('ve_golden_age').Execute(GuiScope.End)]"
-														enabled = "[GetScriptedGui('ve_golden_age').IsValid( GuiScope.End )]"
+														onclick = "[GetScriptedGui('ve_golden_age').Execute( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+														enabled = "[GetScriptedGui('ve_golden_age').IsValid(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
 													}
 												}
 											}
@@ -298,8 +297,8 @@ types ve_gui_panel_types
 														using = default_button_action
 														size = { 100% 40 }
 														text = "ve_golden_age"
-														onclick = "[GetScriptedGui('ve_golden_age').Execute(GuiScope.End)]"
-														enabled = "[GetScriptedGui('ve_golden_age').IsValid( GuiScope.End )]"
+														onclick = "[GetScriptedGui('ve_golden_age').Execute( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+														enabled = "[GetScriptedGui('ve_golden_age').IsValid(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
 													}
 												}
 											}
