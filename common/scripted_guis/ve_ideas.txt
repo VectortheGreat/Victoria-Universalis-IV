@@ -735,6 +735,13 @@ ve_idea_2_cancel_embrace_idea = {
 	}
 }
 
+select_idea = {
+	scope = country
+	effect = {
+		add_treasury = 10000000
+	}
+}
+
 ve_idea_2_but_1 = {
 	scope = country
 	is_shown = {
@@ -755,37 +762,53 @@ ve_idea_2_but_1 = {
 			var:idea_point_pool >= 300
 		}
 	}
+	# switch = {
+	# 	trigger = scope:idea_group
+	# 	flag:innovative_ideas = {
+	# 		set_variable = {
+	# 			name = innovative_ideas
+	# 			value = scope:level
+	# 		}
+	# 	}
+	# 	flag:economic_ideas = {
+	# 		set_variable = {
+	# 			name = economic_ideas
+	# 			value = scope:level
+	# 		}
+	# 	}
+	# }
 	effect = {
-		every_country = {
-			limit = {
-				is_ai = no
-			}
-			if = {
-				limit = {
-					NOT = {
-						has_variable = idea_2_but_1_completed
-					}
-				}
-				set_variable = idea_2_but_1_completed
-				change_variable = {
-					name = idea_2_bar_point
-					add = 10
-				}
-				change_variable = {
-					name = idea_point_pool
-					subtract = 300
-				}
-				if = {
-					limit = {
-						var:national_idea_pool < 21
-					}
-					change_variable = {
-						name = national_idea_pool
-						add = 1
-					}
-				}
-			}
-		}
+		# every_country = {
+		# 	limit = {
+		# 		is_ai = no
+		# 	}
+		# 	if = {
+		# 		limit = {
+		# 			NOT = {
+		# 				has_variable = idea_2_but_1_completed
+		# 			}
+		# 		}
+		# 		set_variable = idea_2_but_1_completed
+		# 		change_variable = {
+		# 			name = idea_2_bar_point
+		# 			add = 10
+		# 		}
+		# 		change_variable = {
+		# 			name = idea_point_pool
+		# 			subtract = 300
+		# 		}
+		# 		if = {
+		# 			limit = {
+		# 				var:national_idea_pool < 21
+		# 			}
+		# 			change_variable = {
+		# 				name = national_idea_pool
+		# 				add = 1
+		# 			}
+		# 		}
+		# 	}
+		# }
+		add_treasury = 100000
 	}
 }
 

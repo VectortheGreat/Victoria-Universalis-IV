@@ -9,7 +9,6 @@ ve_golden_age = {
 	}
 	effect = {
 		set_variable = clicked_golden_age
-		add_treasury = 1000000
 	}
 	ai_chance = {
 		base = 100

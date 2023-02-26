@@ -1,0 +1,57 @@
+﻿STATES = {
+	s:STATE_MINSK = {
+		create_state = {
+			country = c:RUS
+			owned_provinces = {
+				x0161E0
+				x2B4670
+				xA16195
+				xC9C7AF
+				x51F4A4
+				x26722B
+				x557F9F
+				xC3D50D
+				x21175E
+				x28C9D9
+				x80E061
+				x2EB844
+				xEDA68C
+				x4B3105
+				xC06C1A
+				xA36969
+				x0A89D7
+				x716052
+				xF05D59
+				x16A8B5
+				x80DFDF
+			}
+		}
+		add_homeland = russian
+		add_homeland = byelorussian
+		#TEST
+		set_global_variable = {
+			name = trade_ideas
+			value = flag:trade_ideas
+		}
+		add_to_global_variable_list = {
+			name = economic_idea_groups
+			target = global_var:trade_ideas
+		}
+		set_global_variable = {
+			name = 1
+			value = 1
+		}
+		add_to_global_variable_list = {
+			name = idea_index
+			target = global_var:1
+		}
+		set_global_variable = {
+			name = 2
+			value = 2
+		}
+		add_to_global_variable_list = {
+			name = idea_index
+			target = global_var:2
+		}
+	}
+}
