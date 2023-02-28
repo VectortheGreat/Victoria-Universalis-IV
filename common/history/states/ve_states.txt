@@ -28,30 +28,5 @@
 		}
 		add_homeland = russian
 		add_homeland = byelorussian
-		#TEST
-		set_global_variable = {
-			name = trade_ideas
-			value = flag:trade_ideas
-		}
-		add_to_global_variable_list = {
-			name = economic_idea_groups
-			target = global_var:trade_ideas
-		}
-		set_global_variable = {
-			name = 1
-			value = 1
-		}
-		add_to_global_variable_list = {
-			name = idea_index
-			target = global_var:1
-		}
-		set_global_variable = {
-			name = 2
-			value = 2
-		}
-		add_to_global_variable_list = {
-			name = idea_index
-			target = global_var:2
-		}
 	}
 }

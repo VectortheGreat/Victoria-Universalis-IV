@@ -14,6 +14,10 @@ dev.1 = {
 	option = {
 		name = dev.1.a
 		default_option = yes
+		change_variable = {
+			name = idea_point_pool
+			add = 9999
+		}
 		if = {
 			limit = {
 				NOT = {
@@ -201,35 +205,32 @@ dev.2 = {
 	flavor = dev.1.f
 	duration = 0
 	trigger = {
-		has_variable = ec_incorporated_population
+		has_variable = innovative_idea
 		var:idea_1_bar_point >= 10
 		country_or_subject_owns_entire_state_region = STATE_HEDJAZ
 	}
 	option = {
-		name = dev.1.a
+		name = dev.2.a
 		default_option = yes
-		change_variable = {
-			name = ve_splender_points
-			add = 800
+		set_variable = {
+			name = innovative_idea
+			value = 0
 		}
 	}
 	option = {
 		name = dev.2.b
-		remove_global_variable = 5_string
-		remove_list_global_variable = {
-			name = idea_index
-			target = global_var:5_string
-		}
-		remove_global_variable = 5_value
-		remove_global_variable = 4_string
-		remove_list_global_variable = {
-			name = idea_index
-			target = global_var:4_string
-		}
-		remove_global_variable = 4_value
+		default_option = yes
+		remove_variable = innovative_idea_completed
 	}
 	option = {
 		name = dev.2.c
+		set_variable = {
+			name = idea_group_unlocked
+			value = 0
+		}
+	}
+	option = {
+		name = dev.2.d
 		random_state_region = {
 			limit = {
 				NOT = {

@@ -159,8 +159,13 @@
 			name = idea_15_bar_point
 			value = 0
 		}
+		has_variable = innovative_idea
 		set_variable = {
-			name = ve_max_idea_slot_bar
+			name = idea_group_cap
+			value = 8
+		}
+		set_variable = {
+			name = idea_group_unlocked
 			value = 0
 		}
 		set_variable = {

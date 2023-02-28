@@ -68,8 +68,8 @@ ve_gui_panel_types
 									blockoverride
 									"values"
 									{
-										max = 8
-										value = "[GetPlayer.MakeScope.Var('ve_max_idea_slot_bar').GetValue]"
+										max = "[GetPlayer.MakeScope.Var('idea_group_cap').GetValue]"
+										value = "[GetPlayer.MakeScope.Var('idea_group_unlocked').GetValue]"
 									}
 								}
 
@@ -507,25 +507,86 @@ ve_gui_panel_types
 								datacontext = "[Scope.GetStateRegion]"
 								vbox = {
 									spacing = 10
+									datamodel = "[GetGlobalList('idea_index')]"
 									text_single = {
 										text = "[Localize(Concatenate(StateRegion.MakeScope.Var('idea_group').GetFlagName,'_name'))]"
 									}
 									hbox = {
 										datamodel = "[GetGlobalList('idea_index')]"
+										text_single = {
+											text = "[GetPlayer.MakeScope.Var('innovative_idea').GetValue]"
+										}
 										item = {
+											
 											button_icon_round_big = {
 												size = {
-													 45
-													 45
-												 }
+													45
+													45
+												}
 												blockoverride
 												"icon"
 												{
 													texture = "gfx/interface/icons/event_icons/event_portrait.dds"
 												}
-												onclick = "[GetScriptedGui('select_idea').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('idea_group',MakeScopeFlag(StateRegion.MakeScope.Var('idea_group').GetFlagName)).AddScope('level',MakeScopeValue(GetGlobalVariable(Concatenate(Scope.GetFlagName,'_value')))).End)]"
-											}
+												enabled = "[GetScriptedGui('select_idea').IsValid(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('idea_group',MakeScopeFlag(StateRegion.MakeScope.Var('idea_group').GetFlagName)).AddScope('level',MakeScopeValue(GetGlobalVariable(Concatenate(Scope.GetFlagName,'_value')).GetValue)).End)]"
+												# enabled = "[GetScriptedGui('select_idea').IsValid(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('idea_group',MakeScopeFlag(StateRegion.MakeScope.Var('idea_group').GetFlagName)).AddScope('level',MakeScopeValue(GetGlobalVariable(Concatenate(Scope.GetFlagName,'_value')).GetValue)).End)]"
+												onclick = "[GetScriptedGui('select_idea').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('idea_group',MakeScopeFlag(StateRegion.MakeScope.Var('idea_group').GetFlagName)).AddScope('level',MakeScopeValue(GetGlobalVariable(Concatenate(Scope.GetFlagName,'_value')).GetValue)).End)]"
+												tooltip = "[GetScriptedGui('boost_idea_group').ExecuteTooltip(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('idea_group',MakeScopeFlag(StateRegion.MakeScope.Var('idea_group').GetFlagName)).AddScope('level',MakeScopeValue(GetGlobalVariable(Concatenate(Scope.GetFlagName,'_value')).GetValue)).End)]"
+												# tooltip = "[GetScriptedGui('sguisss').ExecuteTooltip( GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+											}		
 										}
+									}
+									default_progressbar_horizontal = {
+										layoutpolicy_horizontal = expanding
+										size = {
+											100%
+											10
+										}
+										blockoverride
+										"values"
+										{
+											max = 7
+											value = "[GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('idea_group',MakeScopeFlag(StateRegion.MakeScope.Var('idea_group').GetFlagName)).AddScope('level',MakeScopeValue(GetGlobalVariable(Concatenate(Scope.GetFlagName,'_value')).GetValue))]"
+											# value = "[GetPlayer.MakeScope.Var('innovative_idea').GetValue]"
+										}
+									}
+									button = {
+										using = default_button_action
+										layoutpolicy_horizontal = expanding
+										size = { 100% 40 }
+										raw_text = "Embrace"
+										visible = "[GetScriptedGui('embrace_idea_group').IsShown(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('idea_group',MakeScopeFlag(StateRegion.MakeScope.Var('idea_group').GetFlagName)).End)]"
+										enabled = "[GreaterThan_CFixedPoint(GetPlayer.MakeScope.Var('idea_group_cap').GetValue,GetPlayer.MakeScope.Var('idea_group_unlocked').GetValue)]"
+										onclick = "[GetScriptedGui('embrace_idea_group').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('idea_group',MakeScopeFlag(StateRegion.MakeScope.Var('idea_group').GetFlagName)).End)]"
+										using = tooltip_above
+										using = budget_pause_all_button_sound
+									}
+									button = {
+										using = default_button_action
+										layoutpolicy_horizontal = expanding
+										size = { 100% 40 }
+										raw_text = "Cancel"
+										visible = "[Not(GetScriptedGui('embrace_idea_group').IsShown(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('idea_group',MakeScopeFlag(StateRegion.MakeScope.Var('idea_group').GetFlagName)).AddScope('level',MakeScopeValue(GetGlobalVariable(Concatenate(Scope.GetFlagName,'_value')).GetValue)).End))]"
+										onclick = "[GetScriptedGui('cancel_idea').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('idea_group',MakeScopeFlag(StateRegion.MakeScope.Var('idea_group').GetFlagName)).AddScope('level',MakeScopeValue(GetGlobalVariable(Concatenate(Scope.GetFlagName,'_value')).GetValue)).End)]"
+										using = tooltip_above
+										using = budget_pause_all_button_sound
+									}
+									button = {
+										using = default_button_action
+										layoutpolicy_horizontal = expanding
+										size = { 100% 40 }
+										raw_text = "Boost Idea"
+										visible = "[GetScriptedGui('boost_idea_group').IsShown(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('idea_group',MakeScopeFlag(StateRegion.MakeScope.Var('idea_group').GetFlagName)).End)]"
+										enabled = "[GetScriptedGui('boost_idea_group').IsValid(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('idea_group',MakeScopeFlag(StateRegion.MakeScope.Var('idea_group').GetFlagName)).End)]"
+										onclick = "[GetScriptedGui('boost_idea_group').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('idea_group',MakeScopeFlag(StateRegion.MakeScope.Var('idea_group').GetFlagName)).End)]"
+										using = tooltip_above
+										using = budget_pause_all_button_sound
+									}
+									text_single = {
+										text = "[GetPlayer.MakeScope.Var('idea_group_cap').GetValue]"
+									}
+									text_single = {
+										text = "[GetPlayer.MakeScope.Var('idea_group_unlocked').GetValue]"
 									}
 								}
 							}
@@ -627,6 +688,7 @@ ve_gui_panel_types
 												}
 												onclick = "[GetScriptedGui('ve_idea_2_but_1').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('idea_group',MakeScopeFlag(StateRegion.MakeScope.Var('idea_group').GetFlagName)).AddScope('level',MakeScopeValue(GetGlobalVariable(Concatenate(Scope.GetFlagName,'_value')))).End)]"
 											}
+											
 										}
 									}
 								}
@@ -634,12 +696,12 @@ ve_gui_panel_types
 						}
 					}
 				}
-
+				
 			}
-
+			
 
 			###TEST
-
+			
 			# hbox = {
 			# 	#Idea rows - 5
 			# 	layoutpolicy_horizontal = expanding
