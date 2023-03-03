@@ -1,19 +1,116 @@
 @sol_icon_fontsize = 45
 
 texticon = {
-  icon = BAV_idea_icon_1
+  icon = GBR_idea_icon_1
   iconsize = {
     offset = { 0 15 }
-    texture = "gfx/interface/ve_attrition_idea_icon.dds"
-    fontsize = 120
+    texture = "gfx/interface/ve_national_ideas/diplomatic_reputation.dds"
+
+    fontsize = 50
   }
 }
 texticon = {
-  icon = BAV_idea_icon_1_black
+  icon = GBR_idea_icon_1_black
   iconsize = {
     offset = { 0 15 }
-    texture = "gfx/interface/ve_attrition_idea_icon_black.dds"
-    fontsize = 120
+    texture = "gfx/interface/ve_national_ideas/diplomatic_reputation_black.dds"
+    fontsize = 50
+  }
+}
+texticon = {
+  icon = GBR_idea_icon_2
+  iconsize = {
+    offset = { 0 15 }
+    texture = "gfx/interface/ve_national_ideas/technology_cost.dds"
+    fontsize = 50
+  }
+}
+texticon = {
+  icon = GBR_idea_icon_2_black
+  iconsize = {
+    offset = { 0 15 }
+    texture = "gfx/interface/ve_national_ideas/technology_cost_black.dds"
+    fontsize = 50
+  }
+}
+texticon = {
+  icon = GBR_idea_icon_3
+  iconsize = {
+    offset = { 0 15 }
+    texture = "gfx/interface/ve_national_ideas/trade_route.dds"
+    fontsize = 50
+  }
+}
+texticon = {
+  icon = GBR_idea_icon_3_black
+  iconsize = {
+    offset = { 0 15 }
+    texture = "gfx/interface/ve_national_ideas/trade_route_black.dds"
+    fontsize = 50
+  }
+}
+texticon = {
+  icon = GBR_idea_icon_4
+  iconsize = {
+    offset = { 0 15 }
+    texture = "gfx/interface/ve_national_ideas/can_colony_boost_development.dds"
+    fontsize = 50
+  }
+}
+texticon = {
+  icon = GBR_idea_icon_4_black
+  iconsize = {
+    offset = { 0 15 }
+    texture = "gfx/interface/ve_national_ideas/can_colony_boost_development_black.dds"
+    fontsize = 50
+  }
+}
+texticon = {
+  icon = GBR_idea_icon_5
+  iconsize = {
+    offset = { 0 15 }
+    texture = "gfx/interface/ve_national_ideas/legitimacy.dds"
+    fontsize = 50
+  }
+}
+texticon = {
+  icon = GBR_idea_icon_5_black
+  iconsize = {
+    offset = { 0 15 }
+    texture = "gfx/interface/ve_national_ideas/legitimacy_black.dds"
+    fontsize = 50
+  }
+}
+texticon = {
+  icon = GBR_idea_icon_6
+  iconsize = {
+    offset = { 0 15 }
+    texture = "gfx/interface/ve_national_ideas/coal.dds"
+    fontsize = 65
+  }
+}
+texticon = {
+  icon = GBR_idea_icon_6_black
+  iconsize = {
+    offset = { 0 15 }
+    texture = "gfx/interface/ve_national_ideas/coal_black.dds"
+    fontsize = 65
+  }
+}
+texticon = {
+  icon = GBR_idea_icon_7
+  iconsize = {
+    offset = { 0 15 }
+    texture = "gfx/interface/ve_national_ideas/discipline.dds"
+    fontsize = 50
+  }
+}
+texticon = {
+  icon = GBR_idea_icon_7_black
+  iconsize = {
+    offset = { 0 15 }
+    texture = "gfx/interface/ve_national_ideas/discipline_black.dds"
+    fontsize = 50
   }
 }
 

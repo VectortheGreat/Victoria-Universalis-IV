@@ -389,9 +389,7 @@
 	4-state_turmoil_effects_mult
 	5-country_max_declared_interests_mult
 	6-state_colony_growth_creation_mult
-	7-country_radicals_from_conquest_mult
-
-	
+	7-country_radicals_from_conquest_mult	
 	
 }
 
@@ -473,7 +471,7 @@
 	Bonus: -country_navy_power_projection_mult
 	1-country_influence_mult
 	2-technology_invention_cost_mult
-	3-tariff_export_add ve market_max_exports_add
+	3-country_trade_route_cost_mult
 	4-state_colony_growth_creation_mult
 	5-country_legitimacy_headofstate_add
 	6-building_coal_mine_throughput_mult

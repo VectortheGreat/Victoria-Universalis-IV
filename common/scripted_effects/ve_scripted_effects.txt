@@ -1,33 +1,228 @@
-﻿debug_success = {
-	add_treasury = 50000
-}
-debug_fail = {
-	add_treasury = -50000
-}
-
-assert = {
-	assert_if = {
-		limit = { always = yes }
-	}
-}
-
-
-set_all_colony = {
-	every_state = {
-		limit = {
-			OR = {
-				region = sr:region_north_africa
-				region = sr:region_southern_africa
-				region = sr:region_zanj
-				region = sr:region_senegal
-				region = sr:region_niger
-				region = sr:region_nile_basin
-				region = sr:region_congo
+﻿national_idea_1_mdf = {
+	c:GBR = {
+		if = {
+			limit = {
+				var:national_idea_pool >= 3
+				NOT = {
+					has_modifier = gbr_idea_1
+				}
 			}
-		
+			add_modifier = {
+				name = gbr_idea_1
+				months = -1
+			}
 		}
-		set_state_owner = c:GBR
-		set_state_type = unincorporated
+		if = {
+			limit = {
+				var:national_idea_pool >= 6
+				NOT = {
+					has_modifier = gbr_idea_2
+				}
+			}
+			add_modifier = {
+				name = gbr_idea_2
+				months = -1
+			}
+		}
+		if = {
+			limit = {
+				var:national_idea_pool >= 9
+				NOT = {
+					has_modifier = gbr_idea_3
+				}
+			}
+			add_modifier = {
+				name = gbr_idea_3
+				months = -1
+			}
+		}
+		if = {
+			limit = {
+				var:national_idea_pool >= 12
+				NOT = {
+					has_modifier = gbr_idea_4
+				}
+			}
+			add_modifier = {
+				name = gbr_idea_4
+				months = -1
+			}
+		}
+		if = {
+			limit = {
+				var:national_idea_pool >= 15
+				NOT = {
+					has_modifier = gbr_idea_5
+				}
+			}
+			add_modifier = {
+				name = gbr_idea_5
+				months = -1
+			}
+		}
+		if = {
+			limit = {
+				var:national_idea_pool >= 18
+				NOT = {
+					has_modifier = gbr_idea_6
+				}
+			}
+			add_modifier = {
+				name = gbr_idea_6
+				months = -1
+			}
+		}
+		if = {
+			limit = {
+				var:national_idea_pool >= 21
+				NOT = {
+					has_modifier = gbr_idea_7
+				}
+			}
+			add_modifier = {
+				name = gbr_idea_7
+				months = -1
+			}
+		}
 	}
-	
+	c:TUR = {
+		if = {
+			limit = {
+				var:national_idea_pool >= 3
+				NOT = {
+					has_modifier = gbr_idea_1
+				}
+			}
+			add_modifier = {
+				name = gbr_idea_1
+				months = -1
+			}
+		}
+		if = {
+			limit = {
+				var:national_idea_pool >= 6
+				NOT = {
+					has_modifier = gbr_idea_2
+				}
+			}
+			add_modifier = {
+				name = gbr_idea_2
+				months = -1
+			}
+		}
+		if = {
+			limit = {
+				var:national_idea_pool >= 9
+				NOT = {
+					has_modifier = gbr_idea_3
+				}
+			}
+			add_modifier = {
+				name = gbr_idea_3
+				months = -1
+			}
+		}
+		if = {
+			limit = {
+				var:national_idea_pool >= 12
+				NOT = {
+					has_modifier = gbr_idea_4
+				}
+			}
+			add_modifier = {
+				name = gbr_idea_4
+				months = -1
+			}
+		}
+		if = {
+			limit = {
+				var:national_idea_pool >= 15
+				NOT = {
+					has_modifier = gbr_idea_5
+				}
+			}
+			add_modifier = {
+				name = gbr_idea_5
+				months = -1
+			}
+		}
+		if = {
+			limit = {
+				var:national_idea_pool >= 18
+				NOT = {
+					has_modifier = gbr_idea_6
+				}
+			}
+			add_modifier = {
+				name = gbr_idea_6
+				months = -1
+			}
+		}
+		if = {
+			limit = {
+				var:national_idea_pool >= 21
+				NOT = {
+					has_modifier = gbr_idea_7
+				}
+			}
+			add_modifier = {
+				name = gbr_idea_7
+				months = -1
+			}
+		}
+	}
+}
+
+cancel_national_idea_1_mdf = {
+	c:GBR = {
+		if = {
+			limit = {
+				var:national_idea_pool < 3
+				has_modifier = gbr_idea_1
+			}
+			remove_modifier = gbr_idea_1
+		}
+		if = {
+			limit = {
+				var:national_idea_pool < 6
+				has_modifier = gbr_idea_2
+			}
+			remove_modifier = gbr_idea_2
+		}
+		if = {
+			limit = {
+				var:national_idea_pool < 9
+				has_modifier = gbr_idea_3
+			}
+			remove_modifier = gbr_idea_3
+		}
+		if = {
+			limit = {
+				var:national_idea_pool < 12
+				has_modifier = gbr_idea_4
+			}
+			remove_modifier = gbr_idea_4
+		}
+		if = {
+			limit = {
+				var:national_idea_pool < 15
+				has_modifier = gbr_idea_5
+			}
+			remove_modifier = gbr_idea_5
+		}
+		if = {
+			limit = {
+				var:national_idea_pool < 18
+				has_modifier = gbr_idea_6
+			}
+			remove_modifier = gbr_idea_6
+		}
+		if = {
+			limit = {
+				var:national_idea_pool < 21
+				has_modifier = gbr_idea_7
+			}
+			remove_modifier = gbr_idea_7
+		}
+	}
 }

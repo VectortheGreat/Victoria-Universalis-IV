@@ -1,59 +1,125 @@
 ve_national_idea_1 = {
 	scope = country
+	is_shown = {
+		var:national_idea_pool >= 3
+	}
 	is_valid = {
-		any_country = {
-			is_ai = no
-			var:national_idea_pool >= 3
+		var:national_idea_pool >= 3
+	}
+	effect = {
+		if = {
+			limit = {
+				this = c:GBR
+			}
+			add_modifier = {
+				name = gbr_idea_1
+				months = -1
+			}
 		}
 	}
 }
 
 ve_national_idea_2 = {
 	scope = country
+	is_shown = {
+		var:national_idea_pool >= 6
+	}
 	is_valid = {
-		any_country = {
-			is_ai = no
-			var:national_idea_pool >= 6
+		var:national_idea_pool >= 6
+	}
+	effect = {
+		if = {
+			limit = {
+				this = c:GBR
+			}
+			add_modifier = {
+				name = gbr_idea_2
+				months = -1
+			}
 		}
 	}
 }
 
 ve_national_idea_3 = {
 	scope = country
+	is_shown = {
+		var:national_idea_pool >= 9
+	}
 	is_valid = {
-		any_country = {
-			is_ai = no
-			var:national_idea_pool >= 9
+		var:national_idea_pool >= 9
+	}
+	effect = {
+		if = {
+			limit = {
+				this = c:GBR
+			}
+			add_modifier = {
+				name = gbr_idea_3
+				months = -1
+			}
 		}
 	}
 }
 
 ve_national_idea_4 = {
 	scope = country
+	is_shown = {
+		var:national_idea_pool >= 12
+	}
 	is_valid = {
-		any_country = {
-			is_ai = no
-			var:national_idea_pool >= 12
+		var:national_idea_pool >= 12
+	}
+	effect = {
+		if = {
+			limit = {
+				this = c:GBR
+			}
+			add_modifier = {
+				name = gbr_idea_4
+				months = -1
+			}
 		}
 	}
 }
 
 ve_national_idea_5 = {
 	scope = country
+	is_shown = {
+		var:national_idea_pool >= 15
+	}
 	is_valid = {
-		any_country = {
-			is_ai = no
-			var:national_idea_pool >= 15
+		var:national_idea_pool >= 15
+	}
+	effect = {
+		if = {
+			limit = {
+				this = c:GBR
+			}
+			add_modifier = {
+				name = gbr_idea_5
+				months = -1
+			}
 		}
 	}
 }
 
 ve_national_idea_6 = {
 	scope = country
+	is_shown = {
+		var:national_idea_pool >= 18
+	}
 	is_valid = {
-		any_country = {
-			is_ai = no
-			var:national_idea_pool >= 18
+		var:national_idea_pool >= 18
+	}
+	effect = {
+		if = {
+			limit = {
+				this = c:GBR
+			}
+			add_modifier = {
+				name = gbr_idea_6
+				months = -1
+			}
 		}
 	}
 }
@@ -61,25 +127,54 @@ ve_national_idea_6 = {
 ve_national_idea_7 = {
 	scope = country
 	is_shown = {
-		any_country = {
-			is_ai = no
-			var:national_idea_pool >= 21
-		}
+		var:national_idea_pool >= 21
 	}
 	is_valid = {
-		any_country = {
-			is_ai = no
-			var:national_idea_pool >= 21
+		var:national_idea_pool >= 21
+	}
+	effect = {
+		if = {
+			limit = {
+				this = c:GBR
+			}
+			add_modifier = {
+				name = gbr_idea_7
+				months = -1
+			}
 		}
 	}
 }
 
-ve_national_idea_1_visibility = {
+ve_national_idea_tradition = {
 	scope = country
-	is_shown = {
-		any_country = {
-			is_ai = no
-			var:national_idea_pool >= 3
+	effect = {
+		if = {
+			limit = {
+				this = c:GBR
+			}
+			add_modifier = {
+				name = gbr_idea_tradition_1
+				months = -1
+			}
+			add_modifier = {
+				name = gbr_idea_tradition_2
+				months = -1
+			}
+		}
+	}
+}
+
+ve_national_idea_bonus = {
+	scope = country
+	effect = {
+		if = {
+			limit = {
+				this = c:GBR
+			}
+			add_modifier = {
+				name = gbr_idea_bonus
+				months = -1
+			}
 		}
 	}
 }

@@ -11,3 +11,14 @@
 		localization_key = not_catholic_icon
 	}
 }
+
+country_key = {
+	type = country
+	random_valid = no
+	text = {
+		trigger = {
+			this = c:GBR
+		}
+		localization_key = gbr_icon
+	}
+}

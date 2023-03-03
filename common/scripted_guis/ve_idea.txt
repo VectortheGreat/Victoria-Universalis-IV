@@ -119,6 +119,7 @@ cancel_idea = {
 						}
 					}
 				}
+				cancel_national_idea_1_mdf = yes
 			}
 			flag:economic_idea = {
 				remove_variable = can_go_economic
@@ -236,6 +237,7 @@ cancel_idea = {
 						}
 					}
 				}
+				cancel_national_idea_1_mdf = yes
 			}
 			flag:administrative_idea = {
 				remove_variable = can_go_administrative
@@ -353,6 +355,7 @@ cancel_idea = {
 						}
 					}
 				}
+				cancel_national_idea_1_mdf = yes
 			}
 			flag:ethnocentrism_idea = {
 				remove_variable = can_go_ethnocentrism
@@ -470,6 +473,7 @@ cancel_idea = {
 						}
 					}
 				}
+				cancel_national_idea_1_mdf = yes
 			}
 			flag:politics_idea = {
 				remove_variable = can_go_politics
@@ -587,6 +591,7 @@ cancel_idea = {
 						}
 					}
 				}
+				cancel_national_idea_1_mdf = yes
 			}
 			flag:diplomatic_idea = {
 				remove_variable = can_go_diplomatic
@@ -704,6 +709,7 @@ cancel_idea = {
 						}
 					}
 				}
+				cancel_national_idea_1_mdf = yes
 			}
 			flag:trade_idea = {
 				remove_variable = can_go_trade
@@ -821,6 +827,7 @@ cancel_idea = {
 						}
 					}
 				}
+				cancel_national_idea_1_mdf = yes
 			}
 			flag:qualification_idea = {
 				remove_variable = can_go_qualification
@@ -938,6 +945,7 @@ cancel_idea = {
 						}
 					}
 				}
+				cancel_national_idea_1_mdf = yes
 			}
 			flag:humanist_idea = {
 				remove_variable = can_go_humanist
@@ -1055,6 +1063,7 @@ cancel_idea = {
 						}
 					}
 				}
+				cancel_national_idea_1_mdf = yes
 			}
 			flag:syndicalism_idea = {
 				remove_variable = can_go_syndicalism
@@ -1172,6 +1181,7 @@ cancel_idea = {
 						}
 					}
 				}
+				cancel_national_idea_1_mdf = yes
 			}
 			flag:offensive_idea = {
 				remove_variable = can_go_offensive
@@ -1289,6 +1299,7 @@ cancel_idea = {
 						}
 					}
 				}
+				cancel_national_idea_1_mdf = yes
 			}
 			flag:defensive_idea = {
 				remove_variable = can_go_defensive
@@ -1406,6 +1417,7 @@ cancel_idea = {
 						}
 					}
 				}
+				cancel_national_idea_1_mdf = yes
 			}
 			flag:naval_idea = {
 				remove_variable = can_go_naval
@@ -1523,6 +1535,7 @@ cancel_idea = {
 						}
 					}
 				}
+				cancel_national_idea_1_mdf = yes
 			}
 			flag:militarization_idea = {
 				remove_variable = can_go_militarization
@@ -1640,6 +1653,7 @@ cancel_idea = {
 						}
 					}
 				}
+				cancel_national_idea_1_mdf = yes
 			}
 			flag:imperialist_idea = {
 				remove_variable = can_go_imperialist
@@ -1757,6 +1771,7 @@ cancel_idea = {
 						}
 					}
 				}
+				cancel_national_idea_1_mdf = yes
 			}
 		}
 	}
@@ -2136,6 +2151,7 @@ boost_idea_group = {
 					}
 					set_variable = innovative_idea_completed
 				}
+				national_idea_1_mdf = yes
 			}
 			flag:economic_idea = {
 				if = {
@@ -2342,6 +2358,7 @@ boost_idea_group = {
 					}
 					set_variable = economic_idea_completed
 				}
+				national_idea_1_mdf = yes
 			}
 			flag:administrative_idea = {
 				if = {
@@ -2548,6 +2565,7 @@ boost_idea_group = {
 					}
 					set_variable = administrative_idea_completed
 				}
+				national_idea_1_mdf = yes
 			}
 			flag:ethnocentrism_idea = {
 				if = {
@@ -2754,6 +2772,7 @@ boost_idea_group = {
 					}
 					set_variable = ethnocentrism_idea_completed
 				}
+				national_idea_1_mdf = yes
 			}
 			flag:politics_idea = {
 				if = {
@@ -2960,6 +2979,7 @@ boost_idea_group = {
 					}
 					set_variable = politics_idea_completed
 				}
+				national_idea_1_mdf = yes
 			}
 			flag:diplomatic_idea = {
 				if = {
@@ -3166,6 +3186,7 @@ boost_idea_group = {
 					}
 					set_variable = diplomatic_idea_completed
 				}
+				national_idea_1_mdf = yes
 			}
 			flag:trade_idea = {
 				if = {
@@ -3372,6 +3393,7 @@ boost_idea_group = {
 					}
 					set_variable = trade_idea_completed
 				}
+				national_idea_1_mdf = yes
 			}
 			flag:qualification_idea = {
 				if = {
@@ -3578,6 +3600,7 @@ boost_idea_group = {
 					}
 					set_variable = qualification_idea_completed
 				}
+				national_idea_1_mdf = yes
 			}
 			flag:humanist_idea = {
 				if = {
@@ -3784,6 +3807,7 @@ boost_idea_group = {
 					}
 					set_variable = humanist_idea_completed
 				}
+				national_idea_1_mdf = yes
 			}
 			flag:syndicalism_idea = {
 				if = {
@@ -3990,6 +4014,7 @@ boost_idea_group = {
 					}
 					set_variable = syndicalism_idea_completed
 				}
+				national_idea_1_mdf = yes
 			}
 			flag:offensive_idea = {
 				if = {
@@ -4196,6 +4221,7 @@ boost_idea_group = {
 					}
 					set_variable = offensive_idea_completed
 				}
+				national_idea_1_mdf = yes
 			}
 			flag:defensive_idea = {
 				if = {
@@ -4402,6 +4428,7 @@ boost_idea_group = {
 					}
 					set_variable = defensive_idea_completed
 				}
+				national_idea_1_mdf = yes
 			}
 			flag:naval_idea = {
 				if = {
@@ -4608,6 +4635,7 @@ boost_idea_group = {
 					}
 					set_variable = naval_idea_completed
 				}
+				national_idea_1_mdf = yes
 			}
 			flag:militarization_idea = {
 				if = {
@@ -4814,6 +4842,7 @@ boost_idea_group = {
 					}
 					set_variable = militarization_idea_completed
 				}
+				national_idea_1_mdf = yes
 			}
 			flag:imperialist_idea = {
 				if = {
@@ -5020,6 +5049,7 @@ boost_idea_group = {
 					}
 					set_variable = imperialist_idea_completed
 				}
+				national_idea_1_mdf = yes
 			}
 		}
 	}

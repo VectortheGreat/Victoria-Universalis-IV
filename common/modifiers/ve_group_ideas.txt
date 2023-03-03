@@ -31,7 +31,7 @@ innovative_idea_6_mdf = {
 
 innovative_idea_7_mdf = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_lightbulb_positive.dds
-	country_government_wages_mult = -0.1
+	technology_invention_cost_mult = -0.1
 }
 
 diplomatic_idea_1_mdf = {
@@ -88,7 +88,7 @@ offensive_idea_3_mdf = {
 
 offensive_idea_4_mdf = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_lightbulb_positive.dds
-	unit_recovery_rate_add = 10
+	unit_recovery_rate_add = 0.1
 }
 
 offensive_idea_5_mdf = {
@@ -159,7 +159,8 @@ trade_idea_3_mdf = {
 
 trade_idea_4_mdf = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_lightbulb_positive.dds
-	country_trade_route_quantity_mult = 0.15
+	
+	market_land_trade_capacity_add = 10
 }
 
 trade_idea_5_mdf = {
@@ -176,7 +177,7 @@ trade_idea_6_mdf = {
 
 trade_idea_7_mdf = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_lightbulb_positive.dds
-	building_throughput_building_trade_center_mult = 0.1
+	country_trade_route_quantity_mult = 0.2
 }
 
 defensive_idea_1_mdf = {
@@ -192,6 +193,7 @@ defensive_idea_2_mdf = {
 
 defensive_idea_3_mdf = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_lightbulb_positive.dds
+	country_war_exhaustion_casualties_mult = -0.1
 	country_military_wages_mult = -0.1
 }
 
@@ -239,7 +241,7 @@ administrative_idea_4_mdf = {
 
 administrative_idea_5_mdf = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_lightbulb_positive.dds
-	country_government_wages_mult = -0.1
+	country_government_wages_mult = -0.2
 }
 
 administrative_idea_6_mdf = {
@@ -264,7 +266,7 @@ qualification_idea_2_mdf = {
 
 qualification_idea_3_mdf = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_lightbulb_positive.dds
-	technology_invention_cost_mult = -0.1
+	country_society_tech_cost_mult = -0.05
 }
 
 qualification_idea_4_mdf = {
@@ -507,12 +509,12 @@ politics_idea_7_mdf = {
 
 syndicalism_idea_1_mdf = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_lightbulb_positive.dds
-	building_workforce_shares_add = 0.1
+	state_working_adult_ratio_add = 0.1
 }
 
 syndicalism_idea_2_mdf = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_lightbulb_positive.dds
-	state_working_adult_ratio_add = 0.1
+	state_construction_mult = 0.5
 }
 
 syndicalism_idea_3_mdf = {
@@ -522,14 +524,13 @@ syndicalism_idea_3_mdf = {
 
 syndicalism_idea_4_mdf = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_lightbulb_positive.dds
-	state_welfare_payments_add = 0.15
-	state_poor_standard_of_living_add = 2	#unutma
+	state_birth_rate_mult = 0.15
 }
 
 syndicalism_idea_5_mdf = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_lightbulb_positive.dds
-	state_dependent_wage_mult = 0.15
-	state_dependent_political_participation_add = 0.15
+	country_legitimacy_govt_total_votes_add = 5
+	state_poor_standard_of_living_add = 1
 }
 
 syndicalism_idea_6_mdf = {
@@ -539,8 +540,7 @@ syndicalism_idea_6_mdf = {
 
 syndicalism_idea_7_mdf = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_lightbulb_positive.dds
-	building_production_mult = 0.05
-	building_throughput_mult = 0.1
+	building_group_bg_manufacturing_throughput_mult = 0.1
 }
 
 imperialist_idea_1_mdf = {

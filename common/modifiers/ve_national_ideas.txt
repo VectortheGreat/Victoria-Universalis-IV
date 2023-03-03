@@ -1,0 +1,49 @@
+gbr_idea_tradition_1 = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_statue_positive.dds
+	unit_navy_offense_add = 5
+}
+
+gbr_idea_tradition_2 = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_statue_positive.dds
+	unit_advancement_speed_mult = 0.05
+}
+
+gbr_idea_bonus = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_statue_positive.dds
+	country_navy_power_projection_mult = 0.2
+}
+
+gbr_idea_1 = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_statue_positive.dds
+	country_influence_mult = 0.1
+}
+
+gbr_idea_2 = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_statue_positive.dds
+	technology_invention_cost_mult = -0.1
+}
+
+gbr_idea_3 = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_statue_positive.dds
+	country_trade_route_cost_mult = -0.2
+}
+
+gbr_idea_4 = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_statue_positive.dds
+	state_colony_growth_creation_mult = 0.1
+}
+
+gbr_idea_5 = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_statue_positive.dds
+	country_legitimacy_headofstate_add = 10
+}
+
+gbr_idea_6 = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_statue_positive.dds
+	building_coal_mine_throughput_mult = 0.1
+}
+
+gbr_idea_7 = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_statue_positive.dds
+	unit_army_offense_add = 7
+}
