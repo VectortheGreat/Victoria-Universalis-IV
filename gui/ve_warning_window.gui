@@ -1,0 +1,56 @@
+﻿window = {
+	name = "ve_cancel_idea"
+	parentanchor = top|right
+	position = { -250 100 }
+	size = { 640 %100 }
+	layer = windows_layer
+	filter_mouse = all
+	allow_outside = yes
+	alwaystransparent = no	
+	using = Window_Background
+	using = Window_Decoration
+	movable = no	
+	vbox = {
+		restrictparent_min = yes
+		using = Window_Margins
+		layoutpolicy_vertical = expanding
+		datamodel = "[GetGlobalList('adm_ideas')]"
+		widget = {
+			datacontext = "[Scope.GetStateRegion]"
+			size = { 400 150 }
+			vbox = {
+				datamodel = "[GetGlobalList('idea_index')]"
+				layoutpolicy_vertical = expanding
+				layoutpolicy_horizontal = expanding
+				textbox = {
+					text = "ve_idea_cancel_window_title"
+					fontsize = 20
+					align = center|nobaseline
+					parentanchor = top|hcenter
+					size = {
+						100%
+						100%
+					}
+				}
+				hbox = {
+					layoutpolicy_horizontal = expanding
+					spacing = 10
+					button = {
+						layoutpolicy_horizontal = expanding
+						using = default_button_action
+						size = { 100 40 }
+						raw_text = "Yes"
+						onclick = "[GetScriptedGui('cancel_idea').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('idea_group',MakeScopeFlag(StateRegion.MakeScope.Var('idea_group').GetFlagName)).AddScope('level',MakeScopeValue(GetGlobalVariable(Concatenate(Scope.GetFlagName,'_value')).GetValue)).End)]"
+					}
+					button = {
+						layoutpolicy_horizontal = expanding
+						using = default_button_action
+						size = { 100 40 }
+						raw_text = "No"
+						onclick = "[ExecuteConsoleCommand('gui.clearwidgets')]"
+					}
+				}
+			}
+		}
+	}
+}

@@ -479,10 +479,14 @@ ve_gui_panel_types
 					}
 				}
 			}
-			hbox = {
+			hbox = {	#Ideas
 				layoutpolicy_horizontal = expanding		
-				vbox = {
-					datamodel = "[GetGlobalList('adm_ideas')]"	
+				vbox = {	#ADM Ideas
+					datamodel = "[GetGlobalList('adm_ideas')]"
+					margin = {
+						0 10
+					}
+					spacing = 10
 					item = {					
 						vbox = {
 							spacing = 20
@@ -493,47 +497,508 @@ ve_gui_panel_types
 								10
 							}
 							hbox = {
-								vbox = {
-									spacing = 10
-									icon = {
-										texture = "gfx/interface/icons/event_icons/event_portrait.dds"
-										size = {
-											120
-											120
-										}
-									}
-									
-								}
 								datacontext = "[Scope.GetStateRegion]"
+								vbox = {								
+									datamodel = "[GetGlobalList('idea_pic_index')]"
+									item = {
+										widget = {
+											size = {
+												120
+												120
+											}									
+											widget = {	#Innovative
+												size = {
+													120
+													120
+												}
+												visible = "[EqualTo_string(StateRegion.MakeScope.Var('idea_group').GetFlagName, 'innovative_idea')]"
+												icon = {
+													texture = "gfx/interface/ve_ideas/idea_innovativeness_ideas.dds"
+													size = {
+														120
+														120
+													}
+												}
+											}
+											widget = {	#Economic
+												size = {
+													120
+													120
+												}
+												visible = "[EqualTo_string(StateRegion.MakeScope.Var('idea_group').GetFlagName, 'economic_idea')]"
+												icon = {
+													texture = "gfx/interface/ve_ideas/idea_economic_ideas.dds"
+													size = {
+														120
+														120
+													}
+												}
+											}
+											widget = {	#Administrative
+												size = {
+													120
+													120
+												}
+												visible = "[EqualTo_string(StateRegion.MakeScope.Var('idea_group').GetFlagName, 'administrative_idea')]"
+												icon = {
+													texture = "gfx/interface/ve_ideas/idea_administrative_ideas.dds"
+													size = {
+														120
+														120
+													}
+												}
+											}
+											widget = {	#Ethnocentrism
+												size = {
+													120
+													120
+												}
+												visible = "[EqualTo_string(StateRegion.MakeScope.Var('idea_group').GetFlagName, 'ethnocentrism_idea')]"
+												icon = {
+													texture = "gfx/interface/ve_ideas/idea_religious_ideas.dds"
+													size = {
+														120
+														120
+													}
+												}
+											}
+											widget = {	#Politics
+												size = {
+													120
+													120
+												}
+												visible = "[EqualTo_string(StateRegion.MakeScope.Var('idea_group').GetFlagName, 'politics_idea')]"
+												icon = {
+													texture = "gfx/interface/ve_ideas/idea_aristocracy_ideas.dds"
+													size = {
+														120
+														120
+													}
+												}
+											}
+										}
+									}								
+								}								
 								vbox = {
 									spacing = 10
 									datamodel = "[GetGlobalList('idea_index')]"
-									text_single = {
-										text = "[Localize(Concatenate(StateRegion.MakeScope.Var('idea_group').GetFlagName,'_name'))]"
+									hbox = {
+										layoutpolicy_horizontal = expanding
+										text_single = {
+											text = "[Localize(Concatenate(StateRegion.MakeScope.Var('idea_group').GetFlagName,'_name'))]"
+											align = center|nobaseline
+											layoutpolicy_horizontal = expanding
+										}
+										button = {
+											size = { 30 30 }
+											texture = "gfx/interface/ve_ideas/closebutton_big.dds"
+											visible = "[Not(GetScriptedGui('embrace_idea_group').IsShown(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('idea_group',MakeScopeFlag(StateRegion.MakeScope.Var('idea_group').GetFlagName)).AddScope('level',MakeScopeValue(GetGlobalVariable(Concatenate(Scope.GetFlagName,'_value')).GetValue)).End))]"
+											onclick = "[GetScriptedGui('cancel_idea').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('idea_group',MakeScopeFlag(StateRegion.MakeScope.Var('idea_group').GetFlagName)).AddScope('level',MakeScopeValue(GetGlobalVariable(Concatenate(Scope.GetFlagName,'_value')).GetValue)).End)]"
+											# onclick = "[ExecuteConsoleCommand('gui.createwidget gui/ve_warning_window.gui ve_cancel_idea')]"
+											using = ui_close
+										}
+
 									}
 									hbox = {
 										datamodel = "[GetGlobalList('idea_index')]"
-										text_single = {
-											text = "[GetPlayer.MakeScope.Var('innovative_idea').GetValue]"
-										}
 										item = {
-											
-											button_icon_round_big = {
+											widget = {
 												size = {
 													45
 													45
-												}
-												blockoverride
-												"icon"
-												{
-													texture = "gfx/interface/icons/event_icons/event_portrait.dds"
-												}
-												enabled = "[GetScriptedGui('select_idea').IsValid(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('idea_group',MakeScopeFlag(StateRegion.MakeScope.Var('idea_group').GetFlagName)).AddScope('level',MakeScopeValue(GetGlobalVariable(Concatenate(Scope.GetFlagName,'_value')).GetValue)).End)]"
-												# enabled = "[GetScriptedGui('select_idea').IsValid(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('idea_group',MakeScopeFlag(StateRegion.MakeScope.Var('idea_group').GetFlagName)).AddScope('level',MakeScopeValue(GetGlobalVariable(Concatenate(Scope.GetFlagName,'_value')).GetValue)).End)]"
-												onclick = "[GetScriptedGui('select_idea').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('idea_group',MakeScopeFlag(StateRegion.MakeScope.Var('idea_group').GetFlagName)).AddScope('level',MakeScopeValue(GetGlobalVariable(Concatenate(Scope.GetFlagName,'_value')).GetValue)).End)]"
-												tooltip = "[GetScriptedGui('boost_idea_group').ExecuteTooltip(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('idea_group',MakeScopeFlag(StateRegion.MakeScope.Var('idea_group').GetFlagName)).AddScope('level',MakeScopeValue(GetGlobalVariable(Concatenate(Scope.GetFlagName,'_value')).GetValue)).End)]"
-												# tooltip = "[GetScriptedGui('sguisss').ExecuteTooltip( GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
-											}		
+												}										
+												widget = {	#Innovative
+													size = {
+														45
+														45
+													}
+													visible = "[EqualTo_string(StateRegion.MakeScope.Var('idea_group').GetFlagName, 'innovative_idea')]"
+													enabled = "[GetScriptedGui('boost_idea_group').IsValid(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('idea_group',MakeScopeFlag(StateRegion.MakeScope.Var('idea_group').GetFlagName)).AddScope('level',MakeScopeValue(GetGlobalVariable(Concatenate(Scope.GetFlagName,'_value')).GetValue)).End)]"
+													icon = {
+														visible = "[EqualTo_string(Scope.GetFlagName, '1')]"
+														enabled = "[GetScriptedGui('idea_tooltip_1').IsValid(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('idea_group',MakeScopeFlag(StateRegion.MakeScope.Var('idea_group').GetFlagName)).AddScope('level',MakeScopeValue(GetGlobalVariable(Concatenate(Scope.GetFlagName,'_value')).GetValue)).End)]"
+														texture = "gfx/interface/ve_ideas/prestige.dds"
+														tooltip = "[GetScriptedGui('idea_tooltip_1').ExecuteTooltip(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('idea_group',MakeScopeFlag(StateRegion.MakeScope.Var('idea_group').GetFlagName)).AddScope('level',MakeScopeValue(GetGlobalVariable(Concatenate(Scope.GetFlagName,'_value')).GetValue)).End)]"
+														size = {
+															100%
+															100%
+														}
+													}
+													icon = {
+														visible = "[EqualTo_string(Scope.GetFlagName, '2')]"
+														enabled = "[GetScriptedGui('idea_tooltip_2').IsValid(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('idea_group',MakeScopeFlag(StateRegion.MakeScope.Var('idea_group').GetFlagName)).AddScope('level',MakeScopeValue(GetGlobalVariable(Concatenate(Scope.GetFlagName,'_value')).GetValue)).End)]"
+														texture = "gfx/interface/ve_ideas/innovativeness_gain.dds"
+														tooltip = "[GetScriptedGui('idea_tooltip_2').ExecuteTooltip(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('idea_group',MakeScopeFlag(StateRegion.MakeScope.Var('idea_group').GetFlagName)).AddScope('level',MakeScopeValue(GetGlobalVariable(Concatenate(Scope.GetFlagName,'_value')).GetValue)).End)]"
+														size = {
+															100%
+															100%
+														}
+													}
+													icon = {
+														visible = "[EqualTo_string(Scope.GetFlagName, '3')]"
+														enabled = "[GetScriptedGui('idea_tooltip_3').IsValid(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('idea_group',MakeScopeFlag(StateRegion.MakeScope.Var('idea_group').GetFlagName)).AddScope('level',MakeScopeValue(GetGlobalVariable(Concatenate(Scope.GetFlagName,'_value')).GetValue)).End)]"
+														texture = "gfx/interface/ve_ideas/governing_capacity_modifier.dds"
+														tooltip = "[GetScriptedGui('idea_tooltip_3').ExecuteTooltip(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('idea_group',MakeScopeFlag(StateRegion.MakeScope.Var('idea_group').GetFlagName)).AddScope('level',MakeScopeValue(GetGlobalVariable(Concatenate(Scope.GetFlagName,'_value')).GetValue)).End)]"
+														size = {
+															100%
+															100%
+														}
+													}
+													icon = {
+														visible = "[EqualTo_string(Scope.GetFlagName, '4')]"
+														enabled = "[GetScriptedGui('idea_tooltip_4').IsValid(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('idea_group',MakeScopeFlag(StateRegion.MakeScope.Var('idea_group').GetFlagName)).AddScope('level',MakeScopeValue(GetGlobalVariable(Concatenate(Scope.GetFlagName,'_value')).GetValue)).End)]"
+														texture = "gfx/interface/ve_ideas/governing_capacity_modifier.dds"
+														tooltip = "[GetScriptedGui('idea_tooltip_4').ExecuteTooltip(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('idea_group',MakeScopeFlag(StateRegion.MakeScope.Var('idea_group').GetFlagName)).AddScope('level',MakeScopeValue(GetGlobalVariable(Concatenate(Scope.GetFlagName,'_value')).GetValue)).End)]"
+														size = {
+															100%
+															100%
+														}
+													}
+													icon = {
+														visible = "[EqualTo_string(Scope.GetFlagName, '5')]"
+														enabled = "[GetScriptedGui('idea_tooltip_5').IsValid(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('idea_group',MakeScopeFlag(StateRegion.MakeScope.Var('idea_group').GetFlagName)).AddScope('level',MakeScopeValue(GetGlobalVariable(Concatenate(Scope.GetFlagName,'_value')).GetValue)).End)]"
+														texture = "gfx/interface/ve_ideas/institution_growth.dds"
+														tooltip = "[GetScriptedGui('idea_tooltip_5').ExecuteTooltip(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('idea_group',MakeScopeFlag(StateRegion.MakeScope.Var('idea_group').GetFlagName)).AddScope('level',MakeScopeValue(GetGlobalVariable(Concatenate(Scope.GetFlagName,'_value')).GetValue)).End)]"
+														size = {
+															100%
+															100%
+														}
+													}
+													icon = {
+														visible = "[EqualTo_string(Scope.GetFlagName, '6')]"
+														enabled = "[GetScriptedGui('idea_tooltip_6').IsValid(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('idea_group',MakeScopeFlag(StateRegion.MakeScope.Var('idea_group').GetFlagName)).AddScope('level',MakeScopeValue(GetGlobalVariable(Concatenate(Scope.GetFlagName,'_value')).GetValue)).End)]"
+														texture = "gfx/interface/ve_ideas/morale_damage_received.dds"
+														tooltip = "[GetScriptedGui('idea_tooltip_6').ExecuteTooltip(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('idea_group',MakeScopeFlag(StateRegion.MakeScope.Var('idea_group').GetFlagName)).AddScope('level',MakeScopeValue(GetGlobalVariable(Concatenate(Scope.GetFlagName,'_value')).GetValue)).End)]"
+														size = {
+															100%
+															100%
+														}
+													}
+													icon = {
+														visible = "[EqualTo_string(Scope.GetFlagName, '7')]"
+														enabled = "[GetScriptedGui('idea_tooltip_7').IsValid(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('idea_group',MakeScopeFlag(StateRegion.MakeScope.Var('idea_group').GetFlagName)).AddScope('level',MakeScopeValue(GetGlobalVariable(Concatenate(Scope.GetFlagName,'_value')).GetValue)).End)]"
+														texture = "gfx/interface/ve_ideas/technology_cost.dds"
+														tooltip = "[GetScriptedGui('idea_tooltip_7').ExecuteTooltip(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('idea_group',MakeScopeFlag(StateRegion.MakeScope.Var('idea_group').GetFlagName)).AddScope('level',MakeScopeValue(GetGlobalVariable(Concatenate(Scope.GetFlagName,'_value')).GetValue)).End)]"
+														size = {
+															100%
+															100%
+														}
+													}
+												}	
+												widget = {	#Economic
+													size = {
+														45
+														45
+													}
+													visible = "[EqualTo_string(StateRegion.MakeScope.Var('idea_group').GetFlagName, 'economic_idea')]"
+													enabled = "[GetScriptedGui('boost_idea_group').IsValid(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('idea_group',MakeScopeFlag(StateRegion.MakeScope.Var('idea_group').GetFlagName)).AddScope('level',MakeScopeValue(GetGlobalVariable(Concatenate(Scope.GetFlagName,'_value')).GetValue)).End)]"
+													icon = {
+														visible = "[EqualTo_string(Scope.GetFlagName, '1')]"
+														enabled = "[GetScriptedGui('idea_tooltip_1').IsValid(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('idea_group',MakeScopeFlag(StateRegion.MakeScope.Var('idea_group').GetFlagName)).AddScope('level',MakeScopeValue(GetGlobalVariable(Concatenate(Scope.GetFlagName,'_value')).GetValue)).End)]"
+														texture = "gfx/interface/ve_ideas/global_tax_income.dds"
+														tooltip = "[GetScriptedGui('idea_tooltip_1').ExecuteTooltip(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('idea_group',MakeScopeFlag(StateRegion.MakeScope.Var('idea_group').GetFlagName)).AddScope('level',MakeScopeValue(GetGlobalVariable(Concatenate(Scope.GetFlagName,'_value')).GetValue)).End)]"
+														size = {
+															100%
+															100%
+														}
+													}
+													icon = {
+														visible = "[EqualTo_string(Scope.GetFlagName, '2')]"
+														enabled = "[GetScriptedGui('idea_tooltip_2').IsValid(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('idea_group',MakeScopeFlag(StateRegion.MakeScope.Var('idea_group').GetFlagName)).AddScope('level',MakeScopeValue(GetGlobalVariable(Concatenate(Scope.GetFlagName,'_value')).GetValue)).End)]"
+														texture = "gfx/interface/ve_ideas/technologyView_show_buildings.dds"
+														tooltip = "[GetScriptedGui('idea_tooltip_2').ExecuteTooltip(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('idea_group',MakeScopeFlag(StateRegion.MakeScope.Var('idea_group').GetFlagName)).AddScope('level',MakeScopeValue(GetGlobalVariable(Concatenate(Scope.GetFlagName,'_value')).GetValue)).End)]"
+														size = {
+															100%
+															100%
+														}
+													}
+													icon = {
+														visible = "[EqualTo_string(Scope.GetFlagName, '3')]"
+														enabled = "[GetScriptedGui('idea_tooltip_3').IsValid(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('idea_group',MakeScopeFlag(StateRegion.MakeScope.Var('idea_group').GetFlagName)).AddScope('level',MakeScopeValue(GetGlobalVariable(Concatenate(Scope.GetFlagName,'_value')).GetValue)).End)]"
+														texture = "gfx/interface/ve_ideas/privilege_gold_mint.dds"
+														tooltip = "[GetScriptedGui('idea_tooltip_3').ExecuteTooltip(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('idea_group',MakeScopeFlag(StateRegion.MakeScope.Var('idea_group').GetFlagName)).AddScope('level',MakeScopeValue(GetGlobalVariable(Concatenate(Scope.GetFlagName,'_value')).GetValue)).End)]"
+														size = {
+															100%
+															100%
+														}
+													}
+													icon = {
+														visible = "[EqualTo_string(Scope.GetFlagName, '4')]"
+														enabled = "[GetScriptedGui('idea_tooltip_4').IsValid(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('idea_group',MakeScopeFlag(StateRegion.MakeScope.Var('idea_group').GetFlagName)).AddScope('level',MakeScopeValue(GetGlobalVariable(Concatenate(Scope.GetFlagName,'_value')).GetValue)).End)]"
+														texture = "gfx/interface/ve_ideas/take_loan_button.dds"
+														tooltip = "[GetScriptedGui('idea_tooltip_4').ExecuteTooltip(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('idea_group',MakeScopeFlag(StateRegion.MakeScope.Var('idea_group').GetFlagName)).AddScope('level',MakeScopeValue(GetGlobalVariable(Concatenate(Scope.GetFlagName,'_value')).GetValue)).End)]"
+														size = {
+															100%
+															100%
+														}
+													}
+													icon = {
+														visible = "[EqualTo_string(Scope.GetFlagName, '5')]"
+														enabled = "[GetScriptedGui('idea_tooltip_5').IsValid(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('idea_group',MakeScopeFlag(StateRegion.MakeScope.Var('idea_group').GetFlagName)).AddScope('level',MakeScopeValue(GetGlobalVariable(Concatenate(Scope.GetFlagName,'_value')).GetValue)).End)]"
+														texture = "gfx/interface/ve_ideas/global_tax_modifier.dds"
+														tooltip = "[GetScriptedGui('idea_tooltip_5').ExecuteTooltip(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('idea_group',MakeScopeFlag(StateRegion.MakeScope.Var('idea_group').GetFlagName)).AddScope('level',MakeScopeValue(GetGlobalVariable(Concatenate(Scope.GetFlagName,'_value')).GetValue)).End)]"
+														size = {
+															100%
+															100%
+														}
+													}
+													icon = {
+														visible = "[EqualTo_string(Scope.GetFlagName, '6')]"
+														enabled = "[GetScriptedGui('idea_tooltip_6').IsValid(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('idea_group',MakeScopeFlag(StateRegion.MakeScope.Var('idea_group').GetFlagName)).AddScope('level',MakeScopeValue(GetGlobalVariable(Concatenate(Scope.GetFlagName,'_value')).GetValue)).End)]"
+														texture = "gfx/interface/ve_ideas/dip_tech_cost_modifier.dds"
+														tooltip = "[GetScriptedGui('idea_tooltip_6').ExecuteTooltip(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('idea_group',MakeScopeFlag(StateRegion.MakeScope.Var('idea_group').GetFlagName)).AddScope('level',MakeScopeValue(GetGlobalVariable(Concatenate(Scope.GetFlagName,'_value')).GetValue)).End)]"
+														size = {
+															100%
+															100%
+														}
+													}
+													icon = {
+														visible = "[EqualTo_string(Scope.GetFlagName, '7')]"
+														enabled = "[GetScriptedGui('idea_tooltip_7').IsValid(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('idea_group',MakeScopeFlag(StateRegion.MakeScope.Var('idea_group').GetFlagName)).AddScope('level',MakeScopeValue(GetGlobalVariable(Concatenate(Scope.GetFlagName,'_value')).GetValue)).End)]"
+														texture = "gfx/interface/ve_ideas/land_morale.dds"
+														tooltip = "[GetScriptedGui('idea_tooltip_7').ExecuteTooltip(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('idea_group',MakeScopeFlag(StateRegion.MakeScope.Var('idea_group').GetFlagName)).AddScope('level',MakeScopeValue(GetGlobalVariable(Concatenate(Scope.GetFlagName,'_value')).GetValue)).End)]"
+														size = {
+															100%
+															100%
+														}
+													}
+												}	
+												widget = {	#Administrative
+													size = {
+														45
+														45
+													}
+													visible = "[EqualTo_string(StateRegion.MakeScope.Var('idea_group').GetFlagName, 'administrative_idea')]"
+													enabled = "[GetScriptedGui('boost_idea_group').IsValid(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('idea_group',MakeScopeFlag(StateRegion.MakeScope.Var('idea_group').GetFlagName)).AddScope('level',MakeScopeValue(GetGlobalVariable(Concatenate(Scope.GetFlagName,'_value')).GetValue)).End)]"
+													icon = {
+														visible = "[EqualTo_string(Scope.GetFlagName, '1')]"
+														enabled = "[GetScriptedGui('idea_tooltip_1').IsValid(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('idea_group',MakeScopeFlag(StateRegion.MakeScope.Var('idea_group').GetFlagName)).AddScope('level',MakeScopeValue(GetGlobalVariable(Concatenate(Scope.GetFlagName,'_value')).GetValue)).End)]"
+														texture = "gfx/interface/ve_ideas/governing_capacity_modifier.dds"
+														tooltip = "[GetScriptedGui('idea_tooltip_1').ExecuteTooltip(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('idea_group',MakeScopeFlag(StateRegion.MakeScope.Var('idea_group').GetFlagName)).AddScope('level',MakeScopeValue(GetGlobalVariable(Concatenate(Scope.GetFlagName,'_value')).GetValue)).End)]"
+														size = {
+															100%
+															100%
+														}
+													}
+													icon = {
+														visible = "[EqualTo_string(Scope.GetFlagName, '2')]"
+														enabled = "[GetScriptedGui('idea_tooltip_2').IsValid(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('idea_group',MakeScopeFlag(StateRegion.MakeScope.Var('idea_group').GetFlagName)).AddScope('level',MakeScopeValue(GetGlobalVariable(Concatenate(Scope.GetFlagName,'_value')).GetValue)).End)]"
+														texture = "gfx/interface/ve_ideas/adm_tech_cost_modifier.dds"
+														tooltip = "[GetScriptedGui('idea_tooltip_2').ExecuteTooltip(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('idea_group',MakeScopeFlag(StateRegion.MakeScope.Var('idea_group').GetFlagName)).AddScope('level',MakeScopeValue(GetGlobalVariable(Concatenate(Scope.GetFlagName,'_value')).GetValue)).End)]"
+														size = {
+															100%
+															100%
+														}
+													}
+													icon = {
+														visible = "[EqualTo_string(Scope.GetFlagName, '3')]"
+														enabled = "[GetScriptedGui('idea_tooltip_3').IsValid(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('idea_group',MakeScopeFlag(StateRegion.MakeScope.Var('idea_group').GetFlagName)).AddScope('level',MakeScopeValue(GetGlobalVariable(Concatenate(Scope.GetFlagName,'_value')).GetValue)).End)]"
+														texture = "gfx/interface/ve_ideas/global_unrest.dds"
+														tooltip = "[GetScriptedGui('idea_tooltip_3').ExecuteTooltip(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('idea_group',MakeScopeFlag(StateRegion.MakeScope.Var('idea_group').GetFlagName)).AddScope('level',MakeScopeValue(GetGlobalVariable(Concatenate(Scope.GetFlagName,'_value')).GetValue)).End)]"
+														size = {
+															100%
+															100%
+														}
+													}
+													icon = {
+														visible = "[EqualTo_string(Scope.GetFlagName, '4')]"
+														enabled = "[GetScriptedGui('idea_tooltip_4').IsValid(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('idea_group',MakeScopeFlag(StateRegion.MakeScope.Var('idea_group').GetFlagName)).AddScope('level',MakeScopeValue(GetGlobalVariable(Concatenate(Scope.GetFlagName,'_value')).GetValue)).End)]"
+														texture = "gfx/interface/ve_ideas/stability_cost_modifier.dds"
+														tooltip = "[GetScriptedGui('idea_tooltip_4').ExecuteTooltip(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('idea_group',MakeScopeFlag(StateRegion.MakeScope.Var('idea_group').GetFlagName)).AddScope('level',MakeScopeValue(GetGlobalVariable(Concatenate(Scope.GetFlagName,'_value')).GetValue)).End)]"
+														size = {
+															100%
+															100%
+														}
+													}
+													icon = {
+														visible = "[EqualTo_string(Scope.GetFlagName, '5')]"
+														enabled = "[GetScriptedGui('idea_tooltip_5').IsValid(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('idea_group',MakeScopeFlag(StateRegion.MakeScope.Var('idea_group').GetFlagName)).AddScope('level',MakeScopeValue(GetGlobalVariable(Concatenate(Scope.GetFlagName,'_value')).GetValue)).End)]"
+														texture = "gfx/interface/ve_ideas/land_morale.dds"
+														tooltip = "[GetScriptedGui('idea_tooltip_5').ExecuteTooltip(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('idea_group',MakeScopeFlag(StateRegion.MakeScope.Var('idea_group').GetFlagName)).AddScope('level',MakeScopeValue(GetGlobalVariable(Concatenate(Scope.GetFlagName,'_value')).GetValue)).End)]"
+														size = {
+															100%
+															100%
+														}
+													}
+													icon = {
+														visible = "[EqualTo_string(Scope.GetFlagName, '6')]"
+														enabled = "[GetScriptedGui('idea_tooltip_6').IsValid(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('idea_group',MakeScopeFlag(StateRegion.MakeScope.Var('idea_group').GetFlagName)).AddScope('level',MakeScopeValue(GetGlobalVariable(Concatenate(Scope.GetFlagName,'_value')).GetValue)).End)]"
+														texture = "gfx/interface/ve_ideas/land_morale.dds"
+														tooltip = "[GetScriptedGui('idea_tooltip_6').ExecuteTooltip(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('idea_group',MakeScopeFlag(StateRegion.MakeScope.Var('idea_group').GetFlagName)).AddScope('level',MakeScopeValue(GetGlobalVariable(Concatenate(Scope.GetFlagName,'_value')).GetValue)).End)]"
+														size = {
+															100%
+															100%
+														}
+													}
+													icon = {
+														visible = "[EqualTo_string(Scope.GetFlagName, '7')]"
+														enabled = "[GetScriptedGui('idea_tooltip_7').IsValid(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('idea_group',MakeScopeFlag(StateRegion.MakeScope.Var('idea_group').GetFlagName)).AddScope('level',MakeScopeValue(GetGlobalVariable(Concatenate(Scope.GetFlagName,'_value')).GetValue)).End)]"
+														texture = "gfx/interface/ve_ideas/land_morale.dds"
+														tooltip = "[GetScriptedGui('idea_tooltip_7').ExecuteTooltip(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('idea_group',MakeScopeFlag(StateRegion.MakeScope.Var('idea_group').GetFlagName)).AddScope('level',MakeScopeValue(GetGlobalVariable(Concatenate(Scope.GetFlagName,'_value')).GetValue)).End)]"
+														size = {
+															100%
+															100%
+														}
+													}
+												}	
+												widget = {	#Ethnocentrism
+													size = {
+														45
+														45
+													}
+													visible = "[EqualTo_string(StateRegion.MakeScope.Var('idea_group').GetFlagName, 'ethnocentrism_idea')]"
+													enabled = "[GetScriptedGui('boost_idea_group').IsValid(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('idea_group',MakeScopeFlag(StateRegion.MakeScope.Var('idea_group').GetFlagName)).AddScope('level',MakeScopeValue(GetGlobalVariable(Concatenate(Scope.GetFlagName,'_value')).GetValue)).End)]"
+													icon = {
+														visible = "[EqualTo_string(Scope.GetFlagName, '1')]"
+														enabled = "[GetScriptedGui('idea_tooltip_1').IsValid(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('idea_group',MakeScopeFlag(StateRegion.MakeScope.Var('idea_group').GetFlagName)).AddScope('level',MakeScopeValue(GetGlobalVariable(Concatenate(Scope.GetFlagName,'_value')).GetValue)).End)]"
+														texture = "gfx/interface/ve_ideas/stability_cost_modifier.dds"
+														tooltip = "[GetScriptedGui('idea_tooltip_1').ExecuteTooltip(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('idea_group',MakeScopeFlag(StateRegion.MakeScope.Var('idea_group').GetFlagName)).AddScope('level',MakeScopeValue(GetGlobalVariable(Concatenate(Scope.GetFlagName,'_value')).GetValue)).End)]"
+														size = {
+															100%
+															100%
+														}
+													}
+													icon = {
+														visible = "[EqualTo_string(Scope.GetFlagName, '2')]"
+														enabled = "[GetScriptedGui('idea_tooltip_2').IsValid(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('idea_group',MakeScopeFlag(StateRegion.MakeScope.Var('idea_group').GetFlagName)).AddScope('level',MakeScopeValue(GetGlobalVariable(Concatenate(Scope.GetFlagName,'_value')).GetValue)).End)]"
+														texture = "gfx/interface/ve_ideas/global_missionary_strength.dds"
+														tooltip = "[GetScriptedGui('idea_tooltip_2').ExecuteTooltip(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('idea_group',MakeScopeFlag(StateRegion.MakeScope.Var('idea_group').GetFlagName)).AddScope('level',MakeScopeValue(GetGlobalVariable(Concatenate(Scope.GetFlagName,'_value')).GetValue)).End)]"
+														size = {
+															100%
+															100%
+														}
+													}
+													icon = {
+														visible = "[EqualTo_string(Scope.GetFlagName, '3')]"
+														enabled = "[GetScriptedGui('idea_tooltip_3').IsValid(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('idea_group',MakeScopeFlag(StateRegion.MakeScope.Var('idea_group').GetFlagName)).AddScope('level',MakeScopeValue(GetGlobalVariable(Concatenate(Scope.GetFlagName,'_value')).GetValue)).End)]"
+														texture = "gfx/interface/ve_ideas/land_morale.dds"
+														tooltip = "[GetScriptedGui('idea_tooltip_3').ExecuteTooltip(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('idea_group',MakeScopeFlag(StateRegion.MakeScope.Var('idea_group').GetFlagName)).AddScope('level',MakeScopeValue(GetGlobalVariable(Concatenate(Scope.GetFlagName,'_value')).GetValue)).End)]"
+														size = {
+															100%
+															100%
+														}
+													}
+													icon = {
+														visible = "[EqualTo_string(Scope.GetFlagName, '4')]"
+														enabled = "[GetScriptedGui('idea_tooltip_4').IsValid(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('idea_group',MakeScopeFlag(StateRegion.MakeScope.Var('idea_group').GetFlagName)).AddScope('level',MakeScopeValue(GetGlobalVariable(Concatenate(Scope.GetFlagName,'_value')).GetValue)).End)]"
+														texture = "gfx/interface/ve_ideas/relation_with_same_culture_group.dds"
+														tooltip = "[GetScriptedGui('idea_tooltip_4').ExecuteTooltip(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('idea_group',MakeScopeFlag(StateRegion.MakeScope.Var('idea_group').GetFlagName)).AddScope('level',MakeScopeValue(GetGlobalVariable(Concatenate(Scope.GetFlagName,'_value')).GetValue)).End)]"
+														size = {
+															100%
+															100%
+														}
+													}
+													icon = {
+														visible = "[EqualTo_string(Scope.GetFlagName, '5')]"
+														enabled = "[GetScriptedGui('idea_tooltip_5').IsValid(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('idea_group',MakeScopeFlag(StateRegion.MakeScope.Var('idea_group').GetFlagName)).AddScope('level',MakeScopeValue(GetGlobalVariable(Concatenate(Scope.GetFlagName,'_value')).GetValue)).End)]"
+														texture = "gfx/interface/ve_ideas/culture_conversion_cost.dds"
+														tooltip = "[GetScriptedGui('idea_tooltip_5').ExecuteTooltip(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('idea_group',MakeScopeFlag(StateRegion.MakeScope.Var('idea_group').GetFlagName)).AddScope('level',MakeScopeValue(GetGlobalVariable(Concatenate(Scope.GetFlagName,'_value')).GetValue)).End)]"
+														size = {
+															100%
+															100%
+														}
+													}
+													icon = {
+														visible = "[EqualTo_string(Scope.GetFlagName, '6')]"
+														enabled = "[GetScriptedGui('idea_tooltip_6').IsValid(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('idea_group',MakeScopeFlag(StateRegion.MakeScope.Var('idea_group').GetFlagName)).AddScope('level',MakeScopeValue(GetGlobalVariable(Concatenate(Scope.GetFlagName,'_value')).GetValue)).End)]"
+														texture = "gfx/interface/ve_ideas/land_morale.dds"
+														tooltip = "[GetScriptedGui('idea_tooltip_6').ExecuteTooltip(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('idea_group',MakeScopeFlag(StateRegion.MakeScope.Var('idea_group').GetFlagName)).AddScope('level',MakeScopeValue(GetGlobalVariable(Concatenate(Scope.GetFlagName,'_value')).GetValue)).End)]"
+														size = {
+															100%
+															100%
+														}
+													}
+													icon = {
+														visible = "[EqualTo_string(Scope.GetFlagName, '7')]"
+														enabled = "[GetScriptedGui('idea_tooltip_7').IsValid(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('idea_group',MakeScopeFlag(StateRegion.MakeScope.Var('idea_group').GetFlagName)).AddScope('level',MakeScopeValue(GetGlobalVariable(Concatenate(Scope.GetFlagName,'_value')).GetValue)).End)]"
+														texture = "gfx/interface/ve_ideas/may_convert_territories.dds"
+														tooltip = "[GetScriptedGui('idea_tooltip_7').ExecuteTooltip(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('idea_group',MakeScopeFlag(StateRegion.MakeScope.Var('idea_group').GetFlagName)).AddScope('level',MakeScopeValue(GetGlobalVariable(Concatenate(Scope.GetFlagName,'_value')).GetValue)).End)]"
+														size = {
+															100%
+															100%
+														}
+													}
+													
+												}	
+												widget = {	#Politics
+													size = {
+														45
+														45
+													}
+													visible = "[EqualTo_string(StateRegion.MakeScope.Var('idea_group').GetFlagName, 'politics_idea')]"
+													enabled = "[GetScriptedGui('boost_idea_group').IsValid(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('idea_group',MakeScopeFlag(StateRegion.MakeScope.Var('idea_group').GetFlagName)).AddScope('level',MakeScopeValue(GetGlobalVariable(Concatenate(Scope.GetFlagName,'_value')).GetValue)).End)]"
+													icon = {
+														visible = "[EqualTo_string(Scope.GetFlagName, '1')]"
+														enabled = "[GetScriptedGui('idea_tooltip_1').IsValid(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('idea_group',MakeScopeFlag(StateRegion.MakeScope.Var('idea_group').GetFlagName)).AddScope('level',MakeScopeValue(GetGlobalVariable(Concatenate(Scope.GetFlagName,'_value')).GetValue)).End)]"
+														texture = "gfx/interface/ve_ideas/legitimacy.dds"
+														tooltip = "[GetScriptedGui('idea_tooltip_1').ExecuteTooltip(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('idea_group',MakeScopeFlag(StateRegion.MakeScope.Var('idea_group').GetFlagName)).AddScope('level',MakeScopeValue(GetGlobalVariable(Concatenate(Scope.GetFlagName,'_value')).GetValue)).End)]"
+														size = {
+															100%
+															100%
+														}
+													}
+													icon = {
+														visible = "[EqualTo_string(Scope.GetFlagName, '2')]"
+														enabled = "[GetScriptedGui('idea_tooltip_2').IsValid(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('idea_group',MakeScopeFlag(StateRegion.MakeScope.Var('idea_group').GetFlagName)).AddScope('level',MakeScopeValue(GetGlobalVariable(Concatenate(Scope.GetFlagName,'_value')).GetValue)).End)]"
+														texture = "gfx/interface/ve_ideas/unrest_suppression_icon.dds"
+														tooltip = "[GetScriptedGui('idea_tooltip_2').ExecuteTooltip(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('idea_group',MakeScopeFlag(StateRegion.MakeScope.Var('idea_group').GetFlagName)).AddScope('level',MakeScopeValue(GetGlobalVariable(Concatenate(Scope.GetFlagName,'_value')).GetValue)).End)]"
+														size = {
+															100%
+															100%
+														}
+													}
+													icon = {
+														visible = "[EqualTo_string(Scope.GetFlagName, '3')]"
+														enabled = "[GetScriptedGui('idea_tooltip_3').IsValid(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('idea_group',MakeScopeFlag(StateRegion.MakeScope.Var('idea_group').GetFlagName)).AddScope('level',MakeScopeValue(GetGlobalVariable(Concatenate(Scope.GetFlagName,'_value')).GetValue)).End)]"
+														texture = "gfx/interface/ve_ideas/timer_ab_allow_feudal_de_jure_law.dds"
+														tooltip = "[GetScriptedGui('idea_tooltip_3').ExecuteTooltip(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('idea_group',MakeScopeFlag(StateRegion.MakeScope.Var('idea_group').GetFlagName)).AddScope('level',MakeScopeValue(GetGlobalVariable(Concatenate(Scope.GetFlagName,'_value')).GetValue)).End)]"
+														size = {
+															100%
+															100%
+														}
+													}
+													icon = {
+														visible = "[EqualTo_string(Scope.GetFlagName, '4')]"
+														enabled = "[GetScriptedGui('idea_tooltip_4').IsValid(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('idea_group',MakeScopeFlag(StateRegion.MakeScope.Var('idea_group').GetFlagName)).AddScope('level',MakeScopeValue(GetGlobalVariable(Concatenate(Scope.GetFlagName,'_value')).GetValue)).End)]"
+														texture = "gfx/interface/ve_ideas/land_morale.dds"
+														tooltip = "[GetScriptedGui('idea_tooltip_4').ExecuteTooltip(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('idea_group',MakeScopeFlag(StateRegion.MakeScope.Var('idea_group').GetFlagName)).AddScope('level',MakeScopeValue(GetGlobalVariable(Concatenate(Scope.GetFlagName,'_value')).GetValue)).End)]"
+														size = {
+															100%
+															100%
+														}
+													}
+													icon = {
+														visible = "[EqualTo_string(Scope.GetFlagName, '5')]"
+														enabled = "[GetScriptedGui('idea_tooltip_5').IsValid(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('idea_group',MakeScopeFlag(StateRegion.MakeScope.Var('idea_group').GetFlagName)).AddScope('level',MakeScopeValue(GetGlobalVariable(Concatenate(Scope.GetFlagName,'_value')).GetValue)).End)]"
+														texture = "gfx/interface/ve_ideas/ab_allow_feudal_de_jure_law.dds"
+														tooltip = "[GetScriptedGui('idea_tooltip_5').ExecuteTooltip(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('idea_group',MakeScopeFlag(StateRegion.MakeScope.Var('idea_group').GetFlagName)).AddScope('level',MakeScopeValue(GetGlobalVariable(Concatenate(Scope.GetFlagName,'_value')).GetValue)).End)]"
+														size = {
+															100%
+															100%
+														}
+													}
+													icon = {
+														visible = "[EqualTo_string(Scope.GetFlagName, '6')]"
+														enabled = "[GetScriptedGui('idea_tooltip_6').IsValid(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('idea_group',MakeScopeFlag(StateRegion.MakeScope.Var('idea_group').GetFlagName)).AddScope('level',MakeScopeValue(GetGlobalVariable(Concatenate(Scope.GetFlagName,'_value')).GetValue)).End)]"
+														texture = "gfx/interface/ve_ideas/land_morale.dds"
+														tooltip = "[GetScriptedGui('idea_tooltip_6').ExecuteTooltip(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('idea_group',MakeScopeFlag(StateRegion.MakeScope.Var('idea_group').GetFlagName)).AddScope('level',MakeScopeValue(GetGlobalVariable(Concatenate(Scope.GetFlagName,'_value')).GetValue)).End)]"
+														size = {
+															100%
+															100%
+														}
+													}
+													icon = {
+														visible = "[EqualTo_string(Scope.GetFlagName, '7')]"
+														enabled = "[GetScriptedGui('idea_tooltip_7').IsValid(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('idea_group',MakeScopeFlag(StateRegion.MakeScope.Var('idea_group').GetFlagName)).AddScope('level',MakeScopeValue(GetGlobalVariable(Concatenate(Scope.GetFlagName,'_value')).GetValue)).End)]"
+														texture = "gfx/interface/ve_ideas/stability_cost_modifier.dds"
+														tooltip = "[GetScriptedGui('idea_tooltip_7').ExecuteTooltip(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('idea_group',MakeScopeFlag(StateRegion.MakeScope.Var('idea_group').GetFlagName)).AddScope('level',MakeScopeValue(GetGlobalVariable(Concatenate(Scope.GetFlagName,'_value')).GetValue)).End)]"
+														size = {
+															100%
+															100%
+														}
+													}
+												}	
+											}
 										}
 									}
 									default_progressbar_horizontal = {
@@ -546,8 +1011,7 @@ ve_gui_panel_types
 										"values"
 										{
 											max = 7
-											value = "[GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('idea_group',MakeScopeFlag(StateRegion.MakeScope.Var('idea_group').GetFlagName)).AddScope('level',MakeScopeValue(GetGlobalVariable(Concatenate(Scope.GetFlagName,'_value')).GetValue))]"
-											# value = "[GetPlayer.MakeScope.Var('innovative_idea').GetValue]"
+											value = "[GetPlayer.MakeScope.Var(StateRegion.MakeScope.Var('idea_group').GetFlagName).GetValue]"
 										}
 									}
 									button = {
@@ -559,17 +1023,7 @@ ve_gui_panel_types
 										enabled = "[GreaterThan_CFixedPoint(GetPlayer.MakeScope.Var('idea_group_cap').GetValue,GetPlayer.MakeScope.Var('idea_group_unlocked').GetValue)]"
 										onclick = "[GetScriptedGui('embrace_idea_group').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('idea_group',MakeScopeFlag(StateRegion.MakeScope.Var('idea_group').GetFlagName)).End)]"
 										using = tooltip_above
-										using = budget_pause_all_button_sound
-									}
-									button = {
-										using = default_button_action
-										layoutpolicy_horizontal = expanding
-										size = { 100% 40 }
-										raw_text = "Cancel"
-										visible = "[Not(GetScriptedGui('embrace_idea_group').IsShown(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('idea_group',MakeScopeFlag(StateRegion.MakeScope.Var('idea_group').GetFlagName)).AddScope('level',MakeScopeValue(GetGlobalVariable(Concatenate(Scope.GetFlagName,'_value')).GetValue)).End))]"
-										onclick = "[GetScriptedGui('cancel_idea').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('idea_group',MakeScopeFlag(StateRegion.MakeScope.Var('idea_group').GetFlagName)).AddScope('level',MakeScopeValue(GetGlobalVariable(Concatenate(Scope.GetFlagName,'_value')).GetValue)).End)]"
-										using = tooltip_above
-										using = budget_pause_all_button_sound
+										using = budget_resume_all_button_sound
 									}
 									button = {
 										using = default_button_action
@@ -580,21 +1034,19 @@ ve_gui_panel_types
 										enabled = "[GetScriptedGui('boost_idea_group').IsValid(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('idea_group',MakeScopeFlag(StateRegion.MakeScope.Var('idea_group').GetFlagName)).End)]"
 										onclick = "[GetScriptedGui('boost_idea_group').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('idea_group',MakeScopeFlag(StateRegion.MakeScope.Var('idea_group').GetFlagName)).End)]"
 										using = tooltip_above
-										using = budget_pause_all_button_sound
-									}
-									text_single = {
-										text = "[GetPlayer.MakeScope.Var('idea_group_cap').GetValue]"
-									}
-									text_single = {
-										text = "[GetPlayer.MakeScope.Var('idea_group_unlocked').GetValue]"
+										using = technology_confirm_button_sound
 									}
 								}
 							}
 						}
 					}
 				}
-				vbox = {
-					datamodel = "[GetGlobalList('adm_ideas')]"	
+				vbox = {	#DIP Ideas
+					datamodel = "[GetGlobalList('dip_ideas')]"
+					margin = {
+						0 10
+					}
+					spacing = 10
 					item = {					
 						vbox = {
 							spacing = 20
@@ -605,47 +1057,555 @@ ve_gui_panel_types
 								10
 							}
 							hbox = {
-								vbox = {
-									spacing = 10
-									icon = {
-										texture = "gfx/interface/icons/event_icons/event_portrait.dds"
-										size = {
-											120
-											120
-										}
-									}
-									
-								}
 								datacontext = "[Scope.GetStateRegion]"
+								vbox = {								
+									datamodel = "[GetGlobalList('idea_pic_index')]"
+									item = {
+										widget = {
+											size = {
+												120
+												120
+											}									
+											widget = {
+												size = {
+													120
+													120
+												}
+												visible = "[EqualTo_string(StateRegion.MakeScope.Var('idea_group').GetFlagName, 'diplomatic_idea')]"
+												icon = {
+													texture = "gfx/interface/ve_ideas/idea_diplomatic_ideas.dds"
+													size = {
+														120
+														120
+													}
+												}
+											}
+											widget = {
+												size = {
+													120
+													120
+												}
+												visible = "[EqualTo_string(StateRegion.MakeScope.Var('idea_group').GetFlagName, 'trade_idea')]"
+												icon = {
+													texture = "gfx/interface/ve_ideas/idea_trade_ideas.dds"
+													size = {
+														120
+														120
+													}
+												}
+											}
+											widget = {	
+												size = {
+													120
+													120
+												}
+												visible = "[EqualTo_string(StateRegion.MakeScope.Var('idea_group').GetFlagName, 'qualification_idea')]"
+												icon = {
+													texture = "gfx/interface/ve_ideas/idea_influence_ideas.dds"
+													size = {
+														120
+														120
+													}
+												}
+											}
+											widget = {	
+												size = {
+													120
+													120
+												}
+												visible = "[EqualTo_string(StateRegion.MakeScope.Var('idea_group').GetFlagName, 'humanist_idea')]"
+												icon = {
+													texture = "gfx/interface/ve_ideas/idea_humanist_ideas.dds"
+													size = {
+														120
+														120
+													}
+												}
+											}
+											widget = {	
+												size = {
+													120
+													120
+												}
+												visible = "[EqualTo_string(StateRegion.MakeScope.Var('idea_group').GetFlagName, 'syndicalism_idea')]"
+												icon = {
+													texture = "gfx/interface/ve_ideas/idea_indigenous_ideas.dds"
+													size = {
+														120
+														120
+													}
+												}
+											}
+										}
+									}								
+								}								
 								vbox = {
 									spacing = 10
-									text_single = {
-										text = "[Localize(Concatenate(StateRegion.MakeScope.Var('idea_group').GetFlagName,'_name'))]"
+									datamodel = "[GetGlobalList('idea_index')]"
+									hbox = {
+										layoutpolicy_horizontal = expanding
+										text_single = {
+											text = "[Localize(Concatenate(StateRegion.MakeScope.Var('idea_group').GetFlagName,'_name'))]"
+											align = center|nobaseline
+											layoutpolicy_horizontal = expanding
+										}
+										button = {
+											size = { 30 30 }
+											texture = "gfx/interface/ve_ideas/closebutton_big.dds"
+											visible = "[Not(GetScriptedGui('embrace_idea_group').IsShown(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('idea_group',MakeScopeFlag(StateRegion.MakeScope.Var('idea_group').GetFlagName)).AddScope('level',MakeScopeValue(GetGlobalVariable(Concatenate(Scope.GetFlagName,'_value')).GetValue)).End))]"
+											onclick = "[GetScriptedGui('cancel_idea').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('idea_group',MakeScopeFlag(StateRegion.MakeScope.Var('idea_group').GetFlagName)).AddScope('level',MakeScopeValue(GetGlobalVariable(Concatenate(Scope.GetFlagName,'_value')).GetValue)).End)]"
+											using = ui_close
+										}
+
 									}
 									hbox = {
 										datamodel = "[GetGlobalList('idea_index')]"
 										item = {
-											button_icon_round_big = {
+											widget = {
 												size = {
-													 45
-													 45
-												 }
-												blockoverride
-												"icon"
-												{
-													texture = "gfx/interface/icons/event_icons/event_portrait.dds"
-												}
-												onclick = "[GetScriptedGui('ve_idea_2_but_1').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('idea_group',MakeScopeFlag(StateRegion.MakeScope.Var('idea_group').GetFlagName)).AddScope('level',MakeScopeValue(GetGlobalVariable(Concatenate(Scope.GetFlagName,'_value')))).End)]"
+													45
+													45
+												}										
+												widget = {	#Diplomatic
+													size = {
+														45
+														45
+													}
+													visible = "[EqualTo_string(StateRegion.MakeScope.Var('idea_group').GetFlagName, 'diplomatic_idea')]"
+													enabled = "[GetScriptedGui('boost_idea_group').IsValid(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('idea_group',MakeScopeFlag(StateRegion.MakeScope.Var('idea_group').GetFlagName)).AddScope('level',MakeScopeValue(GetGlobalVariable(Concatenate(Scope.GetFlagName,'_value')).GetValue)).End)]"
+													icon = {
+														visible = "[EqualTo_string(Scope.GetFlagName, '1')]"
+														enabled = "[GetScriptedGui('idea_tooltip_1').IsValid(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('idea_group',MakeScopeFlag(StateRegion.MakeScope.Var('idea_group').GetFlagName)).AddScope('level',MakeScopeValue(GetGlobalVariable(Concatenate(Scope.GetFlagName,'_value')).GetValue)).End)]"
+														texture = "gfx/interface/ve_ideas/diplomatic_reputation.dds"
+														tooltip = "[GetScriptedGui('idea_tooltip_1').ExecuteTooltip(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('idea_group',MakeScopeFlag(StateRegion.MakeScope.Var('idea_group').GetFlagName)).AddScope('level',MakeScopeValue(GetGlobalVariable(Concatenate(Scope.GetFlagName,'_value')).GetValue)).End)]"
+														size = {
+															100%
+															100%
+														}
+													}
+													icon = {
+														visible = "[EqualTo_string(Scope.GetFlagName, '2')]"
+														enabled = "[GetScriptedGui('idea_tooltip_2').IsValid(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('idea_group',MakeScopeFlag(StateRegion.MakeScope.Var('idea_group').GetFlagName)).AddScope('level',MakeScopeValue(GetGlobalVariable(Concatenate(Scope.GetFlagName,'_value')).GetValue)).End)]"
+														texture = "gfx/interface/ve_ideas/diplomatic_upkeep.dds"
+														tooltip = "[GetScriptedGui('idea_tooltip_2').ExecuteTooltip(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('idea_group',MakeScopeFlag(StateRegion.MakeScope.Var('idea_group').GetFlagName)).AddScope('level',MakeScopeValue(GetGlobalVariable(Concatenate(Scope.GetFlagName,'_value')).GetValue)).End)]"
+														size = {
+															100%
+															100%
+														}
+													}
+													icon = {
+														visible = "[EqualTo_string(Scope.GetFlagName, '3')]"
+														enabled = "[GetScriptedGui('idea_tooltip_3').IsValid(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('idea_group',MakeScopeFlag(StateRegion.MakeScope.Var('idea_group').GetFlagName)).AddScope('level',MakeScopeValue(GetGlobalVariable(Concatenate(Scope.GetFlagName,'_value')).GetValue)).End)]"
+														texture = "gfx/interface/ve_ideas/aggresive_exp_icon.dds"
+														tooltip = "[GetScriptedGui('idea_tooltip_3').ExecuteTooltip(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('idea_group',MakeScopeFlag(StateRegion.MakeScope.Var('idea_group').GetFlagName)).AddScope('level',MakeScopeValue(GetGlobalVariable(Concatenate(Scope.GetFlagName,'_value')).GetValue)).End)]"
+														size = {
+															100%
+															100%
+														}
+													}
+													icon = {
+														visible = "[EqualTo_string(Scope.GetFlagName, '4')]"
+														enabled = "[GetScriptedGui('idea_tooltip_4').IsValid(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('idea_group',MakeScopeFlag(StateRegion.MakeScope.Var('idea_group').GetFlagName)).AddScope('level',MakeScopeValue(GetGlobalVariable(Concatenate(Scope.GetFlagName,'_value')).GetValue)).End)]"
+														texture = "gfx/interface/ve_ideas/improve_relation_modifier.dds"
+														tooltip = "[GetScriptedGui('idea_tooltip_4').ExecuteTooltip(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('idea_group',MakeScopeFlag(StateRegion.MakeScope.Var('idea_group').GetFlagName)).AddScope('level',MakeScopeValue(GetGlobalVariable(Concatenate(Scope.GetFlagName,'_value')).GetValue)).End)]"
+														size = {
+															100%
+															100%
+														}
+													}
+													icon = {
+														visible = "[EqualTo_string(Scope.GetFlagName, '5')]"
+														enabled = "[GetScriptedGui('idea_tooltip_5').IsValid(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('idea_group',MakeScopeFlag(StateRegion.MakeScope.Var('idea_group').GetFlagName)).AddScope('level',MakeScopeValue(GetGlobalVariable(Concatenate(Scope.GetFlagName,'_value')).GetValue)).End)]"
+														texture = "gfx/interface/ve_ideas/global_ship_trade_power.dds"
+														tooltip = "[GetScriptedGui('idea_tooltip_5').ExecuteTooltip(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('idea_group',MakeScopeFlag(StateRegion.MakeScope.Var('idea_group').GetFlagName)).AddScope('level',MakeScopeValue(GetGlobalVariable(Concatenate(Scope.GetFlagName,'_value')).GetValue)).End)]"
+														size = {
+															100%
+															100%
+														}
+													}
+													icon = {
+														visible = "[EqualTo_string(Scope.GetFlagName, '6')]"
+														enabled = "[GetScriptedGui('idea_tooltip_6').IsValid(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('idea_group',MakeScopeFlag(StateRegion.MakeScope.Var('idea_group').GetFlagName)).AddScope('level',MakeScopeValue(GetGlobalVariable(Concatenate(Scope.GetFlagName,'_value')).GetValue)).End)]"
+														texture = "gfx/interface/ve_ideas/dip_tech_cost_modifier.dds"
+														tooltip = "[GetScriptedGui('idea_tooltip_6').ExecuteTooltip(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('idea_group',MakeScopeFlag(StateRegion.MakeScope.Var('idea_group').GetFlagName)).AddScope('level',MakeScopeValue(GetGlobalVariable(Concatenate(Scope.GetFlagName,'_value')).GetValue)).End)]"
+														size = {
+															100%
+															100%
+														}
+													}
+													icon = {
+														visible = "[EqualTo_string(Scope.GetFlagName, '7')]"
+														enabled = "[GetScriptedGui('idea_tooltip_7').IsValid(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('idea_group',MakeScopeFlag(StateRegion.MakeScope.Var('idea_group').GetFlagName)).AddScope('level',MakeScopeValue(GetGlobalVariable(Concatenate(Scope.GetFlagName,'_value')).GetValue)).End)]"
+														texture = "gfx/interface/ve_ideas/province_warscore_cost.dds"
+														tooltip = "[GetScriptedGui('idea_tooltip_7').ExecuteTooltip(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('idea_group',MakeScopeFlag(StateRegion.MakeScope.Var('idea_group').GetFlagName)).AddScope('level',MakeScopeValue(GetGlobalVariable(Concatenate(Scope.GetFlagName,'_value')).GetValue)).End)]"
+														size = {
+															100%
+															100%
+														}
+													}
+												}	
+												widget = {	#Trade
+													size = {
+														45
+														45
+													}
+													visible = "[EqualTo_string(StateRegion.MakeScope.Var('idea_group').GetFlagName, 'trade_idea')]"
+													enabled = "[GetScriptedGui('boost_idea_group').IsValid(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('idea_group',MakeScopeFlag(StateRegion.MakeScope.Var('idea_group').GetFlagName)).AddScope('level',MakeScopeValue(GetGlobalVariable(Concatenate(Scope.GetFlagName,'_value')).GetValue)).End)]"
+													icon = {
+														visible = "[EqualTo_string(Scope.GetFlagName, '1')]"
+														enabled = "[GetScriptedGui('idea_tooltip_1').IsValid(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('idea_group',MakeScopeFlag(StateRegion.MakeScope.Var('idea_group').GetFlagName)).AddScope('level',MakeScopeValue(GetGlobalVariable(Concatenate(Scope.GetFlagName,'_value')).GetValue)).End)]"
+														texture = "gfx/interface/ve_ideas/global_foreign_trade_power.dds"
+														tooltip = "[GetScriptedGui('idea_tooltip_1').ExecuteTooltip(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('idea_group',MakeScopeFlag(StateRegion.MakeScope.Var('idea_group').GetFlagName)).AddScope('level',MakeScopeValue(GetGlobalVariable(Concatenate(Scope.GetFlagName,'_value')).GetValue)).End)]"
+														size = {
+															100%
+															100%
+														}
+													}
+													icon = {
+														visible = "[EqualTo_string(Scope.GetFlagName, '2')]"
+														enabled = "[GetScriptedGui('idea_tooltip_2').IsValid(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('idea_group',MakeScopeFlag(StateRegion.MakeScope.Var('idea_group').GetFlagName)).AddScope('level',MakeScopeValue(GetGlobalVariable(Concatenate(Scope.GetFlagName,'_value')).GetValue)).End)]"
+														texture = "gfx/interface/ve_ideas/global_trade_income_modifier.dds"
+														tooltip = "[GetScriptedGui('idea_tooltip_2').ExecuteTooltip(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('idea_group',MakeScopeFlag(StateRegion.MakeScope.Var('idea_group').GetFlagName)).AddScope('level',MakeScopeValue(GetGlobalVariable(Concatenate(Scope.GetFlagName,'_value')).GetValue)).End)]"
+														size = {
+															100%
+															100%
+														}
+													}
+													icon = {
+														visible = "[EqualTo_string(Scope.GetFlagName, '3')]"
+														enabled = "[GetScriptedGui('idea_tooltip_3').IsValid(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('idea_group',MakeScopeFlag(StateRegion.MakeScope.Var('idea_group').GetFlagName)).AddScope('level',MakeScopeValue(GetGlobalVariable(Concatenate(Scope.GetFlagName,'_value')).GetValue)).End)]"
+														texture = "gfx/interface/ve_ideas/tradeview_trade_range.dds"
+														tooltip = "[GetScriptedGui('idea_tooltip_3').ExecuteTooltip(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('idea_group',MakeScopeFlag(StateRegion.MakeScope.Var('idea_group').GetFlagName)).AddScope('level',MakeScopeValue(GetGlobalVariable(Concatenate(Scope.GetFlagName,'_value')).GetValue)).End)]"
+														size = {
+															100%
+															100%
+														}
+													}
+													icon = {
+														visible = "[EqualTo_string(Scope.GetFlagName, '4')]"
+														enabled = "[GetScriptedGui('idea_tooltip_4').IsValid(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('idea_group',MakeScopeFlag(StateRegion.MakeScope.Var('idea_group').GetFlagName)).AddScope('level',MakeScopeValue(GetGlobalVariable(Concatenate(Scope.GetFlagName,'_value')).GetValue)).End)]"
+														texture = "gfx/interface/ve_ideas/trade_efficiency.dds"
+														tooltip = "[GetScriptedGui('idea_tooltip_4').ExecuteTooltip(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('idea_group',MakeScopeFlag(StateRegion.MakeScope.Var('idea_group').GetFlagName)).AddScope('level',MakeScopeValue(GetGlobalVariable(Concatenate(Scope.GetFlagName,'_value')).GetValue)).End)]"
+														size = {
+															100%
+															100%
+														}
+													}
+													icon = {
+														visible = "[EqualTo_string(Scope.GetFlagName, '5')]"
+														enabled = "[GetScriptedGui('idea_tooltip_5').IsValid(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('idea_group',MakeScopeFlag(StateRegion.MakeScope.Var('idea_group').GetFlagName)).AddScope('level',MakeScopeValue(GetGlobalVariable(Concatenate(Scope.GetFlagName,'_value')).GetValue)).End)]"
+														texture = "gfx/interface/ve_ideas/trade_value.dds"
+														tooltip = "[GetScriptedGui('idea_tooltip_5').ExecuteTooltip(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('idea_group',MakeScopeFlag(StateRegion.MakeScope.Var('idea_group').GetFlagName)).AddScope('level',MakeScopeValue(GetGlobalVariable(Concatenate(Scope.GetFlagName,'_value')).GetValue)).End)]"
+														size = {
+															100%
+															100%
+														}
+													}
+													icon = {
+														visible = "[EqualTo_string(Scope.GetFlagName, '6')]"
+														enabled = "[GetScriptedGui('idea_tooltip_6').IsValid(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('idea_group',MakeScopeFlag(StateRegion.MakeScope.Var('idea_group').GetFlagName)).AddScope('level',MakeScopeValue(GetGlobalVariable(Concatenate(Scope.GetFlagName,'_value')).GetValue)).End)]"
+														texture = "gfx/interface/ve_ideas/land_morale.dds"
+														tooltip = "[GetScriptedGui('idea_tooltip_6').ExecuteTooltip(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('idea_group',MakeScopeFlag(StateRegion.MakeScope.Var('idea_group').GetFlagName)).AddScope('level',MakeScopeValue(GetGlobalVariable(Concatenate(Scope.GetFlagName,'_value')).GetValue)).End)]"
+														size = {
+															100%
+															100%
+														}
+													}
+													icon = {
+														visible = "[EqualTo_string(Scope.GetFlagName, '7')]"
+														enabled = "[GetScriptedGui('idea_tooltip_7').IsValid(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('idea_group',MakeScopeFlag(StateRegion.MakeScope.Var('idea_group').GetFlagName)).AddScope('level',MakeScopeValue(GetGlobalVariable(Concatenate(Scope.GetFlagName,'_value')).GetValue)).End)]"
+														texture = "gfx/interface/ve_ideas/land_morale.dds"
+														tooltip = "[GetScriptedGui('idea_tooltip_7').ExecuteTooltip(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('idea_group',MakeScopeFlag(StateRegion.MakeScope.Var('idea_group').GetFlagName)).AddScope('level',MakeScopeValue(GetGlobalVariable(Concatenate(Scope.GetFlagName,'_value')).GetValue)).End)]"
+														size = {
+															100%
+															100%
+														}
+													}
+												}	
+												widget = {	#Qualification
+													size = {
+														45
+														45
+													}
+													visible = "[EqualTo_string(StateRegion.MakeScope.Var('idea_group').GetFlagName, 'qualification_idea')]"
+													enabled = "[GetScriptedGui('boost_idea_group').IsValid(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('idea_group',MakeScopeFlag(StateRegion.MakeScope.Var('idea_group').GetFlagName)).AddScope('level',MakeScopeValue(GetGlobalVariable(Concatenate(Scope.GetFlagName,'_value')).GetValue)).End)]"
+													icon = {
+														visible = "[EqualTo_string(Scope.GetFlagName, '1')]"
+														enabled = "[GetScriptedGui('idea_tooltip_1').IsValid(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('idea_group',MakeScopeFlag(StateRegion.MakeScope.Var('idea_group').GetFlagName)).AddScope('level',MakeScopeValue(GetGlobalVariable(Concatenate(Scope.GetFlagName,'_value')).GetValue)).End)]"
+														texture = "gfx/interface/ve_ideas/land_morale.dds"
+														tooltip = "[GetScriptedGui('idea_tooltip_1').ExecuteTooltip(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('idea_group',MakeScopeFlag(StateRegion.MakeScope.Var('idea_group').GetFlagName)).AddScope('level',MakeScopeValue(GetGlobalVariable(Concatenate(Scope.GetFlagName,'_value')).GetValue)).End)]"
+														size = {
+															100%
+															100%
+														}
+													}
+													icon = {
+														visible = "[EqualTo_string(Scope.GetFlagName, '2')]"
+														enabled = "[GetScriptedGui('idea_tooltip_2').IsValid(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('idea_group',MakeScopeFlag(StateRegion.MakeScope.Var('idea_group').GetFlagName)).AddScope('level',MakeScopeValue(GetGlobalVariable(Concatenate(Scope.GetFlagName,'_value')).GetValue)).End)]"
+														texture = "gfx/interface/ve_ideas/land_morale.dds"
+														tooltip = "[GetScriptedGui('idea_tooltip_2').ExecuteTooltip(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('idea_group',MakeScopeFlag(StateRegion.MakeScope.Var('idea_group').GetFlagName)).AddScope('level',MakeScopeValue(GetGlobalVariable(Concatenate(Scope.GetFlagName,'_value')).GetValue)).End)]"
+														size = {
+															100%
+															100%
+														}
+													}
+													icon = {
+														visible = "[EqualTo_string(Scope.GetFlagName, '3')]"
+														enabled = "[GetScriptedGui('idea_tooltip_3').IsValid(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('idea_group',MakeScopeFlag(StateRegion.MakeScope.Var('idea_group').GetFlagName)).AddScope('level',MakeScopeValue(GetGlobalVariable(Concatenate(Scope.GetFlagName,'_value')).GetValue)).End)]"
+														texture = "gfx/interface/ve_ideas/technology_cost.dds"
+														tooltip = "[GetScriptedGui('idea_tooltip_3').ExecuteTooltip(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('idea_group',MakeScopeFlag(StateRegion.MakeScope.Var('idea_group').GetFlagName)).AddScope('level',MakeScopeValue(GetGlobalVariable(Concatenate(Scope.GetFlagName,'_value')).GetValue)).End)]"
+														size = {
+															100%
+															100%
+														}
+													}
+													icon = {
+														visible = "[EqualTo_string(Scope.GetFlagName, '4')]"
+														enabled = "[GetScriptedGui('idea_tooltip_4').IsValid(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('idea_group',MakeScopeFlag(StateRegion.MakeScope.Var('idea_group').GetFlagName)).AddScope('level',MakeScopeValue(GetGlobalVariable(Concatenate(Scope.GetFlagName,'_value')).GetValue)).End)]"
+														texture = "gfx/interface/ve_ideas/land_morale.dds"
+														tooltip = "[GetScriptedGui('idea_tooltip_4').ExecuteTooltip(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('idea_group',MakeScopeFlag(StateRegion.MakeScope.Var('idea_group').GetFlagName)).AddScope('level',MakeScopeValue(GetGlobalVariable(Concatenate(Scope.GetFlagName,'_value')).GetValue)).End)]"
+														size = {
+															100%
+															100%
+														}
+													}
+													icon = {
+														visible = "[EqualTo_string(Scope.GetFlagName, '5')]"
+														enabled = "[GetScriptedGui('idea_tooltip_5').IsValid(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('idea_group',MakeScopeFlag(StateRegion.MakeScope.Var('idea_group').GetFlagName)).AddScope('level',MakeScopeValue(GetGlobalVariable(Concatenate(Scope.GetFlagName,'_value')).GetValue)).End)]"
+														texture = "gfx/interface/ve_ideas/land_morale.dds"
+														tooltip = "[GetScriptedGui('idea_tooltip_5').ExecuteTooltip(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('idea_group',MakeScopeFlag(StateRegion.MakeScope.Var('idea_group').GetFlagName)).AddScope('level',MakeScopeValue(GetGlobalVariable(Concatenate(Scope.GetFlagName,'_value')).GetValue)).End)]"
+														size = {
+															100%
+															100%
+														}
+													}
+													icon = {
+														visible = "[EqualTo_string(Scope.GetFlagName, '6')]"
+														enabled = "[GetScriptedGui('idea_tooltip_6').IsValid(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('idea_group',MakeScopeFlag(StateRegion.MakeScope.Var('idea_group').GetFlagName)).AddScope('level',MakeScopeValue(GetGlobalVariable(Concatenate(Scope.GetFlagName,'_value')).GetValue)).End)]"
+														texture = "gfx/interface/ve_ideas/great_project_upgrade_cost.dds"
+														tooltip = "[GetScriptedGui('idea_tooltip_6').ExecuteTooltip(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('idea_group',MakeScopeFlag(StateRegion.MakeScope.Var('idea_group').GetFlagName)).AddScope('level',MakeScopeValue(GetGlobalVariable(Concatenate(Scope.GetFlagName,'_value')).GetValue)).End)]"
+														size = {
+															100%
+															100%
+														}
+													}
+													icon = {
+														visible = "[EqualTo_string(Scope.GetFlagName, '7')]"
+														enabled = "[GetScriptedGui('idea_tooltip_7').IsValid(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('idea_group',MakeScopeFlag(StateRegion.MakeScope.Var('idea_group').GetFlagName)).AddScope('level',MakeScopeValue(GetGlobalVariable(Concatenate(Scope.GetFlagName,'_value')).GetValue)).End)]"
+														texture = "gfx/interface/ve_ideas/land_morale.dds"
+														tooltip = "[GetScriptedGui('idea_tooltip_7').ExecuteTooltip(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('idea_group',MakeScopeFlag(StateRegion.MakeScope.Var('idea_group').GetFlagName)).AddScope('level',MakeScopeValue(GetGlobalVariable(Concatenate(Scope.GetFlagName,'_value')).GetValue)).End)]"
+														size = {
+															100%
+															100%
+														}
+													}
+												}	
+												widget = {	#Humanist
+													size = {
+														45
+														45
+													}
+													visible = "[EqualTo_string(StateRegion.MakeScope.Var('idea_group').GetFlagName, 'humanist_idea')]"
+													enabled = "[GetScriptedGui('boost_idea_group').IsValid(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('idea_group',MakeScopeFlag(StateRegion.MakeScope.Var('idea_group').GetFlagName)).AddScope('level',MakeScopeValue(GetGlobalVariable(Concatenate(Scope.GetFlagName,'_value')).GetValue)).End)]"
+													icon = {
+														visible = "[EqualTo_string(Scope.GetFlagName, '1')]"
+														enabled = "[GetScriptedGui('idea_tooltip_1').IsValid(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('idea_group',MakeScopeFlag(StateRegion.MakeScope.Var('idea_group').GetFlagName)).AddScope('level',MakeScopeValue(GetGlobalVariable(Concatenate(Scope.GetFlagName,'_value')).GetValue)).End)]"
+														texture = "gfx/interface/ve_ideas/global_institution_spread.dds"
+														tooltip = "[GetScriptedGui('idea_tooltip_1').ExecuteTooltip(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('idea_group',MakeScopeFlag(StateRegion.MakeScope.Var('idea_group').GetFlagName)).AddScope('level',MakeScopeValue(GetGlobalVariable(Concatenate(Scope.GetFlagName,'_value')).GetValue)).End)]"
+														size = {
+															100%
+															100%
+														}
+													}
+													icon = {
+														visible = "[EqualTo_string(Scope.GetFlagName, '2')]"
+														enabled = "[GetScriptedGui('idea_tooltip_2').IsValid(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('idea_group',MakeScopeFlag(StateRegion.MakeScope.Var('idea_group').GetFlagName)).AddScope('level',MakeScopeValue(GetGlobalVariable(Concatenate(Scope.GetFlagName,'_value')).GetValue)).End)]"
+														texture = "gfx/interface/ve_ideas/land_morale.dds"
+														tooltip = "[GetScriptedGui('idea_tooltip_2').ExecuteTooltip(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('idea_group',MakeScopeFlag(StateRegion.MakeScope.Var('idea_group').GetFlagName)).AddScope('level',MakeScopeValue(GetGlobalVariable(Concatenate(Scope.GetFlagName,'_value')).GetValue)).End)]"
+														size = {
+															100%
+															100%
+														}
+													}
+													icon = {
+														visible = "[EqualTo_string(Scope.GetFlagName, '3')]"
+														enabled = "[GetScriptedGui('idea_tooltip_3').IsValid(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('idea_group',MakeScopeFlag(StateRegion.MakeScope.Var('idea_group').GetFlagName)).AddScope('level',MakeScopeValue(GetGlobalVariable(Concatenate(Scope.GetFlagName,'_value')).GetValue)).End)]"
+														texture = "gfx/interface/ve_ideas/unrest_suppression_icon.dds"
+														tooltip = "[GetScriptedGui('idea_tooltip_3').ExecuteTooltip(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('idea_group',MakeScopeFlag(StateRegion.MakeScope.Var('idea_group').GetFlagName)).AddScope('level',MakeScopeValue(GetGlobalVariable(Concatenate(Scope.GetFlagName,'_value')).GetValue)).End)]"
+														size = {
+															100%
+															100%
+														}
+													}
+													icon = {
+														visible = "[EqualTo_string(Scope.GetFlagName, '4')]"
+														enabled = "[GetScriptedGui('idea_tooltip_4').IsValid(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('idea_group',MakeScopeFlag(StateRegion.MakeScope.Var('idea_group').GetFlagName)).AddScope('level',MakeScopeValue(GetGlobalVariable(Concatenate(Scope.GetFlagName,'_value')).GetValue)).End)]"
+														texture = "gfx/interface/ve_ideas/land_morale.dds"
+														tooltip = "[GetScriptedGui('idea_tooltip_4').ExecuteTooltip(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('idea_group',MakeScopeFlag(StateRegion.MakeScope.Var('idea_group').GetFlagName)).AddScope('level',MakeScopeValue(GetGlobalVariable(Concatenate(Scope.GetFlagName,'_value')).GetValue)).End)]"
+														size = {
+															100%
+															100%
+														}
+													}
+													icon = {
+														visible = "[EqualTo_string(Scope.GetFlagName, '5')]"
+														enabled = "[GetScriptedGui('idea_tooltip_5').IsValid(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('idea_group',MakeScopeFlag(StateRegion.MakeScope.Var('idea_group').GetFlagName)).AddScope('level',MakeScopeValue(GetGlobalVariable(Concatenate(Scope.GetFlagName,'_value')).GetValue)).End)]"
+														texture = "gfx/interface/ve_ideas/icon_transit_hub.dds"
+														tooltip = "[GetScriptedGui('idea_tooltip_5').ExecuteTooltip(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('idea_group',MakeScopeFlag(StateRegion.MakeScope.Var('idea_group').GetFlagName)).AddScope('level',MakeScopeValue(GetGlobalVariable(Concatenate(Scope.GetFlagName,'_value')).GetValue)).End)]"
+														size = {
+															100%
+															100%
+														}
+													}
+													icon = {
+														visible = "[EqualTo_string(Scope.GetFlagName, '6')]"
+														enabled = "[GetScriptedGui('idea_tooltip_6').IsValid(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('idea_group',MakeScopeFlag(StateRegion.MakeScope.Var('idea_group').GetFlagName)).AddScope('level',MakeScopeValue(GetGlobalVariable(Concatenate(Scope.GetFlagName,'_value')).GetValue)).End)]"
+														texture = "gfx/interface/ve_ideas/improve_relation_modifier.dds"
+														tooltip = "[GetScriptedGui('idea_tooltip_6').ExecuteTooltip(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('idea_group',MakeScopeFlag(StateRegion.MakeScope.Var('idea_group').GetFlagName)).AddScope('level',MakeScopeValue(GetGlobalVariable(Concatenate(Scope.GetFlagName,'_value')).GetValue)).End)]"
+														size = {
+															100%
+															100%
+														}
+													}
+													icon = {
+														visible = "[EqualTo_string(Scope.GetFlagName, '7')]"
+														enabled = "[GetScriptedGui('idea_tooltip_7').IsValid(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('idea_group',MakeScopeFlag(StateRegion.MakeScope.Var('idea_group').GetFlagName)).AddScope('level',MakeScopeValue(GetGlobalVariable(Concatenate(Scope.GetFlagName,'_value')).GetValue)).End)]"
+														texture = "gfx/interface/ve_ideas/land_morale.dds"
+														tooltip = "[GetScriptedGui('idea_tooltip_7').ExecuteTooltip(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('idea_group',MakeScopeFlag(StateRegion.MakeScope.Var('idea_group').GetFlagName)).AddScope('level',MakeScopeValue(GetGlobalVariable(Concatenate(Scope.GetFlagName,'_value')).GetValue)).End)]"
+														size = {
+															100%
+															100%
+														}
+													}
+													
+												}	
+												widget = {	#Syndicalism
+													size = {
+														45
+														45
+													}
+													visible = "[EqualTo_string(StateRegion.MakeScope.Var('idea_group').GetFlagName, 'syndicalism_idea')]"
+													enabled = "[GetScriptedGui('boost_idea_group').IsValid(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('idea_group',MakeScopeFlag(StateRegion.MakeScope.Var('idea_group').GetFlagName)).AddScope('level',MakeScopeValue(GetGlobalVariable(Concatenate(Scope.GetFlagName,'_value')).GetValue)).End)]"
+													icon = {
+														visible = "[EqualTo_string(Scope.GetFlagName, '1')]"
+														enabled = "[GetScriptedGui('idea_tooltip_1').IsValid(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('idea_group',MakeScopeFlag(StateRegion.MakeScope.Var('idea_group').GetFlagName)).AddScope('level',MakeScopeValue(GetGlobalVariable(Concatenate(Scope.GetFlagName,'_value')).GetValue)).End)]"
+														texture = "gfx/interface/ve_ideas/local_production_efficiency.dds"
+														tooltip = "[GetScriptedGui('idea_tooltip_1').ExecuteTooltip(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('idea_group',MakeScopeFlag(StateRegion.MakeScope.Var('idea_group').GetFlagName)).AddScope('level',MakeScopeValue(GetGlobalVariable(Concatenate(Scope.GetFlagName,'_value')).GetValue)).End)]"
+														size = {
+															100%
+															100%
+														}
+													}
+													icon = {
+														visible = "[EqualTo_string(Scope.GetFlagName, '2')]"
+														enabled = "[GetScriptedGui('idea_tooltip_2').IsValid(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('idea_group',MakeScopeFlag(StateRegion.MakeScope.Var('idea_group').GetFlagName)).AddScope('level',MakeScopeValue(GetGlobalVariable(Concatenate(Scope.GetFlagName,'_value')).GetValue)).End)]"
+														texture = "gfx/interface/ve_ideas/land_morale.dds"
+														tooltip = "[GetScriptedGui('idea_tooltip_2').ExecuteTooltip(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('idea_group',MakeScopeFlag(StateRegion.MakeScope.Var('idea_group').GetFlagName)).AddScope('level',MakeScopeValue(GetGlobalVariable(Concatenate(Scope.GetFlagName,'_value')).GetValue)).End)]"
+														size = {
+															100%
+															100%
+														}
+													}
+													icon = {
+														visible = "[EqualTo_string(Scope.GetFlagName, '3')]"
+														enabled = "[GetScriptedGui('idea_tooltip_3').IsValid(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('idea_group',MakeScopeFlag(StateRegion.MakeScope.Var('idea_group').GetFlagName)).AddScope('level',MakeScopeValue(GetGlobalVariable(Concatenate(Scope.GetFlagName,'_value')).GetValue)).End)]"
+														texture = "gfx/interface/ve_ideas/land_morale.dds"
+														tooltip = "[GetScriptedGui('idea_tooltip_3').ExecuteTooltip(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('idea_group',MakeScopeFlag(StateRegion.MakeScope.Var('idea_group').GetFlagName)).AddScope('level',MakeScopeValue(GetGlobalVariable(Concatenate(Scope.GetFlagName,'_value')).GetValue)).End)]"
+														size = {
+															100%
+															100%
+														}
+													}
+													icon = {
+														visible = "[EqualTo_string(Scope.GetFlagName, '4')]"
+														enabled = "[GetScriptedGui('idea_tooltip_4').IsValid(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('idea_group',MakeScopeFlag(StateRegion.MakeScope.Var('idea_group').GetFlagName)).AddScope('level',MakeScopeValue(GetGlobalVariable(Concatenate(Scope.GetFlagName,'_value')).GetValue)).End)]"
+														texture = "gfx/interface/ve_ideas/land_morale.dds"
+														tooltip = "[GetScriptedGui('idea_tooltip_4').ExecuteTooltip(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('idea_group',MakeScopeFlag(StateRegion.MakeScope.Var('idea_group').GetFlagName)).AddScope('level',MakeScopeValue(GetGlobalVariable(Concatenate(Scope.GetFlagName,'_value')).GetValue)).End)]"
+														size = {
+															100%
+															100%
+														}
+													}
+													icon = {
+														visible = "[EqualTo_string(Scope.GetFlagName, '5')]"
+														enabled = "[GetScriptedGui('idea_tooltip_5').IsValid(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('idea_group',MakeScopeFlag(StateRegion.MakeScope.Var('idea_group').GetFlagName)).AddScope('level',MakeScopeValue(GetGlobalVariable(Concatenate(Scope.GetFlagName,'_value')).GetValue)).End)]"
+														texture = "gfx/interface/ve_ideas/land_morale.dds"
+														tooltip = "[GetScriptedGui('idea_tooltip_5').ExecuteTooltip(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('idea_group',MakeScopeFlag(StateRegion.MakeScope.Var('idea_group').GetFlagName)).AddScope('level',MakeScopeValue(GetGlobalVariable(Concatenate(Scope.GetFlagName,'_value')).GetValue)).End)]"
+														size = {
+															100%
+															100%
+														}
+													}
+													icon = {
+														visible = "[EqualTo_string(Scope.GetFlagName, '6')]"
+														enabled = "[GetScriptedGui('idea_tooltip_6').IsValid(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('idea_group',MakeScopeFlag(StateRegion.MakeScope.Var('idea_group').GetFlagName)).AddScope('level',MakeScopeValue(GetGlobalVariable(Concatenate(Scope.GetFlagName,'_value')).GetValue)).End)]"
+														texture = "gfx/interface/ve_ideas/land_morale.dds"
+														tooltip = "[GetScriptedGui('idea_tooltip_6').ExecuteTooltip(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('idea_group',MakeScopeFlag(StateRegion.MakeScope.Var('idea_group').GetFlagName)).AddScope('level',MakeScopeValue(GetGlobalVariable(Concatenate(Scope.GetFlagName,'_value')).GetValue)).End)]"
+														size = {
+															100%
+															100%
+														}
+													}
+													icon = {
+														visible = "[EqualTo_string(Scope.GetFlagName, '7')]"
+														enabled = "[GetScriptedGui('idea_tooltip_7').IsValid(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('idea_group',MakeScopeFlag(StateRegion.MakeScope.Var('idea_group').GetFlagName)).AddScope('level',MakeScopeValue(GetGlobalVariable(Concatenate(Scope.GetFlagName,'_value')).GetValue)).End)]"
+														texture = "gfx/interface/ve_ideas/land_morale.dds"
+														tooltip = "[GetScriptedGui('idea_tooltip_7').ExecuteTooltip(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('idea_group',MakeScopeFlag(StateRegion.MakeScope.Var('idea_group').GetFlagName)).AddScope('level',MakeScopeValue(GetGlobalVariable(Concatenate(Scope.GetFlagName,'_value')).GetValue)).End)]"
+														size = {
+															100%
+															100%
+														}
+													}
+												}	
 											}
 										}
+									}
+									default_progressbar_horizontal = {
+										layoutpolicy_horizontal = expanding
+										size = {
+											100%
+											10
+										}
+										blockoverride
+										"values"
+										{
+											max = 7
+											value = "[GetPlayer.MakeScope.Var(StateRegion.MakeScope.Var('idea_group').GetFlagName).GetValue]"
+										}
+									}
+									button = {
+										using = default_button_action
+										layoutpolicy_horizontal = expanding
+										size = { 100% 40 }
+										raw_text = "Embrace"
+										visible = "[GetScriptedGui('embrace_idea_group').IsShown(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('idea_group',MakeScopeFlag(StateRegion.MakeScope.Var('idea_group').GetFlagName)).End)]"
+										enabled = "[GreaterThan_CFixedPoint(GetPlayer.MakeScope.Var('idea_group_cap').GetValue,GetPlayer.MakeScope.Var('idea_group_unlocked').GetValue)]"
+										onclick = "[GetScriptedGui('embrace_idea_group').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('idea_group',MakeScopeFlag(StateRegion.MakeScope.Var('idea_group').GetFlagName)).End)]"
+										using = tooltip_above
+										using = budget_resume_all_button_sound
+									}
+									button = {
+										using = default_button_action
+										layoutpolicy_horizontal = expanding
+										size = { 100% 40 }
+										raw_text = "Boost Idea"
+										visible = "[GetScriptedGui('boost_idea_group').IsShown(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('idea_group',MakeScopeFlag(StateRegion.MakeScope.Var('idea_group').GetFlagName)).End)]"
+										enabled = "[GetScriptedGui('boost_idea_group').IsValid(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('idea_group',MakeScopeFlag(StateRegion.MakeScope.Var('idea_group').GetFlagName)).End)]"
+										onclick = "[GetScriptedGui('boost_idea_group').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('idea_group',MakeScopeFlag(StateRegion.MakeScope.Var('idea_group').GetFlagName)).End)]"
+										using = tooltip_above
+										using = technology_confirm_button_sound
 									}
 								}
 							}
 						}
 					}
 				}
-				vbox = {
-					datamodel = "[GetGlobalList('adm_ideas')]"	
+				vbox = {	#MIL Ideas
+					datamodel = "[GetGlobalList('mil_ideas')]"
+					margin = {
+						0 10
+					}
+					spacing = 10
 					item = {					
 						vbox = {
 							spacing = 20
@@ -656,40 +1616,543 @@ ve_gui_panel_types
 								10
 							}
 							hbox = {
-								vbox = {
-									spacing = 10
-									icon = {
-										texture = "gfx/interface/icons/event_icons/event_portrait.dds"
-										size = {
-											120
-											120
-										}
-									}
-									
-								}
 								datacontext = "[Scope.GetStateRegion]"
+								vbox = {								
+									datamodel = "[GetGlobalList('idea_pic_index')]"
+									item = {
+										widget = {
+											size = {
+												120
+												120
+											}									
+											widget = {
+												size = {
+													120
+													120
+												}
+												visible = "[EqualTo_string(StateRegion.MakeScope.Var('idea_group').GetFlagName, 'offensive_idea')]"
+												icon = {
+													texture = "gfx/interface/ve_ideas/idea_offensive_ideas.dds"
+													size = {
+														120
+														120
+													}
+												}
+											}
+											widget = {	
+												size = {
+													120
+													120
+												}
+												visible = "[EqualTo_string(StateRegion.MakeScope.Var('idea_group').GetFlagName, 'defensive_idea')]"
+												icon = {
+													texture = "gfx/interface/ve_ideas/idea_defensive_ideas.dds"
+													size = {
+														120
+														120
+													}
+												}
+											}
+											widget = {	
+												size = {
+													120
+													120
+												}
+												visible = "[EqualTo_string(StateRegion.MakeScope.Var('idea_group').GetFlagName, 'naval_idea')]"
+												icon = {
+													texture = "gfx/interface/ve_ideas/idea_naval_ideas.dds"
+													size = {
+														120
+														120
+													}
+												}
+											}
+											widget = {	
+												size = {
+													120
+													120
+												}
+												visible = "[EqualTo_string(StateRegion.MakeScope.Var('idea_group').GetFlagName, 'militarization_idea')]"
+												icon = {
+													texture = "gfx/interface/ve_ideas/idea_theocracy_gov_ideas.dds"
+													size = {
+														120
+														120
+													}
+												}
+											}
+											widget = {	
+												size = {
+													120
+													120
+												}
+												visible = "[EqualTo_string(StateRegion.MakeScope.Var('idea_group').GetFlagName, 'imperialist_idea')]"
+												icon = {
+													texture = "gfx/interface/ve_ideas/idea_expansion_ideas.dds"
+													size = {
+														120
+														120
+													}
+												}
+											}
+										}
+									}								
+								}								
 								vbox = {
 									spacing = 10
-									text_single = {
-										text = "[Localize(Concatenate(StateRegion.MakeScope.Var('idea_group').GetFlagName,'_name'))]"
+									datamodel = "[GetGlobalList('idea_index')]"
+									hbox = {
+										layoutpolicy_horizontal = expanding
+										text_single = {
+											text = "[Localize(Concatenate(StateRegion.MakeScope.Var('idea_group').GetFlagName,'_name'))]"
+											align = center|nobaseline
+											layoutpolicy_horizontal = expanding
+										}
+										button = {
+											size = { 30 30 }
+											texture = "gfx/interface/ve_ideas/closebutton_big.dds"
+											visible = "[Not(GetScriptedGui('embrace_idea_group').IsShown(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('idea_group',MakeScopeFlag(StateRegion.MakeScope.Var('idea_group').GetFlagName)).AddScope('level',MakeScopeValue(GetGlobalVariable(Concatenate(Scope.GetFlagName,'_value')).GetValue)).End))]"
+											onclick = "[GetScriptedGui('cancel_idea').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('idea_group',MakeScopeFlag(StateRegion.MakeScope.Var('idea_group').GetFlagName)).AddScope('level',MakeScopeValue(GetGlobalVariable(Concatenate(Scope.GetFlagName,'_value')).GetValue)).End)]"
+											using = ui_close
+										}
+
 									}
 									hbox = {
 										datamodel = "[GetGlobalList('idea_index')]"
 										item = {
-											button_icon_round_big = {
+											widget = {
 												size = {
-													 45
-													 45
-												 }
-												blockoverride
-												"icon"
-												{
-													texture = "gfx/interface/icons/event_icons/event_portrait.dds"
-												}
-												onclick = "[GetScriptedGui('ve_idea_2_but_1').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('idea_group',MakeScopeFlag(StateRegion.MakeScope.Var('idea_group').GetFlagName)).AddScope('level',MakeScopeValue(GetGlobalVariable(Concatenate(Scope.GetFlagName,'_value')))).End)]"
+													45
+													45
+												}										
+												widget = {	#Offensive
+													size = {
+														45
+														45
+													}
+													visible = "[EqualTo_string(StateRegion.MakeScope.Var('idea_group').GetFlagName, 'offensive_idea')]"
+													enabled = "[GetScriptedGui('boost_idea_group').IsValid(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('idea_group',MakeScopeFlag(StateRegion.MakeScope.Var('idea_group').GetFlagName)).AddScope('level',MakeScopeValue(GetGlobalVariable(Concatenate(Scope.GetFlagName,'_value')).GetValue)).End)]"
+													icon = {
+														visible = "[EqualTo_string(Scope.GetFlagName, '1')]"
+														enabled = "[GetScriptedGui('idea_tooltip_1').IsValid(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('idea_group',MakeScopeFlag(StateRegion.MakeScope.Var('idea_group').GetFlagName)).AddScope('level',MakeScopeValue(GetGlobalVariable(Concatenate(Scope.GetFlagName,'_value')).GetValue)).End)]"
+														texture = "gfx/interface/ve_ideas/leader_land_fire.dds"
+														tooltip = "[GetScriptedGui('idea_tooltip_1').ExecuteTooltip(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('idea_group',MakeScopeFlag(StateRegion.MakeScope.Var('idea_group').GetFlagName)).AddScope('level',MakeScopeValue(GetGlobalVariable(Concatenate(Scope.GetFlagName,'_value')).GetValue)).End)]"
+														size = {
+															100%
+															100%
+														}
+													}
+													icon = {
+														visible = "[EqualTo_string(Scope.GetFlagName, '2')]"
+														enabled = "[GetScriptedGui('idea_tooltip_2').IsValid(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('idea_group',MakeScopeFlag(StateRegion.MakeScope.Var('idea_group').GetFlagName)).AddScope('level',MakeScopeValue(GetGlobalVariable(Concatenate(Scope.GetFlagName,'_value')).GetValue)).End)]"
+														texture = "gfx/interface/ve_ideas/production_efficiency.dds"
+														tooltip = "[GetScriptedGui('idea_tooltip_2').ExecuteTooltip(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('idea_group',MakeScopeFlag(StateRegion.MakeScope.Var('idea_group').GetFlagName)).AddScope('level',MakeScopeValue(GetGlobalVariable(Concatenate(Scope.GetFlagName,'_value')).GetValue)).End)]"
+														size = {
+															100%
+															100%
+														}
+													}
+													icon = {
+														visible = "[EqualTo_string(Scope.GetFlagName, '3')]"
+														enabled = "[GetScriptedGui('idea_tooltip_3').IsValid(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('idea_group',MakeScopeFlag(StateRegion.MakeScope.Var('idea_group').GetFlagName)).AddScope('level',MakeScopeValue(GetGlobalVariable(Concatenate(Scope.GetFlagName,'_value')).GetValue)).End)]"
+														texture = "gfx/interface/ve_ideas/mil_tech_cost_modifier.dds"
+														tooltip = "[GetScriptedGui('idea_tooltip_3').ExecuteTooltip(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('idea_group',MakeScopeFlag(StateRegion.MakeScope.Var('idea_group').GetFlagName)).AddScope('level',MakeScopeValue(GetGlobalVariable(Concatenate(Scope.GetFlagName,'_value')).GetValue)).End)]"
+														size = {
+															100%
+															100%
+														}
+													}
+													icon = {
+														visible = "[EqualTo_string(Scope.GetFlagName, '4')]"
+														enabled = "[GetScriptedGui('idea_tooltip_4').IsValid(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('idea_group',MakeScopeFlag(StateRegion.MakeScope.Var('idea_group').GetFlagName)).AddScope('level',MakeScopeValue(GetGlobalVariable(Concatenate(Scope.GetFlagName,'_value')).GetValue)).End)]"
+														texture = "gfx/interface/ve_ideas/discipline.dds"
+														tooltip = "[GetScriptedGui('idea_tooltip_4').ExecuteTooltip(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('idea_group',MakeScopeFlag(StateRegion.MakeScope.Var('idea_group').GetFlagName)).AddScope('level',MakeScopeValue(GetGlobalVariable(Concatenate(Scope.GetFlagName,'_value')).GetValue)).End)]"
+														size = {
+															100%
+															100%
+														}
+													}
+													icon = {
+														visible = "[EqualTo_string(Scope.GetFlagName, '5')]"
+														enabled = "[GetScriptedGui('idea_tooltip_5').IsValid(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('idea_group',MakeScopeFlag(StateRegion.MakeScope.Var('idea_group').GetFlagName)).AddScope('level',MakeScopeValue(GetGlobalVariable(Concatenate(Scope.GetFlagName,'_value')).GetValue)).End)]"
+														texture = "gfx/interface/ve_ideas/dip_tech_cost_modifier.dds"
+														tooltip = "[GetScriptedGui('idea_tooltip_5').ExecuteTooltip(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('idea_group',MakeScopeFlag(StateRegion.MakeScope.Var('idea_group').GetFlagName)).AddScope('level',MakeScopeValue(GetGlobalVariable(Concatenate(Scope.GetFlagName,'_value')).GetValue)).End)]"
+														size = {
+															100%
+															100%
+														}
+													}
+													icon = {
+														visible = "[EqualTo_string(Scope.GetFlagName, '6')]"
+														enabled = "[GetScriptedGui('idea_tooltip_6').IsValid(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('idea_group',MakeScopeFlag(StateRegion.MakeScope.Var('idea_group').GetFlagName)).AddScope('level',MakeScopeValue(GetGlobalVariable(Concatenate(Scope.GetFlagName,'_value')).GetValue)).End)]"
+														texture = "gfx/interface/ve_ideas/prestige_from_land.dds"
+														tooltip = "[GetScriptedGui('idea_tooltip_6').ExecuteTooltip(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('idea_group',MakeScopeFlag(StateRegion.MakeScope.Var('idea_group').GetFlagName)).AddScope('level',MakeScopeValue(GetGlobalVariable(Concatenate(Scope.GetFlagName,'_value')).GetValue)).End)]"
+														size = {
+															100%
+															100%
+														}
+													}
+													icon = {
+														visible = "[EqualTo_string(Scope.GetFlagName, '7')]"
+														enabled = "[GetScriptedGui('idea_tooltip_7').IsValid(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('idea_group',MakeScopeFlag(StateRegion.MakeScope.Var('idea_group').GetFlagName)).AddScope('level',MakeScopeValue(GetGlobalVariable(Concatenate(Scope.GetFlagName,'_value')).GetValue)).End)]"
+														texture = "gfx/interface/ve_ideas/discipline.dds"
+														tooltip = "[GetScriptedGui('idea_tooltip_7').ExecuteTooltip(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('idea_group',MakeScopeFlag(StateRegion.MakeScope.Var('idea_group').GetFlagName)).AddScope('level',MakeScopeValue(GetGlobalVariable(Concatenate(Scope.GetFlagName,'_value')).GetValue)).End)]"
+														size = {
+															100%
+															100%
+														}
+													}
+												}	
+												widget = {	#Defensive
+													size = {
+														45
+														45
+													}
+													visible = "[EqualTo_string(StateRegion.MakeScope.Var('idea_group').GetFlagName, 'defensive_idea')]"
+													enabled = "[GetScriptedGui('boost_idea_group').IsValid(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('idea_group',MakeScopeFlag(StateRegion.MakeScope.Var('idea_group').GetFlagName)).AddScope('level',MakeScopeValue(GetGlobalVariable(Concatenate(Scope.GetFlagName,'_value')).GetValue)).End)]"
+													icon = {
+														visible = "[EqualTo_string(Scope.GetFlagName, '1')]"
+														enabled = "[GetScriptedGui('idea_tooltip_1').IsValid(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('idea_group',MakeScopeFlag(StateRegion.MakeScope.Var('idea_group').GetFlagName)).AddScope('level',MakeScopeValue(GetGlobalVariable(Concatenate(Scope.GetFlagName,'_value')).GetValue)).End)]"
+														texture = "gfx/interface/ve_ideas/land_morale.dds"
+														tooltip = "[GetScriptedGui('idea_tooltip_1').ExecuteTooltip(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('idea_group',MakeScopeFlag(StateRegion.MakeScope.Var('idea_group').GetFlagName)).AddScope('level',MakeScopeValue(GetGlobalVariable(Concatenate(Scope.GetFlagName,'_value')).GetValue)).End)]"
+														size = {
+															100%
+															100%
+														}
+													}
+													icon = {
+														visible = "[EqualTo_string(Scope.GetFlagName, '2')]"
+														enabled = "[GetScriptedGui('idea_tooltip_2').IsValid(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('idea_group',MakeScopeFlag(StateRegion.MakeScope.Var('idea_group').GetFlagName)).AddScope('level',MakeScopeValue(GetGlobalVariable(Concatenate(Scope.GetFlagName,'_value')).GetValue)).End)]"
+														texture = "gfx/interface/ve_ideas/morale_damage_received.dds"
+														tooltip = "[GetScriptedGui('idea_tooltip_2').ExecuteTooltip(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('idea_group',MakeScopeFlag(StateRegion.MakeScope.Var('idea_group').GetFlagName)).AddScope('level',MakeScopeValue(GetGlobalVariable(Concatenate(Scope.GetFlagName,'_value')).GetValue)).End)]"
+														size = {
+															100%
+															100%
+														}
+													}
+													icon = {
+														visible = "[EqualTo_string(Scope.GetFlagName, '3')]"
+														enabled = "[GetScriptedGui('idea_tooltip_3').IsValid(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('idea_group',MakeScopeFlag(StateRegion.MakeScope.Var('idea_group').GetFlagName)).AddScope('level',MakeScopeValue(GetGlobalVariable(Concatenate(Scope.GetFlagName,'_value')).GetValue)).End)]"
+														texture = "gfx/interface/ve_ideas/land_maintenance_modifier.dds"
+														tooltip = "[GetScriptedGui('idea_tooltip_3').ExecuteTooltip(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('idea_group',MakeScopeFlag(StateRegion.MakeScope.Var('idea_group').GetFlagName)).AddScope('level',MakeScopeValue(GetGlobalVariable(Concatenate(Scope.GetFlagName,'_value')).GetValue)).End)]"
+														size = {
+															100%
+															100%
+														}
+													}
+													icon = {
+														visible = "[EqualTo_string(Scope.GetFlagName, '4')]"
+														enabled = "[GetScriptedGui('idea_tooltip_4').IsValid(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('idea_group',MakeScopeFlag(StateRegion.MakeScope.Var('idea_group').GetFlagName)).AddScope('level',MakeScopeValue(GetGlobalVariable(Concatenate(Scope.GetFlagName,'_value')).GetValue)).End)]"
+														texture = "gfx/interface/ve_ideas/leader_land_shock.dds"
+														tooltip = "[GetScriptedGui('idea_tooltip_4').ExecuteTooltip(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('idea_group',MakeScopeFlag(StateRegion.MakeScope.Var('idea_group').GetFlagName)).AddScope('level',MakeScopeValue(GetGlobalVariable(Concatenate(Scope.GetFlagName,'_value')).GetValue)).End)]"
+														size = {
+															100%
+															100%
+														}
+													}
+													icon = {
+														visible = "[EqualTo_string(Scope.GetFlagName, '5')]"
+														enabled = "[GetScriptedGui('idea_tooltip_5').IsValid(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('idea_group',MakeScopeFlag(StateRegion.MakeScope.Var('idea_group').GetFlagName)).AddScope('level',MakeScopeValue(GetGlobalVariable(Concatenate(Scope.GetFlagName,'_value')).GetValue)).End)]"
+														texture = "gfx/interface/ve_ideas/leader_siege.dds"
+														tooltip = "[GetScriptedGui('idea_tooltip_5').ExecuteTooltip(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('idea_group',MakeScopeFlag(StateRegion.MakeScope.Var('idea_group').GetFlagName)).AddScope('level',MakeScopeValue(GetGlobalVariable(Concatenate(Scope.GetFlagName,'_value')).GetValue)).End)]"
+														size = {
+															100%
+															100%
+														}
+													}
+													icon = {
+														visible = "[EqualTo_string(Scope.GetFlagName, '6')]"
+														enabled = "[GetScriptedGui('idea_tooltip_6').IsValid(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('idea_group',MakeScopeFlag(StateRegion.MakeScope.Var('idea_group').GetFlagName)).AddScope('level',MakeScopeValue(GetGlobalVariable(Concatenate(Scope.GetFlagName,'_value')).GetValue)).End)]"
+														texture = "gfx/interface/ve_ideas/land_morale.dds"
+														tooltip = "[GetScriptedGui('idea_tooltip_6').ExecuteTooltip(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('idea_group',MakeScopeFlag(StateRegion.MakeScope.Var('idea_group').GetFlagName)).AddScope('level',MakeScopeValue(GetGlobalVariable(Concatenate(Scope.GetFlagName,'_value')).GetValue)).End)]"
+														size = {
+															100%
+															100%
+														}
+													}
+													icon = {
+														visible = "[EqualTo_string(Scope.GetFlagName, '7')]"
+														enabled = "[GetScriptedGui('idea_tooltip_7').IsValid(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('idea_group',MakeScopeFlag(StateRegion.MakeScope.Var('idea_group').GetFlagName)).AddScope('level',MakeScopeValue(GetGlobalVariable(Concatenate(Scope.GetFlagName,'_value')).GetValue)).End)]"
+														texture = "gfx/interface/ve_ideas/global_supply_limit_modifier.dds"
+														tooltip = "[GetScriptedGui('idea_tooltip_7').ExecuteTooltip(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('idea_group',MakeScopeFlag(StateRegion.MakeScope.Var('idea_group').GetFlagName)).AddScope('level',MakeScopeValue(GetGlobalVariable(Concatenate(Scope.GetFlagName,'_value')).GetValue)).End)]"
+														size = {
+															100%
+															100%
+														}
+													}
+												}	
+												widget = {	#Naval
+													size = {
+														45
+														45
+													}
+													visible = "[EqualTo_string(StateRegion.MakeScope.Var('idea_group').GetFlagName, 'naval_idea')]"
+													enabled = "[GetScriptedGui('boost_idea_group').IsValid(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('idea_group',MakeScopeFlag(StateRegion.MakeScope.Var('idea_group').GetFlagName)).AddScope('level',MakeScopeValue(GetGlobalVariable(Concatenate(Scope.GetFlagName,'_value')).GetValue)).End)]"
+													icon = {
+														visible = "[EqualTo_string(Scope.GetFlagName, '1')]"
+														enabled = "[GetScriptedGui('idea_tooltip_1').IsValid(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('idea_group',MakeScopeFlag(StateRegion.MakeScope.Var('idea_group').GetFlagName)).AddScope('level',MakeScopeValue(GetGlobalVariable(Concatenate(Scope.GetFlagName,'_value')).GetValue)).End)]"
+														texture = "gfx/interface/ve_ideas/global_ship_trade_power.dds"
+														tooltip = "[GetScriptedGui('idea_tooltip_1').ExecuteTooltip(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('idea_group',MakeScopeFlag(StateRegion.MakeScope.Var('idea_group').GetFlagName)).AddScope('level',MakeScopeValue(GetGlobalVariable(Concatenate(Scope.GetFlagName,'_value')).GetValue)).End)]"
+														size = {
+															100%
+															100%
+														}
+													}
+													icon = {
+														visible = "[EqualTo_string(Scope.GetFlagName, '2')]"
+														enabled = "[GetScriptedGui('idea_tooltip_2').IsValid(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('idea_group',MakeScopeFlag(StateRegion.MakeScope.Var('idea_group').GetFlagName)).AddScope('level',MakeScopeValue(GetGlobalVariable(Concatenate(Scope.GetFlagName,'_value')).GetValue)).End)]"
+														texture = "gfx/interface/ve_ideas/ship_durability.dds"
+														tooltip = "[GetScriptedGui('idea_tooltip_2').ExecuteTooltip(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('idea_group',MakeScopeFlag(StateRegion.MakeScope.Var('idea_group').GetFlagName)).AddScope('level',MakeScopeValue(GetGlobalVariable(Concatenate(Scope.GetFlagName,'_value')).GetValue)).End)]"
+														size = {
+															100%
+															100%
+														}
+													}
+													icon = {
+														visible = "[EqualTo_string(Scope.GetFlagName, '3')]"
+														enabled = "[GetScriptedGui('idea_tooltip_3').IsValid(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('idea_group',MakeScopeFlag(StateRegion.MakeScope.Var('idea_group').GetFlagName)).AddScope('level',MakeScopeValue(GetGlobalVariable(Concatenate(Scope.GetFlagName,'_value')).GetValue)).End)]"
+														texture = "gfx/interface/ve_ideas/sunk_ship_morale_hit_recieved.dds"
+														tooltip = "[GetScriptedGui('idea_tooltip_3').ExecuteTooltip(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('idea_group',MakeScopeFlag(StateRegion.MakeScope.Var('idea_group').GetFlagName)).AddScope('level',MakeScopeValue(GetGlobalVariable(Concatenate(Scope.GetFlagName,'_value')).GetValue)).End)]"
+														size = {
+															100%
+															100%
+														}
+													}
+													icon = {
+														visible = "[EqualTo_string(Scope.GetFlagName, '4')]"
+														enabled = "[GetScriptedGui('idea_tooltip_4').IsValid(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('idea_group',MakeScopeFlag(StateRegion.MakeScope.Var('idea_group').GetFlagName)).AddScope('level',MakeScopeValue(GetGlobalVariable(Concatenate(Scope.GetFlagName,'_value')).GetValue)).End)]"
+														texture = "gfx/interface/ve_ideas/landing_penalty.dds"
+														tooltip = "[GetScriptedGui('idea_tooltip_4').ExecuteTooltip(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('idea_group',MakeScopeFlag(StateRegion.MakeScope.Var('idea_group').GetFlagName)).AddScope('level',MakeScopeValue(GetGlobalVariable(Concatenate(Scope.GetFlagName,'_value')).GetValue)).End)]"
+														size = {
+															100%
+															100%
+														}
+													}
+													icon = {
+														visible = "[EqualTo_string(Scope.GetFlagName, '5')]"
+														enabled = "[GetScriptedGui('idea_tooltip_5').IsValid(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('idea_group',MakeScopeFlag(StateRegion.MakeScope.Var('idea_group').GetFlagName)).AddScope('level',MakeScopeValue(GetGlobalVariable(Concatenate(Scope.GetFlagName,'_value')).GetValue)).End)]"
+														texture = "gfx/interface/ve_ideas/land_morale.dds"
+														tooltip = "[GetScriptedGui('idea_tooltip_5').ExecuteTooltip(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('idea_group',MakeScopeFlag(StateRegion.MakeScope.Var('idea_group').GetFlagName)).AddScope('level',MakeScopeValue(GetGlobalVariable(Concatenate(Scope.GetFlagName,'_value')).GetValue)).End)]"
+														size = {
+															100%
+															100%
+														}
+													}
+													icon = {
+														visible = "[EqualTo_string(Scope.GetFlagName, '6')]"
+														enabled = "[GetScriptedGui('idea_tooltip_6').IsValid(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('idea_group',MakeScopeFlag(StateRegion.MakeScope.Var('idea_group').GetFlagName)).AddScope('level',MakeScopeValue(GetGlobalVariable(Concatenate(Scope.GetFlagName,'_value')).GetValue)).End)]"
+														texture = "gfx/interface/ve_ideas/prestige_from_naval.dds"
+														tooltip = "[GetScriptedGui('idea_tooltip_6').ExecuteTooltip(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('idea_group',MakeScopeFlag(StateRegion.MakeScope.Var('idea_group').GetFlagName)).AddScope('level',MakeScopeValue(GetGlobalVariable(Concatenate(Scope.GetFlagName,'_value')).GetValue)).End)]"
+														size = {
+															100%
+															100%
+														}
+													}
+													icon = {
+														visible = "[EqualTo_string(Scope.GetFlagName, '7')]"
+														enabled = "[GetScriptedGui('idea_tooltip_7').IsValid(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('idea_group',MakeScopeFlag(StateRegion.MakeScope.Var('idea_group').GetFlagName)).AddScope('level',MakeScopeValue(GetGlobalVariable(Concatenate(Scope.GetFlagName,'_value')).GetValue)).End)]"
+														texture = "gfx/interface/ve_ideas/light_ship_power.dds"
+														tooltip = "[GetScriptedGui('idea_tooltip_7').ExecuteTooltip(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('idea_group',MakeScopeFlag(StateRegion.MakeScope.Var('idea_group').GetFlagName)).AddScope('level',MakeScopeValue(GetGlobalVariable(Concatenate(Scope.GetFlagName,'_value')).GetValue)).End)]"
+														size = {
+															100%
+															100%
+														}
+													}
+												}	
+												widget = {	#Militarization
+													size = {
+														45
+														45
+													}
+													visible = "[EqualTo_string(StateRegion.MakeScope.Var('idea_group').GetFlagName, 'militarization_idea')]"
+													enabled = "[GetScriptedGui('boost_idea_group').IsValid(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('idea_group',MakeScopeFlag(StateRegion.MakeScope.Var('idea_group').GetFlagName)).AddScope('level',MakeScopeValue(GetGlobalVariable(Concatenate(Scope.GetFlagName,'_value')).GetValue)).End)]"
+													icon = {
+														visible = "[EqualTo_string(Scope.GetFlagName, '1')]"
+														enabled = "[GetScriptedGui('idea_tooltip_1').IsValid(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('idea_group',MakeScopeFlag(StateRegion.MakeScope.Var('idea_group').GetFlagName)).AddScope('level',MakeScopeValue(GetGlobalVariable(Concatenate(Scope.GetFlagName,'_value')).GetValue)).End)]"
+														texture = "gfx/interface/ve_ideas/legitimacy.dds"
+														tooltip = "[GetScriptedGui('idea_tooltip_1').ExecuteTooltip(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('idea_group',MakeScopeFlag(StateRegion.MakeScope.Var('idea_group').GetFlagName)).AddScope('level',MakeScopeValue(GetGlobalVariable(Concatenate(Scope.GetFlagName,'_value')).GetValue)).End)]"
+														size = {
+															100%
+															100%
+														}
+													}
+													icon = {
+														visible = "[EqualTo_string(Scope.GetFlagName, '2')]"
+														enabled = "[GetScriptedGui('idea_tooltip_2').IsValid(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('idea_group',MakeScopeFlag(StateRegion.MakeScope.Var('idea_group').GetFlagName)).AddScope('level',MakeScopeValue(GetGlobalVariable(Concatenate(Scope.GetFlagName,'_value')).GetValue)).End)]"
+														texture = "gfx/interface/ve_ideas/global_manpower_modifier.dds"
+														tooltip = "[GetScriptedGui('idea_tooltip_2').ExecuteTooltip(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('idea_group',MakeScopeFlag(StateRegion.MakeScope.Var('idea_group').GetFlagName)).AddScope('level',MakeScopeValue(GetGlobalVariable(Concatenate(Scope.GetFlagName,'_value')).GetValue)).End)]"
+														size = {
+															100%
+															100%
+														}
+													}
+													icon = {
+														visible = "[EqualTo_string(Scope.GetFlagName, '3')]"
+														enabled = "[GetScriptedGui('idea_tooltip_3').IsValid(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('idea_group',MakeScopeFlag(StateRegion.MakeScope.Var('idea_group').GetFlagName)).AddScope('level',MakeScopeValue(GetGlobalVariable(Concatenate(Scope.GetFlagName,'_value')).GetValue)).End)]"
+														texture = "gfx/interface/ve_ideas/land_maintenance_modifier.dds"
+														tooltip = "[GetScriptedGui('idea_tooltip_3').ExecuteTooltip(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('idea_group',MakeScopeFlag(StateRegion.MakeScope.Var('idea_group').GetFlagName)).AddScope('level',MakeScopeValue(GetGlobalVariable(Concatenate(Scope.GetFlagName,'_value')).GetValue)).End)]"
+														size = {
+															100%
+															100%
+														}
+													}
+													icon = {
+														visible = "[EqualTo_string(Scope.GetFlagName, '4')]"
+														enabled = "[GetScriptedGui('idea_tooltip_4').IsValid(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('idea_group',MakeScopeFlag(StateRegion.MakeScope.Var('idea_group').GetFlagName)).AddScope('level',MakeScopeValue(GetGlobalVariable(Concatenate(Scope.GetFlagName,'_value')).GetValue)).End)]"
+														texture = "gfx/interface/ve_ideas/mil_tech_cost_modifier.dds"
+														tooltip = "[GetScriptedGui('idea_tooltip_4').ExecuteTooltip(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('idea_group',MakeScopeFlag(StateRegion.MakeScope.Var('idea_group').GetFlagName)).AddScope('level',MakeScopeValue(GetGlobalVariable(Concatenate(Scope.GetFlagName,'_value')).GetValue)).End)]"
+														size = {
+															100%
+															100%
+														}
+													}
+													icon = {
+														visible = "[EqualTo_string(Scope.GetFlagName, '5')]"
+														enabled = "[GetScriptedGui('idea_tooltip_5').IsValid(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('idea_group',MakeScopeFlag(StateRegion.MakeScope.Var('idea_group').GetFlagName)).AddScope('level',MakeScopeValue(GetGlobalVariable(Concatenate(Scope.GetFlagName,'_value')).GetValue)).End)]"
+														texture = "gfx/interface/ve_ideas/aggresive_exp_icon.dds"
+														tooltip = "[GetScriptedGui('idea_tooltip_5').ExecuteTooltip(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('idea_group',MakeScopeFlag(StateRegion.MakeScope.Var('idea_group').GetFlagName)).AddScope('level',MakeScopeValue(GetGlobalVariable(Concatenate(Scope.GetFlagName,'_value')).GetValue)).End)]"
+														size = {
+															100%
+															100%
+														}
+													}
+													icon = {
+														visible = "[EqualTo_string(Scope.GetFlagName, '6')]"
+														enabled = "[GetScriptedGui('idea_tooltip_6').IsValid(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('idea_group',MakeScopeFlag(StateRegion.MakeScope.Var('idea_group').GetFlagName)).AddScope('level',MakeScopeValue(GetGlobalVariable(Concatenate(Scope.GetFlagName,'_value')).GetValue)).End)]"
+														texture = "gfx/interface/ve_ideas/land_morale.dds"
+														tooltip = "[GetScriptedGui('idea_tooltip_6').ExecuteTooltip(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('idea_group',MakeScopeFlag(StateRegion.MakeScope.Var('idea_group').GetFlagName)).AddScope('level',MakeScopeValue(GetGlobalVariable(Concatenate(Scope.GetFlagName,'_value')).GetValue)).End)]"
+														size = {
+															100%
+															100%
+														}
+													}
+													icon = {
+														visible = "[EqualTo_string(Scope.GetFlagName, '7')]"
+														enabled = "[GetScriptedGui('idea_tooltip_7').IsValid(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('idea_group',MakeScopeFlag(StateRegion.MakeScope.Var('idea_group').GetFlagName)).AddScope('level',MakeScopeValue(GetGlobalVariable(Concatenate(Scope.GetFlagName,'_value')).GetValue)).End)]"
+														texture = "gfx/interface/ve_ideas/leader_land_manuever.dds"
+														tooltip = "[GetScriptedGui('idea_tooltip_7').ExecuteTooltip(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('idea_group',MakeScopeFlag(StateRegion.MakeScope.Var('idea_group').GetFlagName)).AddScope('level',MakeScopeValue(GetGlobalVariable(Concatenate(Scope.GetFlagName,'_value')).GetValue)).End)]"
+														size = {
+															100%
+															100%
+														}
+													}
+													
+												}	
+												widget = {	#Imperialist
+													size = {
+														45
+														45
+													}
+													visible = "[EqualTo_string(StateRegion.MakeScope.Var('idea_group').GetFlagName, 'imperialist_idea')]"
+													enabled = "[GetScriptedGui('boost_idea_group').IsValid(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('idea_group',MakeScopeFlag(StateRegion.MakeScope.Var('idea_group').GetFlagName)).AddScope('level',MakeScopeValue(GetGlobalVariable(Concatenate(Scope.GetFlagName,'_value')).GetValue)).End)]"
+													icon = {
+														visible = "[EqualTo_string(Scope.GetFlagName, '1')]"
+														enabled = "[GetScriptedGui('idea_tooltip_1').IsValid(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('idea_group',MakeScopeFlag(StateRegion.MakeScope.Var('idea_group').GetFlagName)).AddScope('level',MakeScopeValue(GetGlobalVariable(Concatenate(Scope.GetFlagName,'_value')).GetValue)).End)]"
+														texture = "gfx/interface/ve_ideas/prestige.dds"
+														tooltip = "[GetScriptedGui('idea_tooltip_1').ExecuteTooltip(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('idea_group',MakeScopeFlag(StateRegion.MakeScope.Var('idea_group').GetFlagName)).AddScope('level',MakeScopeValue(GetGlobalVariable(Concatenate(Scope.GetFlagName,'_value')).GetValue)).End)]"
+														size = {
+															100%
+															100%
+														}
+													}
+													icon = {
+														visible = "[EqualTo_string(Scope.GetFlagName, '2')]"
+														enabled = "[GetScriptedGui('idea_tooltip_2').IsValid(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('idea_group',MakeScopeFlag(StateRegion.MakeScope.Var('idea_group').GetFlagName)).AddScope('level',MakeScopeValue(GetGlobalVariable(Concatenate(Scope.GetFlagName,'_value')).GetValue)).End)]"
+														texture = "gfx/interface/ve_ideas/can_colony_boost_development.dds"
+														tooltip = "[GetScriptedGui('idea_tooltip_2').ExecuteTooltip(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('idea_group',MakeScopeFlag(StateRegion.MakeScope.Var('idea_group').GetFlagName)).AddScope('level',MakeScopeValue(GetGlobalVariable(Concatenate(Scope.GetFlagName,'_value')).GetValue)).End)]"
+														size = {
+															100%
+															100%
+														}
+													}
+													icon = {
+														visible = "[EqualTo_string(Scope.GetFlagName, '3')]"
+														enabled = "[GetScriptedGui('idea_tooltip_3').IsValid(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('idea_group',MakeScopeFlag(StateRegion.MakeScope.Var('idea_group').GetFlagName)).AddScope('level',MakeScopeValue(GetGlobalVariable(Concatenate(Scope.GetFlagName,'_value')).GetValue)).End)]"
+														texture = "gfx/interface/ve_ideas/unitpanel_button_seize_colony.dds"
+														tooltip = "[GetScriptedGui('idea_tooltip_3').ExecuteTooltip(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('idea_group',MakeScopeFlag(StateRegion.MakeScope.Var('idea_group').GetFlagName)).AddScope('level',MakeScopeValue(GetGlobalVariable(Concatenate(Scope.GetFlagName,'_value')).GetValue)).End)]"
+														size = {
+															100%
+															100%
+														}
+													}
+													icon = {
+														visible = "[EqualTo_string(Scope.GetFlagName, '4')]"
+														enabled = "[GetScriptedGui('idea_tooltip_4').IsValid(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('idea_group',MakeScopeFlag(StateRegion.MakeScope.Var('idea_group').GetFlagName)).AddScope('level',MakeScopeValue(GetGlobalVariable(Concatenate(Scope.GetFlagName,'_value')).GetValue)).End)]"
+														texture = "gfx/interface/ve_ideas/land_morale.dds"
+														tooltip = "[GetScriptedGui('idea_tooltip_4').ExecuteTooltip(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('idea_group',MakeScopeFlag(StateRegion.MakeScope.Var('idea_group').GetFlagName)).AddScope('level',MakeScopeValue(GetGlobalVariable(Concatenate(Scope.GetFlagName,'_value')).GetValue)).End)]"
+														size = {
+															100%
+															100%
+														}
+													}
+													icon = {
+														visible = "[EqualTo_string(Scope.GetFlagName, '5')]"
+														enabled = "[GetScriptedGui('idea_tooltip_5').IsValid(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('idea_group',MakeScopeFlag(StateRegion.MakeScope.Var('idea_group').GetFlagName)).AddScope('level',MakeScopeValue(GetGlobalVariable(Concatenate(Scope.GetFlagName,'_value')).GetValue)).End)]"
+														texture = "gfx/interface/ve_ideas/diplomatic_upkeep.dds"
+														tooltip = "[GetScriptedGui('idea_tooltip_5').ExecuteTooltip(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('idea_group',MakeScopeFlag(StateRegion.MakeScope.Var('idea_group').GetFlagName)).AddScope('level',MakeScopeValue(GetGlobalVariable(Concatenate(Scope.GetFlagName,'_value')).GetValue)).End)]"
+														size = {
+															100%
+															100%
+														}
+													}
+													icon = {
+														visible = "[EqualTo_string(Scope.GetFlagName, '6')]"
+														enabled = "[GetScriptedGui('idea_tooltip_6').IsValid(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('idea_group',MakeScopeFlag(StateRegion.MakeScope.Var('idea_group').GetFlagName)).AddScope('level',MakeScopeValue(GetGlobalVariable(Concatenate(Scope.GetFlagName,'_value')).GetValue)).End)]"
+														texture = "gfx/interface/ve_ideas/global_colonial_growth.dds"
+														tooltip = "[GetScriptedGui('idea_tooltip_6').ExecuteTooltip(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('idea_group',MakeScopeFlag(StateRegion.MakeScope.Var('idea_group').GetFlagName)).AddScope('level',MakeScopeValue(GetGlobalVariable(Concatenate(Scope.GetFlagName,'_value')).GetValue)).End)]"
+														size = {
+															100%
+															100%
+														}
+													}
+													icon = {
+														visible = "[EqualTo_string(Scope.GetFlagName, '7')]"
+														enabled = "[GetScriptedGui('idea_tooltip_7').IsValid(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('idea_group',MakeScopeFlag(StateRegion.MakeScope.Var('idea_group').GetFlagName)).AddScope('level',MakeScopeValue(GetGlobalVariable(Concatenate(Scope.GetFlagName,'_value')).GetValue)).End)]"
+														texture = "gfx/interface/ve_ideas/land_morale.dds"
+														tooltip = "[GetScriptedGui('idea_tooltip_7').ExecuteTooltip(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('idea_group',MakeScopeFlag(StateRegion.MakeScope.Var('idea_group').GetFlagName)).AddScope('level',MakeScopeValue(GetGlobalVariable(Concatenate(Scope.GetFlagName,'_value')).GetValue)).End)]"
+														size = {
+															100%
+															100%
+														}
+													}
+												}	
 											}
-											
 										}
+									}
+									default_progressbar_horizontal = {
+										layoutpolicy_horizontal = expanding
+										size = {
+											100%
+											10
+										}
+										blockoverride
+										"values"
+										{
+											max = 7
+											value = "[GetPlayer.MakeScope.Var(StateRegion.MakeScope.Var('idea_group').GetFlagName).GetValue]"
+										}
+									}
+									button = {
+										using = default_button_action
+										layoutpolicy_horizontal = expanding
+										size = { 100% 40 }
+										raw_text = "Embrace"
+										visible = "[GetScriptedGui('embrace_idea_group').IsShown(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('idea_group',MakeScopeFlag(StateRegion.MakeScope.Var('idea_group').GetFlagName)).End)]"
+										enabled = "[GreaterThan_CFixedPoint(GetPlayer.MakeScope.Var('idea_group_cap').GetValue,GetPlayer.MakeScope.Var('idea_group_unlocked').GetValue)]"
+										onclick = "[GetScriptedGui('embrace_idea_group').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('idea_group',MakeScopeFlag(StateRegion.MakeScope.Var('idea_group').GetFlagName)).End)]"
+										using = tooltip_above
+										using = budget_resume_all_button_sound
+									}
+									button = {
+										using = default_button_action
+										layoutpolicy_horizontal = expanding
+										size = { 100% 40 }
+										raw_text = "Boost Idea"
+										visible = "[GetScriptedGui('boost_idea_group').IsShown(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('idea_group',MakeScopeFlag(StateRegion.MakeScope.Var('idea_group').GetFlagName)).End)]"
+										enabled = "[GetScriptedGui('boost_idea_group').IsValid(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('idea_group',MakeScopeFlag(StateRegion.MakeScope.Var('idea_group').GetFlagName)).End)]"
+										onclick = "[GetScriptedGui('boost_idea_group').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('idea_group',MakeScopeFlag(StateRegion.MakeScope.Var('idea_group').GetFlagName)).End)]"
+										using = tooltip_above
+										using = technology_confirm_button_sound
 									}
 								}
 							}
@@ -698,103 +2161,6 @@ ve_gui_panel_types
 				}
 				
 			}
-			
-
-			###TEST
-			
-			# hbox = {
-			# 	#Idea rows - 5
-			# 	layoutpolicy_horizontal = expanding
-			# 	margin = {
-			# 		0
-			# 		10
-			# 	}
-			# 	background = {
-			# 		using = entry_bg_simple
-			# 	}
-			# 	hbox = {	#Idea 1
-			# 		using = main_bg					
-			# 		margin = {
-			# 			20
-			# 			20
-			# 		}
-					
-			# 		vbox = {
-			# 			spacing = 20
-			# 			# textbox = {
-			# 			# 	raw_text = "Politics"
-			# 			# 	using = fontsize_xxl
-			# 			# 	align = center
-			# 			# 	autoresize = yes
-			# 			# }
-			# 			vbox = {
-			# 				datamodel = "[GetGlobalList('adm_ideas')]"
-			# 				item = {
-			# 					vbox = {
-			# 						spacing = 20
-			# 						datacontext = "[Scope.GetStateRegion]"
-			# 						text_single = {
-			# 							text = "[Localize(Concatenate(StateRegion.MakeScope.Var('idea_group').GetFlagName,'_name'))]"
-			# 						}
-			# 						hbox = {
-			# 							datamodel = "[GetGlobalList('idea_index')]"
-			# 							item = {
-			# 								button_icon_round_big = {
-			# 									size = {
-			# 										 45
-			# 										 45
-			# 									 }
-			# 									blockoverride
-			# 									"icon"
-			# 									{
-			# 										texture = "gfx/interface/icons/event_icons/event_portrait.dds"
-			# 									}
-			# 									onclick = "[GetScriptedGui('ve_idea_2_but_1').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('idea_group',MakeScopeFlag(StateRegion.MakeScope.Var('idea_group').GetFlagName)).AddScope('level',MakeScopeValue(GetGlobalVariable(Concatenate(Scope.GetFlagName,'_value')))).End)]"
-			# 								}
-			# 							}
-			# 						}
-			# 					}
-			# 				}
-			# 			}
-			# 			default_progressbar_horizontal = {
-			# 				tooltip = "TECHNOLOGY_GAIN_BREAKDOWN"
-			# 				layoutpolicy_horizontal = growing
-			# 				size = {
-			# 					0
-			# 					8
-			# 				}
-			# 				blockoverride
-			# 				"values"
-			# 				{
-			# 					max = 70
-			# 					value = "[GetPlayer.MakeScope.Var('idea_13_bar_point').GetValue]"
-			# 				}
-			# 				visible = "[GetScriptedGui('ve_idea_13_but_7').IsShown( GuiScope.End )]"
-			# 			}
-			# 			button = {
-			# 				using = default_button_action
-			# 				size = { 100% 40 }
-			# 				raw_text = "Embrace"
-			# 				visible = "[GetScriptedGui('ve_idea_13_embraced_idea').IsValid( GuiScope.End )]"
-			# 				enabled = "[GetScriptedGui('ve_idea_13_embraced_idea').IsValid( GuiScope.End )]"
-			# 				onclick = "[GetScriptedGui('ve_idea_13_embraced_idea').Execute(GuiScope.End)]"
-			# 				using = tooltip_above
-			# 				using = budget_pause_all_button_sound
-			# 			}
-			# 			button = {
-			# 				using = default_button_action
-			# 				size = { 100% 40 }
-			# 				raw_text = "Cancel"
-			# 				visible = "[GetScriptedGui('ve_idea_13_cancel_embrace_idea').IsValid( GuiScope.End )]"
-			# 				enabled = "[GetScriptedGui('ve_idea_13_cancel_embrace_idea').IsValid( GuiScope.End )]"
-			# 				onclick = "[GetScriptedGui('ve_idea_13_cancel_embrace_idea').Execute(GuiScope.End)]"
-			# 				using = tooltip_above
-			# 				using = budget_pause_all_button_sound
-			# 			}
-			# 		}
-			# 	}
-				
-			# }
 			expand = {
 			}
 		}

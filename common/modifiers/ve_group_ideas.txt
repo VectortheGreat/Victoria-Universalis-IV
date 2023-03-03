@@ -1,0 +1,580 @@
+﻿innovative_idea_1_mdf = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_lightbulb_positive.dds
+	country_prestige_mult = 0.1
+}
+
+innovative_idea_2_mdf = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_lightbulb_positive.dds
+	country_weekly_innovation_mult = 0.1
+}
+
+innovative_idea_3_mdf = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_lightbulb_positive.dds
+	building_university_throughput_mult = 0.1
+}
+
+innovative_idea_4_mdf = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_lightbulb_positive.dds
+	country_bureaucracy_add = 200
+}
+
+innovative_idea_5_mdf = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_lightbulb_positive.dds
+	country_tech_spread_mult = 0.1
+	state_education_access_wealth_add = 0.005
+}
+
+innovative_idea_6_mdf = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_lightbulb_positive.dds
+	state_urbanization_mult = 0.15
+}
+
+innovative_idea_7_mdf = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_lightbulb_positive.dds
+	country_government_wages_mult = -0.1
+}
+
+diplomatic_idea_1_mdf = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_lightbulb_positive.dds
+	country_influence_mult = 0.1
+}
+
+diplomatic_idea_2_mdf = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_lightbulb_positive.dds
+	country_max_declared_interests_add = 2
+}
+
+diplomatic_idea_3_mdf = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_lightbulb_positive.dds
+	country_infamy_decay_mult = 0.1
+}
+
+diplomatic_idea_4_mdf = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_lightbulb_positive.dds
+	country_improve_relations_speed_mult = 0.15
+	country_damage_relations_speed_mult = 0.15
+}
+
+diplomatic_idea_5_mdf = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_lightbulb_positive.dds
+	country_convoys_capacity_mult = 0.1
+}
+
+diplomatic_idea_6_mdf = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_lightbulb_positive.dds
+	country_production_tech_cost_mult = -0.05
+}
+
+diplomatic_idea_7_mdf = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_lightbulb_positive.dds
+	country_diplomatic_play_maneuvers_add = 20
+}
+
+offensive_idea_1_mdf = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_lightbulb_positive.dds
+	unit_offense_developed_add = 5
+}
+
+offensive_idea_2_mdf = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_lightbulb_positive.dds
+	battle_offense_owned_province_mult = 0.1
+}
+
+offensive_idea_3_mdf = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_lightbulb_positive.dds
+	unit_offense_hazardous_add = 5
+	unit_provinces_captured_mult = 0.15
+}
+
+offensive_idea_4_mdf = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_lightbulb_positive.dds
+	unit_recovery_rate_add = 10
+}
+
+offensive_idea_5_mdf = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_lightbulb_positive.dds
+	unit_offense_forested_add = 5
+}
+
+offensive_idea_6_mdf = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_lightbulb_positive.dds
+	country_army_power_projection_mult = 0.1
+}
+
+offensive_idea_7_mdf = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_lightbulb_positive.dds
+	unit_army_offense_mult = 0.1
+}
+
+economic_idea_1_mdf = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_lightbulb_positive.dds
+	state_tax_waste_add = -0.1
+}
+
+economic_idea_2_mdf = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_lightbulb_positive.dds
+	state_construction_mult = 0.2
+}
+
+economic_idea_3_mdf = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_lightbulb_positive.dds
+	country_minting_mult = 0.1
+}
+
+economic_idea_4_mdf = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_lightbulb_positive.dds
+	country_loan_interest_rate_mult = -0.2
+}
+
+economic_idea_5_mdf = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_lightbulb_positive.dds
+	state_tax_collection_mult = 0.1
+}
+
+economic_idea_6_mdf = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_lightbulb_positive.dds
+	country_production_tech_cost_mult = -0.05
+}
+
+economic_idea_7_mdf = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_lightbulb_positive.dds
+	building_production_mult = 0.03
+}
+
+trade_idea_1_mdf = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_lightbulb_positive.dds
+	country_trade_route_competitiveness_mult = 0.15
+}
+
+trade_idea_2_mdf = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_lightbulb_positive.dds
+	country_trade_route_imports_add = 10
+	tariff_import_add = 0.1
+}
+
+trade_idea_3_mdf = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_lightbulb_positive.dds
+	country_trade_route_cost_mult = -0.1
+}
+
+trade_idea_4_mdf = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_lightbulb_positive.dds
+	country_trade_route_quantity_mult = 0.15
+}
+
+trade_idea_5_mdf = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_lightbulb_positive.dds
+	country_trade_route_exports_add = 10
+	tariff_export_add = 0.1
+}
+
+trade_idea_6_mdf = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_lightbulb_positive.dds
+	state_capitalists_investment_pool_efficiency_mult = 0.15
+	interest_group_ig_industrialists_approval_add = 1
+}
+
+trade_idea_7_mdf = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_lightbulb_positive.dds
+	building_throughput_building_trade_center_mult = 0.1
+}
+
+defensive_idea_1_mdf = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_lightbulb_positive.dds
+	battle_defense_owned_province_mult = 0.15
+}
+
+defensive_idea_2_mdf = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_lightbulb_positive.dds
+	unit_morale_damage_mult = 0.1
+	unit_morale_recovery_mult = 0.2
+}
+
+defensive_idea_3_mdf = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_lightbulb_positive.dds
+	country_military_wages_mult = -0.1
+}
+
+defensive_idea_4_mdf = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_lightbulb_positive.dds
+	unit_army_defense_mult = 0.1
+}
+
+defensive_idea_5_mdf = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_lightbulb_positive.dds
+	unit_kill_rate_add = 0.08
+}
+
+defensive_idea_6_mdf = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_lightbulb_positive.dds
+	unit_defense_forested_add = 5
+	unit_defense_hazardous_add = 5
+}
+
+defensive_idea_7_mdf = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_lightbulb_positive.dds
+	unit_supply_consumption_mult = -0.25
+}
+
+administrative_idea_1_mdf = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_lightbulb_positive.dds
+	country_bureaucracy_add = 250
+}
+
+administrative_idea_2_mdf = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_lightbulb_positive.dds
+	country_society_tech_spread_mult = 0.1
+}
+
+administrative_idea_3_mdf = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_lightbulb_positive.dds
+	state_radicals_from_discrimination_mult = -0.1
+}
+
+administrative_idea_4_mdf = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_lightbulb_positive.dds
+	country_authority_mult = 0.05
+	country_decree_cost_mult = -0.2
+}
+
+administrative_idea_5_mdf = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_lightbulb_positive.dds
+	country_government_wages_mult = -0.1
+}
+
+administrative_idea_6_mdf = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_lightbulb_positive.dds
+	country_consumption_tax_cost_mult = -0.2
+}
+
+administrative_idea_7_mdf = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_lightbulb_positive.dds
+	state_bureaucracy_population_base_cost_factor_mult = -0.15
+}
+
+qualification_idea_1_mdf = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_lightbulb_positive.dds
+	state_migration_pull_mult = 0.15
+}
+
+qualification_idea_2_mdf = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_lightbulb_positive.dds
+	state_education_access_wealth_add = 0.005
+}
+
+qualification_idea_3_mdf = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_lightbulb_positive.dds
+	technology_invention_cost_mult = -0.1
+}
+
+qualification_idea_4_mdf = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_lightbulb_positive.dds
+	building_arts_academy_throughput_mult = 0.2
+}
+
+qualification_idea_5_mdf = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_lightbulb_positive.dds
+	state_pop_qualifications_mult = 0.2
+}
+
+qualification_idea_6_mdf = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_lightbulb_positive.dds
+	building_throughput_building_eiffel_mult = 0.1
+	building_throughput_building_angkor_wat_mult = 0.1
+	building_throughput_building_big_ben_mult = 0.1
+	building_throughput_building_forbidden_city_mult = 0.1
+	building_throughput_building_hagia_sophia_mult = 0.1
+	building_throughput_building_mosque_of_djenne_mult = 0.1
+	building_throughput_building_saint_basils_cathedralr_mult = 0.1
+	building_throughput_building_statue_of_liberty_mult = 0.1
+	building_throughput_building_taj_mahal_mult = 0.1
+	building_throughput_building_vatican_city_mult = 0.1
+	building_throughput_building_white_house_mult = 0.1
+	building_throughput_building_machu_picchu_mult = 0.1
+	building_throughput_building_argebam_mult = 0.1
+	building_throughput_building_chichen_itza_mult = 0.1
+	building_throughput_building_easter_island_heads_mult = 0.1
+	building_throughput_building_eye_of_sahara_mult = 0.1
+	building_throughput_building_giza_necropolis_mult = 0.1
+	building_throughput_building_khaju_bridge_mult = 0.1
+	building_throughput_building_petra_mult = 0.1
+	building_throughput_building_capitol_hill_mult = 0.1
+	building_throughput_building_central_park_mult = 0.1
+}
+
+qualification_idea_7_mdf = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_lightbulb_positive.dds
+	state_rich_standard_of_living_add = 2
+	building_output_porcelain_mult = 0.075
+	building_output_meat_mult = 0.075
+	building_output_fruit_mult = 0.075
+	building_output_liquor_mult = 0.075
+	building_output_wine_mult = 0.075
+	building_output_tea_mult = 0.075
+	building_output_coffee_mult = 0.075
+	building_output_sugar_mult = 0.075
+	building_output_tobacco_mult = 0.075
+	building_output_opium_mult = 0.075
+	building_output_automobiles_mult = 0.075
+	building_output_telephones_mult = 0.075
+	building_output_radios_mult = 0.075
+	building_output_luxury_clothes_mult = 0.075
+	building_output_luxury_furniture_mult = 0.075
+	building_output_gold_mult = 0.075
+	building_output_fine_art_mult = 0.075
+}
+
+naval_idea_1_mdf = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_lightbulb_positive.dds
+	unit_convoy_requirements_mult = -0.1
+	state_port_range_add = 10
+}
+
+naval_idea_2_mdf = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_lightbulb_positive.dds
+	unit_navy_defense_mult = 0.1
+}
+
+naval_idea_3_mdf = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_lightbulb_positive.dds
+	unit_convoy_raiding_mult = 0.15
+}
+
+naval_idea_4_mdf = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_lightbulb_positive.dds
+	country_ignores_landing_craft_penalty = yes
+}
+
+naval_idea_5_mdf = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_lightbulb_positive.dds
+	building_naval_base_throughput_mult = 0.1
+	building_port_throughput_mult = 0.1
+}
+
+naval_idea_6_mdf = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_lightbulb_positive.dds
+	country_navy_power_projection_mult = 0.1
+}
+
+naval_idea_7_mdf = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_lightbulb_positive.dds
+	unit_navy_offense_mult = 0.1
+}
+
+ethnocentrism_idea_1_mdf = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_lightbulb_positive.dds
+	country_authority_mult = 0.1
+}
+
+ethnocentrism_idea_2_mdf = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_lightbulb_positive.dds
+	state_conversion_mult = 0.15
+}
+
+ethnocentrism_idea_3_mdf = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_lightbulb_positive.dds
+	state_accepted_birth_rate_mult = 0.1
+}
+
+ethnocentrism_idea_4_mdf = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_lightbulb_positive.dds
+	state_loyalists_from_sol_change_accepted_religion_mult = 0.1
+	state_loyalists_from_sol_change_accepted_culture_mult = 0.1
+}
+
+ethnocentrism_idea_5_mdf = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_lightbulb_positive.dds
+	state_assimilation_mult = 0.15
+}
+
+ethnocentrism_idea_6_mdf = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_lightbulb_positive.dds
+	state_education_access_add = 0.075
+}
+
+ethnocentrism_idea_7_mdf = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_lightbulb_positive.dds
+	#Unutma - Misyoner
+}
+
+humanist_idea_1_mdf = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_lightbulb_positive.dds
+	country_tech_spread_add = 25
+}
+
+humanist_idea_2_mdf = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_lightbulb_positive.dds
+	state_loyalists_from_sol_change_mult = 0.05
+}
+
+humanist_idea_3_mdf = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_lightbulb_positive.dds
+	country_revolution_secession_speed_mult = -0.15
+}
+
+humanist_idea_4_mdf = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_lightbulb_positive.dds
+	state_education_access_wealth_add = 0.005
+}
+
+humanist_idea_5_mdf = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_lightbulb_positive.dds
+	state_infrastructure_mult = 0.15
+}
+
+humanist_idea_6_mdf = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_lightbulb_positive.dds
+	country_improve_relations_speed_mult = 0.3
+}
+
+humanist_idea_7_mdf = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_lightbulb_positive.dds
+	state_migration_pull_mult = 0.3
+}
+
+militarization_idea_1_mdf = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_lightbulb_positive.dds
+	country_legitimacy_headofstate_add = 5
+}
+
+militarization_idea_2_mdf = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_lightbulb_positive.dds
+	state_conscription_rate_mult = 0.1
+}
+
+militarization_idea_3_mdf = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_lightbulb_positive.dds
+	country_suppression_ig_attraction_mult = -0.25
+	country_military_wages_mult = -0.1
+}
+
+militarization_idea_4_mdf = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_lightbulb_positive.dds
+	country_military_tech_cost_mult = -0.05
+}
+
+militarization_idea_5_mdf = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_lightbulb_positive.dds
+	country_infamy_generation_mult = -0.1
+}
+
+militarization_idea_6_mdf = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_lightbulb_positive.dds
+	building_training_rate_mult = 0.25
+	country_military_goods_cost_mult = -0.25
+}
+
+militarization_idea_7_mdf = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_lightbulb_positive.dds
+	front_advancement_speed_mult = 0.2
+}
+
+politics_idea_1_mdf = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_lightbulb_positive.dds
+	country_legitimacy_base_add = 10
+}
+
+politics_idea_2_mdf = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_lightbulb_positive.dds
+	country_revolution_secession_speed_mult = -0.1
+}
+
+politics_idea_3_mdf = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_lightbulb_positive.dds
+	country_law_enactment_time_mult = -0.2
+}
+
+politics_idea_4_mdf = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_lightbulb_positive.dds
+	political_movement_radicalism_mult = -0.15
+}
+
+politics_idea_5_mdf = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_lightbulb_positive.dds
+	country_law_enactment_success_add = 0.1
+}
+
+politics_idea_6_mdf = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_lightbulb_positive.dds
+	interest_group_approval_add = 1
+}
+
+politics_idea_7_mdf = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_lightbulb_positive.dds
+	country_authority_add = 50
+	country_promotion_ig_attraction_mult = 0.5
+}
+
+syndicalism_idea_1_mdf = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_lightbulb_positive.dds
+	building_workforce_shares_add = 0.1
+}
+
+syndicalism_idea_2_mdf = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_lightbulb_positive.dds
+	state_working_adult_ratio_add = 0.1
+}
+
+syndicalism_idea_3_mdf = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_lightbulb_positive.dds
+	state_mortality_mult = -0.15
+}
+
+syndicalism_idea_4_mdf = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_lightbulb_positive.dds
+	state_welfare_payments_add = 0.15
+	state_poor_standard_of_living_add = 2	#unutma
+}
+
+syndicalism_idea_5_mdf = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_lightbulb_positive.dds
+	state_dependent_wage_mult = 0.15
+	state_dependent_political_participation_add = 0.15
+}
+
+syndicalism_idea_6_mdf = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_lightbulb_positive.dds
+	building_government_shares_add = 10
+}
+
+syndicalism_idea_7_mdf = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_lightbulb_positive.dds
+	building_production_mult = 0.05
+	building_throughput_mult = 0.1
+}
+
+imperialist_idea_1_mdf = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_lightbulb_positive.dds
+	country_prestige_add = 150
+}
+
+imperialist_idea_2_mdf = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_lightbulb_positive.dds
+	state_non_homeland_colony_growth_speed_mult = 0.1
+}
+
+imperialist_idea_3_mdf = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_lightbulb_positive.dds
+	country_resource_depletion_chance_mult = -0.1
+	country_resource_discovery_chance_mult = 0.1
+}
+
+imperialist_idea_4_mdf = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_lightbulb_positive.dds
+	state_turmoil_effects_mult = -0.15
+}
+
+imperialist_idea_5_mdf = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_lightbulb_positive.dds
+	country_max_declared_interests_mult = 0.2
+}
+
+imperialist_idea_6_mdf = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_lightbulb_positive.dds
+	state_colony_growth_creation_mult = 0.2
+}
+
+imperialist_idea_7_mdf = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_lightbulb_positive.dds
+	country_radicals_from_conquest_mult = -0.25
+}

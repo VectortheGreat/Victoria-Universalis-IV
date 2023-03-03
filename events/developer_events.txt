@@ -212,9 +212,17 @@ dev.2 = {
 	option = {
 		name = dev.2.a
 		default_option = yes
-		set_variable = {
-			name = innovative_idea
-			value = 0
+		set_global_variable = {
+			name = 1_string
+			value = flag:1
+		}
+		add_to_global_variable_list = {
+			name = idea_pic_index
+			target = global_var:1_string
+		}
+		set_global_variable = {
+			name = 1_value
+			value = 1
 		}
 	}
 	option = {
@@ -225,7 +233,7 @@ dev.2 = {
 	option = {
 		name = dev.2.c
 		set_variable = {
-			name = idea_group_unlocked
+			name = national_idea_pool
 			value = 0
 		}
 	}

@@ -1,0 +1,13 @@
+﻿religion_key = {
+	type = country
+	random_valid = no
+	text = {
+		trigger = {
+			religion = rel:catholic
+		}
+		localization_key = catholic_icon
+	}
+	text = {
+		localization_key = not_catholic_icon
+	}
+}

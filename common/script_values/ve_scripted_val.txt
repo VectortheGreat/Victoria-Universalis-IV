@@ -279,3 +279,4 @@ culture_reform_point_value_max = 1000
 # 		add = var:ve_splender_points
 # 	}
 # }
+#

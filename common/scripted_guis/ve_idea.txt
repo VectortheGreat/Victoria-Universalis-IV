@@ -1,0 +1,6634 @@
+cancel_idea = {
+	scope = country
+	effect = {
+		switch = {
+			trigger = scope:idea_group
+			flag:innovative_idea = {
+				remove_variable = can_go_innovative
+				remove_variable = innovative_idea_completed
+				set_variable = {
+					name = innovative_idea
+					value = 0
+				}
+				change_variable = {
+					name = idea_group_unlocked
+					subtract = 1
+				}
+				if = {
+					limit = {
+						has_modifier = innovative_idea_1_mdf
+					}
+					remove_modifier = innovative_idea_1_mdf
+					if = {
+						limit = {
+							var:national_idea_pool > 0
+						}
+						change_variable = {
+							name = national_idea_pool
+							subtract = 1
+						}
+					}
+				}
+				if = {
+					limit = {
+						has_modifier = innovative_idea_2_mdf
+					}
+					remove_modifier = innovative_idea_2_mdf
+					if = {
+						limit = {
+							var:national_idea_pool > 0
+						}
+						change_variable = {
+							name = national_idea_pool
+							subtract = 1
+						}
+					}
+				}
+				if = {
+					limit = {
+						has_modifier = innovative_idea_3_mdf
+					}
+					remove_modifier = innovative_idea_3_mdf
+					if = {
+						limit = {
+							var:national_idea_pool > 0
+						}
+						change_variable = {
+							name = national_idea_pool
+							subtract = 1
+						}
+					}
+				}
+				if = {
+					limit = {
+						has_modifier = innovative_idea_4_mdf
+					}
+					remove_modifier = innovative_idea_4_mdf
+					if = {
+						limit = {
+							var:national_idea_pool > 0
+						}
+						change_variable = {
+							name = national_idea_pool
+							subtract = 1
+						}
+					}
+				}
+				if = {
+					limit = {
+						has_modifier = innovative_idea_5_mdf
+					}
+					remove_modifier = innovative_idea_5_mdf
+					if = {
+						limit = {
+							var:national_idea_pool > 0
+						}
+						change_variable = {
+							name = national_idea_pool
+							subtract = 1
+						}
+					}
+				}
+				if = {
+					limit = {
+						has_modifier = innovative_idea_6_mdf
+					}
+					remove_modifier = innovative_idea_6_mdf
+					if = {
+						limit = {
+							var:national_idea_pool > 0
+						}
+						change_variable = {
+							name = national_idea_pool
+							subtract = 1
+						}
+					}
+				}
+				if = {
+					limit = {
+						has_modifier = innovative_idea_7_mdf
+					}
+					remove_modifier = innovative_idea_7_mdf
+					if = {
+						limit = {
+							var:national_idea_pool > 0
+						}
+						change_variable = {
+							name = national_idea_pool
+							subtract = 1
+						}
+					}
+				}
+			}
+			flag:economic_idea = {
+				remove_variable = can_go_economic
+				remove_variable = economic_idea_completed
+				set_variable = {
+					name = economic_idea
+					value = 0
+				}
+				change_variable = {
+					name = idea_group_unlocked
+					subtract = 1
+				}
+				if = {
+					limit = {
+						has_modifier = economic_idea_1_mdf
+					}
+					remove_modifier = economic_idea_1_mdf
+					if = {
+						limit = {
+							var:national_idea_pool > 0
+						}
+						change_variable = {
+							name = national_idea_pool
+							subtract = 1
+						}
+					}
+				}
+				if = {
+					limit = {
+						has_modifier = economic_idea_2_mdf
+					}
+					remove_modifier = economic_idea_2_mdf
+					if = {
+						limit = {
+							var:national_idea_pool > 0
+						}
+						change_variable = {
+							name = national_idea_pool
+							subtract = 1
+						}
+					}
+				}
+				if = {
+					limit = {
+						has_modifier = economic_idea_3_mdf
+					}
+					remove_modifier = economic_idea_3_mdf
+					if = {
+						limit = {
+							var:national_idea_pool > 0
+						}
+						change_variable = {
+							name = national_idea_pool
+							subtract = 1
+						}
+					}
+				}
+				if = {
+					limit = {
+						has_modifier = economic_idea_4_mdf
+					}
+					remove_modifier = economic_idea_4_mdf
+					if = {
+						limit = {
+							var:national_idea_pool > 0
+						}
+						change_variable = {
+							name = national_idea_pool
+							subtract = 1
+						}
+					}
+				}
+				if = {
+					limit = {
+						has_modifier = economic_idea_5_mdf
+					}
+					remove_modifier = economic_idea_5_mdf
+					if = {
+						limit = {
+							var:national_idea_pool > 0
+						}
+						change_variable = {
+							name = national_idea_pool
+							subtract = 1
+						}
+					}
+				}
+				if = {
+					limit = {
+						has_modifier = economic_idea_6_mdf
+					}
+					remove_modifier = economic_idea_6_mdf
+					if = {
+						limit = {
+							var:national_idea_pool > 0
+						}
+						change_variable = {
+							name = national_idea_pool
+							subtract = 1
+						}
+					}
+				}
+				if = {
+					limit = {
+						has_modifier = economic_idea_7_mdf
+					}
+					remove_modifier = economic_idea_7_mdf
+					if = {
+						limit = {
+							var:national_idea_pool > 0
+						}
+						change_variable = {
+							name = national_idea_pool
+							subtract = 1
+						}
+					}
+				}
+			}
+			flag:administrative_idea = {
+				remove_variable = can_go_administrative
+				remove_variable = administrative_idea_completed
+				set_variable = {
+					name = administrative_idea
+					value = 0
+				}
+				change_variable = {
+					name = idea_group_unlocked
+					subtract = 1
+				}
+				if = {
+					limit = {
+						has_modifier = administrative_idea_1_mdf
+					}
+					remove_modifier = administrative_idea_1_mdf
+					if = {
+						limit = {
+							var:national_idea_pool > 0
+						}
+						change_variable = {
+							name = national_idea_pool
+							subtract = 1
+						}
+					}
+				}
+				if = {
+					limit = {
+						has_modifier = administrative_idea_2_mdf
+					}
+					remove_modifier = administrative_idea_2_mdf
+					if = {
+						limit = {
+							var:national_idea_pool > 0
+						}
+						change_variable = {
+							name = national_idea_pool
+							subtract = 1
+						}
+					}
+				}
+				if = {
+					limit = {
+						has_modifier = administrative_idea_3_mdf
+					}
+					remove_modifier = administrative_idea_3_mdf
+					if = {
+						limit = {
+							var:national_idea_pool > 0
+						}
+						change_variable = {
+							name = national_idea_pool
+							subtract = 1
+						}
+					}
+				}
+				if = {
+					limit = {
+						has_modifier = administrative_idea_4_mdf
+					}
+					remove_modifier = administrative_idea_4_mdf
+					if = {
+						limit = {
+							var:national_idea_pool > 0
+						}
+						change_variable = {
+							name = national_idea_pool
+							subtract = 1
+						}
+					}
+				}
+				if = {
+					limit = {
+						has_modifier = administrative_idea_5_mdf
+					}
+					remove_modifier = administrative_idea_5_mdf
+					if = {
+						limit = {
+							var:national_idea_pool > 0
+						}
+						change_variable = {
+							name = national_idea_pool
+							subtract = 1
+						}
+					}
+				}
+				if = {
+					limit = {
+						has_modifier = administrative_idea_6_mdf
+					}
+					remove_modifier = administrative_idea_6_mdf
+					if = {
+						limit = {
+							var:national_idea_pool > 0
+						}
+						change_variable = {
+							name = national_idea_pool
+							subtract = 1
+						}
+					}
+				}
+				if = {
+					limit = {
+						has_modifier = administrative_idea_7_mdf
+					}
+					remove_modifier = administrative_idea_7_mdf
+					if = {
+						limit = {
+							var:national_idea_pool > 0
+						}
+						change_variable = {
+							name = national_idea_pool
+							subtract = 1
+						}
+					}
+				}
+			}
+			flag:ethnocentrism_idea = {
+				remove_variable = can_go_ethnocentrism
+				remove_variable = ethnocentrism_idea_completed
+				set_variable = {
+					name = ethnocentrism_idea
+					value = 0
+				}
+				change_variable = {
+					name = idea_group_unlocked
+					subtract = 1
+				}
+				if = {
+					limit = {
+						has_modifier = ethnocentrism_idea_1_mdf
+					}
+					remove_modifier = ethnocentrism_idea_1_mdf
+					if = {
+						limit = {
+							var:national_idea_pool > 0
+						}
+						change_variable = {
+							name = national_idea_pool
+							subtract = 1
+						}
+					}
+				}
+				if = {
+					limit = {
+						has_modifier = ethnocentrism_idea_2_mdf
+					}
+					remove_modifier = ethnocentrism_idea_2_mdf
+					if = {
+						limit = {
+							var:national_idea_pool > 0
+						}
+						change_variable = {
+							name = national_idea_pool
+							subtract = 1
+						}
+					}
+				}
+				if = {
+					limit = {
+						has_modifier = ethnocentrism_idea_3_mdf
+					}
+					remove_modifier = ethnocentrism_idea_3_mdf
+					if = {
+						limit = {
+							var:national_idea_pool > 0
+						}
+						change_variable = {
+							name = national_idea_pool
+							subtract = 1
+						}
+					}
+				}
+				if = {
+					limit = {
+						has_modifier = ethnocentrism_idea_4_mdf
+					}
+					remove_modifier = ethnocentrism_idea_4_mdf
+					if = {
+						limit = {
+							var:national_idea_pool > 0
+						}
+						change_variable = {
+							name = national_idea_pool
+							subtract = 1
+						}
+					}
+				}
+				if = {
+					limit = {
+						has_modifier = ethnocentrism_idea_5_mdf
+					}
+					remove_modifier = ethnocentrism_idea_5_mdf
+					if = {
+						limit = {
+							var:national_idea_pool > 0
+						}
+						change_variable = {
+							name = national_idea_pool
+							subtract = 1
+						}
+					}
+				}
+				if = {
+					limit = {
+						has_modifier = ethnocentrism_idea_6_mdf
+					}
+					remove_modifier = ethnocentrism_idea_6_mdf
+					if = {
+						limit = {
+							var:national_idea_pool > 0
+						}
+						change_variable = {
+							name = national_idea_pool
+							subtract = 1
+						}
+					}
+				}
+				if = {
+					limit = {
+						has_modifier = ethnocentrism_idea_7_mdf
+					}
+					remove_modifier = ethnocentrism_idea_7_mdf
+					if = {
+						limit = {
+							var:national_idea_pool > 0
+						}
+						change_variable = {
+							name = national_idea_pool
+							subtract = 1
+						}
+					}
+				}
+			}
+			flag:politics_idea = {
+				remove_variable = can_go_politics
+				remove_variable = politics_idea_completed
+				set_variable = {
+					name = politics_idea
+					value = 0
+				}
+				change_variable = {
+					name = idea_group_unlocked
+					subtract = 1
+				}
+				if = {
+					limit = {
+						has_modifier = politics_idea_1_mdf
+					}
+					remove_modifier = politics_idea_1_mdf
+					if = {
+						limit = {
+							var:national_idea_pool > 0
+						}
+						change_variable = {
+							name = national_idea_pool
+							subtract = 1
+						}
+					}
+				}
+				if = {
+					limit = {
+						has_modifier = politics_idea_2_mdf
+					}
+					remove_modifier = politics_idea_2_mdf
+					if = {
+						limit = {
+							var:national_idea_pool > 0
+						}
+						change_variable = {
+							name = national_idea_pool
+							subtract = 1
+						}
+					}
+				}
+				if = {
+					limit = {
+						has_modifier = politics_idea_3_mdf
+					}
+					remove_modifier = politics_idea_3_mdf
+					if = {
+						limit = {
+							var:national_idea_pool > 0
+						}
+						change_variable = {
+							name = national_idea_pool
+							subtract = 1
+						}
+					}
+				}
+				if = {
+					limit = {
+						has_modifier = politics_idea_4_mdf
+					}
+					remove_modifier = politics_idea_4_mdf
+					if = {
+						limit = {
+							var:national_idea_pool > 0
+						}
+						change_variable = {
+							name = national_idea_pool
+							subtract = 1
+						}
+					}
+				}
+				if = {
+					limit = {
+						has_modifier = politics_idea_5_mdf
+					}
+					remove_modifier = politics_idea_5_mdf
+					if = {
+						limit = {
+							var:national_idea_pool > 0
+						}
+						change_variable = {
+							name = national_idea_pool
+							subtract = 1
+						}
+					}
+				}
+				if = {
+					limit = {
+						has_modifier = politics_idea_6_mdf
+					}
+					remove_modifier = politics_idea_6_mdf
+					if = {
+						limit = {
+							var:national_idea_pool > 0
+						}
+						change_variable = {
+							name = national_idea_pool
+							subtract = 1
+						}
+					}
+				}
+				if = {
+					limit = {
+						has_modifier = politics_idea_7_mdf
+					}
+					remove_modifier = politics_idea_7_mdf
+					if = {
+						limit = {
+							var:national_idea_pool > 0
+						}
+						change_variable = {
+							name = national_idea_pool
+							subtract = 1
+						}
+					}
+				}
+			}
+			flag:diplomatic_idea = {
+				remove_variable = can_go_diplomatic
+				remove_variable = diplomatic_idea_completed
+				set_variable = {
+					name = diplomatic_idea
+					value = 0
+				}
+				change_variable = {
+					name = idea_group_unlocked
+					subtract = 1
+				}
+				if = {
+					limit = {
+						has_modifier = diplomatic_idea_1_mdf
+					}
+					remove_modifier = diplomatic_idea_1_mdf
+					if = {
+						limit = {
+							var:national_idea_pool > 0
+						}
+						change_variable = {
+							name = national_idea_pool
+							subtract = 1
+						}
+					}
+				}
+				if = {
+					limit = {
+						has_modifier = diplomatic_idea_2_mdf
+					}
+					remove_modifier = diplomatic_idea_2_mdf
+					if = {
+						limit = {
+							var:national_idea_pool > 0
+						}
+						change_variable = {
+							name = national_idea_pool
+							subtract = 1
+						}
+					}
+				}
+				if = {
+					limit = {
+						has_modifier = diplomatic_idea_3_mdf
+					}
+					remove_modifier = diplomatic_idea_3_mdf
+					if = {
+						limit = {
+							var:national_idea_pool > 0
+						}
+						change_variable = {
+							name = national_idea_pool
+							subtract = 1
+						}
+					}
+				}
+				if = {
+					limit = {
+						has_modifier = diplomatic_idea_4_mdf
+					}
+					remove_modifier = diplomatic_idea_4_mdf
+					if = {
+						limit = {
+							var:national_idea_pool > 0
+						}
+						change_variable = {
+							name = national_idea_pool
+							subtract = 1
+						}
+					}
+				}
+				if = {
+					limit = {
+						has_modifier = diplomatic_idea_5_mdf
+					}
+					remove_modifier = diplomatic_idea_5_mdf
+					if = {
+						limit = {
+							var:national_idea_pool > 0
+						}
+						change_variable = {
+							name = national_idea_pool
+							subtract = 1
+						}
+					}
+				}
+				if = {
+					limit = {
+						has_modifier = diplomatic_idea_6_mdf
+					}
+					remove_modifier = diplomatic_idea_6_mdf
+					if = {
+						limit = {
+							var:national_idea_pool > 0
+						}
+						change_variable = {
+							name = national_idea_pool
+							subtract = 1
+						}
+					}
+				}
+				if = {
+					limit = {
+						has_modifier = diplomatic_idea_7_mdf
+					}
+					remove_modifier = diplomatic_idea_7_mdf
+					if = {
+						limit = {
+							var:national_idea_pool > 0
+						}
+						change_variable = {
+							name = national_idea_pool
+							subtract = 1
+						}
+					}
+				}
+			}
+			flag:trade_idea = {
+				remove_variable = can_go_trade
+				remove_variable = trade_idea_completed
+				set_variable = {
+					name = trade_idea
+					value = 0
+				}
+				change_variable = {
+					name = idea_group_unlocked
+					subtract = 1
+				}
+				if = {
+					limit = {
+						has_modifier = trade_idea_1_mdf
+					}
+					remove_modifier = trade_idea_1_mdf
+					if = {
+						limit = {
+							var:national_idea_pool > 0
+						}
+						change_variable = {
+							name = national_idea_pool
+							subtract = 1
+						}
+					}
+				}
+				if = {
+					limit = {
+						has_modifier = trade_idea_2_mdf
+					}
+					remove_modifier = trade_idea_2_mdf
+					if = {
+						limit = {
+							var:national_idea_pool > 0
+						}
+						change_variable = {
+							name = national_idea_pool
+							subtract = 1
+						}
+					}
+				}
+				if = {
+					limit = {
+						has_modifier = trade_idea_3_mdf
+					}
+					remove_modifier = trade_idea_3_mdf
+					if = {
+						limit = {
+							var:national_idea_pool > 0
+						}
+						change_variable = {
+							name = national_idea_pool
+							subtract = 1
+						}
+					}
+				}
+				if = {
+					limit = {
+						has_modifier = trade_idea_4_mdf
+					}
+					remove_modifier = trade_idea_4_mdf
+					if = {
+						limit = {
+							var:national_idea_pool > 0
+						}
+						change_variable = {
+							name = national_idea_pool
+							subtract = 1
+						}
+					}
+				}
+				if = {
+					limit = {
+						has_modifier = trade_idea_5_mdf
+					}
+					remove_modifier = trade_idea_5_mdf
+					if = {
+						limit = {
+							var:national_idea_pool > 0
+						}
+						change_variable = {
+							name = national_idea_pool
+							subtract = 1
+						}
+					}
+				}
+				if = {
+					limit = {
+						has_modifier = trade_idea_6_mdf
+					}
+					remove_modifier = trade_idea_6_mdf
+					if = {
+						limit = {
+							var:national_idea_pool > 0
+						}
+						change_variable = {
+							name = national_idea_pool
+							subtract = 1
+						}
+					}
+				}
+				if = {
+					limit = {
+						has_modifier = trade_idea_7_mdf
+					}
+					remove_modifier = trade_idea_7_mdf
+					if = {
+						limit = {
+							var:national_idea_pool > 0
+						}
+						change_variable = {
+							name = national_idea_pool
+							subtract = 1
+						}
+					}
+				}
+			}
+			flag:qualification_idea = {
+				remove_variable = can_go_qualification
+				remove_variable = qualification_idea_completed
+				set_variable = {
+					name = qualification_idea
+					value = 0
+				}
+				change_variable = {
+					name = idea_group_unlocked
+					subtract = 1
+				}
+				if = {
+					limit = {
+						has_modifier = qualification_idea_1_mdf
+					}
+					remove_modifier = qualification_idea_1_mdf
+					if = {
+						limit = {
+							var:national_idea_pool > 0
+						}
+						change_variable = {
+							name = national_idea_pool
+							subtract = 1
+						}
+					}
+				}
+				if = {
+					limit = {
+						has_modifier = qualification_idea_2_mdf
+					}
+					remove_modifier = qualification_idea_2_mdf
+					if = {
+						limit = {
+							var:national_idea_pool > 0
+						}
+						change_variable = {
+							name = national_idea_pool
+							subtract = 1
+						}
+					}
+				}
+				if = {
+					limit = {
+						has_modifier = qualification_idea_3_mdf
+					}
+					remove_modifier = qualification_idea_3_mdf
+					if = {
+						limit = {
+							var:national_idea_pool > 0
+						}
+						change_variable = {
+							name = national_idea_pool
+							subtract = 1
+						}
+					}
+				}
+				if = {
+					limit = {
+						has_modifier = qualification_idea_4_mdf
+					}
+					remove_modifier = qualification_idea_4_mdf
+					if = {
+						limit = {
+							var:national_idea_pool > 0
+						}
+						change_variable = {
+							name = national_idea_pool
+							subtract = 1
+						}
+					}
+				}
+				if = {
+					limit = {
+						has_modifier = qualification_idea_5_mdf
+					}
+					remove_modifier = qualification_idea_5_mdf
+					if = {
+						limit = {
+							var:national_idea_pool > 0
+						}
+						change_variable = {
+							name = national_idea_pool
+							subtract = 1
+						}
+					}
+				}
+				if = {
+					limit = {
+						has_modifier = qualification_idea_6_mdf
+					}
+					remove_modifier = qualification_idea_6_mdf
+					if = {
+						limit = {
+							var:national_idea_pool > 0
+						}
+						change_variable = {
+							name = national_idea_pool
+							subtract = 1
+						}
+					}
+				}
+				if = {
+					limit = {
+						has_modifier = qualification_idea_7_mdf
+					}
+					remove_modifier = qualification_idea_7_mdf
+					if = {
+						limit = {
+							var:national_idea_pool > 0
+						}
+						change_variable = {
+							name = national_idea_pool
+							subtract = 1
+						}
+					}
+				}
+			}
+			flag:humanist_idea = {
+				remove_variable = can_go_humanist
+				remove_variable = humanist_idea_completed
+				set_variable = {
+					name = humanist_idea
+					value = 0
+				}
+				change_variable = {
+					name = idea_group_unlocked
+					subtract = 1
+				}
+				if = {
+					limit = {
+						has_modifier = humanist_idea_1_mdf
+					}
+					remove_modifier = humanist_idea_1_mdf
+					if = {
+						limit = {
+							var:national_idea_pool > 0
+						}
+						change_variable = {
+							name = national_idea_pool
+							subtract = 1
+						}
+					}
+				}
+				if = {
+					limit = {
+						has_modifier = humanist_idea_2_mdf
+					}
+					remove_modifier = humanist_idea_2_mdf
+					if = {
+						limit = {
+							var:national_idea_pool > 0
+						}
+						change_variable = {
+							name = national_idea_pool
+							subtract = 1
+						}
+					}
+				}
+				if = {
+					limit = {
+						has_modifier = humanist_idea_3_mdf
+					}
+					remove_modifier = humanist_idea_3_mdf
+					if = {
+						limit = {
+							var:national_idea_pool > 0
+						}
+						change_variable = {
+							name = national_idea_pool
+							subtract = 1
+						}
+					}
+				}
+				if = {
+					limit = {
+						has_modifier = humanist_idea_4_mdf
+					}
+					remove_modifier = humanist_idea_4_mdf
+					if = {
+						limit = {
+							var:national_idea_pool > 0
+						}
+						change_variable = {
+							name = national_idea_pool
+							subtract = 1
+						}
+					}
+				}
+				if = {
+					limit = {
+						has_modifier = humanist_idea_5_mdf
+					}
+					remove_modifier = humanist_idea_5_mdf
+					if = {
+						limit = {
+							var:national_idea_pool > 0
+						}
+						change_variable = {
+							name = national_idea_pool
+							subtract = 1
+						}
+					}
+				}
+				if = {
+					limit = {
+						has_modifier = humanist_idea_6_mdf
+					}
+					remove_modifier = humanist_idea_6_mdf
+					if = {
+						limit = {
+							var:national_idea_pool > 0
+						}
+						change_variable = {
+							name = national_idea_pool
+							subtract = 1
+						}
+					}
+				}
+				if = {
+					limit = {
+						has_modifier = humanist_idea_7_mdf
+					}
+					remove_modifier = humanist_idea_7_mdf
+					if = {
+						limit = {
+							var:national_idea_pool > 0
+						}
+						change_variable = {
+							name = national_idea_pool
+							subtract = 1
+						}
+					}
+				}
+			}
+			flag:syndicalism_idea = {
+				remove_variable = can_go_syndicalism
+				remove_variable = syndicalism_idea_completed
+				set_variable = {
+					name = syndicalism_idea
+					value = 0
+				}
+				change_variable = {
+					name = idea_group_unlocked
+					subtract = 1
+				}
+				if = {
+					limit = {
+						has_modifier = syndicalism_idea_1_mdf
+					}
+					remove_modifier = syndicalism_idea_1_mdf
+					if = {
+						limit = {
+							var:national_idea_pool > 0
+						}
+						change_variable = {
+							name = national_idea_pool
+							subtract = 1
+						}
+					}
+				}
+				if = {
+					limit = {
+						has_modifier = syndicalism_idea_2_mdf
+					}
+					remove_modifier = syndicalism_idea_2_mdf
+					if = {
+						limit = {
+							var:national_idea_pool > 0
+						}
+						change_variable = {
+							name = national_idea_pool
+							subtract = 1
+						}
+					}
+				}
+				if = {
+					limit = {
+						has_modifier = syndicalism_idea_3_mdf
+					}
+					remove_modifier = syndicalism_idea_3_mdf
+					if = {
+						limit = {
+							var:national_idea_pool > 0
+						}
+						change_variable = {
+							name = national_idea_pool
+							subtract = 1
+						}
+					}
+				}
+				if = {
+					limit = {
+						has_modifier = syndicalism_idea_4_mdf
+					}
+					remove_modifier = syndicalism_idea_4_mdf
+					if = {
+						limit = {
+							var:national_idea_pool > 0
+						}
+						change_variable = {
+							name = national_idea_pool
+							subtract = 1
+						}
+					}
+				}
+				if = {
+					limit = {
+						has_modifier = syndicalism_idea_5_mdf
+					}
+					remove_modifier = syndicalism_idea_5_mdf
+					if = {
+						limit = {
+							var:national_idea_pool > 0
+						}
+						change_variable = {
+							name = national_idea_pool
+							subtract = 1
+						}
+					}
+				}
+				if = {
+					limit = {
+						has_modifier = syndicalism_idea_6_mdf
+					}
+					remove_modifier = syndicalism_idea_6_mdf
+					if = {
+						limit = {
+							var:national_idea_pool > 0
+						}
+						change_variable = {
+							name = national_idea_pool
+							subtract = 1
+						}
+					}
+				}
+				if = {
+					limit = {
+						has_modifier = syndicalism_idea_7_mdf
+					}
+					remove_modifier = syndicalism_idea_7_mdf
+					if = {
+						limit = {
+							var:national_idea_pool > 0
+						}
+						change_variable = {
+							name = national_idea_pool
+							subtract = 1
+						}
+					}
+				}
+			}
+			flag:offensive_idea = {
+				remove_variable = can_go_offensive
+				remove_variable = offensive_idea_completed
+				set_variable = {
+					name = offensive_idea
+					value = 0
+				}
+				change_variable = {
+					name = idea_group_unlocked
+					subtract = 1
+				}
+				if = {
+					limit = {
+						has_modifier = offensive_idea_1_mdf
+					}
+					remove_modifier = offensive_idea_1_mdf
+					if = {
+						limit = {
+							var:national_idea_pool > 0
+						}
+						change_variable = {
+							name = national_idea_pool
+							subtract = 1
+						}
+					}
+				}
+				if = {
+					limit = {
+						has_modifier = offensive_idea_2_mdf
+					}
+					remove_modifier = offensive_idea_2_mdf
+					if = {
+						limit = {
+							var:national_idea_pool > 0
+						}
+						change_variable = {
+							name = national_idea_pool
+							subtract = 1
+						}
+					}
+				}
+				if = {
+					limit = {
+						has_modifier = offensive_idea_3_mdf
+					}
+					remove_modifier = offensive_idea_3_mdf
+					if = {
+						limit = {
+							var:national_idea_pool > 0
+						}
+						change_variable = {
+							name = national_idea_pool
+							subtract = 1
+						}
+					}
+				}
+				if = {
+					limit = {
+						has_modifier = offensive_idea_4_mdf
+					}
+					remove_modifier = offensive_idea_4_mdf
+					if = {
+						limit = {
+							var:national_idea_pool > 0
+						}
+						change_variable = {
+							name = national_idea_pool
+							subtract = 1
+						}
+					}
+				}
+				if = {
+					limit = {
+						has_modifier = offensive_idea_5_mdf
+					}
+					remove_modifier = offensive_idea_5_mdf
+					if = {
+						limit = {
+							var:national_idea_pool > 0
+						}
+						change_variable = {
+							name = national_idea_pool
+							subtract = 1
+						}
+					}
+				}
+				if = {
+					limit = {
+						has_modifier = offensive_idea_6_mdf
+					}
+					remove_modifier = offensive_idea_6_mdf
+					if = {
+						limit = {
+							var:national_idea_pool > 0
+						}
+						change_variable = {
+							name = national_idea_pool
+							subtract = 1
+						}
+					}
+				}
+				if = {
+					limit = {
+						has_modifier = offensive_idea_7_mdf
+					}
+					remove_modifier = offensive_idea_7_mdf
+					if = {
+						limit = {
+							var:national_idea_pool > 0
+						}
+						change_variable = {
+							name = national_idea_pool
+							subtract = 1
+						}
+					}
+				}
+			}
+			flag:defensive_idea = {
+				remove_variable = can_go_defensive
+				remove_variable = defensive_idea_completed
+				set_variable = {
+					name = defensive_idea
+					value = 0
+				}
+				change_variable = {
+					name = idea_group_unlocked
+					subtract = 1
+				}
+				if = {
+					limit = {
+						has_modifier = defensive_idea_1_mdf
+					}
+					remove_modifier = defensive_idea_1_mdf
+					if = {
+						limit = {
+							var:national_idea_pool > 0
+						}
+						change_variable = {
+							name = national_idea_pool
+							subtract = 1
+						}
+					}
+				}
+				if = {
+					limit = {
+						has_modifier = defensive_idea_2_mdf
+					}
+					remove_modifier = defensive_idea_2_mdf
+					if = {
+						limit = {
+							var:national_idea_pool > 0
+						}
+						change_variable = {
+							name = national_idea_pool
+							subtract = 1
+						}
+					}
+				}
+				if = {
+					limit = {
+						has_modifier = defensive_idea_3_mdf
+					}
+					remove_modifier = defensive_idea_3_mdf
+					if = {
+						limit = {
+							var:national_idea_pool > 0
+						}
+						change_variable = {
+							name = national_idea_pool
+							subtract = 1
+						}
+					}
+				}
+				if = {
+					limit = {
+						has_modifier = defensive_idea_4_mdf
+					}
+					remove_modifier = defensive_idea_4_mdf
+					if = {
+						limit = {
+							var:national_idea_pool > 0
+						}
+						change_variable = {
+							name = national_idea_pool
+							subtract = 1
+						}
+					}
+				}
+				if = {
+					limit = {
+						has_modifier = defensive_idea_5_mdf
+					}
+					remove_modifier = defensive_idea_5_mdf
+					if = {
+						limit = {
+							var:national_idea_pool > 0
+						}
+						change_variable = {
+							name = national_idea_pool
+							subtract = 1
+						}
+					}
+				}
+				if = {
+					limit = {
+						has_modifier = defensive_idea_6_mdf
+					}
+					remove_modifier = defensive_idea_6_mdf
+					if = {
+						limit = {
+							var:national_idea_pool > 0
+						}
+						change_variable = {
+							name = national_idea_pool
+							subtract = 1
+						}
+					}
+				}
+				if = {
+					limit = {
+						has_modifier = defensive_idea_7_mdf
+					}
+					remove_modifier = defensive_idea_7_mdf
+					if = {
+						limit = {
+							var:national_idea_pool > 0
+						}
+						change_variable = {
+							name = national_idea_pool
+							subtract = 1
+						}
+					}
+				}
+			}
+			flag:naval_idea = {
+				remove_variable = can_go_naval
+				remove_variable = naval_idea_completed
+				set_variable = {
+					name = naval_idea
+					value = 0
+				}
+				change_variable = {
+					name = idea_group_unlocked
+					subtract = 1
+				}
+				if = {
+					limit = {
+						has_modifier = naval_idea_1_mdf
+					}
+					remove_modifier = naval_idea_1_mdf
+					if = {
+						limit = {
+							var:national_idea_pool > 0
+						}
+						change_variable = {
+							name = national_idea_pool
+							subtract = 1
+						}
+					}
+				}
+				if = {
+					limit = {
+						has_modifier = naval_idea_2_mdf
+					}
+					remove_modifier = naval_idea_2_mdf
+					if = {
+						limit = {
+							var:national_idea_pool > 0
+						}
+						change_variable = {
+							name = national_idea_pool
+							subtract = 1
+						}
+					}
+				}
+				if = {
+					limit = {
+						has_modifier = naval_idea_3_mdf
+					}
+					remove_modifier = naval_idea_3_mdf
+					if = {
+						limit = {
+							var:national_idea_pool > 0
+						}
+						change_variable = {
+							name = national_idea_pool
+							subtract = 1
+						}
+					}
+				}
+				if = {
+					limit = {
+						has_modifier = naval_idea_4_mdf
+					}
+					remove_modifier = naval_idea_4_mdf
+					if = {
+						limit = {
+							var:national_idea_pool > 0
+						}
+						change_variable = {
+							name = national_idea_pool
+							subtract = 1
+						}
+					}
+				}
+				if = {
+					limit = {
+						has_modifier = naval_idea_5_mdf
+					}
+					remove_modifier = naval_idea_5_mdf
+					if = {
+						limit = {
+							var:national_idea_pool > 0
+						}
+						change_variable = {
+							name = national_idea_pool
+							subtract = 1
+						}
+					}
+				}
+				if = {
+					limit = {
+						has_modifier = naval_idea_6_mdf
+					}
+					remove_modifier = naval_idea_6_mdf
+					if = {
+						limit = {
+							var:national_idea_pool > 0
+						}
+						change_variable = {
+							name = national_idea_pool
+							subtract = 1
+						}
+					}
+				}
+				if = {
+					limit = {
+						has_modifier = naval_idea_7_mdf
+					}
+					remove_modifier = naval_idea_7_mdf
+					if = {
+						limit = {
+							var:national_idea_pool > 0
+						}
+						change_variable = {
+							name = national_idea_pool
+							subtract = 1
+						}
+					}
+				}
+			}
+			flag:militarization_idea = {
+				remove_variable = can_go_militarization
+				remove_variable = militarization_idea_completed
+				set_variable = {
+					name = militarization_idea
+					value = 0
+				}
+				change_variable = {
+					name = idea_group_unlocked
+					subtract = 1
+				}
+				if = {
+					limit = {
+						has_modifier = militarization_idea_1_mdf
+					}
+					remove_modifier = militarization_idea_1_mdf
+					if = {
+						limit = {
+							var:national_idea_pool > 0
+						}
+						change_variable = {
+							name = national_idea_pool
+							subtract = 1
+						}
+					}
+				}
+				if = {
+					limit = {
+						has_modifier = militarization_idea_2_mdf
+					}
+					remove_modifier = militarization_idea_2_mdf
+					if = {
+						limit = {
+							var:national_idea_pool > 0
+						}
+						change_variable = {
+							name = national_idea_pool
+							subtract = 1
+						}
+					}
+				}
+				if = {
+					limit = {
+						has_modifier = militarization_idea_3_mdf
+					}
+					remove_modifier = militarization_idea_3_mdf
+					if = {
+						limit = {
+							var:national_idea_pool > 0
+						}
+						change_variable = {
+							name = national_idea_pool
+							subtract = 1
+						}
+					}
+				}
+				if = {
+					limit = {
+						has_modifier = militarization_idea_4_mdf
+					}
+					remove_modifier = militarization_idea_4_mdf
+					if = {
+						limit = {
+							var:national_idea_pool > 0
+						}
+						change_variable = {
+							name = national_idea_pool
+							subtract = 1
+						}
+					}
+				}
+				if = {
+					limit = {
+						has_modifier = militarization_idea_5_mdf
+					}
+					remove_modifier = militarization_idea_5_mdf
+					if = {
+						limit = {
+							var:national_idea_pool > 0
+						}
+						change_variable = {
+							name = national_idea_pool
+							subtract = 1
+						}
+					}
+				}
+				if = {
+					limit = {
+						has_modifier = militarization_idea_6_mdf
+					}
+					remove_modifier = militarization_idea_6_mdf
+					if = {
+						limit = {
+							var:national_idea_pool > 0
+						}
+						change_variable = {
+							name = national_idea_pool
+							subtract = 1
+						}
+					}
+				}
+				if = {
+					limit = {
+						has_modifier = militarization_idea_7_mdf
+					}
+					remove_modifier = militarization_idea_7_mdf
+					if = {
+						limit = {
+							var:national_idea_pool > 0
+						}
+						change_variable = {
+							name = national_idea_pool
+							subtract = 1
+						}
+					}
+				}
+			}
+			flag:imperialist_idea = {
+				remove_variable = can_go_imperialist
+				remove_variable = imperialist_idea_completed
+				set_variable = {
+					name = imperialist_idea
+					value = 0
+				}
+				change_variable = {
+					name = idea_group_unlocked
+					subtract = 1
+				}
+				if = {
+					limit = {
+						has_modifier = imperialist_idea_1_mdf
+					}
+					remove_modifier = imperialist_idea_1_mdf
+					if = {
+						limit = {
+							var:national_idea_pool > 0
+						}
+						change_variable = {
+							name = national_idea_pool
+							subtract = 1
+						}
+					}
+				}
+				if = {
+					limit = {
+						has_modifier = imperialist_idea_2_mdf
+					}
+					remove_modifier = imperialist_idea_2_mdf
+					if = {
+						limit = {
+							var:national_idea_pool > 0
+						}
+						change_variable = {
+							name = national_idea_pool
+							subtract = 1
+						}
+					}
+				}
+				if = {
+					limit = {
+						has_modifier = imperialist_idea_3_mdf
+					}
+					remove_modifier = imperialist_idea_3_mdf
+					if = {
+						limit = {
+							var:national_idea_pool > 0
+						}
+						change_variable = {
+							name = national_idea_pool
+							subtract = 1
+						}
+					}
+				}
+				if = {
+					limit = {
+						has_modifier = imperialist_idea_4_mdf
+					}
+					remove_modifier = imperialist_idea_4_mdf
+					if = {
+						limit = {
+							var:national_idea_pool > 0
+						}
+						change_variable = {
+							name = national_idea_pool
+							subtract = 1
+						}
+					}
+				}
+				if = {
+					limit = {
+						has_modifier = imperialist_idea_5_mdf
+					}
+					remove_modifier = imperialist_idea_5_mdf
+					if = {
+						limit = {
+							var:national_idea_pool > 0
+						}
+						change_variable = {
+							name = national_idea_pool
+							subtract = 1
+						}
+					}
+				}
+				if = {
+					limit = {
+						has_modifier = imperialist_idea_6_mdf
+					}
+					remove_modifier = imperialist_idea_6_mdf
+					if = {
+						limit = {
+							var:national_idea_pool > 0
+						}
+						change_variable = {
+							name = national_idea_pool
+							subtract = 1
+						}
+					}
+				}
+				if = {
+					limit = {
+						has_modifier = imperialist_idea_7_mdf
+					}
+					remove_modifier = imperialist_idea_7_mdf
+					if = {
+						limit = {
+							var:national_idea_pool > 0
+						}
+						change_variable = {
+							name = national_idea_pool
+							subtract = 1
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+boost_idea_group = {
+	scope = country
+	is_shown = {
+		switch = {
+			trigger = scope:idea_group
+			flag:innovative_idea = {
+				has_variable = can_go_innovative
+				NOT = {
+					has_variable = innovative_idea_completed
+				}
+			}
+			flag:economic_idea = {
+				has_variable = can_go_economic
+				NOT = {
+					has_variable = economic_idea_completed
+				}
+			}
+			flag:administrative_idea = {
+				has_variable = can_go_administrative
+				NOT = {
+					has_variable = administrative_idea_completed
+				}
+			}
+			flag:ethnocentrism_idea = {
+				has_variable = can_go_ethnocentrism
+				NOT = {
+					has_variable = ethnocentrism_idea_completed
+				}
+			}
+			flag:politics_idea = {
+				has_variable = can_go_politics
+				NOT = {
+					has_variable = politics_idea_completed
+				}
+			}
+			flag:diplomatic_idea = {
+				has_variable = can_go_diplomatic
+				NOT = {
+					has_variable = diplomatic_idea_completed
+				}
+			}
+			flag:trade_idea = {
+				has_variable = can_go_trade
+				NOT = {
+					has_variable = trade_idea_completed
+				}
+			}
+			flag:qualification_idea = {
+				has_variable = can_go_qualification
+				NOT = {
+					has_variable = qualification_idea_completed
+				}
+			}
+			flag:humanist_idea = {
+				has_variable = can_go_humanist
+				NOT = {
+					has_variable = humanist_idea_completed
+				}
+			}
+			flag:syndicalism_idea = {
+				has_variable = can_go_syndicalism
+				NOT = {
+					has_variable = syndicalism_idea_completed
+				}
+			}
+			flag:offensive_idea = {
+				has_variable = can_go_offensive
+				NOT = {
+					has_variable = offensive_idea_completed
+				}
+			}
+			flag:defensive_idea = {
+				has_variable = can_go_defensive
+				NOT = {
+					has_variable = defensive_idea_completed
+				}
+			}
+			flag:naval_idea = {
+				has_variable = can_go_naval
+				NOT = {
+					has_variable = naval_idea_completed
+				}
+			}
+			flag:militarization_idea = {
+				has_variable = can_go_militarization
+				NOT = {
+					has_variable = militarization_idea_completed
+				}
+			}
+			flag:imperialist_idea = {
+				has_variable = can_go_imperialist
+				NOT = {
+					has_variable = imperialist_idea_completed
+				}
+			}
+		}
+	}
+	is_valid = {
+		switch = {
+			trigger = scope:idea_group
+			flag:innovative_idea = {
+				var:idea_point_pool >= 300
+				has_variable = can_go_innovative
+			}
+			flag:economic_idea = {
+				var:idea_point_pool >= 300
+				has_variable = can_go_economic
+			}
+			flag:administrative_idea = {
+				var:idea_point_pool >= 300
+				has_variable = can_go_administrative
+			}
+			flag:ethnocentrism_idea = {
+				var:idea_point_pool >= 300
+				has_variable = can_go_ethnocentrism
+			}
+			flag:politics_idea = {
+				var:idea_point_pool >= 300
+				has_variable = can_go_politics
+			}
+			flag:diplomatic_idea = {
+				var:idea_point_pool >= 300
+				has_variable = can_go_diplomatic
+			}
+			flag:trade_idea = {
+				var:idea_point_pool >= 300
+				has_variable = can_go_trade
+			}
+			flag:qualification_idea = {
+				var:idea_point_pool >= 300
+				has_variable = can_go_qualification
+			}
+			flag:humanist_idea = {
+				var:idea_point_pool >= 300
+				has_variable = can_go_humanist
+			}
+			flag:syndicalism_idea = {
+				var:idea_point_pool >= 300
+				has_variable = can_go_syndicalism
+			}
+			flag:offensive_idea = {
+				var:idea_point_pool >= 300
+				has_variable = can_go_offensive
+			}
+			flag:defensive_idea = {
+				var:idea_point_pool >= 300
+				has_variable = can_go_defensive
+			}
+			flag:naval_idea = {
+				var:idea_point_pool >= 300
+				has_variable = can_go_naval
+			}
+			flag:militarization_idea = {
+				var:idea_point_pool >= 300
+				has_variable = can_go_militarization
+			}
+			flag:imperialist_idea = {
+				var:idea_point_pool >= 300
+				has_variable = can_go_imperialist
+			}
+		}
+	}
+	effect = {
+		switch = {
+			trigger = scope:idea_group
+			flag:innovative_idea = {
+				if = {
+					limit = {
+						var:innovative_idea == 0
+					}
+					change_variable = {
+						name = innovative_idea
+						add = 1
+					}
+					if = {
+						limit = {
+							var:national_idea_pool < 200
+						}
+						change_variable = {
+							name = national_idea_pool
+							add = 1
+						}
+					}
+					add_modifier = {
+						name = innovative_idea_1_mdf
+						months = -1
+					}
+					if = {
+						limit = {
+							NOT = {
+								has_modifier = innovative_idea_1_mdf
+							}
+						}
+						add_modifier = {
+							name = innovative_idea_1_mdf
+							months = -1
+						}
+					}
+				}
+				else_if = {
+					limit = {
+						var:innovative_idea == 1
+					}
+					change_variable = {
+						name = innovative_idea
+						add = 1
+					}
+					if = {
+						limit = {
+							var:national_idea_pool < 200
+						}
+						change_variable = {
+							name = national_idea_pool
+							add = 1
+						}
+					}
+					if = {
+						limit = {
+							NOT = {
+								has_modifier = innovative_idea_2_mdf
+							}
+						}
+						add_modifier = {
+							name = innovative_idea_2_mdf
+							months = -1
+						}
+					}
+				}
+				else_if = {
+					limit = {
+						var:innovative_idea == 2
+					}
+					change_variable = {
+						name = innovative_idea
+						add = 1
+					}
+					if = {
+						limit = {
+							var:national_idea_pool < 200
+						}
+						change_variable = {
+							name = national_idea_pool
+							add = 1
+						}
+					}
+					if = {
+						limit = {
+							NOT = {
+								has_modifier = innovative_idea_3_mdf
+							}
+						}
+						add_modifier = {
+							name = innovative_idea_3_mdf
+							months = -1
+						}
+					}
+				}
+				else_if = {
+					limit = {
+						var:innovative_idea == 3
+					}
+					change_variable = {
+						name = innovative_idea
+						add = 1
+					}
+					if = {
+						limit = {
+							var:national_idea_pool < 200
+						}
+						change_variable = {
+							name = national_idea_pool
+							add = 1
+						}
+					}
+					if = {
+						limit = {
+							NOT = {
+								has_modifier = innovative_idea_4_mdf
+							}
+						}
+						add_modifier = {
+							name = innovative_idea_4_mdf
+							months = -1
+						}
+					}
+				}
+				else_if = {
+					limit = {
+						var:innovative_idea == 4
+					}
+					change_variable = {
+						name = innovative_idea
+						add = 1
+					}
+					if = {
+						limit = {
+							var:national_idea_pool < 200
+						}
+						change_variable = {
+							name = national_idea_pool
+							add = 1
+						}
+					}
+					if = {
+						limit = {
+							NOT = {
+								has_modifier = innovative_idea_5_mdf
+							}
+						}
+						add_modifier = {
+							name = innovative_idea_5_mdf
+							months = -1
+						}
+					}
+				}
+				else_if = {
+					limit = {
+						var:innovative_idea == 5
+					}
+					change_variable = {
+						name = innovative_idea
+						add = 1
+					}
+					if = {
+						limit = {
+							var:national_idea_pool < 200
+						}
+						change_variable = {
+							name = national_idea_pool
+							add = 1
+						}
+					}
+					if = {
+						limit = {
+							NOT = {
+								has_modifier = innovative_idea_6_mdf
+							}
+						}
+						add_modifier = {
+							name = innovative_idea_6_mdf
+							months = -1
+						}
+					}
+				}
+				else_if = {
+					limit = {
+						var:innovative_idea == 6
+					}
+					change_variable = {
+						name = innovative_idea
+						add = 1
+					}
+					if = {
+						limit = {
+							var:national_idea_pool < 200
+						}
+						change_variable = {
+							name = national_idea_pool
+							add = 1
+						}
+					}
+					if = {
+						limit = {
+							NOT = {
+								has_modifier = innovative_idea_7_mdf
+							}
+						}
+						add_modifier = {
+							name = innovative_idea_7_mdf
+							months = -1
+						}
+					}
+					set_variable = innovative_idea_completed
+				}
+			}
+			flag:economic_idea = {
+				if = {
+					limit = {
+						var:economic_idea == 0
+					}
+					change_variable = {
+						name = economic_idea
+						add = 1
+					}
+					if = {
+						limit = {
+							var:national_idea_pool < 200
+						}
+						change_variable = {
+							name = national_idea_pool
+							add = 1
+						}
+					}
+					if = {
+						limit = {
+							NOT = {
+								has_modifier = economic_idea_1_mdf
+							}
+						}
+						add_modifier = {
+							name = economic_idea_1_mdf
+							months = -1
+						}
+					}
+				}
+				else_if = {
+					limit = {
+						var:economic_idea == 1
+					}
+					change_variable = {
+						name = economic_idea
+						add = 1
+					}
+					if = {
+						limit = {
+							var:national_idea_pool < 200
+						}
+						change_variable = {
+							name = national_idea_pool
+							add = 1
+						}
+					}
+					if = {
+						limit = {
+							NOT = {
+								has_modifier = economic_idea_2_mdf
+							}
+						}
+						add_modifier = {
+							name = economic_idea_2_mdf
+							months = -1
+						}
+					}
+				}
+				else_if = {
+					limit = {
+						var:economic_idea == 2
+					}
+					change_variable = {
+						name = economic_idea
+						add = 1
+					}
+					if = {
+						limit = {
+							var:national_idea_pool < 200
+						}
+						change_variable = {
+							name = national_idea_pool
+							add = 1
+						}
+					}
+					if = {
+						limit = {
+							NOT = {
+								has_modifier = economic_idea_3_mdf
+							}
+						}
+						add_modifier = {
+							name = economic_idea_3_mdf
+							months = -1
+						}
+					}
+				}
+				else_if = {
+					limit = {
+						var:economic_idea == 3
+					}
+					change_variable = {
+						name = economic_idea
+						add = 1
+					}
+					if = {
+						limit = {
+							var:national_idea_pool < 200
+						}
+						change_variable = {
+							name = national_idea_pool
+							add = 1
+						}
+					}
+					if = {
+						limit = {
+							NOT = {
+								has_modifier = economic_idea_4_mdf
+							}
+						}
+						add_modifier = {
+							name = economic_idea_4_mdf
+							months = -1
+						}
+					}
+				}
+				else_if = {
+					limit = {
+						var:economic_idea == 4
+					}
+					change_variable = {
+						name = economic_idea
+						add = 1
+					}
+					if = {
+						limit = {
+							var:national_idea_pool < 200
+						}
+						change_variable = {
+							name = national_idea_pool
+							add = 1
+						}
+					}
+					if = {
+						limit = {
+							NOT = {
+								has_modifier = economic_idea_5_mdf
+							}
+						}
+						add_modifier = {
+							name = economic_idea_5_mdf
+							months = -1
+						}
+					}
+				}
+				else_if = {
+					limit = {
+						var:economic_idea == 5
+					}
+					change_variable = {
+						name = economic_idea
+						add = 1
+					}
+					if = {
+						limit = {
+							var:national_idea_pool < 200
+						}
+						change_variable = {
+							name = national_idea_pool
+							add = 1
+						}
+					}
+					if = {
+						limit = {
+							NOT = {
+								has_modifier = economic_idea_6_mdf
+							}
+						}
+						add_modifier = {
+							name = economic_idea_6_mdf
+							months = -1
+						}
+					}
+				}
+				else_if = {
+					limit = {
+						var:economic_idea == 6
+					}
+					change_variable = {
+						name = economic_idea
+						add = 1
+					}
+					if = {
+						limit = {
+							var:national_idea_pool < 200
+						}
+						change_variable = {
+							name = national_idea_pool
+							add = 1
+						}
+					}
+					if = {
+						limit = {
+							NOT = {
+								has_modifier = economic_idea_7_mdf
+							}
+						}
+						add_modifier = {
+							name = economic_idea_7_mdf
+							months = -1
+						}
+					}
+					set_variable = economic_idea_completed
+				}
+			}
+			flag:administrative_idea = {
+				if = {
+					limit = {
+						var:administrative_idea == 0
+					}
+					change_variable = {
+						name = administrative_idea
+						add = 1
+					}
+					if = {
+						limit = {
+							var:national_idea_pool < 200
+						}
+						change_variable = {
+							name = national_idea_pool
+							add = 1
+						}
+					}
+					if = {
+						limit = {
+							NOT = {
+								has_modifier = administrative_idea_1_mdf
+							}
+						}
+						add_modifier = {
+							name = administrative_idea_1_mdf
+							months = -1
+						}
+					}
+				}
+				else_if = {
+					limit = {
+						var:administrative_idea == 1
+					}
+					change_variable = {
+						name = administrative_idea
+						add = 1
+					}
+					if = {
+						limit = {
+							var:national_idea_pool < 200
+						}
+						change_variable = {
+							name = national_idea_pool
+							add = 1
+						}
+					}
+					if = {
+						limit = {
+							NOT = {
+								has_modifier = administrative_idea_2_mdf
+							}
+						}
+						add_modifier = {
+							name = administrative_idea_2_mdf
+							months = -1
+						}
+					}
+				}
+				else_if = {
+					limit = {
+						var:administrative_idea == 2
+					}
+					change_variable = {
+						name = administrative_idea
+						add = 1
+					}
+					if = {
+						limit = {
+							var:national_idea_pool < 200
+						}
+						change_variable = {
+							name = national_idea_pool
+							add = 1
+						}
+					}
+					if = {
+						limit = {
+							NOT = {
+								has_modifier = administrative_idea_3_mdf
+							}
+						}
+						add_modifier = {
+							name = administrative_idea_3_mdf
+							months = -1
+						}
+					}
+				}
+				else_if = {
+					limit = {
+						var:administrative_idea == 3
+					}
+					change_variable = {
+						name = administrative_idea
+						add = 1
+					}
+					if = {
+						limit = {
+							var:national_idea_pool < 200
+						}
+						change_variable = {
+							name = national_idea_pool
+							add = 1
+						}
+					}
+					if = {
+						limit = {
+							NOT = {
+								has_modifier = administrative_idea_4_mdf
+							}
+						}
+						add_modifier = {
+							name = administrative_idea_4_mdf
+							months = -1
+						}
+					}
+				}
+				else_if = {
+					limit = {
+						var:administrative_idea == 4
+					}
+					change_variable = {
+						name = administrative_idea
+						add = 1
+					}
+					if = {
+						limit = {
+							var:national_idea_pool < 200
+						}
+						change_variable = {
+							name = national_idea_pool
+							add = 1
+						}
+					}
+					if = {
+						limit = {
+							NOT = {
+								has_modifier = administrative_idea_5_mdf
+							}
+						}
+						add_modifier = {
+							name = administrative_idea_5_mdf
+							months = -1
+						}
+					}
+				}
+				else_if = {
+					limit = {
+						var:administrative_idea == 5
+					}
+					change_variable = {
+						name = administrative_idea
+						add = 1
+					}
+					if = {
+						limit = {
+							var:national_idea_pool < 200
+						}
+						change_variable = {
+							name = national_idea_pool
+							add = 1
+						}
+					}
+					if = {
+						limit = {
+							NOT = {
+								has_modifier = administrative_idea_6_mdf
+							}
+						}
+						add_modifier = {
+							name = administrative_idea_6_mdf
+							months = -1
+						}
+					}
+				}
+				else_if = {
+					limit = {
+						var:administrative_idea == 6
+					}
+					change_variable = {
+						name = administrative_idea
+						add = 1
+					}
+					if = {
+						limit = {
+							var:national_idea_pool < 200
+						}
+						change_variable = {
+							name = national_idea_pool
+							add = 1
+						}
+					}
+					if = {
+						limit = {
+							NOT = {
+								has_modifier = administrative_idea_7_mdf
+							}
+						}
+						add_modifier = {
+							name = administrative_idea_7_mdf
+							months = -1
+						}
+					}
+					set_variable = administrative_idea_completed
+				}
+			}
+			flag:ethnocentrism_idea = {
+				if = {
+					limit = {
+						var:ethnocentrism_idea == 0
+					}
+					change_variable = {
+						name = ethnocentrism_idea
+						add = 1
+					}
+					if = {
+						limit = {
+							var:national_idea_pool < 200
+						}
+						change_variable = {
+							name = national_idea_pool
+							add = 1
+						}
+					}
+					if = {
+						limit = {
+							NOT = {
+								has_modifier = ethnocentrism_idea_1_mdf
+							}
+						}
+						add_modifier = {
+							name = ethnocentrism_idea_1_mdf
+							months = -1
+						}
+					}
+				}
+				else_if = {
+					limit = {
+						var:ethnocentrism_idea == 1
+					}
+					change_variable = {
+						name = ethnocentrism_idea
+						add = 1
+					}
+					if = {
+						limit = {
+							var:national_idea_pool < 200
+						}
+						change_variable = {
+							name = national_idea_pool
+							add = 1
+						}
+					}
+					if = {
+						limit = {
+							NOT = {
+								has_modifier = ethnocentrism_idea_2_mdf
+							}
+						}
+						add_modifier = {
+							name = ethnocentrism_idea_2_mdf
+							months = -1
+						}
+					}
+				}
+				else_if = {
+					limit = {
+						var:ethnocentrism_idea == 2
+					}
+					change_variable = {
+						name = ethnocentrism_idea
+						add = 1
+					}
+					if = {
+						limit = {
+							var:national_idea_pool < 200
+						}
+						change_variable = {
+							name = national_idea_pool
+							add = 1
+						}
+					}
+					if = {
+						limit = {
+							NOT = {
+								has_modifier = ethnocentrism_idea_3_mdf
+							}
+						}
+						add_modifier = {
+							name = ethnocentrism_idea_3_mdf
+							months = -1
+						}
+					}
+				}
+				else_if = {
+					limit = {
+						var:ethnocentrism_idea == 3
+					}
+					change_variable = {
+						name = ethnocentrism_idea
+						add = 1
+					}
+					if = {
+						limit = {
+							var:national_idea_pool < 200
+						}
+						change_variable = {
+							name = national_idea_pool
+							add = 1
+						}
+					}
+					if = {
+						limit = {
+							NOT = {
+								has_modifier = ethnocentrism_idea_4_mdf
+							}
+						}
+						add_modifier = {
+							name = ethnocentrism_idea_4_mdf
+							months = -1
+						}
+					}
+				}
+				else_if = {
+					limit = {
+						var:ethnocentrism_idea == 4
+					}
+					change_variable = {
+						name = ethnocentrism_idea
+						add = 1
+					}
+					if = {
+						limit = {
+							var:national_idea_pool < 200
+						}
+						change_variable = {
+							name = national_idea_pool
+							add = 1
+						}
+					}
+					if = {
+						limit = {
+							NOT = {
+								has_modifier = ethnocentrism_idea_5_mdf
+							}
+						}
+						add_modifier = {
+							name = ethnocentrism_idea_5_mdf
+							months = -1
+						}
+					}
+				}
+				else_if = {
+					limit = {
+						var:ethnocentrism_idea == 5
+					}
+					change_variable = {
+						name = ethnocentrism_idea
+						add = 1
+					}
+					if = {
+						limit = {
+							var:national_idea_pool < 200
+						}
+						change_variable = {
+							name = national_idea_pool
+							add = 1
+						}
+					}
+					if = {
+						limit = {
+							NOT = {
+								has_modifier = ethnocentrism_idea_6_mdf
+							}
+						}
+						add_modifier = {
+							name = ethnocentrism_idea_6_mdf
+							months = -1
+						}
+					}
+				}
+				else_if = {
+					limit = {
+						var:ethnocentrism_idea == 6
+					}
+					change_variable = {
+						name = ethnocentrism_idea
+						add = 1
+					}
+					if = {
+						limit = {
+							var:national_idea_pool < 200
+						}
+						change_variable = {
+							name = national_idea_pool
+							add = 1
+						}
+					}
+					if = {
+						limit = {
+							NOT = {
+								has_modifier = ethnocentrism_idea_7_mdf
+							}
+						}
+						add_modifier = {
+							name = ethnocentrism_idea_7_mdf
+							months = -1
+						}
+					}
+					set_variable = ethnocentrism_idea_completed
+				}
+			}
+			flag:politics_idea = {
+				if = {
+					limit = {
+						var:politics_idea == 0
+					}
+					change_variable = {
+						name = politics_idea
+						add = 1
+					}
+					if = {
+						limit = {
+							var:national_idea_pool < 200
+						}
+						change_variable = {
+							name = national_idea_pool
+							add = 1
+						}
+					}
+					if = {
+						limit = {
+							NOT = {
+								has_modifier = politics_idea_1_mdf
+							}
+						}
+						add_modifier = {
+							name = politics_idea_1_mdf
+							months = -1
+						}
+					}
+				}
+				else_if = {
+					limit = {
+						var:politics_idea == 1
+					}
+					change_variable = {
+						name = politics_idea
+						add = 1
+					}
+					if = {
+						limit = {
+							var:national_idea_pool < 200
+						}
+						change_variable = {
+							name = national_idea_pool
+							add = 1
+						}
+					}
+					if = {
+						limit = {
+							NOT = {
+								has_modifier = politics_idea_2_mdf
+							}
+						}
+						add_modifier = {
+							name = politics_idea_2_mdf
+							months = -1
+						}
+					}
+				}
+				else_if = {
+					limit = {
+						var:politics_idea == 2
+					}
+					change_variable = {
+						name = politics_idea
+						add = 1
+					}
+					if = {
+						limit = {
+							var:national_idea_pool < 200
+						}
+						change_variable = {
+							name = national_idea_pool
+							add = 1
+						}
+					}
+					if = {
+						limit = {
+							NOT = {
+								has_modifier = politics_idea_3_mdf
+							}
+						}
+						add_modifier = {
+							name = politics_idea_3_mdf
+							months = -1
+						}
+					}
+				}
+				else_if = {
+					limit = {
+						var:politics_idea == 3
+					}
+					change_variable = {
+						name = politics_idea
+						add = 1
+					}
+					if = {
+						limit = {
+							var:national_idea_pool < 200
+						}
+						change_variable = {
+							name = national_idea_pool
+							add = 1
+						}
+					}
+					if = {
+						limit = {
+							NOT = {
+								has_modifier = politics_idea_4_mdf
+							}
+						}
+						add_modifier = {
+							name = politics_idea_4_mdf
+							months = -1
+						}
+					}
+				}
+				else_if = {
+					limit = {
+						var:politics_idea == 4
+					}
+					change_variable = {
+						name = politics_idea
+						add = 1
+					}
+					if = {
+						limit = {
+							var:national_idea_pool < 200
+						}
+						change_variable = {
+							name = national_idea_pool
+							add = 1
+						}
+					}
+					if = {
+						limit = {
+							NOT = {
+								has_modifier = politics_idea_5_mdf
+							}
+						}
+						add_modifier = {
+							name = politics_idea_5_mdf
+							months = -1
+						}
+					}
+				}
+				else_if = {
+					limit = {
+						var:politics_idea == 5
+					}
+					change_variable = {
+						name = politics_idea
+						add = 1
+					}
+					if = {
+						limit = {
+							var:national_idea_pool < 200
+						}
+						change_variable = {
+							name = national_idea_pool
+							add = 1
+						}
+					}
+					if = {
+						limit = {
+							NOT = {
+								has_modifier = politics_idea_6_mdf
+							}
+						}
+						add_modifier = {
+							name = diplomatic_idea_6_mdf
+							months = -1
+						}
+					}
+				}
+				else_if = {
+					limit = {
+						var:politics_idea == 6
+					}
+					change_variable = {
+						name = politics_idea
+						add = 1
+					}
+					if = {
+						limit = {
+							var:national_idea_pool < 200
+						}
+						change_variable = {
+							name = national_idea_pool
+							add = 1
+						}
+					}
+					if = {
+						limit = {
+							NOT = {
+								has_modifier = politics_idea_7_mdf
+							}
+						}
+						add_modifier = {
+							name = politics_idea_7_mdf
+							months = -1
+						}
+					}
+					set_variable = politics_idea_completed
+				}
+			}
+			flag:diplomatic_idea = {
+				if = {
+					limit = {
+						var:diplomatic_idea == 0
+					}
+					change_variable = {
+						name = diplomatic_idea
+						add = 1
+					}
+					if = {
+						limit = {
+							var:national_idea_pool < 200
+						}
+						change_variable = {
+							name = national_idea_pool
+							add = 1
+						}
+					}
+					if = {
+						limit = {
+							NOT = {
+								has_modifier = diplomatic_idea_1_mdf
+							}
+						}
+						add_modifier = {
+							name = diplomatic_idea_1_mdf
+							months = -1
+						}
+					}
+				}
+				else_if = {
+					limit = {
+						var:diplomatic_idea == 1
+					}
+					change_variable = {
+						name = diplomatic_idea
+						add = 1
+					}
+					if = {
+						limit = {
+							var:national_idea_pool < 200
+						}
+						change_variable = {
+							name = national_idea_pool
+							add = 1
+						}
+					}
+					if = {
+						limit = {
+							NOT = {
+								has_modifier = diplomatic_idea_2_mdf
+							}
+						}
+						add_modifier = {
+							name = diplomatic_idea_2_mdf
+							months = -1
+						}
+					}
+				}
+				else_if = {
+					limit = {
+						var:diplomatic_idea == 2
+					}
+					change_variable = {
+						name = diplomatic_idea
+						add = 1
+					}
+					if = {
+						limit = {
+							var:national_idea_pool < 200
+						}
+						change_variable = {
+							name = national_idea_pool
+							add = 1
+						}
+					}
+					if = {
+						limit = {
+							NOT = {
+								has_modifier = diplomatic_idea_3_mdf
+							}
+						}
+						add_modifier = {
+							name = diplomatic_idea_3_mdf
+							months = -1
+						}
+					}
+				}
+				else_if = {
+					limit = {
+						var:diplomatic_idea == 3
+					}
+					change_variable = {
+						name = diplomatic_idea
+						add = 1
+					}
+					if = {
+						limit = {
+							var:national_idea_pool < 200
+						}
+						change_variable = {
+							name = national_idea_pool
+							add = 1
+						}
+					}
+					if = {
+						limit = {
+							NOT = {
+								has_modifier = diplomatic_idea_4_mdf
+							}
+						}
+						add_modifier = {
+							name = diplomatic_idea_4_mdf
+							months = -1
+						}
+					}
+				}
+				else_if = {
+					limit = {
+						var:diplomatic_idea == 4
+					}
+					change_variable = {
+						name = diplomatic_idea
+						add = 1
+					}
+					if = {
+						limit = {
+							var:national_idea_pool < 200
+						}
+						change_variable = {
+							name = national_idea_pool
+							add = 1
+						}
+					}
+					if = {
+						limit = {
+							NOT = {
+								has_modifier = diplomatic_idea_5_mdf
+							}
+						}
+						add_modifier = {
+							name = diplomatic_idea_5_mdf
+							months = -1
+						}
+					}
+				}
+				else_if = {
+					limit = {
+						var:diplomatic_idea == 5
+					}
+					change_variable = {
+						name = diplomatic_idea
+						add = 1
+					}
+					if = {
+						limit = {
+							var:national_idea_pool < 200
+						}
+						change_variable = {
+							name = national_idea_pool
+							add = 1
+						}
+					}
+					if = {
+						limit = {
+							NOT = {
+								has_modifier = diplomatic_idea_6_mdf
+							}
+						}
+						add_modifier = {
+							name = diplomatic_idea_6_mdf
+							months = -1
+						}
+					}
+				}
+				else_if = {
+					limit = {
+						var:diplomatic_idea == 6
+					}
+					change_variable = {
+						name = diplomatic_idea
+						add = 1
+					}
+					if = {
+						limit = {
+							var:national_idea_pool < 200
+						}
+						change_variable = {
+							name = national_idea_pool
+							add = 1
+						}
+					}
+					if = {
+						limit = {
+							NOT = {
+								has_modifier = diplomatic_idea_7_mdf
+							}
+						}
+						add_modifier = {
+							name = diplomatic_idea_7_mdf
+							months = -1
+						}
+					}
+					set_variable = diplomatic_idea_completed
+				}
+			}
+			flag:trade_idea = {
+				if = {
+					limit = {
+						var:trade_idea == 0
+					}
+					change_variable = {
+						name = trade_idea
+						add = 1
+					}
+					if = {
+						limit = {
+							var:national_idea_pool < 200
+						}
+						change_variable = {
+							name = national_idea_pool
+							add = 1
+						}
+					}
+					if = {
+						limit = {
+							NOT = {
+								has_modifier = trade_idea_1_mdf
+							}
+						}
+						add_modifier = {
+							name = trade_idea_1_mdf
+							months = -1
+						}
+					}
+				}
+				else_if = {
+					limit = {
+						var:trade_idea == 1
+					}
+					change_variable = {
+						name = trade_idea
+						add = 1
+					}
+					if = {
+						limit = {
+							var:national_idea_pool < 200
+						}
+						change_variable = {
+							name = national_idea_pool
+							add = 1
+						}
+					}
+					if = {
+						limit = {
+							NOT = {
+								has_modifier = trade_idea_2_mdf
+							}
+						}
+						add_modifier = {
+							name = trade_idea_2_mdf
+							months = -1
+						}
+					}
+				}
+				else_if = {
+					limit = {
+						var:trade_idea == 2
+					}
+					change_variable = {
+						name = trade_idea
+						add = 1
+					}
+					if = {
+						limit = {
+							var:national_idea_pool < 200
+						}
+						change_variable = {
+							name = national_idea_pool
+							add = 1
+						}
+					}
+					if = {
+						limit = {
+							NOT = {
+								has_modifier = trade_idea_3_mdf
+							}
+						}
+						add_modifier = {
+							name = trade_idea_3_mdf
+							months = -1
+						}
+					}
+				}
+				else_if = {
+					limit = {
+						var:trade_idea == 3
+					}
+					change_variable = {
+						name = trade_idea
+						add = 1
+					}
+					if = {
+						limit = {
+							var:national_idea_pool < 200
+						}
+						change_variable = {
+							name = national_idea_pool
+							add = 1
+						}
+					}
+					if = {
+						limit = {
+							NOT = {
+								has_modifier = trade_idea_4_mdf
+							}
+						}
+						add_modifier = {
+							name = trade_idea_4_mdf
+							months = -1
+						}
+					}
+				}
+				else_if = {
+					limit = {
+						var:trade_idea == 4
+					}
+					change_variable = {
+						name = trade_idea
+						add = 1
+					}
+					if = {
+						limit = {
+							var:national_idea_pool < 200
+						}
+						change_variable = {
+							name = national_idea_pool
+							add = 1
+						}
+					}
+					if = {
+						limit = {
+							NOT = {
+								has_modifier = trade_idea_5_mdf
+							}
+						}
+						add_modifier = {
+							name = trade_idea_5_mdf
+							months = -1
+						}
+					}
+				}
+				else_if = {
+					limit = {
+						var:trade_idea == 5
+					}
+					change_variable = {
+						name = trade_idea
+						add = 1
+					}
+					if = {
+						limit = {
+							var:national_idea_pool < 200
+						}
+						change_variable = {
+							name = national_idea_pool
+							add = 1
+						}
+					}
+					if = {
+						limit = {
+							NOT = {
+								has_modifier = trade_idea_6_mdf
+							}
+						}
+						add_modifier = {
+							name = trade_idea_6_mdf
+							months = -1
+						}
+					}
+				}
+				else_if = {
+					limit = {
+						var:trade_idea == 6
+					}
+					change_variable = {
+						name = trade_idea
+						add = 1
+					}
+					if = {
+						limit = {
+							var:national_idea_pool < 200
+						}
+						change_variable = {
+							name = national_idea_pool
+							add = 1
+						}
+					}
+					if = {
+						limit = {
+							NOT = {
+								has_modifier = trade_idea_7_mdf
+							}
+						}
+						add_modifier = {
+							name = trade_idea_7_mdf
+							months = -1
+						}
+					}
+					set_variable = trade_idea_completed
+				}
+			}
+			flag:qualification_idea = {
+				if = {
+					limit = {
+						var:qualification_idea == 0
+					}
+					change_variable = {
+						name = qualification_idea
+						add = 1
+					}
+					if = {
+						limit = {
+							var:national_idea_pool < 200
+						}
+						change_variable = {
+							name = national_idea_pool
+							add = 1
+						}
+					}
+					if = {
+						limit = {
+							NOT = {
+								has_modifier = qualification_idea_1_mdf
+							}
+						}
+						add_modifier = {
+							name = qualification_idea_1_mdf
+							months = -1
+						}
+					}
+				}
+				else_if = {
+					limit = {
+						var:qualification_idea == 1
+					}
+					change_variable = {
+						name = qualification_idea
+						add = 1
+					}
+					if = {
+						limit = {
+							var:national_idea_pool < 200
+						}
+						change_variable = {
+							name = national_idea_pool
+							add = 1
+						}
+					}
+					if = {
+						limit = {
+							NOT = {
+								has_modifier = qualification_idea_2_mdf
+							}
+						}
+						add_modifier = {
+							name = qualification_idea_2_mdf
+							months = -1
+						}
+					}
+				}
+				else_if = {
+					limit = {
+						var:qualification_idea == 2
+					}
+					change_variable = {
+						name = qualification_idea
+						add = 1
+					}
+					if = {
+						limit = {
+							var:national_idea_pool < 200
+						}
+						change_variable = {
+							name = national_idea_pool
+							add = 1
+						}
+					}
+					if = {
+						limit = {
+							NOT = {
+								has_modifier = qualification_idea_3_mdf
+							}
+						}
+						add_modifier = {
+							name = qualification_idea_3_mdf
+							months = -1
+						}
+					}
+				}
+				else_if = {
+					limit = {
+						var:qualification_idea == 3
+					}
+					change_variable = {
+						name = qualification_idea
+						add = 1
+					}
+					if = {
+						limit = {
+							var:national_idea_pool < 200
+						}
+						change_variable = {
+							name = national_idea_pool
+							add = 1
+						}
+					}
+					if = {
+						limit = {
+							NOT = {
+								has_modifier = qualification_idea_4_mdf
+							}
+						}
+						add_modifier = {
+							name = qualification_idea_4_mdf
+							months = -1
+						}
+					}
+				}
+				else_if = {
+					limit = {
+						var:qualification_idea == 4
+					}
+					change_variable = {
+						name = qualification_idea
+						add = 1
+					}
+					if = {
+						limit = {
+							var:national_idea_pool < 200
+						}
+						change_variable = {
+							name = national_idea_pool
+							add = 1
+						}
+					}
+					if = {
+						limit = {
+							NOT = {
+								has_modifier = qualification_idea_5_mdf
+							}
+						}
+						add_modifier = {
+							name = qualification_idea_5_mdf
+							months = -1
+						}
+					}
+				}
+				else_if = {
+					limit = {
+						var:qualification_idea == 5
+					}
+					change_variable = {
+						name = qualification_idea
+						add = 1
+					}
+					if = {
+						limit = {
+							var:national_idea_pool < 200
+						}
+						change_variable = {
+							name = national_idea_pool
+							add = 1
+						}
+					}
+					if = {
+						limit = {
+							NOT = {
+								has_modifier = qualification_idea_6_mdf
+							}
+						}
+						add_modifier = {
+							name = qualification_idea_6_mdf
+							months = -1
+						}
+					}
+				}
+				else_if = {
+					limit = {
+						var:qualification_idea == 6
+					}
+					change_variable = {
+						name = qualification_idea
+						add = 1
+					}
+					if = {
+						limit = {
+							var:national_idea_pool < 200
+						}
+						change_variable = {
+							name = national_idea_pool
+							add = 1
+						}
+					}
+					if = {
+						limit = {
+							NOT = {
+								has_modifier = qualification_idea_7_mdf
+							}
+						}
+						add_modifier = {
+							name = qualification_idea_7_mdf
+							months = -1
+						}
+					}
+					set_variable = qualification_idea_completed
+				}
+			}
+			flag:humanist_idea = {
+				if = {
+					limit = {
+						var:humanist_idea == 0
+					}
+					change_variable = {
+						name = humanist_idea
+						add = 1
+					}
+					if = {
+						limit = {
+							var:national_idea_pool < 200
+						}
+						change_variable = {
+							name = national_idea_pool
+							add = 1
+						}
+					}
+					if = {
+						limit = {
+							NOT = {
+								has_modifier = humanist_idea_1_mdf
+							}
+						}
+						add_modifier = {
+							name = humanist_idea_1_mdf
+							months = -1
+						}
+					}
+				}
+				else_if = {
+					limit = {
+						var:humanist_idea == 1
+					}
+					change_variable = {
+						name = humanist_idea
+						add = 1
+					}
+					if = {
+						limit = {
+							var:national_idea_pool < 200
+						}
+						change_variable = {
+							name = national_idea_pool
+							add = 1
+						}
+					}
+					if = {
+						limit = {
+							NOT = {
+								has_modifier = humanist_idea_2_mdf
+							}
+						}
+						add_modifier = {
+							name = humanist_idea_2_mdf
+							months = -1
+						}
+					}
+				}
+				else_if = {
+					limit = {
+						var:humanist_idea == 2
+					}
+					change_variable = {
+						name = humanist_idea
+						add = 1
+					}
+					if = {
+						limit = {
+							var:national_idea_pool < 200
+						}
+						change_variable = {
+							name = national_idea_pool
+							add = 1
+						}
+					}
+					if = {
+						limit = {
+							NOT = {
+								has_modifier = humanist_idea_3_mdf
+							}
+						}
+						add_modifier = {
+							name = humanist_idea_3_mdf
+							months = -1
+						}
+					}
+				}
+				else_if = {
+					limit = {
+						var:humanist_idea == 3
+					}
+					change_variable = {
+						name = humanist_idea
+						add = 1
+					}
+					if = {
+						limit = {
+							var:national_idea_pool < 200
+						}
+						change_variable = {
+							name = national_idea_pool
+							add = 1
+						}
+					}
+					if = {
+						limit = {
+							NOT = {
+								has_modifier = humanist_idea_4_mdf
+							}
+						}
+						add_modifier = {
+							name = humanist_idea_4_mdf
+							months = -1
+						}
+					}
+				}
+				else_if = {
+					limit = {
+						var:humanist_idea == 4
+					}
+					change_variable = {
+						name = humanist_idea
+						add = 1
+					}
+					if = {
+						limit = {
+							var:national_idea_pool < 200
+						}
+						change_variable = {
+							name = national_idea_pool
+							add = 1
+						}
+					}
+					if = {
+						limit = {
+							NOT = {
+								has_modifier = humanist_idea_5_mdf
+							}
+						}
+						add_modifier = {
+							name = humanist_idea_5_mdf
+							months = -1
+						}
+					}
+				}
+				else_if = {
+					limit = {
+						var:humanist_idea == 5
+					}
+					change_variable = {
+						name = humanist_idea
+						add = 1
+					}
+					if = {
+						limit = {
+							var:national_idea_pool < 200
+						}
+						change_variable = {
+							name = national_idea_pool
+							add = 1
+						}
+					}
+					if = {
+						limit = {
+							NOT = {
+								has_modifier = humanist_idea_6_mdf
+							}
+						}
+						add_modifier = {
+							name = humanist_idea_6_mdf
+							months = -1
+						}
+					}
+				}
+				else_if = {
+					limit = {
+						var:humanist_idea == 6
+					}
+					change_variable = {
+						name = humanist_idea
+						add = 1
+					}
+					if = {
+						limit = {
+							var:national_idea_pool < 200
+						}
+						change_variable = {
+							name = national_idea_pool
+							add = 1
+						}
+					}
+					if = {
+						limit = {
+							NOT = {
+								has_modifier = humanist_idea_7_mdf
+							}
+						}
+						add_modifier = {
+							name = humanist_idea_7_mdf
+							months = -1
+						}
+					}
+					set_variable = humanist_idea_completed
+				}
+			}
+			flag:syndicalism_idea = {
+				if = {
+					limit = {
+						var:syndicalism_idea == 0
+					}
+					change_variable = {
+						name = syndicalism_idea
+						add = 1
+					}
+					if = {
+						limit = {
+							var:national_idea_pool < 200
+						}
+						change_variable = {
+							name = national_idea_pool
+							add = 1
+						}
+					}
+					if = {
+						limit = {
+							NOT = {
+								has_modifier = syndicalism_idea_1_mdf
+							}
+						}
+						add_modifier = {
+							name = syndicalism_idea_1_mdf
+							months = -1
+						}
+					}
+				}
+				else_if = {
+					limit = {
+						var:syndicalism_idea == 1
+					}
+					change_variable = {
+						name = syndicalism_idea
+						add = 1
+					}
+					if = {
+						limit = {
+							var:national_idea_pool < 200
+						}
+						change_variable = {
+							name = national_idea_pool
+							add = 1
+						}
+					}
+					if = {
+						limit = {
+							NOT = {
+								has_modifier = syndicalism_idea_2_mdf
+							}
+						}
+						add_modifier = {
+							name = syndicalism_idea_2_mdf
+							months = -1
+						}
+					}
+				}
+				else_if = {
+					limit = {
+						var:syndicalism_idea == 2
+					}
+					change_variable = {
+						name = syndicalism_idea
+						add = 1
+					}
+					if = {
+						limit = {
+							var:national_idea_pool < 200
+						}
+						change_variable = {
+							name = national_idea_pool
+							add = 1
+						}
+					}
+					if = {
+						limit = {
+							NOT = {
+								has_modifier = syndicalism_idea_3_mdf
+							}
+						}
+						add_modifier = {
+							name = syndicalism_idea_3_mdf
+							months = -1
+						}
+					}
+				}
+				else_if = {
+					limit = {
+						var:syndicalism_idea == 3
+					}
+					change_variable = {
+						name = syndicalism_idea
+						add = 1
+					}
+					if = {
+						limit = {
+							var:national_idea_pool < 200
+						}
+						change_variable = {
+							name = national_idea_pool
+							add = 1
+						}
+					}
+					if = {
+						limit = {
+							NOT = {
+								has_modifier = syndicalism_idea_4_mdf
+							}
+						}
+						add_modifier = {
+							name = syndicalism_idea_4_mdf
+							months = -1
+						}
+					}
+				}
+				else_if = {
+					limit = {
+						var:syndicalism_idea == 4
+					}
+					change_variable = {
+						name = syndicalism_idea
+						add = 1
+					}
+					if = {
+						limit = {
+							var:national_idea_pool < 200
+						}
+						change_variable = {
+							name = national_idea_pool
+							add = 1
+						}
+					}
+					if = {
+						limit = {
+							NOT = {
+								has_modifier = syndicalism_idea_5_mdf
+							}
+						}
+						add_modifier = {
+							name = syndicalism_idea_5_mdf
+							months = -1
+						}
+					}
+				}
+				else_if = {
+					limit = {
+						var:syndicalism_idea == 5
+					}
+					change_variable = {
+						name = syndicalism_idea
+						add = 1
+					}
+					if = {
+						limit = {
+							var:national_idea_pool < 200
+						}
+						change_variable = {
+							name = national_idea_pool
+							add = 1
+						}
+					}
+					if = {
+						limit = {
+							NOT = {
+								has_modifier = syndicalism_idea_6_mdf
+							}
+						}
+						add_modifier = {
+							name = syndicalism_idea_6_mdf
+							months = -1
+						}
+					}
+				}
+				else_if = {
+					limit = {
+						var:syndicalism_idea == 6
+					}
+					change_variable = {
+						name = syndicalism_idea
+						add = 1
+					}
+					if = {
+						limit = {
+							var:national_idea_pool < 200
+						}
+						change_variable = {
+							name = national_idea_pool
+							add = 1
+						}
+					}
+					if = {
+						limit = {
+							NOT = {
+								has_modifier = syndicalism_idea_7_mdf
+							}
+						}
+						add_modifier = {
+							name = syndicalism_idea_7_mdf
+							months = -1
+						}
+					}
+					set_variable = syndicalism_idea_completed
+				}
+			}
+			flag:offensive_idea = {
+				if = {
+					limit = {
+						var:offensive_idea == 0
+					}
+					change_variable = {
+						name = offensive_idea
+						add = 1
+					}
+					if = {
+						limit = {
+							var:national_idea_pool < 200
+						}
+						change_variable = {
+							name = national_idea_pool
+							add = 1
+						}
+					}
+					if = {
+						limit = {
+							NOT = {
+								has_modifier = offensive_idea_1_mdf
+							}
+						}
+						add_modifier = {
+							name = offensive_idea_1_mdf
+							months = -1
+						}
+					}
+				}
+				else_if = {
+					limit = {
+						var:offensive_idea == 1
+					}
+					change_variable = {
+						name = offensive_idea
+						add = 1
+					}
+					if = {
+						limit = {
+							var:national_idea_pool < 200
+						}
+						change_variable = {
+							name = national_idea_pool
+							add = 1
+						}
+					}
+					if = {
+						limit = {
+							NOT = {
+								has_modifier = offensive_idea_2_mdf
+							}
+						}
+						add_modifier = {
+							name = offensive_idea_2_mdf
+							months = -1
+						}
+					}
+				}
+				else_if = {
+					limit = {
+						var:offensive_idea == 2
+					}
+					change_variable = {
+						name = offensive_idea
+						add = 1
+					}
+					if = {
+						limit = {
+							var:national_idea_pool < 200
+						}
+						change_variable = {
+							name = national_idea_pool
+							add = 1
+						}
+					}
+					if = {
+						limit = {
+							NOT = {
+								has_modifier = offensive_idea_3_mdf
+							}
+						}
+						add_modifier = {
+							name = offensive_idea_3_mdf
+							months = -1
+						}
+					}
+				}
+				else_if = {
+					limit = {
+						var:offensive_idea == 3
+					}
+					change_variable = {
+						name = offensive_idea
+						add = 1
+					}
+					if = {
+						limit = {
+							var:national_idea_pool < 200
+						}
+						change_variable = {
+							name = national_idea_pool
+							add = 1
+						}
+					}
+					if = {
+						limit = {
+							NOT = {
+								has_modifier = offensive_idea_4_mdf
+							}
+						}
+						add_modifier = {
+							name = offensive_idea_4_mdf
+							months = -1
+						}
+					}
+				}
+				else_if = {
+					limit = {
+						var:offensive_idea == 4
+					}
+					change_variable = {
+						name = offensive_idea
+						add = 1
+					}
+					if = {
+						limit = {
+							var:national_idea_pool < 200
+						}
+						change_variable = {
+							name = national_idea_pool
+							add = 1
+						}
+					}
+					if = {
+						limit = {
+							NOT = {
+								has_modifier = offensive_idea_5_mdf
+							}
+						}
+						add_modifier = {
+							name = offensive_idea_5_mdf
+							months = -1
+						}
+					}
+				}
+				else_if = {
+					limit = {
+						var:offensive_idea == 5
+					}
+					change_variable = {
+						name = offensive_idea
+						add = 1
+					}
+					if = {
+						limit = {
+							var:national_idea_pool < 200
+						}
+						change_variable = {
+							name = national_idea_pool
+							add = 1
+						}
+					}
+					if = {
+						limit = {
+							NOT = {
+								has_modifier = offensive_idea_6_mdf
+							}
+						}
+						add_modifier = {
+							name = offensive_idea_6_mdf
+							months = -1
+						}
+					}
+				}
+				else_if = {
+					limit = {
+						var:offensive_idea == 6
+					}
+					change_variable = {
+						name = offensive_idea
+						add = 1
+					}
+					if = {
+						limit = {
+							var:national_idea_pool < 200
+						}
+						change_variable = {
+							name = national_idea_pool
+							add = 1
+						}
+					}
+					if = {
+						limit = {
+							NOT = {
+								has_modifier = offensive_idea_7_mdf
+							}
+						}
+						add_modifier = {
+							name = offensive_idea_7_mdf
+							months = -1
+						}
+					}
+					set_variable = offensive_idea_completed
+				}
+			}
+			flag:defensive_idea = {
+				if = {
+					limit = {
+						var:defensive_idea == 0
+					}
+					change_variable = {
+						name = defensive_idea
+						add = 1
+					}
+					if = {
+						limit = {
+							var:national_idea_pool < 200
+						}
+						change_variable = {
+							name = national_idea_pool
+							add = 1
+						}
+					}
+					if = {
+						limit = {
+							NOT = {
+								has_modifier = defensive_idea_1_mdf
+							}
+						}
+						add_modifier = {
+							name = defensive_idea_1_mdf
+							months = -1
+						}
+					}
+				}
+				else_if = {
+					limit = {
+						var:defensive_idea == 1
+					}
+					change_variable = {
+						name = defensive_idea
+						add = 1
+					}
+					if = {
+						limit = {
+							var:national_idea_pool < 200
+						}
+						change_variable = {
+							name = national_idea_pool
+							add = 1
+						}
+					}
+					if = {
+						limit = {
+							NOT = {
+								has_modifier = defensive_idea_2_mdf
+							}
+						}
+						add_modifier = {
+							name = defensive_idea_2_mdf
+							months = -1
+						}
+					}
+				}
+				else_if = {
+					limit = {
+						var:defensive_idea == 2
+					}
+					change_variable = {
+						name = defensive_idea
+						add = 1
+					}
+					if = {
+						limit = {
+							var:national_idea_pool < 200
+						}
+						change_variable = {
+							name = national_idea_pool
+							add = 1
+						}
+					}
+					if = {
+						limit = {
+							NOT = {
+								has_modifier = defensive_idea_3_mdf
+							}
+						}
+						add_modifier = {
+							name = defensive_idea_3_mdf
+							months = -1
+						}
+					}
+				}
+				else_if = {
+					limit = {
+						var:defensive_idea == 3
+					}
+					change_variable = {
+						name = defensive_idea
+						add = 1
+					}
+					if = {
+						limit = {
+							var:national_idea_pool < 200
+						}
+						change_variable = {
+							name = national_idea_pool
+							add = 1
+						}
+					}
+					if = {
+						limit = {
+							NOT = {
+								has_modifier = defensive_idea_4_mdf
+							}
+						}
+						add_modifier = {
+							name = defensive_idea_4_mdf
+							months = -1
+						}
+					}
+				}
+				else_if = {
+					limit = {
+						var:defensive_idea == 4
+					}
+					change_variable = {
+						name = defensive_idea
+						add = 1
+					}
+					if = {
+						limit = {
+							var:national_idea_pool < 200
+						}
+						change_variable = {
+							name = national_idea_pool
+							add = 1
+						}
+					}
+					if = {
+						limit = {
+							NOT = {
+								has_modifier = defensive_idea_5_mdf
+							}
+						}
+						add_modifier = {
+							name = defensive_idea_5_mdf
+							months = -1
+						}
+					}
+				}
+				else_if = {
+					limit = {
+						var:defensive_idea == 5
+					}
+					change_variable = {
+						name = defensive_idea
+						add = 1
+					}
+					if = {
+						limit = {
+							var:national_idea_pool < 200
+						}
+						change_variable = {
+							name = national_idea_pool
+							add = 1
+						}
+					}
+					if = {
+						limit = {
+							NOT = {
+								has_modifier = defensive_idea_6_mdf
+							}
+						}
+						add_modifier = {
+							name = defensive_idea_6_mdf
+							months = -1
+						}
+					}
+				}
+				else_if = {
+					limit = {
+						var:defensive_idea == 6
+					}
+					change_variable = {
+						name = defensive_idea
+						add = 1
+					}
+					if = {
+						limit = {
+							var:national_idea_pool < 200
+						}
+						change_variable = {
+							name = national_idea_pool
+							add = 1
+						}
+					}
+					if = {
+						limit = {
+							NOT = {
+								has_modifier = defensive_idea_7_mdf
+							}
+						}
+						add_modifier = {
+							name = defensive_idea_7_mdf
+							months = -1
+						}
+					}
+					set_variable = defensive_idea_completed
+				}
+			}
+			flag:naval_idea = {
+				if = {
+					limit = {
+						var:naval_idea == 0
+					}
+					change_variable = {
+						name = naval_idea
+						add = 1
+					}
+					if = {
+						limit = {
+							var:national_idea_pool < 200
+						}
+						change_variable = {
+							name = national_idea_pool
+							add = 1
+						}
+					}
+					if = {
+						limit = {
+							NOT = {
+								has_modifier = naval_idea_1_mdf
+							}
+						}
+						add_modifier = {
+							name = naval_idea_1_mdf
+							months = -1
+						}
+					}
+				}
+				else_if = {
+					limit = {
+						var:naval_idea == 1
+					}
+					change_variable = {
+						name = naval_idea
+						add = 1
+					}
+					if = {
+						limit = {
+							var:national_idea_pool < 200
+						}
+						change_variable = {
+							name = national_idea_pool
+							add = 1
+						}
+					}
+					if = {
+						limit = {
+							NOT = {
+								has_modifier = naval_idea_2_mdf
+							}
+						}
+						add_modifier = {
+							name = naval_idea_2_mdf
+							months = -1
+						}
+					}
+				}
+				else_if = {
+					limit = {
+						var:naval_idea == 2
+					}
+					change_variable = {
+						name = naval_idea
+						add = 1
+					}
+					if = {
+						limit = {
+							var:national_idea_pool < 200
+						}
+						change_variable = {
+							name = national_idea_pool
+							add = 1
+						}
+					}
+					if = {
+						limit = {
+							NOT = {
+								has_modifier = naval_idea_3_mdf
+							}
+						}
+						add_modifier = {
+							name = naval_idea_3_mdf
+							months = -1
+						}
+					}
+				}
+				else_if = {
+					limit = {
+						var:naval_idea == 3
+					}
+					change_variable = {
+						name = naval_idea
+						add = 1
+					}
+					if = {
+						limit = {
+							var:national_idea_pool < 200
+						}
+						change_variable = {
+							name = national_idea_pool
+							add = 1
+						}
+					}
+					if = {
+						limit = {
+							NOT = {
+								has_modifier = naval_idea_4_mdf
+							}
+						}
+						add_modifier = {
+							name = naval_idea_4_mdf
+							months = -1
+						}
+					}
+				}
+				else_if = {
+					limit = {
+						var:naval_idea == 4
+					}
+					change_variable = {
+						name = naval_idea
+						add = 1
+					}
+					if = {
+						limit = {
+							var:national_idea_pool < 200
+						}
+						change_variable = {
+							name = national_idea_pool
+							add = 1
+						}
+					}
+					if = {
+						limit = {
+							NOT = {
+								has_modifier = naval_idea_5_mdf
+							}
+						}
+						add_modifier = {
+							name = naval_idea_5_mdf
+							months = -1
+						}
+					}
+				}
+				else_if = {
+					limit = {
+						var:naval_idea == 5
+					}
+					change_variable = {
+						name = naval_idea
+						add = 1
+					}
+					if = {
+						limit = {
+							var:national_idea_pool < 200
+						}
+						change_variable = {
+							name = national_idea_pool
+							add = 1
+						}
+					}
+					if = {
+						limit = {
+							NOT = {
+								has_modifier = naval_idea_6_mdf
+							}
+						}
+						add_modifier = {
+							name = naval_idea_6_mdf
+							months = -1
+						}
+					}
+				}
+				else_if = {
+					limit = {
+						var:naval_idea == 6
+					}
+					change_variable = {
+						name = naval_idea
+						add = 1
+					}
+					if = {
+						limit = {
+							var:national_idea_pool < 200
+						}
+						change_variable = {
+							name = national_idea_pool
+							add = 1
+						}
+					}
+					if = {
+						limit = {
+							NOT = {
+								has_modifier = naval_idea_7_mdf
+							}
+						}
+						add_modifier = {
+							name = naval_idea_7_mdf
+							months = -1
+						}
+					}
+					set_variable = naval_idea_completed
+				}
+			}
+			flag:militarization_idea = {
+				if = {
+					limit = {
+						var:militarization_idea == 0
+					}
+					change_variable = {
+						name = militarization_idea
+						add = 1
+					}
+					if = {
+						limit = {
+							var:national_idea_pool < 200
+						}
+						change_variable = {
+							name = national_idea_pool
+							add = 1
+						}
+					}
+					if = {
+						limit = {
+							NOT = {
+								has_modifier = militarization_idea_1_mdf
+							}
+						}
+						add_modifier = {
+							name = militarization_idea_1_mdf
+							months = -1
+						}
+					}
+				}
+				else_if = {
+					limit = {
+						var:militarization_idea == 1
+					}
+					change_variable = {
+						name = militarization_idea
+						add = 1
+					}
+					if = {
+						limit = {
+							var:national_idea_pool < 200
+						}
+						change_variable = {
+							name = national_idea_pool
+							add = 1
+						}
+					}
+					if = {
+						limit = {
+							NOT = {
+								has_modifier = militarization_idea_2_mdf
+							}
+						}
+						add_modifier = {
+							name = militarization_idea_2_mdf
+							months = -1
+						}
+					}
+				}
+				else_if = {
+					limit = {
+						var:militarization_idea == 2
+					}
+					change_variable = {
+						name = militarization_idea
+						add = 1
+					}
+					if = {
+						limit = {
+							var:national_idea_pool < 200
+						}
+						change_variable = {
+							name = national_idea_pool
+							add = 1
+						}
+					}
+					if = {
+						limit = {
+							NOT = {
+								has_modifier = militarization_idea_3_mdf
+							}
+						}
+						add_modifier = {
+							name = militarization_idea_3_mdf
+							months = -1
+						}
+					}
+				}
+				else_if = {
+					limit = {
+						var:militarization_idea == 3
+					}
+					change_variable = {
+						name = militarization_idea
+						add = 1
+					}
+					if = {
+						limit = {
+							var:national_idea_pool < 200
+						}
+						change_variable = {
+							name = national_idea_pool
+							add = 1
+						}
+					}
+					if = {
+						limit = {
+							NOT = {
+								has_modifier = militarization_idea_4_mdf
+							}
+						}
+						add_modifier = {
+							name = militarization_idea_4_mdf
+							months = -1
+						}
+					}
+				}
+				else_if = {
+					limit = {
+						var:militarization_idea == 4
+					}
+					change_variable = {
+						name = militarization_idea
+						add = 1
+					}
+					if = {
+						limit = {
+							var:national_idea_pool < 200
+						}
+						change_variable = {
+							name = national_idea_pool
+							add = 1
+						}
+					}
+					if = {
+						limit = {
+							NOT = {
+								has_modifier = militarization_idea_5_mdf
+							}
+						}
+						add_modifier = {
+							name = militarization_idea_5_mdf
+							months = -1
+						}
+					}
+				}
+				else_if = {
+					limit = {
+						var:militarization_idea == 5
+					}
+					change_variable = {
+						name = militarization_idea
+						add = 1
+					}
+					if = {
+						limit = {
+							var:national_idea_pool < 200
+						}
+						change_variable = {
+							name = national_idea_pool
+							add = 1
+						}
+					}
+					if = {
+						limit = {
+							NOT = {
+								has_modifier = militarization_idea_6_mdf
+							}
+						}
+						add_modifier = {
+							name = militarization_idea_6_mdf
+							months = -1
+						}
+					}
+				}
+				else_if = {
+					limit = {
+						var:militarization_idea == 6
+					}
+					change_variable = {
+						name = militarization_idea
+						add = 1
+					}
+					if = {
+						limit = {
+							var:national_idea_pool < 200
+						}
+						change_variable = {
+							name = national_idea_pool
+							add = 1
+						}
+					}
+					if = {
+						limit = {
+							NOT = {
+								has_modifier = militarization_idea_7_mdf
+							}
+						}
+						add_modifier = {
+							name = militarization_idea_7_mdf
+							months = -1
+						}
+					}
+					set_variable = militarization_idea_completed
+				}
+			}
+			flag:imperialist_idea = {
+				if = {
+					limit = {
+						var:imperialist_idea == 0
+					}
+					change_variable = {
+						name = imperialist_idea
+						add = 1
+					}
+					if = {
+						limit = {
+							var:national_idea_pool < 200
+						}
+						change_variable = {
+							name = national_idea_pool
+							add = 1
+						}
+					}
+					if = {
+						limit = {
+							NOT = {
+								has_modifier = imperialist_idea_1_mdf
+							}
+						}
+						add_modifier = {
+							name = imperialist_idea_1_mdf
+							months = -1
+						}
+					}
+				}
+				else_if = {
+					limit = {
+						var:imperialist_idea == 1
+					}
+					change_variable = {
+						name = imperialist_idea
+						add = 1
+					}
+					if = {
+						limit = {
+							var:national_idea_pool < 200
+						}
+						change_variable = {
+							name = national_idea_pool
+							add = 1
+						}
+					}
+					if = {
+						limit = {
+							NOT = {
+								has_modifier = imperialist_idea_2_mdf
+							}
+						}
+						add_modifier = {
+							name = imperialist_idea_2_mdf
+							months = -1
+						}
+					}
+				}
+				else_if = {
+					limit = {
+						var:imperialist_idea == 2
+					}
+					change_variable = {
+						name = imperialist_idea
+						add = 1
+					}
+					if = {
+						limit = {
+							var:national_idea_pool < 200
+						}
+						change_variable = {
+							name = national_idea_pool
+							add = 1
+						}
+					}
+					if = {
+						limit = {
+							NOT = {
+								has_modifier = imperialist_idea_3_mdf
+							}
+						}
+						add_modifier = {
+							name = imperialist_idea_3_mdf
+							months = -1
+						}
+					}
+				}
+				else_if = {
+					limit = {
+						var:imperialist_idea == 3
+					}
+					change_variable = {
+						name = imperialist_idea
+						add = 1
+					}
+					if = {
+						limit = {
+							var:national_idea_pool < 200
+						}
+						change_variable = {
+							name = national_idea_pool
+							add = 1
+						}
+					}
+					if = {
+						limit = {
+							NOT = {
+								has_modifier = imperialist_idea_4_mdf
+							}
+						}
+						add_modifier = {
+							name = imperialist_idea_4_mdf
+							months = -1
+						}
+					}
+				}
+				else_if = {
+					limit = {
+						var:imperialist_idea == 4
+					}
+					change_variable = {
+						name = imperialist_idea
+						add = 1
+					}
+					if = {
+						limit = {
+							var:national_idea_pool < 200
+						}
+						change_variable = {
+							name = national_idea_pool
+							add = 1
+						}
+					}
+					if = {
+						limit = {
+							NOT = {
+								has_modifier = imperialist_idea_5_mdf
+							}
+						}
+						add_modifier = {
+							name = imperialist_idea_5_mdf
+							months = -1
+						}
+					}
+				}
+				else_if = {
+					limit = {
+						var:imperialist_idea == 5
+					}
+					change_variable = {
+						name = imperialist_idea
+						add = 1
+					}
+					if = {
+						limit = {
+							var:national_idea_pool < 200
+						}
+						change_variable = {
+							name = national_idea_pool
+							add = 1
+						}
+					}
+					if = {
+						limit = {
+							NOT = {
+								has_modifier = imperialist_idea_6_mdf
+							}
+						}
+						add_modifier = {
+							name = imperialist_idea_6_mdf
+							months = -1
+						}
+					}
+				}
+				else_if = {
+					limit = {
+						var:imperialist_idea == 6
+					}
+					change_variable = {
+						name = imperialist_idea
+						add = 1
+					}
+					if = {
+						limit = {
+							var:national_idea_pool < 200
+						}
+						change_variable = {
+							name = national_idea_pool
+							add = 1
+						}
+					}
+					if = {
+						limit = {
+							NOT = {
+								has_modifier = imperialist_idea_7_mdf
+							}
+						}
+						add_modifier = {
+							name = imperialist_idea_7_mdf
+							months = -1
+						}
+					}
+					set_variable = imperialist_idea_completed
+				}
+			}
+		}
+	}
+}
+
+embrace_idea_group = {
+	scope = country
+	saved_scopes = {
+		idea_group
+	}
+	is_shown = {
+		switch = {
+			trigger = scope:idea_group
+			flag:innovative_idea = {
+				NOT = {
+					has_variable = can_go_innovative
+				}
+			}
+			flag:economic_idea = {
+				NOT = {
+					has_variable = can_go_economic
+				}
+			}
+			flag:administrative_idea = {
+				NOT = {
+					has_variable = can_go_administrative
+				}
+			}
+			flag:ethnocentrism_idea = {
+				NOT = {
+					has_variable = can_go_ethnocentrism
+				}
+			}
+			flag:politics_idea = {
+				NOT = {
+					has_variable = can_go_politics
+				}
+			}
+			flag:diplomatic_idea = {
+				NOT = {
+					has_variable = can_go_diplomatic
+				}
+			}
+			flag:trade_idea = {
+				NOT = {
+					has_variable = can_go_trade
+				}
+			}
+			flag:qualification_idea = {
+				NOT = {
+					has_variable = can_go_qualification
+				}
+			}
+			flag:humanist_idea = {
+				NOT = {
+					has_variable = can_go_humanist
+				}
+			}
+			flag:syndicalism_idea = {
+				NOT = {
+					has_variable = can_go_syndicalism
+				}
+			}
+			flag:offensive_idea = {
+				NOT = {
+					has_variable = can_go_offensive
+				}
+			}
+			flag:defensive_idea = {
+				NOT = {
+					has_variable = can_go_defensive
+				}
+			}
+			flag:naval_idea = {
+				NOT = {
+					has_variable = can_go_naval
+				}
+			}
+			flag:militarization_idea = {
+				NOT = {
+					has_variable = can_go_militarization
+				}
+			}
+			flag:imperialist_idea = {
+				NOT = {
+					has_variable = can_go_imperialist
+				}
+			}
+		}
+	}
+	effect = {
+		switch = {
+			trigger = scope:idea_group
+			flag:innovative_idea = {
+				change_variable = {
+					name = idea_group_unlocked
+					add = 1
+				}
+				if = {
+					limit = {
+						NOT = {
+							has_variable = can_go_innovative
+						}
+					}
+					set_variable = can_go_innovative
+				}
+				set_variable = {
+					name = innovative_idea
+					value = 0
+				}
+			}
+			flag:economic_idea = {
+				change_variable = {
+					name = idea_group_unlocked
+					add = 1
+				}
+				if = {
+					limit = {
+						NOT = {
+							has_variable = can_go_economic
+						}
+					}
+					set_variable = can_go_economic
+				}
+				set_variable = {
+					name = economic_idea
+					value = 0
+				}
+			}
+			flag:administrative_idea = {
+				change_variable = {
+					name = idea_group_unlocked
+					add = 1
+				}
+				if = {
+					limit = {
+						NOT = {
+							has_variable = can_go_administrative
+						}
+					}
+					set_variable = can_go_administrative
+				}
+				set_variable = {
+					name = administrative_idea
+					value = 0
+				}
+			}
+			flag:ethnocentrism_idea = {
+				change_variable = {
+					name = idea_group_unlocked
+					add = 1
+				}
+				if = {
+					limit = {
+						NOT = {
+							has_variable = can_go_ethnocentrism
+						}
+					}
+					set_variable = can_go_ethnocentrism
+				}
+				set_variable = {
+					name = ethnocentrism_idea
+					value = 0
+				}
+			}
+			flag:politics_idea = {
+				change_variable = {
+					name = idea_group_unlocked
+					add = 1
+				}
+				if = {
+					limit = {
+						NOT = {
+							has_variable = can_go_politics
+						}
+					}
+					set_variable = can_go_politics
+				}
+				set_variable = {
+					name = politics_idea
+					value = 0
+				}
+			}
+			flag:diplomatic_idea = {
+				change_variable = {
+					name = idea_group_unlocked
+					add = 1
+				}
+				if = {
+					limit = {
+						NOT = {
+							has_variable = can_go_diplomatic
+						}
+					}
+					set_variable = can_go_diplomatic
+				}
+				set_variable = {
+					name = diplomatic_idea
+					value = 0
+				}
+			}
+			flag:trade_idea = {
+				change_variable = {
+					name = idea_group_unlocked
+					add = 1
+				}
+				if = {
+					limit = {
+						NOT = {
+							has_variable = can_go_trade
+						}
+					}
+					set_variable = can_go_trade
+				}
+				set_variable = {
+					name = trade_idea
+					value = 0
+				}
+			}
+			flag:qualification_idea = {
+				change_variable = {
+					name = idea_group_unlocked
+					add = 1
+				}
+				if = {
+					limit = {
+						NOT = {
+							has_variable = can_go_qualification
+						}
+					}
+					set_variable = can_go_qualification
+				}
+				set_variable = {
+					name = qualification_idea
+					value = 0
+				}
+			}
+			flag:humanist_idea = {
+				change_variable = {
+					name = idea_group_unlocked
+					add = 1
+				}
+				if = {
+					limit = {
+						NOT = {
+							has_variable = can_go_humanist
+						}
+					}
+					set_variable = can_go_humanist
+				}
+				set_variable = {
+					name = humanist_idea
+					value = 0
+				}
+			}
+			flag:syndicalism_idea = {
+				change_variable = {
+					name = idea_group_unlocked
+					add = 1
+				}
+				if = {
+					limit = {
+						NOT = {
+							has_variable = can_go_syndicalism
+						}
+					}
+					set_variable = can_go_syndicalism
+				}
+				set_variable = {
+					name = syndicalism_idea
+					value = 0
+				}
+			}
+			flag:offensive_idea = {
+				change_variable = {
+					name = idea_group_unlocked
+					add = 1
+				}
+				if = {
+					limit = {
+						NOT = {
+							has_variable = can_go_offensive
+						}
+					}
+					set_variable = can_go_offensive
+				}
+				set_variable = {
+					name = offensive_idea
+					value = 0
+				}
+			}
+			flag:defensive_idea = {
+				change_variable = {
+					name = idea_group_unlocked
+					add = 1
+				}
+				if = {
+					limit = {
+						NOT = {
+							has_variable = can_go_defensive
+						}
+					}
+					set_variable = can_go_defensive
+				}
+				set_variable = {
+					name = defensive_idea
+					value = 0
+				}
+			}
+			flag:naval_idea = {
+				change_variable = {
+					name = idea_group_unlocked
+					add = 1
+				}
+				if = {
+					limit = {
+						NOT = {
+							has_variable = can_go_naval
+						}
+					}
+					set_variable = can_go_naval
+				}
+				set_variable = {
+					name = naval_idea
+					value = 0
+				}
+			}
+			flag:militarization_idea = {
+				change_variable = {
+					name = idea_group_unlocked
+					add = 1
+				}
+				if = {
+					limit = {
+						NOT = {
+							has_variable = can_go_militarization
+						}
+					}
+					set_variable = can_go_militarization
+				}
+				set_variable = {
+					name = militarization_idea
+					value = 0
+				}
+			}
+			flag:imperialist_idea = {
+				change_variable = {
+					name = idea_group_unlocked
+					add = 1
+				}
+				if = {
+					limit = {
+						NOT = {
+							has_variable = can_go_imperialist
+						}
+					}
+					set_variable = can_go_imperialist
+				}
+				set_variable = {
+					name = imperialist_idea
+					value = 0
+				}
+			}
+		}
+	}
+}
+
+idea_tooltip_1 = {
+	scope = country
+	is_valid = {
+		switch = {
+			trigger = scope:idea_group
+			flag:innovative_idea = {
+				var:innovative_idea >= 1
+			}
+			flag:economic_idea = {
+				custom_label = ve_gecici_10
+				var:economic_idea >= 1
+			}
+			flag:administrative_idea = {
+				custom_label = ve_gecici_9
+				var:administrative_idea >= 1
+			}
+			flag:ethnocentrism_idea = {
+				custom_label = ve_gecici_9
+				var:ethnocentrism_idea >= 1
+			}
+			flag:politics_idea = {
+				custom_label = ve_gecici_9
+				var:politics_idea >= 1
+			}
+			flag:diplomatic_idea = {
+				custom_label = ve_gecici_9
+				var:diplomatic_idea >= 1
+			}
+			flag:trade_idea = {
+				custom_label = ve_gecici_9
+				var:trade_idea >= 1
+			}
+			flag:qualification_idea = {
+				custom_label = ve_gecici_9
+				var:qualification_idea >= 1
+			}
+			flag:humanist_idea = {
+				custom_label = ve_gecici_9
+				var:humanist_idea >= 1
+			}
+			flag:syndicalism_idea = {
+				custom_label = ve_gecici_9
+				var:syndicalism_idea >= 1
+			}
+			flag:offensive_idea = {
+				custom_label = ve_gecici_9
+				var:offensive_idea >= 1
+			}
+			flag:defensive_idea = {
+				custom_label = ve_gecici_9
+				var:defensive_idea >= 1
+			}
+			flag:naval_idea = {
+				custom_label = ve_gecici_9
+				var:naval_idea >= 1
+			}
+			flag:militarization_idea = {
+				custom_label = ve_gecici_9
+				var:militarization_idea >= 1
+			}
+			flag:imperialist_idea = {
+				custom_label = ve_gecici_9
+				var:imperialist_idea >= 1
+			}
+		}
+	}
+	effect = {
+		switch = {
+			trigger = scope:idea_group
+			flag:innovative_idea = {
+				custom_label = ve_gecici_9
+				add_modifier = {
+					name = innovative_idea_1_mdf
+					months = -1
+				}
+			}
+			flag:economic_idea = {
+				custom_label = ve_gecici_10
+				add_modifier = {
+					name = economic_idea_1_mdf
+					months = -1
+				}
+			}
+			flag:administrative_idea = {
+				custom_label = ve_gecici_9
+				add_modifier = {
+					name = administrative_idea_1_mdf
+					months = -1
+				}
+			}
+			flag:ethnocentrism_idea = {
+				custom_label = ve_gecici_9
+				add_modifier = {
+					name = ethnocentrism_idea_1_mdf
+					months = -1
+				}
+			}
+			flag:politics_idea = {
+				custom_label = ve_gecici_9
+				add_modifier = {
+					name = politics_idea_1_mdf
+					months = -1
+				}
+			}
+			flag:diplomatic_idea = {
+				custom_label = ve_gecici_9
+				add_modifier = {
+					name = diplomatic_idea_1_mdf
+					months = -1
+				}
+			}
+			flag:trade_idea = {
+				custom_label = ve_gecici_9
+				add_modifier = {
+					name = trade_idea_1_mdf
+					months = -1
+				}
+			}
+			flag:qualification_idea = {
+				custom_label = ve_gecici_9
+				add_modifier = {
+					name = qualification_idea_1_mdf
+					months = -1
+				}
+			}
+			flag:humanist_idea = {
+				custom_label = ve_gecici_9
+				add_modifier = {
+					name = humanist_idea_1_mdf
+					months = -1
+				}
+			}
+			flag:syndicalism_idea = {
+				custom_label = ve_gecici_9
+				add_modifier = {
+					name = syndicalism_idea_1_mdf
+					months = -1
+				}
+			}
+			flag:offensive_idea = {
+				custom_label = ve_gecici_9
+				add_modifier = {
+					name = offensive_idea_1_mdf
+					months = -1
+				}
+			}
+			flag:defensive_idea = {
+				custom_label = ve_gecici_9
+				add_modifier = {
+					name = defensive_idea_1_mdf
+					months = -1
+				}
+			}
+			flag:naval_idea = {
+				custom_label = ve_gecici_9
+				add_modifier = {
+					name = naval_idea_1_mdf
+					months = -1
+				}
+			}
+			flag:militarization_idea = {
+				custom_label = ve_gecici_9
+				add_modifier = {
+					name = militarization_idea_1_mdf
+					months = -1
+				}
+			}
+			flag:imperialist_idea = {
+				custom_label = ve_gecici_9
+				add_modifier = {
+					name = imperialist_idea_1_mdf
+					months = -1
+				}
+			}
+		}
+	}
+}
+
+idea_tooltip_2 = {
+	scope = country
+	is_valid = {
+		switch = {
+			trigger = scope:idea_group
+			flag:innovative_idea = {
+				var:innovative_idea >= 2
+			}
+			flag:economic_idea = {
+				custom_label = ve_gecici_10
+				var:economic_idea >= 2
+			}
+			flag:administrative_idea = {
+				custom_label = ve_gecici_9
+				var:administrative_idea >= 2
+			}
+			flag:ethnocentrism_idea = {
+				custom_label = ve_gecici_9
+				var:ethnocentrism_idea >= 2
+			}
+			flag:politics_idea = {
+				custom_label = ve_gecici_9
+				var:politics_idea >= 2
+			}
+			flag:diplomatic_idea = {
+				custom_label = ve_gecici_9
+				var:diplomatic_idea >= 2
+			}
+			flag:trade_idea = {
+				custom_label = ve_gecici_9
+				var:trade_idea >= 2
+			}
+			flag:qualification_idea = {
+				custom_label = ve_gecici_9
+				var:qualification_idea >= 2
+			}
+			flag:humanist_idea = {
+				custom_label = ve_gecici_9
+				var:humanist_idea >= 2
+			}
+			flag:syndicalism_idea = {
+				custom_label = ve_gecici_9
+				var:syndicalism_idea >= 2
+			}
+			flag:offensive_idea = {
+				custom_label = ve_gecici_9
+				var:offensive_idea >= 2
+			}
+			flag:defensive_idea = {
+				custom_label = ve_gecici_9
+				var:defensive_idea >= 2
+			}
+			flag:naval_idea = {
+				custom_label = ve_gecici_9
+				var:naval_idea >= 2
+			}
+			flag:militarization_idea = {
+				custom_label = ve_gecici_9
+				var:militarization_idea >= 2
+			}
+			flag:imperialist_idea = {
+				custom_label = ve_gecici_9
+				var:imperialist_idea >= 2
+			}
+		}
+	}
+	effect = {
+		switch = {
+			trigger = scope:idea_group
+			flag:innovative_idea = {
+				custom_label = ve_gecici_9
+				add_modifier = {
+					name = innovative_idea_2_mdf
+					months = -1
+				}
+			}
+			flag:economic_idea = {
+				custom_label = ve_gecici_10
+				add_modifier = {
+					name = economic_idea_2_mdf
+					months = -1
+				}
+			}
+			flag:administrative_idea = {
+				custom_label = ve_gecici_9
+				add_modifier = {
+					name = administrative_idea_2_mdf
+					months = -1
+				}
+			}
+			flag:ethnocentrism_idea = {
+				custom_label = ve_gecici_9
+				add_modifier = {
+					name = ethnocentrism_idea_2_mdf
+					months = -1
+				}
+			}
+			flag:politics_idea = {
+				custom_label = ve_gecici_9
+				add_modifier = {
+					name = politics_idea_2_mdf
+					months = -1
+				}
+			}
+			flag:diplomatic_idea = {
+				custom_label = ve_gecici_9
+				add_modifier = {
+					name = diplomatic_idea_2_mdf
+					months = -1
+				}
+			}
+			flag:trade_idea = {
+				custom_label = ve_gecici_9
+				add_modifier = {
+					name = trade_idea_2_mdf
+					months = -1
+				}
+			}
+			flag:qualification_idea = {
+				custom_label = ve_gecici_9
+				add_modifier = {
+					name = qualification_idea_2_mdf
+					months = -1
+				}
+			}
+			flag:humanist_idea = {
+				custom_label = ve_gecici_9
+				add_modifier = {
+					name = humanist_idea_2_mdf
+					months = -1
+				}
+			}
+			flag:syndicalism_idea = {
+				custom_label = ve_gecici_9
+				add_modifier = {
+					name = syndicalism_idea_2_mdf
+					months = -1
+				}
+			}
+			flag:offensive_idea = {
+				custom_label = ve_gecici_9
+				add_modifier = {
+					name = offensive_idea_2_mdf
+					months = -1
+				}
+			}
+			flag:defensive_idea = {
+				custom_label = ve_gecici_9
+				add_modifier = {
+					name = defensive_idea_2_mdf
+					months = -1
+				}
+			}
+			flag:naval_idea = {
+				custom_label = ve_gecici_9
+				add_modifier = {
+					name = naval_idea_2_mdf
+					months = -1
+				}
+			}
+			flag:militarization_idea = {
+				custom_label = ve_gecici_9
+				add_modifier = {
+					name = militarization_idea_2_mdf
+					months = -1
+				}
+			}
+			flag:imperialist_idea = {
+				custom_label = ve_gecici_9
+				add_modifier = {
+					name = imperialist_idea_2_mdf
+					months = -1
+				}
+			}
+		}
+	}
+}
+
+idea_tooltip_3 = {
+	scope = country
+	is_valid = {
+		switch = {
+			trigger = scope:idea_group
+			flag:innovative_idea = {
+				var:innovative_idea >= 3
+			}
+			flag:economic_idea = {
+				custom_label = ve_gecici_10
+				var:economic_idea >= 3
+			}
+			flag:administrative_idea = {
+				custom_label = ve_gecici_9
+				var:administrative_idea >= 3
+			}
+			flag:ethnocentrism_idea = {
+				custom_label = ve_gecici_9
+				var:ethnocentrism_idea >= 3
+			}
+			flag:politics_idea = {
+				custom_label = ve_gecici_9
+				var:politics_idea >= 3
+			}
+			flag:diplomatic_idea = {
+				custom_label = ve_gecici_9
+				var:diplomatic_idea >= 3
+			}
+			flag:trade_idea = {
+				custom_label = ve_gecici_9
+				var:trade_idea >= 3
+			}
+			flag:qualification_idea = {
+				custom_label = ve_gecici_9
+				var:qualification_idea >= 3
+			}
+			flag:humanist_idea = {
+				custom_label = ve_gecici_9
+				var:humanist_idea >= 3
+			}
+			flag:syndicalism_idea = {
+				custom_label = ve_gecici_9
+				var:syndicalism_idea >= 3
+			}
+			flag:offensive_idea = {
+				custom_label = ve_gecici_9
+				var:offensive_idea >= 3
+			}
+			flag:defensive_idea = {
+				custom_label = ve_gecici_9
+				var:defensive_idea >= 3
+			}
+			flag:naval_idea = {
+				custom_label = ve_gecici_9
+				var:naval_idea >= 3
+			}
+			flag:militarization_idea = {
+				custom_label = ve_gecici_9
+				var:militarization_idea >= 3
+			}
+			flag:imperialist_idea = {
+				custom_label = ve_gecici_9
+				var:imperialist_idea >= 3
+			}
+		}
+	}
+	effect = {
+		switch = {
+			trigger = scope:idea_group
+			flag:innovative_idea = {
+				custom_label = ve_gecici_9
+				add_modifier = {
+					name = innovative_idea_3_mdf
+					months = -1
+				}
+			}
+			flag:economic_idea = {
+				custom_label = ve_gecici_10
+				add_modifier = {
+					name = economic_idea_3_mdf
+					months = -1
+				}
+			}
+			flag:administrative_idea = {
+				custom_label = ve_gecici_9
+				add_modifier = {
+					name = administrative_idea_3_mdf
+					months = -1
+				}
+			}
+			flag:ethnocentrism_idea = {
+				custom_label = ve_gecici_9
+				add_modifier = {
+					name = ethnocentrism_idea_3_mdf
+					months = -1
+				}
+			}
+			flag:politics_idea = {
+				custom_label = ve_gecici_9
+				add_modifier = {
+					name = politics_idea_3_mdf
+					months = -1
+				}
+			}
+			flag:diplomatic_idea = {
+				custom_label = ve_gecici_9
+				add_modifier = {
+					name = diplomatic_idea_3_mdf
+					months = -1
+				}
+			}
+			flag:trade_idea = {
+				custom_label = ve_gecici_9
+				add_modifier = {
+					name = trade_idea_3_mdf
+					months = -1
+				}
+			}
+			flag:qualification_idea = {
+				custom_label = ve_gecici_9
+				add_modifier = {
+					name = qualification_idea_3_mdf
+					months = -1
+				}
+			}
+			flag:humanist_idea = {
+				custom_label = ve_gecici_9
+				add_modifier = {
+					name = humanist_idea_3_mdf
+					months = -1
+				}
+			}
+			flag:syndicalism_idea = {
+				custom_label = ve_gecici_9
+				add_modifier = {
+					name = syndicalism_idea_3_mdf
+					months = -1
+				}
+			}
+			flag:offensive_idea = {
+				custom_label = ve_gecici_9
+				add_modifier = {
+					name = offensive_idea_3_mdf
+					months = -1
+				}
+			}
+			flag:defensive_idea = {
+				custom_label = ve_gecici_9
+				add_modifier = {
+					name = defensive_idea_3_mdf
+					months = -1
+				}
+			}
+			flag:naval_idea = {
+				custom_label = ve_gecici_9
+				add_modifier = {
+					name = naval_idea_3_mdf
+					months = -1
+				}
+			}
+			flag:militarization_idea = {
+				custom_label = ve_gecici_9
+				add_modifier = {
+					name = militarization_idea_3_mdf
+					months = -1
+				}
+			}
+			flag:imperialist_idea = {
+				custom_label = ve_gecici_9
+				add_modifier = {
+					name = imperialist_idea_3_mdf
+					months = -1
+				}
+			}
+		}
+	}
+}
+
+idea_tooltip_4 = {
+	scope = country
+	is_valid = {
+		switch = {
+			trigger = scope:idea_group
+			flag:innovative_idea = {
+				var:innovative_idea >= 4
+			}
+			flag:economic_idea = {
+				custom_label = ve_gecici_10
+				var:economic_idea >= 4
+			}
+			flag:administrative_idea = {
+				custom_label = ve_gecici_9
+				var:administrative_idea >= 4
+			}
+			flag:ethnocentrism_idea = {
+				custom_label = ve_gecici_9
+				var:ethnocentrism_idea >= 4
+			}
+			flag:politics_idea = {
+				custom_label = ve_gecici_9
+				var:politics_idea >= 4
+			}
+			flag:diplomatic_idea = {
+				custom_label = ve_gecici_9
+				var:diplomatic_idea >= 4
+			}
+			flag:trade_idea = {
+				custom_label = ve_gecici_9
+				var:trade_idea >= 4
+			}
+			flag:qualification_idea = {
+				custom_label = ve_gecici_9
+				var:qualification_idea >= 4
+			}
+			flag:humanist_idea = {
+				custom_label = ve_gecici_9
+				var:humanist_idea >= 4
+			}
+			flag:syndicalism_idea = {
+				custom_label = ve_gecici_9
+				var:syndicalism_idea >= 4
+			}
+			flag:offensive_idea = {
+				custom_label = ve_gecici_9
+				var:offensive_idea >= 4
+			}
+			flag:defensive_idea = {
+				custom_label = ve_gecici_9
+				var:defensive_idea >= 4
+			}
+			flag:naval_idea = {
+				custom_label = ve_gecici_9
+				var:naval_idea >= 4
+			}
+			flag:militarization_idea = {
+				custom_label = ve_gecici_9
+				var:militarization_idea >= 4
+			}
+			flag:imperialist_idea = {
+				custom_label = ve_gecici_9
+				var:imperialist_idea >= 4
+			}
+		}
+	}
+	effect = {
+		switch = {
+			trigger = scope:idea_group
+			flag:innovative_idea = {
+				custom_label = ve_gecici_9
+				add_modifier = {
+					name = innovative_idea_4_mdf
+					months = -1
+				}
+			}
+			flag:economic_idea = {
+				custom_label = ve_gecici_10
+				add_modifier = {
+					name = economic_idea_4_mdf
+					months = -1
+				}
+			}
+			flag:administrative_idea = {
+				custom_label = ve_gecici_9
+				add_modifier = {
+					name = administrative_idea_4_mdf
+					months = -1
+				}
+			}
+			flag:ethnocentrism_idea = {
+				custom_label = ve_gecici_9
+				add_modifier = {
+					name = ethnocentrism_idea_4_mdf
+					months = -1
+				}
+			}
+			flag:politics_idea = {
+				custom_label = ve_gecici_9
+				add_modifier = {
+					name = politics_idea_4_mdf
+					months = -1
+				}
+			}
+			flag:diplomatic_idea = {
+				custom_label = ve_gecici_9
+				add_modifier = {
+					name = diplomatic_idea_4_mdf
+					months = -1
+				}
+			}
+			flag:trade_idea = {
+				custom_label = ve_gecici_9
+				add_modifier = {
+					name = trade_idea_4_mdf
+					months = -1
+				}
+			}
+			flag:qualification_idea = {
+				custom_label = ve_gecici_9
+				add_modifier = {
+					name = qualification_idea_4_mdf
+					months = -1
+				}
+			}
+			flag:humanist_idea = {
+				custom_label = ve_gecici_9
+				add_modifier = {
+					name = humanist_idea_4_mdf
+					months = -1
+				}
+			}
+			flag:syndicalism_idea = {
+				custom_label = ve_gecici_9
+				add_modifier = {
+					name = syndicalism_idea_4_mdf
+					months = -1
+				}
+			}
+			flag:offensive_idea = {
+				custom_label = ve_gecici_9
+				add_modifier = {
+					name = offensive_idea_4_mdf
+					months = -1
+				}
+			}
+			flag:defensive_idea = {
+				custom_label = ve_gecici_9
+				add_modifier = {
+					name = defensive_idea_4_mdf
+					months = -1
+				}
+			}
+			flag:naval_idea = {
+				custom_label = ve_gecici_9
+				add_modifier = {
+					name = naval_idea_4_mdf
+					months = -1
+				}
+			}
+			flag:militarization_idea = {
+				custom_label = ve_gecici_9
+				add_modifier = {
+					name = militarization_idea_4_mdf
+					months = -1
+				}
+			}
+			flag:imperialist_idea = {
+				custom_label = ve_gecici_9
+				add_modifier = {
+					name = imperialist_idea_4_mdf
+					months = -1
+				}
+			}
+		}
+	}
+}
+
+idea_tooltip_5 = {
+	scope = country
+	is_valid = {
+		switch = {
+			trigger = scope:idea_group
+			flag:innovative_idea = {
+				var:innovative_idea >= 5
+			}
+			flag:economic_idea = {
+				custom_label = ve_gecici_10
+				var:economic_idea >= 5
+			}
+			flag:administrative_idea = {
+				custom_label = ve_gecici_9
+				var:administrative_idea >= 5
+			}
+			flag:ethnocentrism_idea = {
+				custom_label = ve_gecici_9
+				var:ethnocentrism_idea >= 5
+			}
+			flag:politics_idea = {
+				custom_label = ve_gecici_9
+				var:politics_idea >= 5
+			}
+			flag:diplomatic_idea = {
+				custom_label = ve_gecici_9
+				var:diplomatic_idea >= 5
+			}
+			flag:trade_idea = {
+				custom_label = ve_gecici_9
+				var:trade_idea >= 5
+			}
+			flag:qualification_idea = {
+				custom_label = ve_gecici_9
+				var:qualification_idea >= 5
+			}
+			flag:humanist_idea = {
+				custom_label = ve_gecici_9
+				var:humanist_idea >= 5
+			}
+			flag:syndicalism_idea = {
+				custom_label = ve_gecici_9
+				var:syndicalism_idea >= 5
+			}
+			flag:offensive_idea = {
+				custom_label = ve_gecici_9
+				var:offensive_idea >= 5
+			}
+			flag:defensive_idea = {
+				custom_label = ve_gecici_9
+				var:defensive_idea >= 5
+			}
+			flag:naval_idea = {
+				custom_label = ve_gecici_9
+				var:naval_idea >= 5
+			}
+			flag:militarization_idea = {
+				custom_label = ve_gecici_9
+				var:militarization_idea >= 5
+			}
+			flag:imperialist_idea = {
+				custom_label = ve_gecici_9
+				var:imperialist_idea >= 5
+			}
+		}
+	}
+	effect = {
+		switch = {
+			trigger = scope:idea_group
+			flag:innovative_idea = {
+				custom_label = ve_gecici_9
+				add_modifier = {
+					name = innovative_idea_5_mdf
+					months = -1
+				}
+			}
+			flag:economic_idea = {
+				custom_label = ve_gecici_10
+				add_modifier = {
+					name = economic_idea_5_mdf
+					months = -1
+				}
+			}
+			flag:administrative_idea = {
+				custom_label = ve_gecici_9
+				add_modifier = {
+					name = administrative_idea_5_mdf
+					months = -1
+				}
+			}
+			flag:ethnocentrism_idea = {
+				custom_label = ve_gecici_9
+				add_modifier = {
+					name = ethnocentrism_idea_5_mdf
+					months = -1
+				}
+			}
+			flag:politics_idea = {
+				custom_label = ve_gecici_9
+				add_modifier = {
+					name = politics_idea_5_mdf
+					months = -1
+				}
+			}
+			flag:diplomatic_idea = {
+				custom_label = ve_gecici_9
+				add_modifier = {
+					name = diplomatic_idea_5_mdf
+					months = -1
+				}
+			}
+			flag:trade_idea = {
+				custom_label = ve_gecici_9
+				add_modifier = {
+					name = trade_idea_5_mdf
+					months = -1
+				}
+			}
+			flag:qualification_idea = {
+				custom_label = ve_gecici_9
+				add_modifier = {
+					name = qualification_idea_5_mdf
+					months = -1
+				}
+			}
+			flag:humanist_idea = {
+				custom_label = ve_gecici_9
+				add_modifier = {
+					name = humanist_idea_5_mdf
+					months = -1
+				}
+			}
+			flag:syndicalism_idea = {
+				custom_label = ve_gecici_9
+				add_modifier = {
+					name = syndicalism_idea_5_mdf
+					months = -1
+				}
+			}
+			flag:offensive_idea = {
+				custom_label = ve_gecici_9
+				add_modifier = {
+					name = offensive_idea_5_mdf
+					months = -1
+				}
+			}
+			flag:defensive_idea = {
+				custom_label = ve_gecici_9
+				add_modifier = {
+					name = defensive_idea_5_mdf
+					months = -1
+				}
+			}
+			flag:naval_idea = {
+				custom_label = ve_gecici_9
+				add_modifier = {
+					name = naval_idea_5_mdf
+					months = -1
+				}
+			}
+			flag:militarization_idea = {
+				custom_label = ve_gecici_9
+				add_modifier = {
+					name = militarization_idea_5_mdf
+					months = -1
+				}
+			}
+			flag:imperialist_idea = {
+				custom_label = ve_gecici_9
+				add_modifier = {
+					name = imperialist_idea_5_mdf
+					months = -1
+				}
+			}
+		}
+	}
+}
+
+idea_tooltip_6 = {
+	scope = country
+	is_valid = {
+		switch = {
+			trigger = scope:idea_group
+			flag:innovative_idea = {
+				var:innovative_idea >= 6
+			}
+			flag:economic_idea = {
+				custom_label = ve_gecici_10
+				var:economic_idea >= 6
+			}
+			flag:administrative_idea = {
+				custom_label = ve_gecici_9
+				var:administrative_idea >= 6
+			}
+			flag:ethnocentrism_idea = {
+				custom_label = ve_gecici_9
+				var:ethnocentrism_idea >= 6
+			}
+			flag:politics_idea = {
+				custom_label = ve_gecici_9
+				var:politics_idea >= 6
+			}
+			flag:diplomatic_idea = {
+				custom_label = ve_gecici_9
+				var:diplomatic_idea >= 6
+			}
+			flag:trade_idea = {
+				custom_label = ve_gecici_9
+				var:trade_idea >= 6
+			}
+			flag:qualification_idea = {
+				custom_label = ve_gecici_9
+				var:qualification_idea >= 6
+			}
+			flag:humanist_idea = {
+				custom_label = ve_gecici_9
+				var:humanist_idea >= 6
+			}
+			flag:syndicalism_idea = {
+				custom_label = ve_gecici_9
+				var:syndicalism_idea >= 6
+			}
+			flag:offensive_idea = {
+				custom_label = ve_gecici_9
+				var:offensive_idea >= 6
+			}
+			flag:defensive_idea = {
+				custom_label = ve_gecici_9
+				var:defensive_idea >= 6
+			}
+			flag:naval_idea = {
+				custom_label = ve_gecici_9
+				var:naval_idea >= 6
+			}
+			flag:militarization_idea = {
+				custom_label = ve_gecici_9
+				var:militarization_idea >= 6
+			}
+			flag:imperialist_idea = {
+				custom_label = ve_gecici_9
+				var:imperialist_idea >= 6
+			}
+		}
+	}
+	effect = {
+		switch = {
+			trigger = scope:idea_group
+			flag:innovative_idea = {
+				custom_label = ve_gecici_9
+				add_modifier = {
+					name = innovative_idea_6_mdf
+					months = -1
+				}
+			}
+			flag:economic_idea = {
+				custom_label = ve_gecici_10
+				add_modifier = {
+					name = economic_idea_6_mdf
+					months = -1
+				}
+			}
+			flag:administrative_idea = {
+				custom_label = ve_gecici_9
+				add_modifier = {
+					name = administrative_idea_6_mdf
+					months = -1
+				}
+			}
+			flag:ethnocentrism_idea = {
+				custom_label = ve_gecici_9
+				add_modifier = {
+					name = ethnocentrism_idea_6_mdf
+					months = -1
+				}
+			}
+			flag:politics_idea = {
+				custom_label = ve_gecici_9
+				add_modifier = {
+					name = politics_idea_6_mdf
+					months = -1
+				}
+			}
+			flag:diplomatic_idea = {
+				custom_label = ve_gecici_9
+				add_modifier = {
+					name = diplomatic_idea_6_mdf
+					months = -1
+				}
+			}
+			flag:trade_idea = {
+				custom_label = ve_gecici_9
+				add_modifier = {
+					name = trade_idea_6_mdf
+					months = -1
+				}
+			}
+			flag:qualification_idea = {
+				custom_label = ve_gecici_9
+				add_modifier = {
+					name = qualification_idea_6_mdf
+					months = -1
+				}
+			}
+			flag:humanist_idea = {
+				custom_label = ve_gecici_9
+				add_modifier = {
+					name = humanist_idea_6_mdf
+					months = -1
+				}
+			}
+			flag:syndicalism_idea = {
+				custom_label = ve_gecici_9
+				add_modifier = {
+					name = syndicalism_idea_6_mdf
+					months = -1
+				}
+			}
+			flag:offensive_idea = {
+				custom_label = ve_gecici_9
+				add_modifier = {
+					name = offensive_idea_6_mdf
+					months = -1
+				}
+			}
+			flag:defensive_idea = {
+				custom_label = ve_gecici_9
+				add_modifier = {
+					name = defensive_idea_6_mdf
+					months = -1
+				}
+			}
+			flag:naval_idea = {
+				custom_label = ve_gecici_9
+				add_modifier = {
+					name = naval_idea_6_mdf
+					months = -1
+				}
+			}
+			flag:militarization_idea = {
+				custom_label = ve_gecici_9
+				add_modifier = {
+					name = militarization_idea_6_mdf
+					months = -1
+				}
+			}
+			flag:imperialist_idea = {
+				custom_label = ve_gecici_9
+				add_modifier = {
+					name = imperialist_idea_6_mdf
+					months = -1
+				}
+			}
+		}
+	}
+}
+
+idea_tooltip_7 = {
+	scope = country
+	is_valid = {
+		switch = {
+			trigger = scope:idea_group
+			flag:innovative_idea = {
+				var:innovative_idea >= 7
+			}
+			flag:economic_idea = {
+				custom_label = ve_gecici_10
+				var:economic_idea >= 7
+			}
+			flag:administrative_idea = {
+				custom_label = ve_gecici_9
+				var:administrative_idea >= 7
+			}
+			flag:ethnocentrism_idea = {
+				custom_label = ve_gecici_9
+				var:ethnocentrism_idea >= 7
+			}
+			flag:politics_idea = {
+				custom_label = ve_gecici_9
+				var:politics_idea >= 7
+			}
+			flag:diplomatic_idea = {
+				custom_label = ve_gecici_9
+				var:diplomatic_idea >= 7
+			}
+			flag:trade_idea = {
+				custom_label = ve_gecici_9
+				var:trade_idea >= 7
+			}
+			flag:qualification_idea = {
+				custom_label = ve_gecici_9
+				var:qualification_idea >= 7
+			}
+			flag:humanist_idea = {
+				custom_label = ve_gecici_9
+				var:humanist_idea >= 7
+			}
+			flag:syndicalism_idea = {
+				custom_label = ve_gecici_9
+				var:syndicalism_idea >= 7
+			}
+			flag:offensive_idea = {
+				custom_label = ve_gecici_9
+				var:offensive_idea >= 7
+			}
+			flag:defensive_idea = {
+				custom_label = ve_gecici_9
+				var:defensive_idea >= 7
+			}
+			flag:naval_idea = {
+				custom_label = ve_gecici_9
+				var:naval_idea >= 7
+			}
+			flag:militarization_idea = {
+				custom_label = ve_gecici_9
+				var:militarization_idea >= 7
+			}
+			flag:imperialist_idea = {
+				custom_label = ve_gecici_9
+				var:imperialist_idea >= 7
+			}
+		}
+	}
+	effect = {
+		switch = {
+			trigger = scope:idea_group
+			flag:innovative_idea = {
+				custom_label = ve_gecici_9
+				add_modifier = {
+					name = innovative_idea_7_mdf
+					months = -1
+				}
+			}
+			flag:economic_idea = {
+				custom_label = ve_gecici_10
+				add_modifier = {
+					name = economic_idea_7_mdf
+					months = -1
+				}
+			}
+			flag:administrative_idea = {
+				custom_label = ve_gecici_9
+				add_modifier = {
+					name = administrative_idea_7_mdf
+					months = -1
+				}
+			}
+			flag:ethnocentrism_idea = {
+				custom_label = ve_gecici_9
+				add_modifier = {
+					name = ethnocentrism_idea_7_mdf
+					months = -1
+				}
+			}
+			flag:politics_idea = {
+				custom_label = ve_gecici_9
+				add_modifier = {
+					name = politics_idea_7_mdf
+					months = -1
+				}
+			}
+			flag:diplomatic_idea = {
+				custom_label = ve_gecici_9
+				add_modifier = {
+					name = diplomatic_idea_7_mdf
+					months = -1
+				}
+			}
+			flag:trade_idea = {
+				custom_label = ve_gecici_9
+				add_modifier = {
+					name = trade_idea_7_mdf
+					months = -1
+				}
+			}
+			flag:qualification_idea = {
+				custom_label = ve_gecici_9
+				add_modifier = {
+					name = qualification_idea_7_mdf
+					months = -1
+				}
+			}
+			flag:humanist_idea = {
+				custom_label = ve_gecici_9
+				add_modifier = {
+					name = humanist_idea_7_mdf
+					months = -1
+				}
+			}
+			flag:syndicalism_idea = {
+				custom_label = ve_gecici_9
+				add_modifier = {
+					name = syndicalism_idea_7_mdf
+					months = -1
+				}
+			}
+			flag:offensive_idea = {
+				custom_label = ve_gecici_9
+				add_modifier = {
+					name = offensive_idea_7_mdf
+					months = -1
+				}
+			}
+			flag:defensive_idea = {
+				custom_label = ve_gecici_9
+				add_modifier = {
+					name = defensive_idea_7_mdf
+					months = -1
+				}
+			}
+			flag:naval_idea = {
+				custom_label = ve_gecici_9
+				add_modifier = {
+					name = naval_idea_7_mdf
+					months = -1
+				}
+			}
+			flag:militarization_idea = {
+				custom_label = ve_gecici_9
+				add_modifier = {
+					name = militarization_idea_7_mdf
+					months = -1
+				}
+			}
+			flag:imperialist_idea = {
+				custom_label = ve_gecici_9
+				add_modifier = {
+					name = imperialist_idea_7_mdf
+					months = -1
+				}
+			}
+		}
+	}
+}

@@ -178,6 +178,14 @@ texticon = {
     fontsize = 50
   }
 }
+texticon = {
+  icon = catholic_icon
+  iconsize = {
+    texture = "gfx/interface/ve_rome_not_owned.dds"
+    offset = { 0 15 }
+    fontsize = 120
+  }
+}
 
 
 

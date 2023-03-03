@@ -259,10 +259,10 @@
 	Innovative - ADM:
 	1-country_prestige_mult
 	2-country_weekly_innovation_mult
-	3-technology_invention_cost_mult
+	3-building_university_throughput_mult
 	4-country_bureaucracy_add
-	5-country_tech_spread_mult - state_education_access_wealth_add
-	6-country_war_exhaustion_casualties_mult ve 
+	5-country_tech_spread_mult ve state_education_access_wealth_add
+	6-country_war_exhaustion_casualties_mult
 	7-country_government_wages_mult
 
 	Diplomatic - DIP:
@@ -288,8 +288,8 @@
 	2-state_construction_mult ve country_private_construction_allocation_mult
 	3-country_minting_mult
 	4-country_loan_interest_rate_mult
-	5-state_tax_waste_add
-	6-country_military_wages_mult
+	5-country_tax_income_add
+	6-country_production_tech_cost_mult
 	7-building_production_mult (every building)
 	
 	Trade - DIP:
@@ -307,7 +307,7 @@
 	3-country_military_wages_mult
 	4-unit_army_defense_mult
 	5-unit_kill_rate_add
-	6-unit_recovery_rate_add
+	6-unit_defense_forested_add
 	7-unit_supply_consumption_mult
 	
 	Administrative - ADM:
@@ -323,7 +323,7 @@
 	1-state_migration_pull_mult
 	2-state_education_access_add ve state_expected_sol_from_literacy
 	3-technology_invention_cost_mult
-	4-building_university_throughput_mult
+	4-building_arts_academy_throughput_mult
 	5-state_pop_qualifications_mult
 	6-building_arts_academy_throughput_mult //EDIT - Make it for monuments
 	7-building_output_{good_type}_mult ve state_rich_standard_of_living_add (lüks eşyalar)
