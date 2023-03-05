@@ -1,16 +1,17 @@
 ve_supremacy_1 = {
 	scope = country
 	is_valid = {
-		any_country = {
-			is_ai = no
-			var:culture_reform_point >= 750
-			var:selected_reform_value < 7
+		var:culture_reform_point >= 750
+		NOT = {
+			has_variable = disable_supremacy_1
 		}
 	}
 	effect = {
-		every_country = {
+		if = {
 			limit = {
-				is_ai = no
+				NOT = {
+					has_variable = disable_intellectualy_1
+				}
 			}
 			change_variable = {
 				#Eats Reform Point
@@ -40,6 +41,29 @@ ve_supremacy_1 = {
 					add = 1
 				}
 			}
+			if = {
+				limit = {
+					NOT = {
+						has_modifier = national_supremacy_mdf_1
+					}
+				}
+				add_modifier = {
+					name = national_supremacy_mdf_1
+					months = -1
+				}
+			}
+			set_variable = go_next_reform_2
+			set_variable = disable_intellectualy_1
+			reform_limiter = yes
+			reform_bar_effects = yes
+		}
+		else = {
+			show_as_tooltip = {
+				add_modifier = {
+					name = national_supremacy_mdf_1
+					months = -1
+				}
+			}
 		}
 	}
 }
@@ -47,16 +71,18 @@ ve_supremacy_1 = {
 ve_supremacy_2 = {
 	scope = country
 	is_valid = {
-		any_country = {
-			is_ai = no
-			var:culture_reform_point >= 750
-			var:selected_reform_value < 7
+		var:culture_reform_point >= 750
+		has_variable = go_next_reform_2
+		NOT = {
+			has_variable = disable_supremacy_2
 		}
 	}
 	effect = {
-		every_country = {
+		if = {
 			limit = {
-				is_ai = no
+				NOT = {
+					has_variable = disable_intellectualy_2
+				}
 			}
 			change_variable = {
 				name = culture_reform_point
@@ -69,6 +95,31 @@ ve_supremacy_2 = {
 			change_variable = {
 				name = selected_reform_value
 				add = 1
+			}
+			if = {
+				limit = {
+					NOT = {
+						has_modifier = national_supremacy_mdf_2
+					}
+				}
+				add_modifier = {
+					name = national_supremacy_mdf_2
+					months = -1
+				}
+			}
+			set_variable = disable_intellectualy_2
+			set_variable = go_next_reform_3
+			reform_limiter = yes
+			hidden_effect = {
+				reform_bar_effects = yes
+			}
+		}
+		else = {
+			show_as_tooltip = {
+				add_modifier = {
+					name = national_supremacy_mdf_2
+					months = -1
+				}
 			}
 		}
 	}
@@ -77,16 +128,18 @@ ve_supremacy_2 = {
 ve_supremacy_3 = {
 	scope = country
 	is_valid = {
-		any_country = {
-			is_ai = no
-			var:culture_reform_point >= 750
-			var:selected_reform_value < 7
+		var:culture_reform_point >= 750
+		has_variable = go_next_reform_3
+		NOT = {
+			has_variable = disable_supremacy_3
 		}
 	}
 	effect = {
-		every_country = {
+		if = {
 			limit = {
-				is_ai = no
+				NOT = {
+					has_variable = disable_intellectualy_3
+				}
 			}
 			change_variable = {
 				name = culture_reform_point
@@ -99,6 +152,31 @@ ve_supremacy_3 = {
 			change_variable = {
 				name = selected_reform_value
 				add = 1
+			}
+			if = {
+				limit = {
+					NOT = {
+						has_modifier = national_supremacy_mdf_3
+					}
+				}
+				add_modifier = {
+					name = national_supremacy_mdf_3
+					months = -1
+				}
+			}
+			set_variable = disable_intellectualy_3
+			set_variable = go_next_reform_4
+			reform_limiter = yes
+			hidden_effect = {
+				reform_bar_effects = yes
+			}
+		}
+		else = {
+			show_as_tooltip = {
+				add_modifier = {
+					name = national_supremacy_mdf_3
+					months = -1
+				}
 			}
 		}
 	}
@@ -107,16 +185,18 @@ ve_supremacy_3 = {
 ve_supremacy_4 = {
 	scope = country
 	is_valid = {
-		any_country = {
-			is_ai = no
-			var:culture_reform_point >= 750
-			var:selected_reform_value < 7
+		var:culture_reform_point >= 750
+		has_variable = go_next_reform_4
+		NOT = {
+			has_variable = disable_supremacy_4
 		}
 	}
 	effect = {
-		every_country = {
+		if = {
 			limit = {
-				is_ai = no
+				NOT = {
+					has_variable = disable_intellectualy_4
+				}
 			}
 			change_variable = {
 				name = culture_reform_point
@@ -129,6 +209,31 @@ ve_supremacy_4 = {
 			change_variable = {
 				name = selected_reform_value
 				add = 1
+			}
+			if = {
+				limit = {
+					NOT = {
+						has_modifier = national_supremacy_mdf_4
+					}
+				}
+				add_modifier = {
+					name = national_supremacy_mdf_4
+					months = -1
+				}
+			}
+			set_variable = disable_intellectualy_4
+			set_variable = go_next_reform_5
+			reform_limiter = yes
+			hidden_effect = {
+				reform_bar_effects = yes
+			}
+		}
+		else = {
+			show_as_tooltip = {
+				add_modifier = {
+					name = national_supremacy_mdf_4
+					months = -1
+				}
 			}
 		}
 	}
@@ -137,16 +242,18 @@ ve_supremacy_4 = {
 ve_supremacy_5 = {
 	scope = country
 	is_valid = {
-		any_country = {
-			is_ai = no
-			var:culture_reform_point >= 750
-			var:selected_reform_value < 7
+		var:culture_reform_point >= 750
+		has_variable = go_next_reform_5
+		NOT = {
+			has_variable = disable_supremacy_5
 		}
 	}
 	effect = {
-		every_country = {
+		if = {
 			limit = {
-				is_ai = no
+				NOT = {
+					has_variable = disable_intellectualy_5
+				}
 			}
 			change_variable = {
 				name = culture_reform_point
@@ -159,6 +266,31 @@ ve_supremacy_5 = {
 			change_variable = {
 				name = selected_reform_value
 				add = 1
+			}
+			if = {
+				limit = {
+					NOT = {
+						has_modifier = national_supremacy_mdf_5
+					}
+				}
+				add_modifier = {
+					name = national_supremacy_mdf_5
+					months = -1
+				}
+			}
+			set_variable = disable_intellectualy_5
+			set_variable = go_next_reform_6
+			reform_limiter = yes
+			hidden_effect = {
+				reform_bar_effects = yes
+			}
+		}
+		else = {
+			show_as_tooltip = {
+				add_modifier = {
+					name = national_supremacy_mdf_5
+					months = -1
+				}
 			}
 		}
 	}
@@ -167,16 +299,18 @@ ve_supremacy_5 = {
 ve_supremacy_6 = {
 	scope = country
 	is_valid = {
-		any_country = {
-			is_ai = no
-			var:culture_reform_point >= 750
-			var:selected_reform_value < 7
+		var:culture_reform_point >= 750
+		has_variable = go_next_reform_6
+		NOT = {
+			has_variable = disable_supremacy_6
 		}
 	}
 	effect = {
-		every_country = {
+		if = {
 			limit = {
-				is_ai = no
+				NOT = {
+					has_variable = disable_intellectualy_6
+				}
 			}
 			change_variable = {
 				name = culture_reform_point
@@ -189,6 +323,31 @@ ve_supremacy_6 = {
 			change_variable = {
 				name = selected_reform_value
 				add = 1
+			}
+			if = {
+				limit = {
+					NOT = {
+						has_modifier = national_supremacy_mdf_6
+					}
+				}
+				add_modifier = {
+					name = national_supremacy_mdf_6
+					months = -1
+				}
+			}
+			set_variable = disable_intellectualy_6
+			set_variable = go_next_reform_7
+			reform_limiter = yes
+			hidden_effect = {
+				reform_bar_effects = yes
+			}
+		}
+		else = {
+			show_as_tooltip = {
+				add_modifier = {
+					name = national_supremacy_mdf_6
+					months = -1
+				}
 			}
 		}
 	}
@@ -197,16 +356,18 @@ ve_supremacy_6 = {
 ve_supremacy_7 = {
 	scope = country
 	is_valid = {
-		any_country = {
-			is_ai = no
-			var:culture_reform_point >= 750
-			var:selected_reform_value < 7
+		var:culture_reform_point >= 750
+		has_variable = go_next_reform_7
+		NOT = {
+			has_variable = disable_supremacy_7
 		}
 	}
 	effect = {
-		every_country = {
+		if = {
 			limit = {
-				is_ai = no
+				NOT = {
+					has_variable = disable_intellectualy_7
+				}
 			}
 			change_variable = {
 				name = culture_reform_point
@@ -220,6 +381,30 @@ ve_supremacy_7 = {
 				name = selected_reform_value
 				add = 1
 			}
+			if = {
+				limit = {
+					NOT = {
+						has_modifier = national_supremacy_mdf_7
+					}
+				}
+				add_modifier = {
+					name = national_supremacy_mdf_7
+					months = -1
+				}
+			}
+			set_variable = disable_intellectualy_7
+			reform_limiter = yes
+			hidden_effect = {
+				reform_bar_effects = yes
+			}
+		}
+		else = {
+			show_as_tooltip = {
+				add_modifier = {
+					name = national_supremacy_mdf_7
+					months = -1
+				}
+			}
 		}
 	}
 }
@@ -227,16 +412,17 @@ ve_supremacy_7 = {
 ve_intellectualy_1 = {
 	scope = country
 	is_valid = {
-		any_country = {
-			is_ai = no
-			var:culture_reform_point >= 750
-			var:selected_reform_value < 7
+		var:culture_reform_point >= 750
+		NOT = {
+			has_variable = disable_intellectualy_1
 		}
 	}
 	effect = {
-		every_country = {
+		if = {
 			limit = {
-				is_ai = no
+				NOT = {
+					has_variable = disable_supremacy_1
+				}
 			}
 			change_variable = {
 				name = culture_reform_point
@@ -263,6 +449,31 @@ ve_intellectualy_1 = {
 					add = 1
 				}
 			}
+			if = {
+				limit = {
+					NOT = {
+						has_modifier = intellectual_nation_mdf_1
+					}
+				}
+				add_modifier = {
+					name = intellectual_nation_mdf_1
+					months = -1
+				}
+			}
+			set_variable = disable_supremacy_1
+			set_variable = go_next_reform_2
+			reform_limiter = yes
+			hidden_effect = {
+				reform_bar_effects = yes
+			}
+		}
+		else = {
+			show_as_tooltip = {
+				add_modifier = {
+					name = intellectual_nation_mdf_1
+					months = -1
+				}
+			}
 		}
 	}
 }
@@ -270,16 +481,18 @@ ve_intellectualy_1 = {
 ve_intellectualy_2 = {
 	scope = country
 	is_valid = {
-		any_country = {
-			is_ai = no
-			var:culture_reform_point >= 750
-			var:selected_reform_value < 7
+		var:culture_reform_point >= 750
+		has_variable = go_next_reform_2
+		NOT = {
+			has_variable = disable_intellectualy_2
 		}
 	}
 	effect = {
-		every_country = {
+		if = {
 			limit = {
-				is_ai = no
+				NOT = {
+					has_variable = disable_supremacy_2
+				}
 			}
 			change_variable = {
 				name = culture_reform_point
@@ -292,6 +505,31 @@ ve_intellectualy_2 = {
 			change_variable = {
 				name = selected_reform_value
 				add = 1
+			}
+			if = {
+				limit = {
+					NOT = {
+						has_modifier = intellectual_nation_mdf_2
+					}
+				}
+				add_modifier = {
+					name = intellectual_nation_mdf_2
+					months = -1
+				}
+			}
+			set_variable = disable_supremacy_2
+			set_variable = go_next_reform_3
+			reform_limiter = yes
+			hidden_effect = {
+				reform_bar_effects = yes
+			}
+		}
+		else = {
+			show_as_tooltip = {
+				add_modifier = {
+					name = intellectual_nation_mdf_2
+					months = -1
+				}
 			}
 		}
 	}
@@ -300,16 +538,18 @@ ve_intellectualy_2 = {
 ve_intellectualy_3 = {
 	scope = country
 	is_valid = {
-		any_country = {
-			is_ai = no
-			var:culture_reform_point >= 750
-			var:selected_reform_value < 7
+		var:culture_reform_point >= 750
+		has_variable = go_next_reform_3
+		NOT = {
+			has_variable = disable_intellectualy_3
 		}
 	}
 	effect = {
-		every_country = {
+		if = {
 			limit = {
-				is_ai = no
+				NOT = {
+					has_variable = disable_supremacy_3
+				}
 			}
 			change_variable = {
 				name = culture_reform_point
@@ -322,6 +562,31 @@ ve_intellectualy_3 = {
 			change_variable = {
 				name = selected_reform_value
 				add = 1
+			}
+			if = {
+				limit = {
+					NOT = {
+						has_modifier = intellectual_nation_mdf_3
+					}
+				}
+				add_modifier = {
+					name = intellectual_nation_mdf_3
+					months = -1
+				}
+			}
+			set_variable = disable_supremacy_3
+			set_variable = go_next_reform_4
+			reform_limiter = yes
+			hidden_effect = {
+				reform_bar_effects = yes
+			}
+		}
+		else = {
+			show_as_tooltip = {
+				add_modifier = {
+					name = intellectual_nation_mdf_3
+					months = -1
+				}
 			}
 		}
 	}
@@ -330,16 +595,18 @@ ve_intellectualy_3 = {
 ve_intellectualy_4 = {
 	scope = country
 	is_valid = {
-		any_country = {
-			is_ai = no
-			var:culture_reform_point >= 750
-			var:selected_reform_value < 7
+		var:culture_reform_point >= 750
+		has_variable = go_next_reform_4
+		NOT = {
+			has_variable = disable_intellectualy_4
 		}
 	}
 	effect = {
-		every_country = {
+		if = {
 			limit = {
-				is_ai = no
+				NOT = {
+					has_variable = disable_supremacy_4
+				}
 			}
 			change_variable = {
 				name = culture_reform_point
@@ -352,6 +619,31 @@ ve_intellectualy_4 = {
 			change_variable = {
 				name = selected_reform_value
 				add = 1
+			}
+			if = {
+				limit = {
+					NOT = {
+						has_modifier = intellectual_nation_mdf_4
+					}
+				}
+				add_modifier = {
+					name = intellectual_nation_mdf_4
+					months = -1
+				}
+			}
+			set_variable = disable_supremacy_4
+			set_variable = go_next_reform_5
+			reform_limiter = yes
+			hidden_effect = {
+				reform_bar_effects = yes
+			}
+		}
+		else = {
+			show_as_tooltip = {
+				add_modifier = {
+					name = intellectual_nation_mdf_4
+					months = -1
+				}
 			}
 		}
 	}
@@ -360,16 +652,18 @@ ve_intellectualy_4 = {
 ve_intellectualy_5 = {
 	scope = country
 	is_valid = {
-		any_country = {
-			is_ai = no
-			var:culture_reform_point >= 750
-			var:selected_reform_value < 7
+		var:culture_reform_point >= 750
+		has_variable = go_next_reform_5
+		NOT = {
+			has_variable = disable_intellectualy_5
 		}
 	}
 	effect = {
-		every_country = {
+		if = {
 			limit = {
-				is_ai = no
+				NOT = {
+					has_variable = disable_supremacy_5
+				}
 			}
 			change_variable = {
 				name = culture_reform_point
@@ -382,6 +676,31 @@ ve_intellectualy_5 = {
 			change_variable = {
 				name = selected_reform_value
 				add = 1
+			}
+			if = {
+				limit = {
+					NOT = {
+						has_modifier = intellectual_nation_mdf_5
+					}
+				}
+				add_modifier = {
+					name = intellectual_nation_mdf_5
+					months = -1
+				}
+			}
+			set_variable = disable_supremacy_5
+			set_variable = go_next_reform_6
+			reform_limiter = yes
+			hidden_effect = {
+				reform_bar_effects = yes
+			}
+		}
+		else = {
+			show_as_tooltip = {
+				add_modifier = {
+					name = intellectual_nation_mdf_5
+					months = -1
+				}
 			}
 		}
 	}
@@ -390,16 +709,18 @@ ve_intellectualy_5 = {
 ve_intellectualy_6 = {
 	scope = country
 	is_valid = {
-		any_country = {
-			is_ai = no
-			var:culture_reform_point >= 750
-			var:selected_reform_value < 7
+		var:culture_reform_point >= 750
+		has_variable = go_next_reform_6
+		NOT = {
+			has_variable = disable_intellectualy_6
 		}
 	}
 	effect = {
-		every_country = {
+		if = {
 			limit = {
-				is_ai = no
+				NOT = {
+					has_variable = disable_supremacy_6
+				}
 			}
 			change_variable = {
 				name = culture_reform_point
@@ -412,6 +733,31 @@ ve_intellectualy_6 = {
 			change_variable = {
 				name = selected_reform_value
 				add = 1
+			}
+			if = {
+				limit = {
+					NOT = {
+						has_modifier = intellectual_nation_mdf_6
+					}
+				}
+				add_modifier = {
+					name = intellectual_nation_mdf_6
+					months = -1
+				}
+			}
+			set_variable = disable_supremacy_6
+			set_variable = go_next_reform_7
+			reform_limiter = yes
+			hidden_effect = {
+				reform_bar_effects = yes
+			}
+		}
+		else = {
+			show_as_tooltip = {
+				add_modifier = {
+					name = intellectual_nation_mdf_6
+					months = -1
+				}
 			}
 		}
 	}
@@ -420,16 +766,18 @@ ve_intellectualy_6 = {
 ve_intellectualy_7 = {
 	scope = country
 	is_valid = {
-		any_country = {
-			is_ai = no
-			var:culture_reform_point >= 750
-			var:selected_reform_value < 7
+		var:culture_reform_point >= 750
+		has_variable = go_next_reform_7
+		NOT = {
+			has_variable = disable_intellectualy_7
 		}
 	}
 	effect = {
-		every_country = {
+		if = {
 			limit = {
-				is_ai = no
+				NOT = {
+					has_variable = disable_supremacy_7
+				}
 			}
 			change_variable = {
 				name = culture_reform_point
@@ -443,6 +791,67 @@ ve_intellectualy_7 = {
 				name = selected_reform_value
 				add = 1
 			}
+			if = {
+				limit = {
+					NOT = {
+						has_modifier = intellectual_nation_mdf_7
+					}
+				}
+				add_modifier = {
+					name = intellectual_nation_mdf_7
+					months = -1
+				}
+			}
+			set_variable = disable_supremacy_7
+			reform_limiter = yes
+			hidden_effect = {
+				reform_bar_effects = yes
+			}
+		}
+		else = {
+			show_as_tooltip = {
+				add_modifier = {
+					name = intellectual_nation_mdf_7
+					months = -1
+				}
+			}
+		}
+	}
+}
+
+#Progress Bar Tooltip
+progress_bar_tooltip = {
+	scope = country
+	effect = {
+		reform_bar_effects = yes
+	}
+}
+
+progress_bar_tooltip_supremacy = {
+	scope = country
+	effect = {
+		add_modifier = {
+			name = bar_supremacy_mdf_7
+			months = -1
+		}
+	}
+}
+
+progress_bar_tooltip_intellectual = {
+	scope = country
+	effect = {
+		add_modifier = {
+			name = bar_intellectual_mdf_7
+			months = -1
+		}
+	}
+}
+
+hide_reform_point = {
+	scope = country
+	is_shown = {
+		NOT = {
+			var:selected_reform_value == 7
 		}
 	}
 }

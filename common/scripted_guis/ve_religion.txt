@@ -1,25 +1,255 @@
 ve_aspect_button_1 = {
 	scope = country
 	is_shown = {
-		any_country = {
-			is_ai = no
-			var:piety_bar_point >= 100
-		}
+		var:piety_bar_point >= 100
 	}
 	is_valid = {
-		any_country = {
-			is_ai = no
+		custom_tooltip = {
+			text = piety_cost
 			var:piety_bar_point >= 100
+			trigger_if = {
+				limit = {
+					religion = rel:catholic
+				}
+				NOT = {
+					has_modifier = catholic_aspect_1_mdf
+				}
+			}
+			trigger_else_if = {
+				limit = {
+					religion = rel:protestant
+				}
+				NOT = {
+					has_modifier = protestant_aspect_1_mdf
+				}
+			}
+			trigger_else_if = {
+				limit = {
+					religion = rel:orthodox
+				}
+				NOT = {
+					has_modifier = orthodox_aspect_1_mdf
+				}
+			}
+			trigger_else_if = {
+				limit = {
+					religion = rel:oriental_orthodox
+				}
+				NOT = {
+					has_modifier = coptic_aspect_1_mdf
+				}
+			}
+			trigger_else_if = {
+				limit = {
+					religion = rel:sunni
+				}
+				NOT = {
+					has_modifier = sunni_aspect_1_mdf
+				}
+			}
+			trigger_else_if = {
+				limit = {
+					religion = rel:shiite
+				}
+				NOT = {
+					has_modifier = shia_aspect_1_mdf
+				}
+			}
+			trigger_else_if = {
+				limit = {
+					religion = rel:jewish
+				}
+				NOT = {
+					has_modifier = jewish_aspect_1_mdf
+				}
+			}
+			trigger_else_if = {
+				limit = {
+					religion = rel:mahayana
+				}
+				NOT = {
+					has_modifier = mahayana_aspect_1_mdf
+				}
+			}
+			trigger_else_if = {
+				limit = {
+					religion = rel:gelugpa
+				}
+				NOT = {
+					has_modifier = mahayana_aspect_1_mdf
+				}
+			}
+			trigger_else_if = {
+				limit = {
+					religion = rel:theravada
+				}
+				NOT = {
+					has_modifier = mahayana_aspect_1_mdf
+				}
+			}
+			trigger_else_if = {
+				limit = {
+					religion = rel:hindu
+				}
+				NOT = {
+					has_modifier = hindu_aspect_1_mdf
+				}
+			}
+			trigger_else_if = {
+				limit = {
+					religion = rel:shinto
+				}
+				NOT = {
+					has_modifier = mahayana_aspect_1_mdf
+				}
+			}
+			trigger_else_if = {
+				limit = {
+					religion = rel:sikh
+				}
+				NOT = {
+					has_modifier = sikh_aspect_1_mdf
+				}
+			}
+			trigger_else_if = {
+				limit = {
+					religion = rel:animist
+				}
+				NOT = {
+					has_modifier = animist_aspect_1_mdf
+				}
+			}
 		}
 	}
 	effect = {
-		every_country = {
+		change_variable = {
+			name = piety_bar_point
+			subtract = 100
+		}
+		if = {
 			limit = {
-				is_ai = no
+				religion = rel:catholic
 			}
-			change_variable = {
-				name = piety_bar_point
-				subtract = 100
+			add_modifier = {
+				name = catholic_aspect_1_mdf
+				months = 65
+			}
+		}
+		else_if = {
+			limit = {
+				religion = rel:protestant
+			}
+			add_modifier = {
+				name = protestant_aspect_1_mdf
+				months = 65
+			}
+		}
+		else_if = {
+			limit = {
+				religion = rel:orthodox
+			}
+			add_modifier = {
+				name = orthodox_aspect_1_mdf
+				months = 65
+			}
+		}
+		else_if = {
+			limit = {
+				religion = rel:oriental_orthodox
+			}
+			add_modifier = {
+				name = coptic_aspect_1_mdf
+				months = 65
+			}
+		}
+		else_if = {
+			limit = {
+				religion = rel:sunni
+			}
+			add_modifier = {
+				name = sunni_aspect_1_mdf
+				months = 65
+			}
+		}
+		else_if = {
+			limit = {
+				religion = rel:shiite
+			}
+			add_modifier = {
+				name = shia_aspect_1_mdf
+				months = 65
+			}
+		}
+		else_if = {
+			limit = {
+				religion = rel:jewish
+			}
+			add_modifier = {
+				name = jewish_aspect_1_mdf
+				months = 65
+			}
+		}
+		else_if = {
+			limit = {
+				religion = rel:mahayana
+			}
+			add_modifier = {
+				name = mahayana_aspect_1_mdf
+				months = 65
+			}
+		}
+		else_if = {
+			limit = {
+				religion = rel:gelugpa
+			}
+			add_modifier = {
+				name = mahayana_aspect_1_mdf
+				months = 65
+			}
+		}
+		else_if = {
+			limit = {
+				religion = rel:theravada
+			}
+			add_modifier = {
+				name = mahayana_aspect_1_mdf
+				months = 65
+			}
+		}
+		else_if = {
+			limit = {
+				religion = rel:hindu
+			}
+			add_modifier = {
+				name = hindu_aspect_1_mdf
+				months = 65
+			}
+		}
+		else_if = {
+			limit = {
+				religion = rel:shinto
+			}
+			add_modifier = {
+				name = mahayana_aspect_1_mdf
+				months = 65
+			}
+		}
+		else_if = {
+			limit = {
+				religion = rel:sikh
+			}
+			add_modifier = {
+				name = sikh_aspect_1_mdf
+				months = 65
+			}
+		}
+		else_if = {
+			limit = {
+				religion = rel:animist
+			}
+			add_modifier = {
+				name = animist_aspect_1_mdf
+				months = 65
 			}
 		}
 	}
@@ -28,25 +258,255 @@ ve_aspect_button_1 = {
 ve_aspect_button_2 = {
 	scope = country
 	is_shown = {
-		any_country = {
-			is_ai = no
-			var:piety_bar_point >= 100
-		}
+		var:piety_bar_point >= 100
 	}
 	is_valid = {
-		any_country = {
-			is_ai = no
+		custom_tooltip = {
+			text = piety_cost
 			var:piety_bar_point >= 100
+			trigger_if = {
+				limit = {
+					religion = rel:catholic
+				}
+				NOT = {
+					has_modifier = catholic_aspect_2_mdf
+				}
+			}
+			trigger_else_if = {
+				limit = {
+					religion = rel:protestant
+				}
+				NOT = {
+					has_modifier = protestant_aspect_2_mdf
+				}
+			}
+			trigger_else_if = {
+				limit = {
+					religion = rel:orthodox
+				}
+				NOT = {
+					has_modifier = orthodox_aspect_2_mdf
+				}
+			}
+			trigger_else_if = {
+				limit = {
+					religion = rel:oriental_orthodox
+				}
+				NOT = {
+					has_modifier = coptic_aspect_2_mdf
+				}
+			}
+			trigger_else_if = {
+				limit = {
+					religion = rel:sunni
+				}
+				NOT = {
+					has_modifier = sunni_aspect_2_mdf
+				}
+			}
+			trigger_else_if = {
+				limit = {
+					religion = rel:shiite
+				}
+				NOT = {
+					has_modifier = shia_aspect_2_mdf
+				}
+			}
+			trigger_else_if = {
+				limit = {
+					religion = rel:jewish
+				}
+				NOT = {
+					has_modifier = jewish_aspect_2_mdf
+				}
+			}
+			trigger_else_if = {
+				limit = {
+					religion = rel:mahayana
+				}
+				NOT = {
+					has_modifier = mahayana_aspect_2_mdf
+				}
+			}
+			trigger_else_if = {
+				limit = {
+					religion = rel:gelugpa
+				}
+				NOT = {
+					has_modifier = mahayana_aspect_2_mdf
+				}
+			}
+			trigger_else_if = {
+				limit = {
+					religion = rel:theravada
+				}
+				NOT = {
+					has_modifier = mahayana_aspect_2_mdf
+				}
+			}
+			trigger_else_if = {
+				limit = {
+					religion = rel:hindu
+				}
+				NOT = {
+					has_modifier = hindu_aspect_2_mdf
+				}
+			}
+			trigger_else_if = {
+				limit = {
+					religion = rel:shinto
+				}
+				NOT = {
+					has_modifier = mahayana_aspect_2_mdf
+				}
+			}
+			trigger_else_if = {
+				limit = {
+					religion = rel:sikh
+				}
+				NOT = {
+					has_modifier = sikh_aspect_2_mdf
+				}
+			}
+			trigger_else_if = {
+				limit = {
+					religion = rel:animist
+				}
+				NOT = {
+					has_modifier = animist_aspect_2_mdf
+				}
+			}
 		}
 	}
 	effect = {
-		every_country = {
+		change_variable = {
+			name = piety_bar_point
+			subtract = 100
+		}
+		if = {
 			limit = {
-				is_ai = no
+				religion = rel:catholic
 			}
-			change_variable = {
-				name = piety_bar_point
-				subtract = 100
+			add_modifier = {
+				name = catholic_aspect_2_mdf
+				months = 65
+			}
+		}
+		else_if = {
+			limit = {
+				religion = rel:protestant
+			}
+			add_modifier = {
+				name = protestant_aspect_2_mdf
+				months = 65
+			}
+		}
+		else_if = {
+			limit = {
+				religion = rel:orthodox
+			}
+			add_modifier = {
+				name = orthodox_aspect_2_mdf
+				months = 65
+			}
+		}
+		else_if = {
+			limit = {
+				religion = rel:oriental_orthodox
+			}
+			add_modifier = {
+				name = coptic_aspect_2_mdf
+				months = 65
+			}
+		}
+		else_if = {
+			limit = {
+				religion = rel:sunni
+			}
+			add_modifier = {
+				name = sunni_aspect_2_mdf
+				months = 65
+			}
+		}
+		else_if = {
+			limit = {
+				religion = rel:shiite
+			}
+			add_modifier = {
+				name = shia_aspect_2_mdf
+				months = 65
+			}
+		}
+		else_if = {
+			limit = {
+				religion = rel:jewish
+			}
+			add_modifier = {
+				name = jewish_aspect_2_mdf
+				months = 65
+			}
+		}
+		else_if = {
+			limit = {
+				religion = rel:mahayana
+			}
+			add_modifier = {
+				name = mahayana_aspect_2_mdf
+				months = 65
+			}
+		}
+		else_if = {
+			limit = {
+				religion = rel:gelugpa
+			}
+			add_modifier = {
+				name = mahayana_aspect_2_mdf
+				months = 65
+			}
+		}
+		else_if = {
+			limit = {
+				religion = rel:theravada
+			}
+			add_modifier = {
+				name = mahayana_aspect_2_mdf
+				months = 65
+			}
+		}
+		else_if = {
+			limit = {
+				religion = rel:hindu
+			}
+			add_modifier = {
+				name = hindu_aspect_2_mdf
+				months = 65
+			}
+		}
+		else_if = {
+			limit = {
+				religion = rel:shinto
+			}
+			add_modifier = {
+				name = mahayana_aspect_2_mdf
+				months = 65
+			}
+		}
+		else_if = {
+			limit = {
+				religion = rel:sikh
+			}
+			add_modifier = {
+				name = sikh_aspect_2_mdf
+				months = 65
+			}
+		}
+		else_if = {
+			limit = {
+				religion = rel:animist
+			}
+			add_modifier = {
+				name = animist_aspect_2_mdf
+				months = 65
 			}
 		}
 	}
@@ -55,25 +515,255 @@ ve_aspect_button_2 = {
 ve_aspect_button_3 = {
 	scope = country
 	is_shown = {
-		any_country = {
-			is_ai = no
-			var:piety_bar_point >= 100
-		}
+		var:piety_bar_point >= 100
 	}
 	is_valid = {
-		any_country = {
-			is_ai = no
+		custom_tooltip = {
+			text = piety_cost
 			var:piety_bar_point >= 100
+			trigger_if = {
+				limit = {
+					religion = rel:catholic
+				}
+				NOT = {
+					has_modifier = catholic_aspect_3_mdf
+				}
+			}
+			trigger_else_if = {
+				limit = {
+					religion = rel:protestant
+				}
+				NOT = {
+					has_modifier = protestant_aspect_3_mdf
+				}
+			}
+			trigger_else_if = {
+				limit = {
+					religion = rel:orthodox
+				}
+				NOT = {
+					has_modifier = orthodox_aspect_3_mdf
+				}
+			}
+			trigger_else_if = {
+				limit = {
+					religion = rel:oriental_orthodox
+				}
+				NOT = {
+					has_modifier = coptic_aspect_3_mdf
+				}
+			}
+			trigger_else_if = {
+				limit = {
+					religion = rel:sunni
+				}
+				NOT = {
+					has_modifier = sunni_aspect_3_mdf
+				}
+			}
+			trigger_else_if = {
+				limit = {
+					religion = rel:shiite
+				}
+				NOT = {
+					has_modifier = shia_aspect_3_mdf
+				}
+			}
+			trigger_else_if = {
+				limit = {
+					religion = rel:jewish
+				}
+				NOT = {
+					has_modifier = jewish_aspect_3_mdf
+				}
+			}
+			trigger_else_if = {
+				limit = {
+					religion = rel:mahayana
+				}
+				NOT = {
+					has_modifier = mahayana_aspect_3_mdf
+				}
+			}
+			trigger_else_if = {
+				limit = {
+					religion = rel:gelugpa
+				}
+				NOT = {
+					has_modifier = mahayana_aspect_3_mdf
+				}
+			}
+			trigger_else_if = {
+				limit = {
+					religion = rel:theravada
+				}
+				NOT = {
+					has_modifier = mahayana_aspect_3_mdf
+				}
+			}
+			trigger_else_if = {
+				limit = {
+					religion = rel:hindu
+				}
+				NOT = {
+					has_modifier = hindu_aspect_3_mdf
+				}
+			}
+			trigger_else_if = {
+				limit = {
+					religion = rel:shinto
+				}
+				NOT = {
+					has_modifier = mahayana_aspect_3_mdf
+				}
+			}
+			trigger_else_if = {
+				limit = {
+					religion = rel:sikh
+				}
+				NOT = {
+					has_modifier = sikh_aspect_3_mdf
+				}
+			}
+			trigger_else_if = {
+				limit = {
+					religion = rel:animist
+				}
+				NOT = {
+					has_modifier = animist_aspect_3_mdf
+				}
+			}
 		}
 	}
 	effect = {
-		every_country = {
+		change_variable = {
+			name = piety_bar_point
+			subtract = 100
+		}
+		if = {
 			limit = {
-				is_ai = no
+				religion = rel:catholic
 			}
-			change_variable = {
-				name = piety_bar_point
-				subtract = 100
+			add_modifier = {
+				name = catholic_aspect_3_mdf
+				months = 65
+			}
+		}
+		else_if = {
+			limit = {
+				religion = rel:protestant
+			}
+			add_modifier = {
+				name = protestant_aspect_3_mdf
+				months = 65
+			}
+		}
+		else_if = {
+			limit = {
+				religion = rel:orthodox
+			}
+			add_modifier = {
+				name = orthodox_aspect_3_mdf
+				months = 65
+			}
+		}
+		else_if = {
+			limit = {
+				religion = rel:oriental_orthodox
+			}
+			add_modifier = {
+				name = coptic_aspect_3_mdf
+				months = 65
+			}
+		}
+		else_if = {
+			limit = {
+				religion = rel:sunni
+			}
+			add_modifier = {
+				name = sunni_aspect_3_mdf
+				months = 65
+			}
+		}
+		else_if = {
+			limit = {
+				religion = rel:shiite
+			}
+			add_modifier = {
+				name = shia_aspect_3_mdf
+				months = 65
+			}
+		}
+		else_if = {
+			limit = {
+				religion = rel:jewish
+			}
+			add_modifier = {
+				name = jewish_aspect_3_mdf
+				months = 65
+			}
+		}
+		else_if = {
+			limit = {
+				religion = rel:mahayana
+			}
+			add_modifier = {
+				name = mahayana_aspect_3_mdf
+				months = 65
+			}
+		}
+		else_if = {
+			limit = {
+				religion = rel:gelugpa
+			}
+			add_modifier = {
+				name = mahayana_aspect_3_mdf
+				months = 65
+			}
+		}
+		else_if = {
+			limit = {
+				religion = rel:theravada
+			}
+			add_modifier = {
+				name = mahayana_aspect_3_mdf
+				months = 65
+			}
+		}
+		else_if = {
+			limit = {
+				religion = rel:hindu
+			}
+			add_modifier = {
+				name = hindu_aspect_3_mdf
+				months = 65
+			}
+		}
+		else_if = {
+			limit = {
+				religion = rel:shinto
+			}
+			add_modifier = {
+				name = mahayana_aspect_3_mdf
+				months = 65
+			}
+		}
+		else_if = {
+			limit = {
+				religion = rel:sikh
+			}
+			add_modifier = {
+				name = sikh_aspect_3_mdf
+				months = 65
+			}
+		}
+		else_if = {
+			limit = {
+				religion = rel:animist
+			}
+			add_modifier = {
+				name = animist_aspect_3_mdf
+				months = 65
 			}
 		}
 	}
@@ -82,25 +772,255 @@ ve_aspect_button_3 = {
 ve_aspect_button_4 = {
 	scope = country
 	is_shown = {
-		any_country = {
-			is_ai = no
-			var:piety_bar_point >= 100
-		}
+		var:piety_bar_point >= 100
 	}
 	is_valid = {
-		any_country = {
-			is_ai = no
+		custom_tooltip = {
+			text = piety_cost
 			var:piety_bar_point >= 100
+			trigger_if = {
+				limit = {
+					religion = rel:catholic
+				}
+				NOT = {
+					has_modifier = catholic_aspect_4_mdf
+				}
+			}
+			trigger_else_if = {
+				limit = {
+					religion = rel:protestant
+				}
+				NOT = {
+					has_modifier = protestant_aspect_4_mdf
+				}
+			}
+			trigger_else_if = {
+				limit = {
+					religion = rel:orthodox
+				}
+				NOT = {
+					has_modifier = orthodox_aspect_4_mdf
+				}
+			}
+			trigger_else_if = {
+				limit = {
+					religion = rel:oriental_orthodox
+				}
+				NOT = {
+					has_modifier = coptic_aspect_4_mdf
+				}
+			}
+			trigger_else_if = {
+				limit = {
+					religion = rel:sunni
+				}
+				NOT = {
+					has_modifier = sunni_aspect_4_mdf
+				}
+			}
+			trigger_else_if = {
+				limit = {
+					religion = rel:shiite
+				}
+				NOT = {
+					has_modifier = shia_aspect_4_mdf
+				}
+			}
+			trigger_else_if = {
+				limit = {
+					religion = rel:jewish
+				}
+				NOT = {
+					has_modifier = jewish_aspect_4_mdf
+				}
+			}
+			trigger_else_if = {
+				limit = {
+					religion = rel:mahayana
+				}
+				NOT = {
+					has_modifier = mahayana_aspect_4_mdf
+				}
+			}
+			trigger_else_if = {
+				limit = {
+					religion = rel:gelugpa
+				}
+				NOT = {
+					has_modifier = mahayana_aspect_4_mdf
+				}
+			}
+			trigger_else_if = {
+				limit = {
+					religion = rel:theravada
+				}
+				NOT = {
+					has_modifier = mahayana_aspect_4_mdf
+				}
+			}
+			trigger_else_if = {
+				limit = {
+					religion = rel:hindu
+				}
+				NOT = {
+					has_modifier = hindu_aspect_4_mdf
+				}
+			}
+			trigger_else_if = {
+				limit = {
+					religion = rel:shinto
+				}
+				NOT = {
+					has_modifier = mahayana_aspect_4_mdf
+				}
+			}
+			trigger_else_if = {
+				limit = {
+					religion = rel:sikh
+				}
+				NOT = {
+					has_modifier = sikh_aspect_4_mdf
+				}
+			}
+			trigger_else_if = {
+				limit = {
+					religion = rel:animist
+				}
+				NOT = {
+					has_modifier = animist_aspect_4_mdf
+				}
+			}
 		}
 	}
 	effect = {
-		every_country = {
+		change_variable = {
+			name = piety_bar_point
+			subtract = 100
+		}
+		if = {
 			limit = {
-				is_ai = no
+				religion = rel:catholic
 			}
-			change_variable = {
-				name = piety_bar_point
-				subtract = 100
+			add_modifier = {
+				name = catholic_aspect_4_mdf
+				months = 65
+			}
+		}
+		else_if = {
+			limit = {
+				religion = rel:protestant
+			}
+			add_modifier = {
+				name = protestant_aspect_4_mdf
+				months = 65
+			}
+		}
+		else_if = {
+			limit = {
+				religion = rel:orthodox
+			}
+			add_modifier = {
+				name = orthodox_aspect_4_mdf
+				months = 65
+			}
+		}
+		else_if = {
+			limit = {
+				religion = rel:oriental_orthodox
+			}
+			add_modifier = {
+				name = coptic_aspect_4_mdf
+				months = 65
+			}
+		}
+		else_if = {
+			limit = {
+				religion = rel:sunni
+			}
+			add_modifier = {
+				name = sunni_aspect_4_mdf
+				months = 65
+			}
+		}
+		else_if = {
+			limit = {
+				religion = rel:shiite
+			}
+			add_modifier = {
+				name = shia_aspect_4_mdf
+				months = 65
+			}
+		}
+		else_if = {
+			limit = {
+				religion = rel:jewish
+			}
+			add_modifier = {
+				name = jewish_aspect_4_mdf
+				months = 65
+			}
+		}
+		else_if = {
+			limit = {
+				religion = rel:mahayana
+			}
+			add_modifier = {
+				name = mahayana_aspect_4_mdf
+				months = 65
+			}
+		}
+		else_if = {
+			limit = {
+				religion = rel:gelugpa
+			}
+			add_modifier = {
+				name = mahayana_aspect_4_mdf
+				months = 65
+			}
+		}
+		else_if = {
+			limit = {
+				religion = rel:theravada
+			}
+			add_modifier = {
+				name = mahayana_aspect_4_mdf
+				months = 65
+			}
+		}
+		else_if = {
+			limit = {
+				religion = rel:hindu
+			}
+			add_modifier = {
+				name = hindu_aspect_4_mdf
+				months = 65
+			}
+		}
+		else_if = {
+			limit = {
+				religion = rel:shinto
+			}
+			add_modifier = {
+				name = mahayana_aspect_4_mdf
+				months = 65
+			}
+		}
+		else_if = {
+			limit = {
+				religion = rel:sikh
+			}
+			add_modifier = {
+				name = sikh_aspect_4_mdf
+				months = 65
+			}
+		}
+		else_if = {
+			limit = {
+				religion = rel:animist
+			}
+			add_modifier = {
+				name = animist_aspect_4_mdf
+				months = 65
 			}
 		}
 	}
@@ -109,25 +1029,255 @@ ve_aspect_button_4 = {
 ve_aspect_button_5 = {
 	scope = country
 	is_shown = {
-		any_country = {
-			is_ai = no
-			var:piety_bar_point >= 100
-		}
+		var:piety_bar_point >= 100
 	}
 	is_valid = {
-		any_country = {
-			is_ai = no
+		custom_tooltip = {
+			text = piety_cost
 			var:piety_bar_point >= 100
+			trigger_if = {
+				limit = {
+					religion = rel:catholic
+				}
+				NOT = {
+					has_modifier = catholic_aspect_5_mdf
+				}
+			}
+			trigger_else_if = {
+				limit = {
+					religion = rel:protestant
+				}
+				NOT = {
+					has_modifier = protestant_aspect_5_mdf
+				}
+			}
+			trigger_else_if = {
+				limit = {
+					religion = rel:orthodox
+				}
+				NOT = {
+					has_modifier = orthodox_aspect_5_mdf
+				}
+			}
+			trigger_else_if = {
+				limit = {
+					religion = rel:oriental_orthodox
+				}
+				NOT = {
+					has_modifier = coptic_aspect_5_mdf
+				}
+			}
+			trigger_else_if = {
+				limit = {
+					religion = rel:sunni
+				}
+				NOT = {
+					has_modifier = sunni_aspect_5_mdf
+				}
+			}
+			trigger_else_if = {
+				limit = {
+					religion = rel:shiite
+				}
+				NOT = {
+					has_modifier = shia_aspect_5_mdf
+				}
+			}
+			trigger_else_if = {
+				limit = {
+					religion = rel:jewish
+				}
+				NOT = {
+					has_modifier = jewish_aspect_5_mdf
+				}
+			}
+			trigger_else_if = {
+				limit = {
+					religion = rel:mahayana
+				}
+				NOT = {
+					has_modifier = mahayana_aspect_5_mdf
+				}
+			}
+			trigger_else_if = {
+				limit = {
+					religion = rel:gelugpa
+				}
+				NOT = {
+					has_modifier = mahayana_aspect_5_mdf
+				}
+			}
+			trigger_else_if = {
+				limit = {
+					religion = rel:theravada
+				}
+				NOT = {
+					has_modifier = mahayana_aspect_5_mdf
+				}
+			}
+			trigger_else_if = {
+				limit = {
+					religion = rel:hindu
+				}
+				NOT = {
+					has_modifier = hindu_aspect_5_mdf
+				}
+			}
+			trigger_else_if = {
+				limit = {
+					religion = rel:shinto
+				}
+				NOT = {
+					has_modifier = mahayana_aspect_5_mdf
+				}
+			}
+			trigger_else_if = {
+				limit = {
+					religion = rel:sikh
+				}
+				NOT = {
+					has_modifier = sikh_aspect_5_mdf
+				}
+			}
+			trigger_else_if = {
+				limit = {
+					religion = rel:animist
+				}
+				NOT = {
+					has_modifier = animist_aspect_5_mdf
+				}
+			}
 		}
 	}
 	effect = {
-		every_country = {
+		change_variable = {
+			name = piety_bar_point
+			subtract = 100
+		}
+		if = {
 			limit = {
-				is_ai = no
+				religion = rel:catholic
 			}
-			change_variable = {
-				name = piety_bar_point
-				subtract = 100
+			add_modifier = {
+				name = catholic_aspect_5_mdf
+				months = 65
+			}
+		}
+		else_if = {
+			limit = {
+				religion = rel:protestant
+			}
+			add_modifier = {
+				name = protestant_aspect_5_mdf
+				months = 65
+			}
+		}
+		else_if = {
+			limit = {
+				religion = rel:orthodox
+			}
+			add_modifier = {
+				name = orthodox_aspect_5_mdf
+				months = 65
+			}
+		}
+		else_if = {
+			limit = {
+				religion = rel:oriental_orthodox
+			}
+			add_modifier = {
+				name = coptic_aspect_5_mdf
+				months = 65
+			}
+		}
+		else_if = {
+			limit = {
+				religion = rel:sunni
+			}
+			add_modifier = {
+				name = sunni_aspect_5_mdf
+				months = 65
+			}
+		}
+		else_if = {
+			limit = {
+				religion = rel:shiite
+			}
+			add_modifier = {
+				name = shia_aspect_5_mdf
+				months = 65
+			}
+		}
+		else_if = {
+			limit = {
+				religion = rel:jewish
+			}
+			add_modifier = {
+				name = jewish_aspect_5_mdf
+				months = 65
+			}
+		}
+		else_if = {
+			limit = {
+				religion = rel:mahayana
+			}
+			add_modifier = {
+				name = mahayana_aspect_5_mdf
+				months = 65
+			}
+		}
+		else_if = {
+			limit = {
+				religion = rel:gelugpa
+			}
+			add_modifier = {
+				name = mahayana_aspect_5_mdf
+				months = 65
+			}
+		}
+		else_if = {
+			limit = {
+				religion = rel:theravada
+			}
+			add_modifier = {
+				name = mahayana_aspect_5_mdf
+				months = 65
+			}
+		}
+		else_if = {
+			limit = {
+				religion = rel:hindu
+			}
+			add_modifier = {
+				name = hindu_aspect_5_mdf
+				months = 65
+			}
+		}
+		else_if = {
+			limit = {
+				religion = rel:shinto
+			}
+			add_modifier = {
+				name = mahayana_aspect_5_mdf
+				months = 65
+			}
+		}
+		else_if = {
+			limit = {
+				religion = rel:sikh
+			}
+			add_modifier = {
+				name = sikh_aspect_5_mdf
+				months = 65
+			}
+		}
+		else_if = {
+			limit = {
+				religion = rel:animist
+			}
+			add_modifier = {
+				name = animist_aspect_5_mdf
+				months = 65
 			}
 		}
 	}
@@ -136,25 +1286,255 @@ ve_aspect_button_5 = {
 ve_aspect_button_6 = {
 	scope = country
 	is_shown = {
-		any_country = {
-			is_ai = no
-			var:piety_bar_point >= 100
-		}
+		var:piety_bar_point >= 100
 	}
 	is_valid = {
-		any_country = {
-			is_ai = no
+		custom_tooltip = {
+			text = piety_cost
 			var:piety_bar_point >= 100
+			trigger_if = {
+				limit = {
+					religion = rel:catholic
+				}
+				NOT = {
+					has_modifier = catholic_aspect_6_mdf
+				}
+			}
+			trigger_else_if = {
+				limit = {
+					religion = rel:protestant
+				}
+				NOT = {
+					has_modifier = protestant_aspect_6_mdf
+				}
+			}
+			trigger_else_if = {
+				limit = {
+					religion = rel:orthodox
+				}
+				NOT = {
+					has_modifier = orthodox_aspect_6_mdf
+				}
+			}
+			trigger_else_if = {
+				limit = {
+					religion = rel:oriental_orthodox
+				}
+				NOT = {
+					has_modifier = coptic_aspect_6_mdf
+				}
+			}
+			trigger_else_if = {
+				limit = {
+					religion = rel:sunni
+				}
+				NOT = {
+					has_modifier = sunni_aspect_6_mdf
+				}
+			}
+			trigger_else_if = {
+				limit = {
+					religion = rel:shiite
+				}
+				NOT = {
+					has_modifier = shia_aspect_6_mdf
+				}
+			}
+			trigger_else_if = {
+				limit = {
+					religion = rel:jewish
+				}
+				NOT = {
+					has_modifier = jewish_aspect_6_mdf
+				}
+			}
+			trigger_else_if = {
+				limit = {
+					religion = rel:mahayana
+				}
+				NOT = {
+					has_modifier = mahayana_aspect_6_mdf
+				}
+			}
+			trigger_else_if = {
+				limit = {
+					religion = rel:gelugpa
+				}
+				NOT = {
+					has_modifier = mahayana_aspect_6_mdf
+				}
+			}
+			trigger_else_if = {
+				limit = {
+					religion = rel:theravada
+				}
+				NOT = {
+					has_modifier = mahayana_aspect_6_mdf
+				}
+			}
+			trigger_else_if = {
+				limit = {
+					religion = rel:hindu
+				}
+				NOT = {
+					has_modifier = hindu_aspect_6_mdf
+				}
+			}
+			trigger_else_if = {
+				limit = {
+					religion = rel:shinto
+				}
+				NOT = {
+					has_modifier = mahayana_aspect_6_mdf
+				}
+			}
+			trigger_else_if = {
+				limit = {
+					religion = rel:sikh
+				}
+				NOT = {
+					has_modifier = sikh_aspect_6_mdf
+				}
+			}
+			trigger_else_if = {
+				limit = {
+					religion = rel:animist
+				}
+				NOT = {
+					has_modifier = animist_aspect_6_mdf
+				}
+			}
 		}
 	}
 	effect = {
-		every_country = {
+		change_variable = {
+			name = piety_bar_point
+			subtract = 100
+		}
+		if = {
 			limit = {
-				is_ai = no
+				religion = rel:catholic
 			}
-			change_variable = {
-				name = piety_bar_point
-				subtract = 100
+			add_modifier = {
+				name = catholic_aspect_6_mdf
+				months = 65
+			}
+		}
+		else_if = {
+			limit = {
+				religion = rel:protestant
+			}
+			add_modifier = {
+				name = protestant_aspect_6_mdf
+				months = 65
+			}
+		}
+		else_if = {
+			limit = {
+				religion = rel:orthodox
+			}
+			add_modifier = {
+				name = orthodox_aspect_6_mdf
+				months = 65
+			}
+		}
+		else_if = {
+			limit = {
+				religion = rel:oriental_orthodox
+			}
+			add_modifier = {
+				name = coptic_aspect_6_mdf
+				months = 65
+			}
+		}
+		else_if = {
+			limit = {
+				religion = rel:sunni
+			}
+			add_modifier = {
+				name = sunni_aspect_6_mdf
+				months = 65
+			}
+		}
+		else_if = {
+			limit = {
+				religion = rel:shiite
+			}
+			add_modifier = {
+				name = shia_aspect_6_mdf
+				months = 65
+			}
+		}
+		else_if = {
+			limit = {
+				religion = rel:jewish
+			}
+			add_modifier = {
+				name = jewish_aspect_6_mdf
+				months = 65
+			}
+		}
+		else_if = {
+			limit = {
+				religion = rel:mahayana
+			}
+			add_modifier = {
+				name = mahayana_aspect_6_mdf
+				months = 65
+			}
+		}
+		else_if = {
+			limit = {
+				religion = rel:gelugpa
+			}
+			add_modifier = {
+				name = mahayana_aspect_6_mdf
+				months = 65
+			}
+		}
+		else_if = {
+			limit = {
+				religion = rel:theravada
+			}
+			add_modifier = {
+				name = mahayana_aspect_6_mdf
+				months = 65
+			}
+		}
+		else_if = {
+			limit = {
+				religion = rel:hindu
+			}
+			add_modifier = {
+				name = hindu_aspect_6_mdf
+				months = 65
+			}
+		}
+		else_if = {
+			limit = {
+				religion = rel:shinto
+			}
+			add_modifier = {
+				name = mahayana_aspect_6_mdf
+				months = 65
+			}
+		}
+		else_if = {
+			limit = {
+				religion = rel:sikh
+			}
+			add_modifier = {
+				name = sikh_aspect_6_mdf
+				months = 65
+			}
+		}
+		else_if = {
+			limit = {
+				religion = rel:animist
+			}
+			add_modifier = {
+				name = animist_aspect_6_mdf
+				months = 65
 			}
 		}
 	}
@@ -163,25 +1543,255 @@ ve_aspect_button_6 = {
 ve_aspect_button_7 = {
 	scope = country
 	is_shown = {
-		any_country = {
-			is_ai = no
-			var:piety_bar_point >= 100
-		}
+		var:piety_bar_point >= 100
 	}
 	is_valid = {
-		any_country = {
-			is_ai = no
+		custom_tooltip = {
+			text = piety_cost
 			var:piety_bar_point >= 100
+			trigger_if = {
+				limit = {
+					religion = rel:catholic
+				}
+				NOT = {
+					has_modifier = catholic_aspect_7_mdf
+				}
+			}
+			trigger_else_if = {
+				limit = {
+					religion = rel:protestant
+				}
+				NOT = {
+					has_modifier = protestant_aspect_7_mdf
+				}
+			}
+			trigger_else_if = {
+				limit = {
+					religion = rel:orthodox
+				}
+				NOT = {
+					has_modifier = orthodox_aspect_7_mdf
+				}
+			}
+			trigger_else_if = {
+				limit = {
+					religion = rel:oriental_orthodox
+				}
+				NOT = {
+					has_modifier = coptic_aspect_7_mdf
+				}
+			}
+			trigger_else_if = {
+				limit = {
+					religion = rel:sunni
+				}
+				NOT = {
+					has_modifier = sunni_aspect_7_mdf
+				}
+			}
+			trigger_else_if = {
+				limit = {
+					religion = rel:shiite
+				}
+				NOT = {
+					has_modifier = shia_aspect_7_mdf
+				}
+			}
+			trigger_else_if = {
+				limit = {
+					religion = rel:jewish
+				}
+				NOT = {
+					has_modifier = jewish_aspect_7_mdf
+				}
+			}
+			trigger_else_if = {
+				limit = {
+					religion = rel:mahayana
+				}
+				NOT = {
+					has_modifier = mahayana_aspect_7_mdf
+				}
+			}
+			trigger_else_if = {
+				limit = {
+					religion = rel:gelugpa
+				}
+				NOT = {
+					has_modifier = mahayana_aspect_7_mdf
+				}
+			}
+			trigger_else_if = {
+				limit = {
+					religion = rel:theravada
+				}
+				NOT = {
+					has_modifier = mahayana_aspect_7_mdf
+				}
+			}
+			trigger_else_if = {
+				limit = {
+					religion = rel:hindu
+				}
+				NOT = {
+					has_modifier = hindu_aspect_7_mdf
+				}
+			}
+			trigger_else_if = {
+				limit = {
+					religion = rel:shinto
+				}
+				NOT = {
+					has_modifier = mahayana_aspect_7_mdf
+				}
+			}
+			trigger_else_if = {
+				limit = {
+					religion = rel:sikh
+				}
+				NOT = {
+					has_modifier = sikh_aspect_7_mdf
+				}
+			}
+			trigger_else_if = {
+				limit = {
+					religion = rel:animist
+				}
+				NOT = {
+					has_modifier = animist_aspect_7_mdf
+				}
+			}
 		}
 	}
 	effect = {
-		every_country = {
+		change_variable = {
+			name = piety_bar_point
+			subtract = 100
+		}
+		if = {
 			limit = {
-				is_ai = no
+				religion = rel:catholic
 			}
-			change_variable = {
-				name = piety_bar_point
-				subtract = 100
+			add_modifier = {
+				name = catholic_aspect_7_mdf
+				months = 65
+			}
+		}
+		else_if = {
+			limit = {
+				religion = rel:protestant
+			}
+			add_modifier = {
+				name = protestant_aspect_7_mdf
+				months = 65
+			}
+		}
+		else_if = {
+			limit = {
+				religion = rel:orthodox
+			}
+			add_modifier = {
+				name = orthodox_aspect_7_mdf
+				months = 65
+			}
+		}
+		else_if = {
+			limit = {
+				religion = rel:oriental_orthodox
+			}
+			add_modifier = {
+				name = coptic_aspect_7_mdf
+				months = 65
+			}
+		}
+		else_if = {
+			limit = {
+				religion = rel:sunni
+			}
+			add_modifier = {
+				name = sunni_aspect_7_mdf
+				months = 65
+			}
+		}
+		else_if = {
+			limit = {
+				religion = rel:shiite
+			}
+			add_modifier = {
+				name = shia_aspect_7_mdf
+				months = 65
+			}
+		}
+		else_if = {
+			limit = {
+				religion = rel:jewish
+			}
+			add_modifier = {
+				name = jewish_aspect_7_mdf
+				months = 65
+			}
+		}
+		else_if = {
+			limit = {
+				religion = rel:mahayana
+			}
+			add_modifier = {
+				name = mahayana_aspect_7_mdf
+				months = 65
+			}
+		}
+		else_if = {
+			limit = {
+				religion = rel:gelugpa
+			}
+			add_modifier = {
+				name = mahayana_aspect_7_mdf
+				months = 65
+			}
+		}
+		else_if = {
+			limit = {
+				religion = rel:theravada
+			}
+			add_modifier = {
+				name = mahayana_aspect_7_mdf
+				months = 65
+			}
+		}
+		else_if = {
+			limit = {
+				religion = rel:hindu
+			}
+			add_modifier = {
+				name = hindu_aspect_7_mdf
+				months = 65
+			}
+		}
+		else_if = {
+			limit = {
+				religion = rel:shinto
+			}
+			add_modifier = {
+				name = mahayana_aspect_7_mdf
+				months = 65
+			}
+		}
+		else_if = {
+			limit = {
+				religion = rel:sikh
+			}
+			add_modifier = {
+				name = sikh_aspect_7_mdf
+				months = 65
+			}
+		}
+		else_if = {
+			limit = {
+				religion = rel:animist
+			}
+			add_modifier = {
+				name = animist_aspect_7_mdf
+				months = 65
 			}
 		}
 	}
@@ -190,79 +1800,87 @@ ve_aspect_button_7 = {
 ve_aspect_button_8 = {
 	scope = country
 	is_shown = {
-		any_country = {
-			is_ai = no
-			var:piety_bar_point >= 100
-		}
+		var:piety_bar_point >= 100
 	}
 	is_valid = {
-		any_country = {
-			is_ai = no
+		custom_tooltip = {
+			text = piety_cost
 			var:piety_bar_point >= 100
 		}
 	}
 	effect = {
-		every_country = {
+		change_variable = {
+			name = piety_bar_point
+			subtract = 100
+		}
+		if = {
 			limit = {
-				is_ai = no
-			}
-			change_variable = {
-				name = piety_bar_point
-				subtract = 100
+				religion = rel:catholic
 			}
 		}
-	}
-}
-
-ve_aspect_button_9 = {
-	scope = country
-	is_shown = {
-		any_country = {
-			is_ai = no
-			var:piety_bar_point >= 100
-		}
-	}
-	is_valid = {
-		any_country = {
-			is_ai = no
-			var:piety_bar_point >= 100
-		}
-	}
-	effect = {
-		every_country = {
+		else_if = {
 			limit = {
-				is_ai = no
-			}
-			change_variable = {
-				name = piety_bar_point
-				subtract = 100
+				religion = rel:protestant
 			}
 		}
-	}
-}
-
-ve_aspect_button_10 = {
-	scope = country
-	is_shown = {
-		any_country = {
-			is_ai = no
-			var:piety_bar_point >= 100
-		}
-	}
-	is_valid = {
-		any_country = {
-			is_ai = no
-			var:piety_bar_point >= 100
-		}
-	}
-	effect = {
-		every_country = {
+		else_if = {
 			limit = {
-				is_ai = no
+				religion = rel:orthodox
 			}
-			change_variable = {
-				name = piety_bar_point
-				subtract = 100
+		}
+		else_if = {
+			limit = {
+				religion = rel:oriental_orthodox
+			}
+		}
+		else_if = {
+			limit = {
+				religion = rel:sunni
+			}
+		}
+		else_if = {
+			limit = {
+				religion = rel:shiite
+			}
+		}
+		else_if = {
+			limit = {
+				religion = rel:jewish
+			}
+		}
+		else_if = {
+			limit = {
+				religion = rel:mahayana
+			}
+		}
+		else_if = {
+			limit = {
+				religion = rel:gelugpa
+			}
+		}
+		else_if = {
+			limit = {
+				religion = rel:theravada
+			}
+		}
+		else_if = {
+			limit = {
+				religion = rel:hindu
+			}
+		}
+		else_if = {
+			limit = {
+				religion = rel:shinto
+			}
+		}
+		else_if = {
+			limit = {
+				religion = rel:sikh
+			}
+		}
+		else_if = {
+			limit = {
+				religion = rel:animist
 			}
 		}
 	}
@@ -271,29 +1889,835 @@ ve_aspect_button_10 = {
 ####################
 ###  Holy Sites  ###
 ####################
-ve_holy_site_1 = {
+ve_show_holy_site = {
 	scope = country
 	is_shown = {
-		any_country = {
-			is_ai = no
-			trigger_if = {
-				limit = {
-					religion = rel:catholic
-				}
-				owns_entire_state_region = STATE_LAZIO
+		NOT = {
+			religion = rel:animist
+		}
+	}
+}
+
+ve_holy_site_1 = {
+	scope = country
+	is_valid = {
+		trigger_if = {
+			limit = {
+				religion = rel:catholic
 			}
-			trigger_else_if = {
-				limit = {
-					religion = rel:sunni
-				}
-				owns_entire_state_region = STATE_HEDJAZ
+			owns_entire_state_region = STATE_LAZIO
+		}
+		trigger_else_if = {
+			limit = {
+				religion = rel:protestant
 			}
+			owns_entire_state_region = STATE_ANHALT
+		}
+		trigger_else_if = {
+			limit = {
+				religion = rel:orthodox
+			}
+			owns_entire_state_region = STATE_LAZIO
+		}
+		trigger_else_if = {
+			limit = {
+				religion = rel:oriental_orthodox
+			}
+			owns_entire_state_region = STATE_ARMENIA
+		}
+		trigger_else_if = {
+			limit = {
+				religion = rel:sunni
+			}
+			owns_entire_state_region = STATE_SYRIA
+		}
+		trigger_else_if = {
+			limit = {
+				religion = rel:shiite
+			}
+			owns_entire_state_region = STATE_SYRIA
+		}
+		trigger_else_if = {
+			limit = {
+				religion = rel:jewish
+			}
+			owns_entire_state_region = STATE_SINAI
+		}
+		trigger_else_if = {
+			limit = {
+				OR = {
+					religion = rel:mahayana
+					religion = rel:gelugpa
+					religion = rel:theravada
+					religion = rel:shinto
+				}
+			}
+			owns_entire_state_region = STATE_CENTRAL_INDIA
+		}
+		trigger_else_if = {
+			limit = {
+				religion = rel:hindu
+			}
+			owns_entire_state_region = STATE_RAJPUTANA
+		}
+		trigger_else_if = {
+			limit = {
+				religion = rel:sikh
+			}
+			owns_entire_state_region = STATE_PUNJAB
 		}
 	}
 	effect = {
-		every_country = {
+		if = {
 			limit = {
-				is_ai = no
+				religion = rel:catholic
+			}
+			add_modifier = {
+				name = roma_hs_mdf
+				months = -1
+			}
+		}
+		else_if = {
+			limit = {
+				religion = rel:protestant
+			}
+			add_modifier = {
+				name = wittenberg_hs_mdf
+				months = -1
+			}
+		}
+		else_if = {
+			limit = {
+				religion = rel:orthodox
+			}
+			add_modifier = {
+				name = roma_hs_mdf
+				months = 65
+			}
+		}
+		else_if = {
+			limit = {
+				religion = rel:oriental_orthodox
+			}
+			add_modifier = {
+				name = yerevan_hs_mdf
+				months = -1
+			}
+		}
+		else_if = {
+			limit = {
+				religion = rel:sunni
+			}
+			add_modifier = {
+				name = damascus_hs_mdf
+				months = -1
+			}
+		}
+		else_if = {
+			limit = {
+				religion = rel:shiite
+			}
+			add_modifier = {
+				name = damascus_hs_mdf
+				months = -1
+			}
+		}
+		else_if = {
+			limit = {
+				religion = rel:jewish
+			}
+			add_modifier = {
+				name = sinai_hs_mdf
+				months = -1
+			}
+		}
+		else_if = {
+			limit = {
+				OR = {
+					religion = rel:mahayana
+					religion = rel:gelugpa
+					religion = rel:theravada
+					religion = rel:shinto
+				}
+			}
+			add_modifier = {
+				name = sanchi_hs_mdf
+				months = -1
+			}
+		}
+		else_if = {
+			limit = {
+				religion = rel:hindu
+			}
+			add_modifier = {
+				name = mathura_hs_mdf
+				months = -1
+			}
+		}
+		else_if = {
+			limit = {
+				religion = rel:sikh
+			}
+			add_modifier = {
+				name = harmandir_sahib_hs_mdf
+				months = -1
+			}
+		}
+	}
+}
+
+ve_holy_site_2 = {
+	scope = country
+	is_valid = {
+		trigger_if = {
+			limit = {
+				religion = rel:catholic
+			}
+			owns_entire_state_region = STATE_NORTH_RHINE
+		}
+		trigger_else_if = {
+			limit = {
+				religion = rel:protestant
+			}
+			owns_entire_state_region = STATE_NORTH_RHINE
+		}
+		trigger_else_if = {
+			limit = {
+				religion = rel:orthodox
+			}
+			owns_entire_state_region = STATE_EASTERN_THRACE
+		}
+		trigger_else_if = {
+			limit = {
+				religion = rel:oriental_orthodox
+			}
+			owns_entire_state_region = STATE_DONGOLA
+		}
+		trigger_else_if = {
+			limit = {
+				religion = rel:sunni
+			}
+			owns_entire_state_region = STATE_EASTERN_THRACE
+		}
+		trigger_else_if = {
+			limit = {
+				religion = rel:shiite
+			}
+			owns_entire_state_region = STATE_ISFAHAN
+		}
+		trigger_else_if = {
+			limit = {
+				religion = rel:jewish
+			}
+			owns_entire_state_region = STATE_LOWER_EGYPT
+		}
+		trigger_else_if = {
+			limit = {
+				OR = {
+					religion = rel:mahayana
+					religion = rel:gelugpa
+					religion = rel:theravada
+					religion = rel:shinto
+				}
+			}
+			owns_entire_state_region = STATE_SHANDONG
+		}
+		trigger_else_if = {
+			limit = {
+				religion = rel:hindu
+			}
+			owns_entire_state_region = STATE_BIHAR
+		}
+		trigger_else_if = {
+			limit = {
+				religion = rel:sikh
+			}
+			owns_entire_state_region = STATE_AWADH
+		}
+	}
+	effect = {
+		if = {
+			limit = {
+				religion = rel:catholic
+			}
+			add_modifier = {
+				name = cologne_hs_mdf
+				months = -1
+			}
+		}
+		else_if = {
+			limit = {
+				religion = rel:protestant
+			}
+			add_modifier = {
+				name = cologne_hs_mdf
+				months = -1
+			}
+		}
+		else_if = {
+			limit = {
+				religion = rel:orthodox
+			}
+			add_modifier = {
+				name = constantinople_hs_mdf
+				months = 65
+			}
+		}
+		else_if = {
+			limit = {
+				religion = rel:oriental_orthodox
+			}
+			add_modifier = {
+				name = aksum_hs_mdf
+				months = -1
+			}
+		}
+		else_if = {
+			limit = {
+				religion = rel:sunni
+			}
+			add_modifier = {
+				name = constantinople_hs_mdf
+				months = -1
+			}
+		}
+		else_if = {
+			limit = {
+				religion = rel:shiite
+			}
+			add_modifier = {
+				name = maidane_naqshe_jahan_hs_mdf
+				months = -1
+			}
+		}
+		else_if = {
+			limit = {
+				religion = rel:jewish
+			}
+			add_modifier = {
+				name = alexandria_hs_mdf
+				months = -1
+			}
+		}
+		else_if = {
+			limit = {
+				OR = {
+					religion = rel:mahayana
+					religion = rel:gelugpa
+					religion = rel:theravada
+					religion = rel:shinto
+				}
+			}
+			add_modifier = {
+				name = yanzhou_hs_mdf
+				months = -1
+			}
+		}
+		else_if = {
+			limit = {
+				religion = rel:hindu
+			}
+			add_modifier = {
+				name = varanasi_hs_mdf
+				months = -1
+			}
+		}
+		else_if = {
+			limit = {
+				religion = rel:sikh
+			}
+			add_modifier = {
+				name = kashi_vishwanath_temple_hs_mdf
+				months = -1
+			}
+		}
+	}
+}
+
+ve_holy_site_3 = {
+	scope = country
+	is_valid = {
+		trigger_if = {
+			limit = {
+				religion = rel:catholic
+			}
+			owns_entire_state_region = STATE_GALICIA
+		}
+		trigger_else_if = {
+			limit = {
+				religion = rel:protestant
+			}
+			owns_entire_state_region = STATE_BOHEMIA
+		}
+		trigger_else_if = {
+			limit = {
+				religion = rel:orthodox
+			}
+			owns_entire_state_region = STATE_LOWER_EGYPT
+		}
+		trigger_else_if = {
+			limit = {
+				religion = rel:oriental_orthodox
+			}
+			owns_entire_state_region = STATE_LOWER_EGYPT
+		}
+		trigger_else_if = {
+			limit = {
+				religion = rel:sunni
+			}
+			owns_entire_state_region = STATE_HEDJAZ
+		}
+		trigger_else_if = {
+			limit = {
+				religion = rel:shiite
+			}
+			owns_entire_state_region = STATE_HEDJAZ
+		}
+		trigger_else_if = {
+			limit = {
+				religion = rel:jewish
+			}
+			owns_entire_state_region = STATE_GONDER
+		}
+		trigger_else_if = {
+			limit = {
+				OR = {
+					religion = rel:mahayana
+					religion = rel:gelugpa
+					religion = rel:theravada
+					religion = rel:shinto
+				}
+			}
+			owns_entire_state_region = STATE_BURMA
+		}
+		trigger_else_if = {
+			limit = {
+				religion = rel:hindu
+			}
+			owns_entire_state_region = STATE_AWADH
+		}
+		trigger_else_if = {
+			limit = {
+				religion = rel:sikh
+			}
+			owns_entire_state_region = STATE_CENTRAL_INDIA
+		}
+	}
+	effect = {
+		if = {
+			limit = {
+				religion = rel:catholic
+			}
+			add_modifier = {
+				name = santiago_hs_mdf
+				months = -1
+			}
+		}
+		else_if = {
+			limit = {
+				religion = rel:protestant
+			}
+			add_modifier = {
+				name = prag_hs_mdf
+				months = -1
+			}
+		}
+		else_if = {
+			limit = {
+				religion = rel:orthodox
+			}
+			add_modifier = {
+				name = alexandria_hs_mdf
+				months = 65
+			}
+		}
+		else_if = {
+			limit = {
+				religion = rel:oriental_orthodox
+			}
+			add_modifier = {
+				name = alexandria_hs_mdf
+				months = -1
+			}
+		}
+		else_if = {
+			limit = {
+				religion = rel:sunni
+			}
+			add_modifier = {
+				name = medina_hs_mdf
+				months = -1
+			}
+		}
+		else_if = {
+			limit = {
+				religion = rel:shiite
+			}
+			add_modifier = {
+				name = medina_hs_mdf
+				months = -1
+			}
+		}
+		else_if = {
+			limit = {
+				religion = rel:jewish
+			}
+			add_modifier = {
+				name = semien_hs_mdf
+				months = -1
+			}
+		}
+		else_if = {
+			limit = {
+				OR = {
+					religion = rel:mahayana
+					religion = rel:gelugpa
+					religion = rel:theravada
+					religion = rel:shinto
+				}
+			}
+			add_modifier = {
+				name = pagan_hs_mdf
+				months = -1
+			}
+		}
+		else_if = {
+			limit = {
+				religion = rel:hindu
+			}
+			add_modifier = {
+				name = ayodhya_hs_mdf
+				months = -1
+			}
+		}
+		else_if = {
+			limit = {
+				religion = rel:sikh
+			}
+			add_modifier = {
+				name = khajuraho_hs_mdf
+				months = -1
+			}
+		}
+	}
+}
+
+ve_holy_site_4 = {
+	scope = country
+	is_valid = {
+		trigger_if = {
+			limit = {
+				religion = rel:catholic
+			}
+			owns_entire_state_region = STATE_ILE_DE_FRANCE
+		}
+		trigger_else_if = {
+			limit = {
+				religion = rel:protestant
+			}
+			owns_entire_state_region = STATE_HOME_COUNTIES
+		}
+		trigger_else_if = {
+			limit = {
+				religion = rel:orthodox
+			}
+			owns_entire_state_region = STATE_ALEPPO
+		}
+		trigger_else_if = {
+			limit = {
+				religion = rel:oriental_orthodox
+			}
+			owns_entire_state_region = STATE_ALEPPO
+		}
+		trigger_else_if = {
+			limit = {
+				religion = rel:sunni
+			}
+			owns_entire_state_region = STATE_BAGHDAD
+		}
+		trigger_else_if = {
+			limit = {
+				religion = rel:shiite
+			}
+			owns_entire_state_region = STATE_BAGHDAD
+		}
+		trigger_else_if = {
+			limit = {
+				religion = rel:jewish
+			}
+			owns_entire_state_region = STATE_PALESTINE
+		}
+		trigger_else_if = {
+			limit = {
+				OR = {
+					religion = rel:mahayana
+					religion = rel:gelugpa
+					religion = rel:theravada
+					religion = rel:shinto
+				}
+			}
+			owns_entire_state_region = STATE_KANSAI
+		}
+		trigger_else_if = {
+			limit = {
+				religion = rel:hindu
+			}
+			owns_entire_state_region = STATE_MADRAS
+		}
+		trigger_else_if = {
+			limit = {
+				religion = rel:sikh
+			}
+			owns_entire_state_region = STATE_CIRCARS
+		}
+	}
+	effect = {
+		if = {
+			limit = {
+				religion = rel:catholic
+			}
+			add_modifier = {
+				name = notre_dame_hs_mdf
+				months = -1
+			}
+		}
+		else_if = {
+			limit = {
+				religion = rel:protestant
+			}
+			add_modifier = {
+				name = canterbury_hs_mdf
+				months = -1
+			}
+		}
+		else_if = {
+			limit = {
+				religion = rel:orthodox
+			}
+			add_modifier = {
+				name = antioch_hs_mdf
+				months = 65
+			}
+		}
+		else_if = {
+			limit = {
+				religion = rel:oriental_orthodox
+			}
+			add_modifier = {
+				name = antioch_hs_mdf
+				months = -1
+			}
+		}
+		else_if = {
+			limit = {
+				religion = rel:sunni
+			}
+			add_modifier = {
+				name = baghdad_hs_mdf
+				months = -1
+			}
+		}
+		else_if = {
+			limit = {
+				religion = rel:shiite
+			}
+			add_modifier = {
+				name = baghdad_hs_mdf
+				months = -1
+			}
+		}
+		else_if = {
+			limit = {
+				religion = rel:jewish
+			}
+			add_modifier = {
+				name = jerusalem_hs_mdf
+				months = -1
+			}
+		}
+		else_if = {
+			limit = {
+				OR = {
+					religion = rel:mahayana
+					religion = rel:gelugpa
+					religion = rel:theravada
+					religion = rel:shinto
+				}
+			}
+			add_modifier = {
+				name = ise_grand_shrine_hs_mdf
+				months = -1
+			}
+		}
+		else_if = {
+			limit = {
+				religion = rel:hindu
+			}
+			add_modifier = {
+				name = great_living_chola_temples_hs_mdf
+				months = -1
+			}
+		}
+		else_if = {
+			limit = {
+				religion = rel:sikh
+			}
+			add_modifier = {
+				name = sun_temple_in_konarak_hs_mdf
+				months = -1
+			}
+		}
+	}
+}
+
+ve_holy_site_5 = {
+	scope = country
+	is_valid = {
+		trigger_if = {
+			limit = {
+				religion = rel:catholic
+			}
+			owns_entire_state_region = STATE_PALESTINE
+		}
+		trigger_else_if = {
+			limit = {
+				religion = rel:protestant
+			}
+			owns_entire_state_region = STATE_PALESTINE
+		}
+		trigger_else_if = {
+			limit = {
+				religion = rel:orthodox
+			}
+			owns_entire_state_region = STATE_PALESTINE
+		}
+		trigger_else_if = {
+			limit = {
+				religion = rel:oriental_orthodox
+			}
+			owns_entire_state_region = STATE_PALESTINE
+		}
+		trigger_else_if = {
+			limit = {
+				religion = rel:sunni
+			}
+			owns_entire_state_region = STATE_PALESTINE
+		}
+		trigger_else_if = {
+			limit = {
+				religion = rel:shiite
+			}
+			owns_entire_state_region = STATE_PALESTINE
+		}
+		trigger_else_if = {
+			limit = {
+				OR = {
+					religion = rel:mahayana
+					religion = rel:gelugpa
+					religion = rel:theravada
+					religion = rel:shinto
+				}
+			}
+			owns_entire_state_region = STATE_HIMALAYAS
+		}
+		trigger_else_if = {
+			limit = {
+				religion = rel:hindu
+			}
+			owns_entire_state_region = STATE_GUJARAT
+		}
+		trigger_else_if = {
+			limit = {
+				religion = rel:sikh
+			}
+			owns_entire_state_region = STATE_MYSORE
+		}
+	}
+	effect = {
+		if = {
+			limit = {
+				religion = rel:catholic
+			}
+			add_modifier = {
+				name = jerusalem_hs_mdf
+				months = -1
+			}
+		}
+		else_if = {
+			limit = {
+				religion = rel:protestant
+			}
+			add_modifier = {
+				name = jerusalem_hs_mdf
+				months = -1
+			}
+		}
+		else_if = {
+			limit = {
+				religion = rel:orthodox
+			}
+			add_modifier = {
+				name = jerusalem_hs_mdf
+				months = 65
+			}
+		}
+		else_if = {
+			limit = {
+				religion = rel:oriental_orthodox
+			}
+			add_modifier = {
+				name = jerusalem_hs_mdf
+				months = -1
+			}
+		}
+		else_if = {
+			limit = {
+				religion = rel:sunni
+			}
+			add_modifier = {
+				name = jerusalem_hs_mdf
+				months = -1
+			}
+		}
+		else_if = {
+			limit = {
+				religion = rel:shiite
+			}
+			add_modifier = {
+				name = jerusalem_hs_mdf
+				months = -1
+			}
+		}
+		else_if = {
+			limit = {
+				OR = {
+					religion = rel:mahayana
+					religion = rel:gelugpa
+					religion = rel:theravada
+					religion = rel:shinto
+				}
+			}
+			add_modifier = {
+				name = lumbini_hs_mdf
+				months = -1
+			}
+		}
+		else_if = {
+			limit = {
+				religion = rel:hindu
+			}
+			add_modifier = {
+				name = dwarka_hs_mdf
+				months = -1
+			}
+		}
+		else_if = {
+			limit = {
+				religion = rel:sikh
+			}
+			add_modifier = {
+				name = gomateshwara_statue_hs_mdf
+				months = -1
 			}
 		}
 	}

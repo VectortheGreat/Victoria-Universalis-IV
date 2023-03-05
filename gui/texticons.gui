@@ -116,7 +116,7 @@ texticon = {
 
 #CATHOLIC 
 texticon = {
-  icon = Catholic_aspect_1
+  icon = catholic_aspect_1
   iconsize = {
     offset = { 0 15 }
     texture = "gfx/interface/ve_catholic_aspect_1.dds"
@@ -124,7 +124,7 @@ texticon = {
   }
 }
 texticon = {
-  icon = Catholic_aspect_1_black
+  icon = catholic_aspect_1_black
   iconsize = {
     offset = { 0 15 }
     texture = "gfx/interface/ve_catholic_aspect_1_black.dds"
@@ -132,7 +132,7 @@ texticon = {
   }
 }
 texticon = {
-  icon = Catholic_aspect_2
+  icon = catholic_aspect_2
   iconsize = {
     offset = { 0 15 }
     texture = "gfx/interface/ve_catholic_aspect_1.dds"
@@ -140,7 +140,7 @@ texticon = {
   }
 }
 texticon = {
-  icon = Catholic_aspect_2_black
+  icon = catholic_aspect_2_black
   iconsize = {
     offset = { 0 15 }
     texture = "gfx/interface/ve_catholic_aspect_1_black.dds"
@@ -148,7 +148,7 @@ texticon = {
   }
 }
 texticon = {
-  icon = Catholic_aspect_3
+  icon = catholic_aspect_3
   iconsize = {
     offset = { 0 15 }
     texture = "gfx/interface/ve_catholic_aspect_1.dds"
@@ -156,7 +156,7 @@ texticon = {
   }
 }
 texticon = {
-  icon = Catholic_aspect_3_black
+  icon = catholic_aspect_3_black
   iconsize = {
     offset = { 0 15 }
     texture = "gfx/interface/ve_catholic_aspect_1_black.dds"
@@ -164,7 +164,7 @@ texticon = {
   }
 }
 texticon = {
-  icon = Catholic_aspect_4
+  icon = catholic_aspect_4
   iconsize = {
     offset = { 0 15 }
     texture = "gfx/interface/ve_catholic_aspect_1.dds"
@@ -172,7 +172,7 @@ texticon = {
   }
 }
 texticon = {
-  icon = Catholic_aspect_4_black
+  icon = catholic_aspect_4_black
   iconsize = {
     offset = { 0 15 }
     texture = "gfx/interface/ve_catholic_aspect_1_black.dds"
@@ -180,7 +180,7 @@ texticon = {
   }
 }
 texticon = {
-  icon = Catholic_aspect_5
+  icon = catholic_aspect_5
   iconsize = {
     offset = { 0 15 }
     texture = "gfx/interface/ve_catholic_aspect_1.dds"
@@ -188,7 +188,7 @@ texticon = {
   }
 }
 texticon = {
-  icon = Catholic_aspect_5_black
+  icon = catholic_aspect_5_black
   iconsize = {
     offset = { 0 15 }
     texture = "gfx/interface/ve_catholic_aspect_1_black.dds"
@@ -196,7 +196,7 @@ texticon = {
   }
 }
 texticon = {
-  icon = Catholic_aspect_6
+  icon = catholic_aspect_6
   iconsize = {
     offset = { 0 15 }
     texture = "gfx/interface/ve_catholic_aspect_1.dds"
@@ -204,7 +204,7 @@ texticon = {
   }
 }
 texticon = {
-  icon = Catholic_aspect_6_black
+  icon = catholic_aspect_6_black
   iconsize = {
     offset = { 0 15 }
     texture = "gfx/interface/ve_catholic_aspect_1_black.dds"
@@ -212,7 +212,7 @@ texticon = {
   }
 }
 texticon = {
-  icon = Catholic_aspect_7
+  icon = catholic_aspect_7
   iconsize = {
     offset = { 0 15 }
     texture = "gfx/interface/ve_catholic_aspect_1.dds"
@@ -220,7 +220,7 @@ texticon = {
   }
 }
 texticon = {
-  icon = Catholic_aspect_7_black
+  icon = catholic_aspect_7_black
   iconsize = {
     offset = { 0 15 }
     texture = "gfx/interface/ve_catholic_aspect_1_black.dds"
@@ -228,7 +228,7 @@ texticon = {
   }
 }
 texticon = {
-  icon = Catholic_aspect_8
+  icon = catholic_aspect_8
   iconsize = {
     offset = { 0 15 }
     texture = "gfx/interface/ve_catholic_aspect_1.dds"
@@ -236,7 +236,7 @@ texticon = {
   }
 }
 texticon = {
-  icon = Catholic_aspect_8_black
+  icon = catholic_aspect_8_black
   iconsize = {
     offset = { 0 15 }
     texture = "gfx/interface/ve_catholic_aspect_1_black.dds"
@@ -244,7 +244,7 @@ texticon = {
   }
 }
 texticon = {
-  icon = Catholic_holy_site_1
+  icon = catholic_holy_site_1
   iconsize = {
     offset = { 0 15 }
     texture = "gfx/interface/ve_rome_owned.dds"
@@ -252,7 +252,7 @@ texticon = {
   }
 }
 texticon = {
-  icon = Catholic_holy_site_1_black
+  icon = catholic_holy_site_1_black
   iconsize = {
     offset = { 0 15 }
     texture = "gfx/interface/ve_rome_not_owned.dds"
@@ -276,7 +276,7 @@ texticon = {
   }
 }
 texticon = {
-  icon = catholic_icon
+  icon = catholic_icon_2
   iconsize = {
     texture = "gfx/interface/ve_rome_not_owned.dds"
     offset = { 0 15 }

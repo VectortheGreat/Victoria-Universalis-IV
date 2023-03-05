@@ -1,0 +1,181 @@
+golden_age_mdf = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_documents_positive.dds
+	unit_army_offense_mult = 0.1
+	unit_navy_offense_mult = 0.1
+	building_group_bg_manufacturing_throughput_mult = 0.1
+	building_group_bg_mining_throughput_mult = 0.1
+	#idea, piety ve kültür cost indirimi
+}
+
+age_1_bonus_1 = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_documents_positive.dds
+	country_authority_mult = 0.1
+}
+
+age_1_bonus_2 = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_documents_positive.dds
+	country_loan_interest_rate_mult = -0.1
+}
+
+age_1_bonus_3 = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_documents_positive.dds
+	state_colony_growth_creation_mult = 0.1
+}
+
+age_1_bonus_4 = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_documents_positive.dds
+	country_max_declared_interests_add = 2
+}
+
+age_1_bonus_5 = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_documents_positive.dds
+	state_urbanization_mult = 0.1
+}
+
+age_1_bonus_6 = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_documents_positive.dds
+	country_consumption_tax_cost_mult = -0.1
+}
+
+age_1_bonus_7 = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_documents_positive.dds
+	building_coal_mine_throughput_mult = 0.2
+}
+
+age_1_bonus_8 = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_documents_positive.dds
+	country_convoys_capacity_mult = 0.25
+}
+
+age_1_bonus_9 = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_documents_positive.dds
+	country_law_enactment_success_add = 0.15
+}
+
+age_1_bonus_10 = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_documents_positive.dds
+	country_radicals_from_conquest_mult = -0.25
+}
+
+age_1_bonus_11 = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_documents_positive.dds
+	country_infamy_decay_mult = 0.15
+}
+
+age_2_bonus_1 = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_documents_positive.dds
+	country_suppression_ig_attraction_mult = -0.25
+}
+
+age_2_bonus_2 = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_documents_positive.dds
+	country_resource_discovery_chance_mult = 0.15
+}
+
+age_2_bonus_3 = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_documents_positive.dds
+	country_revolution_secession_speed_add = -0.1
+}
+
+age_2_bonus_4 = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_documents_positive.dds
+	political_movement_radicalism_mult = -0.1
+}
+
+age_2_bonus_5 = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_documents_positive.dds
+	country_trade_route_competitiveness_mult = 0.1
+}
+
+age_2_bonus_6 = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_documents_positive.dds
+	state_assimilation_mult = 0.1
+	state_conversion_mult = 0.1
+}
+
+age_2_bonus_7 = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_documents_positive.dds
+	state_colony_growth_speed_mult = 0.2
+}
+
+age_2_bonus_8 = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_documents_positive.dds
+	country_minting_mult = 0.2
+}
+
+age_2_bonus_9 = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_documents_positive.dds
+	country_resource_depletion_chance_mult = -0.25
+}
+
+age_2_bonus_10 = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_documents_positive.dds
+	state_radicals_from_discrimination_mult = -0.2
+}
+
+age_2_bonus_11 = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_documents_positive.dds
+	state_assimilation_mult = 0.25
+}
+
+age_3_bonus_1 = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_documents_positive.dds
+	state_birth_rate_mult = 0.1
+}
+
+age_3_bonus_2 = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_documents_positive.dds
+	country_damage_relations_speed_mult = 0.1
+	country_improve_relations_speed_mult = 0.1
+}
+
+age_3_bonus_3 = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_documents_positive.dds
+	country_military_goods_cost_mult = -0.15
+}
+
+age_3_bonus_4 = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_documents_positive.dds
+	country_war_exhaustion_casualties_mult = -0.1
+}
+
+age_3_bonus_5 = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_documents_positive.dds
+	state_infrastructure_mult = 0.1
+}
+
+age_3_bonus_6 = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_documents_positive.dds
+	country_decree_cost_mult = -0.1
+}
+
+age_3_bonus_7 = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_documents_positive.dds
+	battle_casualties_mult = -0.15
+}
+
+age_3_bonus_8 = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_documents_positive.dds
+	battle_defense_owned_province_mult = 0.15
+}
+
+age_3_bonus_9 = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_documents_positive.dds
+	front_advancement_speed_mult = 0.15
+}
+
+age_3_bonus_10 = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_documents_positive.dds
+	country_ignores_landing_craft_penalty = yes
+}
+
+age_3_bonus_10_2 = {
+	#If it has naval idea
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_documents_positive.dds
+	unit_offense_hazardous_add = 10
+}
+
+age_3_bonus_11 = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_documents_positive.dds
+	state_conscription_rate_mult = 0.2
+}

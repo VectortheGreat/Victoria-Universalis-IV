@@ -1,24 +1,357 @@
-﻿religion_key = {
+﻿religion_aspect_1 = {
 	type = country
 	random_valid = no
 	text = {
 		trigger = {
 			religion = rel:catholic
 		}
-		localization_key = catholic_icon
+		localization_key = catholic_icon_1
 	}
 	text = {
 		localization_key = not_catholic_icon
 	}
 }
 
-country_key = {
+holy_site_1 = {
 	type = country
 	random_valid = no
 	text = {
 		trigger = {
-			this = c:GBR
+			religion = rel:catholic
 		}
-		localization_key = gbr_icon
+		localization_key = catholic_site_1
+	}
+	text = {
+		trigger = {
+			religion = rel:protestant
+		}
+		localization_key = protestant_site_1
+	}
+	text = {
+		trigger = {
+			religion = rel:orthodox
+		}
+		localization_key = orthodox_site_1
+	}
+	text = {
+		trigger = {
+			religion = rel:oriental_orthodox
+		}
+		localization_key = oriental_orthodox_site_1
+	}
+	text = {
+		trigger = {
+			religion = rel:sunni
+		}
+		localization_key = sunni_site_1
+	}
+	text = {
+		trigger = {
+			religion = rel:shiite
+		}
+		localization_key = shiite_site_1
+	}
+	text = {
+		trigger = {
+			religion = rel:jewish
+		}
+		localization_key = jewish_site_1
+	}
+	text = {
+		trigger = {
+			OR = {
+				religion = rel:mahayana
+				religion = rel:gelugpa
+				religion = rel:theravada
+				religion = rel:shinto
+			}
+		}
+		localization_key = mahayana_site_1
+	}
+	text = {
+		trigger = {
+			religion = rel:hindu
+		}
+		localization_key = hindu_site_1
+	}
+	text = {
+		trigger = {
+			religion = rel:sikh
+		}
+		localization_key = sikh_site_1
+	}
+}
+
+holy_site_2 = {
+	type = country
+	random_valid = no
+	text = {
+		trigger = {
+			religion = rel:catholic
+		}
+		localization_key = catholic_site_2
+	}
+	text = {
+		trigger = {
+			religion = rel:protestant
+		}
+		localization_key = protestant_site_2
+	}
+	text = {
+		trigger = {
+			religion = rel:orthodox
+		}
+		localization_key = orthodox_site_2
+	}
+	text = {
+		trigger = {
+			religion = rel:oriental_orthodox
+		}
+		localization_key = oriental_orthodox_site_2
+	}
+	text = {
+		trigger = {
+			religion = rel:sunni
+		}
+		localization_key = sunni_site_2
+	}
+	text = {
+		trigger = {
+			religion = rel:shiite
+		}
+		localization_key = shiite_site_2
+	}
+	text = {
+		trigger = {
+			religion = rel:jewish
+		}
+		localization_key = jewish_site_2
+	}
+	text = {
+		trigger = {
+			OR = {
+				religion = rel:mahayana
+				religion = rel:gelugpa
+				religion = rel:theravada
+				religion = rel:shinto
+			}
+		}
+		localization_key = mahayana_site_2
+	}
+	text = {
+		trigger = {
+			religion = rel:hindu
+		}
+		localization_key = hindu_site_2
+	}
+	text = {
+		trigger = {
+			religion = rel:sikh
+		}
+		localization_key = sikh_site_2
+	}
+}
+
+holy_site_3 = {
+	type = country
+	random_valid = no
+	text = {
+		trigger = {
+			religion = rel:catholic
+		}
+		localization_key = catholic_site_3
+	}
+	text = {
+		trigger = {
+			religion = rel:protestant
+		}
+		localization_key = protestant_site_3
+	}
+	text = {
+		trigger = {
+			religion = rel:orthodox
+		}
+		localization_key = orthodox_site_3
+	}
+	text = {
+		trigger = {
+			religion = rel:oriental_orthodox
+		}
+		localization_key = oriental_orthodox_site_3
+	}
+	text = {
+		trigger = {
+			religion = rel:sunni
+		}
+		localization_key = sunni_site_3
+	}
+	text = {
+		trigger = {
+			religion = rel:shiite
+		}
+		localization_key = shiite_site_3
+	}
+	text = {
+		trigger = {
+			religion = rel:jewish
+		}
+		localization_key = jewish_site_3
+	}
+	text = {
+		trigger = {
+			OR = {
+				religion = rel:mahayana
+				religion = rel:gelugpa
+				religion = rel:theravada
+				religion = rel:shinto
+			}
+		}
+		localization_key = mahayana_site_3
+	}
+	text = {
+		trigger = {
+			religion = rel:hindu
+		}
+		localization_key = hindu_site_3
+	}
+	text = {
+		trigger = {
+			religion = rel:sikh
+		}
+		localization_key = sikh_site_3
+	}
+}
+
+holy_site_4 = {
+	type = country
+	random_valid = no
+	text = {
+		trigger = {
+			religion = rel:catholic
+		}
+		localization_key = catholic_site_4
+	}
+	text = {
+		trigger = {
+			religion = rel:protestant
+		}
+		localization_key = protestant_site_4
+	}
+	text = {
+		trigger = {
+			religion = rel:orthodox
+		}
+		localization_key = orthodox_site_4
+	}
+	text = {
+		trigger = {
+			religion = rel:oriental_orthodox
+		}
+		localization_key = oriental_orthodox_site_4
+	}
+	text = {
+		trigger = {
+			religion = rel:sunni
+		}
+		localization_key = sunni_site_4
+	}
+	text = {
+		trigger = {
+			religion = rel:shiite
+		}
+		localization_key = shiite_site_4
+	}
+	text = {
+		trigger = {
+			religion = rel:jewish
+		}
+		localization_key = jewish_site_1
+	}
+	text = {
+		trigger = {
+			OR = {
+				religion = rel:mahayana
+				religion = rel:gelugpa
+				religion = rel:theravada
+				religion = rel:shinto
+			}
+		}
+		localization_key = mahayana_site_4
+	}
+	text = {
+		trigger = {
+			religion = rel:hindu
+		}
+		localization_key = hindu_site_4
+	}
+	text = {
+		trigger = {
+			religion = rel:sikh
+		}
+		localization_key = sikh_site_4
+	}
+}
+
+holy_site_5 = {
+	type = country
+	random_valid = no
+	text = {
+		trigger = {
+			religion = rel:catholic
+		}
+		localization_key = catholic_site_5
+	}
+	text = {
+		trigger = {
+			religion = rel:protestant
+		}
+		localization_key = protestant_site_5
+	}
+	text = {
+		trigger = {
+			religion = rel:orthodox
+		}
+		localization_key = orthodox_site_5
+	}
+	text = {
+		trigger = {
+			religion = rel:oriental_orthodox
+		}
+		localization_key = oriental_orthodox_site_5
+	}
+	text = {
+		trigger = {
+			religion = rel:sunni
+		}
+		localization_key = sunni_site_5
+	}
+	text = {
+		trigger = {
+			religion = rel:shiite
+		}
+		localization_key = shiite_site_5
+	}
+	text = {
+		trigger = {
+			OR = {
+				religion = rel:mahayana
+				religion = rel:gelugpa
+				religion = rel:theravada
+				religion = rel:shinto
+			}
+		}
+		localization_key = mahayana_site_5
+	}
+	text = {
+		trigger = {
+			religion = rel:hindu
+		}
+		localization_key = hindu_site_5
+	}
+	text = {
+		trigger = {
+			religion = rel:sikh
+		}
+		localization_key = sikh_site_5
 	}
 }

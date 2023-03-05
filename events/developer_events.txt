@@ -127,7 +127,7 @@ dev.1 = {
 			}
 			change_variable = {
 				name = culture_reform_point
-				add = 750
+				add = 7500
 			}
 		}
 	}
@@ -169,7 +169,7 @@ dev.1 = {
 		}
 		change_variable = {
 			name = ve_splender_points
-			add = 800
+			add = 8000
 		}
 	}
 	option = {
@@ -205,9 +205,12 @@ dev.2 = {
 	flavor = dev.1.f
 	duration = 0
 	trigger = {
-		has_variable = innovative_idea
-		var:idea_1_bar_point >= 10
-		country_or_subject_owns_entire_state_region = STATE_HEDJAZ
+		literacy_rate >= 0.5
+		any_scope_state = {
+			owner = ROOT
+			state_population < 250000
+			has_building = building_railway
+		}
 	}
 	option = {
 		name = dev.2.a
@@ -228,341 +231,37 @@ dev.2 = {
 	option = {
 		name = dev.2.b
 		default_option = yes
-		remove_variable = innovative_idea_completed
+		add_technology_researched = railways
+		every_scope_state = {
+			limit = {
+				owner = ROOT
+			}
+			create_building = {
+				building = building_railway
+				level = 1
+			}
+		}
 	}
 	option = {
 		name = dev.2.c
 		set_variable = {
-			name = national_idea_pool
+			name = ve_age_1_started
+			value = 1
+		}
+		set_variable = {
+			name = ve_age_2_started
+			value = 0
+		}
+		set_variable = {
+			name = ve_age_3_started
 			value = 0
 		}
 	}
 	option = {
 		name = dev.2.d
-		random_state_region = {
-			limit = {
-				NOT = {
-					is_in_list = exlude_state_region
-				}
-			}
-			add_to_global_variable_list = {
-				name = adm_ideas
-				target = this
-			}
-			set_variable = {
-				name = idea_group
-				value = flag:innovative_idea
-			}
-			add_to_list = exclude_state_region
-		}
-		random_state_region = {
-			limit = {
-				NOT = {
-					is_in_list = exlude_state_region
-				}
-			}
-			add_to_global_variable_list = {
-				name = adm_ideas
-				target = this
-			}
-			set_variable = {
-				name = idea_group
-				value = flag:economic_idea
-			}
-			add_to_list = exclude_state_region
-		}
-		random_state_region = {
-			limit = {
-				NOT = {
-					is_in_list = exlude_state_region
-				}
-			}
-			add_to_global_variable_list = {
-				name = adm_ideas
-				target = this
-			}
-			set_variable = {
-				name = idea_group
-				value = flag:administrative_idea
-			}
-			add_to_list = exclude_state_region
-		}
-		random_state_region = {
-			limit = {
-				NOT = {
-					is_in_list = exlude_state_region
-				}
-			}
-			add_to_global_variable_list = {
-				name = adm_ideas
-				target = this
-			}
-			set_variable = {
-				name = idea_group
-				value = flag:ethnocentrism_idea
-			}
-			add_to_list = exclude_state_region
-		}
-		random_state_region = {
-			limit = {
-				NOT = {
-					is_in_list = exlude_state_region
-				}
-			}
-			add_to_global_variable_list = {
-				name = adm_ideas
-				target = this
-			}
-			set_variable = {
-				name = idea_group
-				value = flag:politics_idea
-			}
-			add_to_list = exclude_state_region
-		}
-		random_state_region = {
-			limit = {
-				NOT = {
-					is_in_list = exlude_state_region
-				}
-			}
-			add_to_global_variable_list = {
-				name = dip_ideas
-				target = this
-			}
-			set_variable = {
-				name = idea_group
-				value = flag:diplomatic_idea
-			}
-			add_to_list = exclude_state_region
-		}
-		random_state_region = {
-			limit = {
-				NOT = {
-					is_in_list = exlude_state_region
-				}
-			}
-			add_to_global_variable_list = {
-				name = dip_ideas
-				target = this
-			}
-			set_variable = {
-				name = idea_group
-				value = flag:trade_idea
-			}
-			add_to_list = exclude_state_region
-		}
-		random_state_region = {
-			limit = {
-				NOT = {
-					is_in_list = exlude_state_region
-				}
-			}
-			add_to_global_variable_list = {
-				name = dip_ideas
-				target = this
-			}
-			set_variable = {
-				name = idea_group
-				value = flag:qualification_idea
-			}
-			add_to_list = exclude_state_region
-		}
-		random_state_region = {
-			limit = {
-				NOT = {
-					is_in_list = exlude_state_region
-				}
-			}
-			add_to_global_variable_list = {
-				name = dip_ideas
-				target = this
-			}
-			set_variable = {
-				name = idea_group
-				value = flag:humanist_idea
-			}
-			add_to_list = exclude_state_region
-		}
-		random_state_region = {
-			limit = {
-				NOT = {
-					is_in_list = exlude_state_region
-				}
-			}
-			add_to_global_variable_list = {
-				name = dip_ideas
-				target = this
-			}
-			set_variable = {
-				name = idea_group
-				value = flag:syndicalism_idea
-			}
-			add_to_list = exclude_state_region
-		}
-		random_state_region = {
-			limit = {
-				NOT = {
-					is_in_list = exlude_state_region
-				}
-			}
-			add_to_global_variable_list = {
-				name = mil_ideas
-				target = this
-			}
-			set_variable = {
-				name = idea_group
-				value = flag:offensive_idea
-			}
-			add_to_list = exclude_state_region
-		}
-		random_state_region = {
-			limit = {
-				NOT = {
-					is_in_list = exlude_state_region
-				}
-			}
-			add_to_global_variable_list = {
-				name = mil_ideas
-				target = this
-			}
-			set_variable = {
-				name = idea_group
-				value = flag:defensive_idea
-			}
-			add_to_list = exclude_state_region
-		}
-		random_state_region = {
-			limit = {
-				NOT = {
-					is_in_list = exlude_state_region
-				}
-			}
-			add_to_global_variable_list = {
-				name = mil_ideas
-				target = this
-			}
-			set_variable = {
-				name = idea_group
-				value = flag:naval_idea
-			}
-			add_to_list = exclude_state_region
-		}
-		random_state_region = {
-			limit = {
-				NOT = {
-					is_in_list = exlude_state_region
-				}
-			}
-			add_to_global_variable_list = {
-				name = mil_ideas
-				target = this
-			}
-			set_variable = {
-				name = idea_group
-				value = flag:militarization_idea
-			}
-			add_to_list = exclude_state_region
-		}
-		random_state_region = {
-			limit = {
-				NOT = {
-					is_in_list = exlude_state_region
-				}
-			}
-			add_to_global_variable_list = {
-				name = mil_ideas
-				target = this
-			}
-			set_variable = {
-				name = idea_group
-				value = flag:imperialist_idea
-			}
-			add_to_list = exclude_state_region
-		}
-		set_global_variable = {
-			name = 1_string
-			value = flag:1
-		}
-		add_to_global_variable_list = {
-			name = idea_index
-			target = global_var:1_string
-		}
-		set_global_variable = {
-			name = 1_value
-			value = 1
-		}
-		set_global_variable = {
-			name = 2_string
-			value = flag:2
-		}
-		add_to_global_variable_list = {
-			name = idea_index
-			target = global_var:2_string
-		}
-		set_global_variable = {
-			name = 2_value
-			value = 2
-		}
-		set_global_variable = {
-			name = 3_string
-			value = flag:3
-		}
-		add_to_global_variable_list = {
-			name = idea_index
-			target = global_var:3_string
-		}
-		set_global_variable = {
-			name = 3_value
-			value = 3
-		}
-		set_global_variable = {
-			name = 4_string
-			value = flag:4
-		}
-		add_to_global_variable_list = {
-			name = idea_index
-			target = global_var:4_string
-		}
-		set_global_variable = {
-			name = 4_value
-			value = 4
-		}
-		set_global_variable = {
-			name = 5_string
-			value = flag:5
-		}
-		add_to_global_variable_list = {
-			name = idea_index
-			target = global_var:5_string
-		}
-		set_global_variable = {
-			name = 5_value
-			value = 5
-		}
-		set_global_variable = {
-			name = 6_string
-			value = flag:6
-		}
-		add_to_global_variable_list = {
-			name = idea_index
-			target = global_var:6_string
-		}
-		set_global_variable = {
-			name = 6_value
-			value = 6
-		}
-		set_global_variable = {
-			name = 7_string
-			value = flag:7
-		}
-		add_to_global_variable_list = {
-			name = idea_index
-			target = global_var:7_string
-		}
-		set_global_variable = {
-			name = 7_value
-			value = 7
-		}
+		set_variable = ve_age_1_started
+		remove_variable = ve_age_3_started
+		remove_variable = ve_age_2_started
 	}
 }
 
