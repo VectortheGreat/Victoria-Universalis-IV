@@ -1817,15 +1817,34 @@ ve_aspect_button_8 = {
 			limit = {
 				religion = rel:catholic
 			}
+			add_loyalists = {
+				value = 0.05
+				religion = rel:catholic
+			}
 		}
 		else_if = {
 			limit = {
 				religion = rel:protestant
 			}
+			every_country = {
+			}
 		}
 		else_if = {
 			limit = {
 				religion = rel:orthodox
+			}
+			capital = {
+				random_scope_building = {
+					limit = {
+						NOT = {
+							has_modifier = orthodox_aspect_8
+						}
+					}
+					add_modifier = {
+						name = orthodox_aspect_8
+						months = 65
+					}
+				}
 			}
 		}
 		else_if = {
@@ -1842,6 +1861,40 @@ ve_aspect_button_8 = {
 			limit = {
 				religion = rel:shiite
 			}
+			if = {
+				limit = {
+					global_country_ranking >= 2
+				}
+				random_rival_country = {
+					save_scope_as = ve_random_rival
+				}
+				random_state = {
+					limit = {
+						owner = scope:ve_ramdom_rival
+						is_interest_active = yes
+					}
+					add_claim = ROOT
+				}
+				random_state = {
+					limit = {
+						owner = scope:ve_ramdom_rival
+						is_interest_active = yes
+					}
+					add_claim = ROOT
+				}
+			}
+			else = {
+				random_rival_country = {
+					save_scope_as = ve_random_rival
+				}
+				random_state = {
+					limit = {
+						owner = scope:ve_ramdom_rival
+						is_interest_active = yes
+					}
+					add_claim = ROOT
+				}
+			}
 		}
 		else_if = {
 			limit = {
@@ -1850,27 +1903,30 @@ ve_aspect_button_8 = {
 		}
 		else_if = {
 			limit = {
-				religion = rel:mahayana
+				OR = {
+					religion = rel:mahayana
+					religion = rel:gelugpa
+					religion = rel:theravada
+					religion = rel:shinto
+				}
 			}
-		}
-		else_if = {
-			limit = {
-				religion = rel:gelugpa
-			}
-		}
-		else_if = {
-			limit = {
-				religion = rel:theravada
+			capital = {
+				random_scope_building = {
+					limit = {
+						NOT = {
+							has_modifier = mahayana_aspect_8
+						}
+					}
+					add_modifier = {
+						name = mahayana_aspect_8
+						months = 65
+					}
+				}
 			}
 		}
 		else_if = {
 			limit = {
 				religion = rel:hindu
-			}
-		}
-		else_if = {
-			limit = {
-				religion = rel:shinto
 			}
 		}
 		else_if = {

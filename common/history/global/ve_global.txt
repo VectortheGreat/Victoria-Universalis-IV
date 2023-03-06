@@ -14,11 +14,33 @@
 		if = {
 			limit = {
 				NOT = {
+					has_variable = total_culture_missionaries
+				}
+			}
+			set_variable = {
+				name = total_culture_missionaries
+				value = 1
+			}
+		}
+		if = {
+			limit = {
+				NOT = {
 					has_variable = avaible_missionaries
 				}
 			}
 			set_variable = {
 				name = avaible_missionaries
+				value = 1
+			}
+		}
+		if = {
+			limit = {
+				NOT = {
+					has_variable = total_missionaries
+				}
+			}
+			set_variable = {
+				name = total_missionaries
 				value = 1
 			}
 		}

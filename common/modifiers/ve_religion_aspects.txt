@@ -522,3 +522,17 @@ ve_diffusionist_mdf = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_gear_positive.dds
 	state_assimilation_mult = 1
 }
+
+orthodox_aspect_8 = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_gear_positive.dds
+	building_throughput_mult = 0.25
+}
+
+mahayana_aspect_8 = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_gear_positive.dds
+	building_group_bg_urban_facilities_employee_mult = 0.25
+}
+
+hindu_aspect_8_mdf_1 = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_gear_positive.dds
+}

@@ -159,7 +159,6 @@ trade_idea_3_mdf = {
 
 trade_idea_4_mdf = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_lightbulb_positive.dds
-	
 	market_land_trade_capacity_add = 10
 }
 
