@@ -2722,3 +2722,116 @@ ve_holy_site_5 = {
 		}
 	}
 }
+
+#Missionary
+ve_send_missionary = {
+	scope = state
+	saved_scopes = {
+		country
+	}
+	is_shown = {
+		NOT = {
+			has_modifier = ve_missionary_mdf
+		}
+	}
+	is_valid = {
+		scope:country = {
+			has_variable = avaible_missionaries
+			var:avaible_missionaries >= 1
+			NOT = {
+				has_law = law_type:law_total_separation
+			}
+		}
+		owner = scope:country
+	}
+	effect = {
+		add_modifier = {
+			name = ve_missionary_mdf
+			months = -1
+		}
+		scope:country = {
+			change_variable = {
+				name = avaible_missionaries
+				subtract = 1
+			}
+		}
+	}
+}
+
+ve_return_missionary = {
+	scope = state
+	saved_scopes = {
+		country3
+	}
+	is_shown = {
+		has_modifier = ve_missionary_mdf
+	}
+	is_valid = {
+		owner = scope:country3
+	}
+	effect = {
+		remove_modifier = ve_missionary_mdf
+		scope:country3 = {
+			change_variable = {
+				name = avaible_missionaries
+				add = 1
+			}
+		}
+	}
+}
+
+ve_send_diffusionist = {
+	scope = state
+	saved_scopes = {
+		country2
+	}
+	is_shown = {
+		NOT = {
+			has_modifier = ve_diffusionist_mdf
+		}
+	}
+	is_valid = {
+		scope:country2 = {
+			has_variable = avaible_culture_missionaries
+			var:avaible_culture_missionaries >= 1
+			NOT = {
+				has_law = law_type:law_multicultural
+			}
+		}
+		owner = scope:country2
+	}
+	effect = {
+		add_modifier = {
+			name = ve_diffusionist_mdf
+			months = -1
+		}
+		scope:country2 = {
+			change_variable = {
+				name = avaible_culture_missionaries
+				subtract = 1
+			}
+		}
+	}
+}
+
+ve_return_diffusionist = {
+	scope = state
+	saved_scopes = {
+		country4
+	}
+	is_shown = {
+		has_modifier = ve_diffusionist_mdf
+	}
+	is_valid = {
+		owner = scope:country4
+	}
+	effect = {
+		remove_modifier = ve_diffusionist_mdf
+		scope:country4 = {
+			change_variable = {
+				name = avaible_culture_missionaries
+				add = 1
+			}
+		}
+	}
+}

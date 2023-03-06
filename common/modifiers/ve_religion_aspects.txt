@@ -511,3 +511,14 @@ animist_aspect_8_mdf = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_gear_positive.dds
 	interest_group_approval_add = 2
 }
+
+#Missionary
+ve_missionary_mdf = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_gear_positive.dds
+	state_conversion_mult = 1
+}
+
+ve_diffusionist_mdf = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_gear_positive.dds
+	state_assimilation_mult = 1
+}

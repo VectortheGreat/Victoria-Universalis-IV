@@ -488,48 +488,48 @@
 	7-country_max_declared_interests_mult
 
 	Prussia-Germany:
-	Trad: - country_infamy_decay_mult ve country_legitimacy_headofstate_add
+	Trad: - unit_morale_damage_mult ve unit_army_offense_add
 	Bonus: -unit_army_offense_mult
 	1-country_tech_spread_mult ve building_university_throughput_mult
-	2-country_bureaucracy_mult
-	3-unit_morale_damage_mult 
-	4-
-	5-
-	6-unit_morale_recovery_mult
-	7-
+	2-country_legitimacy_headofstate_add
+	3-country_infamy_decay_mult
+	4-country_bureaucracy_mult
+	5-state_accepted_birth_rate_mult
+	6-unit_morale_recovery_mult ve building_training_rate_mult
+	7-state_pop_qualifications_mult
 
 	Austria:
-	Trad: -
-	Bonus: -
-	1-
-	2-
-	3-
-	4-
-	5-
-	6-
-	7-
+	Trad: -unit_morale_damage_mult ve country_improve_relations_speed_mult
+	Bonus: -country_legitimacy_govt_leader_clout_add
+	1-country_infamy_generation_mult
+	2-country_influence_add ve country_max_declared_interests_add
+	3-unit_army_defense_add ve unit_morale_loss_add
+	4-state_infrastructure_mult
+	5-country_loan_interest_rate_mult ve state_capitalists_investment_pool_efficiency_mult
+	6-state_radicals_from_discrimination_mult
+	7-country_military_wages_mult ve building_training_rate_add
 
 	Russia:
-	Trad: -
-	Bonus: -
-	1-
-	2-
-	3-
-	4-
-	5-
-	6-
-	7-
+	Trad: -state_bureaucracy_population_base_cost_factor_mult ve 
+	Bonus: -country_legitimacy_base_add
+	1-country_law_enactment_success_add
+	2-country_military_tech_cost_mult
+	3-country_resource_depletion_chance_mult
+	4-state_conscription_rate_mult ve unit_offense_add
+	5-country_infamy_generation_mult
+	6-unit_morale_damage_mult ve unit_morale_loss_mult
+	7-country_army_power_projection_mult
 
 	Ottomans:
-	Trad: -
-	Bonus: -
-	1-
-	2-
-	3-
-	4-
-	5-
-	6-
-	7-
+	Trad: -country_law_enactment_time_mult ve state_radicals_from_discrimination_mult
+	Bonus: -state_conscription_rate_mult
+	1-country_bureaucracy_mult
+	2-country_tech_spread_mult ve state_education_access_add
+	3-unit_morale_recovery_mult ve unit_army_offense_mult
+	4-country_weekly_innovation_mult
+	5-market_land_trade_capacity_add
+	6-interest_group_in_government_approval_add ve country_decree_cost_mult
+	7-country_infamy_decay_mult
 
 	Egypt:
 	Trad: -
