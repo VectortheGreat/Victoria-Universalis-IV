@@ -1817,36 +1817,27 @@ ve_aspect_button_8 = {
 			limit = {
 				religion = rel:catholic
 			}
-			add_loyalists = {
-				value = 0.05
-				religion = rel:catholic
+			add_modifier = {
+				name = catholic_aspect_8_mdf
+				months = 65
 			}
 		}
 		else_if = {
 			limit = {
 				religion = rel:protestant
 			}
-			add_loyalists = {
-				value = 0.05
-				religion = rel:protestant
+			add_modifier = {
+				name = protestant_aspect_8_mdf
+				months = 65
 			}
 		}
 		else_if = {
 			limit = {
 				religion = rel:orthodox
 			}
-			capital = {
-				random_scope_building = {
-					limit = {
-						NOT = {
-							has_modifier = orthodox_aspect_8
-						}
-					}
-					add_modifier = {
-						name = orthodox_aspect_8
-						months = 65
-					}
-				}
+			add_modifier = {
+				name = orthodox_aspect_8_mdf
+				months = 65
 			}
 		}
 		else_if = {
@@ -1862,64 +1853,27 @@ ve_aspect_button_8 = {
 			limit = {
 				religion = rel:sunni
 			}
-			random_scope_building = {
-				limit = {
-					NOT = {
-						has_modifier = orthodox_aspect_8
-					}
-				}
-				add_modifier = {
-					name = orthodox_aspect_8
-					months = 65
-				}
+			add_modifier = {
+				name = sunni_aspect_8_mdf
+				months = 65
 			}
 		}
 		else_if = {
 			limit = {
 				religion = rel:shiite
 			}
-			if = {
-				limit = {
-					global_country_ranking >= 2
-				}
-				random_rival_country = {
-					save_scope_as = ve_random_rival
-				}
-				random_state = {
-					limit = {
-						owner = scope:ve_ramdom_rival
-						is_interest_active = yes
-					}
-					add_claim = ROOT
-				}
-				random_state = {
-					limit = {
-						owner = scope:ve_ramdom_rival
-						is_interest_active = yes
-					}
-					add_claim = ROOT
-				}
-			}
-			else = {
-				random_rival_country = {
-					save_scope_as = ve_random_rival
-				}
-				random_state = {
-					limit = {
-						owner = scope:ve_ramdom_rival
-						is_interest_active = yes
-					}
-					add_claim = ROOT
-				}
+			add_modifier = {
+				name = shia_aspect_8_mdf
+				months = 65
 			}
 		}
 		else_if = {
 			limit = {
 				religion = rel:jewish
 			}
-			add_loyalists = {
-				value = 0.05
-				religion = rel:jewish
+			add_modifier = {
+				name = jewish_aspect_8_mdf
+				months = 65
 			}
 		}
 		else_if = {
@@ -1931,54 +1885,27 @@ ve_aspect_button_8 = {
 					religion = rel:shinto
 				}
 			}
-			capital = {
-				random_scope_building = {
-					limit = {
-						NOT = {
-							has_modifier = mahayana_aspect_8
-						}
-					}
-					add_modifier = {
-						name = mahayana_aspect_8
-						months = 65
-					}
-				}
+			add_modifier = {
+				name = mahayana_aspect_8_mdf
+				months = 65
 			}
 		}
 		else_if = {
 			limit = {
 				religion = rel:hindu
 			}
-			capital = {
-				random_scope_building = {
-					limit = {
-						NOT = {
-							has_modifier = mahayana_aspect_8
-						}
-					}
-					add_modifier = {
-						name = mahayana_aspect_8
-						months = 65
-					}
-				}
+			add_modifier = {
+				name = hindu_aspect_8_mdf
+				months = 65
 			}
 		}
 		else_if = {
 			limit = {
 				religion = rel:sikh
 			}
-			capital = {
-				random_scope_building = {
-					limit = {
-						NOT = {
-							has_modifier = mahayana_aspect_8
-						}
-					}
-					add_modifier = {
-						name = mahayana_aspect_8
-						months = 65
-					}
-				}
+			add_modifier = {
+				name = sikh_aspect_8_mdf
+				months = 65
 			}
 		}
 		else_if = {
@@ -1990,6 +1917,13 @@ ve_aspect_button_8 = {
 				months = 65
 			}
 		}
+	}
+}
+
+ve_passive_bonus_tooltip = {
+	scope = country
+	effect = {
+		religion_passive_bonuses = yes
 	}
 }
 
@@ -2982,5 +2916,25 @@ ve_hide_culture_missionary_topbar = {
 		NOT = {
 			has_law = law_type:law_multicultural
 		}
+	}
+}
+
+ve_call_all_missionaries = {
+	scope = country
+	is_valid = {
+		var:avaible_missionaries != var:total_missionaries
+	}
+	effect = {
+		call_missionaries_effect = yes
+	}
+}
+
+ve_call_all_cultural_missionaries = {
+	scope = country
+	is_valid = {
+		var:avaible_culture_missionaries != var:total_culture_missionaries
+	}
+	effect = {
+		call_cultural_missionaries_effect = yes
 	}
 }

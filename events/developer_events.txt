@@ -273,24 +273,25 @@ dev.3 = {
 	desc = dev.1.d
 	flavor = dev.1.f
 	duration = 0
-	cooldown = {
-		months = 1
-	}
-	trigger = {
-		any_country = {
-			is_ai = yes
-		}
-	}
-	immediate = {
-		every_country = {
-			trigger_event = {
-				id = dev.4
-			}
-		}
+	option = {
+		name = dev.2.a
+		default_option = yes
+		change_tag = PRU
 	}
 	option = {
 		name = dev.2.a
 		default_option = yes
+		change_tag = GER
+	}
+	option = {
+		name = dev.2.a
+		default_option = yes
+		change_tag = NGF
+	}
+	option = {
+		name = dev.2.a
+		default_option = yes
+		change_tag = SGF
 	}
 }
 

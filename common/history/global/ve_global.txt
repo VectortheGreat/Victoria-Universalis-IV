@@ -491,5 +491,6 @@
 			name = imperialist_idea
 			value = 0
 		}
+		religion_passive_bonuses = yes
 	}
 }

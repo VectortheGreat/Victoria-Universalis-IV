@@ -255,7 +255,7 @@ administrative_idea_7_mdf = {
 
 qualification_idea_1_mdf = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_lightbulb_positive.dds
-	state_migration_pull_mult = 0.15
+	state_migration_push_mult = -0.1
 }
 
 qualification_idea_2_mdf = {
@@ -280,27 +280,8 @@ qualification_idea_5_mdf = {
 
 qualification_idea_6_mdf = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_lightbulb_positive.dds
-	building_throughput_building_eiffel_mult = 0.1
-	building_throughput_building_angkor_wat_mult = 0.1
-	building_throughput_building_big_ben_mult = 0.1
-	building_throughput_building_forbidden_city_mult = 0.1
-	building_throughput_building_hagia_sophia_mult = 0.1
-	building_throughput_building_mosque_of_djenne_mult = 0.1
-	building_throughput_building_saint_basils_cathedralr_mult = 0.1
-	building_throughput_building_statue_of_liberty_mult = 0.1
-	building_throughput_building_taj_mahal_mult = 0.1
-	building_throughput_building_vatican_city_mult = 0.1
-	building_throughput_building_white_house_mult = 0.1
-	building_throughput_building_machu_picchu_mult = 0.1
-	building_throughput_building_argebam_mult = 0.1
-	building_throughput_building_chichen_itza_mult = 0.1
-	building_throughput_building_easter_island_heads_mult = 0.1
-	building_throughput_building_eye_of_sahara_mult = 0.1
-	building_throughput_building_giza_necropolis_mult = 0.1
-	building_throughput_building_khaju_bridge_mult = 0.1
-	building_throughput_building_petra_mult = 0.1
-	building_throughput_building_capitol_hill_mult = 0.1
-	building_throughput_building_central_park_mult = 0.1
+	state_rich_standard_of_living_add = 2
+	state_middle_standard_of_living_add = 1
 }
 
 qualification_idea_7_mdf = {
@@ -369,8 +350,8 @@ ethnocentrism_idea_1_mdf = {
 
 ethnocentrism_idea_2_mdf = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_lightbulb_positive.dds
-	state_conversion_mult = 0.15
-	state_assimilation_mult = 0.15
+	state_conversion_mult = 0.1
+	state_assimilation_mult = 0.1
 }
 
 ethnocentrism_idea_3_mdf = {
@@ -483,7 +464,7 @@ politics_idea_2_mdf = {
 
 politics_idea_3_mdf = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_lightbulb_positive.dds
-	country_law_enactment_time_mult = -3	#-0.2
+	country_law_enactment_time_mult = -0.2
 }
 
 politics_idea_4_mdf = {
@@ -493,7 +474,7 @@ politics_idea_4_mdf = {
 
 politics_idea_5_mdf = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_lightbulb_positive.dds
-	country_law_enactment_success_add = 3	#0.1
+	country_law_enactment_success_add = 0.1
 }
 
 politics_idea_6_mdf = {

@@ -207,7 +207,6 @@ types topbar_components
 
 						icon = {
 							size = { @secondary_icon_size @secondary_icon_size }
-							name = prestige_icon
 							texture = "gfx/interface/icon_envoy_missionary.dds"
 							parentanchor = vcenter
 						}
@@ -232,7 +231,6 @@ types topbar_components
 
 						icon = {
 							size = { @secondary_icon_size @secondary_icon_size }
-							name = infamy_icon
 							texture = "gfx/interface/icon2_diffusionist.dds"
 							parentanchor = vcenter
 						}
@@ -257,7 +255,6 @@ types topbar_components
 
 						icon = {
 							size = { @secondary_icon_size @secondary_icon_size }
-							name = legitimacy_icon
 							texture = "gfx/interface/catholic.dds"
 							parentanchor = vcenter
 						}
@@ -281,7 +278,6 @@ types topbar_components
 
 						icon = {
 							size = { @secondary_icon_size @secondary_icon_size }
-							name = infamy_icon
 							texture = "gfx/interface/monarch_cultures_icon.dds"
 							parentanchor = vcenter
 						}
@@ -306,7 +302,6 @@ types topbar_components
 
 						icon = {
 							size = { @secondary_icon_size @secondary_icon_size }
-							name = flotillas_icon
 							texture = "gfx/interface/icon_ideas.dds"
 							parentanchor = vcenter
 						}
@@ -331,7 +326,6 @@ types topbar_components
 
 						icon = {
 							size = { @secondary_icon_size @secondary_icon_size }
-							name = battalions_icon
 							texture = "gfx/interface/icon_splendor_tiny.dds"
 							parentanchor = vcenter
 						}

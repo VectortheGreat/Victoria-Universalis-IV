@@ -16,6 +16,89 @@ ve_national_idea_1 = {
 				months = -1
 			}
 		}
+		else_if = {
+			limit = {
+				this = c:FRA
+			}
+			add_modifier = {
+				name = fra_idea_1
+				months = -1
+			}
+		}
+		else_if = {
+			limit = {
+				OR = {
+					this = c:PRU
+					this = c:SGF
+					this = c:NGF
+					this = c:GER
+				}
+			}
+			add_modifier = {
+				name = ger_idea_1
+				months = -1
+			}
+		}
+		else_if = {
+			limit = {
+				this = c:AUS
+			}
+			add_modifier = {
+				name = aus_idea_1
+				months = -1
+			}
+		}
+		else_if = {
+			limit = {
+				this = c:RUS
+			}
+			add_modifier = {
+				name = rus_idea_1
+				months = -1
+			}
+		}
+		else_if = {
+			limit = {
+				this = c:TUR
+			}
+			add_modifier = {
+				name = tur_idea_1
+				months = -1
+			}
+		}
+		else_if = {
+			limit = {
+				this = c:CHI
+			}
+			add_modifier = {
+				name = qng_idea_1
+				months = -1
+			}
+		}
+		else_if = {
+			limit = {
+				this = c:JAP
+			}
+			add_modifier = {
+				name = jap_idea_1
+				months = -1
+			}
+		}
+		else_if = {
+			limit = {
+				this = c:USA
+			}
+			add_modifier = {
+				name = usa_idea_1
+				months = -1
+			}
+		}
+		else = {
+			add_modifier = {
+				name = generic_idea_1
+				months = -1
+			}
+		}
 	}
 }
 
@@ -34,6 +117,89 @@ ve_national_idea_2 = {
 			}
 			add_modifier = {
 				name = gbr_idea_2
+				months = -1
+			}
+		}
+		else_if = {
+			limit = {
+				this = c:FRA
+			}
+			add_modifier = {
+				name = fra_idea_2
+				months = -1
+			}
+		}
+		else_if = {
+			limit = {
+				OR = {
+					this = c:PRU
+					this = c:SGF
+					this = c:NGF
+					this = c:GER
+				}
+			}
+			add_modifier = {
+				name = ger_idea_2
+				months = -1
+			}
+		}
+		else_if = {
+			limit = {
+				this = c:AUS
+			}
+			add_modifier = {
+				name = aus_idea_2
+				months = -1
+			}
+		}
+		else_if = {
+			limit = {
+				this = c:RUS
+			}
+			add_modifier = {
+				name = rus_idea_2
+				months = -1
+			}
+		}
+		else_if = {
+			limit = {
+				this = c:TUR
+			}
+			add_modifier = {
+				name = tur_idea_2
+				months = -1
+			}
+		}
+		else_if = {
+			limit = {
+				this = c:CHI
+			}
+			add_modifier = {
+				name = qng_idea_2
+				months = -1
+			}
+		}
+		else_if = {
+			limit = {
+				this = c:JAP
+			}
+			add_modifier = {
+				name = jap_idea_2
+				months = -1
+			}
+		}
+		else_if = {
+			limit = {
+				this = c:USA
+			}
+			add_modifier = {
+				name = usa_idea_2
+				months = -1
+			}
+		}
+		else = {
+			add_modifier = {
+				name = generic_idea_2
 				months = -1
 			}
 		}
@@ -58,6 +224,89 @@ ve_national_idea_3 = {
 				months = -1
 			}
 		}
+		else_if = {
+			limit = {
+				this = c:FRA
+			}
+			add_modifier = {
+				name = fra_idea_3
+				months = -1
+			}
+		}
+		else_if = {
+			limit = {
+				OR = {
+					this = c:PRU
+					this = c:SGF
+					this = c:NGF
+					this = c:GER
+				}
+			}
+			add_modifier = {
+				name = ger_idea_3
+				months = -1
+			}
+		}
+		else_if = {
+			limit = {
+				this = c:AUS
+			}
+			add_modifier = {
+				name = aus_idea_3
+				months = -1
+			}
+		}
+		else_if = {
+			limit = {
+				this = c:RUS
+			}
+			add_modifier = {
+				name = rus_idea_3
+				months = -1
+			}
+		}
+		else_if = {
+			limit = {
+				this = c:TUR
+			}
+			add_modifier = {
+				name = tur_idea_3
+				months = -1
+			}
+		}
+		else_if = {
+			limit = {
+				this = c:CHI
+			}
+			add_modifier = {
+				name = qng_idea_3
+				months = -1
+			}
+		}
+		else_if = {
+			limit = {
+				this = c:JAP
+			}
+			add_modifier = {
+				name = jap_idea_3
+				months = -1
+			}
+		}
+		else_if = {
+			limit = {
+				this = c:USA
+			}
+			add_modifier = {
+				name = usa_idea_3
+				months = -1
+			}
+		}
+		else = {
+			add_modifier = {
+				name = generic_idea_3
+				months = -1
+			}
+		}
 	}
 }
 
@@ -76,6 +325,89 @@ ve_national_idea_4 = {
 			}
 			add_modifier = {
 				name = gbr_idea_4
+				months = -1
+			}
+		}
+		else_if = {
+			limit = {
+				this = c:FRA
+			}
+			add_modifier = {
+				name = fra_idea_4
+				months = -1
+			}
+		}
+		else_if = {
+			limit = {
+				OR = {
+					this = c:PRU
+					this = c:SGF
+					this = c:NGF
+					this = c:GER
+				}
+			}
+			add_modifier = {
+				name = ger_idea_4
+				months = -1
+			}
+		}
+		else_if = {
+			limit = {
+				this = c:AUS
+			}
+			add_modifier = {
+				name = aus_idea_4
+				months = -1
+			}
+		}
+		else_if = {
+			limit = {
+				this = c:RUS
+			}
+			add_modifier = {
+				name = rus_idea_4
+				months = -1
+			}
+		}
+		else_if = {
+			limit = {
+				this = c:TUR
+			}
+			add_modifier = {
+				name = tur_idea_4
+				months = -1
+			}
+		}
+		else_if = {
+			limit = {
+				this = c:CHI
+			}
+			add_modifier = {
+				name = qng_idea_4
+				months = -1
+			}
+		}
+		else_if = {
+			limit = {
+				this = c:JAP
+			}
+			add_modifier = {
+				name = jap_idea_4
+				months = -1
+			}
+		}
+		else_if = {
+			limit = {
+				this = c:USA
+			}
+			add_modifier = {
+				name = usa_idea_4
+				months = -1
+			}
+		}
+		else = {
+			add_modifier = {
+				name = generic_idea_4
 				months = -1
 			}
 		}
@@ -100,6 +432,89 @@ ve_national_idea_5 = {
 				months = -1
 			}
 		}
+		else_if = {
+			limit = {
+				this = c:FRA
+			}
+			add_modifier = {
+				name = fra_idea_5
+				months = -1
+			}
+		}
+		else_if = {
+			limit = {
+				OR = {
+					this = c:PRU
+					this = c:SGF
+					this = c:NGF
+					this = c:GER
+				}
+			}
+			add_modifier = {
+				name = ger_idea_5
+				months = -1
+			}
+		}
+		else_if = {
+			limit = {
+				this = c:AUS
+			}
+			add_modifier = {
+				name = aus_idea_5
+				months = -1
+			}
+		}
+		else_if = {
+			limit = {
+				this = c:RUS
+			}
+			add_modifier = {
+				name = rus_idea_5
+				months = -1
+			}
+		}
+		else_if = {
+			limit = {
+				this = c:TUR
+			}
+			add_modifier = {
+				name = tur_idea_5
+				months = -1
+			}
+		}
+		else_if = {
+			limit = {
+				this = c:CHI
+			}
+			add_modifier = {
+				name = qng_idea_5
+				months = -1
+			}
+		}
+		else_if = {
+			limit = {
+				this = c:JAP
+			}
+			add_modifier = {
+				name = jap_idea_5
+				months = -1
+			}
+		}
+		else_if = {
+			limit = {
+				this = c:USA
+			}
+			add_modifier = {
+				name = usa_idea_5
+				months = -1
+			}
+		}
+		else = {
+			add_modifier = {
+				name = generic_idea_5
+				months = -1
+			}
+		}
 	}
 }
 
@@ -118,6 +533,89 @@ ve_national_idea_6 = {
 			}
 			add_modifier = {
 				name = gbr_idea_6
+				months = -1
+			}
+		}
+		else_if = {
+			limit = {
+				this = c:FRA
+			}
+			add_modifier = {
+				name = fra_idea_6
+				months = -1
+			}
+		}
+		else_if = {
+			limit = {
+				OR = {
+					this = c:PRU
+					this = c:SGF
+					this = c:NGF
+					this = c:GER
+				}
+			}
+			add_modifier = {
+				name = ger_idea_6
+				months = -1
+			}
+		}
+		else_if = {
+			limit = {
+				this = c:AUS
+			}
+			add_modifier = {
+				name = aus_idea_6
+				months = -1
+			}
+		}
+		else_if = {
+			limit = {
+				this = c:RUS
+			}
+			add_modifier = {
+				name = rus_idea_6
+				months = -1
+			}
+		}
+		else_if = {
+			limit = {
+				this = c:TUR
+			}
+			add_modifier = {
+				name = tur_idea_6
+				months = -1
+			}
+		}
+		else_if = {
+			limit = {
+				this = c:CHI
+			}
+			add_modifier = {
+				name = qng_idea_6
+				months = -1
+			}
+		}
+		else_if = {
+			limit = {
+				this = c:JAP
+			}
+			add_modifier = {
+				name = jap_idea_6
+				months = -1
+			}
+		}
+		else_if = {
+			limit = {
+				this = c:USA
+			}
+			add_modifier = {
+				name = usa_idea_6
+				months = -1
+			}
+		}
+		else = {
+			add_modifier = {
+				name = generic_idea_6
 				months = -1
 			}
 		}
@@ -142,6 +640,89 @@ ve_national_idea_7 = {
 				months = -1
 			}
 		}
+		else_if = {
+			limit = {
+				this = c:FRA
+			}
+			add_modifier = {
+				name = fra_idea_7
+				months = -1
+			}
+		}
+		else_if = {
+			limit = {
+				OR = {
+					this = c:PRU
+					this = c:SGF
+					this = c:NGF
+					this = c:GER
+				}
+			}
+			add_modifier = {
+				name = ger_idea_7
+				months = -1
+			}
+		}
+		else_if = {
+			limit = {
+				this = c:AUS
+			}
+			add_modifier = {
+				name = aus_idea_7
+				months = -1
+			}
+		}
+		else_if = {
+			limit = {
+				this = c:RUS
+			}
+			add_modifier = {
+				name = rus_idea_7
+				months = -1
+			}
+		}
+		else_if = {
+			limit = {
+				this = c:TUR
+			}
+			add_modifier = {
+				name = tur_idea_7
+				months = -1
+			}
+		}
+		else_if = {
+			limit = {
+				this = c:CHI
+			}
+			add_modifier = {
+				name = qng_idea_7
+				months = -1
+			}
+		}
+		else_if = {
+			limit = {
+				this = c:JAP
+			}
+			add_modifier = {
+				name = jap_idea_7
+				months = -1
+			}
+		}
+		else_if = {
+			limit = {
+				this = c:USA
+			}
+			add_modifier = {
+				name = usa_idea_7
+				months = -1
+			}
+		}
+		else = {
+			add_modifier = {
+				name = generic_idea_7
+				months = -1
+			}
+		}
 	}
 }
 
@@ -161,6 +742,125 @@ ve_national_idea_tradition = {
 				months = -1
 			}
 		}
+		else_if = {
+			limit = {
+				this = c:FRA
+			}
+			add_modifier = {
+				name = fra_idea_tradition_1
+				months = -1
+			}
+			add_modifier = {
+				name = fra_idea_tradition_2
+				months = -1
+			}
+		}
+		else_if = {
+			limit = {
+				OR = {
+					this = c:PRU
+					this = c:SGF
+					this = c:NGF
+					this = c:GER
+				}
+			}
+			add_modifier = {
+				name = ger_idea_tradition_1
+				months = -1
+			}
+			add_modifier = {
+				name = ger_idea_tradition_2
+				months = -1
+			}
+		}
+		else_if = {
+			limit = {
+				this = c:AUS
+			}
+			add_modifier = {
+				name = aus_idea_tradition_1
+				months = -1
+			}
+			add_modifier = {
+				name = aus_idea_tradition_2
+				months = -1
+			}
+		}
+		else_if = {
+			limit = {
+				this = c:RUS
+			}
+			add_modifier = {
+				name = rus_idea_tradition_1
+				months = -1
+			}
+			add_modifier = {
+				name = rus_idea_tradition_2
+				months = -1
+			}
+		}
+		else_if = {
+			limit = {
+				this = c:TUR
+			}
+			add_modifier = {
+				name = tur_idea_tradition_1
+				months = -1
+			}
+			add_modifier = {
+				name = tur_idea_tradition_2
+				months = -1
+			}
+		}
+		else_if = {
+			limit = {
+				this = c:CHI
+			}
+			add_modifier = {
+				name = qng_idea_tradition_1
+				months = -1
+			}
+			add_modifier = {
+				name = qng_idea_tradition_2
+				months = -1
+			}
+		}
+		else_if = {
+			limit = {
+				this = c:JAP
+			}
+			add_modifier = {
+				name = jap_idea_tradition_1
+				months = -1
+			}
+			add_modifier = {
+				name = jap_idea_tradition_2
+				months = -1
+			}
+		}
+		else_if = {
+			limit = {
+				this = c:USA
+			}
+			add_modifier = {
+				name = usa_idea_tradition_1
+				months = -1
+			}
+			add_modifier = {
+				name = usa_idea_tradition_2
+				months = -1
+			}
+		}
+		else = {
+			add_modifier = {
+				name = generic_idea_tradition_1
+				months = -1
+			}
+			add_modifier = {
+				name = generic_idea_tradition_2
+				months = -1
+			}
+		}
 	}
 }
 
@@ -173,6 +873,89 @@ ve_national_idea_bonus = {
 			}
 			add_modifier = {
 				name = gbr_idea_bonus
+				months = -1
+			}
+		}
+		else_if = {
+			limit = {
+				this = c:FRA
+			}
+			add_modifier = {
+				name = fra_idea_bonus
+				months = -1
+			}
+		}
+		else_if = {
+			limit = {
+				OR = {
+					this = c:PRU
+					this = c:SGF
+					this = c:NGF
+					this = c:GER
+				}
+			}
+			add_modifier = {
+				name = ger_idea_bonus
+				months = -1
+			}
+		}
+		else_if = {
+			limit = {
+				this = c:AUS
+			}
+			add_modifier = {
+				name = aus_idea_bonus
+				months = -1
+			}
+		}
+		else_if = {
+			limit = {
+				this = c:RUS
+			}
+			add_modifier = {
+				name = rus_idea_bonus
+				months = -1
+			}
+		}
+		else_if = {
+			limit = {
+				this = c:TUR
+			}
+			add_modifier = {
+				name = tur_idea_bonus
+				months = -1
+			}
+		}
+		else_if = {
+			limit = {
+				this = c:CHI
+			}
+			add_modifier = {
+				name = qng_idea_bonus
+				months = -1
+			}
+		}
+		else_if = {
+			limit = {
+				this = c:JAP
+			}
+			add_modifier = {
+				name = jap_idea_bonus
+				months = -1
+			}
+		}
+		else_if = {
+			limit = {
+				this = c:USA
+			}
+			add_modifier = {
+				name = usa_idea_bonus
+				months = -1
+			}
+		}
+		else = {
+			add_modifier = {
+				name = generic_idea_bonus
 				months = -1
 			}
 		}

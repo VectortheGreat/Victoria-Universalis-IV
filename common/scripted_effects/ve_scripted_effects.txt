@@ -1,176 +1,14 @@
 ﻿national_idea_mdf = {
-	c:GBR = {
-		if = {
-			limit = {
-				var:national_idea_pool >= 3
-				NOT = {
-					has_modifier = gbr_idea_1
-				}
-			}
-			add_modifier = {
-				name = gbr_idea_1
-				months = -1
-			}
-		}
-		if = {
-			limit = {
-				var:national_idea_pool >= 6
-				NOT = {
-					has_modifier = gbr_idea_2
-				}
-			}
-			add_modifier = {
-				name = gbr_idea_2
-				months = -1
-			}
-		}
-		if = {
-			limit = {
-				var:national_idea_pool >= 9
-				NOT = {
-					has_modifier = gbr_idea_3
-				}
-			}
-			add_modifier = {
-				name = gbr_idea_3
-				months = -1
-			}
-		}
-		if = {
-			limit = {
-				var:national_idea_pool >= 12
-				NOT = {
-					has_modifier = gbr_idea_4
-				}
-			}
-			add_modifier = {
-				name = gbr_idea_4
-				months = -1
-			}
-		}
-		if = {
-			limit = {
-				var:national_idea_pool >= 15
-				NOT = {
-					has_modifier = gbr_idea_5
-				}
-			}
-			add_modifier = {
-				name = gbr_idea_5
-				months = -1
-			}
-		}
-		if = {
-			limit = {
-				var:national_idea_pool >= 18
-				NOT = {
-					has_modifier = gbr_idea_6
-				}
-			}
-			add_modifier = {
-				name = gbr_idea_6
-				months = -1
-			}
-		}
-		if = {
-			limit = {
-				var:national_idea_pool >= 21
-				NOT = {
-					has_modifier = gbr_idea_7
-				}
-			}
-			add_modifier = {
-				name = gbr_idea_7
-				months = -1
-			}
-		}
-	}
-	c:TUR = {
-		if = {
-			limit = {
-				var:national_idea_pool >= 3
-				NOT = {
-					has_modifier = gbr_idea_1
-				}
-			}
-			add_modifier = {
-				name = gbr_idea_1
-				months = -1
-			}
-		}
-		if = {
-			limit = {
-				var:national_idea_pool >= 6
-				NOT = {
-					has_modifier = gbr_idea_2
-				}
-			}
-			add_modifier = {
-				name = gbr_idea_2
-				months = -1
-			}
-		}
-		if = {
-			limit = {
-				var:national_idea_pool >= 9
-				NOT = {
-					has_modifier = gbr_idea_3
-				}
-			}
-			add_modifier = {
-				name = gbr_idea_3
-				months = -1
-			}
-		}
-		if = {
-			limit = {
-				var:national_idea_pool >= 12
-				NOT = {
-					has_modifier = gbr_idea_4
-				}
-			}
-			add_modifier = {
-				name = gbr_idea_4
-				months = -1
-			}
-		}
-		if = {
-			limit = {
-				var:national_idea_pool >= 15
-				NOT = {
-					has_modifier = gbr_idea_5
-				}
-			}
-			add_modifier = {
-				name = gbr_idea_5
-				months = -1
-			}
-		}
-		if = {
-			limit = {
-				var:national_idea_pool >= 18
-				NOT = {
-					has_modifier = gbr_idea_6
-				}
-			}
-			add_modifier = {
-				name = gbr_idea_6
-				months = -1
-			}
-		}
-		if = {
-			limit = {
-				var:national_idea_pool >= 21
-				NOT = {
-					has_modifier = gbr_idea_7
-				}
-			}
-			add_modifier = {
-				name = gbr_idea_7
-				months = -1
-			}
-		}
-	}
+	british_ideas = yes
+	french_ideas = yes
+	german_ideas = yes
+	austrian_ideas = yes
+	russian_ideas = yes
+	turkish_ideas = yes
+	chinese_ideas = yes
+	japanese_ideas = yes
+	american_ideas = yes
+	generic_ideas = yes
 }
 
 cancel_national_idea_mdf = {
@@ -555,6 +393,19 @@ balance_missionaries = {
 	}
 }
 
+call_missionaries_effect = {
+	every_scope_state = {
+		limit = {
+			has_modifier = ve_missionary_mdf
+		}
+		remove_modifier = ve_missionary_mdf
+	}
+	set_variable = {
+		name = avaible_missionaries
+		value = var:total_missionaries
+	}
+}
+
 balance_cultural_missionaries = {
 	if = {
 		limit = {
@@ -569,6 +420,126 @@ balance_cultural_missionaries = {
 		set_variable = {
 			name = avaible_culture_missionaries
 			value = var:total_culture_missionaries
+		}
+	}
+}
+
+call_cultural_missionaries_effect = {
+	every_scope_state = {
+		limit = {
+			has_modifier = ve_diffusionist_mdf
+		}
+		remove_modifier = ve_diffusionist_mdf
+	}
+	set_variable = {
+		name = avaible_culture_missionaries
+		value = var:total_culture_missionaries
+	}
+}
+
+religion_passive_bonuses = {
+	if = {
+		limit = {
+			religion = rel:catholic
+		}
+		add_modifier = {
+			name = catholic_pasive_mdf
+			months = -1
+		}
+	}
+	else_if = {
+		limit = {
+			religion = rel:protestant
+		}
+		add_modifier = {
+			name = protestant_pasive_mdf
+			months = -1
+		}
+	}
+	else_if = {
+		limit = {
+			religion = rel:orthodox
+		}
+		add_modifier = {
+			name = orthodox_pasive_mdf
+			months = -1
+		}
+	}
+	else_if = {
+		limit = {
+			religion = rel:oriental_orthodox
+		}
+		add_modifier = {
+			name = coptic_pasive_mdf
+			months = -1
+		}
+	}
+	else_if = {
+		limit = {
+			religion = rel:sunni
+		}
+		add_modifier = {
+			name = sunni_pasive_mdf
+			months = -1
+		}
+	}
+	else_if = {
+		limit = {
+			religion = rel:shiite
+		}
+		add_modifier = {
+			name = shia_pasive_mdf
+			months = -1
+		}
+	}
+	else_if = {
+		limit = {
+			religion = rel:jewish
+		}
+		add_modifier = {
+			name = jewish_pasive_mdf
+			months = -1
+		}
+	}
+	else_if = {
+		limit = {
+			OR = {
+				religion = rel:mahayana
+				religion = rel:gelugpa
+				religion = rel:theravada
+				religion = rel:shinto
+			}
+		}
+		add_modifier = {
+			name = mahayana_pasive_mdf
+			months = -1
+		}
+	}
+	else_if = {
+		limit = {
+			religion = rel:hindu
+		}
+		add_modifier = {
+			name = hindu_pasive_mdf
+			months = -1
+		}
+	}
+	else_if = {
+		limit = {
+			religion = rel:sikh
+		}
+		add_modifier = {
+			name = sikh_pasive_mdf
+			months = -1
+		}
+	}
+	else_if = {
+		limit = {
+			religion = rel:animist
+		}
+		add_modifier = {
+			name = animist_pasive_mdf
+			months = -1
 		}
 	}
 }

@@ -74,6 +74,15 @@ types ve_gui_panel_types
 										elide = left
 										autoresize = yes
 									}
+									button = {
+										using = default_button_action
+										size = { 250 40 }
+										raw_text = "Call All Cultural Missionaries"
+										onclick = "[GetScriptedGui('ve_call_all_cultural_missionaries').Execute( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+										enabled = "[GetScriptedGui('ve_call_all_cultural_missionaries').IsValid(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+										tooltip = "ve_call_all_cultural_missionaries"
+										using = tooltip_below
+									}
 								}
 								vbox = {
 									spacing = 10

@@ -65,12 +65,21 @@ ve_gui_panel_types
 								autoresize = yes
 							}
 							textbox = {
-								text = "[GetPlayer.MakeScope.Var('avaible_missionaries').GetValue]"
+								text = "missionary_topbar"
 								default_format = "#instruction"
 								using = fontsize_xxl
 								align = nobaseline
 								elide = left
 								autoresize = yes
+							}
+							button = {
+								using = default_button_action
+								size = { 250 40 }
+								raw_text = "Call All Missionaries"
+								onclick = "[GetScriptedGui('ve_call_all_missionaries').Execute( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+								enabled = "[GetScriptedGui('ve_call_all_missionaries').IsValid(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+								tooltip = "ve_call_all_missionaries"
+								using = tooltip_below
 							}
 						}
 						vbox = {
@@ -108,6 +117,7 @@ ve_gui_panel_types
 						vbox = {
 							layoutpolicy_vertical = expanding
 							spacing = 20
+							tooltip = "[GetScriptedGui('ve_passive_bonus_tooltip').BuildTooltip(GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
 							margin = {
 								30
 								10
