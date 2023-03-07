@@ -280,3 +280,36 @@ culture_reform_point_value_max = 1000
 # 	}
 # }
 #
+# total_missionaries = {
+# 	value = 0
+# 	if = {
+# 		limit = {
+# 			has
+# 		}
+# 	}
+# # }
+# total_missionaries = {
+# 	value = 0
+# 	if = {
+# 		limit = {
+# 			has_law = ve_had_state_religion_law
+# 		}
+# 		add = 3
+# 	}
+# 	else_if = {
+# 		limit = {
+# 			has_law = law_freedom_of_conscience
+# 		}
+# 		add = 1
+# 	}
+# 	else_if = {
+# 		limit = {
+# 			has_law = law_total_separation
+# 		}
+# 		add = 0
+# 	}
+# }
+# avaible_missionaries = {
+# 	value = total_missionaries
+# 	subtract = var:used_missionaries
+# }

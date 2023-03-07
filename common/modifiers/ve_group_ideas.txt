@@ -370,6 +370,7 @@ ethnocentrism_idea_1_mdf = {
 ethnocentrism_idea_2_mdf = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_lightbulb_positive.dds
 	state_conversion_mult = 0.15
+	state_assimilation_mult = 0.15
 }
 
 ethnocentrism_idea_3_mdf = {
@@ -385,7 +386,7 @@ ethnocentrism_idea_4_mdf = {
 
 ethnocentrism_idea_5_mdf = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_lightbulb_positive.dds
-	state_assimilation_mult = 0.15
+	#Missionary Power
 }
 
 ethnocentrism_idea_6_mdf = {
@@ -395,7 +396,7 @@ ethnocentrism_idea_6_mdf = {
 
 ethnocentrism_idea_7_mdf = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_lightbulb_positive.dds
-	#Unutma - Misyoner
+	#adds missionary
 }
 
 humanist_idea_1_mdf = {
@@ -482,7 +483,7 @@ politics_idea_2_mdf = {
 
 politics_idea_3_mdf = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_lightbulb_positive.dds
-	country_law_enactment_time_mult = -0.2
+	country_law_enactment_time_mult = -3	#-0.2
 }
 
 politics_idea_4_mdf = {
@@ -492,7 +493,7 @@ politics_idea_4_mdf = {
 
 politics_idea_5_mdf = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_lightbulb_positive.dds
-	country_law_enactment_success_add = 0.1
+	country_law_enactment_success_add = 3	#0.1
 }
 
 politics_idea_6_mdf = {

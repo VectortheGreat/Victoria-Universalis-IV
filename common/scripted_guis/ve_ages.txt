@@ -251,16 +251,11 @@ ve_age_obj_6 = {
 			limit = {
 				has_variable = ve_age_1_started
 			}
-			# any_scope_state = {
-			# 	#UNUTMA
-			# 	is_capital = yes
-			# 	any_scope_building = {
-			# 		count >= 2
-			# 		# is_building_type = bg_manufacturing
-			# 		is_industry_building = yes
-			# 		level >= 1
-			# 	}
-			# }
+			any_scope_state = {
+				# is_incorporated = yes
+				has_building = building_urban_center
+				percent >= 0.75
+			}
 		}
 		trigger_else_if = {
 			limit = {

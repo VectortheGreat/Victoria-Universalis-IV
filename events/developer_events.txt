@@ -216,12 +216,12 @@ dev.2 = {
 		name = dev.2.a
 		default_option = yes
 		set_variable = {
-			name = total_missionaries
-			value = 1
+			name = avaible_culture_missionaries
+			value = 3
 		}
 		set_variable = {
-			name = total_culture_missionaries
-			value = 1
+			name = avaible_missionaries
+			value = 3
 		}
 	}
 	option = {

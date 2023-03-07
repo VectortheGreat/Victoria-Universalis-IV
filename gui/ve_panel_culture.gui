@@ -59,7 +59,7 @@ types ve_gui_panel_types
 								vbox = {
 									spacing = 10
 									textbox = {
-										text = "ve_gecici_24"
+										raw_text = "Culture Missionaries"
 										default_format = "#tooltip_header"
 										using = fontsize_xxl
 										align = nobaseline
@@ -67,7 +67,7 @@ types ve_gui_panel_types
 										autoresize = yes
 									}
 									textbox = {
-										text = "[GetPlayer.MakeScope.Var('avaible_culture_missionaries').GetValue]"
+										text = "cultural_missionary_topbar"
 										default_format = "#instruction"
 										using = fontsize_xxl
 										align = nobaseline

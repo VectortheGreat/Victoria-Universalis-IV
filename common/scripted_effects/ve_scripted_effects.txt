@@ -536,3 +536,39 @@ reform_bar_effects = {
 		}
 	}
 }
+
+balance_missionaries = {
+	if = {
+		limit = {
+			var:avaible_missionaries < 0
+		}
+		every_scope_state = {
+			limit = {
+				has_modifier = ve_missionary_mdf
+			}
+			remove_modifier = ve_missionary_mdf
+		}
+		set_variable = {
+			name = avaible_missionaries
+			value = var:total_missionaries
+		}
+	}
+}
+
+balance_cultural_missionaries = {
+	if = {
+		limit = {
+			var:avaible_culture_missionaries < 0
+		}
+		every_scope_state = {
+			limit = {
+				has_modifier = ve_diffusionist_mdf
+			}
+			remove_modifier = ve_diffusionist_mdf
+		}
+		set_variable = {
+			name = avaible_culture_missionaries
+			value = var:total_culture_missionaries
+		}
+	}
+}

@@ -521,7 +521,7 @@ ve_gui_panel_types
 								}
 								onclick = "[GetScriptedGui('ve_aspect_button_8').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
 								enabled = "[GetScriptedGui('ve_aspect_button_8').IsValid(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
-								tooltip = "[GetScriptedGui('ve_aspect_button_4').BuildTooltip( GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+								tooltip = "[GetScriptedGui('ve_aspect_button_8').BuildTooltip( GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
 								textbox = {
 									text = "@[Concatenate(GetPlayer.Religion.GetTooltipTag , '_aspect_8')]!"
 									fontsize = 60

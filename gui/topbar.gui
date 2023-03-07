@@ -198,7 +198,7 @@ types topbar_components
 				}
 				#Missionary
 				flowcontainer = {
-						name = "prestige"
+						visible = "[GetScriptedGui('ve_hide_missionary_topbar').IsShown(GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
 						minimumsize = { 90 28 }
 						maximumsize = { 90 28 }
 						spacing = 5
@@ -223,7 +223,7 @@ types topbar_components
 						
 				#Cultural Missionary
 				flowcontainer = {
-						name = "infamy"
+						visible = "[GetScriptedGui('ve_hide_culture_missionary_topbar').IsShown(GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
 						minimumsize = { 90 28 }
 						maximumsize = { 90 28 }
 						spacing = 5
@@ -248,7 +248,6 @@ types topbar_components
 
 				#Piety
 				flowcontainer = {
-						name = "legitimacy"
 						minimumsize = { 90 28 }
 						maximumsize = { 90 28 }
 						spacing = 2
@@ -274,7 +273,6 @@ types topbar_components
 
 				#Cultural Reform
 				flowcontainer = {
-						name = "convoys"
 						minimumsize = { 90 28 }
 						maximumsize = { 90 28 }
 						spacing = 2
@@ -299,7 +297,6 @@ types topbar_components
 				
 				#Idea Point
 				flowcontainer = {
-						name = "Flotillas"
 						minimumsize = { 90 28 }
 						maximumsize = { 90 28 }
 						spacing = 2
@@ -326,7 +323,6 @@ types topbar_components
 
 				#Splendor
 				flowcontainer = {
-						name = "battalions"
 						minimumsize = { 90 28 }
 						maximumsize = { 90 28 }
 						spacing = 2

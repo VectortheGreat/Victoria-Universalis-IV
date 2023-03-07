@@ -6,9 +6,55 @@
 					has_variable = avaible_culture_missionaries
 				}
 			}
-			set_variable = {
-				name = avaible_culture_missionaries
-				value = 1
+			if = {
+				limit = {
+					has_law = law_type:law_ethnostate
+				}
+				set_variable = {
+					name = avaible_culture_missionaries
+					value = 4
+				}
+				set_variable = ve_had_ethnostate_law
+			}
+			else_if = {
+				limit = {
+					has_law = law_type:law_national_supremacy
+				}
+				set_variable = {
+					name = avaible_culture_missionaries
+					value = 3
+				}
+				set_variable = ve_had_national_supremacy_law
+			}
+			else_if = {
+				limit = {
+					has_law = law_type:law_racial_segregation
+				}
+				set_variable = {
+					name = avaible_culture_missionaries
+					value = 2
+				}
+				set_variable = ve_had_racial_segregation_law
+			}
+			else_if = {
+				limit = {
+					has_law = law_type:law_cultural_exclusion
+				}
+				set_variable = {
+					name = avaible_culture_missionaries
+					value = 1
+				}
+				set_variable = ve_had_cultural_exclusion_law
+			}
+			else_if = {
+				limit = {
+					has_law = law_type:law_multicultural
+				}
+				set_variable = {
+					name = avaible_culture_missionaries
+					value = 0
+				}
+				set_variable = ve_had_multicultural_law
 			}
 		}
 		if = {
@@ -17,9 +63,50 @@
 					has_variable = total_culture_missionaries
 				}
 			}
-			set_variable = {
-				name = total_culture_missionaries
-				value = 1
+			if = {
+				limit = {
+					has_law = law_type:law_ethnostate
+				}
+				set_variable = {
+					name = total_culture_missionaries
+					value = 4
+				}
+			}
+			else_if = {
+				limit = {
+					has_law = law_type:law_national_supremacy
+				}
+				set_variable = {
+					name = total_culture_missionaries
+					value = 3
+				}
+			}
+			else_if = {
+				limit = {
+					has_law = law_type:law_racial_segregation
+				}
+				set_variable = {
+					name = total_culture_missionaries
+					value = 0
+				}
+			}
+			else_if = {
+				limit = {
+					has_law = law_type:law_cultural_exclusion
+				}
+				set_variable = {
+					name = total_culture_missionaries
+					value = 1
+				}
+			}
+			else_if = {
+				limit = {
+					has_law = law_type:law_multicultural
+				}
+				set_variable = {
+					name = total_culture_missionaries
+					value = 0
+				}
 			}
 		}
 		if = {
@@ -28,9 +115,32 @@
 					has_variable = avaible_missionaries
 				}
 			}
-			set_variable = {
-				name = avaible_missionaries
-				value = 1
+			if = {
+				limit = {
+					has_law = law_type:law_state_religion
+				}
+				set_variable = {
+					name = avaible_missionaries
+					value = 3
+				}
+				set_variable = ve_had_state_religion_law
+			}
+			else_if = {
+				limit = {
+					has_law = law_type:law_freedom_of_conscience
+				}
+				set_variable = {
+					name = avaible_missionaries
+					value = 1
+				}
+				set_variable = ve_had_freedom_of_conscience
+			}
+			else = {
+				set_variable = {
+					name = avaible_missionaries
+					value = 0
+				}
+				set_variable = ve_had_total_separation
 			}
 		}
 		if = {
@@ -39,9 +149,29 @@
 					has_variable = total_missionaries
 				}
 			}
-			set_variable = {
-				name = total_missionaries
-				value = 1
+			if = {
+				limit = {
+					has_law = law_type:law_state_religion
+				}
+				set_variable = {
+					name = total_missionaries
+					value = 3
+				}
+			}
+			else_if = {
+				limit = {
+					has_law = law_type:law_freedom_of_conscience
+				}
+				set_variable = {
+					name = total_missionaries
+					value = 1
+				}
+			}
+			else = {
+				set_variable = {
+					name = total_missionaries
+					value = 0
+				}
 			}
 		}
 		if = {
