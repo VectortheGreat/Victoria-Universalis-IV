@@ -16,7 +16,7 @@ dev.1 = {
 		default_option = yes
 		change_variable = {
 			name = idea_point_pool
-			add = 9999
+			add = 99999
 		}
 		if = {
 			limit = {

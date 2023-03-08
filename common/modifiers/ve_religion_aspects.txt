@@ -50,7 +50,7 @@ catholic_aspect_8_mdf = {
 
 protestant_pasive_mdf = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_gear_positive.dds
-	state_tax_collection_mult = 0.1
+	state_tax_capacity_mult = 0.1
 	country_improve_relations_speed_mult = 0.1
 }
 
@@ -202,8 +202,8 @@ coptic_aspect_8_mdf = {
 
 sunni_pasive_mdf = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_gear_positive.dds
-	country_trade_route_cost_mult = -0.15
 	country_legitimacy_headofstate_add = 5
+	country_trade_route_cost_mult = -0.15
 }
 
 sunni_aspect_1_mdf = {
@@ -252,8 +252,8 @@ sunni_aspect_8_mdf = {
 
 shia_pasive_mdf = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_gear_positive.dds
-	unit_morale_damage_mult = 0.1
 	country_legitimacy_headofstate_add = 5
+	unit_morale_damage_mult = 0.1
 }
 
 shia_aspect_1_mdf = {
@@ -460,8 +460,8 @@ hindu_aspect_8_mdf = {
 
 sikh_pasive_mdf = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_gear_positive.dds
-	unit_morale_damage_mult = 0.1
 	country_authority_add = 100
+	unit_morale_damage_mult = 0.1
 }
 
 sikh_aspect_1_mdf = {
@@ -514,7 +514,7 @@ sikh_aspect_8_mdf = {
 animist_pasive_mdf = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_gear_positive.dds
 	state_loyalists_from_sol_change_accepted_religion_mult = 0.05
-	state_infrastructure_add = 10
+	building_training_rate_mult = 0.075
 }
 
 animist_aspect_1_mdf = {
@@ -574,14 +574,4 @@ ve_diffusionist_mdf = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_gear_positive.dds
 	state_assimilation_mult = 0.5
 	state_radicals_from_discrimination_mult = 0.5
-}
-
-orthodox_aspect_8 = {
-	icon = gfx/interface/icons/timed_modifier_icons/modifier_gear_positive.dds
-	building_throughput_mult = 0.25
-}
-
-mahayana_aspect_8 = {
-	icon = gfx/interface/icons/timed_modifier_icons/modifier_gear_positive.dds
-	building_group_bg_urban_facilities_employee_mult = 0.25
 }

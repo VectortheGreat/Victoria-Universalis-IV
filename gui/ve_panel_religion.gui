@@ -123,7 +123,6 @@ ve_gui_panel_types
 								10
 							}
 							textbox = {
-								# text = "#v [GetPlayer.GetStateReligion.GetName]#!"
 								text = "ve_religion_passive_text"
 								default_format = "#tooltippable_name"
 								using = fontsize_xxl
@@ -131,21 +130,27 @@ ve_gui_panel_types
 								elide = left
 								autoresize = yes
 							}
-							textbox = {
-								raw_text = "Bonus 1"
-								default_format = "#positive_value"
-								using = fontsize_xxl
-								align = nobaseline
-								elide = left
-								autoresize = yes
-							}
-							textbox = {
-								raw_text = "Bonus 2"
-								default_format = "#positive_value"
-								using = fontsize_xxl
-								align = nobaseline
-								elide = left
-								autoresize = yes
+							hbox = {
+								textbox = {
+									raw_text = "@[GetPlayer.GetCustom('religion_aspect_1')]!"
+									fontsize = 60
+									align = center|nobaseline
+									parentanchor = vcenter
+									size = {
+										100%
+										100%
+									}
+								}
+								textbox = {
+									raw_text = "@[GetPlayer.GetCustom('religion_aspect_1')]!"
+									fontsize = 60
+									align = center|nobaseline
+									parentanchor = vcenter
+									size = {
+										100%
+										100%
+									}
+								}
 							}
 						}
 					}
@@ -196,8 +201,6 @@ ve_gui_panel_types
 								enabled = "[GetScriptedGui('ve_aspect_button_1').IsValid(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
 								tooltip = "[GetScriptedGui('ve_aspect_button_1').BuildTooltip( GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
 								textbox = {
-									# text = "@[Concatenate(GetPlayer.Religion.GetTooltipTag , '_aspect_1')]!"
-									# text = "@[Concatenate(GetPlayer.Religion.GetTooltipTag , '_aspect_1')]!"
 									raw_text = "@[GetPlayer.GetCustom('religion_aspect_1')]!"
 									fontsize = 60
 									align = center|nobaseline
@@ -209,7 +212,6 @@ ve_gui_panel_types
 									}
 								}
 								textbox = {
-									# text = "@[Concatenate(GetPlayer.Religion.GetTooltipTag , '_aspect_1_black')]!"
 									raw_text = "@[GetPlayer.GetCustom('religion_aspect_2')]!"
 									fontsize = 60
 									align = center|nobaseline

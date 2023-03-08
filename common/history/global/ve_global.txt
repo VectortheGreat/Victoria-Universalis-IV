@@ -87,7 +87,7 @@
 				}
 				set_variable = {
 					name = total_culture_missionaries
-					value = 0
+					value = 2
 				}
 			}
 			else_if = {
@@ -491,6 +491,7 @@
 			name = imperialist_idea
 			value = 0
 		}
-		religion_passive_bonuses = yes
+		# religion_passive_bonuses = yes
+		# national_idea_traditions = yes
 	}
 }

@@ -4,7 +4,7 @@
 			has_variable = ve_age_1_started
 		}
 		calc_true_if = {
-			amount >= 3
+			amount >= 4
 			root.average_sol >= 10
 			AND = {
 				has_law = law_type:law_slavery_banned
@@ -31,7 +31,7 @@
 			has_variable = ve_age_2_started
 		}
 		calc_true_if = {
-			amount >= 3
+			amount >= 4
 			OR = {
 				has_law = law_type:law_colonial_resettlement
 				has_law = law_type:law_colonial_exploitation
@@ -65,7 +65,7 @@
 			has_variable = ve_age_3_started
 		}
 		calc_true_if = {
-			amount >= 3
+			amount >= 4
 			NOT = {
 				has_law = law_type:law_monarchy
 			}
