@@ -1579,16 +1579,16 @@ national_idea_traditions = {
 		if = {
 			limit = {
 				NOT = {
-					has_modifier = chi_idea_tradition_1
-					has_modifier = chi_idea_tradition_2
+					has_modifier = qng_idea_tradition_1
+					has_modifier = qng_idea_tradition_2
 				}
 			}
 			add_modifier = {
-				name = chi_idea_tradition_1
+				name = qng_idea_tradition_1
 				months = -1
 			}
 			add_modifier = {
-				name = chi_idea_tradition_2
+				name = qng_idea_tradition_2
 				months = -1
 			}
 		}

@@ -259,6 +259,28 @@ dev.2 = {
 		remove_variable = ve_age_3_started
 		remove_variable = ve_age_2_started
 	}
+	option = {
+		name = dev.2.e
+		every_country = {
+			limit = {
+				NOR = {
+					this = c:GBR
+					this = c:FRA
+					this = c:GER
+					this = c:PRU
+					this = c:NGF
+					this = c:SGF
+					this = c:AUS
+					this = c:RUS
+					this = c:TUR
+					this = c:CHI
+					this = c:JAP
+					this = c:USA
+				}
+			}
+			set_variable = generic_idea_country
+		}
+	}
 }
 
 dev.3 = {

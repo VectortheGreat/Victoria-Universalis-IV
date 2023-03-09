@@ -965,19 +965,20 @@ ve_national_idea_bonus = {
 ve_national_idea_img = {
 	scope = country
 	is_shown = {
-		NOT = {
-			this = c:GBR
-			this = c:FRA
-			this = c:GER
-			this = c:PRU
-			this = c:NGF
-			this = c:SGF
-			this = c:AUS
-			this = c:RUS
-			this = c:TUR
-			this = c:CHI
-			this = c:JAP
-			this = c:USA
-		}
+		# NOR = {
+		# 	this = c:GBR
+		# 	this = c:FRA
+		# 	this = c:GER
+		# 	this = c:PRU
+		# 	this = c:NGF
+		# 	this = c:SGF
+		# 	this = c:AUS
+		# 	this = c:RUS
+		# 	this = c:TUR
+		# 	this = c:CHI
+		# 	this = c:JAP
+		# 	this = c:USA
+		# }
+		has_variable = generic_idea_country
 	}
 }

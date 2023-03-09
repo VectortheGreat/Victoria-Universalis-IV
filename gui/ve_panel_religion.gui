@@ -132,17 +132,7 @@ ve_gui_panel_types
 							}
 							hbox = {
 								textbox = {
-									raw_text = "@[GetPlayer.GetCustom('religion_aspect_1')]!"
-									fontsize = 60
-									align = center|nobaseline
-									parentanchor = vcenter
-									size = {
-										100%
-										100%
-									}
-								}
-								textbox = {
-									raw_text = "@[GetPlayer.GetCustom('religion_aspect_1')]!"
+									raw_text = "@[GetPlayer.GetCustom('religion_aspect_9')]!"
 									fontsize = 60
 									align = center|nobaseline
 									parentanchor = vcenter
@@ -212,7 +202,7 @@ ve_gui_panel_types
 									}
 								}
 								textbox = {
-									raw_text = "@[GetPlayer.GetCustom('religion_aspect_2')]!"
+									raw_text = "@[GetPlayer.GetCustom('religion_aspect_1')]!"
 									fontsize = 60
 									align = center|nobaseline
 									parentanchor = vcenter
@@ -248,7 +238,7 @@ ve_gui_panel_types
 								enabled = "[GetScriptedGui('ve_aspect_button_2').IsValid(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
 								tooltip = "[GetScriptedGui('ve_aspect_button_2').BuildTooltip( GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
 								textbox = {
-									text = "@[Concatenate(GetPlayer.Religion.GetTooltipTag , '_aspect_2')]!"
+									raw_text = "@[GetPlayer.GetCustom('religion_aspect_2')]!"
 									fontsize = 60
 									align = center|nobaseline
 									parentanchor = vcenter
@@ -259,7 +249,7 @@ ve_gui_panel_types
 									}
 								}
 								textbox = {
-									text = "@[Concatenate(GetPlayer.Religion.GetTooltipTag , '_aspect_2_black')]!"
+									raw_text = "@[GetPlayer.GetCustom('religion_aspect_2')]!"
 									fontsize = 60
 									align = center|nobaseline
 									parentanchor = vcenter
@@ -294,7 +284,7 @@ ve_gui_panel_types
 								enabled = "[GetScriptedGui('ve_aspect_button_3').IsValid(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
 								tooltip = "[GetScriptedGui('ve_aspect_button_3').BuildTooltip( GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
 								textbox = {
-									text = "@[Concatenate(GetPlayer.Religion.GetTooltipTag , '_aspect_3')]!"
+									raw_text = "@[GetPlayer.GetCustom('religion_aspect_3')]!"
 									fontsize = 60
 									align = center|nobaseline
 									parentanchor = vcenter
@@ -305,7 +295,7 @@ ve_gui_panel_types
 									}
 								}
 								textbox = {
-									text = "@[Concatenate(GetPlayer.Religion.GetTooltipTag , '_aspect_3_black')]!"
+									raw_text = "@[GetPlayer.GetCustom('religion_aspect_3')]!"
 									fontsize = 60
 									align = center|nobaseline
 									parentanchor = vcenter
@@ -340,7 +330,7 @@ ve_gui_panel_types
 								enabled = "[GetScriptedGui('ve_aspect_button_4').IsValid(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
 								tooltip = "[GetScriptedGui('ve_aspect_button_4').BuildTooltip( GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
 								textbox = {
-									text = "@[Concatenate(GetPlayer.Religion.GetTooltipTag , '_aspect_4')]!"
+									raw_text = "@[GetPlayer.GetCustom('religion_aspect_4')]!"
 									fontsize = 60
 									align = center|nobaseline
 									parentanchor = vcenter
@@ -351,7 +341,7 @@ ve_gui_panel_types
 									}
 								}
 								textbox = {
-									text = "@[Concatenate(GetPlayer.Religion.GetTooltipTag , '_aspect_4_black')]!"
+									raw_text = "@[GetPlayer.GetCustom('religion_aspect_4')]!"
 									fontsize = 60
 									align = center|nobaseline
 									parentanchor = vcenter
@@ -386,7 +376,7 @@ ve_gui_panel_types
 								enabled = "[GetScriptedGui('ve_aspect_button_5').IsValid(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
 								tooltip = "[GetScriptedGui('ve_aspect_button_5').BuildTooltip( GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
 								textbox = {
-									text = "@[Concatenate(GetPlayer.Religion.GetTooltipTag , '_aspect_5')]!"
+									raw_text = "@[GetPlayer.GetCustom('religion_aspect_5')]!"
 									fontsize = 60
 									align = center|nobaseline
 									parentanchor = vcenter
@@ -397,7 +387,7 @@ ve_gui_panel_types
 									}
 								}
 								textbox = {
-									text = "@[Concatenate(GetPlayer.Religion.GetTooltipTag , '_aspect_5_black')]!"
+									raw_text = "@[GetPlayer.GetCustom('religion_aspect_5')]!"
 									fontsize = 60
 									align = center|nobaseline
 									parentanchor = vcenter
@@ -433,7 +423,7 @@ ve_gui_panel_types
 								enabled = "[GetScriptedGui('ve_aspect_button_6').IsValid(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
 								tooltip = "[GetScriptedGui('ve_aspect_button_6').BuildTooltip( GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
 								textbox = {
-									text = "@[Concatenate(GetPlayer.Religion.GetTooltipTag , '_aspect_6')]!"
+									raw_text = "@[GetPlayer.GetCustom('religion_aspect_6')]!"
 									fontsize = 60
 									align = center|nobaseline
 									parentanchor = vcenter
@@ -444,7 +434,7 @@ ve_gui_panel_types
 									}
 								}
 								textbox = {
-									text = "@[Concatenate(GetPlayer.Religion.GetTooltipTag , '_aspect_6_black')]!"
+									raw_text = "@[GetPlayer.GetCustom('religion_aspect_6')]!"
 									fontsize = 60
 									align = center|nobaseline
 									parentanchor = vcenter
@@ -489,7 +479,7 @@ ve_gui_panel_types
 								enabled = "[GetScriptedGui('ve_aspect_button_7').IsValid(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
 								tooltip = "[GetScriptedGui('ve_aspect_button_7').BuildTooltip( GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
 								textbox = {
-									text = "@[Concatenate(GetPlayer.Religion.GetTooltipTag , '_aspect_7')]!"
+									raw_text = "@[GetPlayer.GetCustom('religion_aspect_7')]!"
 									fontsize = 60
 									align = center|nobaseline
 									parentanchor = vcenter
@@ -500,7 +490,7 @@ ve_gui_panel_types
 									}
 								}
 								textbox = {
-									text = "@[Concatenate(GetPlayer.Religion.GetTooltipTag , '_aspect_7_black')]!"
+									raw_text = "@[GetPlayer.GetCustom('religion_aspect_7')]!"
 									fontsize = 60
 									align = center|nobaseline
 									parentanchor = vcenter
@@ -535,7 +525,7 @@ ve_gui_panel_types
 								enabled = "[GetScriptedGui('ve_aspect_button_8').IsValid(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
 								tooltip = "[GetScriptedGui('ve_aspect_button_8').BuildTooltip( GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
 								textbox = {
-									text = "@[Concatenate(GetPlayer.Religion.GetTooltipTag , '_aspect_8')]!"
+									raw_text = "@[GetPlayer.GetCustom('religion_aspect_8')]!"
 									fontsize = 60
 									align = center|nobaseline
 									parentanchor = vcenter
@@ -546,7 +536,7 @@ ve_gui_panel_types
 									}
 								}
 								textbox = {
-									text = "@[Concatenate(GetPlayer.Religion.GetTooltipTag , '_aspect_8_black')]!"
+									raw_text = "@[GetPlayer.GetCustom('religion_aspect_8')]!"
 									fontsize = 60
 									align = center|nobaseline
 									parentanchor = vcenter
@@ -602,38 +592,10 @@ ve_gui_panel_types
 						layoutpolicy_horizontal = expanding
 						vbox = {
 							spacing = 10
-							widget = {
-								size = {
-									100
-									100
-								}
-								tooltip = "[GetScriptedGui('ve_holy_site_1').BuildTooltip( GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
-								using = tooltip_above
-								textbox = {
-									text = "@[Concatenate(GetPlayer.Religion.GetTooltipTag , '_holy_site_1')]!"
-									fontsize = 20
-									align = center|nobaseline
-									parentanchor = vcenter
-									visible = "[GetScriptedGui('ve_holy_site_1').IsShown(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
-									size = {
-										100%
-										100%
-									}
-								}
-								textbox = {
-									text = "@[Concatenate(GetPlayer.Religion.GetTooltipTag , '_holy_site_1_black')]!"
-									fontsize = 20
-									align = center|nobaseline
-									parentanchor = vcenter
-									visible = "[Not(GetScriptedGui('ve_holy_site_1').IsShown(GuiScope.SetRoot(GetPlayer.MakeScope).End))]"
-									size = {
-										100%
-										100%
-									}
-								}
-							}
 							textbox = {
 								raw_text = "[GetPlayer.GetCustom('holy_site_1')]"
+								tooltip = "[GetScriptedGui('ve_holy_site_1').BuildTooltip( GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+								using = tooltip_above
 								using = fontsize_xxl
 								align = nobaseline
 								elide = left
@@ -645,39 +607,11 @@ ve_gui_panel_types
 							margin = {
 								15
 								15
-							}
-							widget = {
-								size = {
-									100
-									100
-								}
-								tooltip = "[GetScriptedGui('ve_holy_site_2').BuildTooltip( GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
-								using = tooltip_above
-								textbox = {
-									text = "@[Concatenate(GetPlayer.Religion.GetTooltipTag , '_holy_site_1')]!"
-									fontsize = 20
-									align = center|nobaseline
-									parentanchor = vcenter
-									visible = "[GetScriptedGui('ve_holy_site_2').IsShown(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
-									size = {
-										100%
-										100%
-									}
-								}
-								textbox = {
-									text = "@[Concatenate(GetPlayer.Religion.GetTooltipTag , '_holy_site_1_black')]!"
-									fontsize = 20
-									align = center|nobaseline
-									parentanchor = vcenter
-									visible = "[Not(GetScriptedGui('ve_holy_site_2').IsShown(GuiScope.SetRoot(GetPlayer.MakeScope).End))]"
-									size = {
-										100%
-										100%
-									}
-								}
 							}
 							textbox = {
 								raw_text = "[GetPlayer.GetCustom('holy_site_2')]"
+								tooltip = "[GetScriptedGui('ve_holy_site_2').BuildTooltip( GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+								using = tooltip_above
 								using = fontsize_xxl
 								align = nobaseline
 								elide = left
@@ -689,39 +623,12 @@ ve_gui_panel_types
 							margin = {
 								15
 								15
-							}
-							widget = {
-								size = {
-									100
-									100
-								}
-								tooltip = "[GetScriptedGui('ve_holy_site_3').BuildTooltip( GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
-								using = tooltip_above
-								textbox = {
-									text = "@[Concatenate(GetPlayer.Religion.GetTooltipTag , '_holy_site_1')]!"
-									fontsize = 20
-									align = center|nobaseline
-									parentanchor = vcenter
-									visible = "[GetScriptedGui('ve_holy_site_3').IsShown(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
-									size = {
-										100%
-										100%
-									}
-								}
-								textbox = {
-									text = "@[Concatenate(GetPlayer.Religion.GetTooltipTag , '_holy_site_1_black')]!"
-									fontsize = 20
-									align = center|nobaseline
-									parentanchor = vcenter
-									visible = "[Not(GetScriptedGui('ve_holy_site_3').IsShown(GuiScope.SetRoot(GetPlayer.MakeScope).End))]"
-									size = {
-										100%
-										100%
-									}
-								}
 							}
 							textbox = {
 								raw_text = "[GetPlayer.GetCustom('holy_site_3')]"
+								tooltip = "[GetScriptedGui('ve_holy_site_3').BuildTooltip( GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+								using = tooltip_above
+								fontsize = 20
 								using = fontsize_xxl
 								align = nobaseline
 								elide = left
@@ -733,39 +640,11 @@ ve_gui_panel_types
 							margin = {
 								15
 								15
-							}
-							widget = {
-								size = {
-									100
-									100
-								}
-								tooltip = "[GetScriptedGui('ve_holy_site_4').BuildTooltip( GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
-								using = tooltip_above
-								textbox = {
-									text = "@[Concatenate(GetPlayer.Religion.GetTooltipTag , '_holy_site_1')]!"
-									fontsize = 20
-									align = center|nobaseline
-									parentanchor = vcenter
-									visible = "[GetScriptedGui('ve_holy_site_4').IsShown(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
-									size = {
-										100%
-										100%
-									}
-								}
-								textbox = {
-									text = "@[Concatenate(GetPlayer.Religion.GetTooltipTag , '_holy_site_1_black')]!"
-									fontsize = 20
-									align = center|nobaseline
-									parentanchor = vcenter
-									visible = "[Not(GetScriptedGui('ve_holy_site_4').IsShown(GuiScope.SetRoot(GetPlayer.MakeScope).End))]"
-									size = {
-										100%
-										100%
-									}
-								}
 							}
 							textbox = {
 								raw_text = "[GetPlayer.GetCustom('holy_site_4')]"
+								tooltip = "[GetScriptedGui('ve_holy_site_4').BuildTooltip( GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+								using = tooltip_above
 								using = fontsize_xxl
 								align = nobaseline
 								elide = left
@@ -778,38 +657,10 @@ ve_gui_panel_types
 								15
 								15
 							}
-							widget = {
-								size = {
-									100
-									100
-								}
-								tooltip = "[GetScriptedGui('ve_holy_site_5').BuildTooltip( GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
-								using = tooltip_above
-								textbox = {
-									text = "@[Concatenate(GetPlayer.Religion.GetTooltipTag , '_holy_site_1')]!"
-									fontsize = 20
-									align = center|nobaseline
-									parentanchor = vcenter
-									visible = "[GetScriptedGui('ve_holy_site_5').IsShown(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
-									size = {
-										100%
-										100%
-									}
-								}
-								textbox = {
-									text = "@[Concatenate(GetPlayer.Religion.GetTooltipTag , '_holy_site_1_black')]!"
-									fontsize = 20
-									align = center|nobaseline
-									parentanchor = vcenter
-									visible = "[Not(GetScriptedGui('ve_holy_site_5').IsShown(GuiScope.SetRoot(GetPlayer.MakeScope).End))]"
-									size = {
-										100%
-										100%
-									}
-								}
-							}
 							textbox = {
 								raw_text = "[GetPlayer.GetCustom('holy_site_5')]"
+								tooltip = "[GetScriptedGui('ve_holy_site_5').BuildTooltip( GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+								using = tooltip_above
 								using = fontsize_xxl
 								align = nobaseline
 								elide = left

@@ -491,7 +491,26 @@
 			name = imperialist_idea
 			value = 0
 		}
-		# religion_passive_bonuses = yes
-		# national_idea_traditions = yes
+		if = {
+			limit = {
+				NOR = {
+					this = c:GBR
+					this = c:FRA
+					this = c:GER
+					this = c:PRU
+					this = c:NGF
+					this = c:SGF
+					this = c:AUS
+					this = c:RUS
+					this = c:TUR
+					this = c:CHI
+					this = c:JAP
+					this = c:USA
+				}
+			}
+			set_variable = generic_idea_country
+		}
+		religion_passive_bonuses = yes
+		national_idea_traditions = yes
 	}
 }

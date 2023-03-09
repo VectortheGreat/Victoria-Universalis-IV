@@ -46,11 +46,11 @@
 	-country_authority_mult
 	Aspect:
 	1-state_construction_mult ve state_infrastructure_add
-	2-political_movement_radicalism_mult ve state_birth_rate_mult
+	2-state_birth_rate_mult
 	3-technology_invention_cost_mult
 	4-unit_army_offense_mult ve state_conscription_rate_mult
 	5-country_infamy_decay_mult ve country_improve_relations_speed_mult
-	6-unit_supply_consumption_mult ve state_turmoil_effects_mult
+	6-state_turmoil_effects_mult
 	7-state_conversion_mult ve interest_group_ig_devout_approval_add
 	8-state_tax_waste_add
 	Holy Sites:
@@ -72,7 +72,7 @@
 	5-country_authority_add
 	6-state_tax_collection_mult
 	7-country_revolution_secession_speed_mult
-	8-state_conversion_mult ve state_assimilation_mult
+	8-state_assimilation_mult
 	Holy Sites:
 	1-Yerevan
 	2-Napata
@@ -188,7 +188,7 @@
 	2-country_production_tech_cost_mult ve country_resource_depletion_chance_mult
 	3-country_consumption_tax_cost_mult ve country_legitimacy_govt_leader_clout_add
 	4-country_prestige_mult ve country_influence_add
-	5-technology_invention_cost_mult ve state_education_access_wealth_add
+	5-state_education_access_wealth_add
 	6-unit_morale_recovery_mult ve unit_advancement_speed_mult
 	7-state_urbanization_mult ve state_mortality_mult
 	8-country_infamy_generation_mult
@@ -208,7 +208,7 @@
 	2-country_resource_discovery_chance_mult ve country_minting_mult
 	3-country_war_exhaustion_casualties_mult ve unit_supply_consumption_mult
 	4-country_authority_mult ve country_legitimacy_base_add
-	5-state_construction_mult ve country_military_wages_mult
+	5-country_military_wages_mult
 	6-state_conversion_mult ve state_assimilation_mult
 	7-state_tax_collection_mult 
 	8-interest_group_approval_add
