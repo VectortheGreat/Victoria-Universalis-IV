@@ -172,7 +172,7 @@ age_3_bonus_10 = {
 age_3_bonus_10_2 = {
 	#If it has naval idea
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_documents_positive.dds
-	unit_offense_hazardous_add = 10
+	unit_offense_water_add = 10
 }
 
 age_3_bonus_11 = {

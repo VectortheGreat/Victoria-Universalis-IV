@@ -9,6 +9,7 @@ ve_national_idea_1 = {
 	effect = {
 		if = {
 			limit = {
+				exists = c:GBR
 				this = c:GBR
 			}
 			add_modifier = {
@@ -18,6 +19,7 @@ ve_national_idea_1 = {
 		}
 		else_if = {
 			limit = {
+				exists = c:FRA
 				this = c:FRA
 			}
 			add_modifier = {
@@ -27,12 +29,8 @@ ve_national_idea_1 = {
 		}
 		else_if = {
 			limit = {
-				OR = {
-					this = c:PRU
-					this = c:SGF
-					this = c:NGF
-					this = c:GER
-				}
+				exists = c:PRU
+				this = c:PRU
 			}
 			add_modifier = {
 				name = ger_idea_1
@@ -41,6 +39,37 @@ ve_national_idea_1 = {
 		}
 		else_if = {
 			limit = {
+				exists = c:SGF
+				this = c:SGF
+			}
+			add_modifier = {
+				name = ger_idea_1
+				months = -1
+			}
+		}
+		else_if = {
+			limit = {
+				exists = c:NGF
+				this = c:NGF
+			}
+			add_modifier = {
+				name = ger_idea_1
+				months = -1
+			}
+		}
+		else_if = {
+			limit = {
+				exists = c:GER
+				this = c:GER
+			}
+			add_modifier = {
+				name = ger_idea_1
+				months = -1
+			}
+		}
+		else_if = {
+			limit = {
+				exists = c:AUS
 				this = c:AUS
 			}
 			add_modifier = {
@@ -50,6 +79,7 @@ ve_national_idea_1 = {
 		}
 		else_if = {
 			limit = {
+				exists = c:RUS
 				this = c:RUS
 			}
 			add_modifier = {
@@ -59,6 +89,7 @@ ve_national_idea_1 = {
 		}
 		else_if = {
 			limit = {
+				exists = c:TUR
 				this = c:TUR
 			}
 			add_modifier = {
@@ -68,6 +99,7 @@ ve_national_idea_1 = {
 		}
 		else_if = {
 			limit = {
+				exists = c:CHI
 				this = c:CHI
 			}
 			add_modifier = {
@@ -77,6 +109,7 @@ ve_national_idea_1 = {
 		}
 		else_if = {
 			limit = {
+				exists = c:JAP
 				this = c:JAP
 			}
 			add_modifier = {
@@ -86,6 +119,7 @@ ve_national_idea_1 = {
 		}
 		else_if = {
 			limit = {
+				exists = c:USA
 				this = c:USA
 			}
 			add_modifier = {
@@ -113,6 +147,7 @@ ve_national_idea_2 = {
 	effect = {
 		if = {
 			limit = {
+				exists = c:GBR
 				this = c:GBR
 			}
 			add_modifier = {
@@ -122,6 +157,7 @@ ve_national_idea_2 = {
 		}
 		else_if = {
 			limit = {
+				exists = c:FRA
 				this = c:FRA
 			}
 			add_modifier = {
@@ -131,12 +167,8 @@ ve_national_idea_2 = {
 		}
 		else_if = {
 			limit = {
-				OR = {
-					this = c:PRU
-					this = c:SGF
-					this = c:NGF
-					this = c:GER
-				}
+				exists = c:PRU
+				this = c:PRU
 			}
 			add_modifier = {
 				name = ger_idea_2
@@ -145,6 +177,37 @@ ve_national_idea_2 = {
 		}
 		else_if = {
 			limit = {
+				exists = c:SGF
+				this = c:SGF
+			}
+			add_modifier = {
+				name = ger_idea_2
+				months = -1
+			}
+		}
+		else_if = {
+			limit = {
+				exists = c:NGF
+				this = c:NGF
+			}
+			add_modifier = {
+				name = ger_idea_2
+				months = -1
+			}
+		}
+		else_if = {
+			limit = {
+				exists = c:GER
+				this = c:GER
+			}
+			add_modifier = {
+				name = ger_idea_2
+				months = -1
+			}
+		}
+		else_if = {
+			limit = {
+				exists = c:AUS
 				this = c:AUS
 			}
 			add_modifier = {
@@ -154,6 +217,7 @@ ve_national_idea_2 = {
 		}
 		else_if = {
 			limit = {
+				exists = c:RUS
 				this = c:RUS
 			}
 			add_modifier = {
@@ -163,6 +227,7 @@ ve_national_idea_2 = {
 		}
 		else_if = {
 			limit = {
+				exists = c:TUR
 				this = c:TUR
 			}
 			add_modifier = {
@@ -172,6 +237,7 @@ ve_national_idea_2 = {
 		}
 		else_if = {
 			limit = {
+				exists = c:CHI
 				this = c:CHI
 			}
 			add_modifier = {
@@ -181,6 +247,7 @@ ve_national_idea_2 = {
 		}
 		else_if = {
 			limit = {
+				exists = c:JAP
 				this = c:JAP
 			}
 			add_modifier = {
@@ -190,6 +257,7 @@ ve_national_idea_2 = {
 		}
 		else_if = {
 			limit = {
+				exists = c:USA
 				this = c:USA
 			}
 			add_modifier = {
@@ -217,6 +285,7 @@ ve_national_idea_3 = {
 	effect = {
 		if = {
 			limit = {
+				exists = c:GBR
 				this = c:GBR
 			}
 			add_modifier = {
@@ -226,6 +295,7 @@ ve_national_idea_3 = {
 		}
 		else_if = {
 			limit = {
+				exists = c:FRA
 				this = c:FRA
 			}
 			add_modifier = {
@@ -235,12 +305,8 @@ ve_national_idea_3 = {
 		}
 		else_if = {
 			limit = {
-				OR = {
-					this = c:PRU
-					this = c:SGF
-					this = c:NGF
-					this = c:GER
-				}
+				exists = c:PRU
+				this = c:PRU
 			}
 			add_modifier = {
 				name = ger_idea_3
@@ -249,6 +315,37 @@ ve_national_idea_3 = {
 		}
 		else_if = {
 			limit = {
+				exists = c:SGF
+				this = c:SGF
+			}
+			add_modifier = {
+				name = ger_idea_3
+				months = -1
+			}
+		}
+		else_if = {
+			limit = {
+				exists = c:NGF
+				this = c:NGF
+			}
+			add_modifier = {
+				name = ger_idea_3
+				months = -1
+			}
+		}
+		else_if = {
+			limit = {
+				exists = c:GER
+				this = c:GER
+			}
+			add_modifier = {
+				name = ger_idea_3
+				months = -1
+			}
+		}
+		else_if = {
+			limit = {
+				exists = c:AUS
 				this = c:AUS
 			}
 			add_modifier = {
@@ -258,6 +355,7 @@ ve_national_idea_3 = {
 		}
 		else_if = {
 			limit = {
+				exists = c:RUS
 				this = c:RUS
 			}
 			add_modifier = {
@@ -267,6 +365,7 @@ ve_national_idea_3 = {
 		}
 		else_if = {
 			limit = {
+				exists = c:TUR
 				this = c:TUR
 			}
 			add_modifier = {
@@ -276,6 +375,7 @@ ve_national_idea_3 = {
 		}
 		else_if = {
 			limit = {
+				exists = c:CHI
 				this = c:CHI
 			}
 			add_modifier = {
@@ -285,6 +385,7 @@ ve_national_idea_3 = {
 		}
 		else_if = {
 			limit = {
+				exists = c:JAP
 				this = c:JAP
 			}
 			add_modifier = {
@@ -294,6 +395,7 @@ ve_national_idea_3 = {
 		}
 		else_if = {
 			limit = {
+				exists = c:USA
 				this = c:USA
 			}
 			add_modifier = {
@@ -321,6 +423,7 @@ ve_national_idea_4 = {
 	effect = {
 		if = {
 			limit = {
+				exists = c:GBR
 				this = c:GBR
 			}
 			add_modifier = {
@@ -330,6 +433,7 @@ ve_national_idea_4 = {
 		}
 		else_if = {
 			limit = {
+				exists = c:FRA
 				this = c:FRA
 			}
 			add_modifier = {
@@ -339,12 +443,8 @@ ve_national_idea_4 = {
 		}
 		else_if = {
 			limit = {
-				OR = {
-					this = c:PRU
-					this = c:SGF
-					this = c:NGF
-					this = c:GER
-				}
+				exists = c:PRU
+				this = c:PRU
 			}
 			add_modifier = {
 				name = ger_idea_4
@@ -353,6 +453,41 @@ ve_national_idea_4 = {
 		}
 		else_if = {
 			limit = {
+				exists = c:SGF
+				this = c:SGF
+			}
+			add_modifier = {
+				name = ger_idea_4
+				months = -1
+			}
+		}
+		else_if = {
+			limit = {
+				exists = c:NGF
+				this = c:NGF
+			}
+			add_modifier = {
+				name = ger_idea_4
+				months = -1
+			}
+		}
+		else_if = {
+			limit = {
+				exists = c:GER
+				this = c:GER
+			}
+			add_modifier = {
+				name = ger_idea_4
+				months = -1
+			}
+			add_modifier = {
+				name = ger_idea_4
+				months = -1
+			}
+		}
+		else_if = {
+			limit = {
+				exists = c:AUS
 				this = c:AUS
 			}
 			add_modifier = {
@@ -362,6 +497,7 @@ ve_national_idea_4 = {
 		}
 		else_if = {
 			limit = {
+				exists = c:RUS
 				this = c:RUS
 			}
 			add_modifier = {
@@ -371,6 +507,7 @@ ve_national_idea_4 = {
 		}
 		else_if = {
 			limit = {
+				exists = c:TUR
 				this = c:TUR
 			}
 			add_modifier = {
@@ -380,6 +517,7 @@ ve_national_idea_4 = {
 		}
 		else_if = {
 			limit = {
+				exists = c:CHI
 				this = c:CHI
 			}
 			add_modifier = {
@@ -389,6 +527,7 @@ ve_national_idea_4 = {
 		}
 		else_if = {
 			limit = {
+				exists = c:JAP
 				this = c:JAP
 			}
 			add_modifier = {
@@ -398,6 +537,7 @@ ve_national_idea_4 = {
 		}
 		else_if = {
 			limit = {
+				exists = c:USA
 				this = c:USA
 			}
 			add_modifier = {
@@ -425,6 +565,7 @@ ve_national_idea_5 = {
 	effect = {
 		if = {
 			limit = {
+				exists = c:GBR
 				this = c:GBR
 			}
 			add_modifier = {
@@ -434,6 +575,7 @@ ve_national_idea_5 = {
 		}
 		else_if = {
 			limit = {
+				exists = c:FRA
 				this = c:FRA
 			}
 			add_modifier = {
@@ -443,12 +585,8 @@ ve_national_idea_5 = {
 		}
 		else_if = {
 			limit = {
-				OR = {
-					this = c:PRU
-					this = c:SGF
-					this = c:NGF
-					this = c:GER
-				}
+				exists = c:PRU
+				this = c:PRU
 			}
 			add_modifier = {
 				name = ger_idea_5
@@ -457,6 +595,37 @@ ve_national_idea_5 = {
 		}
 		else_if = {
 			limit = {
+				exists = c:SGF
+				this = c:SGF
+			}
+			add_modifier = {
+				name = ger_idea_5
+				months = -1
+			}
+		}
+		else_if = {
+			limit = {
+				exists = c:NGF
+				this = c:NGF
+			}
+			add_modifier = {
+				name = ger_idea_5
+				months = -1
+			}
+		}
+		else_if = {
+			limit = {
+				exists = c:GER
+				this = c:GER
+			}
+			add_modifier = {
+				name = ger_idea_5
+				months = -1
+			}
+		}
+		else_if = {
+			limit = {
+				exists = c:AUS
 				this = c:AUS
 			}
 			add_modifier = {
@@ -466,6 +635,7 @@ ve_national_idea_5 = {
 		}
 		else_if = {
 			limit = {
+				exists = c:RUS
 				this = c:RUS
 			}
 			add_modifier = {
@@ -475,6 +645,7 @@ ve_national_idea_5 = {
 		}
 		else_if = {
 			limit = {
+				exists = c:TUR
 				this = c:TUR
 			}
 			add_modifier = {
@@ -484,6 +655,7 @@ ve_national_idea_5 = {
 		}
 		else_if = {
 			limit = {
+				exists = c:CHI
 				this = c:CHI
 			}
 			add_modifier = {
@@ -493,6 +665,7 @@ ve_national_idea_5 = {
 		}
 		else_if = {
 			limit = {
+				exists = c:JAP
 				this = c:JAP
 			}
 			add_modifier = {
@@ -502,6 +675,7 @@ ve_national_idea_5 = {
 		}
 		else_if = {
 			limit = {
+				exists = c:USA
 				this = c:USA
 			}
 			add_modifier = {
@@ -529,6 +703,7 @@ ve_national_idea_6 = {
 	effect = {
 		if = {
 			limit = {
+				exists = c:GBR
 				this = c:GBR
 			}
 			add_modifier = {
@@ -538,6 +713,7 @@ ve_national_idea_6 = {
 		}
 		else_if = {
 			limit = {
+				exists = c:FRA
 				this = c:FRA
 			}
 			add_modifier = {
@@ -547,12 +723,8 @@ ve_national_idea_6 = {
 		}
 		else_if = {
 			limit = {
-				OR = {
-					this = c:PRU
-					this = c:SGF
-					this = c:NGF
-					this = c:GER
-				}
+				exists = c:PRU
+				this = c:PRU
 			}
 			add_modifier = {
 				name = ger_idea_6
@@ -561,6 +733,37 @@ ve_national_idea_6 = {
 		}
 		else_if = {
 			limit = {
+				exists = c:SGF
+				this = c:SGF
+			}
+			add_modifier = {
+				name = ger_idea_6
+				months = -1
+			}
+		}
+		else_if = {
+			limit = {
+				exists = c:NGF
+				this = c:NGF
+			}
+			add_modifier = {
+				name = ger_idea_6
+				months = -1
+			}
+		}
+		else_if = {
+			limit = {
+				exists = c:GER
+				this = c:GER
+			}
+			add_modifier = {
+				name = ger_idea_6
+				months = -1
+			}
+		}
+		else_if = {
+			limit = {
+				exists = c:AUS
 				this = c:AUS
 			}
 			add_modifier = {
@@ -570,6 +773,7 @@ ve_national_idea_6 = {
 		}
 		else_if = {
 			limit = {
+				exists = c:RUS
 				this = c:RUS
 			}
 			add_modifier = {
@@ -579,6 +783,7 @@ ve_national_idea_6 = {
 		}
 		else_if = {
 			limit = {
+				exists = c:TUR
 				this = c:TUR
 			}
 			add_modifier = {
@@ -588,6 +793,7 @@ ve_national_idea_6 = {
 		}
 		else_if = {
 			limit = {
+				exists = c:CHI
 				this = c:CHI
 			}
 			add_modifier = {
@@ -597,6 +803,7 @@ ve_national_idea_6 = {
 		}
 		else_if = {
 			limit = {
+				exists = c:JAP
 				this = c:JAP
 			}
 			add_modifier = {
@@ -606,6 +813,7 @@ ve_national_idea_6 = {
 		}
 		else_if = {
 			limit = {
+				exists = c:USA
 				this = c:USA
 			}
 			add_modifier = {
@@ -633,6 +841,7 @@ ve_national_idea_7 = {
 	effect = {
 		if = {
 			limit = {
+				exists = c:GBR
 				this = c:GBR
 			}
 			add_modifier = {
@@ -642,6 +851,7 @@ ve_national_idea_7 = {
 		}
 		else_if = {
 			limit = {
+				exists = c:FRA
 				this = c:FRA
 			}
 			add_modifier = {
@@ -651,12 +861,8 @@ ve_national_idea_7 = {
 		}
 		else_if = {
 			limit = {
-				OR = {
-					this = c:PRU
-					this = c:SGF
-					this = c:NGF
-					this = c:GER
-				}
+				exists = c:PRU
+				this = c:PRU
 			}
 			add_modifier = {
 				name = ger_idea_7
@@ -665,6 +871,37 @@ ve_national_idea_7 = {
 		}
 		else_if = {
 			limit = {
+				exists = c:SGF
+				this = c:SGF
+			}
+			add_modifier = {
+				name = ger_idea_7
+				months = -1
+			}
+		}
+		else_if = {
+			limit = {
+				exists = c:NGF
+				this = c:NGF
+			}
+			add_modifier = {
+				name = ger_idea_7
+				months = -1
+			}
+		}
+		else_if = {
+			limit = {
+				exists = c:GER
+				this = c:GER
+			}
+			add_modifier = {
+				name = ger_idea_7
+				months = -1
+			}
+		}
+		else_if = {
+			limit = {
+				exists = c:AUS
 				this = c:AUS
 			}
 			add_modifier = {
@@ -674,6 +911,7 @@ ve_national_idea_7 = {
 		}
 		else_if = {
 			limit = {
+				exists = c:RUS
 				this = c:RUS
 			}
 			add_modifier = {
@@ -683,6 +921,7 @@ ve_national_idea_7 = {
 		}
 		else_if = {
 			limit = {
+				exists = c:TUR
 				this = c:TUR
 			}
 			add_modifier = {
@@ -692,6 +931,7 @@ ve_national_idea_7 = {
 		}
 		else_if = {
 			limit = {
+				exists = c:CHI
 				this = c:CHI
 			}
 			add_modifier = {
@@ -701,6 +941,7 @@ ve_national_idea_7 = {
 		}
 		else_if = {
 			limit = {
+				exists = c:JAP
 				this = c:JAP
 			}
 			add_modifier = {
@@ -710,6 +951,7 @@ ve_national_idea_7 = {
 		}
 		else_if = {
 			limit = {
+				exists = c:USA
 				this = c:USA
 			}
 			add_modifier = {
@@ -731,6 +973,7 @@ ve_national_idea_tradition = {
 	effect = {
 		if = {
 			limit = {
+				exists = c:GBR
 				this = c:GBR
 			}
 			add_modifier = {
@@ -744,6 +987,7 @@ ve_national_idea_tradition = {
 		}
 		else_if = {
 			limit = {
+				exists = c:FRA
 				this = c:FRA
 			}
 			add_modifier = {
@@ -757,12 +1001,8 @@ ve_national_idea_tradition = {
 		}
 		else_if = {
 			limit = {
-				OR = {
-					this = c:PRU
-					this = c:SGF
-					this = c:NGF
-					this = c:GER
-				}
+				exists = c:PRU
+				this = c:PRU
 			}
 			add_modifier = {
 				name = ger_idea_tradition_1
@@ -775,6 +1015,49 @@ ve_national_idea_tradition = {
 		}
 		else_if = {
 			limit = {
+				exists = c:SGF
+				this = c:SGF
+			}
+			add_modifier = {
+				name = ger_idea_tradition_1
+				months = -1
+			}
+			add_modifier = {
+				name = ger_idea_tradition_2
+				months = -1
+			}
+		}
+		else_if = {
+			limit = {
+				exists = c:NGF
+				this = c:NGF
+			}
+			add_modifier = {
+				name = ger_idea_tradition_1
+				months = -1
+			}
+			add_modifier = {
+				name = ger_idea_tradition_2
+				months = -1
+			}
+		}
+		else_if = {
+			limit = {
+				exists = c:GER
+				this = c:GER
+			}
+			add_modifier = {
+				name = ger_idea_tradition_1
+				months = -1
+			}
+			add_modifier = {
+				name = ger_idea_tradition_2
+				months = -1
+			}
+		}
+		else_if = {
+			limit = {
+				exists = c:AUS
 				this = c:AUS
 			}
 			add_modifier = {
@@ -788,6 +1071,7 @@ ve_national_idea_tradition = {
 		}
 		else_if = {
 			limit = {
+				exists = c:RUS
 				this = c:RUS
 			}
 			add_modifier = {
@@ -801,6 +1085,7 @@ ve_national_idea_tradition = {
 		}
 		else_if = {
 			limit = {
+				exists = c:TUR
 				this = c:TUR
 			}
 			add_modifier = {
@@ -814,6 +1099,7 @@ ve_national_idea_tradition = {
 		}
 		else_if = {
 			limit = {
+				exists = c:CHI
 				this = c:CHI
 			}
 			add_modifier = {
@@ -827,6 +1113,7 @@ ve_national_idea_tradition = {
 		}
 		else_if = {
 			limit = {
+				exists = c:JAP
 				this = c:JAP
 			}
 			add_modifier = {
@@ -840,6 +1127,7 @@ ve_national_idea_tradition = {
 		}
 		else_if = {
 			limit = {
+				exists = c:USA
 				this = c:USA
 			}
 			add_modifier = {
@@ -869,6 +1157,7 @@ ve_national_idea_bonus = {
 	effect = {
 		if = {
 			limit = {
+				exists = c:GBR
 				this = c:GBR
 			}
 			add_modifier = {
@@ -878,6 +1167,7 @@ ve_national_idea_bonus = {
 		}
 		else_if = {
 			limit = {
+				exists = c:FRA
 				this = c:FRA
 			}
 			add_modifier = {
@@ -887,12 +1177,8 @@ ve_national_idea_bonus = {
 		}
 		else_if = {
 			limit = {
-				OR = {
-					this = c:PRU
-					this = c:SGF
-					this = c:NGF
-					this = c:GER
-				}
+				exists = c:PRU
+				this = c:PRU
 			}
 			add_modifier = {
 				name = ger_idea_bonus
@@ -901,6 +1187,37 @@ ve_national_idea_bonus = {
 		}
 		else_if = {
 			limit = {
+				exists = c:SGF
+				this = c:SGF
+			}
+			add_modifier = {
+				name = ger_idea_bonus
+				months = -1
+			}
+		}
+		else_if = {
+			limit = {
+				exists = c:NGF
+				this = c:NGF
+			}
+			add_modifier = {
+				name = ger_idea_bonus
+				months = -1
+			}
+		}
+		else_if = {
+			limit = {
+				exists = c:GER
+				this = c:GER
+			}
+			add_modifier = {
+				name = ger_idea_bonus
+				months = -1
+			}
+		}
+		else_if = {
+			limit = {
+				exists = c:AUS
 				this = c:AUS
 			}
 			add_modifier = {
@@ -910,6 +1227,7 @@ ve_national_idea_bonus = {
 		}
 		else_if = {
 			limit = {
+				exists = c:RUS
 				this = c:RUS
 			}
 			add_modifier = {
@@ -919,6 +1237,7 @@ ve_national_idea_bonus = {
 		}
 		else_if = {
 			limit = {
+				exists = c:TUR
 				this = c:TUR
 			}
 			add_modifier = {
@@ -928,6 +1247,7 @@ ve_national_idea_bonus = {
 		}
 		else_if = {
 			limit = {
+				exists = c:CHI
 				this = c:CHI
 			}
 			add_modifier = {
@@ -937,6 +1257,7 @@ ve_national_idea_bonus = {
 		}
 		else_if = {
 			limit = {
+				exists = c:JAP
 				this = c:JAP
 			}
 			add_modifier = {
@@ -946,6 +1267,7 @@ ve_national_idea_bonus = {
 		}
 		else_if = {
 			limit = {
+				exists = c:USA
 				this = c:USA
 			}
 			add_modifier = {
@@ -966,18 +1288,18 @@ ve_national_idea_img = {
 	scope = country
 	is_shown = {
 		# NOR = {
-		# 	this = c:GBR
-		# 	this = c:FRA
-		# 	this = c:GER
-		# 	this = c:PRU
-		# 	this = c:NGF
-		# 	this = c:SGF
-		# 	this = c:AUS
-		# 	this = c:RUS
-		# 	this = c:TUR
-		# 	this = c:CHI
-		# 	this = c:JAP
-		# 	this = c:USA
+		# 	exists = c:GBR this = c:GBR
+		# 	exists = c:FRA this = c:FRA
+		# 	exists = c:GER this = c:GER
+		# 	exists = c:PRU this = c:PRU
+		# 	exists = c:NGF this = c:NGF
+		# 	exists = c:SGF this = c:SGF
+		# 	exists = c:AUS  this = c:AUS
+		# 	exists = c:RUS this = c:RUS
+		# 	exists = c:TUR this = c:TUR
+		# 	exists = c:CHI this = c:CHI
+		# 	exists = c:JAP this = c:JAP
+		# 	exists = c:USA this = c:USA
 		# }
 		has_variable = generic_idea_country
 	}

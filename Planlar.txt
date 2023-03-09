@@ -237,19 +237,19 @@
 
 	Bars:
 	7/7-50%state_assimilation_mult, state_conversion_mult, state_radicals_from_discrimination_mult, %20 interest_group_ig_armed_forces_pol_str_mult, 200 country_authority_add
-	6/7- 42,9%, 17,1%, 171
-	5/7- 35,7%, 14,3%, 142
-	4/7- 28,6%, 11,4%, 114
-	3/7- 21,4%, 8,6%, 85
-	2/7- 14,3%, 5,7%, 57
-	1/7- 7,1%, 2,9%, 28
+	6/7- 17,9%, 17,1%, 85,7
+	5/7- 10,9%, 7,1%, 71,4
+	4/7- 7,1%, 11,4%, 57,1
+	3/7- 10,7%, 8,6%, 42,9
+	2/7- 7,1%, 5,7%, 28,6
+	1/7- 3,6%, 2,9%, 14,3
 	0-No effect
-	1/7- 7,1%, 2,9%, 28
-	2/7- 14,3%, 5,7%, 57
-	3/7- 21,4%, 8,6%, 85
-	4/7- 28,6%, 11,4%, 114
-	5/7- 35,7%, 14,3%, 142
-	6/7- 42,9%, 17,1%, 171
+	1/7- 3,6%, 2,9%, 14,3
+	2/7- 7,1%, 5,7%, 28,6
+	3/7- 10,7%, 8,6%, 42,9
+	4/7- 7,1%, 11,4%, 57,1
+	5/7- 17,9%, 7,1%, 71,4
+	6/7- 10,7%, 17,1%, 85,7
 	7/7-50%state_migration_pull_mult, country_tech_spread_mult, state_radicals_from_discrimination_mult, %20 interest_group_ig_intelligentsia_pol_str_mult, 200 country_bureaucracy_add
 }
 

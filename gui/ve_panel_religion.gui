@@ -597,8 +597,17 @@ ve_gui_panel_types
 								tooltip = "[GetScriptedGui('ve_holy_site_1').BuildTooltip( GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
 								using = tooltip_above
 								using = fontsize_xxl
-								align = nobaseline
+								align = center
 								elide = left
+								minimumsize = {
+									50
+									-1
+								}
+								maximumsize = {
+									300
+									-1
+								}
+								multiline = yes
 								autoresize = yes
 							}
 						}
@@ -613,8 +622,17 @@ ve_gui_panel_types
 								tooltip = "[GetScriptedGui('ve_holy_site_2').BuildTooltip( GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
 								using = tooltip_above
 								using = fontsize_xxl
-								align = nobaseline
+								align = center
 								elide = left
+								minimumsize = {
+									50
+									-1
+								}
+								maximumsize = {
+									300
+									-1
+								}
+								multiline = yes
 								autoresize = yes
 							}
 						}
@@ -628,10 +646,18 @@ ve_gui_panel_types
 								raw_text = "[GetPlayer.GetCustom('holy_site_3')]"
 								tooltip = "[GetScriptedGui('ve_holy_site_3').BuildTooltip( GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
 								using = tooltip_above
-								fontsize = 20
 								using = fontsize_xxl
-								align = nobaseline
+								align = center
 								elide = left
+								minimumsize = {
+									50
+									-1
+								}
+								maximumsize = {
+									300
+									-1
+								}
+								multiline = yes
 								autoresize = yes
 							}
 						}
@@ -646,8 +672,17 @@ ve_gui_panel_types
 								tooltip = "[GetScriptedGui('ve_holy_site_4').BuildTooltip( GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
 								using = tooltip_above
 								using = fontsize_xxl
-								align = nobaseline
+								align = center
 								elide = left
+								minimumsize = {
+									50
+									-1
+								}
+								maximumsize = {
+									300
+									-1
+								}
+								multiline = yes
 								autoresize = yes
 							}
 						}
@@ -662,8 +697,17 @@ ve_gui_panel_types
 								tooltip = "[GetScriptedGui('ve_holy_site_5').BuildTooltip( GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
 								using = tooltip_above
 								using = fontsize_xxl
-								align = nobaseline
+								align = center
 								elide = left
+								minimumsize = {
+									50
+									-1
+								}
+								maximumsize = {
+									300
+									-1
+								}
+								multiline = yes
 								autoresize = yes
 							}
 						}

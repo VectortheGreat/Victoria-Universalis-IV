@@ -199,7 +199,7 @@ types ve_gui_panel_types
 								20
 							}
 							vbox = {
-							layoutpolicy_horizontal = expanding
+								layoutpolicy_horizontal = expanding
 								header_pattern = {
 									layoutpolicy_horizontal = expanding
 									blockoverride
@@ -223,7 +223,7 @@ types ve_gui_panel_types
 												500
 											}
 											icon = {
-												texture = "gfx/interface/hitler1933.dds"
+												texture = "gfx/interface/ve_culture/national_supremacy_1.dds"
 												size = {
 													100%
 													100%
@@ -245,7 +245,7 @@ types ve_gui_panel_types
 												500
 											}
 											icon = {
-												texture = "gfx/interface/hitler1933.dds"
+												texture = "gfx/interface/ve_culture/national_supremacy_2.dds"
 												size = {
 													100%
 													100%
@@ -263,7 +263,7 @@ types ve_gui_panel_types
 												500
 											}
 											icon = {
-												texture = "gfx/interface/hitler1933.dds"
+												texture = "gfx/interface/ve_culture/national_supremacy_3.dds"
 												size = {
 													100%
 													100%
@@ -285,7 +285,7 @@ types ve_gui_panel_types
 												500
 											}
 											icon = {
-												texture = "gfx/interface/hitler1933.dds"
+												texture = "gfx/interface/ve_culture/national_supremacy_4.dds"
 												size = {
 													100%
 													100%
@@ -307,7 +307,7 @@ types ve_gui_panel_types
 												500
 											}
 											icon = {
-												texture = "gfx/interface/hitler1933.dds"
+												texture = "gfx/interface/ve_culture/national_supremacy_5.dds"
 												size = {
 													100%
 													100%
@@ -329,7 +329,7 @@ types ve_gui_panel_types
 												500
 											}
 											icon = {
-												texture = "gfx/interface/hitler1933.dds"
+												texture = "gfx/interface/ve_culture/national_supremacy_6.dds"
 												size = {
 													100%
 													100%
@@ -351,7 +351,7 @@ types ve_gui_panel_types
 												500
 											}
 											icon = {
-												texture = "gfx/interface/hitler1933.dds"
+												texture = "gfx/interface/ve_culture/national_supremacy_7.dds"
 												size = {
 													100%
 													100%
@@ -398,7 +398,7 @@ types ve_gui_panel_types
 												500
 											}
 											icon = {
-												texture = "gfx/interface/1701.dds"
+												texture = "gfx/interface/ve_culture/intellectual_nation_1.dds"
 												size = {
 													100%
 													100%
@@ -420,7 +420,7 @@ types ve_gui_panel_types
 												500
 											}
 											icon = {
-												texture = "gfx/interface/1701.dds"
+												texture = "gfx/interface/ve_culture/intellectual_nation_2.dds"
 												size = {
 													100%
 													100%
@@ -438,7 +438,7 @@ types ve_gui_panel_types
 												500
 											}
 											icon = {
-												texture = "gfx/interface/1701.dds"
+												texture = "gfx/interface/ve_culture/intellectual_nation_3.dds"
 												size = {
 													100%
 													100%
@@ -460,7 +460,7 @@ types ve_gui_panel_types
 												500
 											}
 											icon = {
-												texture = "gfx/interface/1701.dds"
+												texture = "gfx/interface/ve_culture/intellectual_nation_4.dds"
 												size = {
 													100%
 													100%
@@ -482,7 +482,7 @@ types ve_gui_panel_types
 												500
 											}
 											icon = {
-												texture = "gfx/interface/1701.dds"
+												texture = "gfx/interface/ve_culture/intellectual_nation_5.dds"
 												size = {
 													100%
 													100%
@@ -504,7 +504,7 @@ types ve_gui_panel_types
 												500
 											}
 											icon = {
-												texture = "gfx/interface/1701.dds"
+												texture = "gfx/interface/ve_culture/intellectual_nation_6.dds"
 												size = {
 													100%
 													100%
@@ -526,7 +526,7 @@ types ve_gui_panel_types
 												500
 											}
 											icon = {
-												texture = "gfx/interface/1701.dds"
+												texture = "gfx/interface/ve_culture/intellectual_nation_7.dds"
 												size = {
 													100%
 													100%

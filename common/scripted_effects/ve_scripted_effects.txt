@@ -13,12 +13,29 @@
 	}
 	else_if = {
 		limit = {
-			OR = {
-				this = c:GER
-				this = c:PRU
-				this = c:NGF
-				this = c:SGF
-			}
+			this = c:SGF
+			exists = c:SGF
+		}
+		german_ideas = yes
+	}
+	else_if = {
+		limit = {
+			this = c:GER
+			exists = c:GER
+		}
+		german_ideas = yes
+	}
+	else_if = {
+		limit = {
+			this = c:PRU
+			exists = c:PRU
+		}
+		german_ideas = yes
+	}
+	else_if = {
+		limit = {
+			this = c:NGF
+			exists = c:NGF
 		}
 		german_ideas = yes
 	}
@@ -78,12 +95,29 @@ cancel_national_idea_mdf = {
 	}
 	else_if = {
 		limit = {
-			OR = {
-				this = c:GER
-				this = c:PRU
-				this = c:NGF
-				this = c:SGF
-			}
+			this = c:SGF
+			exists = c:SGF
+		}
+		cancel_german_ideas = yes
+	}
+	else_if = {
+		limit = {
+			this = c:GER
+			exists = c:GER
+		}
+		cancel_german_ideas = yes
+	}
+	else_if = {
+		limit = {
+			this = c:PRU
+			exists = c:PRU
+		}
+		cancel_german_ideas = yes
+	}
+	else_if = {
+		limit = {
+			this = c:NGF
+			exists = c:NGF
 		}
 		cancel_german_ideas = yes
 	}

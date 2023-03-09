@@ -406,7 +406,7 @@ types ve_gui_panel_types
 								blockoverride
 								"icon"
 								{
-									texture = "gfx/interface/icons/religion_icons/catholic.dds"
+									texture = "gfx/interface/ve_age/authority_icon.dds"
 								}
 								onclick = "[GetScriptedGui('ve_age_bonus_1').Execute(GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
 								enabled = "[GetScriptedGui('ve_age_bonus_1').IsValid(GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
@@ -415,12 +415,12 @@ types ve_gui_panel_types
 								using = tooltip_above
 							}
 							icon = {
-								texture = "gfx/interface/icons/religion_icons/catholic.dds"
+								texture = "gfx/interface/ve_age/authority_icon.dds"
 								visible = "[Not(GetScriptedGui('ve_age_bonus_1').IsShown(GuiScope.SetRoot( GetPlayer.MakeScope ).End ))]"
 								tooltip = "[GetScriptedGui('ve_age_bonus_1').ExecuteTooltip(GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
 								using = ve_shimmer
 								background = {
-									texture = "gfx/interface/ve_header_color.dds"
+									texture = "gfx/interface/age_cannot_unlock.dds"
 									size = {
 									100
 									100
@@ -436,10 +436,11 @@ types ve_gui_panel_types
 									100
 									100
 								}
+								position = { 0 15 }
 								blockoverride
 								"icon"
 								{
-									texture = "gfx/interface/icons/religion_icons/catholic.dds"
+									texture = "gfx/interface/ve_age/take_loan_button.dds"
 								}
 								onclick = "[GetScriptedGui('ve_age_bonus_2').Execute(GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
 								enabled = "[GetScriptedGui('ve_age_bonus_2').IsValid(GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
@@ -448,12 +449,12 @@ types ve_gui_panel_types
 								using = tooltip_above
 							}
 							icon = {
-								texture = "gfx/interface/icons/religion_icons/catholic.dds"
+								texture = "gfx/interface/ve_age/take_loan_button.dds"
 								visible = "[Not(GetScriptedGui('ve_age_bonus_2').IsShown(GuiScope.SetRoot( GetPlayer.MakeScope ).End ))]"
 								tooltip = "[GetScriptedGui('ve_age_bonus_2').ExecuteTooltip(GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
 								using = ve_shimmer
 								background = {
-									texture = "gfx/interface/ve_header_color.dds"
+									texture = "gfx/interface/age_cannot_unlock.dds"
 									size = {
 									100
 									100
@@ -472,7 +473,7 @@ types ve_gui_panel_types
 								blockoverride
 								"icon"
 								{
-									texture = "gfx/interface/icons/religion_icons/catholic.dds"
+									texture = "gfx/interface/ve_age/can_colony_boost_development.dds"
 								}
 								onclick = "[GetScriptedGui('ve_age_bonus_3').Execute(GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
 								enabled = "[GetScriptedGui('ve_age_bonus_3').IsValid(GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
@@ -481,12 +482,12 @@ types ve_gui_panel_types
 								using = tooltip_above
 							}
 							icon = {
-								texture = "gfx/interface/icons/religion_icons/catholic.dds"
+								texture = "gfx/interface/ve_age/can_colony_boost_development.dds"
 								visible = "[Not(GetScriptedGui('ve_age_bonus_3').IsShown(GuiScope.SetRoot( GetPlayer.MakeScope ).End ))]"
 								tooltip = "[GetScriptedGui('ve_age_bonus_3').ExecuteTooltip(GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
 								using = ve_shimmer
 								background = {
-									texture = "gfx/interface/ve_header_color.dds"
+									texture = "gfx/interface/age_cannot_unlock.dds"
 									size = {
 									100
 									100
@@ -505,7 +506,7 @@ types ve_gui_panel_types
 								blockoverride
 								"icon"
 								{
-									texture = "gfx/interface/icons/religion_icons/catholic.dds"
+									texture = "gfx/interface/ve_age/diplomatic_upkeep.dds"
 								}
 								onclick = "[GetScriptedGui('ve_age_bonus_4').Execute(GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
 								enabled = "[GetScriptedGui('ve_age_bonus_4').IsValid(GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
@@ -514,12 +515,12 @@ types ve_gui_panel_types
 								using = tooltip_above
 							}
 							icon = {
-								texture = "gfx/interface/icons/religion_icons/catholic.dds"
+								texture = "gfx/interface/ve_age/diplomatic_upkeep.dds"
 								visible = "[Not(GetScriptedGui('ve_age_bonus_4').IsShown(GuiScope.SetRoot( GetPlayer.MakeScope ).End ))]"
 								tooltip = "[GetScriptedGui('ve_age_bonus_4').ExecuteTooltip(GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
 								using = ve_shimmer
 								background = {
-									texture = "gfx/interface/ve_header_color.dds"
+									texture = "gfx/interface/age_cannot_unlock.dds"
 									size = {
 									100
 									100
@@ -538,7 +539,7 @@ types ve_gui_panel_types
 								blockoverride
 								"icon"
 								{
-									texture = "gfx/interface/icons/religion_icons/catholic.dds"
+									texture = "gfx/interface/ve_age/urbanization.dds"
 								}
 								onclick = "[GetScriptedGui('ve_age_bonus_5').Execute(GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
 								enabled = "[GetScriptedGui('ve_age_bonus_5').IsValid(GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
@@ -547,12 +548,12 @@ types ve_gui_panel_types
 								using = tooltip_above
 							}
 							icon = {
-								texture = "gfx/interface/icons/religion_icons/catholic.dds"
+								texture = "gfx/interface/ve_age/urbanization.dds"
 								visible = "[Not(GetScriptedGui('ve_age_bonus_5').IsShown(GuiScope.SetRoot( GetPlayer.MakeScope ).End ))]"
 								tooltip = "[GetScriptedGui('ve_age_bonus_5').ExecuteTooltip(GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
 								using = ve_shimmer
 								background = {
-									texture = "gfx/interface/ve_header_color.dds"
+									texture = "gfx/interface/age_cannot_unlock.dds"
 									size = {
 									100
 									100
@@ -571,7 +572,7 @@ types ve_gui_panel_types
 								blockoverride
 								"icon"
 								{
-									texture = "gfx/interface/icons/religion_icons/catholic.dds"
+									texture = "gfx/interface/ve_age/local_tax_modifier.dds"
 								}
 								onclick = "[GetScriptedGui('ve_age_bonus_6').Execute(GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
 								enabled = "[GetScriptedGui('ve_age_bonus_6').IsValid(GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
@@ -580,12 +581,12 @@ types ve_gui_panel_types
 								using = tooltip_above
 							}
 							icon = {
-								texture = "gfx/interface/icons/religion_icons/catholic.dds"
+								texture = "gfx/interface/ve_age/local_tax_modifier.dds"
 								visible = "[Not(GetScriptedGui('ve_age_bonus_6').IsShown(GuiScope.SetRoot( GetPlayer.MakeScope ).End ))]"
 								tooltip = "[GetScriptedGui('ve_age_bonus_6').ExecuteTooltip(GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
 								using = ve_shimmer
 								background = {
-									texture = "gfx/interface/ve_header_color.dds"
+									texture = "gfx/interface/age_cannot_unlock.dds"
 									size = {
 									100
 									100
@@ -604,7 +605,7 @@ types ve_gui_panel_types
 								blockoverride
 								"icon"
 								{
-									texture = "gfx/interface/icons/religion_icons/catholic.dds"
+									texture = "gfx/interface/ve_age/coal.dds"
 								}
 								onclick = "[GetScriptedGui('ve_age_bonus_7').Execute(GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
 								enabled = "[GetScriptedGui('ve_age_bonus_7').IsValid(GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
@@ -613,12 +614,12 @@ types ve_gui_panel_types
 								using = tooltip_above
 							}
 							icon = {
-								texture = "gfx/interface/icons/religion_icons/catholic.dds"
+								texture = "gfx/interface/ve_age/coal.dds"
 								visible = "[Not(GetScriptedGui('ve_age_bonus_7').IsShown(GuiScope.SetRoot( GetPlayer.MakeScope ).End ))]"
 								tooltip = "[GetScriptedGui('ve_age_bonus_7').ExecuteTooltip(GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
 								using = ve_shimmer
 								background = {
-									texture = "gfx/interface/ve_header_color.dds"
+									texture = "gfx/interface/age_cannot_unlock.dds"
 									size = {
 									100
 									100
@@ -637,7 +638,7 @@ types ve_gui_panel_types
 								blockoverride
 								"icon"
 								{
-									texture = "gfx/interface/icons/religion_icons/catholic.dds"
+									texture = "gfx/interface/ve_age/global_ship_trade_power.dds"
 								}
 								onclick = "[GetScriptedGui('ve_age_bonus_8').Execute(GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
 								enabled = "[GetScriptedGui('ve_age_bonus_8').IsValid(GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
@@ -646,12 +647,12 @@ types ve_gui_panel_types
 								using = tooltip_above
 							}
 							icon = {
-								texture = "gfx/interface/icons/religion_icons/catholic.dds"
+								texture = "gfx/interface/ve_age/global_ship_trade_power.dds"
 								visible = "[Not(GetScriptedGui('ve_age_bonus_8').IsShown(GuiScope.SetRoot( GetPlayer.MakeScope ).End ))]"
 								tooltip = "[GetScriptedGui('ve_age_bonus_8').ExecuteTooltip(GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
 								using = ve_shimmer
 								background = {
-									texture = "gfx/interface/ve_header_color.dds"
+									texture = "gfx/interface/age_cannot_unlock.dds"
 									size = {
 									100
 									100
@@ -670,7 +671,7 @@ types ve_gui_panel_types
 								blockoverride
 								"icon"
 								{
-									texture = "gfx/interface/icons/religion_icons/catholic.dds"
+									texture = "gfx/interface/ve_age/ab_allow_feudal_de_jure_law.dds"
 								}
 								onclick = "[GetScriptedGui('ve_age_bonus_9').Execute(GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
 								enabled = "[GetScriptedGui('ve_age_bonus_9').IsValid(GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
@@ -679,12 +680,12 @@ types ve_gui_panel_types
 								using = tooltip_above
 							}
 							icon = {
-								texture = "gfx/interface/icons/religion_icons/catholic.dds"
+								texture = "gfx/interface/ve_age/ab_allow_feudal_de_jure_law.dds"
 								visible = "[Not(GetScriptedGui('ve_age_bonus_9').IsShown(GuiScope.SetRoot( GetPlayer.MakeScope ).End ))]"
 								tooltip = "[GetScriptedGui('ve_age_bonus_9').ExecuteTooltip(GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
 								using = ve_shimmer
 								background = {
-									texture = "gfx/interface/ve_header_color.dds"
+									texture = "gfx/interface/age_cannot_unlock.dds"
 									size = {
 									100
 									100
@@ -703,7 +704,7 @@ types ve_gui_panel_types
 								blockoverride
 								"icon"
 								{
-									texture = "gfx/interface/icons/religion_icons/catholic.dds"
+									texture = "gfx/interface/ve_age/population_radical.dds"
 								}
 								onclick = "[GetScriptedGui('ve_age_bonus_10').Execute(GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
 								enabled = "[GetScriptedGui('ve_age_bonus_10').IsValid(GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
@@ -712,12 +713,12 @@ types ve_gui_panel_types
 								using = tooltip_above
 							}
 							icon = {
-								texture = "gfx/interface/icons/religion_icons/catholic.dds"
+								texture = "gfx/interface/ve_age/population_radical.dds"
 								visible = "[Not(GetScriptedGui('ve_age_bonus_10').IsShown(GuiScope.SetRoot( GetPlayer.MakeScope ).End ))]"
 								tooltip = "[GetScriptedGui('ve_age_bonus_10').ExecuteTooltip(GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
 								using = ve_shimmer
 								background = {
-									texture = "gfx/interface/ve_header_color.dds"
+									texture = "gfx/interface/age_cannot_unlock.dds"
 									size = {
 									100
 									100
@@ -736,7 +737,7 @@ types ve_gui_panel_types
 								blockoverride
 								"icon"
 								{
-									texture = "gfx/interface/icons/religion_icons/catholic.dds"
+									texture = "gfx/interface/ve_age/aggresive_exp_icon.dds"
 								}
 								onclick = "[GetScriptedGui('ve_age_bonus_11').Execute(GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
 								enabled = "[GetScriptedGui('ve_age_bonus_11').IsValid(GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
@@ -745,12 +746,12 @@ types ve_gui_panel_types
 								using = tooltip_above
 							}
 							icon = {
-								texture = "gfx/interface/icons/religion_icons/catholic.dds"
+								texture = "gfx/interface/ve_age/aggresive_exp_icon.dds"
 								visible = "[Not(GetScriptedGui('ve_age_bonus_11').IsShown(GuiScope.SetRoot( GetPlayer.MakeScope ).End ))]"
 								tooltip = "[GetScriptedGui('ve_age_bonus_11').ExecuteTooltip(GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
 								using = ve_shimmer
 								background = {
-									texture = "gfx/interface/ve_header_color.dds"
+									texture = "gfx/interface/age_cannot_unlock.dds"
 									size = {
 									100
 									100
@@ -776,7 +777,7 @@ types ve_gui_panel_types
 								blockoverride
 								"icon"
 								{
-									texture = "gfx/interface/icons/religion_icons/catholic.dds"
+									texture = "gfx/interface/ve_age/ig_suppress.dds"
 								}
 								onclick = "[GetScriptedGui('ve_age_bonus_1').Execute(GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
 								enabled = "[GetScriptedGui('ve_age_bonus_1').IsValid(GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
@@ -785,12 +786,12 @@ types ve_gui_panel_types
 								using = tooltip_above
 							}
 							icon = {
-								texture = "gfx/interface/icons/religion_icons/catholic.dds"
+								texture = "gfx/interface/ve_age/ig_suppress.dds"
 								visible = "[Not(GetScriptedGui('ve_age_bonus_1').IsShown(GuiScope.SetRoot( GetPlayer.MakeScope ).End ))]"
 								tooltip = "[GetScriptedGui('ve_age_bonus_1').ExecuteTooltip(GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
 								using = ve_shimmer
 								background = {
-									texture = "gfx/interface/ve_header_color.dds"
+									texture = "gfx/interface/age_cannot_unlock.dds"
 									size = {
 									100
 									100
@@ -809,7 +810,7 @@ types ve_gui_panel_types
 								blockoverride
 								"icon"
 								{
-									texture = "gfx/interface/icons/religion_icons/catholic.dds"
+									texture = "gfx/interface/ve_age/global_trade_goods_size_modifier.dds"
 								}
 								onclick = "[GetScriptedGui('ve_age_bonus_2').Execute(GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
 								enabled = "[GetScriptedGui('ve_age_bonus_2').IsValid(GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
@@ -818,12 +819,12 @@ types ve_gui_panel_types
 								using = tooltip_above
 							}
 							icon = {
-								texture = "gfx/interface/icons/religion_icons/catholic.dds"
+								texture = "gfx/interface/ve_age/global_trade_goods_size_modifier.dds"
 								visible = "[Not(GetScriptedGui('ve_age_bonus_2').IsShown(GuiScope.SetRoot( GetPlayer.MakeScope ).End ))]"
 								tooltip = "[GetScriptedGui('ve_age_bonus_2').ExecuteTooltip(GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
 								using = ve_shimmer
 								background = {
-									texture = "gfx/interface/ve_header_color.dds"
+									texture = "gfx/interface/age_cannot_unlock.dds"
 									size = {
 									100
 									100
@@ -842,7 +843,7 @@ types ve_gui_panel_types
 								blockoverride
 								"icon"
 								{
-									texture = "gfx/interface/icons/religion_icons/catholic.dds"
+									texture = "gfx/interface/ve_age/catholic.dds"
 								}
 								onclick = "[GetScriptedGui('ve_age_bonus_3').Execute(GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
 								enabled = "[GetScriptedGui('ve_age_bonus_3').IsValid(GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
@@ -851,12 +852,12 @@ types ve_gui_panel_types
 								using = tooltip_above
 							}
 							icon = {
-								texture = "gfx/interface/icons/religion_icons/catholic.dds"
+								texture = "gfx/interface/ve_age/catholic.dds"
 								visible = "[Not(GetScriptedGui('ve_age_bonus_3').IsShown(GuiScope.SetRoot( GetPlayer.MakeScope ).End ))]"
 								tooltip = "[GetScriptedGui('ve_age_bonus_3').ExecuteTooltip(GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
 								using = ve_shimmer
 								background = {
-									texture = "gfx/interface/ve_header_color.dds"
+									texture = "gfx/interface/age_cannot_unlock.dds"
 									size = {
 									100
 									100
@@ -875,7 +876,7 @@ types ve_gui_panel_types
 								blockoverride
 								"icon"
 								{
-									texture = "gfx/interface/icons/religion_icons/catholic.dds"
+									texture = "gfx/interface/ve_age/unrest_suppression_icon.dds"
 								}
 								onclick = "[GetScriptedGui('ve_age_bonus_4').Execute(GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
 								enabled = "[GetScriptedGui('ve_age_bonus_4').IsValid(GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
@@ -884,12 +885,12 @@ types ve_gui_panel_types
 								using = tooltip_above
 							}
 							icon = {
-								texture = "gfx/interface/icons/religion_icons/catholic.dds"
+								texture = "gfx/interface/ve_age/unrest_suppression_icon.dds"
 								visible = "[Not(GetScriptedGui('ve_age_bonus_4').IsShown(GuiScope.SetRoot( GetPlayer.MakeScope ).End ))]"
 								tooltip = "[GetScriptedGui('ve_age_bonus_4').ExecuteTooltip(GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
 								using = ve_shimmer
 								background = {
-									texture = "gfx/interface/ve_header_color.dds"
+									texture = "gfx/interface/age_cannot_unlock.dds"
 									size = {
 									100
 									100
@@ -908,7 +909,7 @@ types ve_gui_panel_types
 								blockoverride
 								"icon"
 								{
-									texture = "gfx/interface/icons/religion_icons/catholic.dds"
+									texture = "gfx/interface/ve_age/country_diplomatic_power_opposite.dds"
 								}
 								onclick = "[GetScriptedGui('ve_age_bonus_5').Execute(GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
 								enabled = "[GetScriptedGui('ve_age_bonus_5').IsValid(GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
@@ -917,12 +918,12 @@ types ve_gui_panel_types
 								using = tooltip_above
 							}
 							icon = {
-								texture = "gfx/interface/icons/religion_icons/catholic.dds"
+								texture = "gfx/interface/ve_age/country_diplomatic_power_opposite.dds"
 								visible = "[Not(GetScriptedGui('ve_age_bonus_5').IsShown(GuiScope.SetRoot( GetPlayer.MakeScope ).End ))]"
 								tooltip = "[GetScriptedGui('ve_age_bonus_5').ExecuteTooltip(GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
 								using = ve_shimmer
 								background = {
-									texture = "gfx/interface/ve_header_color.dds"
+									texture = "gfx/interface/age_cannot_unlock.dds"
 									size = {
 									100
 									100
@@ -941,7 +942,7 @@ types ve_gui_panel_types
 								blockoverride
 								"icon"
 								{
-									texture = "gfx/interface/icons/religion_icons/catholic.dds"
+									texture = "gfx/interface/ve_age/trade_efficiency.dds"
 								}
 								onclick = "[GetScriptedGui('ve_age_bonus_6').Execute(GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
 								enabled = "[GetScriptedGui('ve_age_bonus_6').IsValid(GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
@@ -950,12 +951,12 @@ types ve_gui_panel_types
 								using = tooltip_above
 							}
 							icon = {
-								texture = "gfx/interface/icons/religion_icons/catholic.dds"
+								texture = "gfx/interface/ve_age/trade_efficiency.dds"
 								visible = "[Not(GetScriptedGui('ve_age_bonus_6').IsShown(GuiScope.SetRoot( GetPlayer.MakeScope ).End ))]"
 								tooltip = "[GetScriptedGui('ve_age_bonus_6').ExecuteTooltip(GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
 								using = ve_shimmer
 								background = {
-									texture = "gfx/interface/ve_header_color.dds"
+									texture = "gfx/interface/age_cannot_unlock.dds"
 									size = {
 									100
 									100
@@ -974,7 +975,7 @@ types ve_gui_panel_types
 								blockoverride
 								"icon"
 								{
-									texture = "gfx/interface/icons/religion_icons/catholic.dds"
+									texture = "gfx/interface/ve_age/global_missionary_strength.dds"
 								}
 								onclick = "[GetScriptedGui('ve_age_bonus_7').Execute(GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
 								enabled = "[GetScriptedGui('ve_age_bonus_7').IsValid(GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
@@ -983,12 +984,12 @@ types ve_gui_panel_types
 								using = tooltip_above
 							}
 							icon = {
-								texture = "gfx/interface/icons/religion_icons/catholic.dds"
+								texture = "gfx/interface/ve_age/global_missionary_strength.dds"
 								visible = "[Not(GetScriptedGui('ve_age_bonus_7').IsShown(GuiScope.SetRoot( GetPlayer.MakeScope ).End ))]"
 								tooltip = "[GetScriptedGui('ve_age_bonus_7').ExecuteTooltip(GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
 								using = ve_shimmer
 								background = {
-									texture = "gfx/interface/ve_header_color.dds"
+									texture = "gfx/interface/age_cannot_unlock.dds"
 									size = {
 									100
 									100
@@ -1007,7 +1008,7 @@ types ve_gui_panel_types
 								blockoverride
 								"icon"
 								{
-									texture = "gfx/interface/icons/religion_icons/catholic.dds"
+									texture = "gfx/interface/ve_age/can_colony_boost_development.dds"
 								}
 								onclick = "[GetScriptedGui('ve_age_bonus_8').Execute(GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
 								enabled = "[GetScriptedGui('ve_age_bonus_8').IsValid(GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
@@ -1016,12 +1017,12 @@ types ve_gui_panel_types
 								using = tooltip_above
 							}
 							icon = {
-								texture = "gfx/interface/icons/religion_icons/catholic.dds"
+								texture = "gfx/interface/ve_age/can_colony_boost_development.dds"
 								visible = "[Not(GetScriptedGui('ve_age_bonus_8').IsShown(GuiScope.SetRoot( GetPlayer.MakeScope ).End ))]"
 								tooltip = "[GetScriptedGui('ve_age_bonus_8').ExecuteTooltip(GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
 								using = ve_shimmer
 								background = {
-									texture = "gfx/interface/ve_header_color.dds"
+									texture = "gfx/interface/age_cannot_unlock.dds"
 									size = {
 									100
 									100
@@ -1040,7 +1041,7 @@ types ve_gui_panel_types
 								blockoverride
 								"icon"
 								{
-									texture = "gfx/interface/icons/religion_icons/catholic.dds"
+									texture = "gfx/interface/ve_age/unitpanel_button_seize_colony.dds"
 								}
 								onclick = "[GetScriptedGui('ve_age_bonus_9').Execute(GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
 								enabled = "[GetScriptedGui('ve_age_bonus_9').IsValid(GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
@@ -1049,12 +1050,12 @@ types ve_gui_panel_types
 								using = tooltip_above
 							}
 							icon = {
-								texture = "gfx/interface/icons/religion_icons/catholic.dds"
+								texture = "gfx/interface/ve_age/unitpanel_button_seize_colony.dds"
 								visible = "[Not(GetScriptedGui('ve_age_bonus_9').IsShown(GuiScope.SetRoot( GetPlayer.MakeScope ).End ))]"
 								tooltip = "[GetScriptedGui('ve_age_bonus_9').ExecuteTooltip(GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
 								using = ve_shimmer
 								background = {
-									texture = "gfx/interface/ve_header_color.dds"
+									texture = "gfx/interface/age_cannot_unlock.dds"
 									size = {
 									100
 									100
@@ -1073,7 +1074,7 @@ types ve_gui_panel_types
 								blockoverride
 								"icon"
 								{
-									texture = "gfx/interface/icons/religion_icons/catholic.dds"
+									texture = "gfx/interface/ve_age/tolerance_heathen.dds"
 								}
 								onclick = "[GetScriptedGui('ve_age_bonus_10').Execute(GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
 								enabled = "[GetScriptedGui('ve_age_bonus_10').IsValid(GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
@@ -1082,12 +1083,12 @@ types ve_gui_panel_types
 								using = tooltip_above
 							}
 							icon = {
-								texture = "gfx/interface/icons/religion_icons/catholic.dds"
+								texture = "gfx/interface/ve_age/tolerance_heathen.dds"
 								visible = "[Not(GetScriptedGui('ve_age_bonus_10').IsShown(GuiScope.SetRoot( GetPlayer.MakeScope ).End ))]"
 								tooltip = "[GetScriptedGui('ve_age_bonus_10').ExecuteTooltip(GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
 								using = ve_shimmer
 								background = {
-									texture = "gfx/interface/ve_header_color.dds"
+									texture = "gfx/interface/age_cannot_unlock.dds"
 									size = {
 									100
 									100
@@ -1106,7 +1107,7 @@ types ve_gui_panel_types
 								blockoverride
 								"icon"
 								{
-									texture = "gfx/interface/icons/religion_icons/catholic.dds"
+									texture = "gfx/interface/ve_age/culture_conversion_cost.dds"
 								}
 								onclick = "[GetScriptedGui('ve_age_bonus_11').Execute(GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
 								enabled = "[GetScriptedGui('ve_age_bonus_11').IsValid(GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
@@ -1115,12 +1116,12 @@ types ve_gui_panel_types
 								using = tooltip_above
 							}
 							icon = {
-								texture = "gfx/interface/icons/religion_icons/catholic.dds"
+								texture = "gfx/interface/ve_age/culture_conversion_cost.dds"
 								visible = "[Not(GetScriptedGui('ve_age_bonus_11').IsShown(GuiScope.SetRoot( GetPlayer.MakeScope ).End ))]"
 								tooltip = "[GetScriptedGui('ve_age_bonus_11').ExecuteTooltip(GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
 								using = ve_shimmer
 								background = {
-									texture = "gfx/interface/ve_header_color.dds"
+									texture = "gfx/interface/age_cannot_unlock.dds"
 									size = {
 									100
 									100
@@ -1146,7 +1147,7 @@ types ve_gui_panel_types
 								blockoverride
 								"icon"
 								{
-									texture = "gfx/interface/icons/religion_icons/catholic.dds"
+									texture = "gfx/interface/ve_age/field_hospitals.dds"
 								}
 								onclick = "[GetScriptedGui('ve_age_bonus_1').Execute(GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
 								enabled = "[GetScriptedGui('ve_age_bonus_1').IsValid(GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
@@ -1155,12 +1156,12 @@ types ve_gui_panel_types
 								using = tooltip_above
 							}
 							icon = {
-								texture = "gfx/interface/icons/religion_icons/catholic.dds"
+								texture = "gfx/interface/ve_age/field_hospitals.dds"
 								visible = "[Not(GetScriptedGui('ve_age_bonus_1').IsShown(GuiScope.SetRoot( GetPlayer.MakeScope ).End ))]"
 								tooltip = "[GetScriptedGui('ve_age_bonus_1').ExecuteTooltip(GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
 								using = ve_shimmer
 								background = {
-									texture = "gfx/interface/ve_header_color.dds"
+									texture = "gfx/interface/age_cannot_unlock.dds"
 									size = {
 									100
 									100
@@ -1179,7 +1180,7 @@ types ve_gui_panel_types
 								blockoverride
 								"icon"
 								{
-									texture = "gfx/interface/icons/religion_icons/catholic.dds"
+									texture = "gfx/interface/ve_age/improve_relation_modifier.dds"
 								}
 								onclick = "[GetScriptedGui('ve_age_bonus_2').Execute(GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
 								enabled = "[GetScriptedGui('ve_age_bonus_2').IsValid(GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
@@ -1188,12 +1189,12 @@ types ve_gui_panel_types
 								using = tooltip_above
 							}
 							icon = {
-								texture = "gfx/interface/icons/religion_icons/catholic.dds"
+								texture = "gfx/interface/ve_age/improve_relation_modifier.dds"
 								visible = "[Not(GetScriptedGui('ve_age_bonus_2').IsShown(GuiScope.SetRoot( GetPlayer.MakeScope ).End ))]"
 								tooltip = "[GetScriptedGui('ve_age_bonus_2').ExecuteTooltip(GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
 								using = ve_shimmer
 								background = {
-									texture = "gfx/interface/ve_header_color.dds"
+									texture = "gfx/interface/age_cannot_unlock.dds"
 									size = {
 									100
 									100
@@ -1212,7 +1213,7 @@ types ve_gui_panel_types
 								blockoverride
 								"icon"
 								{
-									texture = "gfx/interface/icons/religion_icons/catholic.dds"
+									texture = "gfx/interface/ve_age/artillery.dds"
 								}
 								onclick = "[GetScriptedGui('ve_age_bonus_3').Execute(GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
 								enabled = "[GetScriptedGui('ve_age_bonus_3').IsValid(GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
@@ -1221,12 +1222,12 @@ types ve_gui_panel_types
 								using = tooltip_above
 							}
 							icon = {
-								texture = "gfx/interface/icons/religion_icons/catholic.dds"
+								texture = "gfx/interface/ve_age/artillery.dds"
 								visible = "[Not(GetScriptedGui('ve_age_bonus_3').IsShown(GuiScope.SetRoot( GetPlayer.MakeScope ).End ))]"
 								tooltip = "[GetScriptedGui('ve_age_bonus_3').ExecuteTooltip(GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
 								using = ve_shimmer
 								background = {
-									texture = "gfx/interface/ve_header_color.dds"
+									texture = "gfx/interface/age_cannot_unlock.dds"
 									size = {
 									100
 									100
@@ -1245,7 +1246,7 @@ types ve_gui_panel_types
 								blockoverride
 								"icon"
 								{
-									texture = "gfx/interface/icons/religion_icons/catholic.dds"
+									texture = "gfx/interface/ve_age/war_exhaustion.dds"
 								}
 								onclick = "[GetScriptedGui('ve_age_bonus_4').Execute(GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
 								enabled = "[GetScriptedGui('ve_age_bonus_4').IsValid(GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
@@ -1254,12 +1255,12 @@ types ve_gui_panel_types
 								using = tooltip_above
 							}
 							icon = {
-								texture = "gfx/interface/icons/religion_icons/catholic.dds"
+								texture = "gfx/interface/ve_age/war_exhaustion.dds"
 								visible = "[Not(GetScriptedGui('ve_age_bonus_4').IsShown(GuiScope.SetRoot( GetPlayer.MakeScope ).End ))]"
 								tooltip = "[GetScriptedGui('ve_age_bonus_4').ExecuteTooltip(GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
 								using = ve_shimmer
 								background = {
-									texture = "gfx/interface/ve_header_color.dds"
+									texture = "gfx/interface/age_cannot_unlock.dds"
 									size = {
 									100
 									100
@@ -1278,7 +1279,7 @@ types ve_gui_panel_types
 								blockoverride
 								"icon"
 								{
-									texture = "gfx/interface/icons/religion_icons/catholic.dds"
+									texture = "gfx/interface/ve_age/railways.dds"
 								}
 								onclick = "[GetScriptedGui('ve_age_bonus_5').Execute(GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
 								enabled = "[GetScriptedGui('ve_age_bonus_5').IsValid(GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
@@ -1287,12 +1288,12 @@ types ve_gui_panel_types
 								using = tooltip_above
 							}
 							icon = {
-								texture = "gfx/interface/icons/religion_icons/catholic.dds"
+								texture = "gfx/interface/ve_age/railways.dds"
 								visible = "[Not(GetScriptedGui('ve_age_bonus_5').IsShown(GuiScope.SetRoot( GetPlayer.MakeScope ).End ))]"
 								tooltip = "[GetScriptedGui('ve_age_bonus_5').ExecuteTooltip(GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
 								using = ve_shimmer
 								background = {
-									texture = "gfx/interface/ve_header_color.dds"
+									texture = "gfx/interface/age_cannot_unlock.dds"
 									size = {
 									100
 									100
@@ -1311,7 +1312,7 @@ types ve_gui_panel_types
 								blockoverride
 								"icon"
 								{
-									texture = "gfx/interface/icons/religion_icons/catholic.dds"
+									texture = "gfx/interface/ve_age/icon_political_lens_decrees.dds"
 								}
 								onclick = "[GetScriptedGui('ve_age_bonus_6').Execute(GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
 								enabled = "[GetScriptedGui('ve_age_bonus_6').IsValid(GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
@@ -1320,12 +1321,12 @@ types ve_gui_panel_types
 								using = tooltip_above
 							}
 							icon = {
-								texture = "gfx/interface/icons/religion_icons/catholic.dds"
+								texture = "gfx/interface/ve_age/icon_political_lens_decrees.dds"
 								visible = "[Not(GetScriptedGui('ve_age_bonus_6').IsShown(GuiScope.SetRoot( GetPlayer.MakeScope ).End ))]"
 								tooltip = "[GetScriptedGui('ve_age_bonus_6').ExecuteTooltip(GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
 								using = ve_shimmer
 								background = {
-									texture = "gfx/interface/ve_header_color.dds"
+									texture = "gfx/interface/age_cannot_unlock.dds"
 									size = {
 									100
 									100
@@ -1344,7 +1345,7 @@ types ve_gui_panel_types
 								blockoverride
 								"icon"
 								{
-									texture = "gfx/interface/icons/religion_icons/catholic.dds"
+									texture = "gfx/interface/ve_age/land_attrition.dds"
 								}
 								onclick = "[GetScriptedGui('ve_age_bonus_7').Execute(GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
 								enabled = "[GetScriptedGui('ve_age_bonus_7').IsValid(GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
@@ -1353,12 +1354,12 @@ types ve_gui_panel_types
 								using = tooltip_above
 							}
 							icon = {
-								texture = "gfx/interface/icons/religion_icons/catholic.dds"
+								texture = "gfx/interface/ve_age/land_attrition.dds"
 								visible = "[Not(GetScriptedGui('ve_age_bonus_7').IsShown(GuiScope.SetRoot( GetPlayer.MakeScope ).End ))]"
 								tooltip = "[GetScriptedGui('ve_age_bonus_7').ExecuteTooltip(GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
 								using = ve_shimmer
 								background = {
-									texture = "gfx/interface/ve_header_color.dds"
+									texture = "gfx/interface/age_cannot_unlock.dds"
 									size = {
 									100
 									100
@@ -1377,7 +1378,7 @@ types ve_gui_panel_types
 								blockoverride
 								"icon"
 								{
-									texture = "gfx/interface/icons/religion_icons/catholic.dds"
+									texture = "gfx/interface/ve_age/defence.dds"
 								}
 								onclick = "[GetScriptedGui('ve_age_bonus_8').Execute(GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
 								enabled = "[GetScriptedGui('ve_age_bonus_8').IsValid(GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
@@ -1386,12 +1387,12 @@ types ve_gui_panel_types
 								using = tooltip_above
 							}
 							icon = {
-								texture = "gfx/interface/icons/religion_icons/catholic.dds"
+								texture = "gfx/interface/ve_age/defence.dds"
 								visible = "[Not(GetScriptedGui('ve_age_bonus_8').IsShown(GuiScope.SetRoot( GetPlayer.MakeScope ).End ))]"
 								tooltip = "[GetScriptedGui('ve_age_bonus_8').ExecuteTooltip(GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
 								using = ve_shimmer
 								background = {
-									texture = "gfx/interface/ve_header_color.dds"
+									texture = "gfx/interface/age_cannot_unlock.dds"
 									size = {
 									100
 									100
@@ -1410,7 +1411,7 @@ types ve_gui_panel_types
 								blockoverride
 								"icon"
 								{
-									texture = "gfx/interface/icons/religion_icons/catholic.dds"
+									texture = "gfx/interface/ve_age/leader_land_manuever.dds"
 								}
 								onclick = "[GetScriptedGui('ve_age_bonus_9').Execute(GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
 								enabled = "[GetScriptedGui('ve_age_bonus_9').IsValid(GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
@@ -1419,12 +1420,12 @@ types ve_gui_panel_types
 								using = tooltip_above
 							}
 							icon = {
-								texture = "gfx/interface/icons/religion_icons/catholic.dds"
+								texture = "gfx/interface/ve_age/leader_land_manuever.dds"
 								visible = "[Not(GetScriptedGui('ve_age_bonus_9').IsShown(GuiScope.SetRoot( GetPlayer.MakeScope ).End ))]"
 								tooltip = "[GetScriptedGui('ve_age_bonus_9').ExecuteTooltip(GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
 								using = ve_shimmer
 								background = {
-									texture = "gfx/interface/ve_header_color.dds"
+									texture = "gfx/interface/age_cannot_unlock.dds"
 									size = {
 									100
 									100
@@ -1443,7 +1444,7 @@ types ve_gui_panel_types
 								blockoverride
 								"icon"
 								{
-									texture = "gfx/interface/icons/religion_icons/catholic.dds"
+									texture = "gfx/interface/ve_age/landing_penalty.dds"
 								}
 								onclick = "[GetScriptedGui('ve_age_bonus_10').Execute(GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
 								enabled = "[GetScriptedGui('ve_age_bonus_10').IsValid(GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
@@ -1452,12 +1453,12 @@ types ve_gui_panel_types
 								using = tooltip_above
 							}
 							icon = {
-								texture = "gfx/interface/icons/religion_icons/catholic.dds"
+								texture = "gfx/interface/ve_age/landing_penalty.dds"
 								visible = "[Not(GetScriptedGui('ve_age_bonus_10').IsShown(GuiScope.SetRoot( GetPlayer.MakeScope ).End ))]"
 								tooltip = "[GetScriptedGui('ve_age_bonus_10').ExecuteTooltip(GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
 								using = ve_shimmer
 								background = {
-									texture = "gfx/interface/ve_header_color.dds"
+									texture = "gfx/interface/age_cannot_unlock.dds"
 									size = {
 									100
 									100
@@ -1476,7 +1477,7 @@ types ve_gui_panel_types
 								blockoverride
 								"icon"
 								{
-									texture = "gfx/interface/icons/religion_icons/catholic.dds"
+									texture = "gfx/interface/ve_age/global_manpower_modifier.dds"
 								}
 								onclick = "[GetScriptedGui('ve_age_bonus_11').Execute(GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
 								enabled = "[GetScriptedGui('ve_age_bonus_11').IsValid(GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
@@ -1485,12 +1486,12 @@ types ve_gui_panel_types
 								using = tooltip_above
 							}
 							icon = {
-								texture = "gfx/interface/icons/religion_icons/catholic.dds"
+								texture = "gfx/interface/ve_age/global_manpower_modifier.dds"
 								visible = "[Not(GetScriptedGui('ve_age_bonus_11').IsShown(GuiScope.SetRoot( GetPlayer.MakeScope ).End ))]"
 								tooltip = "[GetScriptedGui('ve_age_bonus_11').ExecuteTooltip(GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
 								using = ve_shimmer
 								background = {
-									texture = "gfx/interface/ve_header_color.dds"
+									texture = "gfx/interface/age_cannot_unlock.dds"
 									size = {
 									100
 									100

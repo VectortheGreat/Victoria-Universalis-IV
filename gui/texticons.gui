@@ -163,7 +163,7 @@ texticon = {
   iconsize = {
     offset = { 0 15 }
     texture = "gfx/interface/ve_national_ideas/unrest_suppression_icon.dds"
-    fontsize = 70
+    fontsize = 60
   }
 }
 texticon = {
@@ -412,7 +412,7 @@ texticon = {
   iconsize = {
     offset = { 0 15 }
     texture = "gfx/interface/ve_national_ideas/tolerance_heathen.dds"
-    fontsize = 65
+    fontsize = 50
   }
 }
 texticon = {
@@ -420,7 +420,7 @@ texticon = {
   iconsize = {
     offset = { 0 15 }
     texture = "gfx/interface/ve_national_ideas/tolerance_heathen_black.dds"
-    fontsize = 65
+    fontsize = 50
   }
 }
 texticon = {
@@ -588,7 +588,7 @@ texticon = {
   iconsize = {
     offset = { 0 15 }
     texture = "gfx/interface/ve_national_ideas/timer_ab_allow_feudal_de_jure_law.dds"
-    fontsize = 50
+    fontsize = 55
   }
 }
 texticon = {
@@ -876,7 +876,7 @@ texticon = {
   iconsize = {
     offset = { 0 15 }
     texture = "gfx/interface/ve_national_ideas/ab_allow_feudal_de_jure_law.dds"
-    fontsize = 50
+    fontsize = 65
   }
 }
 texticon = {
@@ -908,7 +908,7 @@ texticon = {
   iconsize = {
     offset = { 0 15 }
     texture = "gfx/interface/ve_national_ideas/authority_icon.dds"
-    fontsize = 50
+    fontsize = 70
   }
 }
 texticon = {
@@ -916,7 +916,7 @@ texticon = {
   iconsize = {
     offset = { 0 15 }
     texture = "gfx/interface/ve_national_ideas/authority_icon_black.dds"
-    fontsize = 50
+    fontsize = 70
   }
 }
 texticon = {
@@ -1020,7 +1020,7 @@ texticon = {
   iconsize = {
     offset = { 0 15 }
     texture = "gfx/interface/ve_national_ideas/no_migration_controls.dds"
-    fontsize = 50
+    fontsize = 65
   }
 }
 texticon = {
@@ -1770,7 +1770,7 @@ texticon = {
   }
 }
 texticon = {
-  icon = sunni_passive_aspect_9
+  icon = sunni_aspect_9
   iconsize = {
     offset = { 0 15 }
     texture = "gfx/interface/ve_religion/sunni_passive.dds"
@@ -1778,7 +1778,7 @@ texticon = {
   }
 }
 texticon = {
-  icon = shiite_passive_aspect_9
+  icon = shiite_aspect_9
   iconsize = {
     offset = { 0 15 }
     texture = "gfx/interface/ve_religion/shia_passive.dds"
@@ -1786,7 +1786,7 @@ texticon = {
   }
 }
 texticon = {
-  icon = jewish_passive_aspect_9
+  icon = jewish_aspect_9
   iconsize = {
     offset = { 0 15 }
     texture = "gfx/interface/ve_religion/jewish_passive.dds"
@@ -1794,7 +1794,7 @@ texticon = {
   }
 }
 texticon = {
-  icon = mahayana_passive_aspect_9
+  icon = mahayana_aspect_9
   iconsize = {
     offset = { 0 15 }
     texture = "gfx/interface/ve_religion/mahayana_passive.dds"
@@ -1802,7 +1802,7 @@ texticon = {
   }
 }
 texticon = {
-  icon = mahayana_passive_aspect_9
+  icon = gelugpa_aspect_9
   iconsize = {
     offset = { 0 15 }
     texture = "gfx/interface/ve_religion/mahayana_passive.dds"
@@ -1810,7 +1810,7 @@ texticon = {
   }
 }
 texticon = {
-  icon = mahayana_passive_aspect_9
+  icon = theravada_aspect_9
   iconsize = {
     offset = { 0 15 }
     texture = "gfx/interface/ve_religion/mahayana_passive.dds"
@@ -1818,7 +1818,7 @@ texticon = {
   }
 }
 texticon = {
-  icon = gelugpa_passive_aspect_9
+  icon = shinto_aspect_9
   iconsize = {
     offset = { 0 15 }
     texture = "gfx/interface/ve_religion/mahayana_passive.dds"
@@ -1826,23 +1826,7 @@ texticon = {
   }
 }
 texticon = {
-  icon = shinto_passive_aspect_9
-  iconsize = {
-    offset = { 0 15 }
-    texture = "gfx/interface/ve_religion/mahayana_passive.dds"
-    fontsize = 50
-  }
-}
-texticon = {
-  icon = theravada_passive_aspect_9
-  iconsize = {
-    offset = { 0 15 }
-    texture = "gfx/interface/ve_religion/mahayana_passive.dds"
-    fontsize = 50
-  }
-}
-texticon = {
-  icon = hindu_passive_aspect_9
+  icon = hindu_aspect_9
   iconsize = {
     offset = { 0 15 }
     texture = "gfx/interface/ve_religion/hindu_passive.dds"
@@ -1850,7 +1834,7 @@ texticon = {
   }
 }
 texticon = {
-  icon = sikh_passive_aspect_9
+  icon = sikh_aspect_9
   iconsize = {
     offset = { 0 15 }
     texture = "gfx/interface/ve_religion/sikh_passive.dds"
@@ -1858,7 +1842,7 @@ texticon = {
   }
 }
 texticon = {
-  icon = animist_passive_aspect_9
+  icon = animist_aspect_9
   iconsize = {
     offset = { 0 15 }
     texture = "gfx/interface/ve_religion/animist_passive.dds"
