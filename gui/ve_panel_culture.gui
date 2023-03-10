@@ -59,7 +59,7 @@ types ve_gui_panel_types
 								vbox = {
 									spacing = 10
 									textbox = {
-										raw_text = "Culture Missionaries"
+										text = "ve_cultural_missionary"
 										default_format = "#tooltip_header"
 										using = fontsize_xxl
 										align = nobaseline
@@ -88,7 +88,7 @@ types ve_gui_panel_types
 									spacing = 10
 									visible = "[GetScriptedGui('hide_reform_point').IsShown(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
 									textbox = {
-										text = "ve_gecici_23"
+										text = "ve_culture_reform_point"
 										default_format = "#tooltip_header"
 										using = fontsize_xxl
 										align = nobaseline

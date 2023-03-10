@@ -3495,3 +3495,231 @@ religion_aspect_text_5 = {
 		localization_key = animist_aspect_text_5
 	}
 }
+
+religion_aspect_text_6 = {
+	type = country
+	random_valid = no
+	text = {
+		trigger = {
+			religion = rel:catholic
+		}
+		localization_key = catholic_aspect_text_6
+	}
+	text = {
+		trigger = {
+			religion = rel:protestant
+		}
+		localization_key = protestant_aspect_text_6
+	}
+	text = {
+		trigger = {
+			religion = rel:orthodox
+		}
+		localization_key = orthodox_aspect_text_6
+	}
+	text = {
+		trigger = {
+			religion = rel:oriental_orthodox
+		}
+		localization_key = oriental_orthodox_aspect_text_6
+	}
+	text = {
+		trigger = {
+			religion = rel:sunni
+		}
+		localization_key = sunni_aspect_text_6
+	}
+	text = {
+		trigger = {
+			religion = rel:shiite
+		}
+		localization_key = shiite_aspect_text_6
+	}
+	text = {
+		trigger = {
+			religion = rel:jewish
+		}
+		localization_key = jewish_aspect_text_6
+	}
+	text = {
+		trigger = {
+			OR = {
+				religion = rel:mahayana
+				religion = rel:gelugpa
+				religion = rel:theravada
+				religion = rel:shinto
+			}
+		}
+		localization_key = mahayana_aspect_text_6
+	}
+	text = {
+		trigger = {
+			religion = rel:hindu
+		}
+		localization_key = hindu_aspect_text_6
+	}
+	text = {
+		trigger = {
+			religion = rel:sikh
+		}
+		localization_key = sikh_aspect_text_6
+	}
+	text = {
+		trigger = {
+			religion = rel:animist
+		}
+		localization_key = animist_aspect_text_6
+	}
+}
+
+religion_aspect_text_7 = {
+	type = country
+	random_valid = no
+	text = {
+		trigger = {
+			religion = rel:catholic
+		}
+		localization_key = catholic_aspect_text_7
+	}
+	text = {
+		trigger = {
+			religion = rel:protestant
+		}
+		localization_key = protestant_aspect_text_7
+	}
+	text = {
+		trigger = {
+			religion = rel:orthodox
+		}
+		localization_key = orthodox_aspect_text_7
+	}
+	text = {
+		trigger = {
+			religion = rel:oriental_orthodox
+		}
+		localization_key = oriental_orthodox_aspect_text_7
+	}
+	text = {
+		trigger = {
+			religion = rel:sunni
+		}
+		localization_key = sunni_aspect_text_7
+	}
+	text = {
+		trigger = {
+			religion = rel:shiite
+		}
+		localization_key = shiite_aspect_text_7
+	}
+	text = {
+		trigger = {
+			religion = rel:jewish
+		}
+		localization_key = jewish_aspect_text_7
+	}
+	text = {
+		trigger = {
+			OR = {
+				religion = rel:mahayana
+				religion = rel:gelugpa
+				religion = rel:theravada
+				religion = rel:shinto
+			}
+		}
+		localization_key = mahayana_aspect_text_7
+	}
+	text = {
+		trigger = {
+			religion = rel:hindu
+		}
+		localization_key = hindu_aspect_text_7
+	}
+	text = {
+		trigger = {
+			religion = rel:sikh
+		}
+		localization_key = sikh_aspect_text_7
+	}
+	text = {
+		trigger = {
+			religion = rel:animist
+		}
+		localization_key = animist_aspect_text_7
+	}
+}
+
+religion_aspect_text_8 = {
+	type = country
+	random_valid = no
+	text = {
+		trigger = {
+			religion = rel:catholic
+		}
+		localization_key = catholic_aspect_text_8
+	}
+	text = {
+		trigger = {
+			religion = rel:protestant
+		}
+		localization_key = protestant_aspect_text_8
+	}
+	text = {
+		trigger = {
+			religion = rel:orthodox
+		}
+		localization_key = orthodox_aspect_text_8
+	}
+	text = {
+		trigger = {
+			religion = rel:oriental_orthodox
+		}
+		localization_key = oriental_orthodox_aspect_text_8
+	}
+	text = {
+		trigger = {
+			religion = rel:sunni
+		}
+		localization_key = sunni_aspect_text_8
+	}
+	text = {
+		trigger = {
+			religion = rel:shiite
+		}
+		localization_key = shiite_aspect_text_8
+	}
+	text = {
+		trigger = {
+			religion = rel:jewish
+		}
+		localization_key = jewish_aspect_text_8
+	}
+	text = {
+		trigger = {
+			OR = {
+				religion = rel:mahayana
+				religion = rel:gelugpa
+				religion = rel:theravada
+				religion = rel:shinto
+			}
+		}
+		localization_key = mahayana_aspect_text_8
+	}
+	text = {
+		trigger = {
+			religion = rel:hindu
+		}
+		localization_key = hindu_aspect_text_8
+	}
+	text = {
+		trigger = {
+			religion = rel:sikh
+		}
+		localization_key = sikh_aspect_text_8
+	}
+	text = {
+		trigger = {
+			religion = rel:animist
+		}
+		localization_key = animist_aspect_text_8
+	}
+}

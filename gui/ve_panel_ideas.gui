@@ -157,7 +157,7 @@ ve_gui_panel_types
 										
 										icon = {
 											enabled = "[GetScriptedGui('ve_national_idea_1').IsValid(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
-											texture = "gfx/interface/icons/building_icons/taj_mahal.dds"
+											texture = "gfx/interface/ve_ideas/global_institution_spread.dds"
 											visible = "[GetScriptedGui('ve_national_idea_img').IsShown(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
 											tooltip = "[GetScriptedGui('ve_national_idea_1').ExecuteTooltip( GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
 											using = tooltip_above
@@ -209,7 +209,7 @@ ve_gui_panel_types
 										
 										icon = {
 											enabled = "[GetScriptedGui('ve_national_idea_2').IsValid(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
-											texture = "gfx/interface/icons/building_icons/taj_mahal.dds"
+											texture = "gfx/interface/ve_national_ideas/fire_damage_received.dds"
 											visible = "[GetScriptedGui('ve_national_idea_img').IsShown(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
 											tooltip = "[GetScriptedGui('ve_national_idea_2').ExecuteTooltip( GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
 											using = tooltip_above
@@ -261,7 +261,7 @@ ve_gui_panel_types
 										
 										icon = {
 											enabled = "[GetScriptedGui('ve_national_idea_3').IsValid(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
-											texture = "gfx/interface/icons/building_icons/taj_mahal.dds"
+											texture = "gfx/interface/ve_ideas/authority_icon.dds"
 											visible = "[GetScriptedGui('ve_national_idea_img').IsShown(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
 											tooltip = "[GetScriptedGui('ve_national_idea_3').ExecuteTooltip( GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
 											using = tooltip_above
@@ -313,7 +313,7 @@ ve_gui_panel_types
 										
 										icon = {
 											enabled = "[GetScriptedGui('ve_national_idea_4').IsValid(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
-											texture = "gfx/interface/icons/building_icons/taj_mahal.dds"
+											texture = "gfx/interface/ve_national_ideas/institution_growth.dds"
 											visible = "[GetScriptedGui('ve_national_idea_img').IsShown(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
 											tooltip = "[GetScriptedGui('ve_national_idea_4').ExecuteTooltip( GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
 											using = tooltip_above
@@ -365,7 +365,7 @@ ve_gui_panel_types
 										
 										icon = {
 											enabled = "[GetScriptedGui('ve_national_idea_5').IsValid(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
-											texture = "gfx/interface/icons/building_icons/taj_mahal.dds"
+											texture = "gfx/interface/ve_ideas/trade_value.dds"
 											visible = "[GetScriptedGui('ve_national_idea_img').IsShown(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
 											tooltip = "[GetScriptedGui('ve_national_idea_5').ExecuteTooltip( GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
 											using = tooltip_above
@@ -417,7 +417,7 @@ ve_gui_panel_types
 										
 										icon = {
 											enabled = "[GetScriptedGui('ve_national_idea_6').IsValid(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
-											texture = "gfx/interface/icons/building_icons/taj_mahal.dds"
+											texture = "gfx/interface/ve_ideas/naval_morale.dds"
 											visible = "[GetScriptedGui('ve_national_idea_img').IsShown(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
 											tooltip = "[GetScriptedGui('ve_national_idea_6').ExecuteTooltip( GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
 											using = tooltip_above
@@ -469,7 +469,7 @@ ve_gui_panel_types
 										
 										icon = {
 											enabled = "[GetScriptedGui('ve_national_idea_7').IsValid(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
-											texture = "gfx/interface/icons/building_icons/taj_mahal.dds"
+											texture = "gfx/interface/ve_national_ideas/max_attrition.dds"
 											visible = "[GetScriptedGui('ve_national_idea_img').IsShown(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
 											tooltip = "[GetScriptedGui('ve_national_idea_7').ExecuteTooltip( GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
 											using = tooltip_above
@@ -555,7 +555,7 @@ ve_gui_panel_types
 									}
 									icon = {
 										enabled = "[GetScriptedGui('ve_national_idea_7').IsValid(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
-										texture = "gfx/interface/ve_ideas/naval_morale.dds"
+										texture = "gfx/interface/ve_national_ideas/diplomatic_reputation.dds"
 										visible = "[GetScriptedGui('ve_national_idea_img').IsShown(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
 										using = tooltip_above
 										size = {
@@ -586,7 +586,7 @@ ve_gui_panel_types
 									}
 									
 									icon = {
-										texture = "gfx/interface/ve_ideas/leader_land_manuever.dds"
+										texture = "gfx/interface/ve_national_ideas/unrest_suppression_icon.dds"
 										visible = "[GetScriptedGui('ve_national_idea_img').IsShown(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
 										using = tooltip_above
 										size = {
@@ -654,8 +654,9 @@ ve_gui_panel_types
 									}
 									
 									icon = {
-										texture = "gfx/interface/ve_ideas/leader_land_manuever.dds"
+										texture = "gfx/interface/ve_national_ideas/bureaucracy_shortage.dds"
 										visible = "[GetScriptedGui('ve_national_idea_img').IsShown(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+										enabled = "[GetScriptedGui('ve_national_idea_7').IsValid(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
 										using = tooltip_above
 										size = {
 											100%

@@ -413,7 +413,7 @@
 	3-Legitimacy en az 80
 	4-Borç Yok
 	5-Aydınlar Hükümette ve en az %20 oy
-	6-En az 30 fabrikaya sahip ol
+	6-%25 Urbanization
 	7-En az 8 ilgi
 
 	II-Imperialism Age (1871-1906) (35 Years)
@@ -438,7 +438,7 @@
 	6-En az %50 okuryazarlık
 	7-En az 100M Nüfus
 
-	III-Age of Great Wars (1906-1936) (30 Years)
+	III-The Great Wars Age (1906-1936) (30 Years)
 	Bonuslar:
 	1-state_birth_rate_mult
 	2-country_damage_relations_speed_mult ve country_improve_relations_speed_mult

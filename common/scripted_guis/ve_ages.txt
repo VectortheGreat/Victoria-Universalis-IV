@@ -252,9 +252,8 @@ ve_age_obj_6 = {
 				has_variable = ve_age_1_started
 			}
 			any_scope_state = {
-				# is_incorporated = yes
 				has_building = building_urban_center
-				percent >= 0.75
+				percent >= 0.25
 			}
 		}
 		trigger_else_if = {

@@ -1,0 +1,22 @@
+﻿l_english:
+ VE_TEXT_MENU_TITLE:0 "Victoria Universalis IV"
+ VE_BTN:0 "Victoria Universalis"
+ VE_TOOLTIP:0 "Open Victoria Universalis Panel"
+ VE_IDEAS:0 "Ideas"
+ VE_RELIGION:0 "Religion"
+ VE_CULTURE:0 "Culture"
+ VE_AGE_BONUS:0 "Age"
+
+ #TOPBAR CONTENT
+ missionary_topbar:0 "[GetPlayer.MakeScope.Var('avaible_missionaries').GetValue] / [GetPlayer.MakeScope.Var('total_missionaries').GetValue]"
+ cultural_missionary_topbar:0 "[GetPlayer.MakeScope.Var('avaible_culture_missionaries').GetValue] / [GetPlayer.MakeScope.Var('total_culture_missionaries').GetValue]"
+ piety_topbar:0 "[GetPlayer.MakeScope.Var('piety_bar_point').GetValue]"
+ cultural_reform_topbar:0 "[GetPlayer.MakeScope.Var('culture_reform_point').GetValue]"
+ idea_point_topbar:0 "[GetPlayer.MakeScope.Var('idea_point_pool').GetValue]"
+ splendor_topbar:0 "[GetPlayer.MakeScope.Var('ve_splender_points').GetValue]"
+ missionary_topbar_tt:0 "Missionary tooltip"
+ cultural_missionary_topbar_tt:0 "Cultural Missionary Tooltip"
+ piety_topbar_tt:0 "Piety Tooltip"
+ cultural_reform_topbar_tt:0 "Piety Tooltip"
+ idea_point_topbar_tt:0 "Idea Point Tooltip"
+ splendor_topbar_tt:0 "Splendor Tooltip"

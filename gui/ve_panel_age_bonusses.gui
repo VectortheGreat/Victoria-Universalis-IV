@@ -26,7 +26,7 @@ types ve_gui_panel_types
 											blockoverride
 											"header_text"
 											{
-												text = "ve_gecici_25"
+												text = "ve_age_of_victoria_title"
 												default_format = "#tooltip_header"
 											}
 											blockoverride
@@ -43,24 +43,26 @@ types ve_gui_panel_types
 												}							
 												widget = {
 													size = { 75 75 }
+													tooltip = "ve_victorian_age_icon_p_tt"
 													icon = {
 														size = { 100% 100% }
-														texture = "gfx/interface/backgrounds/round_frame_dec.dds"
+														texture = "gfx/interface/ve_age/victorian_age_icon.dds"
 														using = default_fade_in_out
 													}
 												}
 												widget = {
 													size = { 75 75 }
+													tooltip = "ve_imperialism_age_icon_n_tt"
 													icon = {
 														size = { 100% 100% }
-														texture = "gfx/interface/backgrounds/round_frame_dec.dds"
+														texture = "gfx/interface/ve_age/imperialism_age_icon_black.dds"
 														using = default_fade_in_out
 													}
 												}
 											}
 											vbox = {
 												icon = {
-													texture = "gfx/interface/victoria_age.dds"
+													texture = "gfx/interface/ve_age/victoria_age.dds"
 													size = {
 														700
 														300
@@ -88,9 +90,10 @@ types ve_gui_panel_types
 												}
 												widget = {
 													size = { 75 75 }
+													tooltip = "ve_great_war_age_icon_n_tt"
 													icon = {
 														size = { 100% 100% }
-														texture = "gfx/interface/backgrounds/round_frame_dec.dds"
+														texture = "gfx/interface/ve_age/the_great_wars_age_icon_black.dds"
 														using = default_fade_in_out
 													}
 												}
@@ -100,7 +103,7 @@ types ve_gui_panel_types
 									vbox = {
 										spacing = 15
 										textbox = {
-											text = "ve_gecici_26"
+											text = "ve_age_of_victoria_desc"
 											default_format = "#tooltip_header"
 											using = fontsize_x
 											align = nobaseline
@@ -151,7 +154,7 @@ types ve_gui_panel_types
 											blockoverride
 											"header_text"
 											{
-												text = "ve_gecici_25"
+												text = "ve_imperialism_age_title"
 												default_format = "#tooltip_header"
 											}
 											blockoverride
@@ -168,24 +171,26 @@ types ve_gui_panel_types
 												}							
 												widget = {
 													size = { 75 75 }
+													tooltip = "ve_victorian_age_icon_n_tt"
 													icon = {
 														size = { 100% 100% }
-														texture = "gfx/interface/backgrounds/round_frame_dec.dds"
+														texture = "gfx/interface/ve_age/victorian_age_icon_black.dds"
 														using = default_fade_in_out
 													}
 												}
 												widget = {
 													size = { 75 75 }
+													tooltip = "ve_imperialism_age_icon_p_tt"
 													icon = {
 														size = { 100% 100% }
-														texture = "gfx/interface/backgrounds/round_frame_dec.dds"
+														texture = "gfx/interface/ve_age/imperialism_age_icon.dds"
 														using = default_fade_in_out
 													}
 												}
 											}
 											vbox = {
 												icon = {
-													texture = "gfx/interface/victoria_age.dds"
+													texture = "gfx/interface/ve_age/imperialism_age.dds"
 													size = {
 														700
 														300
@@ -213,9 +218,10 @@ types ve_gui_panel_types
 												}
 												widget = {
 													size = { 75 75 }
+													tooltip = "ve_great_war_age_icon_n_tt"
 													icon = {
 														size = { 100% 100% }
-														texture = "gfx/interface/backgrounds/round_frame_dec.dds"
+														texture = "gfx/interface/ve_age/the_great_wars_age_icon_black.dds"
 														using = default_fade_in_out
 													}
 												}
@@ -225,7 +231,7 @@ types ve_gui_panel_types
 									vbox = {
 										spacing = 15
 										textbox = {
-											text = "ve_gecici_26"
+											text = "ve_imperialism_age_desc"
 											default_format = "#tooltip_header"
 											using = fontsize_x
 											align = nobaseline
@@ -276,7 +282,7 @@ types ve_gui_panel_types
 											blockoverride
 											"header_text"
 											{
-												text = "ve_gecici_25"
+												text = "ve_great_wars_age_title"
 												default_format = "#tooltip_header"
 											}
 											blockoverride
@@ -293,24 +299,26 @@ types ve_gui_panel_types
 												}							
 												widget = {
 													size = { 75 75 }
+													tooltip = "ve_victorian_age_icon_n_tt"
 													icon = {
 														size = { 100% 100% }
-														texture = "gfx/interface/backgrounds/round_frame_dec.dds"
+														texture = "gfx/interface/ve_age/victorian_age_icon_black.dds"
 														using = default_fade_in_out
 													}
 												}
 												widget = {
 													size = { 75 75 }
+													tooltip = "ve_imperialism_age_icon_n_tt"
 													icon = {
 														size = { 100% 100% }
-														texture = "gfx/interface/backgrounds/round_frame_dec.dds"
+														texture = "gfx/interface/ve_age/imperialism_age_icon_black.dds"
 														using = default_fade_in_out
 													}
 												}
 											}
 											vbox = {
 												icon = {
-													texture = "gfx/interface/victoria_age.dds"
+													texture = "gfx/interface/ve_age/the_great_wars_age.dds"
 													size = {
 														700
 														300
@@ -338,9 +346,10 @@ types ve_gui_panel_types
 												}
 												widget = {
 													size = { 75 75 }
+													tooltip = "ve_great_war_age_icon_p_tt"
 													icon = {
 														size = { 100% 100% }
-														texture = "gfx/interface/backgrounds/round_frame_dec.dds"
+														texture = "gfx/interface/ve_age/the_great_wars_age_icon.dds"
 														using = default_fade_in_out
 													}
 												}
@@ -350,7 +359,7 @@ types ve_gui_panel_types
 									vbox = {
 										spacing = 15
 										textbox = {
-											text = "ve_gecici_26"
+											text = "ve_great_wars_age_desc"
 											default_format = "#tooltip_header"
 											using = fontsize_x
 											align = nobaseline
@@ -422,9 +431,9 @@ types ve_gui_panel_types
 								background = {
 									texture = "gfx/interface/age_cannot_unlock.dds"
 									size = {
-									100
-									100
-								}
+										100
+										100
+									}
 								}
 								size = {
 									100
@@ -1530,10 +1539,26 @@ types ve_gui_panel_types
 								hbox = {
 									using = main_bg
 									icon = {
-										texture = "gfx/interface/icons/event_icons/event_portrait.dds"
+										texture = "gfx/interface/ve_age/impoverished.dds"
 										size = {
 											120
 											120
+										}
+										background = {
+											texture = "gfx/interface/age_cannot_unlock.dds"
+											visible = "[Not(GetScriptedGui('ve_age_obj_1').IsValid(GuiScope.SetRoot(GetPlayer.MakeScope).End))]"
+											size = {
+												120
+												120
+											}
+										}
+										background = {
+											texture = "gfx/interface/age_can_unlock.dds"
+											visible = "[GetScriptedGui('ve_age_obj_1').IsValid(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+											size = {
+												120
+												120
+											}
 										}
 									}
 								}
@@ -1543,14 +1568,14 @@ types ve_gui_panel_types
 									layoutpolicy_vertical = expanding
 									margin = { 30 0 }
 									textbox = {
-										text = "ve_obj_title"
+										text = "ve_victorian_age_obj_title_1"
 										using = fontsize_xxl
 										align = left|nobaseline
 										parentanchor = left|hcenter
 									}
 									textbox = {
-										text = "ve_obj_desc"
-										using = fontsize_x
+										text = "ve_victorian_age_obj_desc_1"
+										using = fontsize_xl
 										align = left|nobaseline
 										parentanchor = left|hcenter
 									}
@@ -1563,10 +1588,26 @@ types ve_gui_panel_types
 								hbox = {
 									using = main_bg
 									icon = {
-										texture = "gfx/interface/icons/event_icons/event_portrait.dds"
+										texture = "gfx/interface/ve_age/ban_slavery.dds"										
 										size = {
 											120
 											120
+										}
+										background = {
+											texture = "gfx/interface/age_cannot_unlock.dds"
+											visible = "[Not(GetScriptedGui('ve_age_obj_2').IsValid(GuiScope.SetRoot(GetPlayer.MakeScope).End))]"
+											size = {
+												120
+												120
+											}
+										}
+										background = {
+											texture = "gfx/interface/age_can_unlock.dds"
+											visible = "[GetScriptedGui('ve_age_obj_2').IsValid(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+											size = {
+												120
+												120
+											}
 										}
 									}
 								}
@@ -1576,14 +1617,14 @@ types ve_gui_panel_types
 									layoutpolicy_vertical = expanding
 									margin = { 30 0 }
 									textbox = {
-										text = "ve_obj_title"
+										text = "ve_victorian_age_obj_title_2"
 										using = fontsize_xxl
 										align = left|nobaseline
 										parentanchor = left|hcenter
 									}
 									textbox = {
-										text = "ve_obj_desc"
-										using = fontsize_x
+										text = "ve_victorian_age_obj_desc_2"
+										using = fontsize_xl
 										align = left|nobaseline
 										parentanchor = left|hcenter
 									}
@@ -1596,10 +1637,26 @@ types ve_gui_panel_types
 								hbox = {
 									using = main_bg
 									icon = {
-										texture = "gfx/interface/icons/event_icons/event_portrait.dds"
+										texture = "gfx/interface/ve_age/legitimacy.dds"
 										size = {
 											120
 											120
+										}
+										background = {
+											texture = "gfx/interface/age_cannot_unlock.dds"
+											visible = "[Not(GetScriptedGui('ve_age_obj_3').IsValid(GuiScope.SetRoot(GetPlayer.MakeScope).End))]"
+											size = {
+												120
+												120
+											}
+										}
+										background = {
+											texture = "gfx/interface/age_can_unlock.dds"
+											visible = "[GetScriptedGui('ve_age_obj_3').IsValid(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+											size = {
+												120
+												120
+											}
 										}
 									}
 								}
@@ -1609,14 +1666,14 @@ types ve_gui_panel_types
 									layoutpolicy_vertical = expanding
 									margin = { 30 0 }
 									textbox = {
-										text = "ve_obj_title"
+										text = "ve_victorian_age_obj_title_3"
 										using = fontsize_xxl
 										align = left|nobaseline
 										parentanchor = left|hcenter
 									}
 									textbox = {
-										text = "ve_obj_desc"
-										using = fontsize_x
+										text = "ve_victorian_age_obj_desc_3"
+										using = fontsize_xl
 										align = left|nobaseline
 										parentanchor = left|hcenter
 									}
@@ -1629,10 +1686,26 @@ types ve_gui_panel_types
 								hbox = {
 									using = main_bg
 									icon = {
-										texture = "gfx/interface/icons/event_icons/event_portrait.dds"
+										texture = "gfx/interface/ve_age/ideology_leader_laissez_faire.dds"
 										size = {
 											120
 											120
+										}
+										background = {
+											texture = "gfx/interface/age_cannot_unlock.dds"
+											visible = "[Not(GetScriptedGui('ve_age_obj_4').IsValid(GuiScope.SetRoot(GetPlayer.MakeScope).End))]"
+											size = {
+												120
+												120
+											}
+										}
+										background = {
+											texture = "gfx/interface/age_can_unlock.dds"
+											visible = "[GetScriptedGui('ve_age_obj_4').IsValid(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+											size = {
+												120
+												120
+											}
 										}
 									}
 								}
@@ -1642,14 +1715,14 @@ types ve_gui_panel_types
 									layoutpolicy_vertical = expanding
 									margin = { 30 0 }
 									textbox = {
-										text = "ve_obj_title"
+										text = "ve_victorian_age_obj_title_4"
 										using = fontsize_xxl
 										align = left|nobaseline
 										parentanchor = left|hcenter
 									}
 									textbox = {
-										text = "ve_obj_desc"
-										using = fontsize_x
+										text = "ve_victorian_age_obj_desc_4"
+										using = fontsize_xl
 										align = left|nobaseline
 										parentanchor = left|hcenter
 									}
@@ -1663,10 +1736,26 @@ types ve_gui_panel_types
 								hbox = {
 									using = main_bg
 									icon = {
-										texture = "gfx/interface/icons/event_icons/event_portrait.dds"
+										texture = "gfx/interface/ve_age/intelligensia.dds"
 										size = {
 											120
 											120
+										}
+										background = {
+											texture = "gfx/interface/age_cannot_unlock.dds"
+											visible = "[Not(GetScriptedGui('ve_age_obj_5').IsValid(GuiScope.SetRoot(GetPlayer.MakeScope).End))]"
+											size = {
+												120
+												120
+											}
+										}
+										background = {
+											texture = "gfx/interface/age_can_unlock.dds"
+											visible = "[GetScriptedGui('ve_age_obj_5').IsValid(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+											size = {
+												120
+												120
+											}
 										}
 									}
 								}
@@ -1676,14 +1765,14 @@ types ve_gui_panel_types
 									layoutpolicy_vertical = expanding
 									margin = { 30 0 }
 									textbox = {
-										text = "ve_obj_title"
+										text = "ve_victorian_age_obj_title_5"
 										using = fontsize_xxl
 										align = left|nobaseline
 										parentanchor = left|hcenter
 									}
 									textbox = {
-										text = "ve_obj_desc"
-										using = fontsize_x
+										text = "ve_victorian_age_obj_desc_5"
+										using = fontsize_xl
 										align = left|nobaseline
 										parentanchor = left|hcenter
 									}
@@ -1697,10 +1786,26 @@ types ve_gui_panel_types
 								hbox = {
 									using = main_bg
 									icon = {
-										texture = "gfx/interface/icons/event_icons/event_portrait.dds"
+										texture = "gfx/interface/ve_age/urbanization.dds"
 										size = {
 											120
 											120
+										}
+										background = {
+											texture = "gfx/interface/age_cannot_unlock.dds"
+											visible = "[Not(GetScriptedGui('ve_age_obj_6').IsValid(GuiScope.SetRoot(GetPlayer.MakeScope).End))]"
+											size = {
+												120
+												120
+											}
+										}
+										background = {
+											texture = "gfx/interface/age_can_unlock.dds"
+											visible = "[GetScriptedGui('ve_age_obj_6').IsValid(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+											size = {
+												120
+												120
+											}
 										}
 									}
 								}
@@ -1710,14 +1815,14 @@ types ve_gui_panel_types
 									layoutpolicy_vertical = expanding
 									margin = { 30 0 }
 									textbox = {
-										text = "ve_obj_title"
+										text = "ve_victorian_age_obj_title_6"
 										using = fontsize_xxl
 										align = left|nobaseline
 										parentanchor = left|hcenter
 									}
 									textbox = {
-										text = "ve_obj_desc"
-										using = fontsize_x
+										text = "ve_victorian_age_obj_desc_6"
+										using = fontsize_xl
 										align = left|nobaseline
 										parentanchor = left|hcenter
 									}
@@ -1730,10 +1835,26 @@ types ve_gui_panel_types
 								hbox = {
 									using = main_bg
 									icon = {
-										texture = "gfx/interface/icons/event_icons/event_portrait.dds"
+										texture = "gfx/interface/ve_age/declare_interest.dds"
 										size = {
 											120
 											120
+										}
+										background = {
+											texture = "gfx/interface/age_cannot_unlock.dds"
+											visible = "[Not(GetScriptedGui('ve_age_obj_7').IsValid(GuiScope.SetRoot(GetPlayer.MakeScope).End))]"
+											size = {
+												120
+												120
+											}
+										}
+										background = {
+											texture = "gfx/interface/age_can_unlock.dds"
+											visible = "[GetScriptedGui('ve_age_obj_7').IsValid(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+											size = {
+												120
+												120
+											}
 										}
 									}
 								}
@@ -1743,14 +1864,14 @@ types ve_gui_panel_types
 									layoutpolicy_vertical = expanding
 									margin = { 30 0 }
 									textbox = {
-										text = "ve_obj_title"
+										text = "ve_victorian_age_obj_title_7"
 										using = fontsize_xxl
 										align = left|nobaseline
 										parentanchor = left|hcenter
 									}
 									textbox = {
-										text = "ve_obj_desc"
-										using = fontsize_x
+										text = "ve_victorian_age_obj_desc_7"
+										using = fontsize_xl
 										align = left|nobaseline
 										parentanchor = left|hcenter
 									}
@@ -1784,7 +1905,7 @@ types ve_gui_panel_types
 								hbox = {
 									using = main_bg
 									icon = {
-										texture = "gfx/interface/icons/event_icons/event_portrait.dds"
+										texture = "gfx/interface/ve_age/colonization_rights.dds"
 										size = {
 											120
 											120
@@ -1797,13 +1918,13 @@ types ve_gui_panel_types
 									layoutpolicy_vertical = expanding
 									margin = { 30 0 }
 									textbox = {
-										text = "ve_obj_title"
+										text = "ve_imperialism_age_obj_title_1"
 										using = fontsize_xxl
 										align = left|nobaseline
 										parentanchor = left|hcenter
 									}
 									textbox = {
-										text = "ve_obj_desc"
+										text = "ve_imperialism_age_obj_desc_1"
 										using = fontsize_x
 										align = left|nobaseline
 										parentanchor = left|hcenter
@@ -1817,7 +1938,7 @@ types ve_gui_panel_types
 								hbox = {
 									using = main_bg
 									icon = {
-										texture = "gfx/interface/icons/event_icons/event_portrait.dds"
+										texture = "gfx/interface/ve_age/puppet.dds"
 										size = {
 											120
 											120
@@ -1830,13 +1951,13 @@ types ve_gui_panel_types
 									layoutpolicy_vertical = expanding
 									margin = { 30 0 }
 									textbox = {
-										text = "ve_obj_title"
+										text = "ve_imperialism_age_obj_title_2"
 										using = fontsize_xxl
 										align = left|nobaseline
 										parentanchor = left|hcenter
 									}
 									textbox = {
-										text = "ve_obj_desc"
+										text = "ve_imperialism_age_obj_desc_2"
 										using = fontsize_x
 										align = left|nobaseline
 										parentanchor = left|hcenter
@@ -1850,7 +1971,7 @@ types ve_gui_panel_types
 								hbox = {
 									using = main_bg
 									icon = {
-										texture = "gfx/interface/icons/event_icons/event_portrait.dds"
+										texture = "gfx/interface/ve_age/railways.dds"
 										size = {
 											120
 											120
@@ -1863,13 +1984,13 @@ types ve_gui_panel_types
 									layoutpolicy_vertical = expanding
 									margin = { 30 0 }
 									textbox = {
-										text = "ve_obj_title"
+										text = "ve_imperialism_age_obj_title_3"
 										using = fontsize_xxl
 										align = left|nobaseline
 										parentanchor = left|hcenter
 									}
 									textbox = {
-										text = "ve_obj_desc"
+										text = "ve_imperialism_age_obj_desc_3"
 										using = fontsize_x
 										align = left|nobaseline
 										parentanchor = left|hcenter
@@ -1883,7 +2004,7 @@ types ve_gui_panel_types
 								hbox = {
 									using = main_bg
 									icon = {
-										texture = "gfx/interface/icons/event_icons/event_portrait.dds"
+										texture = "gfx/interface/ve_age/military_shipbuilding_steam_2.dds"
 										size = {
 											120
 											120
@@ -1896,13 +2017,13 @@ types ve_gui_panel_types
 									layoutpolicy_vertical = expanding
 									margin = { 30 0 }
 									textbox = {
-										text = "ve_obj_title"
+										text = "ve_imperialism_age_obj_title_4"
 										using = fontsize_xxl
 										align = left|nobaseline
 										parentanchor = left|hcenter
 									}
 									textbox = {
-										text = "ve_obj_desc"
+										text = "ve_imperialism_age_obj_desc_4"
 										using = fontsize_x
 										align = left|nobaseline
 										parentanchor = left|hcenter
@@ -1916,7 +2037,7 @@ types ve_gui_panel_types
 								hbox = {
 									using = main_bg
 									icon = {
-										texture = "gfx/interface/icons/event_icons/event_portrait.dds"
+										texture = "gfx/interface/ve_age/coal_mine.dds"
 										size = {
 											120
 											120
@@ -1929,13 +2050,13 @@ types ve_gui_panel_types
 									layoutpolicy_vertical = expanding
 									margin = { 30 0 }
 									textbox = {
-										text = "ve_obj_title"
+										text = "ve_imperialism_age_obj_title_5"
 										using = fontsize_xxl
 										align = left|nobaseline
 										parentanchor = left|hcenter
 									}
 									textbox = {
-										text = "ve_obj_desc"
+										text = "ve_imperialism_age_obj_desc_5"
 										using = fontsize_x
 										align = left|nobaseline
 										parentanchor = left|hcenter
@@ -1949,7 +2070,7 @@ types ve_gui_panel_types
 								hbox = {
 									using = main_bg
 									icon = {
-										texture = "gfx/interface/icons/event_icons/event_portrait.dds"
+										texture = "gfx/interface/ve_age/literacy.dds"
 										size = {
 											120
 											120
@@ -1962,13 +2083,13 @@ types ve_gui_panel_types
 									layoutpolicy_vertical = expanding
 									margin = { 30 0 }
 									textbox = {
-										text = "ve_obj_title"
+										text = "ve_imperialism_age_obj_title_6"
 										using = fontsize_xxl
 										align = left|nobaseline
 										parentanchor = left|hcenter
 									}
 									textbox = {
-										text = "ve_obj_desc"
+										text = "ve_imperialism_age_obj_desc_6"
 										using = fontsize_x
 										align = left|nobaseline
 										parentanchor = left|hcenter
@@ -1982,7 +2103,7 @@ types ve_gui_panel_types
 								hbox = {
 									using = main_bg
 									icon = {
-										texture = "gfx/interface/icons/event_icons/event_portrait.dds"
+										texture = "gfx/interface/ve_age/pop_type.dds"
 										size = {
 											120
 											120
@@ -1995,13 +2116,13 @@ types ve_gui_panel_types
 									layoutpolicy_vertical = expanding
 									margin = { 30 0 }
 									textbox = {
-										text = "ve_obj_title"
+										text = "ve_imperialism_age_obj_title_7"
 										using = fontsize_xxl
 										align = left|nobaseline
 										parentanchor = left|hcenter
 									}
 									textbox = {
-										text = "ve_obj_desc"
+										text = "ve_imperialism_age_obj_desc_7"
 										using = fontsize_x
 										align = left|nobaseline
 										parentanchor = left|hcenter
@@ -2036,7 +2157,7 @@ types ve_gui_panel_types
 								hbox = {
 									using = main_bg
 									icon = {
-										texture = "gfx/interface/icons/event_icons/event_portrait.dds"
+										texture = "gfx/interface/ve_age/republican.dds"
 										size = {
 											120
 											120
@@ -2049,13 +2170,13 @@ types ve_gui_panel_types
 									layoutpolicy_vertical = expanding
 									margin = { 30 0 }
 									textbox = {
-										text = "ve_obj_title"
+										text = "ve_great_wars_age_obj_title_1"
 										using = fontsize_xxl
 										align = left|nobaseline
 										parentanchor = left|hcenter
 									}
 									textbox = {
-										text = "ve_obj_desc"
+										text = "ve_great_wars_age_obj_desc_1"
 										using = fontsize_x
 										align = left|nobaseline
 										parentanchor = left|hcenter
@@ -2069,7 +2190,7 @@ types ve_gui_panel_types
 								hbox = {
 									using = main_bg
 									icon = {
-										texture = "gfx/interface/icons/event_icons/event_portrait.dds"
+										texture = "gfx/interface/ve_age/institution_level_icon.dds"
 										size = {
 											120
 											120
@@ -2082,13 +2203,13 @@ types ve_gui_panel_types
 									layoutpolicy_vertical = expanding
 									margin = { 30 0 }
 									textbox = {
-										text = "ve_obj_title"
+										text = "ve_great_wars_age_obj_title_2"
 										using = fontsize_xxl
 										align = left|nobaseline
 										parentanchor = left|hcenter
 									}
 									textbox = {
-										text = "ve_obj_desc"
+										text = "ve_great_wars_age_obj_desc_2"
 										using = fontsize_x
 										align = left|nobaseline
 										parentanchor = left|hcenter
@@ -2102,7 +2223,7 @@ types ve_gui_panel_types
 								hbox = {
 									using = main_bg
 									icon = {
-										texture = "gfx/interface/icons/event_icons/event_portrait.dds"
+										texture = "gfx/interface/ve_age/building_barracks.dds"
 										size = {
 											120
 											120
@@ -2115,13 +2236,13 @@ types ve_gui_panel_types
 									layoutpolicy_vertical = expanding
 									margin = { 30 0 }
 									textbox = {
-										text = "ve_obj_title"
+										text = "ve_great_wars_age_obj_title_3"
 										using = fontsize_xxl
 										align = left|nobaseline
 										parentanchor = left|hcenter
 									}
 									textbox = {
-										text = "ve_obj_desc"
+										text = "ve_great_wars_age_obj_desc_3"
 										using = fontsize_x
 										align = left|nobaseline
 										parentanchor = left|hcenter
@@ -2135,7 +2256,7 @@ types ve_gui_panel_types
 								hbox = {
 									using = main_bg
 									icon = {
-										texture = "gfx/interface/icons/event_icons/event_portrait.dds"
+										texture = "gfx/interface/ve_age/oil.dds"
 										size = {
 											120
 											120
@@ -2148,13 +2269,13 @@ types ve_gui_panel_types
 									layoutpolicy_vertical = expanding
 									margin = { 30 0 }
 									textbox = {
-										text = "ve_obj_title"
+										text = "ve_great_wars_age_obj_title_4"
 										using = fontsize_xxl
 										align = left|nobaseline
 										parentanchor = left|hcenter
 									}
 									textbox = {
-										text = "ve_obj_desc"
+										text = "ve_great_wars_age_obj_desc_4"
 										using = fontsize_x
 										align = left|nobaseline
 										parentanchor = left|hcenter
@@ -2168,7 +2289,7 @@ types ve_gui_panel_types
 								hbox = {
 									using = main_bg
 									icon = {
-										texture = "gfx/interface/icons/event_icons/event_portrait.dds"
+										texture = "gfx/interface/ve_age/military_drill.dds"
 										size = {
 											120
 											120
@@ -2181,13 +2302,13 @@ types ve_gui_panel_types
 									layoutpolicy_vertical = expanding
 									margin = { 30 0 }
 									textbox = {
-										text = "ve_obj_title"
+										text = "ve_great_wars_age_obj_title_5"
 										using = fontsize_xxl
 										align = left|nobaseline
 										parentanchor = left|hcenter
 									}
 									textbox = {
-										text = "ve_obj_desc"
+										text = "ve_great_wars_age_obj_desc_5"
 										using = fontsize_x
 										align = left|nobaseline
 										parentanchor = left|hcenter
@@ -2201,7 +2322,7 @@ types ve_gui_panel_types
 								hbox = {
 									using = main_bg
 									icon = {
-										texture = "gfx/interface/icons/event_icons/event_portrait.dds"
+										texture = "gfx/interface/ve_age/gdp.dds"
 										size = {
 											120
 											120
@@ -2214,13 +2335,13 @@ types ve_gui_panel_types
 									layoutpolicy_vertical = expanding
 									margin = { 30 0 }
 									textbox = {
-										text = "ve_obj_title"
+										text = "ve_great_wars_age_obj_title_6"
 										using = fontsize_xxl
 										align = left|nobaseline
 										parentanchor = left|hcenter
 									}
 									textbox = {
-										text = "ve_obj_desc"
+										text = "ve_great_wars_age_obj_desc_6"
 										using = fontsize_x
 										align = left|nobaseline
 										parentanchor = left|hcenter
@@ -2234,7 +2355,7 @@ types ve_gui_panel_types
 								hbox = {
 									using = main_bg
 									icon = {
-										texture = "gfx/interface/icons/event_icons/event_portrait.dds"
+										texture = "gfx/interface/ve_age/power_rank_04.dds"
 										size = {
 											120
 											120
@@ -2247,13 +2368,13 @@ types ve_gui_panel_types
 									layoutpolicy_vertical = expanding
 									margin = { 30 0 }
 									textbox = {
-										text = "ve_obj_title"
+										text = "ve_great_wars_age_obj_title_7"
 										using = fontsize_xxl
 										align = left|nobaseline
 										parentanchor = left|hcenter
 									}
 									textbox = {
-										text = "ve_obj_desc"
+										text = "ve_great_wars_age_obj_desc_7"
 										using = fontsize_x
 										align = left|nobaseline
 										parentanchor = left|hcenter

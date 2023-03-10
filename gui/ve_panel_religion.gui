@@ -56,7 +56,7 @@ ve_gui_panel_types
 						vbox = {
 							spacing = 10
 							textbox = {
-								text = "ve_gecici_5"
+								text = "ve_missionaries"
 								tooltip = "[Character.GetAttritionDesc]"
 								default_format = "#tooltip_header"
 								using = fontsize_xxl
@@ -85,7 +85,7 @@ ve_gui_panel_types
 						vbox = {
 							spacing = 10							
 							textbox = {
-								text = "ve_gecici_7"
+								text = "ve_piety"
 								default_format = "#tooltip_header"
 								using = fontsize_xxl
 								align = nobaseline
@@ -214,8 +214,7 @@ ve_gui_panel_types
 								}
 							}
 							textbox = {
-								text = "[GetPlayer.GetStateReligion.GetNameNoFormatting]"
-								# text = "ve_gecici_9"
+								raw_text = "[GetPlayer.GetCustom('religion_aspect_text_1')]"
 								using = fontsize_xxl
 								align = nobaseline
 								elide = left
@@ -261,7 +260,7 @@ ve_gui_panel_types
 								}
 							}
 							textbox = {
-								text = "ve_gecici_10"
+								raw_text = "[GetPlayer.GetCustom('religion_aspect_text_2')]"
 								using = fontsize_xxl
 								align = nobaseline
 								elide = left
@@ -307,7 +306,7 @@ ve_gui_panel_types
 								}
 							}
 							textbox = {
-								text = "ve_gecici_11"
+								raw_text = "[GetPlayer.GetCustom('religion_aspect_text_3')]"
 								using = fontsize_xxl
 								align = nobaseline
 								elide = left
@@ -353,7 +352,7 @@ ve_gui_panel_types
 								}
 							}
 							textbox = {
-								text = "ve_gecici_12"
+								raw_text = "[GetPlayer.GetCustom('religion_aspect_text_4')]"
 								using = fontsize_xxl
 								align = nobaseline
 								elide = left
@@ -399,8 +398,7 @@ ve_gui_panel_types
 								}
 							}
 							textbox = {
-								text = "ve_gecici_13"
-								default_format = "#instruction"
+								raw_text = "[GetPlayer.GetCustom('religion_aspect_text_5')]"
 								using = fontsize_xxl
 								align = nobaseline
 								elide = left
@@ -444,19 +442,9 @@ ve_gui_panel_types
 										100%
 									}
 								}
-								# textbox = {
-								# 	raw_text = "@[GetPlayer.GetCustom('religion_key')]!"
-								# 	fontsize = 60
-								# 	align = center|nobaseline
-								# 	parentanchor = vcenter
-								# 	size = {
-								# 		100%
-								#  		100%
-								# 	}
-								# }
 							}
 							textbox = {
-								raw_text = "Aspect VI"
+								raw_text = "[GetPlayer.GetCustom('religion_aspect_text_6')]"
 								using = fontsize_xxl
 								align = nobaseline
 								elide = left
@@ -502,7 +490,7 @@ ve_gui_panel_types
 								}
 							}
 							textbox = {
-								raw_text = "Aspect VII"
+								raw_text = "[GetPlayer.GetCustom('religion_aspect_text_7')]"
 								using = fontsize_xxl
 								align = nobaseline
 								elide = left
@@ -548,7 +536,7 @@ ve_gui_panel_types
 								}
 							}
 							textbox = {
-								raw_text = "Aspect VII"
+								raw_text = "[GetPlayer.GetCustom('religion_aspect_text_8')]"
 								using = fontsize_xxl
 								align = nobaseline
 								elide = left
