@@ -1,9 +1,12 @@
 ve_supremacy_1 = {
 	scope = country
 	is_valid = {
-		var:culture_reform_point >= 750
-		NOT = {
-			has_variable = disable_supremacy_1
+		custom_tooltip = {
+			text = ve_culture_reform_cost_tt
+			var:culture_reform_point >= 750
+			NOT = {
+				has_variable = disable_supremacy_1
+			}
 		}
 	}
 	effect = {
@@ -71,10 +74,13 @@ ve_supremacy_1 = {
 ve_supremacy_2 = {
 	scope = country
 	is_valid = {
-		var:culture_reform_point >= 750
-		has_variable = go_next_reform_2
-		NOT = {
-			has_variable = disable_supremacy_2
+		custom_tooltip = {
+			text = ve_culture_reform_cost_tt
+			var:culture_reform_point >= 750
+			has_variable = go_next_reform_2
+			NOT = {
+				has_variable = disable_supremacy_2
+			}
 		}
 	}
 	effect = {
@@ -128,10 +134,13 @@ ve_supremacy_2 = {
 ve_supremacy_3 = {
 	scope = country
 	is_valid = {
-		var:culture_reform_point >= 750
-		has_variable = go_next_reform_3
-		NOT = {
-			has_variable = disable_supremacy_3
+		custom_tooltip = {
+			text = ve_culture_reform_cost_tt
+			var:culture_reform_point >= 750
+			has_variable = go_next_reform_3
+			NOT = {
+				has_variable = disable_supremacy_3
+			}
 		}
 	}
 	effect = {
@@ -185,10 +194,13 @@ ve_supremacy_3 = {
 ve_supremacy_4 = {
 	scope = country
 	is_valid = {
-		var:culture_reform_point >= 750
-		has_variable = go_next_reform_4
-		NOT = {
-			has_variable = disable_supremacy_4
+		custom_tooltip = {
+			text = ve_culture_reform_cost_tt
+			var:culture_reform_point >= 750
+			has_variable = go_next_reform_4
+			NOT = {
+				has_variable = disable_supremacy_4
+			}
 		}
 	}
 	effect = {
@@ -242,10 +254,13 @@ ve_supremacy_4 = {
 ve_supremacy_5 = {
 	scope = country
 	is_valid = {
-		var:culture_reform_point >= 750
-		has_variable = go_next_reform_5
-		NOT = {
-			has_variable = disable_supremacy_5
+		custom_tooltip = {
+			text = ve_culture_reform_cost_tt
+			var:culture_reform_point >= 750
+			has_variable = go_next_reform_5
+			NOT = {
+				has_variable = disable_supremacy_5
+			}
 		}
 	}
 	effect = {
@@ -299,10 +314,13 @@ ve_supremacy_5 = {
 ve_supremacy_6 = {
 	scope = country
 	is_valid = {
-		var:culture_reform_point >= 750
-		has_variable = go_next_reform_6
-		NOT = {
-			has_variable = disable_supremacy_6
+		custom_tooltip = {
+			text = ve_culture_reform_cost_tt
+			var:culture_reform_point >= 750
+			has_variable = go_next_reform_6
+			NOT = {
+				has_variable = disable_supremacy_6
+			}
 		}
 	}
 	effect = {
@@ -356,10 +374,13 @@ ve_supremacy_6 = {
 ve_supremacy_7 = {
 	scope = country
 	is_valid = {
-		var:culture_reform_point >= 750
-		has_variable = go_next_reform_7
-		NOT = {
-			has_variable = disable_supremacy_7
+		custom_tooltip = {
+			text = ve_culture_reform_cost_tt
+			var:culture_reform_point >= 750
+			has_variable = go_next_reform_7
+			NOT = {
+				has_variable = disable_supremacy_7
+			}
 		}
 	}
 	effect = {
@@ -412,9 +433,12 @@ ve_supremacy_7 = {
 ve_intellectualy_1 = {
 	scope = country
 	is_valid = {
-		var:culture_reform_point >= 750
-		NOT = {
-			has_variable = disable_intellectualy_1
+		custom_tooltip = {
+			text = ve_culture_reform_cost_tt
+			var:culture_reform_point >= 750
+			NOT = {
+				has_variable = disable_intellectualy_1
+			}
 		}
 	}
 	effect = {
@@ -481,10 +505,13 @@ ve_intellectualy_1 = {
 ve_intellectualy_2 = {
 	scope = country
 	is_valid = {
-		var:culture_reform_point >= 750
-		has_variable = go_next_reform_2
-		NOT = {
-			has_variable = disable_intellectualy_2
+		custom_tooltip = {
+			text = ve_culture_reform_cost_tt
+			var:culture_reform_point >= 750
+			has_variable = go_next_reform_2
+			NOT = {
+				has_variable = disable_intellectualy_2
+			}
 		}
 	}
 	effect = {
@@ -538,10 +565,13 @@ ve_intellectualy_2 = {
 ve_intellectualy_3 = {
 	scope = country
 	is_valid = {
-		var:culture_reform_point >= 750
-		has_variable = go_next_reform_3
-		NOT = {
-			has_variable = disable_intellectualy_3
+		custom_tooltip = {
+			text = ve_culture_reform_cost_tt
+			var:culture_reform_point >= 750
+			has_variable = go_next_reform_3
+			NOT = {
+				has_variable = disable_intellectualy_3
+			}
 		}
 	}
 	effect = {
@@ -595,10 +625,13 @@ ve_intellectualy_3 = {
 ve_intellectualy_4 = {
 	scope = country
 	is_valid = {
-		var:culture_reform_point >= 750
-		has_variable = go_next_reform_4
-		NOT = {
-			has_variable = disable_intellectualy_4
+		custom_tooltip = {
+			text = ve_culture_reform_cost_tt
+			var:culture_reform_point >= 750
+			has_variable = go_next_reform_4
+			NOT = {
+				has_variable = disable_intellectualy_4
+			}
 		}
 	}
 	effect = {
@@ -652,10 +685,13 @@ ve_intellectualy_4 = {
 ve_intellectualy_5 = {
 	scope = country
 	is_valid = {
-		var:culture_reform_point >= 750
-		has_variable = go_next_reform_5
-		NOT = {
-			has_variable = disable_intellectualy_5
+		custom_tooltip = {
+			text = ve_culture_reform_cost_tt
+			var:culture_reform_point >= 750
+			has_variable = go_next_reform_5
+			NOT = {
+				has_variable = disable_intellectualy_5
+			}
 		}
 	}
 	effect = {
@@ -709,10 +745,13 @@ ve_intellectualy_5 = {
 ve_intellectualy_6 = {
 	scope = country
 	is_valid = {
-		var:culture_reform_point >= 750
-		has_variable = go_next_reform_6
-		NOT = {
-			has_variable = disable_intellectualy_6
+		custom_tooltip = {
+			text = ve_culture_reform_cost_tt
+			var:culture_reform_point >= 750
+			has_variable = go_next_reform_6
+			NOT = {
+				has_variable = disable_intellectualy_6
+			}
 		}
 	}
 	effect = {
@@ -766,10 +805,13 @@ ve_intellectualy_6 = {
 ve_intellectualy_7 = {
 	scope = country
 	is_valid = {
-		var:culture_reform_point >= 750
-		has_variable = go_next_reform_7
-		NOT = {
-			has_variable = disable_intellectualy_7
+		custom_tooltip = {
+			text = ve_culture_reform_cost_tt
+			var:culture_reform_point >= 750
+			has_variable = go_next_reform_7
+			NOT = {
+				has_variable = disable_intellectualy_7
+			}
 		}
 	}
 	effect = {

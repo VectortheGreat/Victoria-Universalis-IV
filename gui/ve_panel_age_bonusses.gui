@@ -126,7 +126,7 @@ types ve_gui_panel_types
 											}
 											using = main_bg
 											textbox = {
-												raw_text = "Splendor: "
+												text = "ve_splendor"
 												using = fontsize_xxl
 												align = center|nobaseline
 												autoresize = yes
@@ -254,7 +254,7 @@ types ve_gui_panel_types
 											}
 											using = main_bg
 											textbox = {
-												raw_text = "Splendor: "
+												text = "ve_splendor"
 												using = fontsize_xxl
 												align = center|nobaseline
 												autoresize = yes
@@ -382,7 +382,7 @@ types ve_gui_panel_types
 											}
 											using = main_bg
 											textbox = {
-												raw_text = "Splendor: "
+												text = "ve_splendor"
 												using = fontsize_xxl
 												align = center|nobaseline
 												autoresize = yes
@@ -1017,7 +1017,7 @@ types ve_gui_panel_types
 								blockoverride
 								"icon"
 								{
-									texture = "gfx/interface/ve_age/can_colony_boost_development.dds"
+									texture = "gfx/interface/ve_age/belgian_can_colony_boost_development.dds"
 								}
 								onclick = "[GetScriptedGui('ve_age_bonus_8').Execute(GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
 								enabled = "[GetScriptedGui('ve_age_bonus_8').IsValid(GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
@@ -1026,7 +1026,7 @@ types ve_gui_panel_types
 								using = tooltip_above
 							}
 							icon = {
-								texture = "gfx/interface/ve_age/can_colony_boost_development.dds"
+								texture = "gfx/interface/ve_age/belgian_can_colony_boost_development.dds"
 								visible = "[Not(GetScriptedGui('ve_age_bonus_8').IsShown(GuiScope.SetRoot( GetPlayer.MakeScope ).End ))]"
 								tooltip = "[GetScriptedGui('ve_age_bonus_8').ExecuteTooltip(GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
 								using = ve_shimmer
@@ -1533,8 +1533,9 @@ types ve_gui_panel_types
 								}
 							}
 							hbox = {	#Age Objective 1
-								layoutpolicy_horizontal = preferred
+								layoutpolicy_horizontal = preferred								
 								enabled = "[GetScriptedGui('ve_age_obj_1').IsValid(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+								
 								margin = { 10 0 }
 								hbox = {
 									using = main_bg
@@ -1584,6 +1585,7 @@ types ve_gui_panel_types
 							hbox = {	#Age Objective 2
 								layoutpolicy_horizontal = preferred
 								enabled = "[GetScriptedGui('ve_age_obj_2').IsValid(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+								
 								margin = { 10 0 }
 								hbox = {
 									using = main_bg
@@ -1633,6 +1635,7 @@ types ve_gui_panel_types
 							hbox = {	#Age Objective 3
 								layoutpolicy_horizontal = preferred
 								enabled = "[GetScriptedGui('ve_age_obj_3').IsValid(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+								
 								margin = { 10 0 }
 								hbox = {
 									using = main_bg
@@ -1682,6 +1685,7 @@ types ve_gui_panel_types
 							hbox = {	#Age Objective 4
 								layoutpolicy_horizontal = preferred
 								enabled = "[GetScriptedGui('ve_age_obj_4').IsValid(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+								
 								margin = { 10 0 }
 								hbox = {
 									using = main_bg
@@ -1731,7 +1735,7 @@ types ve_gui_panel_types
 							hbox = {	#Age Objective 5
 								layoutpolicy_horizontal = preferred
 								enabled = "[GetScriptedGui('ve_age_obj_5').IsValid(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
-								tooltip = "[GetScriptedGui('ve_age_obj_5').BuildTooltip(GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+								
 								margin = { 10 0 }
 								hbox = {
 									using = main_bg
@@ -1781,7 +1785,7 @@ types ve_gui_panel_types
 							hbox = {	#Age Objective 6
 								layoutpolicy_horizontal = preferred
 								enabled = "[GetScriptedGui('ve_age_obj_6').IsValid(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
-								tooltip = "[GetScriptedGui('ve_age_obj_6').BuildTooltip(GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+								
 								margin = { 10 0 }
 								hbox = {
 									using = main_bg
@@ -1831,6 +1835,7 @@ types ve_gui_panel_types
 							hbox = {	#Age Objective 7
 								layoutpolicy_horizontal = preferred
 								enabled = "[GetScriptedGui('ve_age_obj_7').IsValid(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+								
 								margin = { 10 0 }
 								hbox = {
 									using = main_bg
@@ -1901,6 +1906,7 @@ types ve_gui_panel_types
 							hbox = {	#Age Objective 1
 								layoutpolicy_horizontal = preferred
 								enabled = "[GetScriptedGui('ve_age_obj_1').IsValid(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+								
 								margin = { 10 0 }
 								hbox = {
 									using = main_bg
@@ -1934,6 +1940,7 @@ types ve_gui_panel_types
 							hbox = {	#Age Objective 2
 								layoutpolicy_horizontal = preferred
 								enabled = "[GetScriptedGui('ve_age_obj_2').IsValid(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+								
 								margin = { 10 0 }
 								hbox = {
 									using = main_bg
@@ -1967,6 +1974,7 @@ types ve_gui_panel_types
 							hbox = {	#Age Objective 3
 								layoutpolicy_horizontal = preferred
 								enabled = "[GetScriptedGui('ve_age_obj_3').IsValid(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+								
 								margin = { 10 0 }
 								hbox = {
 									using = main_bg
@@ -2000,6 +2008,7 @@ types ve_gui_panel_types
 							hbox = {	#Age Objective 4
 								layoutpolicy_horizontal = preferred
 								enabled = "[GetScriptedGui('ve_age_obj_4').IsValid(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+								
 								margin = { 10 0 }
 								hbox = {
 									using = main_bg
@@ -2033,6 +2042,7 @@ types ve_gui_panel_types
 							hbox = {	#Age Objective 5
 								layoutpolicy_horizontal = preferred
 								enabled = "[GetScriptedGui('ve_age_obj_5').IsValid(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+								
 								margin = { 10 0 }
 								hbox = {
 									using = main_bg
@@ -2066,6 +2076,7 @@ types ve_gui_panel_types
 							hbox = {	#Age Objective 6
 								layoutpolicy_horizontal = preferred
 								enabled = "[GetScriptedGui('ve_age_obj_6').IsValid(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+								
 								margin = { 10 0 }
 								hbox = {
 									using = main_bg
@@ -2099,6 +2110,7 @@ types ve_gui_panel_types
 							hbox = {	#Age Objective 7
 								layoutpolicy_horizontal = preferred
 								enabled = "[GetScriptedGui('ve_age_obj_7').IsValid(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+								
 								margin = { 10 0 }
 								hbox = {
 									using = main_bg
@@ -2153,6 +2165,7 @@ types ve_gui_panel_types
 							hbox = {	#Age Objective 1
 								layoutpolicy_horizontal = preferred
 								enabled = "[GetScriptedGui('ve_age_obj_1').IsValid(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+								
 								margin = { 10 0 }
 								hbox = {
 									using = main_bg
@@ -2186,6 +2199,7 @@ types ve_gui_panel_types
 							hbox = {	#Age Objective 2
 								layoutpolicy_horizontal = preferred
 								enabled = "[GetScriptedGui('ve_age_obj_2').IsValid(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+								
 								margin = { 10 0 }
 								hbox = {
 									using = main_bg
@@ -2219,6 +2233,7 @@ types ve_gui_panel_types
 							hbox = {	#Age Objective 3
 								layoutpolicy_horizontal = preferred
 								enabled = "[GetScriptedGui('ve_age_obj_3').IsValid(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+								
 								margin = { 10 0 }
 								hbox = {
 									using = main_bg
@@ -2252,6 +2267,7 @@ types ve_gui_panel_types
 							hbox = {	#Age Objective 4
 								layoutpolicy_horizontal = preferred
 								enabled = "[GetScriptedGui('ve_age_obj_4').IsValid(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+								
 								margin = { 10 0 }
 								hbox = {
 									using = main_bg
@@ -2285,6 +2301,7 @@ types ve_gui_panel_types
 							hbox = {	#Age Objective 5
 								layoutpolicy_horizontal = preferred
 								enabled = "[GetScriptedGui('ve_age_obj_5').IsValid(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+								
 								margin = { 10 0 }
 								hbox = {
 									using = main_bg
@@ -2318,6 +2335,7 @@ types ve_gui_panel_types
 							hbox = {	#Age Objective 6
 								layoutpolicy_horizontal = preferred
 								enabled = "[GetScriptedGui('ve_age_obj_6').IsValid(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+								
 								margin = { 10 0 }
 								hbox = {
 									using = main_bg
@@ -2351,6 +2369,7 @@ types ve_gui_panel_types
 							hbox = {	#Age Objective 7
 								layoutpolicy_horizontal = preferred
 								enabled = "[GetScriptedGui('ve_age_obj_7').IsValid(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+								
 								margin = { 10 0 }
 								hbox = {
 									using = main_bg

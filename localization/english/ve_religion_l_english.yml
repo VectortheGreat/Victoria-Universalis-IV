@@ -2,6 +2,8 @@
  ve_missionaries:0 "Missionaries"
  ve_piety:0 "Piety"
  ve_holy_sites:0 "Holy Sites"
+ ve_call_all_missionaries:0 "Call All Missionaries"
+ ve_aspects:0 "Aspects"
 
  #Catholic Aspects
  catholic_aspect_text_1:0 "Church Taxes"

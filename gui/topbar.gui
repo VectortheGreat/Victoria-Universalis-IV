@@ -202,7 +202,6 @@ types topbar_components
 						minimumsize = { 90 28 }
 						maximumsize = { 90 28 }
 						spacing = 5
-						tooltip = "missionary_topbar_tt"
 						using = tooltip_below
 
 						icon = {
@@ -226,7 +225,6 @@ types topbar_components
 						minimumsize = { 90 28 }
 						maximumsize = { 90 28 }
 						spacing = 5
-						tooltip = "cultural_missionary_topbar_tt"
 						using = tooltip_below
 
 						icon = {
@@ -250,7 +248,6 @@ types topbar_components
 						maximumsize = { 90 28 }
 						spacing = 2
 						datacontext = "[Country.GetGovernmentLegitimacyLevel]"
-						tooltip = "piety_topbar_tt"
 						using = tooltip_below
 
 						icon = {
@@ -273,7 +270,6 @@ types topbar_components
 						minimumsize = { 90 28 }
 						maximumsize = { 90 28 }
 						spacing = 2
-						tooltip = "cultural_reform_topbar_tt"
 						using = tooltip_below
 
 						icon = {
@@ -296,7 +292,6 @@ types topbar_components
 						minimumsize = { 90 28 }
 						maximumsize = { 90 28 }
 						spacing = 2
-						tooltip = "idea_point_topbar_tt"
 						using = tooltip_below
 						margin_left = 3
 
@@ -321,7 +316,6 @@ types topbar_components
 						minimumsize = { 90 28 }
 						maximumsize = { 90 28 }
 						spacing = 2
-						tooltip = "splendor_topbar_tt"
 						using = tooltip_below
 
 						icon = {

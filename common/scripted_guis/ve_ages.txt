@@ -61,17 +61,21 @@ ve_age_obj_1 = {
 			limit = {
 				has_variable = ve_age_2_started
 			}
-			OR = {
-				has_law = law_type:law_colonial_resettlement
-				has_law = law_type:law_colonial_exploitation
+			hidden_trigger = {
+				OR = {
+					has_law = law_type:law_colonial_resettlement
+					has_law = law_type:law_colonial_exploitation
+				}
 			}
 		}
 		trigger_else_if = {
 			limit = {
 				has_variable = ve_age_3_started
 			}
-			NOT = {
-				has_law = law_type:law_monarchy
+			hidden_trigger = {
+				NOT = {
+					has_law = law_type:law_monarchy
+				}
 			}
 		}
 	}
@@ -84,9 +88,11 @@ ve_age_obj_2 = {
 			limit = {
 				has_variable = ve_age_1_started
 			}
-			has_law = law_type:law_slavery_banned
-			NOT = {
-				has_law = law_type:law_serfdom
+			hidden_trigger = {
+				has_law = law_type:law_slavery_banned
+				NOT = {
+					has_law = law_type:law_serfdom
+				}
 			}
 		}
 		trigger_else_if = {
@@ -251,9 +257,9 @@ ve_age_obj_6 = {
 			limit = {
 				has_variable = ve_age_1_started
 			}
-			any_scope_state = {
-				has_building = building_urban_center
-				percent >= 0.25
+			pop_type_percent_country = {
+				pop_type = peasants
+				percent < 0.5
 			}
 		}
 		trigger_else_if = {
@@ -312,27 +318,33 @@ ve_age_bonus_1 = {
 			limit = {
 				has_variable = ve_age_1_started
 			}
-			var:ve_splender_points >= 800
-			NOT = {
-				has_modifier = age_1_bonus_1
+			hidden_trigger = {
+				var:ve_splender_points >= 800
+				NOT = {
+					has_modifier = age_1_bonus_1
+				}
 			}
 		}
 		trigger_else_if = {
 			limit = {
 				has_variable = ve_age_2_started
 			}
-			var:ve_splender_points >= 800
-			NOT = {
-				has_modifier = age_1_bonus_2
+			hidden_trigger = {
+				var:ve_splender_points >= 800
+				NOT = {
+					has_modifier = age_1_bonus_2
+				}
 			}
 		}
 		trigger_else_if = {
 			limit = {
 				has_variable = ve_age_3_started
 			}
-			var:ve_splender_points >= 800
-			NOT = {
-				has_modifier = age_1_bonus_3
+			hidden_trigger = {
+				var:ve_splender_points >= 800
+				NOT = {
+					has_modifier = age_1_bonus_3
+				}
 			}
 		}
 	}
@@ -387,19 +399,25 @@ ve_age_bonus_2 = {
 			limit = {
 				has_variable = ve_age_1_started
 			}
-			var:ve_splender_points >= 800
+			hidden_trigger = {
+				var:ve_splender_points >= 800
+			}
 		}
 		trigger_else_if = {
 			limit = {
 				has_variable = ve_age_2_started
 			}
-			var:ve_splender_points >= 800
+			hidden_trigger = {
+				var:ve_splender_points >= 800
+			}
 		}
 		trigger_else_if = {
 			limit = {
 				has_variable = ve_age_3_started
 			}
-			var:ve_splender_points >= 800
+			hidden_trigger = {
+				var:ve_splender_points >= 800
+			}
 		}
 	}
 	effect = {
@@ -453,19 +471,25 @@ ve_age_bonus_3 = {
 			limit = {
 				has_variable = ve_age_1_started
 			}
-			var:ve_splender_points >= 800
+			hidden_trigger = {
+				var:ve_splender_points >= 800
+			}
 		}
 		trigger_else_if = {
 			limit = {
 				has_variable = ve_age_2_started
 			}
-			var:ve_splender_points >= 800
+			hidden_trigger = {
+				var:ve_splender_points >= 800
+			}
 		}
 		trigger_else_if = {
 			limit = {
 				has_variable = ve_age_3_started
 			}
-			var:ve_splender_points >= 800
+			hidden_trigger = {
+				var:ve_splender_points >= 800
+			}
 		}
 	}
 	effect = {
@@ -519,19 +543,25 @@ ve_age_bonus_4 = {
 			limit = {
 				has_variable = ve_age_1_started
 			}
-			var:ve_splender_points >= 800
+			hidden_trigger = {
+				var:ve_splender_points >= 800
+			}
 		}
 		trigger_else_if = {
 			limit = {
 				has_variable = ve_age_2_started
 			}
-			var:ve_splender_points >= 800
+			hidden_trigger = {
+				var:ve_splender_points >= 800
+			}
 		}
 		trigger_else_if = {
 			limit = {
 				has_variable = ve_age_3_started
 			}
-			var:ve_splender_points >= 800
+			hidden_trigger = {
+				var:ve_splender_points >= 800
+			}
 		}
 	}
 	effect = {
@@ -585,19 +615,25 @@ ve_age_bonus_5 = {
 			limit = {
 				has_variable = ve_age_1_started
 			}
-			var:ve_splender_points >= 800
+			hidden_trigger = {
+				var:ve_splender_points >= 800
+			}
 		}
 		trigger_else_if = {
 			limit = {
 				has_variable = ve_age_2_started
 			}
-			var:ve_splender_points >= 800
+			hidden_trigger = {
+				var:ve_splender_points >= 800
+			}
 		}
 		trigger_else_if = {
 			limit = {
 				has_variable = ve_age_3_started
 			}
-			var:ve_splender_points >= 800
+			hidden_trigger = {
+				var:ve_splender_points >= 800
+			}
 		}
 	}
 	effect = {
@@ -651,19 +687,25 @@ ve_age_bonus_6 = {
 			limit = {
 				has_variable = ve_age_1_started
 			}
-			var:ve_splender_points >= 800
+			hidden_trigger = {
+				var:ve_splender_points >= 800
+			}
 		}
 		trigger_else_if = {
 			limit = {
 				has_variable = ve_age_2_started
 			}
-			var:ve_splender_points >= 800
+			hidden_trigger = {
+				var:ve_splender_points >= 800
+			}
 		}
 		trigger_else_if = {
 			limit = {
 				has_variable = ve_age_3_started
 			}
-			var:ve_splender_points >= 800
+			hidden_trigger = {
+				var:ve_splender_points >= 800
+			}
 		}
 	}
 	effect = {
@@ -717,22 +759,34 @@ ve_age_bonus_7 = {
 			limit = {
 				has_variable = ve_age_1_started
 			}
-			var:ve_splender_points >= 800
-			this = c:GBR
+			custom_tooltip = {
+				text = ve_age_1_bonus_7_tt
+				var:ve_splender_points >= 800
+				this = c:GBR
+			}
 		}
 		trigger_else_if = {
 			limit = {
 				has_variable = ve_age_2_started
 			}
-			var:ve_splender_points >= 800
-			this = c:BEL
+			custom_tooltip = {
+				text = ve_age_2_bonus_7_tt
+				var:ve_splender_points >= 800
+				this = c:BEL
+			}
 		}
 		trigger_else_if = {
 			limit = {
 				has_variable = ve_age_3_started
 			}
-			var:ve_splender_points >= 800
-			global_country_ranking <= 5
+			custom_tooltip = {
+				text = ve_age_3_bonus_7_tt
+				var:ve_splender_points >= 800
+				global_country_ranking <= 5
+				NOT = {
+					has_modifier = age_3_bonus_8
+				}
+			}
 		}
 	}
 	effect = {
@@ -786,22 +840,34 @@ ve_age_bonus_8 = {
 			limit = {
 				has_variable = ve_age_1_started
 			}
-			var:ve_splender_points >= 800
-			this = c:NET
+			custom_tooltip = {
+				text = ve_age_1_bonus_8_tt
+				var:ve_splender_points >= 800
+				this = c:NET
+			}
 		}
 		trigger_else_if = {
 			limit = {
 				has_variable = ve_age_2_started
 			}
-			var:ve_splender_points >= 800
-			this = c:USA
+			custom_tooltip = {
+				text = ve_age_2_bonus_8_tt
+				var:ve_splender_points >= 800
+				this = c:USA
+			}
 		}
 		trigger_else_if = {
 			limit = {
 				has_variable = ve_age_3_started
 			}
-			var:ve_splender_points >= 800
-			global_country_ranking >= 5
+			custom_tooltip = {
+				text = ve_age_3_bonus_8_tt
+				var:ve_splender_points >= 800
+				global_country_ranking >= 5
+				NOT = {
+					has_modifier = age_3_bonus_7
+				}
+			}
 		}
 	}
 	effect = {
@@ -855,25 +921,34 @@ ve_age_bonus_9 = {
 			limit = {
 				has_variable = ve_age_1_started
 			}
-			var:ve_splender_points >= 800
-			OR = {
-				this = c:JAP
-				this = c:TUR
+			custom_tooltip = {
+				text = ve_age_1_bonus_9_tt
+				var:ve_splender_points >= 800
+				OR = {
+					this = c:JAP
+					this = c:TUR
+				}
 			}
 		}
 		trigger_else_if = {
 			limit = {
 				has_variable = ve_age_2_started
 			}
-			var:ve_splender_points >= 800
-			this = c:FRA
+			custom_tooltip = {
+				text = ve_age_2_bonus_9_tt
+				var:ve_splender_points >= 800
+				this = c:FRA
+			}
 		}
 		trigger_else_if = {
 			limit = {
 				has_variable = ve_age_3_started
 			}
-			var:ve_splender_points >= 800
-			this = c:GER
+			custom_tooltip = {
+				text = ve_age_3_bonus_9_tt
+				var:ve_splender_points >= 800
+				this = c:GER
+			}
 		}
 	}
 	effect = {
@@ -927,23 +1002,32 @@ ve_age_bonus_10 = {
 			limit = {
 				has_variable = ve_age_1_started
 			}
-			var:ve_splender_points >= 800
-			country_has_primary_culture = cu:north_italian
-			country_has_primary_culture = cu:south_italian
+			custom_tooltip = {
+				text = ve_age_1_bonus_10_tt
+				var:ve_splender_points >= 800
+				country_has_primary_culture = cu:north_italian
+				country_has_primary_culture = cu:south_italian
+			}
 		}
 		trigger_else_if = {
 			limit = {
 				has_variable = ve_age_2_started
 			}
-			var:ve_splender_points >= 800
-			this = c:AUS
+			custom_tooltip = {
+				text = ve_age_2_bonus_10_tt
+				var:ve_splender_points >= 800
+				this = c:AUS
+			}
 		}
 		trigger_else_if = {
 			limit = {
 				has_variable = ve_age_3_started
 			}
-			var:ve_splender_points >= 800
-			this = c:GBR
+			custom_tooltip = {
+				text = ve_age_3_bonus_10_tt
+				var:ve_splender_points >= 800
+				this = c:GBR
+			}
 		}
 	}
 	effect = {
@@ -1008,23 +1092,32 @@ ve_age_bonus_11 = {
 			limit = {
 				has_variable = ve_age_1_started
 			}
-			var:ve_splender_points >= 800
-			country_has_primary_culture = cu:north_german
-			country_has_primary_culture = cu:south_german
+			custom_tooltip = {
+				text = ve_age_1_bonus_11_tt
+				var:ve_splender_points >= 800
+				country_has_primary_culture = cu:north_german
+				country_has_primary_culture = cu:south_german
+			}
 		}
 		trigger_else_if = {
 			limit = {
 				has_variable = ve_age_2_started
 			}
-			var:ve_splender_points >= 800
-			this = c:RUS
+			custom_tooltip = {
+				text = ve_age_2_bonus_11_tt
+				var:ve_splender_points >= 800
+				this = c:RUS
+			}
 		}
 		trigger_else_if = {
 			limit = {
 				has_variable = ve_age_3_started
 			}
-			var:ve_splender_points >= 800
-			this = c:RUS
+			custom_tooltip = {
+				text = ve_age_3_bonus_11_tt
+				var:ve_splender_points >= 800
+				this = c:RUS
+			}
 		}
 	}
 	effect = {

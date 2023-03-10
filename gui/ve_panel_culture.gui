@@ -77,10 +77,9 @@ types ve_gui_panel_types
 									button = {
 										using = default_button_action
 										size = { 250 40 }
-										raw_text = "Call All Cultural Missionaries"
+										text = "ve_call_cultural_missionary"
 										onclick = "[GetScriptedGui('ve_call_all_cultural_missionaries').Execute( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
 										enabled = "[GetScriptedGui('ve_call_all_cultural_missionaries').IsValid(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
-										tooltip = "ve_call_all_cultural_missionaries"
 										using = tooltip_below
 									}
 								}

@@ -131,7 +131,7 @@ age_3_bonus_2 = {
 
 age_3_bonus_3 = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_documents_positive.dds
-	country_military_goods_cost_mult = -0.15
+	country_military_goods_cost_mult = -0.1
 }
 
 age_3_bonus_4 = {
@@ -151,7 +151,7 @@ age_3_bonus_6 = {
 
 age_3_bonus_7 = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_documents_positive.dds
-	battle_casualties_mult = -0.15
+	battle_casualties_mult = -0.1
 }
 
 age_3_bonus_8 = {

@@ -667,7 +667,7 @@ types information_panel_bar_types {
 					}
 					sidepanel_button_small = {
 						blockoverride "icon" {
-							texture = "gfx/interface/buttons/button_icons/list.dds"
+							texture = "gfx/interface/ve_logo.dds"
 						}
 						blockoverride "button_selected" {
 							visible = "[GetVariableSystem.Exists('ve_tab_var')]"

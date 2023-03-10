@@ -31,7 +31,7 @@ ve_gui_panel_types
 							vbox = {
 								spacing = 8
 								textbox = {
-									raw_text = "Idea Points"
+									text = "ve_idea_points"
 									using = fontsize_xxl
 									autoresize = yes
 								}
@@ -74,7 +74,7 @@ ve_gui_panel_types
 								}
 
 								textbox = {
-									raw_text = "Total Ideas"
+									text = "ve_total_ideas"
 									using = fontsize_xl
 									autoresize = yes
 								}
@@ -103,7 +103,7 @@ ve_gui_panel_types
 									autoresize = yes
 								}
 								textbox = {
-									text = "ve_gecici_27"
+									text = "ve_national_ideas"
 									default_format = "#tooltippable_name"
 									using = fontsize_xxl
 									align = nobaseline
@@ -528,8 +528,7 @@ ve_gui_panel_types
 								}
 								tooltip = "[GetScriptedGui('ve_national_idea_tradition').ExecuteTooltip( GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
 								textbox = {
-									raw_text = "Traditions: "
-									default_format = "#positive_value"
+									text = "ve_traditions"
 									using = fontsize_xxl
 									autoresize = yes
 								}
@@ -612,8 +611,7 @@ ve_gui_panel_types
 								}
 								tooltip = "[GetScriptedGui('ve_national_idea_bonus').ExecuteTooltip( GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
 								textbox = {
-									raw_text = "Bonus: "
-									default_format = "#positive_value"
+									text = "ve_bonus"
 									using = fontsize_xxl
 									autoresize = yes
 								}
@@ -1331,7 +1329,7 @@ ve_gui_panel_types
 										using = default_button_action
 										layoutpolicy_horizontal = expanding
 										size = { 100% 40 }
-										raw_text = "Embrace"
+										text = "ve_embrace"
 										visible = "[GetScriptedGui('embrace_idea_group').IsShown(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('idea_group',MakeScopeFlag(StateRegion.MakeScope.Var('idea_group').GetFlagName)).End)]"
 										enabled = "[GreaterThan_CFixedPoint(GetPlayer.MakeScope.Var('idea_group_cap').GetValue,GetPlayer.MakeScope.Var('idea_group_unlocked').GetValue)]"
 										onclick = "[GetScriptedGui('embrace_idea_group').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('idea_group',MakeScopeFlag(StateRegion.MakeScope.Var('idea_group').GetFlagName)).End)]"
@@ -1342,7 +1340,7 @@ ve_gui_panel_types
 										using = default_button_action
 										layoutpolicy_horizontal = expanding
 										size = { 100% 40 }
-										raw_text = "Boost Idea"
+										text = "ve_boost_idea"
 										visible = "[GetScriptedGui('boost_idea_group').IsShown(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('idea_group',MakeScopeFlag(StateRegion.MakeScope.Var('idea_group').GetFlagName)).End)]"
 										enabled = "[GetScriptedGui('boost_idea_group').IsValid(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('idea_group',MakeScopeFlag(StateRegion.MakeScope.Var('idea_group').GetFlagName)).End)]"
 										onclick = "[GetScriptedGui('boost_idea_group').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('idea_group',MakeScopeFlag(StateRegion.MakeScope.Var('idea_group').GetFlagName)).End)]"
@@ -1925,7 +1923,7 @@ ve_gui_panel_types
 										using = default_button_action
 										layoutpolicy_horizontal = expanding
 										size = { 100% 40 }
-										raw_text = "Embrace"
+										text = "ve_embrace"
 										visible = "[GetScriptedGui('embrace_idea_group').IsShown(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('idea_group',MakeScopeFlag(StateRegion.MakeScope.Var('idea_group').GetFlagName)).End)]"
 										enabled = "[GreaterThan_CFixedPoint(GetPlayer.MakeScope.Var('idea_group_cap').GetValue,GetPlayer.MakeScope.Var('idea_group_unlocked').GetValue)]"
 										onclick = "[GetScriptedGui('embrace_idea_group').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('idea_group',MakeScopeFlag(StateRegion.MakeScope.Var('idea_group').GetFlagName)).End)]"
@@ -1936,7 +1934,7 @@ ve_gui_panel_types
 										using = default_button_action
 										layoutpolicy_horizontal = expanding
 										size = { 100% 40 }
-										raw_text = "Boost Idea"
+										text = "ve_boost_idea"
 										visible = "[GetScriptedGui('boost_idea_group').IsShown(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('idea_group',MakeScopeFlag(StateRegion.MakeScope.Var('idea_group').GetFlagName)).End)]"
 										enabled = "[GetScriptedGui('boost_idea_group').IsValid(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('idea_group',MakeScopeFlag(StateRegion.MakeScope.Var('idea_group').GetFlagName)).End)]"
 										onclick = "[GetScriptedGui('boost_idea_group').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('idea_group',MakeScopeFlag(StateRegion.MakeScope.Var('idea_group').GetFlagName)).End)]"
@@ -2519,7 +2517,7 @@ ve_gui_panel_types
 										using = default_button_action
 										layoutpolicy_horizontal = expanding
 										size = { 100% 40 }
-										raw_text = "Embrace"
+										text = "ve_embrace"
 										visible = "[GetScriptedGui('embrace_idea_group').IsShown(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('idea_group',MakeScopeFlag(StateRegion.MakeScope.Var('idea_group').GetFlagName)).End)]"
 										enabled = "[GreaterThan_CFixedPoint(GetPlayer.MakeScope.Var('idea_group_cap').GetValue,GetPlayer.MakeScope.Var('idea_group_unlocked').GetValue)]"
 										onclick = "[GetScriptedGui('embrace_idea_group').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('idea_group',MakeScopeFlag(StateRegion.MakeScope.Var('idea_group').GetFlagName)).End)]"
@@ -2530,7 +2528,7 @@ ve_gui_panel_types
 										using = default_button_action
 										layoutpolicy_horizontal = expanding
 										size = { 100% 40 }
-										raw_text = "Boost Idea"
+										text = "ve_boost_idea"
 										visible = "[GetScriptedGui('boost_idea_group').IsShown(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('idea_group',MakeScopeFlag(StateRegion.MakeScope.Var('idea_group').GetFlagName)).End)]"
 										enabled = "[GetScriptedGui('boost_idea_group').IsValid(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('idea_group',MakeScopeFlag(StateRegion.MakeScope.Var('idea_group').GetFlagName)).End)]"
 										onclick = "[GetScriptedGui('boost_idea_group').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('idea_group',MakeScopeFlag(StateRegion.MakeScope.Var('idea_group').GetFlagName)).End)]"

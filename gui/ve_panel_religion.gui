@@ -75,10 +75,9 @@ ve_gui_panel_types
 							button = {
 								using = default_button_action
 								size = { 250 40 }
-								raw_text = "Call All Missionaries"
+								text = "ve_call_all_missionaries"
 								onclick = "[GetScriptedGui('ve_call_all_missionaries').Execute( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
 								enabled = "[GetScriptedGui('ve_call_all_missionaries').IsValid(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
-								tooltip = "ve_call_all_missionaries"
 								using = tooltip_below
 							}
 						}
@@ -155,7 +154,7 @@ ve_gui_panel_types
 					blockoverride
 					"header_text"
 					{
-						raw_text = "Aspects"
+						text = "ve_aspects"
 						default_format = "#tooltip_header"
 					}
 					blockoverride
