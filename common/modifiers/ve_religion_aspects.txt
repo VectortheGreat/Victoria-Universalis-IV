@@ -117,7 +117,9 @@ orthodox_aspect_2_mdf = {
 
 orthodox_aspect_3_mdf = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_gear_positive.dds
-	technology_invention_cost_mult = -0.1
+	country_society_tech_cost_mult = -0.05
+	country_production_tech_cost_mult = -0.05
+	country_military_tech_cost_mult = -0.05
 }
 
 orthodox_aspect_4_mdf = {
@@ -307,7 +309,8 @@ jewish_pasive_mdf = {
 
 jewish_aspect_1_mdf = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_gear_positive.dds
-	technology_invention_cost_mult = -0.05
+	country_society_tech_cost_mult = -0.03
+	country_production_tech_cost_mult = -0.03
 	country_law_enactment_success_add = 0.1
 }
 
@@ -354,7 +357,7 @@ jewish_aspect_8_mdf = {
 
 mahayana_pasive_mdf = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_gear_positive.dds
-	technology_invention_cost_mult = -0.05
+	country_production_tech_cost_mult = -0.05
 	state_loyalists_from_sol_change_accepted_religion_mult = 0.05
 }
 

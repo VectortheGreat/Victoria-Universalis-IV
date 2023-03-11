@@ -20,7 +20,9 @@ gbr_idea_1 = {
 
 gbr_idea_2 = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_statue_positive.dds
-	technology_invention_cost_mult = -0.1
+	country_society_tech_cost_mult = -0.05
+	country_production_tech_cost_mult = -0.05
+	country_military_tech_cost_mult = -0.05
 }
 
 gbr_idea_3 = {
@@ -40,7 +42,7 @@ gbr_idea_5 = {
 
 gbr_idea_6 = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_statue_positive.dds
-	building_railway_mine_throughput_mult = 0.2
+	state_infrastructure_mult = 0.15
 }
 
 gbr_idea_7 = {
@@ -370,7 +372,9 @@ jap_idea_tradition_1 = {
 
 jap_idea_tradition_2 = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_statue_positive.dds
-	technology_invention_cost_mult = -0.1
+	country_society_tech_cost_mult = -0.05
+	country_production_tech_cost_mult = -0.05
+	country_military_tech_cost_mult = -0.05
 }
 
 jap_idea_bonus = {

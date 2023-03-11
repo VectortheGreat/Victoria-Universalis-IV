@@ -31,7 +31,9 @@ innovative_idea_6_mdf = {
 
 innovative_idea_7_mdf = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_lightbulb_positive.dds
-	technology_invention_cost_mult = -0.1
+	country_society_tech_cost_mult = -0.05
+	country_production_tech_cost_mult = -0.05
+	country_military_tech_cost_mult = -0.05
 }
 
 diplomatic_idea_1_mdf = {

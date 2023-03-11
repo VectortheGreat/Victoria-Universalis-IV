@@ -58,9 +58,10 @@ types ve_gui_panel_types
 								layoutpolicy_horizontal = expanding
 								vbox = {
 									spacing = 10
+									tooltip = "ve_cultural_missionary_tt"
 									textbox = {
 										text = "ve_cultural_missionary"
-										default_format = "#tooltip_header"
+										default_format = "#tooltippable_name"
 										using = fontsize_xxl
 										align = nobaseline
 										elide = left
@@ -89,7 +90,7 @@ types ve_gui_panel_types
 									textbox = {
 										text = "ve_culture_reform_point"
 										tooltip = "ve_culture_reform_point_tt"
-										default_format = "#tooltip_header"
+										default_format = "#tooltippable_name"
 										using = fontsize_xxl
 										align = nobaseline
 										elide = left

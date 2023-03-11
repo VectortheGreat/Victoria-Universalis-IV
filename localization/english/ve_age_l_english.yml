@@ -1,5 +1,5 @@
 ﻿l_english:
- ve_splendor:0 "Splendor: "
+ ve_splendor:0 "#tooltippable_name Splendor: "
  ve_age_of_victoria_title:0 "Age of Victoria"
  ve_age_of_victoria_desc:0 "In the history of the United Kingdom and the British Empire, the Victorian era was the period of Queen Victoria's reign, from 20 June 1837 until her death. In this period, when industrialization and centralization began to become widespread, it caused a decrease in the peasant population and an increase in the urban population."
  ve_imperialism_age_title:0 "Imperialism Age"
@@ -56,7 +56,6 @@
  ve_great_wars_age_obj_desc_6:0 "Have at least 1 Billion GDP"
  ve_great_wars_age_obj_title_7:0 "#tooltip_header World Domination"
  ve_great_wars_age_obj_desc_7:0 "Become the Greatest Power"
-
  ve_age_1_bonus_7_tt:0 "Is Great Britain"
  ve_age_2_bonus_7_tt:0 "Is Belgium"
  ve_age_3_bonus_7_tt:0 "Is it in the Top 5 Power Rank and doesn't have Prevent Invasion modifier"
@@ -72,3 +71,7 @@
  ve_age_1_bonus_11_tt:0 "Is North German or South German"
  ve_age_2_bonus_11_tt:0 "Is Russia"
  ve_age_3_bonus_11_tt:0 "Is Russia"
+ ve_age_splendor_tt:0 "#tooltippable_concept Monthly Splendors: \n #Y Base: +1 \n  For each completed age objectives: +2"
+ ve_golden_age_tt:0 "#Y Complete at least 4 age objectives"
+ ve_age_obj_efct_tt:0 "#Y +2 splendors per month if objective is completed"
+ splendor_default_bonus:0 "Have at least 800 Splendor"

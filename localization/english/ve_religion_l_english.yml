@@ -4,9 +4,8 @@
  ve_holy_sites:0 "Holy Sites"
  ve_call_all_missionaries:0 "Call All Missionaries"
  ve_aspects:0 "Aspects"
- your_tooltip_loc:0 "$piety_cus_loc_1$ / $piety_cus_loc_2$"
- piety_cus_loc_1:0 "Sa"
- piety_cus_loc_2:0 "A"
+ ve_piety_tt:0 "#tooltippable_concept Monthly Piety: \n #Y Base: +4 \n  If Theocracy law is activated: +3 \n If State Religion law is activated: +4 \n If Freedom of Consience law is activated: +2 \n If religion is Catholic or Protestant and have Cologne Cathedral owned: +2 \n If religion is Sunni or Shia and have Kaaba: +2 \n If religion is Hundi and have Ayodhya: +2 \n If religion is Sikh and have Gomateshwara Statue: +2"
+ ve_missionary_tt:0 "#tooltippable_concept Missionaries: \n #Y Base: +1 \n If State Religion law is activated: +2 \n If Freedom of Consience law is activated: +1 \n If Ethnocentrism Idea Completed: +1 \n #negative_value If Total Separation law is activated, the missionary mechanic will be disabled."
 
 
  #Catholic Aspects

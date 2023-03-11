@@ -8,3 +8,4 @@
  ve_cultural_missionary:0 "Cultural Missionary"
  ve_call_cultural_missionary:0 "Call All Cultural Missionaries"
  ve_culture_reform_point_tt:0 "#tooltippable_concept Monthly Culture Reform Points: \n #Y Base: #P +6"
+ ve_cultural_missionary_tt:0 "#tooltippable_concept Missionaries: \n #Y Base: +1 \n If Ethnostate law is activated: +4 \n If National Supremacy law is activated: +3 \n If Racial Segregation law is activated: +2 \n If Cultural Exclusion law is activated: +1 \n #negative_value If Multicultural law is activated, the cultural missionary mechanic will be disabled."

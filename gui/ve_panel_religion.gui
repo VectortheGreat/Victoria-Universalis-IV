@@ -55,10 +55,10 @@ ve_gui_panel_types
 						 layoutpolicy_horizontal = expanding
 						vbox = {
 							spacing = 10
+							tooltip = "ve_missionary_tt"
 							textbox = {
 								text = "ve_missionaries"
-								tooltip = "[Character.GetAttritionDesc]"
-								default_format = "#tooltip_header"
+								default_format = "#tooltippable_name"
 								using = fontsize_xxl
 								align = nobaseline
 								elide = left
@@ -83,10 +83,10 @@ ve_gui_panel_types
 						}
 						vbox = {
 							spacing = 10							
+							tooltip = "ve_piety_tt"
 							textbox = {
 								text = "ve_piety"
-								tooltip = "your_tooltip_loc"
-								default_format = "#tooltip_header"
+								default_format = "#tooltippable_name"
 								using = fontsize_xxl
 								align = nobaseline
 								elide = left

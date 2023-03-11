@@ -169,6 +169,13 @@ idea_cost = {
 	}
 }
 
+splendor_cost = {
+	change_variable = {
+		name = ve_splender_points
+		subtract = 800
+	}
+}
+
 reform_limiter = {
 	if = {
 		limit = {
