@@ -1,0 +1,45 @@
+﻿idea_points_cus_loc = {
+	type = country
+	random_valid = no
+	text = {
+		trigger = {
+			literacy_rate <= 0.25
+		}
+		localization_key = idea_points_cus_loc_1
+	}
+	text = {
+		trigger = {
+			literacy_rate <= 0.5
+		}
+		localization_key = idea_points_cus_loc_2
+	}
+	text = {
+		trigger = {
+			literacy_rate <= 0.75
+		}
+		localization_key = idea_points_cus_loc_3
+	}
+	text = {
+		trigger = {
+			literacy_rate <= 1
+		}
+		localization_key = idea_points_cus_loc_4
+	}
+}
+
+piety_cus_loc = {
+	type = country
+	random_valid = no
+	text = {
+		trigger = {
+			literacy_rate <= 0.25
+		}
+		localization_key = piety_cus_loc_1
+	}
+	text = {
+		trigger = {
+			literacy_rate <= 0.15
+		}
+		localization_key = piety_cus_loc_2
+	}
+}
