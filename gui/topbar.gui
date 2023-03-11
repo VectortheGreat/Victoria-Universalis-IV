@@ -271,6 +271,7 @@ types topbar_components
 						maximumsize = { 90 28 }
 						spacing = 2
 						using = tooltip_below
+						visible = "[GetScriptedGui('hide_reform_point').IsShown(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
 
 						icon = {
 							size = { @secondary_icon_size @secondary_icon_size }

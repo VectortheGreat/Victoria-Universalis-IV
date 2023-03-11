@@ -852,7 +852,7 @@ types ve_gui_panel_types
 								blockoverride
 								"icon"
 								{
-									texture = "gfx/interface/ve_age/catholic.dds"
+									texture = "gfx/interface/ve_age/unrest_suppression_icon.dds"
 								}
 								onclick = "[GetScriptedGui('ve_age_bonus_3').Execute(GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
 								enabled = "[GetScriptedGui('ve_age_bonus_3').IsValid(GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
@@ -861,7 +861,7 @@ types ve_gui_panel_types
 								using = tooltip_above
 							}
 							icon = {
-								texture = "gfx/interface/ve_age/catholic.dds"
+								texture = "gfx/interface/ve_age/unrest_suppression_icon.dds"
 								visible = "[Not(GetScriptedGui('ve_age_bonus_3').IsShown(GuiScope.SetRoot( GetPlayer.MakeScope ).End ))]"
 								tooltip = "[GetScriptedGui('ve_age_bonus_3').ExecuteTooltip(GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
 								using = ve_shimmer
@@ -885,7 +885,7 @@ types ve_gui_panel_types
 								blockoverride
 								"icon"
 								{
-									texture = "gfx/interface/ve_age/unrest_suppression_icon.dds"
+									texture = "gfx/interface/ve_ideas/global_unrest.dds"
 								}
 								onclick = "[GetScriptedGui('ve_age_bonus_4').Execute(GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
 								enabled = "[GetScriptedGui('ve_age_bonus_4').IsValid(GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
@@ -894,7 +894,7 @@ types ve_gui_panel_types
 								using = tooltip_above
 							}
 							icon = {
-								texture = "gfx/interface/ve_age/unrest_suppression_icon.dds"
+								texture = "gfx/interface/ve_ideas/global_unrest.dds"
 								visible = "[Not(GetScriptedGui('ve_age_bonus_4').IsShown(GuiScope.SetRoot( GetPlayer.MakeScope ).End ))]"
 								tooltip = "[GetScriptedGui('ve_age_bonus_4').ExecuteTooltip(GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
 								using = ve_shimmer
@@ -1916,6 +1916,22 @@ types ve_gui_panel_types
 											120
 											120
 										}
+										background = {
+											texture = "gfx/interface/age_cannot_unlock.dds"
+											visible = "[Not(GetScriptedGui('ve_age_obj_1').IsValid(GuiScope.SetRoot(GetPlayer.MakeScope).End))]"
+											size = {
+												120
+												120
+											}
+										}
+										background = {
+											texture = "gfx/interface/age_can_unlock.dds"
+											visible = "[GetScriptedGui('ve_age_obj_1').IsValid(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+											size = {
+												120
+												120
+											}
+										}
 									}
 								}
 								vbox = {
@@ -1949,6 +1965,22 @@ types ve_gui_panel_types
 										size = {
 											120
 											120
+										}
+										background = {
+											texture = "gfx/interface/age_cannot_unlock.dds"
+											visible = "[Not(GetScriptedGui('ve_age_obj_2').IsValid(GuiScope.SetRoot(GetPlayer.MakeScope).End))]"
+											size = {
+												120
+												120
+											}
+										}
+										background = {
+											texture = "gfx/interface/age_can_unlock.dds"
+											visible = "[GetScriptedGui('ve_age_obj_2').IsValid(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+											size = {
+												120
+												120
+											}
 										}
 									}
 								}
@@ -1984,6 +2016,22 @@ types ve_gui_panel_types
 											120
 											120
 										}
+										background = {
+											texture = "gfx/interface/age_cannot_unlock.dds"
+											visible = "[Not(GetScriptedGui('ve_age_obj_3').IsValid(GuiScope.SetRoot(GetPlayer.MakeScope).End))]"
+											size = {
+												120
+												120
+											}
+										}
+										background = {
+											texture = "gfx/interface/age_can_unlock.dds"
+											visible = "[GetScriptedGui('ve_age_obj_3').IsValid(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+											size = {
+												120
+												120
+											}
+										}
 									}
 								}
 								vbox = {
@@ -2017,6 +2065,22 @@ types ve_gui_panel_types
 										size = {
 											120
 											120
+										}
+										background = {
+											texture = "gfx/interface/age_cannot_unlock.dds"
+											visible = "[Not(GetScriptedGui('ve_age_obj_4').IsValid(GuiScope.SetRoot(GetPlayer.MakeScope).End))]"
+											size = {
+												120
+												120
+											}
+										}
+										background = {
+											texture = "gfx/interface/age_can_unlock.dds"
+											visible = "[GetScriptedGui('ve_age_obj_4').IsValid(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+											size = {
+												120
+												120
+											}
 										}
 									}
 								}
@@ -2052,6 +2116,22 @@ types ve_gui_panel_types
 											120
 											120
 										}
+										background = {
+											texture = "gfx/interface/age_cannot_unlock.dds"
+											visible = "[Not(GetScriptedGui('ve_age_obj_5').IsValid(GuiScope.SetRoot(GetPlayer.MakeScope).End))]"
+											size = {
+												120
+												120
+											}
+										}
+										background = {
+											texture = "gfx/interface/age_can_unlock.dds"
+											visible = "[GetScriptedGui('ve_age_obj_5').IsValid(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+											size = {
+												120
+												120
+											}
+										}
 									}
 								}
 								vbox = {
@@ -2086,6 +2166,22 @@ types ve_gui_panel_types
 											120
 											120
 										}
+										background = {
+											texture = "gfx/interface/age_cannot_unlock.dds"
+											visible = "[Not(GetScriptedGui('ve_age_obj_6').IsValid(GuiScope.SetRoot(GetPlayer.MakeScope).End))]"
+											size = {
+												120
+												120
+											}
+										}
+										background = {
+											texture = "gfx/interface/age_can_unlock.dds"
+											visible = "[GetScriptedGui('ve_age_obj_6').IsValid(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+											size = {
+												120
+												120
+											}
+										}
 									}
 								}
 								vbox = {
@@ -2119,6 +2215,22 @@ types ve_gui_panel_types
 										size = {
 											120
 											120
+										}
+										background = {
+											texture = "gfx/interface/age_cannot_unlock.dds"
+											visible = "[Not(GetScriptedGui('ve_age_obj_7').IsValid(GuiScope.SetRoot(GetPlayer.MakeScope).End))]"
+											size = {
+												120
+												120
+											}
+										}
+										background = {
+											texture = "gfx/interface/age_can_unlock.dds"
+											visible = "[GetScriptedGui('ve_age_obj_7').IsValid(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+											size = {
+												120
+												120
+											}
 										}
 									}
 								}
@@ -2175,6 +2287,22 @@ types ve_gui_panel_types
 											120
 											120
 										}
+										background = {
+											texture = "gfx/interface/age_cannot_unlock.dds"
+											visible = "[Not(GetScriptedGui('ve_age_obj_1').IsValid(GuiScope.SetRoot(GetPlayer.MakeScope).End))]"
+											size = {
+												120
+												120
+											}
+										}
+										background = {
+											texture = "gfx/interface/age_can_unlock.dds"
+											visible = "[GetScriptedGui('ve_age_obj_1').IsValid(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+											size = {
+												120
+												120
+											}
+										}
 									}
 								}
 								vbox = {
@@ -2208,6 +2336,22 @@ types ve_gui_panel_types
 										size = {
 											120
 											120
+										}
+										background = {
+											texture = "gfx/interface/age_cannot_unlock.dds"
+											visible = "[Not(GetScriptedGui('ve_age_obj_2').IsValid(GuiScope.SetRoot(GetPlayer.MakeScope).End))]"
+											size = {
+												120
+												120
+											}
+										}
+										background = {
+											texture = "gfx/interface/age_can_unlock.dds"
+											visible = "[GetScriptedGui('ve_age_obj_2').IsValid(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+											size = {
+												120
+												120
+											}
 										}
 									}
 								}
@@ -2243,6 +2387,22 @@ types ve_gui_panel_types
 											120
 											120
 										}
+										background = {
+											texture = "gfx/interface/age_cannot_unlock.dds"
+											visible = "[Not(GetScriptedGui('ve_age_obj_3').IsValid(GuiScope.SetRoot(GetPlayer.MakeScope).End))]"
+											size = {
+												120
+												120
+											}
+										}
+										background = {
+											texture = "gfx/interface/age_can_unlock.dds"
+											visible = "[GetScriptedGui('ve_age_obj_3').IsValid(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+											size = {
+												120
+												120
+											}
+										}
 									}
 								}
 								vbox = {
@@ -2276,6 +2436,22 @@ types ve_gui_panel_types
 										size = {
 											120
 											120
+										}
+										background = {
+											texture = "gfx/interface/age_cannot_unlock.dds"
+											visible = "[Not(GetScriptedGui('ve_age_obj_4').IsValid(GuiScope.SetRoot(GetPlayer.MakeScope).End))]"
+											size = {
+												120
+												120
+											}
+										}
+										background = {
+											texture = "gfx/interface/age_can_unlock.dds"
+											visible = "[GetScriptedGui('ve_age_obj_4').IsValid(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+											size = {
+												120
+												120
+											}
 										}
 									}
 								}
@@ -2311,6 +2487,22 @@ types ve_gui_panel_types
 											120
 											120
 										}
+										background = {
+											texture = "gfx/interface/age_cannot_unlock.dds"
+											visible = "[Not(GetScriptedGui('ve_age_obj_5').IsValid(GuiScope.SetRoot(GetPlayer.MakeScope).End))]"
+											size = {
+												120
+												120
+											}
+										}
+										background = {
+											texture = "gfx/interface/age_can_unlock.dds"
+											visible = "[GetScriptedGui('ve_age_obj_5').IsValid(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+											size = {
+												120
+												120
+											}
+										}
 									}
 								}
 								vbox = {
@@ -2345,6 +2537,22 @@ types ve_gui_panel_types
 											120
 											120
 										}
+										background = {
+											texture = "gfx/interface/age_cannot_unlock.dds"
+											visible = "[Not(GetScriptedGui('ve_age_obj_6').IsValid(GuiScope.SetRoot(GetPlayer.MakeScope).End))]"
+											size = {
+												120
+												120
+											}
+										}
+										background = {
+											texture = "gfx/interface/age_can_unlock.dds"
+											visible = "[GetScriptedGui('ve_age_obj_6').IsValid(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+											size = {
+												120
+												120
+											}
+										}
 									}
 								}
 								vbox = {
@@ -2378,6 +2586,22 @@ types ve_gui_panel_types
 										size = {
 											120
 											120
+										}
+										background = {
+											texture = "gfx/interface/age_cannot_unlock.dds"
+											visible = "[Not(GetScriptedGui('ve_age_obj_7').IsValid(GuiScope.SetRoot(GetPlayer.MakeScope).End))]"
+											size = {
+												120
+												120
+											}
+										}
+										background = {
+											texture = "gfx/interface/age_can_unlock.dds"
+											visible = "[GetScriptedGui('ve_age_obj_7').IsValid(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+											size = {
+												120
+												120
+											}
 										}
 									}
 								}

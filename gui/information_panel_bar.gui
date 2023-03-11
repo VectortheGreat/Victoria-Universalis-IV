@@ -649,6 +649,7 @@ types information_panel_bar_types {
 						onclick = "[InformationPanelBar.ClosePanel]"
 						onclick = "[MapListPanelManager.CloseCurrentPanel]"
 						onclick = "[GetVariableSystem.SetOrToggle('ve_tab_var', GetVariableSystem.Get('ve_last_tab'))]"
+						onclick = "[GetScriptedGui('enable_ve_system').Execute( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
 					}
 				}
 
@@ -675,6 +676,7 @@ types information_panel_bar_types {
 						onclick = "[InformationPanelBar.ClosePanel]"
 						onclick = "[MapListPanelManager.CloseCurrentPanel]"
 						onclick = "[GetVariableSystem.SetOrToggle('ve_tab_var', GetVariableSystem.Get('ve_last_tab'))]"
+						onclick = "[GetScriptedGui('enable_ve_system').Execute( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
 					}
 				}
 

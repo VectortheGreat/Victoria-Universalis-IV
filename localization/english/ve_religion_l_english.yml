@@ -4,6 +4,10 @@
  ve_holy_sites:0 "Holy Sites"
  ve_call_all_missionaries:0 "Call All Missionaries"
  ve_aspects:0 "Aspects"
+ your_tooltip_loc:0 "$piety_cus_loc_1$ / $piety_cus_loc_2$"
+ piety_cus_loc_1:0 "Sa"
+ piety_cus_loc_2:0 "A"
+
 
  #Catholic Aspects
  catholic_aspect_text_1:0 "Church Taxes"

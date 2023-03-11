@@ -575,3 +575,15 @@
 	6-unit_offense_water_add ve unit_navy_offense_add
 	7-battle_casualties_mult
 }
+
+#Puan Sistemi 
+{
+	1-1836
+	2-1846
+	3-1856
+	4-1866
+	5-1876
+	6-1886
+	7-1896
+	8-1906 
+}

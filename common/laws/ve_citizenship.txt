@@ -8,69 +8,72 @@ law_ethnostate = {
 	progressiveness = -100
 	on_enact = {
 		recalculate_pop_ig_support = yes
-		if = {
-			limit = {
-				has_variable = ve_had_national_supremacy_law
+		custom_tooltip = {
+			text = ve_ethnostate_tt
+			if = {
+				limit = {
+					has_variable = ve_had_national_supremacy_law
+				}
+				change_variable = {
+					name = avaible_culture_missionaries
+					add = 1
+				}
+				change_variable = {
+					name = total_culture_missionaries
+					add = 1
+				}
+				remove_variable = ve_had_national_supremacy_law
+				set_variable = ve_had_ethnostate_law
+				balance_cultural_missionaries = yes
 			}
-			change_variable = {
-				name = avaible_culture_missionaries
-				add = 1
+			else_if = {
+				limit = {
+					has_variable = ve_had_racial_segregation_law
+				}
+				change_variable = {
+					name = avaible_culture_missionaries
+					add = 2
+				}
+				change_variable = {
+					name = total_culture_missionaries
+					add = 2
+				}
+				remove_variable = ve_had_racial_segregation_law
+				set_variable = ve_had_ethnostate_law
+				balance_cultural_missionaries = yes
 			}
-			change_variable = {
-				name = total_culture_missionaries
-				add = 1
+			else_if = {
+				limit = {
+					has_variable = ve_had_cultural_exclusion_law
+				}
+				change_variable = {
+					name = avaible_culture_missionaries
+					add = 3
+				}
+				change_variable = {
+					name = total_culture_missionaries
+					add = 3
+				}
+				remove_variable = ve_had_cultural_exclusion_law
+				set_variable = ve_had_ethnostate_law
+				balance_cultural_missionaries = yes
 			}
-			remove_variable = ve_had_national_supremacy_law
-			set_variable = ve_had_ethnostate_law
-			balance_cultural_missionaries = yes
-		}
-		else_if = {
-			limit = {
-				has_variable = ve_had_racial_segregation_law
+			else_if = {
+				limit = {
+					has_variable = ve_had_multicultural_law
+				}
+				change_variable = {
+					name = avaible_culture_missionaries
+					add = 4
+				}
+				change_variable = {
+					name = total_culture_missionaries
+					add = 4
+				}
+				remove_variable = ve_had_multicultural_law
+				set_variable = ve_had_ethnostate_law
+				balance_cultural_missionaries = yes
 			}
-			change_variable = {
-				name = avaible_culture_missionaries
-				add = 2
-			}
-			change_variable = {
-				name = total_culture_missionaries
-				add = 2
-			}
-			remove_variable = ve_had_racial_segregation_law
-			set_variable = ve_had_ethnostate_law
-			balance_cultural_missionaries = yes
-		}
-		else_if = {
-			limit = {
-				has_variable = ve_had_cultural_exclusion_law
-			}
-			change_variable = {
-				name = avaible_culture_missionaries
-				add = 3
-			}
-			change_variable = {
-				name = total_culture_missionaries
-				add = 3
-			}
-			remove_variable = ve_had_cultural_exclusion_law
-			set_variable = ve_had_ethnostate_law
-			balance_cultural_missionaries = yes
-		}
-		else_if = {
-			limit = {
-				has_variable = ve_had_multicultural_law
-			}
-			change_variable = {
-				name = avaible_culture_missionaries
-				add = 4
-			}
-			change_variable = {
-				name = total_culture_missionaries
-				add = 4
-			}
-			remove_variable = ve_had_multicultural_law
-			set_variable = ve_had_ethnostate_law
-			balance_cultural_missionaries = yes
 		}
 	}
 	cultural_acceptance_rule = {
@@ -99,69 +102,72 @@ law_national_supremacy = {
 	progressiveness = -50
 	on_enact = {
 		recalculate_pop_ig_support = yes
-		if = {
-			limit = {
-				has_variable = ve_had_ethnostate_law
+		custom_tooltip = {
+			text = ve_national_supremacy_tt
+			if = {
+				limit = {
+					has_variable = ve_had_ethnostate_law
+				}
+				change_variable = {
+					name = avaible_culture_missionaries
+					subtract = 1
+				}
+				change_variable = {
+					name = total_culture_missionaries
+					subtract = 1
+				}
+				remove_variable = ve_had_ethnostate_law
+				set_variable = ve_had_national_supremacy_law
+				balance_cultural_missionaries = yes
 			}
-			change_variable = {
-				name = avaible_culture_missionaries
-				subtract = 1
+			else_if = {
+				limit = {
+					has_variable = ve_had_racial_segregation_law
+				}
+				change_variable = {
+					name = avaible_culture_missionaries
+					add = 1
+				}
+				change_variable = {
+					name = total_culture_missionaries
+					add = 1
+				}
+				remove_variable = ve_had_racial_segregation_law
+				set_variable = ve_had_national_supremacy_law
+				balance_cultural_missionaries = yes
 			}
-			change_variable = {
-				name = total_culture_missionaries
-				subtract = 1
+			else_if = {
+				limit = {
+					has_variable = ve_had_cultural_exclusion_law
+				}
+				change_variable = {
+					name = avaible_culture_missionaries
+					add = 2
+				}
+				change_variable = {
+					name = total_culture_missionaries
+					add = 2
+				}
+				remove_variable = ve_had_cultural_exclusion_law
+				set_variable = ve_had_national_supremacy_law
+				balance_cultural_missionaries = yes
 			}
-			remove_variable = ve_had_ethnostate_law
-			set_variable = ve_had_national_supremacy_law
-			balance_cultural_missionaries = yes
-		}
-		else_if = {
-			limit = {
-				has_variable = ve_had_racial_segregation_law
+			else_if = {
+				limit = {
+					has_variable = ve_had_multicultural_law
+				}
+				change_variable = {
+					name = avaible_culture_missionaries
+					add = 3
+				}
+				change_variable = {
+					name = total_culture_missionaries
+					add = 3
+				}
+				remove_variable = ve_had_multicultural_law
+				set_variable = ve_had_national_supremacy_law
+				balance_cultural_missionaries = yes
 			}
-			change_variable = {
-				name = avaible_culture_missionaries
-				add = 1
-			}
-			change_variable = {
-				name = total_culture_missionaries
-				add = 1
-			}
-			remove_variable = ve_had_racial_segregation_law
-			set_variable = ve_had_national_supremacy_law
-			balance_cultural_missionaries = yes
-		}
-		else_if = {
-			limit = {
-				has_variable = ve_had_cultural_exclusion_law
-			}
-			change_variable = {
-				name = avaible_culture_missionaries
-				add = 2
-			}
-			change_variable = {
-				name = total_culture_missionaries
-				add = 2
-			}
-			remove_variable = ve_had_cultural_exclusion_law
-			set_variable = ve_had_national_supremacy_law
-			balance_cultural_missionaries = yes
-		}
-		else_if = {
-			limit = {
-				has_variable = ve_had_multicultural_law
-			}
-			change_variable = {
-				name = avaible_culture_missionaries
-				add = 3
-			}
-			change_variable = {
-				name = total_culture_missionaries
-				add = 3
-			}
-			remove_variable = ve_had_multicultural_law
-			set_variable = ve_had_national_supremacy_law
-			balance_cultural_missionaries = yes
 		}
 	}
 	cultural_acceptance_rule = {
@@ -190,69 +196,72 @@ law_racial_segregation = {
 	progressiveness = 0
 	on_enact = {
 		recalculate_pop_ig_support = yes
-		if = {
-			limit = {
-				has_variable = ve_had_ethnostate_law
+		custom_tooltip = {
+			text = ve_racial_segregation_tt
+			if = {
+				limit = {
+					has_variable = ve_had_ethnostate_law
+				}
+				change_variable = {
+					name = avaible_culture_missionaries
+					subtract = 2
+				}
+				change_variable = {
+					name = total_culture_missionaries
+					subtract = 2
+				}
+				remove_variable = ve_had_ethnostate_law
+				set_variable = ve_had_racial_segregation_law
+				balance_cultural_missionaries = yes
 			}
-			change_variable = {
-				name = avaible_culture_missionaries
-				subtract = 2
+			else_if = {
+				limit = {
+					has_variable = ve_had_national_supremacy_law
+				}
+				change_variable = {
+					name = avaible_culture_missionaries
+					subtract = 1
+				}
+				change_variable = {
+					name = total_culture_missionaries
+					subtract = 1
+				}
+				remove_variable = ve_had_national_supremacy_law
+				set_variable = ve_had_racial_segregation_law
+				balance_cultural_missionaries = yes
 			}
-			change_variable = {
-				name = total_culture_missionaries
-				subtract = 2
+			else_if = {
+				limit = {
+					has_variable = ve_had_cultural_exclusion_law
+				}
+				change_variable = {
+					name = avaible_culture_missionaries
+					add = 1
+				}
+				change_variable = {
+					name = total_culture_missionaries
+					add = 1
+				}
+				remove_variable = ve_had_cultural_exclusion_law
+				set_variable = ve_had_racial_segregation_law
+				balance_cultural_missionaries = yes
 			}
-			remove_variable = ve_had_ethnostate_law
-			set_variable = ve_had_racial_segregation_law
-			balance_cultural_missionaries = yes
-		}
-		else_if = {
-			limit = {
-				has_variable = ve_had_national_supremacy_law
+			else_if = {
+				limit = {
+					has_variable = ve_had_multicultural_law
+				}
+				change_variable = {
+					name = avaible_culture_missionaries
+					add = 2
+				}
+				change_variable = {
+					name = total_culture_missionaries
+					add = 2
+				}
+				remove_variable = ve_had_multicultural_law
+				set_variable = ve_had_racial_segregation_law
+				balance_cultural_missionaries = yes
 			}
-			change_variable = {
-				name = avaible_culture_missionaries
-				subtract = 1
-			}
-			change_variable = {
-				name = total_culture_missionaries
-				subtract = 1
-			}
-			remove_variable = ve_had_national_supremacy_law
-			set_variable = ve_had_racial_segregation_law
-			balance_cultural_missionaries = yes
-		}
-		else_if = {
-			limit = {
-				has_variable = ve_had_cultural_exclusion_law
-			}
-			change_variable = {
-				name = avaible_culture_missionaries
-				add = 1
-			}
-			change_variable = {
-				name = total_culture_missionaries
-				add = 1
-			}
-			remove_variable = ve_had_cultural_exclusion_law
-			set_variable = ve_had_racial_segregation_law
-			balance_cultural_missionaries = yes
-		}
-		else_if = {
-			limit = {
-				has_variable = ve_had_multicultural_law
-			}
-			change_variable = {
-				name = avaible_culture_missionaries
-				add = 2
-			}
-			change_variable = {
-				name = total_culture_missionaries
-				add = 2
-			}
-			remove_variable = ve_had_multicultural_law
-			set_variable = ve_had_racial_segregation_law
-			balance_cultural_missionaries = yes
 		}
 	}
 	cultural_acceptance_rule = {
@@ -300,69 +309,72 @@ law_cultural_exclusion = {
 	}
 	on_enact = {
 		recalculate_pop_ig_support = yes
-		if = {
-			limit = {
-				has_variable = ve_had_ethnostate_law
+		custom_tooltip = {
+			text = ve_cultural_exclusion_tt
+			if = {
+				limit = {
+					has_variable = ve_had_ethnostate_law
+				}
+				change_variable = {
+					name = avaible_culture_missionaries
+					subtract = 3
+				}
+				change_variable = {
+					name = total_culture_missionaries
+					subtract = 3
+				}
+				remove_variable = ve_had_ethnostate_law
+				set_variable = ve_had_cultural_exclusion_law
+				balance_cultural_missionaries = yes
 			}
-			change_variable = {
-				name = avaible_culture_missionaries
-				subtract = 3
+			else_if = {
+				limit = {
+					has_variable = ve_had_national_supremacy_law
+				}
+				change_variable = {
+					name = avaible_culture_missionaries
+					subtract = 2
+				}
+				change_variable = {
+					name = total_culture_missionaries
+					subtract = 2
+				}
+				remove_variable = ve_had_national_supremacy_law
+				set_variable = ve_had_cultural_exclusion_law
+				balance_cultural_missionaries = yes
 			}
-			change_variable = {
-				name = total_culture_missionaries
-				subtract = 3
+			else_if = {
+				limit = {
+					has_variable = ve_had_racial_segregation_law
+				}
+				change_variable = {
+					name = avaible_culture_missionaries
+					subtract = 1
+				}
+				change_variable = {
+					name = total_culture_missionaries
+					subtract = 1
+				}
+				remove_variable = ve_had_racial_segregation_law
+				set_variable = ve_had_cultural_exclusion_law
+				balance_cultural_missionaries = yes
 			}
-			remove_variable = ve_had_ethnostate_law
-			set_variable = ve_had_cultural_exclusion_law
-			balance_cultural_missionaries = yes
-		}
-		else_if = {
-			limit = {
-				has_variable = ve_had_national_supremacy_law
+			else_if = {
+				limit = {
+					has_variable = ve_had_multicultural_law
+				}
+				change_variable = {
+					name = avaible_culture_missionaries
+					add = 1
+				}
+				change_variable = {
+					name = total_culture_missionaries
+					add = 1
+				}
+				remove_variable = ve_had_multicultural_law
+				set_variable = ve_had_cultural_exclusion_law
+				balance_cultural_missionaries = yes
 			}
-			change_variable = {
-				name = avaible_culture_missionaries
-				subtract = 2
-			}
-			change_variable = {
-				name = total_culture_missionaries
-				subtract = 2
-			}
-			remove_variable = ve_had_national_supremacy_law
-			set_variable = ve_had_cultural_exclusion_law
-			balance_cultural_missionaries = yes
-		}
-		else_if = {
-			limit = {
-				has_variable = ve_had_racial_segregation_law
-			}
-			change_variable = {
-				name = avaible_culture_missionaries
-				subtract = 1
-			}
-			change_variable = {
-				name = total_culture_missionaries
-				subtract = 1
-			}
-			remove_variable = ve_had_racial_segregation_law
-			set_variable = ve_had_cultural_exclusion_law
-			balance_cultural_missionaries = yes
-		}
-		else_if = {
-			limit = {
-				has_variable = ve_had_multicultural_law
-			}
-			change_variable = {
-				name = avaible_culture_missionaries
-				add = 1
-			}
-			change_variable = {
-				name = total_culture_missionaries
-				add = 1
-			}
-			remove_variable = ve_had_multicultural_law
-			set_variable = ve_had_cultural_exclusion_law
-			balance_cultural_missionaries = yes
 		}
 	}
 	cultural_acceptance_rule = {
@@ -414,69 +426,72 @@ law_multicultural = {
 	}
 	on_enact = {
 		recalculate_pop_ig_support = yes
-		if = {
-			limit = {
-				has_variable = ve_had_ethnostate_law
+		custom_tooltip = {
+			text = ve_multicultural_tt
+			if = {
+				limit = {
+					has_variable = ve_had_ethnostate_law
+				}
+				change_variable = {
+					name = avaible_culture_missionaries
+					subtract = 4
+				}
+				change_variable = {
+					name = total_culture_missionaries
+					subtract = 4
+				}
+				remove_variable = ve_had_ethnostate_law
+				set_variable = ve_had_multicultural_law
+				balance_cultural_missionaries = yes
 			}
-			change_variable = {
-				name = avaible_culture_missionaries
-				subtract = 4
+			else_if = {
+				limit = {
+					has_variable = ve_had_national_supremacy_law
+				}
+				change_variable = {
+					name = avaible_culture_missionaries
+					subtract = 3
+				}
+				change_variable = {
+					name = total_culture_missionaries
+					subtract = 3
+				}
+				remove_variable = ve_had_national_supremacy_law
+				set_variable = ve_had_multicultural_law
+				balance_cultural_missionaries = yes
 			}
-			change_variable = {
-				name = total_culture_missionaries
-				subtract = 4
+			else_if = {
+				limit = {
+					has_variable = ve_had_racial_segregation_law
+				}
+				change_variable = {
+					name = avaible_culture_missionaries
+					subtract = 2
+				}
+				change_variable = {
+					name = total_culture_missionaries
+					subtract = 2
+				}
+				remove_variable = ve_had_racial_segregation_law
+				set_variable = ve_had_multicultural_law
+				balance_cultural_missionaries = yes
 			}
-			remove_variable = ve_had_ethnostate_law
-			set_variable = ve_had_multicultural_law
-			balance_cultural_missionaries = yes
-		}
-		else_if = {
-			limit = {
-				has_variable = ve_had_national_supremacy_law
+			else_if = {
+				limit = {
+					has_variable = ve_had_cultural_exclusion_law
+				}
+				change_variable = {
+					name = avaible_culture_missionaries
+					subtract = 1
+				}
+				change_variable = {
+					name = total_culture_missionaries
+					subtract = 1
+				}
+				remove_variable = ve_had_cultural_exclusion_law
+				set_variable = ve_had_multicultural_law
+				balance_cultural_missionaries = yes
 			}
-			change_variable = {
-				name = avaible_culture_missionaries
-				subtract = 3
-			}
-			change_variable = {
-				name = total_culture_missionaries
-				subtract = 3
-			}
-			remove_variable = ve_had_national_supremacy_law
-			set_variable = ve_had_multicultural_law
-			balance_cultural_missionaries = yes
-		}
-		else_if = {
-			limit = {
-				has_variable = ve_had_racial_segregation_law
-			}
-			change_variable = {
-				name = avaible_culture_missionaries
-				subtract = 2
-			}
-			change_variable = {
-				name = total_culture_missionaries
-				subtract = 2
-			}
-			remove_variable = ve_had_racial_segregation_law
-			set_variable = ve_had_multicultural_law
-			balance_cultural_missionaries = yes
-		}
-		else_if = {
-			limit = {
-				has_variable = ve_had_cultural_exclusion_law
-			}
-			change_variable = {
-				name = avaible_culture_missionaries
-				subtract = 1
-			}
-			change_variable = {
-				name = total_culture_missionaries
-				subtract = 1
-			}
-			remove_variable = ve_had_cultural_exclusion_law
-			set_variable = ve_had_multicultural_law
-			balance_cultural_missionaries = yes
 		}
 	}
 	cultural_acceptance_rule = {

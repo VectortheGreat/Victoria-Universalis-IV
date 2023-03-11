@@ -7,3 +7,4 @@
  ve_culture_reform_point:0 "Reform Point"
  ve_cultural_missionary:0 "Cultural Missionary"
  ve_call_cultural_missionary:0 "Call All Cultural Missionaries"
+ ve_culture_reform_point_tt:0 "#tooltippable_concept Monthly Culture Reform Points: \n #Y Base: #P +6"

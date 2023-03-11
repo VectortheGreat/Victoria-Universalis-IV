@@ -33,7 +33,7 @@ can_unlock_age_bonus = {
 		var:ve_splender_points >= 800
 		trigger_if = {
 			limit = {
-				has_variable = ve_age_1_started
+				has_global_variable = ve_age_1_started
 			}
 			NOT = {
 				AND = {
@@ -48,7 +48,7 @@ can_unlock_age_bonus = {
 		}
 		trigger_else_if = {
 			limit = {
-				has_variable = ve_age_2_started
+				has_global_variable = ve_age_2_started
 			}
 			NOT = {
 				AND = {
@@ -63,7 +63,7 @@ can_unlock_age_bonus = {
 		}
 		trigger_else_if = {
 			limit = {
-				has_variable = ve_age_3_started
+				has_global_variable = ve_age_3_started
 			}
 			NOT = {
 				AND = {

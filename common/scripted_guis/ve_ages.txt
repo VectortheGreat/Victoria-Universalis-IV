@@ -19,10 +19,10 @@ ve_age_1 = {
 	scope = country
 	is_shown = {
 		NOT = {
-			has_variable = ve_age_2_started
-			has_variable = ve_age_3_started
+			has_global_variable = ve_age_2_started
+			has_global_variable = ve_age_3_started
 		}
-		has_variable = ve_age_1_started
+		has_global_variable = ve_age_1_started
 	}
 }
 
@@ -30,10 +30,10 @@ ve_age_2 = {
 	scope = country
 	is_shown = {
 		NOT = {
-			has_variable = ve_age_1_started
-			has_variable = ve_age_3_started
+			has_global_variable = ve_age_1_started
+			has_global_variable = ve_age_3_started
 		}
-		has_variable = ve_age_2_started
+		has_global_variable = ve_age_2_started
 	}
 }
 
@@ -41,10 +41,10 @@ ve_age_3 = {
 	scope = country
 	is_shown = {
 		NOT = {
-			has_variable = ve_age_1_started
-			has_variable = ve_age_2_started
+			has_global_variable = ve_age_1_started
+			has_global_variable = ve_age_2_started
 		}
-		has_variable = ve_age_3_started
+		has_global_variable = ve_age_3_started
 	}
 }
 
@@ -53,13 +53,13 @@ ve_age_obj_1 = {
 	is_valid = {
 		trigger_if = {
 			limit = {
-				has_variable = ve_age_1_started
+				has_global_variable = ve_age_1_started
 			}
 			root.average_sol >= 10
 		}
 		trigger_else_if = {
 			limit = {
-				has_variable = ve_age_2_started
+				has_global_variable = ve_age_2_started
 			}
 			hidden_trigger = {
 				OR = {
@@ -70,7 +70,7 @@ ve_age_obj_1 = {
 		}
 		trigger_else_if = {
 			limit = {
-				has_variable = ve_age_3_started
+				has_global_variable = ve_age_3_started
 			}
 			hidden_trigger = {
 				NOT = {
@@ -86,7 +86,7 @@ ve_age_obj_2 = {
 	is_valid = {
 		trigger_if = {
 			limit = {
-				has_variable = ve_age_1_started
+				has_global_variable = ve_age_1_started
 			}
 			hidden_trigger = {
 				has_law = law_type:law_slavery_banned
@@ -97,7 +97,7 @@ ve_age_obj_2 = {
 		}
 		trigger_else_if = {
 			limit = {
-				has_variable = ve_age_2_started
+				has_global_variable = ve_age_2_started
 			}
 			any_subject_or_below = {
 				OR = {
@@ -115,7 +115,7 @@ ve_age_obj_2 = {
 		}
 		trigger_else_if = {
 			limit = {
-				has_variable = ve_age_3_started
+				has_global_variable = ve_age_3_started
 			}
 			OR = {
 				institution_investment_level = {
@@ -156,13 +156,13 @@ ve_age_obj_3 = {
 	is_valid = {
 		trigger_if = {
 			limit = {
-				has_variable = ve_age_1_started
+				has_global_variable = ve_age_1_started
 			}
 			government_legitimacy >= 75
 		}
 		trigger_else_if = {
 			limit = {
-				has_variable = ve_age_2_started
+				has_global_variable = ve_age_2_started
 			}
 			any_scope_state = {
 				owner = ROOT
@@ -172,7 +172,7 @@ ve_age_obj_3 = {
 		}
 		trigger_else_if = {
 			limit = {
-				has_variable = ve_age_3_started
+				has_global_variable = ve_age_3_started
 			}
 			army_size >= 350
 		}
@@ -184,19 +184,19 @@ ve_age_obj_4 = {
 	is_valid = {
 		trigger_if = {
 			limit = {
-				has_variable = ve_age_1_started
+				has_global_variable = ve_age_1_started
 			}
 			taking_loans = no
 		}
 		trigger_else_if = {
 			limit = {
-				has_variable = ve_age_2_started
+				has_global_variable = ve_age_2_started
 			}
 			navy_size >= 120
 		}
 		trigger_else_if = {
 			limit = {
-				has_variable = ve_age_3_started
+				has_global_variable = ve_age_3_started
 			}
 			leading_producer_of = g:oil
 		}
@@ -208,7 +208,7 @@ ve_age_obj_5 = {
 	is_valid = {
 		trigger_if = {
 			limit = {
-				has_variable = ve_age_1_started
+				has_global_variable = ve_age_1_started
 			}
 			ig:ig_intelligentsia = {
 				is_in_government = yes
@@ -217,13 +217,13 @@ ve_age_obj_5 = {
 		}
 		trigger_else_if = {
 			limit = {
-				has_variable = ve_age_2_started
+				has_global_variable = ve_age_2_started
 			}
 			leading_producer_of = g:coal
 		}
 		trigger_else_if = {
 			limit = {
-				has_variable = ve_age_3_started
+				has_global_variable = ve_age_3_started
 			}
 			NOT = {
 				any_scope_state = {
@@ -255,7 +255,7 @@ ve_age_obj_6 = {
 	is_valid = {
 		trigger_if = {
 			limit = {
-				has_variable = ve_age_1_started
+				has_global_variable = ve_age_1_started
 			}
 			pop_type_percent_country = {
 				pop_type = peasants
@@ -264,13 +264,13 @@ ve_age_obj_6 = {
 		}
 		trigger_else_if = {
 			limit = {
-				has_variable = ve_age_2_started
+				has_global_variable = ve_age_2_started
 			}
 			literacy_rate >= 0.5
 		}
 		trigger_else_if = {
 			limit = {
-				has_variable = ve_age_3_started
+				has_global_variable = ve_age_3_started
 			}
 			GDP >= 1000000000
 		}
@@ -282,19 +282,19 @@ ve_age_obj_7 = {
 	is_valid = {
 		trigger_if = {
 			limit = {
-				has_variable = ve_age_1_started
+				has_global_variable = ve_age_1_started
 			}
 			num_declared_interests >= 8
 		}
 		trigger_else_if = {
 			limit = {
-				has_variable = ve_age_2_started
+				has_global_variable = ve_age_2_started
 			}
 			total_population > 100000000
 		}
 		trigger_else_if = {
 			limit = {
-				has_variable = ve_age_3_started
+				has_global_variable = ve_age_3_started
 			}
 			global_country_ranking = 1
 		}
@@ -316,7 +316,7 @@ ve_age_bonus_1 = {
 	is_valid = {
 		trigger_if = {
 			limit = {
-				has_variable = ve_age_1_started
+				has_global_variable = ve_age_1_started
 			}
 			hidden_trigger = {
 				var:ve_splender_points >= 800
@@ -327,7 +327,7 @@ ve_age_bonus_1 = {
 		}
 		trigger_else_if = {
 			limit = {
-				has_variable = ve_age_2_started
+				has_global_variable = ve_age_2_started
 			}
 			hidden_trigger = {
 				var:ve_splender_points >= 800
@@ -338,7 +338,7 @@ ve_age_bonus_1 = {
 		}
 		trigger_else_if = {
 			limit = {
-				has_variable = ve_age_3_started
+				has_global_variable = ve_age_3_started
 			}
 			hidden_trigger = {
 				var:ve_splender_points >= 800
@@ -355,7 +355,7 @@ ve_age_bonus_1 = {
 		}
 		if = {
 			limit = {
-				has_variable = ve_age_1_started
+				has_global_variable = ve_age_1_started
 			}
 			add_modifier = {
 				name = age_1_bonus_1
@@ -364,7 +364,7 @@ ve_age_bonus_1 = {
 		}
 		else_if = {
 			limit = {
-				has_variable = ve_age_2_started
+				has_global_variable = ve_age_2_started
 			}
 			add_modifier = {
 				name = age_2_bonus_1
@@ -373,7 +373,7 @@ ve_age_bonus_1 = {
 		}
 		else_if = {
 			limit = {
-				has_variable = ve_age_3_started
+				has_global_variable = ve_age_3_started
 			}
 			add_modifier = {
 				name = age_3_bonus_1
@@ -397,7 +397,7 @@ ve_age_bonus_2 = {
 	is_valid = {
 		trigger_if = {
 			limit = {
-				has_variable = ve_age_1_started
+				has_global_variable = ve_age_1_started
 			}
 			hidden_trigger = {
 				var:ve_splender_points >= 800
@@ -405,7 +405,7 @@ ve_age_bonus_2 = {
 		}
 		trigger_else_if = {
 			limit = {
-				has_variable = ve_age_2_started
+				has_global_variable = ve_age_2_started
 			}
 			hidden_trigger = {
 				var:ve_splender_points >= 800
@@ -413,7 +413,7 @@ ve_age_bonus_2 = {
 		}
 		trigger_else_if = {
 			limit = {
-				has_variable = ve_age_3_started
+				has_global_variable = ve_age_3_started
 			}
 			hidden_trigger = {
 				var:ve_splender_points >= 800
@@ -427,7 +427,7 @@ ve_age_bonus_2 = {
 		}
 		if = {
 			limit = {
-				has_variable = ve_age_1_started
+				has_global_variable = ve_age_1_started
 			}
 			add_modifier = {
 				name = age_1_bonus_2
@@ -436,7 +436,7 @@ ve_age_bonus_2 = {
 		}
 		else_if = {
 			limit = {
-				has_variable = ve_age_2_started
+				has_global_variable = ve_age_2_started
 			}
 			add_modifier = {
 				name = age_2_bonus_2
@@ -445,7 +445,7 @@ ve_age_bonus_2 = {
 		}
 		else_if = {
 			limit = {
-				has_variable = ve_age_3_started
+				has_global_variable = ve_age_3_started
 			}
 			add_modifier = {
 				name = age_3_bonus_2
@@ -469,7 +469,7 @@ ve_age_bonus_3 = {
 	is_valid = {
 		trigger_if = {
 			limit = {
-				has_variable = ve_age_1_started
+				has_global_variable = ve_age_1_started
 			}
 			hidden_trigger = {
 				var:ve_splender_points >= 800
@@ -477,7 +477,7 @@ ve_age_bonus_3 = {
 		}
 		trigger_else_if = {
 			limit = {
-				has_variable = ve_age_2_started
+				has_global_variable = ve_age_2_started
 			}
 			hidden_trigger = {
 				var:ve_splender_points >= 800
@@ -485,7 +485,7 @@ ve_age_bonus_3 = {
 		}
 		trigger_else_if = {
 			limit = {
-				has_variable = ve_age_3_started
+				has_global_variable = ve_age_3_started
 			}
 			hidden_trigger = {
 				var:ve_splender_points >= 800
@@ -499,7 +499,7 @@ ve_age_bonus_3 = {
 		}
 		if = {
 			limit = {
-				has_variable = ve_age_1_started
+				has_global_variable = ve_age_1_started
 			}
 			add_modifier = {
 				name = age_1_bonus_3
@@ -508,7 +508,7 @@ ve_age_bonus_3 = {
 		}
 		else_if = {
 			limit = {
-				has_variable = ve_age_2_started
+				has_global_variable = ve_age_2_started
 			}
 			add_modifier = {
 				name = age_2_bonus_3
@@ -517,7 +517,7 @@ ve_age_bonus_3 = {
 		}
 		else_if = {
 			limit = {
-				has_variable = ve_age_3_started
+				has_global_variable = ve_age_3_started
 			}
 			add_modifier = {
 				name = age_3_bonus_3
@@ -541,7 +541,7 @@ ve_age_bonus_4 = {
 	is_valid = {
 		trigger_if = {
 			limit = {
-				has_variable = ve_age_1_started
+				has_global_variable = ve_age_1_started
 			}
 			hidden_trigger = {
 				var:ve_splender_points >= 800
@@ -549,7 +549,7 @@ ve_age_bonus_4 = {
 		}
 		trigger_else_if = {
 			limit = {
-				has_variable = ve_age_2_started
+				has_global_variable = ve_age_2_started
 			}
 			hidden_trigger = {
 				var:ve_splender_points >= 800
@@ -557,7 +557,7 @@ ve_age_bonus_4 = {
 		}
 		trigger_else_if = {
 			limit = {
-				has_variable = ve_age_3_started
+				has_global_variable = ve_age_3_started
 			}
 			hidden_trigger = {
 				var:ve_splender_points >= 800
@@ -571,7 +571,7 @@ ve_age_bonus_4 = {
 		}
 		if = {
 			limit = {
-				has_variable = ve_age_1_started
+				has_global_variable = ve_age_1_started
 			}
 			add_modifier = {
 				name = age_1_bonus_4
@@ -580,7 +580,7 @@ ve_age_bonus_4 = {
 		}
 		else_if = {
 			limit = {
-				has_variable = ve_age_2_started
+				has_global_variable = ve_age_2_started
 			}
 			add_modifier = {
 				name = age_2_bonus_4
@@ -589,7 +589,7 @@ ve_age_bonus_4 = {
 		}
 		else_if = {
 			limit = {
-				has_variable = ve_age_3_started
+				has_global_variable = ve_age_3_started
 			}
 			add_modifier = {
 				name = age_3_bonus_4
@@ -613,7 +613,7 @@ ve_age_bonus_5 = {
 	is_valid = {
 		trigger_if = {
 			limit = {
-				has_variable = ve_age_1_started
+				has_global_variable = ve_age_1_started
 			}
 			hidden_trigger = {
 				var:ve_splender_points >= 800
@@ -621,7 +621,7 @@ ve_age_bonus_5 = {
 		}
 		trigger_else_if = {
 			limit = {
-				has_variable = ve_age_2_started
+				has_global_variable = ve_age_2_started
 			}
 			hidden_trigger = {
 				var:ve_splender_points >= 800
@@ -629,7 +629,7 @@ ve_age_bonus_5 = {
 		}
 		trigger_else_if = {
 			limit = {
-				has_variable = ve_age_3_started
+				has_global_variable = ve_age_3_started
 			}
 			hidden_trigger = {
 				var:ve_splender_points >= 800
@@ -643,7 +643,7 @@ ve_age_bonus_5 = {
 		}
 		if = {
 			limit = {
-				has_variable = ve_age_1_started
+				has_global_variable = ve_age_1_started
 			}
 			add_modifier = {
 				name = age_1_bonus_5
@@ -652,7 +652,7 @@ ve_age_bonus_5 = {
 		}
 		else_if = {
 			limit = {
-				has_variable = ve_age_2_started
+				has_global_variable = ve_age_2_started
 			}
 			add_modifier = {
 				name = age_2_bonus_5
@@ -661,7 +661,7 @@ ve_age_bonus_5 = {
 		}
 		else_if = {
 			limit = {
-				has_variable = ve_age_3_started
+				has_global_variable = ve_age_3_started
 			}
 			add_modifier = {
 				name = age_3_bonus_5
@@ -685,7 +685,7 @@ ve_age_bonus_6 = {
 	is_valid = {
 		trigger_if = {
 			limit = {
-				has_variable = ve_age_1_started
+				has_global_variable = ve_age_1_started
 			}
 			hidden_trigger = {
 				var:ve_splender_points >= 800
@@ -693,7 +693,7 @@ ve_age_bonus_6 = {
 		}
 		trigger_else_if = {
 			limit = {
-				has_variable = ve_age_2_started
+				has_global_variable = ve_age_2_started
 			}
 			hidden_trigger = {
 				var:ve_splender_points >= 800
@@ -701,7 +701,7 @@ ve_age_bonus_6 = {
 		}
 		trigger_else_if = {
 			limit = {
-				has_variable = ve_age_3_started
+				has_global_variable = ve_age_3_started
 			}
 			hidden_trigger = {
 				var:ve_splender_points >= 800
@@ -715,7 +715,7 @@ ve_age_bonus_6 = {
 		}
 		if = {
 			limit = {
-				has_variable = ve_age_1_started
+				has_global_variable = ve_age_1_started
 			}
 			add_modifier = {
 				name = age_1_bonus_6
@@ -724,7 +724,7 @@ ve_age_bonus_6 = {
 		}
 		else_if = {
 			limit = {
-				has_variable = ve_age_2_started
+				has_global_variable = ve_age_2_started
 			}
 			add_modifier = {
 				name = age_2_bonus_6
@@ -733,7 +733,7 @@ ve_age_bonus_6 = {
 		}
 		else_if = {
 			limit = {
-				has_variable = ve_age_3_started
+				has_global_variable = ve_age_3_started
 			}
 			add_modifier = {
 				name = age_3_bonus_6
@@ -757,7 +757,7 @@ ve_age_bonus_7 = {
 	is_valid = {
 		trigger_if = {
 			limit = {
-				has_variable = ve_age_1_started
+				has_global_variable = ve_age_1_started
 			}
 			custom_tooltip = {
 				text = ve_age_1_bonus_7_tt
@@ -767,7 +767,7 @@ ve_age_bonus_7 = {
 		}
 		trigger_else_if = {
 			limit = {
-				has_variable = ve_age_2_started
+				has_global_variable = ve_age_2_started
 			}
 			custom_tooltip = {
 				text = ve_age_2_bonus_7_tt
@@ -777,7 +777,7 @@ ve_age_bonus_7 = {
 		}
 		trigger_else_if = {
 			limit = {
-				has_variable = ve_age_3_started
+				has_global_variable = ve_age_3_started
 			}
 			custom_tooltip = {
 				text = ve_age_3_bonus_7_tt
@@ -796,7 +796,7 @@ ve_age_bonus_7 = {
 		}
 		if = {
 			limit = {
-				has_variable = ve_age_1_started
+				has_global_variable = ve_age_1_started
 			}
 			add_modifier = {
 				name = age_1_bonus_7
@@ -805,7 +805,7 @@ ve_age_bonus_7 = {
 		}
 		else_if = {
 			limit = {
-				has_variable = ve_age_2_started
+				has_global_variable = ve_age_2_started
 			}
 			add_modifier = {
 				name = age_2_bonus_7
@@ -814,7 +814,7 @@ ve_age_bonus_7 = {
 		}
 		else_if = {
 			limit = {
-				has_variable = ve_age_3_started
+				has_global_variable = ve_age_3_started
 			}
 			add_modifier = {
 				name = age_3_bonus_7
@@ -838,7 +838,7 @@ ve_age_bonus_8 = {
 	is_valid = {
 		trigger_if = {
 			limit = {
-				has_variable = ve_age_1_started
+				has_global_variable = ve_age_1_started
 			}
 			custom_tooltip = {
 				text = ve_age_1_bonus_8_tt
@@ -848,7 +848,7 @@ ve_age_bonus_8 = {
 		}
 		trigger_else_if = {
 			limit = {
-				has_variable = ve_age_2_started
+				has_global_variable = ve_age_2_started
 			}
 			custom_tooltip = {
 				text = ve_age_2_bonus_8_tt
@@ -858,7 +858,7 @@ ve_age_bonus_8 = {
 		}
 		trigger_else_if = {
 			limit = {
-				has_variable = ve_age_3_started
+				has_global_variable = ve_age_3_started
 			}
 			custom_tooltip = {
 				text = ve_age_3_bonus_8_tt
@@ -877,7 +877,7 @@ ve_age_bonus_8 = {
 		}
 		if = {
 			limit = {
-				has_variable = ve_age_1_started
+				has_global_variable = ve_age_1_started
 			}
 			add_modifier = {
 				name = age_1_bonus_8
@@ -886,7 +886,7 @@ ve_age_bonus_8 = {
 		}
 		else_if = {
 			limit = {
-				has_variable = ve_age_2_started
+				has_global_variable = ve_age_2_started
 			}
 			add_modifier = {
 				name = age_2_bonus_8
@@ -895,7 +895,7 @@ ve_age_bonus_8 = {
 		}
 		else_if = {
 			limit = {
-				has_variable = ve_age_3_started
+				has_global_variable = ve_age_3_started
 			}
 			add_modifier = {
 				name = age_3_bonus_8
@@ -919,7 +919,7 @@ ve_age_bonus_9 = {
 	is_valid = {
 		trigger_if = {
 			limit = {
-				has_variable = ve_age_1_started
+				has_global_variable = ve_age_1_started
 			}
 			custom_tooltip = {
 				text = ve_age_1_bonus_9_tt
@@ -932,7 +932,7 @@ ve_age_bonus_9 = {
 		}
 		trigger_else_if = {
 			limit = {
-				has_variable = ve_age_2_started
+				has_global_variable = ve_age_2_started
 			}
 			custom_tooltip = {
 				text = ve_age_2_bonus_9_tt
@@ -942,7 +942,7 @@ ve_age_bonus_9 = {
 		}
 		trigger_else_if = {
 			limit = {
-				has_variable = ve_age_3_started
+				has_global_variable = ve_age_3_started
 			}
 			custom_tooltip = {
 				text = ve_age_3_bonus_9_tt
@@ -958,7 +958,7 @@ ve_age_bonus_9 = {
 		}
 		if = {
 			limit = {
-				has_variable = ve_age_1_started
+				has_global_variable = ve_age_1_started
 			}
 			add_modifier = {
 				name = age_1_bonus_9
@@ -967,7 +967,7 @@ ve_age_bonus_9 = {
 		}
 		else_if = {
 			limit = {
-				has_variable = ve_age_2_started
+				has_global_variable = ve_age_2_started
 			}
 			add_modifier = {
 				name = age_2_bonus_9
@@ -976,7 +976,7 @@ ve_age_bonus_9 = {
 		}
 		else_if = {
 			limit = {
-				has_variable = ve_age_3_started
+				has_global_variable = ve_age_3_started
 			}
 			add_modifier = {
 				name = age_3_bonus_9
@@ -1000,7 +1000,7 @@ ve_age_bonus_10 = {
 	is_valid = {
 		trigger_if = {
 			limit = {
-				has_variable = ve_age_1_started
+				has_global_variable = ve_age_1_started
 			}
 			custom_tooltip = {
 				text = ve_age_1_bonus_10_tt
@@ -1011,7 +1011,7 @@ ve_age_bonus_10 = {
 		}
 		trigger_else_if = {
 			limit = {
-				has_variable = ve_age_2_started
+				has_global_variable = ve_age_2_started
 			}
 			custom_tooltip = {
 				text = ve_age_2_bonus_10_tt
@@ -1021,7 +1021,7 @@ ve_age_bonus_10 = {
 		}
 		trigger_else_if = {
 			limit = {
-				has_variable = ve_age_3_started
+				has_global_variable = ve_age_3_started
 			}
 			custom_tooltip = {
 				text = ve_age_3_bonus_10_tt
@@ -1037,7 +1037,7 @@ ve_age_bonus_10 = {
 		}
 		if = {
 			limit = {
-				has_variable = ve_age_1_started
+				has_global_variable = ve_age_1_started
 			}
 			add_modifier = {
 				name = age_1_bonus_10
@@ -1046,7 +1046,7 @@ ve_age_bonus_10 = {
 		}
 		else_if = {
 			limit = {
-				has_variable = ve_age_2_started
+				has_global_variable = ve_age_2_started
 			}
 			add_modifier = {
 				name = age_2_bonus_10
@@ -1055,7 +1055,7 @@ ve_age_bonus_10 = {
 		}
 		else_if = {
 			limit = {
-				has_variable = ve_age_3_started
+				has_global_variable = ve_age_3_started
 			}
 			if = {
 				limit = {
@@ -1090,7 +1090,7 @@ ve_age_bonus_11 = {
 	is_valid = {
 		trigger_if = {
 			limit = {
-				has_variable = ve_age_1_started
+				has_global_variable = ve_age_1_started
 			}
 			custom_tooltip = {
 				text = ve_age_1_bonus_11_tt
@@ -1101,7 +1101,7 @@ ve_age_bonus_11 = {
 		}
 		trigger_else_if = {
 			limit = {
-				has_variable = ve_age_2_started
+				has_global_variable = ve_age_2_started
 			}
 			custom_tooltip = {
 				text = ve_age_2_bonus_11_tt
@@ -1111,7 +1111,7 @@ ve_age_bonus_11 = {
 		}
 		trigger_else_if = {
 			limit = {
-				has_variable = ve_age_3_started
+				has_global_variable = ve_age_3_started
 			}
 			custom_tooltip = {
 				text = ve_age_3_bonus_11_tt
@@ -1127,7 +1127,7 @@ ve_age_bonus_11 = {
 		}
 		if = {
 			limit = {
-				has_variable = ve_age_1_started
+				has_global_variable = ve_age_1_started
 			}
 			add_modifier = {
 				name = age_1_bonus_11
@@ -1136,7 +1136,7 @@ ve_age_bonus_11 = {
 		}
 		else_if = {
 			limit = {
-				has_variable = ve_age_2_started
+				has_global_variable = ve_age_2_started
 			}
 			add_modifier = {
 				name = age_2_bonus_11
@@ -1145,12 +1145,33 @@ ve_age_bonus_11 = {
 		}
 		else_if = {
 			limit = {
-				has_variable = ve_age_3_started
+				has_global_variable = ve_age_3_started
 			}
 			add_modifier = {
 				name = age_3_bonus_11
 				months = -1
 			}
+		}
+	}
+}
+
+enable_ve_system = {
+	scope = country
+	effect = {
+		if = {
+			limit = {
+				NOT = {
+					has_variable = victoria_universalis_system_on
+				}
+			}
+			set_missionary_cultural_missionary = yes
+			set_point_system = yes
+			set_idea_buttons = yes
+			set_ideas = yes
+			set_national_idea = yes
+			religion_passive_bonuses = yes
+			national_idea_traditions = yes
+			ve_idea_cap_effects = yes
 		}
 	}
 }

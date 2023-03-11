@@ -85,6 +85,7 @@ ve_gui_panel_types
 							spacing = 10							
 							textbox = {
 								text = "ve_piety"
+								tooltip = "your_tooltip_loc"
 								default_format = "#tooltip_header"
 								using = fontsize_xxl
 								align = nobaseline

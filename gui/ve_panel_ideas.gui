@@ -30,8 +30,9 @@ ve_gui_panel_types
 							}
 							vbox = {
 								spacing = 8
+								tooltip = "[GetPlayer.GetCustom('idea_points_cus_loc')]"
 								textbox = {
-									text = "ve_idea_points"
+									text = "ve_idea_points"	
 									using = fontsize_xxl
 									autoresize = yes
 								}
@@ -68,7 +69,8 @@ ve_gui_panel_types
 									blockoverride
 									"values"
 									{
-										max = "[GetPlayer.MakeScope.Var('idea_group_cap').GetValue]"
+										# max = "[GetPlayer.MakeScope.Var('idea_group_cap').GetValue]"
+										max = 8
 										value = "[GetPlayer.MakeScope.Var('idea_group_unlocked').GetValue]"
 									}
 								}

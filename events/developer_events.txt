@@ -205,23 +205,14 @@ dev.2 = {
 	flavor = dev.1.f
 	duration = 0
 	trigger = {
-		literacy_rate >= 0.5
-		any_scope_state = {
-			owner = ROOT
-			state_population < 250000
-			has_building = building_railway
-		}
+		literacy_rate <= 0.25
 	}
 	option = {
 		name = dev.2.a
 		default_option = yes
 		set_variable = {
-			name = avaible_culture_missionaries
-			value = 3
-		}
-		set_variable = {
-			name = avaible_missionaries
-			value = 3
+			name = idea_group_cap
+			value = 8
 		}
 	}
 	option = {
@@ -240,46 +231,14 @@ dev.2 = {
 	}
 	option = {
 		name = dev.2.c
-		set_variable = {
-			name = ve_age_1_started
-			value = 1
-		}
-		set_variable = {
-			name = ve_age_2_started
-			value = 0
-		}
-		set_variable = {
-			name = ve_age_3_started
-			value = 0
-		}
+		ve_ai_choose_idea = yes
+		ve_ai_boost_idea = yes
 	}
 	option = {
 		name = dev.2.d
-		set_variable = ve_age_1_started
-		remove_variable = ve_age_3_started
-		remove_variable = ve_age_2_started
-	}
-	option = {
-		name = dev.2.e
-		every_country = {
-			limit = {
-				NOR = {
-					this = c:GBR
-					this = c:FRA
-					this = c:GER
-					this = c:PRU
-					this = c:NGF
-					this = c:SGF
-					this = c:AUS
-					this = c:RUS
-					this = c:TUR
-					this = c:CHI
-					this = c:JAP
-					this = c:USA
-				}
-			}
-			set_variable = generic_idea_country
-		}
+		set_global_variable = ve_age_1_started
+		remove_global_variable = ve_age_3_started
+		remove_global_variable = ve_age_2_started
 	}
 }
 
@@ -298,7 +257,8 @@ dev.3 = {
 	option = {
 		name = dev.2.a
 		default_option = yes
-		change_tag = PRU
+		remove_variable = idea_cap_2_setted
+		remove_variable = idea_cap_3_setted
 	}
 	option = {
 		name = dev.2.a
@@ -330,21 +290,237 @@ dev.4 = {
 	flavor = dev.4.f
 	duration = 0
 	immediate = {
-		change_variable = {
-			name = ve_splender_points
-			add = 20
+		ve_monthly_points = yes
+		ve_monthly_splendor_points = yes
+		ve_idea_cap_effects = yes
+		if = {
+			#For released countries
+			limit = {
+				NOT = {
+					has_variable = victoria_universalis_system_on
+				}
+			}
+			set_missionary_cultural_missionary = yes
+			set_point_system = yes
+			set_idea_buttons = yes
+			set_ideas = yes
+			set_national_idea = yes
+			religion_passive_bonuses = yes
+			national_idea_traditions = yes
 		}
-		change_variable = {
-			name = idea_point_pool
-			add = 2
+		if = {
+			limit = {
+				is_ai = yes
+			}
+			ve_ai_choose_idea = yes
+			ve_ai_boost_idea = yes
 		}
-		change_variable = {
-			name = piety_bar_point
-			add = 4
+	}
+	option = {
+		name = dev.4.a
+		default_option = yes
+	}
+}
+
+dev.5 = {
+	type = country_event
+	event_image = {
+		video = "gfx/event_pictures/middleeast_oil_derricks.bk2"
+	}
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/unspecific/world_fair"
+	icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+	title = dev.4.t
+	desc = dev.4.d
+	flavor = dev.4.f
+	duration = 0
+	immediate = {
+		set_global_variable = ve_age_2_started
+		remove_global_variable = ve_age_1_started
+		remove_global_variable = ve_age_3_started
+		set_global_variable = age_2_started_trigger
+		every_country = {
+			set_variable = {
+				name = ve_splender_points
+				value = 0
+			}
+			if = {
+				limit = {
+					has_modifier = age_1_bonus_1
+				}
+				remove_modifier = age_1_bonus_1
+			}
+			if = {
+				limit = {
+					has_modifier = age_1_bonus_2
+				}
+				remove_modifier = age_1_bonus_2
+			}
+			if = {
+				limit = {
+					has_modifier = age_1_bonus_3
+				}
+				remove_modifier = age_1_bonus_3
+			}
+			if = {
+				limit = {
+					has_modifier = age_1_bonus_4
+				}
+				remove_modifier = age_1_bonus_4
+			}
+			if = {
+				limit = {
+					has_modifier = age_1_bonus_5
+				}
+				remove_modifier = age_1_bonus_5
+			}
+			if = {
+				limit = {
+					has_modifier = age_1_bonus_6
+				}
+				remove_modifier = age_1_bonus_6
+			}
+			if = {
+				limit = {
+					has_modifier = age_1_bonus_7
+				}
+				remove_modifier = age_1_bonus_7
+			}
+			if = {
+				limit = {
+					has_modifier = age_1_bonus_8
+				}
+				remove_modifier = age_1_bonus_8
+			}
+			if = {
+				limit = {
+					has_modifier = age_1_bonus_9
+				}
+				remove_modifier = age_1_bonus_9
+			}
+			if = {
+				limit = {
+					has_modifier = age_1_bonus_10
+				}
+				remove_modifier = age_1_bonus_10
+			}
+			if = {
+				limit = {
+					has_modifier = age_1_bonus_11
+				}
+				remove_modifier = age_1_bonus_11
+			}
 		}
-		change_variable = {
-			name = culture_reform_point
-			add = 8
+	}
+	trigger = {
+		is_ai = yes
+		year >= 1871
+		year < 1906
+		NOT = {
+			has_global_variable = age_2_started_trigger
+		}
+	}
+	option = {
+		name = dev.4.a
+		default_option = yes
+	}
+}
+
+dev.6 = {
+	type = country_event
+	event_image = {
+		video = "gfx/event_pictures/middleeast_oil_derricks.bk2"
+	}
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/unspecific/world_fair"
+	icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+	title = dev.4.t
+	desc = dev.4.d
+	flavor = dev.4.f
+	duration = 0
+	immediate = {
+		set_global_variable = ve_age_3_started
+		remove_global_variable = ve_age_1_started
+		remove_global_variable = ve_age_2_started
+		set_global_variable = age_3_started_trigger
+		every_country = {
+			set_variable = {
+				name = ve_splender_points
+				value = 0
+			}
+			if = {
+				limit = {
+					has_modifier = age_2_bonus_1
+				}
+				remove_modifier = age_2_bonus_1
+			}
+			if = {
+				limit = {
+					has_modifier = age_2_bonus_2
+				}
+				remove_modifier = age_2_bonus_2
+			}
+			if = {
+				limit = {
+					has_modifier = age_2_bonus_3
+				}
+				remove_modifier = age_2_bonus_3
+			}
+			if = {
+				limit = {
+					has_modifier = age_2_bonus_4
+				}
+				remove_modifier = age_2_bonus_4
+			}
+			if = {
+				limit = {
+					has_modifier = age_2_bonus_5
+				}
+				remove_modifier = age_2_bonus_5
+			}
+			if = {
+				limit = {
+					has_modifier = age_2_bonus_6
+				}
+				remove_modifier = age_2_bonus_6
+			}
+			if = {
+				limit = {
+					has_modifier = age_2_bonus_7
+				}
+				remove_modifier = age_2_bonus_7
+			}
+			if = {
+				limit = {
+					has_modifier = age_2_bonus_8
+				}
+				remove_modifier = age_2_bonus_8
+			}
+			if = {
+				limit = {
+					has_modifier = age_2_bonus_9
+				}
+				remove_modifier = age_2_bonus_9
+			}
+			if = {
+				limit = {
+					has_modifier = age_2_bonus_10
+				}
+				remove_modifier = age_2_bonus_10
+			}
+			if = {
+				limit = {
+					has_modifier = age_2_bonus_11
+				}
+				remove_modifier = age_2_bonus_11
+			}
+		}
+	}
+	trigger = {
+		is_ai = yes
+		year >= 1906
+		NOT = {
+			has_global_variable = age_3_started_trigger
 		}
 	}
 	option = {

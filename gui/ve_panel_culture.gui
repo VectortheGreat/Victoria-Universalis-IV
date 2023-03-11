@@ -88,6 +88,7 @@ types ve_gui_panel_types
 									visible = "[GetScriptedGui('hide_reform_point').IsShown(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
 									textbox = {
 										text = "ve_culture_reform_point"
+										tooltip = "ve_culture_reform_point_tt"
 										default_format = "#tooltip_header"
 										using = fontsize_xxl
 										align = nobaseline
