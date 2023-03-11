@@ -2,7 +2,7 @@
 	script_context = player_country
 	texture = "gfx/interface/intelligensia.dds"
 	valid = {
-		var:idea_point_pool >= 999
+		var:idea_point_pool >= 300
 		var:national_idea_pool < 56
 	}
 	type = alert
@@ -21,7 +21,7 @@ max_culture_reform_point = {
 	script_context = player_country
 	texture = "gfx/interface/monarch_cultures_icon.dds"
 	valid = {
-		var:culture_reform_point > 750
+		var:culture_reform_point >= 750
 	}
 	type = alert
 }

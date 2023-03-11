@@ -480,10 +480,6 @@ ve_national_idea_4 = {
 				name = ger_idea_4
 				months = -1
 			}
-			add_modifier = {
-				name = ger_idea_4
-				months = -1
-			}
 		}
 		else_if = {
 			limit = {

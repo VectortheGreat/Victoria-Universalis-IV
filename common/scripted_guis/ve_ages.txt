@@ -1061,8 +1061,10 @@ ve_age_bonus_10 = {
 			custom_tooltip = {
 				text = ve_age_1_bonus_10_tt
 				var:ve_splender_points >= 800
-				country_has_primary_culture = cu:north_italian
-				country_has_primary_culture = cu:south_italian
+				OR = {
+					country_has_primary_culture = cu:north_italian
+					country_has_primary_culture = cu:south_italian
+				}
 			}
 		}
 		trigger_else_if = {
@@ -1151,8 +1153,10 @@ ve_age_bonus_11 = {
 			custom_tooltip = {
 				text = ve_age_1_bonus_11_tt
 				var:ve_splender_points >= 800
-				country_has_primary_culture = cu:north_german
-				country_has_primary_culture = cu:south_german
+				OR = { 
+					country_has_primary_culture = cu:north_german
+					country_has_primary_culture = cu:south_german
+				}
 			}
 		}
 		trigger_else_if = {
