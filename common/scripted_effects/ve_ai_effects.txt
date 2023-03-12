@@ -285,118 +285,163 @@ ve_ai_boost_idea = {
 		limit = {
 			var:idea_point_pool >= 300
 			has_variable = can_go_innovative
+			NOT = {
+				has_variable = innovative_idea_completed
+			}
 		}
 		boost_inno_idea_effect = yes
 		national_idea_mdf = yes
 	}
-	else_if = {
+	if = {
 		limit = {
 			var:idea_point_pool >= 300
 			has_variable = can_go_economic
+			NOT = {
+				has_variable = economic_idea_completed
+			}
 		}
 		boost_eco_idea_effect = yes
 		national_idea_mdf = yes
 	}
-	else_if = {
+	if = {
 		limit = {
 			var:idea_point_pool >= 300
 			has_variable = can_go_administrative
+			NOT = {
+				has_variable = administrative_idea_completed
+			}
 		}
 		boost_adm_idea_effect = yes
 		national_idea_mdf = yes
 	}
-	else_if = {
+	if = {
 		limit = {
 			var:idea_point_pool >= 300
 			has_variable = can_go_ethnocentrism
+			NOT = {
+				has_variable = ethnocentrism_idea_completed
+			}
 		}
 		boost_ethno_idea_effect = yes
 		national_idea_mdf = yes
 	}
-	else_if = {
+	if = {
 		limit = {
 			var:idea_point_pool >= 300
 			has_variable = can_go_politics
+			NOT = {
+				has_variable = politics_idea_completed
+			}
 		}
 		boost_pol_idea_effect = yes
 		national_idea_mdf = yes
 	}
-	else_if = {
+	if = {
 		limit = {
 			var:idea_point_pool >= 300
 			has_variable = can_go_diplomatic
+			NOT = {
+				has_variable = diplomatic_idea_completed
+			}
 		}
 		boost_dip_idea_effect = yes
 		national_idea_mdf = yes
 	}
-	else_if = {
+	if = {
 		limit = {
 			var:idea_point_pool >= 300
 			has_variable = can_go_trade
+			NOT = {
+				has_variable = trade_idea_completed
+			}
 		}
 		boost_trade_idea_effect = yes
 		national_idea_mdf = yes
 	}
-	else_if = {
+	if = {
 		limit = {
 			var:idea_point_pool >= 300
 			has_variable = can_go_qualification
+			NOT = {
+				has_variable = qualification_idea_completed
+			}
 		}
 		boost_quali_idea_effect = yes
 		national_idea_mdf = yes
 	}
-	else_if = {
+	if = {
 		limit = {
 			var:idea_point_pool >= 300
 			has_variable = can_go_humanist
+			NOT = {
+				has_variable = humanist_idea_completed
+			}
 		}
 		boost_hum_idea_effect = yes
 		national_idea_mdf = yes
 	}
-	else_if = {
+	if = {
 		limit = {
 			var:idea_point_pool >= 300
 			has_variable = can_go_syndicalism
+			NOT = {
+				has_variable = syndicalism_idea_completed
+			}
 		}
 		boost_synd_idea_effect = yes
 		national_idea_mdf = yes
 	}
-	else_if = {
+	if = {
 		limit = {
 			var:idea_point_pool >= 300
 			has_variable = can_go_offensive
+			NOT = {
+				has_variable = offensive_idea_completed
+			}
 		}
 		boost_off_idea_effect = yes
 		national_idea_mdf = yes
 	}
-	else_if = {
+	if = {
 		limit = {
 			var:idea_point_pool >= 300
 			has_variable = can_go_defensive
+			NOT = {
+				has_variable = defensive_idea_completed
+			}
 		}
 		boost_def_idea_effect = yes
 		national_idea_mdf = yes
 	}
-	else_if = {
+	if = {
 		limit = {
 			var:idea_point_pool >= 300
 			has_variable = can_go_naval
+			NOT = {
+				has_variable = naval_idea_completed
+			}
 		}
 		boost_nav_idea_effect = yes
 		national_idea_mdf = yes
 	}
-	else_if = {
+	if = {
 		limit = {
 			var:idea_point_pool >= 300
 			has_variable = can_go_militarization
+			NOT = {
+				has_variable = militarization_idea_completed
+			}
 		}
 		boost_mil_idea_effect = yes
 		national_idea_mdf = yes
 	}
-	else_if = {
+	if = {
 		limit = {
 			var:idea_point_pool >= 300
 			has_variable = can_go_imperialist
+			NOT = {
+				has_variable = imperialist_idea_completed
+			}
 		}
 		boost_imp_idea_effect = yes
 		national_idea_mdf = yes
@@ -646,6 +691,7 @@ ve_ai_uses_culture = {
 				}
 				set_variable = go_next_reform_2
 				set_variable = disable_intellectualy_1
+				set_variable = supremacy_1_on
 				reform_limiter = yes
 				reform_bar_effects = yes
 			}
@@ -687,6 +733,7 @@ ve_ai_uses_culture = {
 					}
 				}
 				set_variable = disable_supremacy_1
+				set_variable = intellectual_1_on
 				set_variable = go_next_reform_2
 				reform_limiter = yes
 				hidden_effect = {
@@ -727,6 +774,7 @@ ve_ai_uses_culture = {
 				}
 				set_variable = disable_intellectualy_2
 				set_variable = go_next_reform_3
+				set_variable = supremacy_2_on
 				reform_limiter = yes
 				hidden_effect = {
 					reform_bar_effects = yes
@@ -757,6 +805,7 @@ ve_ai_uses_culture = {
 					}
 				}
 				set_variable = disable_supremacy_2
+				set_variable = intellectual_2_on
 				set_variable = go_next_reform_3
 				reform_limiter = yes
 				hidden_effect = {
@@ -797,6 +846,7 @@ ve_ai_uses_culture = {
 				}
 				set_variable = disable_intellectualy_3
 				set_variable = go_next_reform_4
+				set_variable = supremacy_3_on
 				reform_limiter = yes
 				hidden_effect = {
 					reform_bar_effects = yes
@@ -827,6 +877,7 @@ ve_ai_uses_culture = {
 					}
 				}
 				set_variable = disable_supremacy_3
+				set_variable = intellectual_3_on
 				set_variable = go_next_reform_4
 				reform_limiter = yes
 				hidden_effect = {
@@ -867,6 +918,7 @@ ve_ai_uses_culture = {
 				}
 				set_variable = disable_intellectualy_4
 				set_variable = go_next_reform_5
+				set_variable = supremacy_4_on
 				reform_limiter = yes
 				hidden_effect = {
 					reform_bar_effects = yes
@@ -897,6 +949,7 @@ ve_ai_uses_culture = {
 					}
 				}
 				set_variable = disable_supremacy_4
+				set_variable = intellectual_4_on
 				set_variable = go_next_reform_5
 				reform_limiter = yes
 				hidden_effect = {
@@ -937,6 +990,7 @@ ve_ai_uses_culture = {
 				}
 				set_variable = disable_intellectualy_5
 				set_variable = go_next_reform_6
+				set_variable = supremacy_5_on
 				reform_limiter = yes
 				hidden_effect = {
 					reform_bar_effects = yes
@@ -967,6 +1021,7 @@ ve_ai_uses_culture = {
 					}
 				}
 				set_variable = disable_supremacy_5
+				set_variable = intellectual_5_on
 				set_variable = go_next_reform_6
 				reform_limiter = yes
 				hidden_effect = {
@@ -1007,6 +1062,7 @@ ve_ai_uses_culture = {
 				}
 				set_variable = disable_intellectualy_6
 				set_variable = go_next_reform_7
+				set_variable = supremacy_6_on
 				reform_limiter = yes
 				hidden_effect = {
 					reform_bar_effects = yes
@@ -1037,6 +1093,7 @@ ve_ai_uses_culture = {
 					}
 				}
 				set_variable = disable_supremacy_6
+				set_variable = intellectual_6_on
 				set_variable = go_next_reform_7
 				reform_limiter = yes
 				hidden_effect = {
@@ -1076,6 +1133,7 @@ ve_ai_uses_culture = {
 					}
 				}
 				set_variable = disable_intellectualy_7
+				set_variable = supremacy_7_on
 				reform_limiter = yes
 				hidden_effect = {
 					reform_bar_effects = yes
@@ -1106,6 +1164,7 @@ ve_ai_uses_culture = {
 					}
 				}
 				set_variable = disable_supremacy_7
+				set_variable = intellectual_7_on
 				reform_limiter = yes
 				hidden_effect = {
 					reform_bar_effects = yes

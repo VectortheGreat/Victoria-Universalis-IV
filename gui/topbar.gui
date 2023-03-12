@@ -242,6 +242,30 @@ types topbar_components
 						}
 				}
 
+				#Idea Point
+				flowcontainer = {
+						minimumsize = { 90 28 }
+						maximumsize = { 90 28 }
+						spacing = 2
+						using = tooltip_below
+						margin_left = 3
+
+						icon = {
+							size = { @secondary_icon_size @secondary_icon_size }
+							texture = "gfx/interface/icon_ideas.dds"
+							parentanchor = vcenter
+						}
+
+						textbox = {
+							parentanchor = vcenter
+							text = "idea_point_topbar"
+							default_format = "#tooltip_header"
+							autoresize = yes
+							align = left|nobaseline
+							margin_left = 2
+						}
+				}
+
 				#Piety
 				flowcontainer = {
 						minimumsize = { 90 28 }
@@ -286,31 +310,8 @@ types topbar_components
 							autoresize = yes
 							align = left|nobaseline
 						}
-				}
+				}			
 				
-				#Idea Point
-				flowcontainer = {
-						minimumsize = { 90 28 }
-						maximumsize = { 90 28 }
-						spacing = 2
-						using = tooltip_below
-						margin_left = 3
-
-						icon = {
-							size = { @secondary_icon_size @secondary_icon_size }
-							texture = "gfx/interface/icon_ideas.dds"
-							parentanchor = vcenter
-						}
-
-						textbox = {
-							parentanchor = vcenter
-							text = "idea_point_topbar"
-							default_format = "#tooltip_header"
-							autoresize = yes
-							align = left|nobaseline
-							margin_left = 2
-						}
-				}
 
 				#Splendor
 				flowcontainer = {

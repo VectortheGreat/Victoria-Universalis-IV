@@ -106,5 +106,6 @@
 		set_national_idea = yes
 		religion_passive_bonuses = yes
 		national_idea_traditions = yes
+		ve_holy_site_effects = yes
 	}
 }

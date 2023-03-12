@@ -343,10 +343,27 @@ ve_age_obj_7 = {
 ve_age_bonus_1 = {
 	scope = country
 	is_shown = {
-		NOT = {
-			OR = {
+		trigger_if = {
+			limit = {
+				has_global_variable = ve_age_1_started
+			}
+			NOT = {
 				has_modifier = age_1_bonus_1
+			}
+		}
+		trigger_else_if = {
+			limit = {
+				has_global_variable = ve_age_2_started
+			}
+			NOT = {
 				has_modifier = age_2_bonus_1
+			}
+		}
+		trigger_else_if = {
+			limit = {
+				has_global_variable = ve_age_3_started
+			}
+			NOT = {
 				has_modifier = age_3_bonus_1
 			}
 		}
@@ -359,9 +376,6 @@ ve_age_bonus_1 = {
 			custom_tooltip = {
 				text = splendor_default_bonus
 				var:ve_splender_points >= 800
-				NOT = {
-					has_modifier = age_1_bonus_1
-				}
 			}
 		}
 		trigger_else_if = {
@@ -371,9 +385,6 @@ ve_age_bonus_1 = {
 			custom_tooltip = {
 				text = splendor_default_bonus
 				var:ve_splender_points >= 800
-				NOT = {
-					has_modifier = age_1_bonus_2
-				}
 			}
 		}
 		trigger_else_if = {
@@ -383,9 +394,6 @@ ve_age_bonus_1 = {
 			custom_tooltip = {
 				text = splendor_default_bonus
 				var:ve_splender_points >= 800
-				NOT = {
-					has_modifier = age_1_bonus_3
-				}
 			}
 		}
 	}
@@ -427,10 +435,27 @@ ve_age_bonus_1 = {
 ve_age_bonus_2 = {
 	scope = country
 	is_shown = {
-		NOT = {
-			OR = {
+		trigger_if = {
+			limit = {
+				has_global_variable = ve_age_1_started
+			}
+			NOT = {
 				has_modifier = age_1_bonus_2
+			}
+		}
+		trigger_else_if = {
+			limit = {
+				has_global_variable = ve_age_2_started
+			}
+			NOT = {
 				has_modifier = age_2_bonus_2
+			}
+		}
+		trigger_else_if = {
+			limit = {
+				has_global_variable = ve_age_3_started
+			}
+			NOT = {
 				has_modifier = age_3_bonus_2
 			}
 		}
@@ -502,10 +527,27 @@ ve_age_bonus_2 = {
 ve_age_bonus_3 = {
 	scope = country
 	is_shown = {
-		NOT = {
-			OR = {
+		trigger_if = {
+			limit = {
+				has_global_variable = ve_age_1_started
+			}
+			NOT = {
 				has_modifier = age_1_bonus_3
+			}
+		}
+		trigger_else_if = {
+			limit = {
+				has_global_variable = ve_age_2_started
+			}
+			NOT = {
 				has_modifier = age_2_bonus_3
+			}
+		}
+		trigger_else_if = {
+			limit = {
+				has_global_variable = ve_age_3_started
+			}
+			NOT = {
 				has_modifier = age_3_bonus_3
 			}
 		}
@@ -577,10 +619,27 @@ ve_age_bonus_3 = {
 ve_age_bonus_4 = {
 	scope = country
 	is_shown = {
-		NOT = {
-			OR = {
+		trigger_if = {
+			limit = {
+				has_global_variable = ve_age_1_started
+			}
+			NOT = {
 				has_modifier = age_1_bonus_4
+			}
+		}
+		trigger_else_if = {
+			limit = {
+				has_global_variable = ve_age_2_started
+			}
+			NOT = {
 				has_modifier = age_2_bonus_4
+			}
+		}
+		trigger_else_if = {
+			limit = {
+				has_global_variable = ve_age_3_started
+			}
+			NOT = {
 				has_modifier = age_3_bonus_4
 			}
 		}
@@ -652,10 +711,27 @@ ve_age_bonus_4 = {
 ve_age_bonus_5 = {
 	scope = country
 	is_shown = {
-		NOT = {
-			OR = {
+		trigger_if = {
+			limit = {
+				has_global_variable = ve_age_1_started
+			}
+			NOT = {
 				has_modifier = age_1_bonus_5
+			}
+		}
+		trigger_else_if = {
+			limit = {
+				has_global_variable = ve_age_2_started
+			}
+			NOT = {
 				has_modifier = age_2_bonus_5
+			}
+		}
+		trigger_else_if = {
+			limit = {
+				has_global_variable = ve_age_3_started
+			}
+			NOT = {
 				has_modifier = age_3_bonus_5
 			}
 		}
@@ -727,10 +803,27 @@ ve_age_bonus_5 = {
 ve_age_bonus_6 = {
 	scope = country
 	is_shown = {
-		NOT = {
-			OR = {
+		trigger_if = {
+			limit = {
+				has_global_variable = ve_age_1_started
+			}
+			NOT = {
 				has_modifier = age_1_bonus_6
+			}
+		}
+		trigger_else_if = {
+			limit = {
+				has_global_variable = ve_age_2_started
+			}
+			NOT = {
 				has_modifier = age_2_bonus_6
+			}
+		}
+		trigger_else_if = {
+			limit = {
+				has_global_variable = ve_age_3_started
+			}
+			NOT = {
 				has_modifier = age_3_bonus_6
 			}
 		}
@@ -802,10 +895,27 @@ ve_age_bonus_6 = {
 ve_age_bonus_7 = {
 	scope = country
 	is_shown = {
-		NOT = {
-			OR = {
+		trigger_if = {
+			limit = {
+				has_global_variable = ve_age_1_started
+			}
+			NOT = {
 				has_modifier = age_1_bonus_7
+			}
+		}
+		trigger_else_if = {
+			limit = {
+				has_global_variable = ve_age_2_started
+			}
+			NOT = {
 				has_modifier = age_2_bonus_7
+			}
+		}
+		trigger_else_if = {
+			limit = {
+				has_global_variable = ve_age_3_started
+			}
+			NOT = {
 				has_modifier = age_3_bonus_7
 			}
 		}
@@ -818,6 +928,7 @@ ve_age_bonus_7 = {
 			custom_tooltip = {
 				text = ve_age_1_bonus_7_tt
 				var:ve_splender_points >= 800
+				exists = c:GBR
 				this = c:GBR
 			}
 		}
@@ -828,6 +939,7 @@ ve_age_bonus_7 = {
 			custom_tooltip = {
 				text = ve_age_2_bonus_7_tt
 				var:ve_splender_points >= 800
+				exists = c:BEL
 				this = c:BEL
 			}
 		}
@@ -883,10 +995,27 @@ ve_age_bonus_7 = {
 ve_age_bonus_8 = {
 	scope = country
 	is_shown = {
-		NOT = {
-			OR = {
+		trigger_if = {
+			limit = {
+				has_global_variable = ve_age_1_started
+			}
+			NOT = {
 				has_modifier = age_1_bonus_8
+			}
+		}
+		trigger_else_if = {
+			limit = {
+				has_global_variable = ve_age_2_started
+			}
+			NOT = {
 				has_modifier = age_2_bonus_8
+			}
+		}
+		trigger_else_if = {
+			limit = {
+				has_global_variable = ve_age_3_started
+			}
+			NOT = {
 				has_modifier = age_3_bonus_8
 			}
 		}
@@ -899,6 +1028,7 @@ ve_age_bonus_8 = {
 			custom_tooltip = {
 				text = ve_age_1_bonus_8_tt
 				var:ve_splender_points >= 800
+				exists = c:NET
 				this = c:NET
 			}
 		}
@@ -909,6 +1039,7 @@ ve_age_bonus_8 = {
 			custom_tooltip = {
 				text = ve_age_2_bonus_8_tt
 				var:ve_splender_points >= 800
+				exists = c:USA
 				this = c:USA
 			}
 		}
@@ -964,10 +1095,27 @@ ve_age_bonus_8 = {
 ve_age_bonus_9 = {
 	scope = country
 	is_shown = {
-		NOT = {
-			OR = {
+		trigger_if = {
+			limit = {
+				has_global_variable = ve_age_1_started
+			}
+			NOT = {
 				has_modifier = age_1_bonus_9
+			}
+		}
+		trigger_else_if = {
+			limit = {
+				has_global_variable = ve_age_2_started
+			}
+			NOT = {
 				has_modifier = age_2_bonus_9
+			}
+		}
+		trigger_else_if = {
+			limit = {
+				has_global_variable = ve_age_3_started
+			}
+			NOT = {
 				has_modifier = age_3_bonus_9
 			}
 		}
@@ -981,8 +1129,14 @@ ve_age_bonus_9 = {
 				text = ve_age_1_bonus_9_tt
 				var:ve_splender_points >= 800
 				OR = {
-					this = c:JAP
-					this = c:TUR
+					AND = {
+						exists = c:JAP
+						this = c:JAP
+					}
+					AND = {
+						exists = c:TUR
+						this = c:TUR
+					}
 				}
 			}
 		}
@@ -993,6 +1147,7 @@ ve_age_bonus_9 = {
 			custom_tooltip = {
 				text = ve_age_2_bonus_9_tt
 				var:ve_splender_points >= 800
+				exists = c:FRA
 				this = c:FRA
 			}
 		}
@@ -1003,6 +1158,7 @@ ve_age_bonus_9 = {
 			custom_tooltip = {
 				text = ve_age_3_bonus_9_tt
 				var:ve_splender_points >= 800
+				exists = c:GER
 				this = c:GER
 			}
 		}
@@ -1045,11 +1201,29 @@ ve_age_bonus_9 = {
 ve_age_bonus_10 = {
 	scope = country
 	is_shown = {
-		NOT = {
-			OR = {
+		trigger_if = {
+			limit = {
+				has_global_variable = ve_age_1_started
+			}
+			NOT = {
 				has_modifier = age_1_bonus_10
+			}
+		}
+		trigger_else_if = {
+			limit = {
+				has_global_variable = ve_age_2_started
+			}
+			NOT = {
 				has_modifier = age_2_bonus_10
+			}
+		}
+		trigger_else_if = {
+			limit = {
+				has_global_variable = ve_age_3_started
+			}
+			NOR = {
 				has_modifier = age_3_bonus_10
+				has_modifier = age_3_bonus_10_2
 			}
 		}
 	}
@@ -1074,6 +1248,7 @@ ve_age_bonus_10 = {
 			custom_tooltip = {
 				text = ve_age_2_bonus_10_tt
 				var:ve_splender_points >= 800
+				exists = c:AUS
 				this = c:AUS
 			}
 		}
@@ -1084,6 +1259,7 @@ ve_age_bonus_10 = {
 			custom_tooltip = {
 				text = ve_age_3_bonus_10_tt
 				var:ve_splender_points >= 800
+				exists = c:GBR
 				this = c:GBR
 			}
 		}
@@ -1137,10 +1313,27 @@ ve_age_bonus_10 = {
 ve_age_bonus_11 = {
 	scope = country
 	is_shown = {
-		NOT = {
-			OR = {
+		trigger_if = {
+			limit = {
+				has_global_variable = ve_age_1_started
+			}
+			NOT = {
 				has_modifier = age_1_bonus_11
+			}
+		}
+		trigger_else_if = {
+			limit = {
+				has_global_variable = ve_age_2_started
+			}
+			NOT = {
 				has_modifier = age_2_bonus_11
+			}
+		}
+		trigger_else_if = {
+			limit = {
+				has_global_variable = ve_age_3_started
+			}
+			NOT = {
 				has_modifier = age_3_bonus_11
 			}
 		}
@@ -1153,7 +1346,7 @@ ve_age_bonus_11 = {
 			custom_tooltip = {
 				text = ve_age_1_bonus_11_tt
 				var:ve_splender_points >= 800
-				OR = { 
+				OR = {
 					country_has_primary_culture = cu:north_german
 					country_has_primary_culture = cu:south_german
 				}
@@ -1166,6 +1359,7 @@ ve_age_bonus_11 = {
 			custom_tooltip = {
 				text = ve_age_2_bonus_11_tt
 				var:ve_splender_points >= 800
+				exists = c:RUS
 				this = c:RUS
 			}
 		}
@@ -1176,6 +1370,7 @@ ve_age_bonus_11 = {
 			custom_tooltip = {
 				text = ve_age_3_bonus_11_tt
 				var:ve_splender_points >= 800
+				exists = c:RUS
 				this = c:RUS
 			}
 		}

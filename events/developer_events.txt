@@ -1,23 +1,20 @@
 ﻿namespace = dev
 dev.1 = {
+	#Point
 	type = country_event
 	event_image = {
-		video = "gfx/event_pictures/middleeast_oil_derricks.bk2"
+		video = "gfx/event_pictures/unspecific_military_parade.bk2"
 	}
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
-	on_opened_soundeffect = "event:/SFX/Events/unspecific/world_fair"
+	on_opened_soundeffect = "event:/SFX/Events/unspecific/military_parade"
 	icon = "gfx/interface/icons/event_icons/event_portrait.dds"
 	title = dev.1.t
-	desc = dev.1.d
-	flavor = dev.1.f
-	duration = 0
+	desc = dev.1.desc
+	duration = 1
+	popup = yes
 	option = {
 		name = dev.1.a
 		default_option = yes
-		change_variable = {
-			name = idea_point_pool
-			add = 99999
-		}
 		if = {
 			limit = {
 				NOT = {
@@ -33,14 +30,14 @@ dev.1 = {
 			limit = {
 				var:idea_point_pool < 999
 			}
-		}
-		change_variable = {
-			name = idea_point_pool
-			add = 999
+			change_variable = {
+				name = idea_point_pool
+				add = 300
+			}
 		}
 	}
 	option = {
-		name = deb.1.b
+		name = dev.1.b
 		if = {
 			limit = {
 				NOT = {
@@ -63,7 +60,7 @@ dev.1 = {
 		}
 	}
 	option = {
-		name = deb.1.c
+		name = dev.1.c
 		if = {
 			limit = {
 				NOT = {
@@ -81,12 +78,12 @@ dev.1 = {
 			}
 			change_variable = {
 				name = piety_bar_point
-				add = 10000
+				add = 100
 			}
 		}
 	}
 	option = {
-		name = deb.1.d
+		name = dev.1.d
 		if = {
 			limit = {
 				NOT = {
@@ -109,7 +106,7 @@ dev.1 = {
 		}
 	}
 	option = {
-		name = deb.1.e
+		name = dev.1.e
 		if = {
 			limit = {
 				NOT = {
@@ -132,7 +129,7 @@ dev.1 = {
 		}
 	}
 	option = {
-		name = deb.1.f
+		name = dev.1.f
 		if = {
 			limit = {
 				NOT = {
@@ -155,7 +152,7 @@ dev.1 = {
 		}
 	}
 	option = {
-		name = deb.1.g
+		name = dev.1.g
 		if = {
 			limit = {
 				NOT = {
@@ -167,13 +164,18 @@ dev.1 = {
 				value = 0
 			}
 		}
-		change_variable = {
-			name = ve_splender_points
-			add = 8000
+		if = {
+			limit = {
+				var:culture_reform_point < 1000
+			}
+			change_variable = {
+				name = ve_splender_points
+				add = 800
+			}
 		}
 	}
 	option = {
-		name = deb.1.h
+		name = dev.1.h
 		if = {
 			limit = {
 				NOT = {
@@ -185,14 +187,20 @@ dev.1 = {
 				value = 0
 			}
 		}
-		change_variable = {
-			name = ve_splender_points
-			subtract = 800
+		if = {
+			limit = {
+				var:culture_reform_point > 0
+			}
+			change_variable = {
+				name = ve_splender_points
+				subtract = 800
+			}
 		}
 	}
 }
 
 dev.2 = {
+	#Developer Work Event - Not for users
 	type = country_event
 	event_image = {
 		video = "gfx/event_pictures/middleeast_oil_derricks.bk2"
@@ -210,10 +218,9 @@ dev.2 = {
 	option = {
 		name = dev.2.a
 		default_option = yes
-		set_variable = {
-			name = idea_group_cap
-			value = 8
-		}
+		set_global_variable = ve_age_3_started
+		remove_global_variable = ve_age_1_started
+		remove_global_variable = ve_age_2_started
 	}
 	option = {
 		name = dev.2.b
@@ -231,56 +238,109 @@ dev.2 = {
 	}
 	option = {
 		name = dev.2.c
-		ve_ai_choose_idea = yes
-		ve_ai_boost_idea = yes
-		ve_ai_uses_religion = yes
-		ve_ai_uses_culture = yes
-		ve_ai_uses_age_bonuses = yes
+		ve_holy_site_effects = yes
+		# ve_ai_boost_idea = yes
+		# ve_ai_choose_idea = yes
+		# ve_ai_uses_religion = yes
+		# ve_ai_uses_culture = yes
+		# ve_ai_uses_age_bonuses = yes
 	}
 	option = {
 		name = dev.2.d
-		# set_global_variable = ve_age_1_started
-		# remove_global_variable = ve_age_3_started
-		# remove_global_variable = ve_age_2_started
+		set_variable = {
+			name = idea_point_pool
+			value = 0
+		}
+		set_variable = {
+			name = piety_bar_point
+			value = 0
+		}
+		set_variable = {
+			name = culture_reform_point
+			value = 0
+		}
+		set_variable = {
+			name = ve_splender_points
+			value = 0
+		}
 	}
 }
 
 dev.3 = {
 	type = country_event
 	event_image = {
-		video = "gfx/event_pictures/middleeast_oil_derricks.bk2"
+		video = "gfx/event_pictures/unspecific_trains.bk2"
 	}
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
-	on_opened_soundeffect = "event:/SFX/Events/unspecific/world_fair"
+	on_opened_soundeffect = "event:/SFX/Events/unspecific/trains"
 	icon = "gfx/interface/icons/event_icons/event_portrait.dds"
-	title = dev.1.t
-	desc = dev.1.d
-	flavor = dev.1.f
-	duration = 0
-	option = {
-		name = dev.2.a
-		default_option = yes
-		remove_variable = idea_cap_2_setted
-		remove_variable = idea_cap_3_setted
+	title = dev.3.t
+	desc = dev.3.d
+	flavor = dev.3.f
+	duration = 1
+	popup = yes
+	immediate = {
+		set_global_variable = dev_3_triggered
+	}
+	trigger = {
+		is_ai = no
+		NOT = {
+			has_global_variable = dev_3_triggered
+		}
 	}
 	option = {
-		name = dev.2.a
-		default_option = yes
-		change_tag = GER
+		name = dev.3.a
+		if = {
+			limit = {
+				has_global_variable = ve_medium
+			}
+			remove_global_variable = ve_medium
+		}
+		if = {
+			limit = {
+				has_global_variable = ve_medium
+			}
+			remove_global_variable = ve_hard
+		}
+		set_global_variable = ve_easy
 	}
 	option = {
-		name = dev.2.a
+		name = dev.3.b
 		default_option = yes
-		change_tag = NGF
+		if = {
+			limit = {
+				has_global_variable = ve_easy
+			}
+			remove_global_variable = ve_easy
+		}
+		if = {
+			limit = {
+				has_global_variable = ve_hard
+			}
+			remove_global_variable = ve_hard
+		}
+		set_global_variable = ve_medium
 	}
 	option = {
-		name = dev.2.a
-		default_option = yes
-		change_tag = SGF
+		name = dev.3.c
+		if = {
+			limit = {
+				has_global_variable = ve_easy
+			}
+			remove_global_variable = ve_easy
+		}
+		if = {
+			limit = {
+				has_global_variable = ve_medium
+			}
+			remove_global_variable = ve_medium
+		}
+		set_global_variable = ve_hard
 	}
 }
 
 dev.4 = {
+	#Monthly Event
 	type = country_event
 	event_image = {
 		video = "gfx/event_pictures/middleeast_oil_derricks.bk2"
@@ -292,11 +352,8 @@ dev.4 = {
 	desc = dev.4.d
 	flavor = dev.4.f
 	duration = 0
-	hidden = yes
+	# hidden = yes
 	immediate = {
-		ve_monthly_points = yes
-		ve_monthly_splendor_points = yes
-		ve_idea_cap_effects = yes
 		if = {
 			#For released countries
 			limit = {
@@ -312,7 +369,12 @@ dev.4 = {
 			religion_passive_bonuses = yes
 			national_idea_traditions = yes
 		}
+		ve_monthly_points = yes
+		ve_monthly_splendor_points = yes
+		ve_idea_cap_effects = yes
+		ve_holy_site_effects = yes
 		if = {
+			#For AI
 			limit = {
 				is_ai = yes
 			}
@@ -330,6 +392,7 @@ dev.4 = {
 }
 
 dev.5 = {
+	#Imperial Age 
 	type = country_event
 	event_image = {
 		video = "gfx/event_pictures/middleeast_oil_derricks.bk2"
@@ -435,6 +498,7 @@ dev.5 = {
 }
 
 dev.6 = {
+	#The Last Age
 	type = country_event
 	event_image = {
 		video = "gfx/event_pictures/middleeast_oil_derricks.bk2"

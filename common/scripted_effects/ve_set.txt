@@ -787,6 +787,7 @@ religion_passive_bonuses = {
 national_idea_traditions = {
 	if = {
 		limit = {
+			exists = c:GBR
 			this = c:GBR
 		}
 		if = {
@@ -808,6 +809,7 @@ national_idea_traditions = {
 	}
 	else_if = {
 		limit = {
+			exists = c:FRA
 			this = c:FRA
 		}
 		if = {
@@ -829,8 +831,8 @@ national_idea_traditions = {
 	}
 	else_if = {
 		limit = {
-			this = c:GER
 			exists = c:GER
+			this = c:GER
 		}
 		if = {
 			limit = {
@@ -851,8 +853,8 @@ national_idea_traditions = {
 	}
 	else_if = {
 		limit = {
-			this = c:PRU
 			exists = c:PRU
+			this = c:PRU
 		}
 		if = {
 			limit = {
@@ -873,8 +875,8 @@ national_idea_traditions = {
 	}
 	else_if = {
 		limit = {
-			this = c:NGF
 			exists = c:NGF
+			this = c:NGF
 		}
 		if = {
 			limit = {
@@ -895,8 +897,8 @@ national_idea_traditions = {
 	}
 	else_if = {
 		limit = {
-			this = c:SGF
 			exists = c:SGF
+			this = c:SGF
 		}
 		if = {
 			limit = {
@@ -917,6 +919,7 @@ national_idea_traditions = {
 	}
 	else_if = {
 		limit = {
+			exists = c:AUS
 			this = c:AUS
 		}
 		if = {
@@ -938,6 +941,7 @@ national_idea_traditions = {
 	}
 	else_if = {
 		limit = {
+			exists = c:RUS
 			this = c:RUS
 		}
 		if = {
@@ -959,6 +963,7 @@ national_idea_traditions = {
 	}
 	else_if = {
 		limit = {
+			exists = c:TUR
 			this = c:TUR
 		}
 		if = {
@@ -980,6 +985,7 @@ national_idea_traditions = {
 	}
 	else_if = {
 		limit = {
+			exists = c:CHI
 			this = c:CHI
 		}
 		if = {
@@ -1001,6 +1007,7 @@ national_idea_traditions = {
 	}
 	else_if = {
 		limit = {
+			exists = c:JAP
 			this = c:JAP
 		}
 		if = {
@@ -1022,6 +1029,7 @@ national_idea_traditions = {
 	}
 	else_if = {
 		limit = {
+			exists = c:USA
 			this = c:USA
 		}
 		if = {
