@@ -1,5 +1,10 @@
 ve_supremacy_1 = {
 	scope = country
+	is_shown = {
+		NOT = {
+			has_variable = supremacy_1_on
+		}
+	}
 	is_valid = {
 		custom_tooltip = {
 			text = ve_culture_reform_cost_tt
@@ -57,6 +62,7 @@ ve_supremacy_1 = {
 			}
 			set_variable = go_next_reform_2
 			set_variable = disable_intellectualy_1
+			set_variable = supremacy_1_on
 			reform_limiter = yes
 			reform_bar_effects = yes
 		}
@@ -73,6 +79,11 @@ ve_supremacy_1 = {
 
 ve_supremacy_2 = {
 	scope = country
+	is_shown = {
+		NOT = {
+			has_variable = supremacy_2_on
+		}
+	}
 	is_valid = {
 		custom_tooltip = {
 			text = ve_culture_reform_cost_tt
@@ -115,6 +126,7 @@ ve_supremacy_2 = {
 			}
 			set_variable = disable_intellectualy_2
 			set_variable = go_next_reform_3
+			set_variable = supremacy_2_on
 			reform_limiter = yes
 			hidden_effect = {
 				reform_bar_effects = yes
@@ -133,6 +145,11 @@ ve_supremacy_2 = {
 
 ve_supremacy_3 = {
 	scope = country
+	is_shown = {
+		NOT = {
+			has_variable = supremacy_3_on
+		}
+	}
 	is_valid = {
 		custom_tooltip = {
 			text = ve_culture_reform_cost_tt
@@ -175,6 +192,7 @@ ve_supremacy_3 = {
 			}
 			set_variable = disable_intellectualy_3
 			set_variable = go_next_reform_4
+			set_variable = supremacy_3_on
 			reform_limiter = yes
 			hidden_effect = {
 				reform_bar_effects = yes
@@ -193,6 +211,11 @@ ve_supremacy_3 = {
 
 ve_supremacy_4 = {
 	scope = country
+	is_shown = {
+		NOT = {
+			has_variable = supremacy_4_on
+		}
+	}
 	is_valid = {
 		custom_tooltip = {
 			text = ve_culture_reform_cost_tt
@@ -235,6 +258,7 @@ ve_supremacy_4 = {
 			}
 			set_variable = disable_intellectualy_4
 			set_variable = go_next_reform_5
+			set_variable = supremacy_4_on
 			reform_limiter = yes
 			hidden_effect = {
 				reform_bar_effects = yes
@@ -253,6 +277,11 @@ ve_supremacy_4 = {
 
 ve_supremacy_5 = {
 	scope = country
+	is_shown = {
+		NOT = {
+			has_variable = supremacy_5_on
+		}
+	}
 	is_valid = {
 		custom_tooltip = {
 			text = ve_culture_reform_cost_tt
@@ -295,6 +324,7 @@ ve_supremacy_5 = {
 			}
 			set_variable = disable_intellectualy_5
 			set_variable = go_next_reform_6
+			set_variable = supremacy_5_on
 			reform_limiter = yes
 			hidden_effect = {
 				reform_bar_effects = yes
@@ -313,6 +343,11 @@ ve_supremacy_5 = {
 
 ve_supremacy_6 = {
 	scope = country
+	is_shown = {
+		NOT = {
+			has_variable = supremacy_6_on
+		}
+	}
 	is_valid = {
 		custom_tooltip = {
 			text = ve_culture_reform_cost_tt
@@ -355,6 +390,7 @@ ve_supremacy_6 = {
 			}
 			set_variable = disable_intellectualy_6
 			set_variable = go_next_reform_7
+			set_variable = supremacy_6_on
 			reform_limiter = yes
 			hidden_effect = {
 				reform_bar_effects = yes
@@ -373,6 +409,11 @@ ve_supremacy_6 = {
 
 ve_supremacy_7 = {
 	scope = country
+	is_shown = {
+		NOT = {
+			has_variable = supremacy_7_on
+		}
+	}
 	is_valid = {
 		custom_tooltip = {
 			text = ve_culture_reform_cost_tt
@@ -414,6 +455,7 @@ ve_supremacy_7 = {
 				}
 			}
 			set_variable = disable_intellectualy_7
+			set_variable = supremacy_7_on
 			reform_limiter = yes
 			hidden_effect = {
 				reform_bar_effects = yes
@@ -432,6 +474,11 @@ ve_supremacy_7 = {
 
 ve_intellectualy_1 = {
 	scope = country
+	is_shown = {
+		NOT = {
+			has_variable = intellectual_1_on
+		}
+	}
 	is_valid = {
 		custom_tooltip = {
 			text = ve_culture_reform_cost_tt
@@ -486,6 +533,7 @@ ve_intellectualy_1 = {
 			}
 			set_variable = disable_supremacy_1
 			set_variable = go_next_reform_2
+			set_variable = intellectual_1_on
 			reform_limiter = yes
 			hidden_effect = {
 				reform_bar_effects = yes
@@ -504,6 +552,11 @@ ve_intellectualy_1 = {
 
 ve_intellectualy_2 = {
 	scope = country
+	is_shown = {
+		NOT = {
+			has_variable = intellectual_2_on
+		}
+	}
 	is_valid = {
 		custom_tooltip = {
 			text = ve_culture_reform_cost_tt
@@ -546,6 +599,7 @@ ve_intellectualy_2 = {
 			}
 			set_variable = disable_supremacy_2
 			set_variable = go_next_reform_3
+			set_variable = intellectual_2_on
 			reform_limiter = yes
 			hidden_effect = {
 				reform_bar_effects = yes
@@ -564,6 +618,11 @@ ve_intellectualy_2 = {
 
 ve_intellectualy_3 = {
 	scope = country
+	is_shown = {
+		NOT = {
+			has_variable = intellectual_3_on
+		}
+	}
 	is_valid = {
 		custom_tooltip = {
 			text = ve_culture_reform_cost_tt
@@ -606,6 +665,7 @@ ve_intellectualy_3 = {
 			}
 			set_variable = disable_supremacy_3
 			set_variable = go_next_reform_4
+			set_variable = intellectual_3_on
 			reform_limiter = yes
 			hidden_effect = {
 				reform_bar_effects = yes
@@ -624,6 +684,11 @@ ve_intellectualy_3 = {
 
 ve_intellectualy_4 = {
 	scope = country
+	is_shown = {
+		NOT = {
+			has_variable = intellectual_4_on
+		}
+	}
 	is_valid = {
 		custom_tooltip = {
 			text = ve_culture_reform_cost_tt
@@ -666,6 +731,7 @@ ve_intellectualy_4 = {
 			}
 			set_variable = disable_supremacy_4
 			set_variable = go_next_reform_5
+			set_variable = intellectual_4_on
 			reform_limiter = yes
 			hidden_effect = {
 				reform_bar_effects = yes
@@ -684,6 +750,11 @@ ve_intellectualy_4 = {
 
 ve_intellectualy_5 = {
 	scope = country
+	is_shown = {
+		NOT = {
+			has_variable = intellectual_5_on
+		}
+	}
 	is_valid = {
 		custom_tooltip = {
 			text = ve_culture_reform_cost_tt
@@ -726,6 +797,7 @@ ve_intellectualy_5 = {
 			}
 			set_variable = disable_supremacy_5
 			set_variable = go_next_reform_6
+			set_variable = intellectual_5_on
 			reform_limiter = yes
 			hidden_effect = {
 				reform_bar_effects = yes
@@ -744,6 +816,11 @@ ve_intellectualy_5 = {
 
 ve_intellectualy_6 = {
 	scope = country
+	is_shown = {
+		NOT = {
+			has_variable = intellectual_6_on
+		}
+	}
 	is_valid = {
 		custom_tooltip = {
 			text = ve_culture_reform_cost_tt
@@ -786,6 +863,7 @@ ve_intellectualy_6 = {
 			}
 			set_variable = disable_supremacy_6
 			set_variable = go_next_reform_7
+			set_variable = intellectual_6_on
 			reform_limiter = yes
 			hidden_effect = {
 				reform_bar_effects = yes
@@ -804,6 +882,11 @@ ve_intellectualy_6 = {
 
 ve_intellectualy_7 = {
 	scope = country
+	is_shown = {
+		NOT = {
+			has_variable = intellectual_7_on
+		}
+	}
 	is_valid = {
 		custom_tooltip = {
 			text = ve_culture_reform_cost_tt
@@ -845,6 +928,7 @@ ve_intellectualy_7 = {
 				}
 			}
 			set_variable = disable_supremacy_7
+			set_variable = intellectual_7_on
 			reform_limiter = yes
 			hidden_effect = {
 				reform_bar_effects = yes

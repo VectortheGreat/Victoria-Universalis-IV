@@ -1,7 +1,7 @@
 catholic_pasive_mdf = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_gear_positive.dds
 	state_loyalists_from_sol_change_accepted_religion_mult = 0.05
-	state_conversion_mult = 0.1
+	state_conversion_mult = 0.2
 }
 
 catholic_aspect_1_mdf = {
@@ -23,7 +23,7 @@ catholic_aspect_3_mdf = {
 catholic_aspect_4_mdf = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_gear_positive.dds
 	unit_army_offense_add = 5
-	unit_army_offense_mult = 0.1
+	unit_army_offense_mult = 0.075
 }
 
 catholic_aspect_5_mdf = {
@@ -57,7 +57,7 @@ protestant_pasive_mdf = {
 protestant_aspect_1_mdf = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_gear_positive.dds
 	unit_morale_damage_mult = 0.1
-	unit_morale_protection_mult = 0.2
+	unit_morale_protection_mult = 0.15
 }
 
 protestant_aspect_2_mdf = {
@@ -68,13 +68,13 @@ protestant_aspect_2_mdf = {
 
 protestant_aspect_3_mdf = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_gear_positive.dds
-	country_bureaucracy_mult = 0.15
+	country_bureaucracy_mult = 0.075
 }
 
 protestant_aspect_4_mdf = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_gear_positive.dds
-	state_colony_growth_creation_mult = 0.15
-	state_colony_growth_speed_mult = 0.15
+	state_colony_growth_creation_mult = 0.1
+	state_colony_growth_speed_mult = 0.1
 }
 
 protestant_aspect_5_mdf = {
@@ -85,7 +85,7 @@ protestant_aspect_5_mdf = {
 
 protestant_aspect_6_mdf = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_gear_positive.dds
-	state_education_access_add = 0.1
+	state_education_access_add = 0.05
 }
 
 protestant_aspect_7_mdf = {
@@ -112,19 +112,19 @@ orthodox_aspect_1_mdf = {
 
 orthodox_aspect_2_mdf = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_gear_positive.dds
-	state_birth_rate_mult = 0.2
+	state_birth_rate_mult = 0.05
 }
 
 orthodox_aspect_3_mdf = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_gear_positive.dds
-	country_society_tech_cost_mult = -0.05
-	country_production_tech_cost_mult = -0.05
-	country_military_tech_cost_mult = -0.05
+	country_society_tech_cost_mult = -0.03
+	country_production_tech_cost_mult = -0.03
+	country_military_tech_cost_mult = -0.03
 }
 
 orthodox_aspect_4_mdf = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_gear_positive.dds
-	unit_army_offense_mult = 0.1
+	unit_army_offense_mult = 0.075
 	state_conscription_rate_mult = 0.2
 }
 
@@ -136,29 +136,29 @@ orthodox_aspect_5_mdf = {
 
 orthodox_aspect_6_mdf = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_gear_positive.dds
-	state_turmoil_effects_mult = 0.1
+	state_turmoil_effects_mult = -0.1
 }
 
 orthodox_aspect_7_mdf = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_gear_positive.dds
-	state_conversion_mult = 0.15
+	state_conversion_mult = 0.25
 	interest_group_ig_devout_approval_add = 1
 }
 
 orthodox_aspect_8_mdf = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_gear_positive.dds
-	state_tax_waste_add = 0.15
+	state_tax_waste_add = -0.15
 }
 
 coptic_pasive_mdf = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_gear_positive.dds
 	state_loyalists_from_sol_change_accepted_religion_mult = 0.05
-	battle_defense_owned_province_mult = 0.2
+	battle_defense_owned_province_mult = 0.15
 }
 
 coptic_aspect_1_mdf = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_gear_positive.dds
-	country_bureaucracy_investment_cost_factor_mult = -0.15
+	country_bureaucracy_investment_cost_factor_mult = -0.075
 }
 
 coptic_aspect_2_mdf = {
@@ -175,7 +175,7 @@ coptic_aspect_3_mdf = {
 
 coptic_aspect_4_mdf = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_gear_positive.dds
-	state_conversion_mult = 0.15
+	state_conversion_mult = 0.25
 	interest_group_ig_devout_approval_add = 1
 }
 
@@ -196,8 +196,7 @@ coptic_aspect_7_mdf = {
 
 coptic_aspect_8_mdf = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_gear_positive.dds
-	state_conversion_mult = 0.075
-	state_assimilation_mult = -0.075
+	state_assimilation_mult = 0.25
 }
 
 sunni_pasive_mdf = {
@@ -208,7 +207,7 @@ sunni_pasive_mdf = {
 
 sunni_aspect_1_mdf = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_gear_positive.dds
-	country_society_tech_cost_mult = -0.1
+	country_society_tech_cost_mult = -0.05
 }
 
 sunni_aspect_2_mdf = {
@@ -219,24 +218,24 @@ sunni_aspect_2_mdf = {
 
 sunni_aspect_3_mdf = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_gear_positive.dds
-	country_infamy_generation_mult = -0.15
+	country_infamy_generation_mult = -0.1
 }
 
 sunni_aspect_4_mdf = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_gear_positive.dds
-	country_army_power_projection_mult = 0.1
+	country_army_power_projection_mult = 0.05
 }
 
 sunni_aspect_5_mdf = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_gear_positive.dds
-	state_education_access_add = 0.1
+	state_education_access_add = 0.05
 	building_university_throughput_mult = 0.15
 }
 
 sunni_aspect_6_mdf = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_gear_positive.dds
-	country_bureaucracy_mult = 0.1
-	country_law_enactment_time_mult = 0.1
+	country_bureaucracy_mult = 0.075
+	country_law_enactment_time_mult = -0.1
 }
 
 sunni_aspect_7_mdf = {
@@ -258,19 +257,18 @@ shia_pasive_mdf = {
 
 shia_aspect_1_mdf = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_gear_positive.dds
-	country_military_tech_cost_mult = -0.1
+	country_military_tech_cost_mult = -0.05
 }
 
 shia_aspect_2_mdf = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_gear_positive.dds
+	unit_supply_consumption_mult = -0.1
 	unit_morale_protection_mult = 0.1
-	unit_supply_consumption_mult = 0.1
 }
 
 shia_aspect_3_mdf = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_gear_positive.dds
-	state_conversion_mult = 0.15
-	interest_group_ig_devout_approval_add = 1
+	state_conversion_mult = 0.33
 }
 
 shia_aspect_4_mdf = {
@@ -292,7 +290,7 @@ shia_aspect_6_mdf = {
 
 shia_aspect_7_mdf = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_gear_positive.dds
-	country_bureaucracy_mult = 0.1
+	country_bureaucracy_mult = 0.075
 	country_law_enactment_time_mult = -0.1
 }
 
@@ -304,7 +302,7 @@ shia_aspect_8_mdf = {
 jewish_pasive_mdf = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_gear_positive.dds
 	state_loyalists_from_sol_change_accepted_religion_mult = 0.05
-	country_bureaucracy_mult = 0.1
+	country_bureaucracy_mult = 0.075
 }
 
 jewish_aspect_1_mdf = {
@@ -316,7 +314,7 @@ jewish_aspect_1_mdf = {
 
 jewish_aspect_2_mdf = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_gear_positive.dds
-	country_influence_add = 0.1
+	country_influence_add = 150
 	country_diplomatic_play_maneuvers_add = 10
 }
 
@@ -335,7 +333,7 @@ jewish_aspect_4_mdf = {
 jewish_aspect_5_mdf = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_gear_positive.dds
 	state_urbanization_mult = 0.1
-	state_accepted_birth_rate_mult = 0.1
+	state_accepted_birth_rate_mult = 0.05
 }
 
 jewish_aspect_6_mdf = {
@@ -346,8 +344,8 @@ jewish_aspect_6_mdf = {
 
 jewish_aspect_7_mdf = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_gear_positive.dds
-	market_max_exports_add = 10
-	state_capitalists_investment_pool_contribution_mult = 0.25
+	country_loan_interest_rate_mult = -0.2
+	state_capitalists_investment_pool_contribution_mult = 0.2
 }
 
 jewish_aspect_8_mdf = {
@@ -369,13 +367,13 @@ mahayana_aspect_1_mdf = {
 
 mahayana_aspect_2_mdf = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_gear_positive.dds
-	state_bureaucracy_population_base_cost_factor_mult = -0.1
+	state_bureaucracy_population_base_cost_factor_mult = -0.075
 }
 
 mahayana_aspect_3_mdf = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_gear_positive.dds
 	country_legitimacy_govt_size_add = 10
-	country_law_enactment_time_mult = 0.1
+	country_law_enactment_time_mult = -0.1
 }
 
 mahayana_aspect_4_mdf = {
@@ -386,7 +384,7 @@ mahayana_aspect_4_mdf = {
 
 mahayana_aspect_5_mdf = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_gear_positive.dds
-	country_society_tech_cost_mult = -0.1
+	country_society_tech_cost_mult = -0.05
 }
 
 mahayana_aspect_6_mdf = {
@@ -397,8 +395,7 @@ mahayana_aspect_6_mdf = {
 
 mahayana_aspect_7_mdf = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_gear_positive.dds
-	state_education_access_add = 0.15
-	country_voting_power_from_literacy_add = 10
+	state_education_access_add = 0.05
 }
 
 mahayana_aspect_8_mdf = {
@@ -415,19 +412,19 @@ hindu_pasive_mdf = {
 hindu_aspect_1_mdf = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_gear_positive.dds
 	country_influence_mult = 0.1
-	country_improve_relations_speed_mult = 0.15
+	country_improve_relations_speed_mult = 0.1
 }
 
 hindu_aspect_2_mdf = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_gear_positive.dds
 	state_construction_mult = 0.1
-	country_loan_interest_rate_mult = -0.2
+	country_loan_interest_rate_mult = -0.05
 }
 
 hindu_aspect_3_mdf = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_gear_positive.dds
 	unit_army_offense_add = 5
-	battle_casualties_mult = 0.1
+	battle_casualties_mult = -0.1
 }
 
 hindu_aspect_4_mdf = {
@@ -445,12 +442,12 @@ hindu_aspect_5_mdf = {
 hindu_aspect_6_mdf = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_gear_positive.dds
 	battle_defense_owned_province_mult = 0.15
-	state_conversion_mult = 0.1
+	state_conversion_mult = 0.25
 }
 
 hindu_aspect_7_mdf = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_gear_positive.dds
-	country_bureaucracy_mult = 0.1
+	country_bureaucracy_mult = 0.075
 	state_education_access_wealth_add = 0.05
 }
 
@@ -473,8 +470,8 @@ sikh_aspect_1_mdf = {
 
 sikh_aspect_2_mdf = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_gear_positive.dds
-	country_production_tech_cost_mult = -0.1
-	country_resource_depletion_chance_mult = 0.2
+	country_production_tech_cost_mult = -0.05
+	country_resource_depletion_chance_mult = -0.2
 }
 
 sikh_aspect_3_mdf = {
@@ -508,7 +505,7 @@ sikh_aspect_7_mdf = {
 
 sikh_aspect_8_mdf = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_gear_positive.dds
-	country_infamy_generation_mult = 0.1
+	country_infamy_generation_mult = -0.1
 }
 
 animist_pasive_mdf = {
@@ -532,12 +529,12 @@ animist_aspect_2_mdf = {
 animist_aspect_3_mdf = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_gear_positive.dds
 	country_war_exhaustion_casualties_mult = -0.15
-	unit_supply_consumption_mult = 0.1
+	unit_supply_consumption_mult = -0.1
 }
 
 animist_aspect_4_mdf = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_gear_positive.dds
-	country_authority_mult = 0.15
+	country_authority_mult = 0.05
 	country_legitimacy_base_add = 10
 }
 
@@ -548,8 +545,8 @@ animist_aspect_5_mdf = {
 
 animist_aspect_6_mdf = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_gear_positive.dds
-	state_conversion_mult = 0.1
-	state_assimilation_mult = 0.1
+	state_conversion_mult = 0.25
+	state_assimilation_mult = 0.25
 }
 
 animist_aspect_7_mdf = {

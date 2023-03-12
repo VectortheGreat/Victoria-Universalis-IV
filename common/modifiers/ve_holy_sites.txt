@@ -1,6 +1,6 @@
 roma_hs_mdf = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_coins_positive.dds
-	state_urbanization_mult = 0.2
+	state_urbanization_mult = 0.1
 }
 
 cologne_hs_mdf = {
@@ -45,12 +45,12 @@ constantinople_hs_mdf = {
 
 alexandria_hs_mdf = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_coins_positive.dds
-	state_education_access_add = 0.15
+	state_education_access_add = 0.05
 }
 
 antioch_hs_mdf = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_coins_positive.dds
-	unit_army_defense_add = 0.15
+	unit_army_defense_add = 10
 }
 
 yerevan_hs_mdf = {
@@ -60,7 +60,7 @@ yerevan_hs_mdf = {
 
 aksum_hs_mdf = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_coins_positive.dds
-	country_infamy_generation_mult = -0.15
+	country_infamy_generation_mult = -0.1
 }
 
 medina_hs_mdf = {
@@ -70,12 +70,12 @@ medina_hs_mdf = {
 
 baghdad_hs_mdf = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_coins_positive.dds
-	state_education_access_add = 0.15
+	state_education_access_add = 0.05
 }
 
 damascus_hs_mdf = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_coins_positive.dds
-	country_authority_mult = 0.15
+	country_authority_mult = 0.1
 }
 
 maidane_naqshe_jahan_hs_mdf = {
@@ -95,12 +95,12 @@ semien_hs_mdf = {
 
 sanchi_hs_mdf = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_coins_positive.dds
-	country_influence_mult = 0.15
+	country_influence_mult = 0.1
 }
 
 yanzhou_hs_mdf = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_coins_positive.dds
-	country_society_tech_cost_mult = -0.1
+	country_society_tech_cost_mult = -0.05
 }
 
 pagan_hs_mdf = {
@@ -115,7 +115,7 @@ ise_grand_shrine_hs_mdf = {
 
 lumbini_hs_mdf = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_coins_positive.dds
-	state_accepted_birth_rate_mult = 0.2
+	state_accepted_birth_rate_mult = 0.05
 }
 
 mathura_hs_mdf = {
@@ -125,7 +125,7 @@ mathura_hs_mdf = {
 
 varanasi_hs_mdf = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_coins_positive.dds
-	state_education_access_add = 0.15
+	state_education_access_add = 0.05
 }
 
 ayodhya_hs_mdf = {

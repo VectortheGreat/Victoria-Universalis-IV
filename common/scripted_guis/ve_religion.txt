@@ -1291,18 +1291,16 @@ ve_holy_site_2 = {
 			limit = {
 				religion = rel:catholic
 			}
-			add_modifier = {
-				name = cologne_hs_mdf
-				months = -1
+			custom_tooltip = {
+				text = ve_holy_site_piety_tt
 			}
 		}
 		else_if = {
 			limit = {
 				religion = rel:protestant
 			}
-			add_modifier = {
-				name = cologne_hs_mdf
-				months = -1
+			custom_tooltip = {
+				text = ve_holy_site_piety_tt
 			}
 		}
 		else_if = {
@@ -1495,18 +1493,16 @@ ve_holy_site_3 = {
 			limit = {
 				religion = rel:sunni
 			}
-			add_modifier = {
-				name = medina_hs_mdf
-				months = -1
+			custom_tooltip = {
+				text = ve_holy_site_piety_tt
 			}
 		}
 		else_if = {
 			limit = {
 				religion = rel:shiite
 			}
-			add_modifier = {
-				name = medina_hs_mdf
-				months = -1
+			custom_tooltip = {
+				text = ve_holy_site_piety_tt
 			}
 		}
 		else_if = {
@@ -1536,9 +1532,8 @@ ve_holy_site_3 = {
 			limit = {
 				religion = rel:hindu
 			}
-			add_modifier = {
-				name = ayodhya_hs_mdf
-				months = -1
+			custom_tooltip = {
+				text = ve_holy_site_piety_tt
 			}
 		}
 		else_if = {
@@ -1866,9 +1861,8 @@ ve_holy_site_5 = {
 			limit = {
 				religion = rel:sikh
 			}
-			add_modifier = {
-				name = gomateshwara_statue_hs_mdf
-				months = -1
+			custom_tooltip = {
+				text = ve_holy_site_piety_tt
 			}
 		}
 	}

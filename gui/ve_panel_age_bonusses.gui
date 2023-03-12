@@ -121,6 +121,7 @@ types ve_gui_panel_types
 										}
 										hbox = {
 											spacing = 10
+											tooltip = "ve_age_splendor_tt"
 											margin = {
 												15 5
 											}

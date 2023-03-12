@@ -1,7 +1,7 @@
 ve_monthly_points = {
 	change_variable = {
 		name = idea_point_pool
-		add = 14		#1680 for 10 years. For a full idea needs 2100 points
+		add = 13		#1560 for 10 years. For a full idea needs 2100 points
 	}
 	if = {
 		limit = {
@@ -124,7 +124,7 @@ ve_monthly_points = {
 		}
 		change_variable = {
 			name = culture_reform_point
-			add = 6			# 720 for 10 years. A reform cost is 750 and total Reform Cost is 5250
+			add = 7			# 840 for 10 years. A reform cost is 750 and total Reform Cost is 5250
 		}
 	}
 }
@@ -132,7 +132,7 @@ ve_monthly_points = {
 ve_monthly_splendor_points = {
 	change_variable = {
 		name = ve_splender_points
-		add = 1		#420 for 35 years. For 6 age bonuses need 4800
+		add = 3		#1260 for 35 years. For 6 age bonuses need 4800
 	}
 	if = {
 		limit = {

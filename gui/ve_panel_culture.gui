@@ -230,8 +230,18 @@ types ve_gui_panel_types
 													100%
 												}
 											}
+											visible = "[GetScriptedGui('ve_supremacy_1').IsShown(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
 											onclick = "[GetScriptedGui('ve_supremacy_1').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
 											enabled = "[GetScriptedGui('ve_supremacy_1').IsValid(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+											tooltip = "[GetScriptedGui('ve_supremacy_1').BuildTooltip(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+										}
+										icon = {
+											size = {
+												245
+												500
+											}
+											texture = "gfx/interface/ve_culture/national_supremacy_1.dds"
+											visible = "[Not(GetScriptedGui('ve_supremacy_1').IsShown(GuiScope.SetRoot(GetPlayer.MakeScope).End))]"
 											tooltip = "[GetScriptedGui('ve_supremacy_1').BuildTooltip(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
 										}
 									}
@@ -252,8 +262,18 @@ types ve_gui_panel_types
 													100%
 												}
 											}
+											visible = "[GetScriptedGui('ve_supremacy_2').IsShown(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
 											onclick = "[GetScriptedGui('ve_supremacy_2').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
 											enabled = "[GetScriptedGui('ve_supremacy_2').IsValid(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+											tooltip = "[GetScriptedGui('ve_supremacy_2').BuildTooltip(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+										}
+										icon = {
+											size = {
+												245
+												500
+											}
+											texture = "gfx/interface/ve_culture/national_supremacy_2.dds"
+											visible = "[Not(GetScriptedGui('ve_supremacy_2').IsShown(GuiScope.SetRoot(GetPlayer.MakeScope).End))]"
 											tooltip = "[GetScriptedGui('ve_supremacy_2').BuildTooltip(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
 										}
 									}
@@ -270,8 +290,18 @@ types ve_gui_panel_types
 													100%
 												}
 											}
+											visible = "[GetScriptedGui('ve_supremacy_3').IsShown(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
 											onclick = "[GetScriptedGui('ve_supremacy_3').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
 											enabled = "[GetScriptedGui('ve_supremacy_3').IsValid(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+											tooltip = "[GetScriptedGui('ve_supremacy_3').BuildTooltip(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+										}
+										icon = {
+											size = {
+												245
+												500
+											}
+											texture = "gfx/interface/ve_culture/national_supremacy_3.dds"
+											visible = "[Not(GetScriptedGui('ve_supremacy_3').IsShown(GuiScope.SetRoot(GetPlayer.MakeScope).End))]"
 											tooltip = "[GetScriptedGui('ve_supremacy_3').BuildTooltip(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
 										}
 									}
@@ -292,8 +322,18 @@ types ve_gui_panel_types
 													100%
 												}
 											}
+											visible = "[GetScriptedGui('ve_supremacy_4').IsShown(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
 											onclick = "[GetScriptedGui('ve_supremacy_4').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
 											enabled = "[GetScriptedGui('ve_supremacy_4').IsValid(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+											tooltip = "[GetScriptedGui('ve_supremacy_4').BuildTooltip(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+										}
+										icon = {
+											size = {
+												245
+												500
+											}
+											texture = "gfx/interface/ve_culture/national_supremacy_4.dds"
+											visible = "[Not(GetScriptedGui('ve_supremacy_4').IsShown(GuiScope.SetRoot(GetPlayer.MakeScope).End))]"
 											tooltip = "[GetScriptedGui('ve_supremacy_4').BuildTooltip(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
 										}
 									}
@@ -314,8 +354,18 @@ types ve_gui_panel_types
 													100%
 												}
 											}
+											visible = "[GetScriptedGui('ve_supremacy_5').IsShown(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
 											onclick = "[GetScriptedGui('ve_supremacy_5').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
 											enabled = "[GetScriptedGui('ve_supremacy_5').IsValid(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+											tooltip = "[GetScriptedGui('ve_supremacy_5').BuildTooltip(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+										}
+										icon = {
+											size = {
+												245
+												500
+											}
+											texture = "gfx/interface/ve_culture/national_supremacy_5.dds"
+											visible = "[Not(GetScriptedGui('ve_supremacy_5').IsShown(GuiScope.SetRoot(GetPlayer.MakeScope).End))]"
 											tooltip = "[GetScriptedGui('ve_supremacy_5').BuildTooltip(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
 										}
 									}
@@ -336,8 +386,18 @@ types ve_gui_panel_types
 													100%
 												}
 											}
+											visible = "[GetScriptedGui('ve_supremacy_6').IsShown(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
 											onclick = "[GetScriptedGui('ve_supremacy_6').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
 											enabled = "[GetScriptedGui('ve_supremacy_6').IsValid(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+											tooltip = "[GetScriptedGui('ve_supremacy_6').BuildTooltip(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+										}
+										icon = {
+											size = {
+												245
+												500
+											}
+											texture = "gfx/interface/ve_culture/national_supremacy_6.dds"
+											visible = "[Not(GetScriptedGui('ve_supremacy_6').IsShown(GuiScope.SetRoot(GetPlayer.MakeScope).End))]"
 											tooltip = "[GetScriptedGui('ve_supremacy_6').BuildTooltip(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
 										}
 									}
@@ -359,7 +419,17 @@ types ve_gui_panel_types
 												}
 											}
 											onclick = "[GetScriptedGui('ve_supremacy_7').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+											visible = "[GetScriptedGui('ve_supremacy_7').IsShown(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
 											enabled = "[GetScriptedGui('ve_supremacy_7').IsValid(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+											tooltip = "[GetScriptedGui('ve_supremacy_7').BuildTooltip(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+										}
+										icon = {
+											size = {
+												245
+												500
+											}
+											texture = "gfx/interface/ve_culture/national_supremacy_7.dds"
+											visible = "[Not(GetScriptedGui('ve_supremacy_7').IsShown(GuiScope.SetRoot(GetPlayer.MakeScope).End))]"
 											tooltip = "[GetScriptedGui('ve_supremacy_7').BuildTooltip(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
 										}
 									}
@@ -405,8 +475,18 @@ types ve_gui_panel_types
 													100%
 												}
 											}
+											visible = "[GetScriptedGui('ve_intellectualy_1').IsShown(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
 											onclick = "[GetScriptedGui('ve_intellectualy_1').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
 											enabled = "[GetScriptedGui('ve_intellectualy_1').IsValid(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+											tooltip = "[GetScriptedGui('ve_intellectualy_1').BuildTooltip(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+										}
+										icon = {
+											size = {
+												245
+												500
+											}
+											texture = "gfx/interface/ve_culture/intellectual_nation_1.dds"
+											visible = "[Not(GetScriptedGui('ve_intellectualy_1').IsShown(GuiScope.SetRoot(GetPlayer.MakeScope).End))]"
 											tooltip = "[GetScriptedGui('ve_intellectualy_1').BuildTooltip(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
 										}
 									}
@@ -427,8 +507,18 @@ types ve_gui_panel_types
 													100%
 												}
 											}
+											visible = "[GetScriptedGui('ve_intellectualy_2').IsShown(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
 											onclick = "[GetScriptedGui('ve_intellectualy_2').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
 											enabled = "[GetScriptedGui('ve_intellectualy_2').IsValid(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+											tooltip = "[GetScriptedGui('ve_intellectualy_2').BuildTooltip(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+										}
+										icon = {
+											size = {
+												245
+												500
+											}
+											texture = "gfx/interface/ve_culture/intellectual_nation_2.dds"
+											visible = "[Not(GetScriptedGui('ve_intellectualy_2').IsShown(GuiScope.SetRoot(GetPlayer.MakeScope).End))]"
 											tooltip = "[GetScriptedGui('ve_intellectualy_2').BuildTooltip(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
 										}
 									}
@@ -445,8 +535,18 @@ types ve_gui_panel_types
 													100%
 												}
 											}
+											visible = "[GetScriptedGui('ve_intellectualy_3').IsShown(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
 											onclick = "[GetScriptedGui('ve_intellectualy_3').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
 											enabled = "[GetScriptedGui('ve_intellectualy_3').IsValid(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+											tooltip = "[GetScriptedGui('ve_intellectualy_3').BuildTooltip(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+										}
+										icon = {
+											size = {
+												245
+												500
+											}
+											texture = "gfx/interface/ve_culture/intellectual_nation_3.dds"
+											visible = "[Not(GetScriptedGui('ve_intellectualy_3').IsShown(GuiScope.SetRoot(GetPlayer.MakeScope).End))]"
 											tooltip = "[GetScriptedGui('ve_intellectualy_3').BuildTooltip(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
 										}
 									}
@@ -467,8 +567,18 @@ types ve_gui_panel_types
 													100%
 												}
 											}
+											visible = "[GetScriptedGui('ve_intellectualy_4').IsShown(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
 											onclick = "[GetScriptedGui('ve_intellectualy_4').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
 											enabled = "[GetScriptedGui('ve_intellectualy_4').IsValid(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+											tooltip = "[GetScriptedGui('ve_intellectualy_4').BuildTooltip(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+										}
+										icon = {
+											size = {
+												245
+												500
+											}
+											texture = "gfx/interface/ve_culture/intellectual_nation_4.dds"
+											visible = "[Not(GetScriptedGui('ve_intellectualy_4').IsShown(GuiScope.SetRoot(GetPlayer.MakeScope).End))]"
 											tooltip = "[GetScriptedGui('ve_intellectualy_4').BuildTooltip(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
 										}
 									}
@@ -489,8 +599,18 @@ types ve_gui_panel_types
 													100%
 												}
 											}
+											visible = "[GetScriptedGui('ve_intellectualy_5').IsShown(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
 											onclick = "[GetScriptedGui('ve_intellectualy_5').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
 											enabled = "[GetScriptedGui('ve_intellectualy_5').IsValid(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+											tooltip = "[GetScriptedGui('ve_intellectualy_5').BuildTooltip(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+										}
+										icon = {
+											size = {
+												245
+												500
+											}
+											texture = "gfx/interface/ve_culture/intellectual_nation_5.dds"
+											visible = "[Not(GetScriptedGui('ve_intellectualy_5').IsShown(GuiScope.SetRoot(GetPlayer.MakeScope).End))]"
 											tooltip = "[GetScriptedGui('ve_intellectualy_5').BuildTooltip(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
 										}
 									}
@@ -511,8 +631,18 @@ types ve_gui_panel_types
 													100%
 												}
 											}
+											visible = "[GetScriptedGui('ve_intellectualy_6').IsShown(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
 											onclick = "[GetScriptedGui('ve_intellectualy_6').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
 											enabled = "[GetScriptedGui('ve_intellectualy_6').IsValid(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+											tooltip = "[GetScriptedGui('ve_intellectualy_6').BuildTooltip(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+										}
+										icon = {
+											size = {
+												245
+												500
+											}
+											texture = "gfx/interface/ve_culture/intellectual_nation_6.dds"
+											visible = "[Not(GetScriptedGui('ve_intellectualy_6').IsShown(GuiScope.SetRoot(GetPlayer.MakeScope).End))]"
 											tooltip = "[GetScriptedGui('ve_intellectualy_6').BuildTooltip(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
 										}
 									}
@@ -533,8 +663,18 @@ types ve_gui_panel_types
 													100%
 												}
 											}
+											visible = "[GetScriptedGui('ve_intellectualy_7').IsShown(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
 											onclick = "[GetScriptedGui('ve_intellectualy_7').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
 											enabled = "[GetScriptedGui('ve_intellectualy_7').IsValid(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+											tooltip = "[GetScriptedGui('ve_intellectualy_7').BuildTooltip(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+										}
+										icon = {
+											size = {
+												245
+												500
+											}
+											texture = "gfx/interface/ve_culture/intellectual_nation_7.dds"
+											visible = "[Not(GetScriptedGui('ve_intellectualy_7').IsShown(GuiScope.SetRoot(GetPlayer.MakeScope).End))]"
 											tooltip = "[GetScriptedGui('ve_intellectualy_7').BuildTooltip(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
 										}
 									}

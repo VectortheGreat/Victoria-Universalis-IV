@@ -1790,7 +1790,7 @@ texticon = {
   iconsize = {
     offset = { 0 15 }
     texture = "gfx/interface/ve_religion/jewish_passive.dds"
-    fontsize = 120
+    fontsize = 50
   }
 }
 texticon = {

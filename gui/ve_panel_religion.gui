@@ -190,6 +190,7 @@ ve_gui_panel_types
 								onclick = "[GetScriptedGui('ve_aspect_button_1').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
 								enabled = "[GetScriptedGui('ve_aspect_button_1').IsValid(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
 								tooltip = "[GetScriptedGui('ve_aspect_button_1').BuildTooltip( GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+								using = tooltip_above
 								textbox = {
 									raw_text = "@[GetPlayer.GetCustom('religion_aspect_1')]!"
 									fontsize = 60
@@ -236,6 +237,7 @@ ve_gui_panel_types
 								onclick = "[GetScriptedGui('ve_aspect_button_2').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
 								enabled = "[GetScriptedGui('ve_aspect_button_2').IsValid(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
 								tooltip = "[GetScriptedGui('ve_aspect_button_2').BuildTooltip( GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+								using = tooltip_above
 								textbox = {
 									raw_text = "@[GetPlayer.GetCustom('religion_aspect_2')]!"
 									fontsize = 60
@@ -282,6 +284,7 @@ ve_gui_panel_types
 								onclick = "[GetScriptedGui('ve_aspect_button_3').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
 								enabled = "[GetScriptedGui('ve_aspect_button_3').IsValid(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
 								tooltip = "[GetScriptedGui('ve_aspect_button_3').BuildTooltip( GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+								using = tooltip_above
 								textbox = {
 									raw_text = "@[GetPlayer.GetCustom('religion_aspect_3')]!"
 									fontsize = 60
@@ -328,6 +331,7 @@ ve_gui_panel_types
 								onclick = "[GetScriptedGui('ve_aspect_button_4').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
 								enabled = "[GetScriptedGui('ve_aspect_button_4').IsValid(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
 								tooltip = "[GetScriptedGui('ve_aspect_button_4').BuildTooltip( GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+								using = tooltip_above
 								textbox = {
 									raw_text = "@[GetPlayer.GetCustom('religion_aspect_4')]!"
 									fontsize = 60
@@ -374,6 +378,7 @@ ve_gui_panel_types
 								onclick = "[GetScriptedGui('ve_aspect_button_5').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
 								enabled = "[GetScriptedGui('ve_aspect_button_5').IsValid(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
 								tooltip = "[GetScriptedGui('ve_aspect_button_5').BuildTooltip( GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+								using = tooltip_above
 								textbox = {
 									raw_text = "@[GetPlayer.GetCustom('religion_aspect_5')]!"
 									fontsize = 60
@@ -420,6 +425,7 @@ ve_gui_panel_types
 								onclick = "[GetScriptedGui('ve_aspect_button_6').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
 								enabled = "[GetScriptedGui('ve_aspect_button_6').IsValid(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
 								tooltip = "[GetScriptedGui('ve_aspect_button_6').BuildTooltip( GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+								using = tooltip_above
 								textbox = {
 									raw_text = "@[GetPlayer.GetCustom('religion_aspect_6')]!"
 									fontsize = 60
@@ -466,6 +472,7 @@ ve_gui_panel_types
 								onclick = "[GetScriptedGui('ve_aspect_button_7').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
 								enabled = "[GetScriptedGui('ve_aspect_button_7').IsValid(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
 								tooltip = "[GetScriptedGui('ve_aspect_button_7').BuildTooltip( GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+								using = tooltip_above
 								textbox = {
 									raw_text = "@[GetPlayer.GetCustom('religion_aspect_7')]!"
 									fontsize = 60
@@ -512,6 +519,7 @@ ve_gui_panel_types
 								onclick = "[GetScriptedGui('ve_aspect_button_8').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
 								enabled = "[GetScriptedGui('ve_aspect_button_8').IsValid(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
 								tooltip = "[GetScriptedGui('ve_aspect_button_8').BuildTooltip( GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+								using = tooltip_above
 								textbox = {
 									raw_text = "@[GetPlayer.GetCustom('religion_aspect_8')]!"
 									fontsize = 60

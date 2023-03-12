@@ -134,7 +134,7 @@ ger_idea_3 = {
 
 ger_idea_4 = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_statue_positive.dds
-	country_bureaucracy_mult = 0.15
+	country_bureaucracy_mult = 0.1
 }
 
 ger_idea_5 = {
@@ -325,7 +325,7 @@ qng_idea_tradition_2 = {
 
 qng_idea_bonus = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_statue_positive.dds
-	country_bureaucracy_investment_cost_factor_mult = -0.2
+	country_bureaucracy_investment_cost_factor_mult = -0.15
 }
 
 qng_idea_1 = {
@@ -483,7 +483,7 @@ generic_idea_tradition_2 = {
 
 generic_idea_bonus = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_statue_positive.dds
-	country_bureaucracy_mult = 0.15
+	country_bureaucracy_mult = 0.1
 }
 
 generic_idea_1 = {
@@ -499,7 +499,7 @@ generic_idea_2 = {
 
 generic_idea_3 = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_statue_positive.dds
-	country_authority_mult = 0.15
+	country_authority_mult = 0.1
 }
 
 generic_idea_4 = {
