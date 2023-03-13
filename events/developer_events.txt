@@ -351,7 +351,7 @@ dev.4 = {
 	desc = dev.4.d
 	flavor = dev.4.f
 	duration = 0
-	# hidden = yes
+	hidden = yes
 	immediate = {
 		if = {
 			#For released countries
