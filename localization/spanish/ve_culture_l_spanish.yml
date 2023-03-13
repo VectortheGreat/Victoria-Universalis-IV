@@ -1,0 +1,12 @@
+﻿l_spanish:
+ ve_culture_policy:0 "Culture Policies"
+ ve_culture_national_supremacy:0 "National Supremacy"
+ ve_culture_national_supremacy_policy:0 "National Supremacy Policy"
+ ve_intellectual_nation:0 "Intellectual Nation"
+ ve_intellectual_nation_policy:0 "Intellectual Nation Policy"
+ ve_culture_reform_point:0 "Reform Point"
+ ve_cultural_missionary:0 "Bureaucrats"
+ ve_call_cultural_missionary:0 "Call All Bureaucrats"
+ ve_culture_reform_point_tt:0 "#tooltippable_concept Monthly Culture Reform Points: \n #Y Base: #P +7"
+ ve_cultural_missionary_tt:0 "#tooltippable_concept Bureaucrats: \n #Y Base: +1 \n If Ethnostate law is activated: +4 \n If National Supremacy law is activated: +3 \n If Racial Segregation law is activated: +2 \n If Cultural Exclusion law is activated: +1 \n #negative_value If Multicultural law is activated, the mechanic will be disabled."
+ bar_no_effect:0 "No effect"

@@ -142,7 +142,9 @@ economic_idea_6_mdf = {
 
 economic_idea_7_mdf = {
 	icon = gfx/interface/icon_ideas.dds
-	building_group_bg_manufacturing_throughput_mult = 0.15
+	building_group_bg_agriculture_throughput_mult = 0.15
+	building_group_bg_ranching_throughput_mult = 0.15
+	building_group_bg_plantations_throughput_mult = 0.15
 }
 
 trade_idea_1_mdf = {
@@ -246,6 +248,7 @@ administrative_idea_4_mdf = {
 administrative_idea_5_mdf = {
 	icon = gfx/interface/icon_ideas.dds
 	country_government_wages_mult = -0.2
+	building_group_bg_service_throughput_mult = 0.2
 }
 
 administrative_idea_6_mdf = {
@@ -528,7 +531,7 @@ syndicalism_idea_6_mdf = {
 
 syndicalism_idea_7_mdf = {
 	icon = gfx/interface/icon_ideas.dds
-	building_group_bg_manufacturing_throughput_mult = 0.1
+	building_group_bg_manufacturing_throughput_mult = 0.2
 }
 
 imperialist_idea_1_mdf = {
@@ -560,9 +563,11 @@ imperialist_idea_5_mdf = {
 imperialist_idea_6_mdf = {
 	icon = gfx/interface/icon_ideas.dds
 	state_colony_growth_creation_mult = 0.2
+	building_group_bg_mining_throughput_mult = 0.1
 }
 
 imperialist_idea_7_mdf = {
 	icon = gfx/interface/icon_ideas.dds
 	country_radicals_from_conquest_mult = -0.25
+	building_group_bg_oil_extraction_throughput_mult = 0.1
 }
