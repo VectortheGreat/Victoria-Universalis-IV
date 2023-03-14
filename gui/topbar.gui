@@ -27,7 +27,7 @@ types topbar_components
 					state = {
 						name = show_topbar_secondary_stats
 						alpha = 1
-						position_y = 44
+						position_y = 0
 						duration = 0.15
 						using = Animation_Curve_Default
 					}
@@ -191,6 +191,27 @@ types topbar_components
 			flowcontainer = {
 				name = "victoria_universalis_topbar"
 				layoutpolicy_vertical = expanding
+				alwaystransparent = no
+				# position = { 130 40 }
+				block "animation" {
+					position = { 0 0 }
+					alpha = 0
+					
+					state = {
+						name = show_topbar_secondary_stats
+						alpha = 1
+						position_y = 31
+						duration = 0.15
+						using = Animation_Curve_Default
+					}
+					state = {
+						name = hide_topbar_secondary_stats
+						alpha = 0
+						position_y = 0
+						duration = 0.15
+						using = Animation_Curve_Default
+					}
+				}
 				background = {
 					using = dark_area_rounded
 					margin = { 0 -5 }
@@ -202,6 +223,7 @@ types topbar_components
 						minimumsize = { 90 28 }
 						maximumsize = { 90 28 }
 						spacing = 5
+						tooltip = "ve_missionary_tt"
 						using = tooltip_below
 
 						icon = {
@@ -226,7 +248,7 @@ types topbar_components
 						maximumsize = { 90 28 }
 						spacing = 5
 						using = tooltip_below
-
+						tooltip = "ve_cultural_missionary_tt"
 						icon = {
 							size = { @secondary_icon_size @secondary_icon_size }
 							texture = "gfx/interface/icon2_diffusionist.dds"
@@ -249,7 +271,7 @@ types topbar_components
 						spacing = 2
 						using = tooltip_below
 						margin_left = 3
-
+						tooltip = "[GetPlayer.GetCustom('idea_points_cus_loc')]"
 						icon = {
 							size = { @secondary_icon_size @secondary_icon_size }
 							texture = "gfx/interface/icon_ideas.dds"
@@ -273,6 +295,7 @@ types topbar_components
 						spacing = 2
 						datacontext = "[Country.GetGovernmentLegitimacyLevel]"
 						using = tooltip_below
+						tooltip = "ve_piety_tt"
 
 						icon = {
 							size = { @secondary_icon_size @secondary_icon_size }
@@ -296,6 +319,7 @@ types topbar_components
 						spacing = 2
 						using = tooltip_below
 						visible = "[GetScriptedGui('hide_reform_point').IsShown(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+						tooltip = "ve_culture_reform_point_tt"
 
 						icon = {
 							size = { @secondary_icon_size @secondary_icon_size }
@@ -319,6 +343,7 @@ types topbar_components
 						maximumsize = { 90 28 }
 						spacing = 2
 						using = tooltip_below
+						tooltip = "ve_age_splendor_tt"
 
 						icon = {
 							size = { @secondary_icon_size @secondary_icon_size }
@@ -345,7 +370,7 @@ types topbar_components
 			using = hud_visibility
 			datacontext = "[AccessMetaPlayer.AccessPlayedOrObservedCountry]"
 			using = clickthrough_blocker
-			size = { 705 80 }
+			size = { 705 110 }
 			allow_outside = yes
 			resizeparent = yes
 			
@@ -719,7 +744,7 @@ types topbar_components
 				visible = "[GetMetaPlayer.GetPlayedOrObservedCountry.IsValid]"
 				size = { 24 24 }
 				parentanchor = bottom|right
-				position = { -30 -9 }
+				position = { -30 -14 }
 				
 				alpha = 0
 				
