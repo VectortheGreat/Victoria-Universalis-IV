@@ -487,19 +487,19 @@ cancel_idea = {
 					remove_variable = ethnocentrism_idea_7_var
 					change_variable = {
 						name = avaible_missionaries
-						subtract = 1
+						subtract = 2
 					}
 					change_variable = {
 						name = avaible_culture_missionaries
-						subtract = 1
+						subtract = 2
 					}
 					change_variable = {
 						name = total_missionaries
-						subtract = 1
+						subtract = 2
 					}
 					change_variable = {
 						name = total_culture_missionaries
-						subtract = 1
+						subtract = 2
 					}
 					if = {
 						limit = {

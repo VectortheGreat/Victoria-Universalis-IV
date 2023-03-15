@@ -35,7 +35,7 @@ catholic_aspect_5_mdf = {
 catholic_aspect_6_mdf = {
 	icon = gfx/interface/catholic.dds
 	country_trade_route_cost_mult = -0.1
-	country_trade_route_quantity_mult = 0.1
+	country_trade_route_quantity_mult = 0.2
 }
 
 catholic_aspect_7_mdf = {
@@ -63,18 +63,18 @@ protestant_aspect_1_mdf = {
 protestant_aspect_2_mdf = {
 	icon = gfx/interface/catholic.dds
 	state_migration_pull_mult = 0.1
-	state_mortality_wealth_mult = -0.03
+	state_mortality_wealth_mult = -0.01
 }
 
 protestant_aspect_3_mdf = {
 	icon = gfx/interface/catholic.dds
-	country_bureaucracy_mult = 0.075
+	country_bureaucracy_mult = 0.05
 }
 
 protestant_aspect_4_mdf = {
 	icon = gfx/interface/catholic.dds
-	state_colony_growth_creation_mult = 0.1
-	state_colony_growth_speed_mult = 0.1
+	state_colony_growth_creation_mult = 0.075
+	state_colony_growth_speed_mult = 0.075
 }
 
 protestant_aspect_5_mdf = {
@@ -85,7 +85,7 @@ protestant_aspect_5_mdf = {
 
 protestant_aspect_6_mdf = {
 	icon = gfx/interface/catholic.dds
-	state_education_access_add = 0.05
+	state_education_access_add = 0.03
 }
 
 protestant_aspect_7_mdf = {
@@ -101,12 +101,12 @@ protestant_aspect_8_mdf = {
 orthodox_pasive_mdf = {
 	icon = gfx/interface/catholic.dds
 	state_loyalists_from_sol_change_accepted_religion_mult = 0.05
-	country_authority_mult = 0.1
+	country_authority_mult = 0.05
 }
 
 orthodox_aspect_1_mdf = {
 	icon = gfx/interface/catholic.dds
-	state_construction_mult = 0.15
+	state_construction_mult = 0.1
 	state_infrastructure_add = 10
 }
 
@@ -125,7 +125,7 @@ orthodox_aspect_3_mdf = {
 orthodox_aspect_4_mdf = {
 	icon = gfx/interface/catholic.dds
 	unit_army_offense_mult = 0.075
-	state_conscription_rate_mult = 0.2
+	state_conscription_rate_mult = 0.15
 }
 
 orthodox_aspect_5_mdf = {
@@ -136,7 +136,7 @@ orthodox_aspect_5_mdf = {
 
 orthodox_aspect_6_mdf = {
 	icon = gfx/interface/catholic.dds
-	state_turmoil_effects_mult = -0.1
+	state_turmoil_effects_mult = -0.05
 }
 
 orthodox_aspect_7_mdf = {
@@ -163,7 +163,7 @@ coptic_aspect_1_mdf = {
 
 coptic_aspect_2_mdf = {
 	icon = gfx/interface/catholic.dds
-	state_conscription_rate_mult = 0.2
+	state_conscription_rate_mult = 0.15
 	unit_morale_protection_mult = 0.1
 }
 
@@ -212,7 +212,7 @@ sunni_aspect_1_mdf = {
 
 sunni_aspect_2_mdf = {
 	icon = gfx/interface/catholic.dds
-	state_conscription_rate_mult = 0.15
+	state_conscription_rate_mult = 0.1
 	unit_morale_recovery_mult = 0.1
 }
 
@@ -228,13 +228,13 @@ sunni_aspect_4_mdf = {
 
 sunni_aspect_5_mdf = {
 	icon = gfx/interface/catholic.dds
-	state_education_access_add = 0.05
+	state_education_access_add = 0.025
 	building_university_throughput_mult = 0.15
 }
 
 sunni_aspect_6_mdf = {
 	icon = gfx/interface/catholic.dds
-	country_bureaucracy_mult = 0.075
+	country_bureaucracy_mult = 0.05
 	country_law_enactment_time_mult = -0.1
 }
 
@@ -284,13 +284,13 @@ shia_aspect_5_mdf = {
 
 shia_aspect_6_mdf = {
 	icon = gfx/interface/catholic.dds
-	country_war_exhaustion_casualties_mult = -0.075
-	unit_defense_developed_add = 5
+	country_war_exhaustion_casualties_mult = -0.035
+	unit_defense_developed_add = 7
 }
 
 shia_aspect_7_mdf = {
 	icon = gfx/interface/catholic.dds
-	country_bureaucracy_mult = 0.075
+	country_bureaucracy_mult = 0.05
 	country_law_enactment_time_mult = -0.1
 }
 
@@ -302,14 +302,13 @@ shia_aspect_8_mdf = {
 jewish_pasive_mdf = {
 	icon = gfx/interface/catholic.dds
 	state_loyalists_from_sol_change_accepted_religion_mult = 0.05
-	country_bureaucracy_mult = 0.075
+	country_bureaucracy_mult = 0.05
 }
 
 jewish_aspect_1_mdf = {
 	icon = gfx/interface/catholic.dds
 	country_society_tech_cost_mult = -0.03
 	country_production_tech_cost_mult = -0.03
-	country_law_enactment_success_add = 0.1
 }
 
 jewish_aspect_2_mdf = {
@@ -333,13 +332,13 @@ jewish_aspect_4_mdf = {
 jewish_aspect_5_mdf = {
 	icon = gfx/interface/catholic.dds
 	state_urbanization_mult = 0.1
-	state_accepted_birth_rate_mult = 0.05
+	state_accepted_birth_rate_mult = 0.025
 }
 
 jewish_aspect_6_mdf = {
 	icon = gfx/interface/catholic.dds
 	country_authority_add = 70
-	state_turmoil_effects_mult = -0.1
+	state_turmoil_effects_mult = -0.05
 }
 
 jewish_aspect_7_mdf = {
@@ -362,12 +361,12 @@ mahayana_pasive_mdf = {
 mahayana_aspect_1_mdf = {
 	icon = gfx/interface/catholic.dds
 	state_urbanization_mult = 0.1
-	state_infrastructure_from_population_add = 0.15
+	state_infrastructure_from_population_add = 0.1
 }
 
 mahayana_aspect_2_mdf = {
 	icon = gfx/interface/catholic.dds
-	state_bureaucracy_population_base_cost_factor_mult = -0.075
+	state_bureaucracy_population_base_cost_factor_mult = -0.05
 }
 
 mahayana_aspect_3_mdf = {
@@ -395,7 +394,7 @@ mahayana_aspect_6_mdf = {
 
 mahayana_aspect_7_mdf = {
 	icon = gfx/interface/catholic.dds
-	state_education_access_add = 0.05
+	state_education_access_add = 0.03
 }
 
 mahayana_aspect_8_mdf = {
@@ -406,13 +405,13 @@ mahayana_aspect_8_mdf = {
 hindu_pasive_mdf = {
 	icon = gfx/interface/catholic.dds
 	state_loyalists_from_sol_change_accepted_religion_mult = 0.05
-	country_war_exhaustion_casualties_mult = -0.1
+	country_war_exhaustion_casualties_mult = -0.05
 }
 
 hindu_aspect_1_mdf = {
 	icon = gfx/interface/catholic.dds
 	country_influence_mult = 0.1
-	country_improve_relations_speed_mult = 0.1
+	country_improve_relations_speed_mult = 0.075
 }
 
 hindu_aspect_2_mdf = {
@@ -424,7 +423,7 @@ hindu_aspect_2_mdf = {
 hindu_aspect_3_mdf = {
 	icon = gfx/interface/catholic.dds
 	unit_army_offense_add = 5
-	battle_casualties_mult = -0.1
+	battle_casualties_mult = -0.05
 }
 
 hindu_aspect_4_mdf = {
@@ -441,14 +440,14 @@ hindu_aspect_5_mdf = {
 
 hindu_aspect_6_mdf = {
 	icon = gfx/interface/catholic.dds
-	battle_defense_owned_province_mult = 0.15
+	battle_defense_owned_province_mult = 0.1
 	state_conversion_mult = 0.25
 }
 
 hindu_aspect_7_mdf = {
 	icon = gfx/interface/catholic.dds
-	country_bureaucracy_mult = 0.075
-	state_education_access_wealth_add = 0.05
+	country_bureaucracy_mult = 0.05
+	state_education_access_wealth_add = 0.025
 }
 
 hindu_aspect_8_mdf = {
@@ -464,19 +463,19 @@ sikh_pasive_mdf = {
 
 sikh_aspect_1_mdf = {
 	icon = gfx/interface/catholic.dds
-	political_movement_radicalism_mult = -0.15
+	political_movement_radicalism_mult = -0.1
 	interest_group_ig_devout_approval_add = 1
 }
 
 sikh_aspect_2_mdf = {
 	icon = gfx/interface/catholic.dds
 	country_production_tech_cost_mult = -0.05
-	country_resource_depletion_chance_mult = -0.2
+	country_resource_depletion_chance_mult = -0.1
 }
 
 sikh_aspect_3_mdf = {
 	icon = gfx/interface/catholic.dds
-	country_consumption_tax_cost_mult = -0.2
+	country_consumption_tax_cost_mult = -0.1
 	country_legitimacy_govt_leader_clout_add = 5
 }
 
@@ -488,24 +487,24 @@ sikh_aspect_4_mdf = {
 
 sikh_aspect_5_mdf = {
 	icon = gfx/interface/catholic.dds
-	state_education_access_wealth_add = 0.05
+	state_education_access_wealth_add = 0.03
 }
 
 sikh_aspect_6_mdf = {
 	icon = gfx/interface/catholic.dds
 	unit_morale_recovery_mult = 0.1
-	unit_advancement_speed_mult = 0.2
+	unit_advancement_speed_mult = 0.15
 }
 
 sikh_aspect_7_mdf = {
 	icon = gfx/interface/catholic.dds
 	state_urbanization_mult = 0.15
-	state_mortality_mult = -0.1
+	state_mortality_mult = -0.03
 }
 
 sikh_aspect_8_mdf = {
 	icon = gfx/interface/catholic.dds
-	country_infamy_generation_mult = -0.1
+	country_infamy_generation_mult = -0.15
 }
 
 animist_pasive_mdf = {
@@ -528,7 +527,7 @@ animist_aspect_2_mdf = {
 
 animist_aspect_3_mdf = {
 	icon = gfx/interface/catholic.dds
-	country_war_exhaustion_casualties_mult = -0.15
+	country_war_exhaustion_casualties_mult = -0.05
 	unit_supply_consumption_mult = -0.1
 }
 
@@ -562,12 +561,10 @@ animist_aspect_8_mdf = {
 #Missionary
 ve_missionary_mdf = {
 	icon = gfx/interface/catholic.dds
-	state_conversion_mult = 0.5
 	state_radicals_from_discrimination_mult = 0.5
 }
 
 ve_diffusionist_mdf = {
 	icon = gfx/interface/catholic.dds
-	state_assimilation_mult = 0.5
 	state_radicals_from_discrimination_mult = 0.5
 }

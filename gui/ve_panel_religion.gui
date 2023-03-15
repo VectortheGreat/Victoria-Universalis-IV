@@ -115,6 +115,39 @@ ve_gui_panel_types
 							}
 						}
 						vbox = {
+							spacing = 10
+							textbox = {
+								tooltip = "ve_missionary_power_tt"
+								text = "ve_missionary_power_txt"
+								default_format = "#tooltippable_name"
+								using = fontsize_xxl
+								align = nobaseline
+								elide = left
+								autoresize = yes
+							}
+							textbox = {
+								tooltip = "ve_max_missionary_power_tt"
+								text = "[GetPlayer.MakeScope.ScriptValue('missionary_power_250k')|%2]"
+								default_format = "#tooltippable_concept"
+								using = fontsize_xxl
+								align = nobaseline
+								elide = left
+								autoresize = yes
+							}
+							white_progressbar_horizontal = {
+								size = {
+									80
+									15
+								}
+								blockoverride
+								"values"
+								{
+									max = "[GetPlayer.MakeScope.ScriptValue('max_missionary_power_250k')|%2]"
+									value = "[GetPlayer.MakeScope.ScriptValue('missionary_power_250k')|%2]"
+								}
+							}
+						}
+						vbox = {
 							layoutpolicy_vertical = expanding
 							spacing = 20
 							tooltip = "[GetScriptedGui('ve_passive_bonus_tooltip').BuildTooltip(GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"

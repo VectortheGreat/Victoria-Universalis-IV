@@ -71,7 +71,7 @@
  ve_age_1_bonus_11_tt:0 "Is North German or South German"
  ve_age_2_bonus_11_tt:0 "Is Russia"
  ve_age_3_bonus_11_tt:0 "Is Russia"
- ve_age_splendor_tt:0 "#tooltippable_concept Monthly Splendors: \n #Y Base: +3 \n For each completed age objectives: +2"
+ ve_age_splendor_tt:0 "#tooltippable_concept Monthly Splendors: \n#Y Base: +3 \nFor each completed age objectives: +2"
  ve_golden_age_tt:0 "#Y Complete at least 4 age objectives"
  ve_age_obj_efct_tt:0 "#Y +2 splendors per month if objective is completed"
  splendor_default_bonus:0 "Have at least 800 Splendor"

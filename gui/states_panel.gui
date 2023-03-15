@@ -328,6 +328,7 @@ types state_panel_types
 							spacing = 10
 							text_single = {
 								text = "ve_send_missionary"
+								tooltip = "ve_send_missionary_tt"
 							}
 							button = {
 								size = { 100 40 }
@@ -366,6 +367,7 @@ types state_panel_types
 							spacing = 10
 							text_single = {
 								text = "ve_send_cultural_missionary"
+								tooltip = "ve_send_cultural_missionary_tt"
 								align = center|nobaseline
 							}
 							button = {

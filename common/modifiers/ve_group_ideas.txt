@@ -1,6 +1,6 @@
 ﻿innovative_idea_1_mdf = {
 	icon = gfx/interface/icon_ideas.dds
-	country_prestige_mult = 0.1
+	country_prestige_mult = 0.075
 }
 
 innovative_idea_2_mdf = {
@@ -86,7 +86,7 @@ offensive_idea_2_mdf = {
 offensive_idea_3_mdf = {
 	icon = gfx/interface/icon_ideas.dds
 	unit_offense_hazardous_add = 5
-	unit_provinces_captured_mult = 0.15
+	unit_provinces_captured_mult = 0.1
 }
 
 offensive_idea_4_mdf = {
@@ -117,7 +117,7 @@ economic_idea_1_mdf = {
 
 economic_idea_2_mdf = {
 	icon = gfx/interface/icon_ideas.dds
-	state_construction_mult = 0.2
+	state_construction_mult = 0.1
 }
 
 economic_idea_3_mdf = {
@@ -127,7 +127,7 @@ economic_idea_3_mdf = {
 
 economic_idea_4_mdf = {
 	icon = gfx/interface/icon_ideas.dds
-	country_loan_interest_rate_mult = -0.2
+	country_loan_interest_rate_mult = -0.1
 }
 
 economic_idea_5_mdf = {
@@ -142,9 +142,9 @@ economic_idea_6_mdf = {
 
 economic_idea_7_mdf = {
 	icon = gfx/interface/icon_ideas.dds
-	building_group_bg_agriculture_throughput_mult = 0.15
-	building_group_bg_ranching_throughput_mult = 0.15
-	building_group_bg_plantations_throughput_mult = 0.15
+	building_group_bg_agriculture_throughput_mult = 0.1
+	building_group_bg_ranching_throughput_mult = 0.1
+	building_group_bg_plantations_throughput_mult = 0.1
 }
 
 trade_idea_1_mdf = {
@@ -194,7 +194,7 @@ defensive_idea_1_mdf = {
 defensive_idea_2_mdf = {
 	icon = gfx/interface/icon_ideas.dds
 	unit_morale_damage_mult = 0.1
-	unit_morale_recovery_mult = 0.2
+	unit_morale_recovery_mult = 0.1
 }
 
 defensive_idea_3_mdf = {
@@ -221,7 +221,7 @@ defensive_idea_6_mdf = {
 
 defensive_idea_7_mdf = {
 	icon = gfx/interface/icon_ideas.dds
-	unit_supply_consumption_mult = -0.25
+	unit_supply_consumption_mult = -0.15
 }
 
 administrative_idea_1_mdf = {
@@ -352,7 +352,7 @@ naval_idea_7_mdf = {
 
 ethnocentrism_idea_1_mdf = {
 	icon = gfx/interface/icon_ideas.dds
-	country_authority_mult = 0.075
+	country_authority_mult = 0.05
 }
 
 ethnocentrism_idea_2_mdf = {
@@ -363,13 +363,13 @@ ethnocentrism_idea_2_mdf = {
 
 ethnocentrism_idea_3_mdf = {
 	icon = gfx/interface/icon_ideas.dds
-	state_accepted_birth_rate_mult = 0.1
+	state_accepted_birth_rate_mult = 0.05
 }
 
 ethnocentrism_idea_4_mdf = {
 	icon = gfx/interface/icon_ideas.dds
-	state_loyalists_from_sol_change_accepted_religion_mult = 0.1
-	state_loyalists_from_sol_change_accepted_culture_mult = 0.1
+	state_loyalists_from_sol_change_accepted_religion_mult = 0.05
+	state_loyalists_from_sol_change_accepted_culture_mult = 0.05
 }
 
 ethnocentrism_idea_5_mdf = {
@@ -379,7 +379,7 @@ ethnocentrism_idea_5_mdf = {
 
 ethnocentrism_idea_6_mdf = {
 	icon = gfx/interface/icon_ideas.dds
-	state_education_access_add = 0.075
+	state_education_access_add = 0.03
 }
 
 ethnocentrism_idea_7_mdf = {
@@ -389,7 +389,7 @@ ethnocentrism_idea_7_mdf = {
 
 humanist_idea_1_mdf = {
 	icon = gfx/interface/icon_ideas.dds
-	country_tech_spread_add = 25
+	country_tech_spread_add = 15
 }
 
 humanist_idea_2_mdf = {
@@ -409,17 +409,17 @@ humanist_idea_4_mdf = {
 
 humanist_idea_5_mdf = {
 	icon = gfx/interface/icon_ideas.dds
-	state_infrastructure_mult = 0.15
+	state_infrastructure_mult = 0.1
 }
 
 humanist_idea_6_mdf = {
 	icon = gfx/interface/icon_ideas.dds
-	country_improve_relations_speed_mult = 0.25
+	country_improve_relations_speed_mult = 0.15
 }
 
 humanist_idea_7_mdf = {
 	icon = gfx/interface/icon_ideas.dds
-	state_migration_pull_mult = 0.3
+	state_migration_pull_mult = 0.2
 }
 
 militarization_idea_1_mdf = {
@@ -451,8 +451,8 @@ militarization_idea_5_mdf = {
 
 militarization_idea_6_mdf = {
 	icon = gfx/interface/icon_ideas.dds
-	building_training_rate_mult = 0.25
-	country_military_goods_cost_mult = -0.25
+	building_training_rate_mult = 0.15
+	country_military_goods_cost_mult = -0.1
 }
 
 militarization_idea_7_mdf = {
@@ -503,40 +503,41 @@ syndicalism_idea_1_mdf = {
 
 syndicalism_idea_2_mdf = {
 	icon = gfx/interface/icon_ideas.dds
-	state_construction_mult = 0.5
+	state_construction_mult = 0.15
 }
 
 syndicalism_idea_3_mdf = {
 	icon = gfx/interface/icon_ideas.dds
-	state_mortality_mult = -0.15
+	state_mortality_mult = -0.05
 }
 
 syndicalism_idea_4_mdf = {
 	icon = gfx/interface/icon_ideas.dds
-	state_birth_rate_mult = 0.15
+	state_birth_rate_mult = 0.1
 }
 
 syndicalism_idea_5_mdf = {
 	icon = gfx/interface/icon_ideas.dds
-	country_legitimacy_govt_total_votes_add = 5
 	state_pop_support_law_command_economy_mult = 0.1
 	state_pop_support_law_cooperative_ownership_mult = 0.1
+	state_farmers_investment_pool_efficiency_mult = 0.1
+	state_shopkeepers_investment_pool_efficiency_mult = 0.1
 }
 
 syndicalism_idea_6_mdf = {
 	icon = gfx/interface/icon_ideas.dds
-	building_government_shares_add = 10
+	interest_group_ig_trade_unions_approval_add = 1
 	interest_group_ig_trade_unions_pol_str_mult = 0.2
 }
 
 syndicalism_idea_7_mdf = {
 	icon = gfx/interface/icon_ideas.dds
-	building_group_bg_manufacturing_throughput_mult = 0.2
+	building_group_bg_manufacturing_throughput_mult = 0.15
 }
 
 imperialist_idea_1_mdf = {
 	icon = gfx/interface/icon_ideas.dds
-	country_prestige_add = 150
+	country_prestige_add = 100
 }
 
 imperialist_idea_2_mdf = {
@@ -546,13 +547,13 @@ imperialist_idea_2_mdf = {
 
 imperialist_idea_3_mdf = {
 	icon = gfx/interface/icon_ideas.dds
-	country_resource_depletion_chance_mult = -0.2
-	country_resource_discovery_chance_mult = 0.2
+	country_resource_depletion_chance_mult = -0.1
+	country_resource_discovery_chance_mult = 0.1
 }
 
 imperialist_idea_4_mdf = {
 	icon = gfx/interface/icon_ideas.dds
-	state_turmoil_effects_mult = -0.15
+	state_turmoil_effects_mult = -0.1
 }
 
 imperialist_idea_5_mdf = {
@@ -562,7 +563,7 @@ imperialist_idea_5_mdf = {
 
 imperialist_idea_6_mdf = {
 	icon = gfx/interface/icon_ideas.dds
-	state_colony_growth_creation_mult = 0.2
+	state_colony_growth_creation_mult = 0.1
 	building_group_bg_mining_throughput_mult = 0.1
 }
 

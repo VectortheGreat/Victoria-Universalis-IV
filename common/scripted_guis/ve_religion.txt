@@ -1890,6 +1890,7 @@ ve_send_missionary = {
 		owner = scope:country
 	}
 	effect = {
+		set_variable = selected_state_religion
 		if = {
 			limit = {
 				has_variable = ethnocentrism_idea_5_var
@@ -1928,6 +1929,7 @@ ve_return_missionary = {
 	}
 	effect = {
 		remove_modifier = ve_missionary_mdf
+		remove_variable = selected_state_religion
 		scope:country3 = {
 			change_variable = {
 				name = avaible_missionaries
@@ -1958,6 +1960,7 @@ ve_send_diffusionist = {
 		owner = scope:country2
 	}
 	effect = {
+		set_variable = selected_state_culture
 		if = {
 			limit = {
 				has_variable = ethnocentrism_idea_5_var
@@ -1995,6 +1998,7 @@ ve_return_diffusionist = {
 		owner = scope:country4
 	}
 	effect = {
+		remove_variable = selected_state_culture
 		remove_modifier = ve_diffusionist_mdf
 		scope:country4 = {
 			change_variable = {

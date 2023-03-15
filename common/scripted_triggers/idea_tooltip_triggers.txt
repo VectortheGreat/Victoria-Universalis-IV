@@ -5,59 +5,45 @@ idea_1_tt_triggers = {
 			var:innovative_idea >= 1
 		}
 		flag:economic_idea = {
-			#custom_label = ve_gecici_10
 			var:economic_idea >= 1
 		}
 		flag:administrative_idea = {
-			#custom_label = ve_gecici_9
 			var:administrative_idea >= 1
 		}
 		flag:ethnocentrism_idea = {
-			#custom_label = ve_gecici_9
 			var:ethnocentrism_idea >= 1
 		}
 		flag:politics_idea = {
-			#custom_label = ve_gecici_9
 			var:politics_idea >= 1
 		}
 		flag:diplomatic_idea = {
-			#custom_label = ve_gecici_9
 			var:diplomatic_idea >= 1
 		}
 		flag:trade_idea = {
-			#custom_label = ve_gecici_9
 			var:trade_idea >= 1
 		}
 		flag:qualification_idea = {
-			#custom_label = ve_gecici_9
 			var:qualification_idea >= 1
 		}
 		flag:humanist_idea = {
-			#custom_label = ve_gecici_9
 			var:humanist_idea >= 1
 		}
 		flag:syndicalism_idea = {
-			#custom_label = ve_gecici_9
 			var:syndicalism_idea >= 1
 		}
 		flag:offensive_idea = {
-			#custom_label = ve_gecici_9
 			var:offensive_idea >= 1
 		}
 		flag:defensive_idea = {
-			#custom_label = ve_gecici_9
 			var:defensive_idea >= 1
 		}
 		flag:naval_idea = {
-			#custom_label = ve_gecici_9
 			var:naval_idea >= 1
 		}
 		flag:militarization_idea = {
-			#custom_label = ve_gecici_9
 			var:militarization_idea >= 1
 		}
 		flag:imperialist_idea = {
-			#custom_label = ve_gecici_9
 			var:imperialist_idea >= 1
 		}
 	}
@@ -70,59 +56,45 @@ idea_2_tt_triggers = {
 			var:innovative_idea >= 2
 		}
 		flag:economic_idea = {
-			#custom_label = ve_gecici_10
 			var:economic_idea >= 2
 		}
 		flag:administrative_idea = {
-			#custom_label = ve_gecici_9
 			var:administrative_idea >= 2
 		}
 		flag:ethnocentrism_idea = {
-			#custom_label = ve_gecici_9
 			var:ethnocentrism_idea >= 2
 		}
 		flag:politics_idea = {
-			#custom_label = ve_gecici_9
 			var:politics_idea >= 2
 		}
 		flag:diplomatic_idea = {
-			#custom_label = ve_gecici_9
 			var:diplomatic_idea >= 2
 		}
 		flag:trade_idea = {
-			#custom_label = ve_gecici_9
 			var:trade_idea >= 2
 		}
 		flag:qualification_idea = {
-			#custom_label = ve_gecici_9
 			var:qualification_idea >= 2
 		}
 		flag:humanist_idea = {
-			#custom_label = ve_gecici_9
 			var:humanist_idea >= 2
 		}
 		flag:syndicalism_idea = {
-			#custom_label = ve_gecici_9
 			var:syndicalism_idea >= 2
 		}
 		flag:offensive_idea = {
-			#custom_label = ve_gecici_9
 			var:offensive_idea >= 2
 		}
 		flag:defensive_idea = {
-			#custom_label = ve_gecici_9
 			var:defensive_idea >= 2
 		}
 		flag:naval_idea = {
-			#custom_label = ve_gecici_9
 			var:naval_idea >= 2
 		}
 		flag:militarization_idea = {
-			#custom_label = ve_gecici_9
 			var:militarization_idea >= 2
 		}
 		flag:imperialist_idea = {
-			#custom_label = ve_gecici_9
 			var:imperialist_idea >= 2
 		}
 	}
@@ -135,59 +107,45 @@ idea_3_tt_triggers = {
 			var:innovative_idea >= 3
 		}
 		flag:economic_idea = {
-			#custom_label = ve_gecici_10
 			var:economic_idea >= 3
 		}
 		flag:administrative_idea = {
-			#custom_label = ve_gecici_9
 			var:administrative_idea >= 3
 		}
 		flag:ethnocentrism_idea = {
-			#custom_label = ve_gecici_9
 			var:ethnocentrism_idea >= 3
 		}
 		flag:politics_idea = {
-			#custom_label = ve_gecici_9
 			var:politics_idea >= 3
 		}
 		flag:diplomatic_idea = {
-			#custom_label = ve_gecici_9
 			var:diplomatic_idea >= 3
 		}
 		flag:trade_idea = {
-			#custom_label = ve_gecici_9
 			var:trade_idea >= 3
 		}
 		flag:qualification_idea = {
-			#custom_label = ve_gecici_9
 			var:qualification_idea >= 3
 		}
 		flag:humanist_idea = {
-			#custom_label = ve_gecici_9
 			var:humanist_idea >= 3
 		}
 		flag:syndicalism_idea = {
-			#custom_label = ve_gecici_9
 			var:syndicalism_idea >= 3
 		}
 		flag:offensive_idea = {
-			#custom_label = ve_gecici_9
 			var:offensive_idea >= 3
 		}
 		flag:defensive_idea = {
-			#custom_label = ve_gecici_9
 			var:defensive_idea >= 3
 		}
 		flag:naval_idea = {
-			#custom_label = ve_gecici_9
 			var:naval_idea >= 3
 		}
 		flag:militarization_idea = {
-			#custom_label = ve_gecici_9
 			var:militarization_idea >= 3
 		}
 		flag:imperialist_idea = {
-			#custom_label = ve_gecici_9
 			var:imperialist_idea >= 3
 		}
 	}
@@ -200,59 +158,45 @@ idea_4_tt_triggers = {
 			var:innovative_idea >= 4
 		}
 		flag:economic_idea = {
-			#custom_label = ve_gecici_10
 			var:economic_idea >= 4
 		}
 		flag:administrative_idea = {
-			#custom_label = ve_gecici_9
 			var:administrative_idea >= 4
 		}
 		flag:ethnocentrism_idea = {
-			#custom_label = ve_gecici_9
 			var:ethnocentrism_idea >= 4
 		}
 		flag:politics_idea = {
-			#custom_label = ve_gecici_9
 			var:politics_idea >= 4
 		}
 		flag:diplomatic_idea = {
-			#custom_label = ve_gecici_9
 			var:diplomatic_idea >= 4
 		}
 		flag:trade_idea = {
-			#custom_label = ve_gecici_9
 			var:trade_idea >= 4
 		}
 		flag:qualification_idea = {
-			#custom_label = ve_gecici_9
 			var:qualification_idea >= 4
 		}
 		flag:humanist_idea = {
-			#custom_label = ve_gecici_9
 			var:humanist_idea >= 4
 		}
 		flag:syndicalism_idea = {
-			#custom_label = ve_gecici_9
 			var:syndicalism_idea >= 4
 		}
 		flag:offensive_idea = {
-			#custom_label = ve_gecici_9
 			var:offensive_idea >= 4
 		}
 		flag:defensive_idea = {
-			#custom_label = ve_gecici_9
 			var:defensive_idea >= 4
 		}
 		flag:naval_idea = {
-			#custom_label = ve_gecici_9
 			var:naval_idea >= 4
 		}
 		flag:militarization_idea = {
-			#custom_label = ve_gecici_9
 			var:militarization_idea >= 4
 		}
 		flag:imperialist_idea = {
-			#custom_label = ve_gecici_9
 			var:imperialist_idea >= 4
 		}
 	}
@@ -265,59 +209,45 @@ idea_5_tt_triggers = {
 			var:innovative_idea >= 5
 		}
 		flag:economic_idea = {
-			#custom_label = ve_gecici_10
 			var:economic_idea >= 5
 		}
 		flag:administrative_idea = {
-			#custom_label = ve_gecici_9
 			var:administrative_idea >= 5
 		}
 		flag:ethnocentrism_idea = {
-			#custom_label = ve_gecici_9
 			var:ethnocentrism_idea >= 5
 		}
 		flag:politics_idea = {
-			#custom_label = ve_gecici_9
 			var:politics_idea >= 5
 		}
 		flag:diplomatic_idea = {
-			#custom_label = ve_gecici_9
 			var:diplomatic_idea >= 5
 		}
 		flag:trade_idea = {
-			#custom_label = ve_gecici_9
 			var:trade_idea >= 5
 		}
 		flag:qualification_idea = {
-			#custom_label = ve_gecici_9
 			var:qualification_idea >= 5
 		}
 		flag:humanist_idea = {
-			#custom_label = ve_gecici_9
 			var:humanist_idea >= 5
 		}
 		flag:syndicalism_idea = {
-			#custom_label = ve_gecici_9
 			var:syndicalism_idea >= 5
 		}
 		flag:offensive_idea = {
-			#custom_label = ve_gecici_9
 			var:offensive_idea >= 5
 		}
 		flag:defensive_idea = {
-			#custom_label = ve_gecici_9
 			var:defensive_idea >= 5
 		}
 		flag:naval_idea = {
-			#custom_label = ve_gecici_9
 			var:naval_idea >= 5
 		}
 		flag:militarization_idea = {
-			#custom_label = ve_gecici_9
 			var:militarization_idea >= 5
 		}
 		flag:imperialist_idea = {
-			#custom_label = ve_gecici_9
 			var:imperialist_idea >= 5
 		}
 	}
@@ -330,59 +260,45 @@ idea_6_tt_triggers = {
 			var:innovative_idea >= 6
 		}
 		flag:economic_idea = {
-			#custom_label = ve_gecici_10
 			var:economic_idea >= 6
 		}
 		flag:administrative_idea = {
-			#custom_label = ve_gecici_9
 			var:administrative_idea >= 6
 		}
 		flag:ethnocentrism_idea = {
-			#custom_label = ve_gecici_9
 			var:ethnocentrism_idea >= 6
 		}
 		flag:politics_idea = {
-			#custom_label = ve_gecici_9
 			var:politics_idea >= 6
 		}
 		flag:diplomatic_idea = {
-			#custom_label = ve_gecici_9
 			var:diplomatic_idea >= 6
 		}
 		flag:trade_idea = {
-			#custom_label = ve_gecici_9
 			var:trade_idea >= 6
 		}
 		flag:qualification_idea = {
-			#custom_label = ve_gecici_9
 			var:qualification_idea >= 6
 		}
 		flag:humanist_idea = {
-			#custom_label = ve_gecici_9
 			var:humanist_idea >= 6
 		}
 		flag:syndicalism_idea = {
-			#custom_label = ve_gecici_9
 			var:syndicalism_idea >= 6
 		}
 		flag:offensive_idea = {
-			#custom_label = ve_gecici_9
 			var:offensive_idea >= 6
 		}
 		flag:defensive_idea = {
-			#custom_label = ve_gecici_9
 			var:defensive_idea >= 6
 		}
 		flag:naval_idea = {
-			#custom_label = ve_gecici_9
 			var:naval_idea >= 6
 		}
 		flag:militarization_idea = {
-			#custom_label = ve_gecici_9
 			var:militarization_idea >= 6
 		}
 		flag:imperialist_idea = {
-			#custom_label = ve_gecici_9
 			var:imperialist_idea >= 6
 		}
 	}
@@ -395,59 +311,45 @@ idea_7_tt_triggers = {
 			var:innovative_idea >= 7
 		}
 		flag:economic_idea = {
-			#custom_label = ve_gecici_10
 			var:economic_idea >= 7
 		}
 		flag:administrative_idea = {
-			#custom_label = ve_gecici_9
 			var:administrative_idea >= 7
 		}
 		flag:ethnocentrism_idea = {
-			#custom_label = ve_gecici_9
 			var:ethnocentrism_idea >= 7
 		}
 		flag:politics_idea = {
-			#custom_label = ve_gecici_9
 			var:politics_idea >= 7
 		}
 		flag:diplomatic_idea = {
-			#custom_label = ve_gecici_9
 			var:diplomatic_idea >= 7
 		}
 		flag:trade_idea = {
-			#custom_label = ve_gecici_9
 			var:trade_idea >= 7
 		}
 		flag:qualification_idea = {
-			#custom_label = ve_gecici_9
 			var:qualification_idea >= 7
 		}
 		flag:humanist_idea = {
-			#custom_label = ve_gecici_9
 			var:humanist_idea >= 7
 		}
 		flag:syndicalism_idea = {
-			#custom_label = ve_gecici_9
 			var:syndicalism_idea >= 7
 		}
 		flag:offensive_idea = {
-			#custom_label = ve_gecici_9
 			var:offensive_idea >= 7
 		}
 		flag:defensive_idea = {
-			#custom_label = ve_gecici_9
 			var:defensive_idea >= 7
 		}
 		flag:naval_idea = {
-			#custom_label = ve_gecici_9
 			var:naval_idea >= 7
 		}
 		flag:militarization_idea = {
-			#custom_label = ve_gecici_9
 			var:militarization_idea >= 7
 		}
 		flag:imperialist_idea = {
-			#custom_label = ve_gecici_9
 			var:imperialist_idea >= 7
 		}
 	}

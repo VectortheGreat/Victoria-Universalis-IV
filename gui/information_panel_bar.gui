@@ -427,7 +427,7 @@ types information_panel_bar_types {
 					position = { -100 @culture_position }
 					blockoverride "onclick" {
 						onclick = "[GetVariableSystem.Clear('ve_tab_var')]"
-						onclick = "[InformationPanelBar.OpenPanelCycleTabs('culture', 'culture_info|nation_formation')]"
+						onclick = "[InformationPanelBar.OpenPanelCycleTabs('culture', 'default|nation_formation')]"
 						input_action = "open_culture"
 					}
 				}
@@ -545,7 +545,7 @@ types information_panel_bar_types {
 					}
 					textbox = {
 						parentanchor = right|top
-						position = { -5 5 }
+						position = { -2 2 }
 						autoresize = yes
 						text = "#bold [GetDataModelSize(AccessPlayer.AccessActiveJournalEntries)]#!"
 						visible = "[GreaterThan_int32( GetDataModelSize(AccessPlayer.AccessActiveJournalEntries), '(int32)0')]"

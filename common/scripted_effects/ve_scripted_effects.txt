@@ -505,6 +505,7 @@ balance_missionaries = {
 				has_modifier = ve_missionary_mdf
 			}
 			remove_modifier = ve_missionary_mdf
+			remove_variable = selected_state_religion
 		}
 		set_variable = {
 			name = avaible_missionaries
@@ -519,6 +520,7 @@ call_missionaries_effect = {
 			has_modifier = ve_missionary_mdf
 		}
 		remove_modifier = ve_missionary_mdf
+		remove_variable = selected_state_religion
 	}
 	set_variable = {
 		name = avaible_missionaries
@@ -536,6 +538,7 @@ balance_cultural_missionaries = {
 				has_modifier = ve_diffusionist_mdf
 			}
 			remove_modifier = ve_diffusionist_mdf
+			remove_variable = selected_state_culture
 		}
 		set_variable = {
 			name = avaible_culture_missionaries
@@ -550,9 +553,115 @@ call_cultural_missionaries_effect = {
 			has_modifier = ve_diffusionist_mdf
 		}
 		remove_modifier = ve_diffusionist_mdf
+		remove_variable = selected_state_culture
 	}
 	set_variable = {
 		name = avaible_culture_missionaries
 		value = var:total_culture_missionaries
+	}
+}
+
+prevent_annex_foreign_missionary = {
+	if = {
+		limit = {
+			var:avaible_missionaries > var:total_missionaries
+		}
+		call_missionaries_effect = yes
+	}
+	else_if = {
+		limit = {
+			var:total_missionaries < my_script_value
+		}
+		call_missionaries_effect = yes
+	}
+}
+
+prevent_annex_foreign_missionary = {
+	if = {
+		limit = {
+			var:avaible_missionaries > var:total_missionaries
+		}
+		call_missionaries_effect = yes
+	}
+	else_if = {
+		limit = {
+			var:total_missionaries < my_script_value
+		}
+		call_missionaries_effect = yes
+	}
+}
+
+prevent_annex_foreign_missionary = {
+	if = {
+		limit = {
+			var:avaible_missionaries > var:total_missionaries
+		}
+		call_missionaries_effect = yes
+	}
+	else_if = {
+		limit = {
+			var:total_missionaries < my_script_value
+		}
+		call_missionaries_effect = yes
+	}
+}
+
+prevent_annex_foreign_missionary = {
+	if = {
+		limit = {
+			var:avaible_missionaries > var:total_missionaries
+		}
+		call_missionaries_effect = yes
+	}
+	else_if = {
+		limit = {
+			var:total_missionaries < my_script_value
+		}
+		call_missionaries_effect = yes
+	}
+}
+
+prevent_annex_foreign_missionary = {
+	if = {
+		limit = {
+			var:avaible_missionaries > var:total_missionaries
+		}
+		call_missionaries_effect = yes
+	}
+	else_if = {
+		limit = {
+			var:total_missionaries < my_script_value
+		}
+		call_missionaries_effect = yes
+	}
+}
+
+prevent_annex_foreign_missionary = {
+	if = {
+		limit = {
+			var:avaible_missionaries > var:total_missionaries
+		}
+		call_missionaries_effect = yes
+	}
+	else_if = {
+		limit = {
+			var:total_missionaries < active_missionary_value
+		}
+		call_missionaries_effect = yes
+	}
+}
+
+prevent_annex_foreign_cultural_missionary = {
+	if = {
+		limit = {
+			var:avaible_culture_missionaries > var:total_culture_missionaries
+		}
+		call_cultural_missionaries_effect = yes
+	}
+	else_if = {
+		limit = {
+			var:total_culture_missionaries < active_cultural_missionary_value
+		}
+		call_cultural_missionaries_effect = yes
 	}
 }

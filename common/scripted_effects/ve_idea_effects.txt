@@ -872,19 +872,19 @@ boost_ethno_idea_effect = {
 			set_variable = ethnocentrism_idea_7_var
 			change_variable = {
 				name = avaible_missionaries
-				add = 1
+				add = 2
 			}
 			change_variable = {
 				name = avaible_culture_missionaries
-				add = 1
+				add = 2
 			}
 			change_variable = {
 				name = total_missionaries
-				add = 1
+				add = 2
 			}
 			change_variable = {
 				name = total_culture_missionaries
-				add = 1
+				add = 2
 			}
 		}
 		idea_cost = yes

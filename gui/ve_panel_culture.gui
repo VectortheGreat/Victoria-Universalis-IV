@@ -86,6 +86,40 @@ types ve_gui_panel_types
 								}
 								vbox = {
 									spacing = 10
+									textbox = {
+										tooltip = "ve_cultural_missionary_power_tt"
+										text = "ve_cultural_missionary_power_txt"
+										default_format = "#tooltippable_name"
+										using = fontsize_xxl
+										align = nobaseline
+										elide = left
+										autoresize = yes
+									}
+									textbox = {
+										tooltip = "ve_max_cultural_missionary_power_tt"
+										text = "[GetPlayer.MakeScope.ScriptValue('cultural_missionary_power_250k')|%2]"
+										default_format = "#tooltippable_concept"				
+										using = fontsize_xxl
+										align = nobaseline
+										elide = left
+										autoresize = yes
+									}
+									white_progressbar_horizontal = {
+										tooltip = "ve_max_cultural_missionary_power_tt"
+										size = {
+											80
+											15
+										}
+										blockoverride
+										"values"
+										{
+											max = "[GetPlayer.MakeScope.ScriptValue('max_cultural_missionary_power_250k')|%2]"
+											value = "[GetPlayer.MakeScope.ScriptValue('cultural_missionary_power_250k')|%2]"
+										}
+									}
+								}
+								vbox = {
+									spacing = 10
 									visible = "[GetScriptedGui('hide_reform_point').IsShown(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
 									textbox = {
 										text = "ve_culture_reform_point"
@@ -109,7 +143,6 @@ types ve_gui_panel_types
 											80
 											15
 										}
-										tooltip = "BUILDING_PROGRESS_TOOLTIP"
 										blockoverride
 										"values"
 										{
