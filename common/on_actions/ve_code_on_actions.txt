@@ -2,6 +2,7 @@
 	events = {
 		dev.3
 		dev.4
+		dev.8
 	}
 }
 

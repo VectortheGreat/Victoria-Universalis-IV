@@ -198,111 +198,110 @@ dev.1 = {
 	}
 }
 
-dev.2 = {
-	#Developer Work Event - Not for users
-	type = country_event
-	event_image = {
-		video = "gfx/event_pictures/middleeast_oil_derricks.bk2"
-	}
-	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
-	on_opened_soundeffect = "event:/SFX/Events/unspecific/world_fair"
-	icon = "gfx/interface/icons/event_icons/event_portrait.dds"
-	title = dev.2.t
-	desc = dev.2.d
-	flavor = dev.1.f
-	duration = 0
-	trigger = {
-		literacy_rate <= 0.25
-	}
-	immediate = {
-		random_country = {
-			limit = {
-				is_ai = no
-			}
-			religion = {
-				save_scope_as = my_religion
-			}
-		}
-		every_scope_state = {
-			random_scope_pop = {
-				limit = {
-					pop_has_primary_culture = yes
-				}
-				culture = {
-					save_scope_as = my_culture
-				}
-			}
-		}
-	}
-	option = {
-		name = dev.2.a
-		default_option = yes
-		set_global_variable = ve_age_1_started
-		remove_global_variable = ve_age_2_started
-		remove_global_variable = ve_age_3_started
-	}
-	option = {
-		name = dev.2.b
-		default_option = yes
-		add_technology_researched = railways
-		# every_scope_state = {
-		# 	limit = {
-		# 		owner = ROOT
-		# 	}
-		# 	create_building = {
-		# 		building = building_railway
-		# 		level = 1
-		# 	}
-		# }
-	}
-	option = {
-		name = dev.2.c
-		ve_holy_site_effects = yes
-		# ve_ai_boost_idea = yes
-		# ve_ai_choose_idea = yes
-		# ve_ai_uses_religion = yes
-		# ve_ai_uses_culture = yes
-		# ve_ai_uses_age_bonuses = yes
-	}
-	option = {
-		name = dev.2.d
-		# every_scope_state = {
-		# 	limit = {
-		# 		has_variable = selected_state_religion
-		# 	}
-		# 	convert_population = {
-		# 		target = scope:my_religion
-		# 		value = 0.1
-		# 	}
-		# 	every_scope_pop = {
-		# 		limit = {
-		# 			pop_has_primary_culture = no
-		# 		}
-		# 		change_pop_culture = {
-		# 			value = 0.005
-		# 			target = scope:my_culture
-		# 		}
-		# 	}
-		# }
-		capital = {
-			convert_population = {
-				target = rel:orthodox
-				value = 0.5
-			}
-		}
-		c:TUR = {
-			trigger_event = {
-				id = dev.7
-			}
-		}
-		c:EGY = {
-			trigger_event = {
-				id = dev.7
-			}
-		}
-	}
-}
-
+# dev.2 = {
+# 	#Developer Work Event - Not for users
+# 	type = country_event
+# 	event_image = {
+# 		video = "gfx/event_pictures/middleeast_oil_derricks.bk2"
+# 	}
+# 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+# 	on_opened_soundeffect = "event:/SFX/Events/unspecific/world_fair"
+# 	icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+# 	title = dev.2.t
+# 	desc = dev.2.d
+# 	flavor = dev.1.f
+# 	duration = 0
+# 	trigger = {
+# 		literacy_rate <= 0.25
+# 	}
+# 	immediate = {
+# 		random_country = {
+# 			limit = {
+# 				is_ai = no
+# 			}
+# 			religion = {
+# 				save_scope_as = my_religion
+# 			}
+# 		}
+# 		every_scope_state = {
+# 			random_scope_pop = {
+# 				limit = {
+# 					pop_has_primary_culture = yes
+# 				}
+# 				culture = {
+# 					save_scope_as = my_culture
+# 				}
+# 			}
+# 		}
+# 	}
+# 	option = {
+# 		name = dev.2.a
+# 		default_option = yes
+# 		set_global_variable = ve_age_1_started
+# 		remove_global_variable = ve_age_2_started
+# 		remove_global_variable = ve_age_3_started
+# 	}
+# 	option = {
+# 		name = dev.2.b
+# 		default_option = yes
+# 		add_technology_researched = railways
+# 		# every_scope_state = {
+# 		# 	limit = {
+# 		# 		owner = ROOT
+# 		# 	}
+# 		# 	create_building = {
+# 		# 		building = building_railway
+# 		# 		level = 1
+# 		# 	}
+# 		# }
+# 	}
+# 	option = {
+# 		name = dev.2.c
+# 		ve_holy_site_effects = yes
+# 		# ve_ai_boost_idea = yes
+# 		# ve_ai_choose_idea = yes
+# 		# ve_ai_uses_religion = yes
+# 		# ve_ai_uses_culture = yes
+# 		# ve_ai_uses_age_bonuses = yes
+# 	}
+# 	option = {
+# 		name = dev.2.d
+# 		# every_scope_state = {
+# 		# 	limit = {
+# 		# 		has_variable = selected_state_religion
+# 		# 	}
+# 		# 	convert_population = {
+# 		# 		target = scope:my_religion
+# 		# 		value = 0.1
+# 		# 	}
+# 		# 	every_scope_pop = {
+# 		# 		limit = {
+# 		# 			pop_has_primary_culture = no
+# 		# 		}
+# 		# 		change_pop_culture = {
+# 		# 			value = 0.005
+# 		# 			target = scope:my_culture
+# 		# 		}
+# 		# 	}
+# 		# }
+# 		capital = {
+# 			convert_population = {
+# 				target = rel:orthodox
+# 				value = 0.5
+# 			}
+# 		}
+# 		c:TUR = {
+# 			trigger_event = {
+# 				id = dev.7
+# 			}
+# 		}
+# 		c:EGY = {
+# 			trigger_event = {
+# 				id = dev.7
+# 			}
+# 		}
+# 	}
+# }
 dev.3 = {
 	#Game Difficulty
 	type = country_event
@@ -423,6 +422,44 @@ dev.4 = {
 			ve_ai_uses_religion = yes
 			ve_ai_uses_culture = yes
 			ve_ai_uses_age_bonuses = yes
+		}
+		random_country = {
+			limit = {
+				has_variable = ve_1936_countries
+			}
+			change_variable = {
+				namme = point_value_pool
+				add = d
+			}
+		}
+		if = {
+			limit = {
+				is_ai = no
+			}
+			change_variable = {
+				name = idea_point_value_pool
+				add = 13
+			}
+			change_variable = {
+				name = culture_point_value_pool
+				add = 7
+			}
+		}
+		if = {
+			limit = {
+				NOT = {
+					has_variable = ve_1936_countries
+				}
+			}
+			set_variable = ve_1936_countries
+			set_variable = {
+				name = idea_point_pool
+				value = global_var:idea_point_value_pool
+			}
+			set_variable = {
+				name = culture_reform_point
+				value = global_var:culture_point_value_pool
+			}
 		}
 	}
 	option = {
@@ -859,6 +896,37 @@ dev.7 = {
 					value = cultural_missionary_power_10mplus
 				}
 			}
+		}
+	}
+	option = {
+		name = dev.2.c
+	}
+}
+
+dev.8 = {
+	type = country_event
+	event_image = {
+		video = "gfx/event_pictures/middleeast_oil_derricks.bk2"
+	}
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/unspecific/world_fair"
+	icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+	title = dev.8.t
+	desc = dev.8.d
+	flavor = dev.8.f
+	duration = 1
+	hidden = yes
+	trigger = {
+		global_country_ranking = 1
+	}
+	immediate = {
+		change_global_variable = {
+			name = idea_point_value_pool
+			add = 13
+		}
+		change_global_variable = {
+			name = culture_point_value_pool
+			add = 7
 		}
 	}
 	option = {

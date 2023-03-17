@@ -2,6 +2,14 @@
 	random_country = {
 		set_global_variable = ve_age_1_started		#Victorian Age - 1936
 		set_global_variable = {
+			name = idea_point_value_pool
+			value = 0
+		}
+		set_global_variable = {
+			name = culture_point_value_pool
+			value = 0
+		}
+		set_global_variable = {
 			name = 1_string
 			value = flag:1
 		}
@@ -107,5 +115,6 @@
 		religion_passive_bonuses = yes
 		national_idea_traditions = yes
 		ve_holy_site_effects = yes
+		set_variable = ve_1936_countries
 	}
 }

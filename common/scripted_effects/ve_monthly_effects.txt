@@ -117,7 +117,7 @@ ve_monthly_points = {
 		}
 		change_variable = {
 			name = piety_bar_point
-			add = 3
+			add = 2
 		}
 	}
 	if = {
@@ -126,7 +126,7 @@ ve_monthly_points = {
 		}
 		change_variable = {
 			name = piety_bar_point
-			add = 4
+			add = 2
 		}
 	}
 	else_if = {
@@ -135,7 +135,7 @@ ve_monthly_points = {
 		}
 		change_variable = {
 			name = piety_bar_point
-			add = 2
+			add = 1
 		}
 	}
 	if = {

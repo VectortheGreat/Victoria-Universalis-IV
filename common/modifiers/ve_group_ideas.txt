@@ -515,7 +515,7 @@ syndicalism_idea_3_mdf = {
 
 syndicalism_idea_4_mdf = {
 	icon = gfx/interface/icon_ideas.dds
-	state_birth_rate_mult = 0.1
+	state_birth_rate_mult = 0.03
 }
 
 syndicalism_idea_5_mdf = {
