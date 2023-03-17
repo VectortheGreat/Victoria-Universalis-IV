@@ -73,8 +73,8 @@ protestant_aspect_3_mdf = {
 
 protestant_aspect_4_mdf = {
 	icon = gfx/interface/catholic.dds
-	state_colony_growth_creation_mult = 0.075
-	state_colony_growth_speed_mult = 0.075
+	state_colony_growth_creation_mult = 0.03
+	state_colony_growth_speed_mult = 0.03
 }
 
 protestant_aspect_5_mdf = {
@@ -124,14 +124,14 @@ orthodox_aspect_3_mdf = {
 
 orthodox_aspect_4_mdf = {
 	icon = gfx/interface/catholic.dds
-	unit_army_offense_mult = 0.075
-	state_conscription_rate_mult = 0.15
+	unit_army_offense_mult = 0.05
+	state_conscription_rate_mult = 0.1
 }
 
 orthodox_aspect_5_mdf = {
 	icon = gfx/interface/catholic.dds
 	country_infamy_decay_mult = 0.1
-	country_improve_relations_speed_mult = 0.2
+	country_improve_relations_speed_mult = 0.1
 }
 
 orthodox_aspect_6_mdf = {
@@ -158,7 +158,7 @@ coptic_pasive_mdf = {
 
 coptic_aspect_1_mdf = {
 	icon = gfx/interface/catholic.dds
-	country_bureaucracy_investment_cost_factor_mult = -0.075
+	country_bureaucracy_investment_cost_factor_mult = 0.1
 }
 
 coptic_aspect_2_mdf = {
@@ -228,7 +228,7 @@ sunni_aspect_4_mdf = {
 
 sunni_aspect_5_mdf = {
 	icon = gfx/interface/catholic.dds
-	state_education_access_add = 0.025
+	state_education_access_add = 0.015
 	building_university_throughput_mult = 0.15
 }
 
@@ -394,7 +394,7 @@ mahayana_aspect_6_mdf = {
 
 mahayana_aspect_7_mdf = {
 	icon = gfx/interface/catholic.dds
-	state_education_access_add = 0.03
+	state_education_access_add = 0.015
 }
 
 mahayana_aspect_8_mdf = {
@@ -447,7 +447,7 @@ hindu_aspect_6_mdf = {
 hindu_aspect_7_mdf = {
 	icon = gfx/interface/catholic.dds
 	country_bureaucracy_mult = 0.05
-	state_education_access_wealth_add = 0.025
+	state_education_access_wealth_add = 0.015
 }
 
 hindu_aspect_8_mdf = {
@@ -487,7 +487,7 @@ sikh_aspect_4_mdf = {
 
 sikh_aspect_5_mdf = {
 	icon = gfx/interface/catholic.dds
-	state_education_access_wealth_add = 0.03
+	state_education_access_wealth_add = 0.015
 }
 
 sikh_aspect_6_mdf = {
@@ -499,7 +499,7 @@ sikh_aspect_6_mdf = {
 sikh_aspect_7_mdf = {
 	icon = gfx/interface/catholic.dds
 	state_urbanization_mult = 0.15
-	state_mortality_mult = -0.03
+	state_mortality_mult = -0.025
 }
 
 sikh_aspect_8_mdf = {

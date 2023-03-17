@@ -1,11 +1,11 @@
 national_supremacy_mdf_1 = {
 	icon = gfx/interface/monarch_cultures_icon.dds
-	state_accepted_birth_rate_mult = 0.1
+	state_accepted_birth_rate_mult = 0.05
 }
 
 national_supremacy_mdf_2 = {
 	icon = gfx/interface/monarch_cultures_icon.dds
-	state_education_access_add = 0.05
+	state_education_access_add = 0.03
 }
 
 national_supremacy_mdf_3 = {
@@ -35,12 +35,12 @@ national_supremacy_mdf_7 = {
 
 intellectual_nation_mdf_1 = {
 	icon = gfx/interface/monarch_cultures_icon.dds
-	state_birth_rate_mult = 0.05
+	state_birth_rate_mult = 0.025
 }
 
 intellectual_nation_mdf_2 = {
 	icon = gfx/interface/monarch_cultures_icon.dds
-	state_education_access_wealth_add = 0.05
+	state_education_access_wealth_add = 0.02
 }
 
 intellectual_nation_mdf_3 = {

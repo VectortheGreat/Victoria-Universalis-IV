@@ -120,7 +120,7 @@ age_2_bonus_11 = {
 
 age_3_bonus_1 = {
 	icon = gfx/interface/icon_splendor_tiny.dds
-	state_birth_rate_mult = 0.1
+	state_birth_rate_mult = 0.05
 }
 
 age_3_bonus_2 = {

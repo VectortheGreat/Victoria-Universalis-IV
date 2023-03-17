@@ -45,7 +45,7 @@ constantinople_hs_mdf = {
 
 alexandria_hs_mdf = {
 	icon = gfx/interface/monument.dds
-	state_education_access_add = 0.05
+	state_education_access_add = 0.025
 }
 
 antioch_hs_mdf = {
@@ -70,7 +70,7 @@ medina_hs_mdf = {
 
 baghdad_hs_mdf = {
 	icon = gfx/interface/monument.dds
-	state_education_access_add = 0.05
+	state_education_access_add = 0.025
 }
 
 damascus_hs_mdf = {
@@ -115,7 +115,7 @@ ise_grand_shrine_hs_mdf = {
 
 lumbini_hs_mdf = {
 	icon = gfx/interface/monument.dds
-	state_accepted_birth_rate_mult = 0.05
+	state_accepted_birth_rate_mult = 0.025
 }
 
 mathura_hs_mdf = {
@@ -125,7 +125,7 @@ mathura_hs_mdf = {
 
 varanasi_hs_mdf = {
 	icon = gfx/interface/monument.dds
-	state_education_access_add = 0.05
+	state_education_access_add = 0.025
 }
 
 ayodhya_hs_mdf = {
