@@ -2303,7 +2303,7 @@ texticon = {
   iconsize = {
     offset = { 0 15 }
      texture = "gfx/interface/ve_religion/authority_icon.dds"
-    fontsize = 45
+    fontsize = 65
   }
 }
 texticon = {
@@ -2311,7 +2311,7 @@ texticon = {
   iconsize = {
     offset = { 0 15 }
     texture = "gfx/interface/ve_religion/authority_icon_black.dds"
-    fontsize = 45
+    fontsize = 65
   }
 }
 texticon = {
@@ -2703,7 +2703,7 @@ texticon = {
   iconsize = {
     offset = { 0 15 }
     texture = "gfx/interface/ve_religion/authority_icon.dds"
-    fontsize = 45
+    fontsize = 65
   }
 }
 texticon = {
@@ -2711,7 +2711,7 @@ texticon = {
   iconsize = {
     offset = { 0 15 }
     texture = "gfx/interface/ve_religion/authority_icon_black.dds"
-    fontsize = 45
+    fontsize = 65
   }
 }
 texticon = {
@@ -3567,7 +3567,7 @@ texticon = {
   iconsize = {
     offset = { 0 15 }
     texture = "gfx/interface/ve_religion/authority_icon.dds"
-    fontsize = 45
+    fontsize = 65
   }
 }
 texticon = {
@@ -3575,7 +3575,7 @@ texticon = {
   iconsize = {
     offset = { 0 15 }
      texture = "gfx/interface/ve_religion/authority_icon_black.dds"
-    fontsize = 45
+    fontsize = 65
   }
 }
 texticon = {

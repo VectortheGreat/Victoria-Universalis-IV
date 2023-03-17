@@ -158,7 +158,7 @@ coptic_pasive_mdf = {
 
 coptic_aspect_1_mdf = {
 	icon = gfx/interface/catholic.dds
-	country_bureaucracy_investment_cost_factor_mult = 0.1
+	country_bureaucracy_investment_cost_factor_mult = -0.1
 }
 
 coptic_aspect_2_mdf = {
