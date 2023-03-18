@@ -423,28 +423,6 @@ dev.4 = {
 			ve_ai_uses_culture = yes
 			ve_ai_uses_age_bonuses = yes
 		}
-		random_country = {
-			limit = {
-				has_variable = ve_1936_countries
-			}
-			change_variable = {
-				namme = point_value_pool
-				add = d
-			}
-		}
-		if = {
-			limit = {
-				is_ai = no
-			}
-			change_variable = {
-				name = idea_point_value_pool
-				add = 13
-			}
-			change_variable = {
-				name = culture_point_value_pool
-				add = 7
-			}
-		}
 		if = {
 			limit = {
 				NOT = {
