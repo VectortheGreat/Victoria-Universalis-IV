@@ -1,0 +1,22 @@
+namespace = innovative_flavor
+innovative_flavor.1 = {
+	#Point
+	type = country_event
+	event_image = {
+		video = "gfx/event_pictures/unspecific_military_parade.bk2"
+	}
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/unspecific/military_parade"
+	icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+	title = innovative_flavor.1.t
+	desc = innovative_flavor.1.desc
+	duration = 3
+	trigger = {
+		has_variable = can_go_innovative
+	}
+	option = {
+		name = innovative_flavor.1.a
+		default_option = yes
+		
+	}
+}
