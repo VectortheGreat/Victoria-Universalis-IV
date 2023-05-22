@@ -370,7 +370,7 @@ types topbar_components
 			using = hud_visibility
 			datacontext = "[AccessMetaPlayer.AccessPlayedOrObservedCountry]"
 			using = clickthrough_blocker
-			size = { 705 110 }
+			size = { 705 80 }
 			allow_outside = yes
 			resizeparent = yes
 			
@@ -744,7 +744,7 @@ types topbar_components
 				visible = "[GetMetaPlayer.GetPlayedOrObservedCountry.IsValid]"
 				size = { 24 24 }
 				parentanchor = bottom|right
-				position = { -30 -14 }
+				position = { -30 -9 }
 				
 				alpha = 0
 				

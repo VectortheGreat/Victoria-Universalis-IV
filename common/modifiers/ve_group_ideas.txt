@@ -117,7 +117,7 @@ economic_idea_1_mdf = {
 
 economic_idea_2_mdf = {
 	icon = gfx/interface/icon_ideas.dds
-	state_construction_mult = 0.1
+	state_construction_mult = 0.05
 }
 
 economic_idea_3_mdf = {
@@ -127,12 +127,12 @@ economic_idea_3_mdf = {
 
 economic_idea_4_mdf = {
 	icon = gfx/interface/icon_ideas.dds
-	country_loan_interest_rate_mult = -0.1
+	country_loan_interest_rate_mult = -0.05
 }
 
 economic_idea_5_mdf = {
 	icon = gfx/interface/icon_ideas.dds
-	state_tax_collection_mult = 0.15
+	state_tax_collection_mult = 0.08
 }
 
 economic_idea_6_mdf = {
@@ -400,7 +400,8 @@ humanist_idea_2_mdf = {
 
 humanist_idea_3_mdf = {
 	icon = gfx/interface/icon_ideas.dds
-	country_revolution_secession_speed_mult = -0.2
+	country_agitator_slots_add = 1
+	country_revolution_progress_add = -0.05
 }
 
 humanist_idea_4_mdf = {
@@ -468,12 +469,13 @@ politics_idea_1_mdf = {
 
 politics_idea_2_mdf = {
 	icon = gfx/interface/icon_ideas.dds
-	country_revolution_secession_speed_add = -0.1
+	# country_revolution_secession_speed_add = -0.1
+	country_agitator_slots_add = 1
 }
 
 politics_idea_3_mdf = {
 	icon = gfx/interface/icon_ideas.dds
-	country_law_enactment_time_mult = -0.2
+	country_law_enactment_time_mult = -0.15
 }
 
 politics_idea_4_mdf = {
@@ -484,7 +486,7 @@ politics_idea_4_mdf = {
 
 politics_idea_5_mdf = {
 	icon = gfx/interface/icon_ideas.dds
-	country_law_enactment_success_add = 0.15
+	country_law_enactment_success_add = 0.1
 }
 
 politics_idea_6_mdf = {

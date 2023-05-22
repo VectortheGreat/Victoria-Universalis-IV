@@ -889,6 +889,18 @@ types state_panel_types
 					blockoverride "name" {
 						text = "STATE_INFRASTRUCTURE"
 					}
+
+					blockoverride "navigation_button" {
+						button_icon_plus_action = {
+							position = { -5 5 }
+							size = { 25 25 }
+							parentanchor = top|right
+							datacontext = "[State.GetBuilding('building_railway')]"
+							visible = "[IsValid( Building.QueueConstruction )]"
+							tooltip = "[Building.GetQueueConstructionTooltip]"
+							onclick = "[Execute( Building.QueueConstruction )]"
+						}
+					}
 				}
 				
 				state_panel_status_item_small = {
@@ -901,6 +913,18 @@ types state_panel_types
 					
 					blockoverride "name" {
 						text = "STATE_TAX_CAPACITY"
+					}
+
+					blockoverride "navigation_button" {
+						button_icon_plus_action = {
+							position = { -5 5 }
+							size = { 25 25 }
+							parentanchor = top|right
+							datacontext = "[State.GetBuilding('building_government_administration')]"
+							visible = "[IsValid( Building.QueueConstruction )]"
+							tooltip = "[Building.GetQueueConstructionTooltip]"
+							onclick = "[Execute( Building.QueueConstruction )]"
+						}
 					}
 				}				
 
@@ -1135,7 +1159,7 @@ types state_panel_types
 						textbox = {
 							layoutpolicy_horizontal = expanding
 							layoutpolicy_vertical = expanding
-							text = "[State.GetPopulationSize|Kv] [GetArrowIcon_int32( State.GetPopTotalChange )]"
+							text = "[State.GetPopulationSize|Kv] [GetArrowIcon_int64( State.GetPopTotalChange )]"
 							using = fontsize_xl
 							align = left|nobaseline
 						}
@@ -1173,7 +1197,7 @@ types state_panel_types
 						textbox = {
 							layoutpolicy_horizontal = expanding
 							layoutpolicy_vertical = expanding
-							alpha = "[TransparentIfZero_int32(State.GetPopNetMigration)]"
+							alpha = "[TransparentIfZero_int64(State.GetPopNetMigration)]"
 							text = "STATE_MIGRATION_VALUE"
 							align = left|nobaseline
 						}
@@ -1404,7 +1428,7 @@ types state_panel_types
 
 							textbox = {
 								text = "[State.GetNumSubsistenceWorkingAdults|Dv]"
-								visible = "[GreaterThan_int32(State.GetNumSubsistenceWorkingAdults, '(int32)499')]"
+								visible = "[GreaterThan_int64(State.GetNumSubsistenceWorkingAdults, '(int64)499')]"
 								using = fontsize_large
 								autoresize = yes
 								align = right|nobaseline
@@ -1415,7 +1439,7 @@ types state_panel_types
 							textbox = {
 								text = "INSIGNIFICANT"
 								default_format = "#v"
-								visible = "[Not(GreaterThan_int32(State.GetNumSubsistenceWorkingAdults, '(int32)499'))]"
+								visible = "[Not(GreaterThan_int64(State.GetNumSubsistenceWorkingAdults, '(int64)499'))]"
 								autoresize = yes
 								align = right|nobaseline
 								parentanchor = right
@@ -1438,7 +1462,7 @@ types state_panel_types
 
 							textbox = {
 								raw_text = "#variable [State.GetNumUnemployedWorkingAdults|D]#!"							
-								visible = "[GreaterThan_int32(State.GetNumUnemployedWorkingAdults, '(int32)499')]"
+								visible = "[GreaterThan_int64(State.GetNumUnemployedWorkingAdults, '(int64)499')]"
 								using = fontsize_large
 								autoresize = yes
 								align = right|nobaseline
@@ -1448,7 +1472,7 @@ types state_panel_types
 							
 							textbox = {
 								text = "INSIGNIFICANT"
-								visible = "[Not(GreaterThan_int32(State.GetNumUnemployedWorkingAdults, '(int32)499'))]"
+								visible = "[Not(GreaterThan_int64(State.GetNumUnemployedWorkingAdults, '(int64)499'))]"
 								default_format = "#v"
 								autoresize = yes
 								align = right|nobaseline
@@ -1689,13 +1713,15 @@ types state_panel_types
 		}
 		
 
-		button_icon_goto = {
-			position = { -5 5 }
-			size = { 25 25 }
-			block "goto" {
-				visible = no
+		block "navigation_button" {
+			button_icon_goto = {
+				position = { -5 5 }
+				size = { 25 25 }
+				block "goto" {
+					visible = no
+				}
+				parentanchor = top|right
 			}
-			parentanchor = top|right
 		}
 	}
 	
@@ -2710,10 +2736,6 @@ types building_item_types
 			parentanchor = right|vcenter
 			position = { -15 0 }
 			
-			tooltip = "TOOLTIP_BUILDING_PRODUCTIVITY"
-			tooltipwidget = {
-				GraphTooltip_Productivity = {}
-			}
 		}
 		flowcontainer = {
 			visible = "[And(And(Building.IsSelfFunded, Building.IsActive), Building.IsSubsistenceBuilding)]"
@@ -2725,7 +2747,7 @@ types building_item_types
 
 			item = {
 				textbox = {
-					visible = "[And(PopListItem.GetPopType.HasSubsistenceIncome,GreaterThan_int32(PopListItem.GetMaxPopSize,'(int32)0'))]"
+					visible = "[And(PopListItem.GetPopType.HasSubsistenceIncome,GreaterThan_int64(Building.GetMaxPopSize(PopListItem.GetPopType),'(int64)0'))]"
 					raw_text = "@money![PopListItem.GetAverageAnnualWage|v1]"
 					autoresize = yes
 					align = right|nobaseline
@@ -2992,14 +3014,14 @@ types building_item_types
 						
 						### EMPLOYMENT WARNING
 						icon = {
-							visible = "[And(And(Not(Building.IsSubsistenceBuilding), Building.HasFailedHires), Building.IsActive)]"
+							visible = "[Building.ShouldShowAsNotHiring]"
 							size = { 30 30 }
 							texture = "gfx/interface/icons/generic_icons/employment_not_full.dds"
 							tooltip = "NOT_FULLY_EMPLOYED"
 						}
 
 						icon = {
-							visible = "[And(And(Not(Building.IsSubsistenceBuilding), Not(Building.HasFailedHires)), Building.IsActive)]"
+							visible = "[Building.ShouldShowAsHiring]"
 							size = { 30 30 }
 							texture = "gfx/interface/icons/generic_icons/employment_not_full_hiring.dds"
 							tooltip = "TOOLTIP_BUILDING_HIRING"
@@ -3182,7 +3204,7 @@ types building_item_types
 
 					### EMPLOYMENT WARNING
 					icon = {
-						visible = "[And(And(Not(Building.IsSubsistenceBuilding), Building.HasFailedHires), Building.IsActive)]"
+						visible = "[Building.ShouldShowAsNotHiring]"
 						texture = "gfx/interface/icons/generic_icons/employment_not_full.dds"
 						tooltip = "NOT_FULLY_EMPLOYED"
 						size = { 30 30 }

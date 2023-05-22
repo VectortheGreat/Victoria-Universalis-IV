@@ -3644,7 +3644,6 @@ texticon = {
 }
 
 
-
 texticon = {
   icon = arrow_right
   iconsize = {
@@ -3677,7 +3676,7 @@ texticon = {
 texticon = {
   icon = arrow_down
   iconsize = {
-    offset = { 0 2 }
+    offset = { 1 4 }
     texture = "gfx/interface/icons/generic_icons/trend_down.dds"
     fontsize = 20
   }
@@ -3704,7 +3703,7 @@ texticon = {
 texticon = {
   icon = arrow_up
   iconsize = {
-    offset = { 0 2 }
+    offset = { 2 3 }
     texture = "gfx/interface/icons/generic_icons/trend_up.dds"
     fontsize = 20
   }
@@ -3718,6 +3717,16 @@ texticon = {
     fontsize = 20
   }
 }
+
+texticon = {
+  icon = turns_into
+  iconsize = {
+    offset = { 0 10 }
+    texture = "gfx/interface/icons/generic_icons/turns_into.dds"
+    fontsize = 50
+  }
+}
+
 
 ### MAP LIST ICONS
 texticon = {
@@ -3777,36 +3786,54 @@ texticon = {
 texticon = {
   icon = aut
   iconsize = {
-    offset = { 0 15 }
+    offset = { 0 22 }
     texture = "gfx/interface/icons/topbar/authority_icon.dds"
-    fontsize = 106
+    fontsize = 82
   }
 }
 
 texticon = {
   icon = bur
   iconsize = {
-    offset = { 0 15 }
+    offset = { 0 22 }
     texture = "gfx/interface/icons/topbar/bureaucracy_icon.dds"
-    fontsize = 106
+    fontsize = 82
   }
 }
 
 texticon = {
   icon = inf
   iconsize = {
-    offset = { 0 15 }
+    offset = { 0 22 }
     texture = "gfx/interface/icons/topbar/influence_icon.dds"
-    fontsize = 106
+    fontsize = 82
   }
 }
 
 texticon = {
   icon = money
   iconsize = {
-    offset = { 0 15 }
+    offset = { 0 22 }
     texture = "gfx/interface/icons/topbar/income_power_icon.dds"
-    fontsize = 106
+    fontsize = 82
+  }
+}
+
+texticon = {
+  icon = unincorporated
+  iconsize = {
+    offset = { 0 22 }
+    texture = "gfx/interface/icons/state_status_icons/unincorporated_state.dds"
+    fontsize = 100
+  }
+}
+
+texticon = {
+  icon = incorporated
+  iconsize = {
+    offset = { 0 22 }
+    texture = "gfx/interface/icons/state_status_icons/incorporated_state.dds"
+    fontsize = 100
   }
 }
 
@@ -3842,7 +3869,7 @@ texticon = {
 texticon = {
   icon = battalions
   iconsize = {
-    offset = { 0 20 }
+    offset = { 0 30 }
     texture = "gfx/interface/icons/generic_icons/battalions_30.dds"
     fontsize = 15
   }
@@ -3851,7 +3878,7 @@ texticon = {
 texticon = {
   icon = battalions
   iconsize = {
-    offset = { 0 20 }
+    offset = { 0 30 }
     texture = "gfx/interface/icons/generic_icons/battalions_34.dds"
     fontsize = 17
   }
@@ -3860,7 +3887,7 @@ texticon = {
 texticon = {
   icon = battalions
   iconsize = {
-    offset = { 0 20 }
+    offset = { 0 30 }
     texture = "gfx/interface/icons/generic_icons/battalions_44.dds"
     fontsize = 22
   }
@@ -3869,7 +3896,7 @@ texticon = {
 texticon = {
   icon = battalions
   iconsize = {
-    offset = { 0 20 }
+    offset = { 0 30 }
     texture = "gfx/interface/icons/generic_icons/battalions_60.dds"
     fontsize = 30
   }
@@ -3878,7 +3905,7 @@ texticon = {
 texticon = {
   icon = battalions
   iconsize = {
-    offset = { 0 20 }
+    offset = { 0 30 }
     texture = "gfx/interface/icons/generic_icons/battalions.dds"
     fontsize = 91
   }
@@ -3968,9 +3995,9 @@ texticon = {
 texticon = {
   icon = convoys
   iconsize = {
-    offset = { 0 20 }
+    offset = { 0 24 }
     texture = "gfx/interface/icons/generic_icons/convoys.dds"
-    fontsize = 91
+    fontsize = 100
   }
 }
 
@@ -4013,9 +4040,9 @@ texticon = {
 texticon = {
   icon = manpower
   iconsize = {
-    offset = { 0 20 }
+    offset = { 0 17 }
     texture = "gfx/interface/icons/military_icons/manpower.dds"
-    fontsize = 100
+    fontsize = 60
   }
 }
 
@@ -4050,105 +4077,105 @@ texticon = {
 texticon = {
   icon = coin1
   iconsize = {
-    offset = { 0 20 }
+    offset = { 0 25 }
     texture = "gfx/interface/icons/generic_icons/coin_icon_01.dds"
-    fontsize = 80
+    fontsize = 84
   }
 }
 texticon = {
   icon = coin2
   iconsize = {
-    offset = { 0 20 }
+    offset = { 0 25 }
     texture = "gfx/interface/icons/generic_icons/coin_icon_02.dds"
-    fontsize = 80
+    fontsize = 84
   }
 }
 texticon = {
   icon = coin3
   iconsize = {
-    offset = { 0 20 }
+    offset = { 0 25 }
     texture = "gfx/interface/icons/generic_icons/coin_icon_03.dds"
-    fontsize = 80
+    fontsize = 84
   }
 }
 texticon = {
   icon = coin4
   iconsize = {
-    offset = { 0 20 }
+    offset = { 0 25 }
     texture = "gfx/interface/icons/generic_icons/coin_icon_04.dds"
-    fontsize = 80
+    fontsize = 84
   }
 }
 texticon = {
   icon = coin5
   iconsize = {
-    offset = { 0 20 }
+    offset = { 0 25 }
     texture = "gfx/interface/icons/generic_icons/coin_icon_05.dds"
-    fontsize = 80
+    fontsize = 84
   }
 }
 texticon = {
   icon = coin6
   iconsize = {
-    offset = { 0 20 }
+    offset = { 0 25 }
     texture = "gfx/interface/icons/generic_icons/coin_icon_06.dds"
-    fontsize = 80
+    fontsize = 84
   }
 }
 texticon = {
   icon = coin7
   iconsize = {
-    offset = { 0 20 }
+    offset = { 0 25 }
     texture = "gfx/interface/icons/generic_icons/coin_icon_07.dds"
-    fontsize = 80
+    fontsize = 84
   }
 }
 texticon = {
   icon = coin8
   iconsize = {
-    offset = { 0 20 }
+    offset = { 0 25 }
     texture = "gfx/interface/icons/generic_icons/coin_icon_08.dds"
-    fontsize = 80
+    fontsize = 84
   }
 }
 texticon = {
   icon = coin9
   iconsize = {
-    offset = { 0 20 }
+    offset = { 0 25 }
     texture = "gfx/interface/icons/generic_icons/coin_icon_09.dds"
-    fontsize = 80
+    fontsize = 84
   }
 }
 texticon = {
   icon = coin10
   iconsize = {
-    offset = { 0 20 }
+    offset = { 0 25 }
     texture = "gfx/interface/icons/generic_icons/coin_icon_10.dds"
-    fontsize = 80
+    fontsize = 84
   }
 }
 texticon = {
   icon = coin11
   iconsize = {
-    offset = { 0 20 }
+    offset = { 0 25 }
     texture = "gfx/interface/icons/generic_icons/coin_icon_11.dds"
-    fontsize = 80
+    fontsize = 84
   }
 }
 texticon = {
   icon = coin12
   iconsize = {
-    offset = { 0 20 }
+    offset = { 0 25 }
     texture = "gfx/interface/icons/generic_icons/coin_icon_12.dds"
-    fontsize = 80
+    fontsize = 84
   }
 }
 texticon = {
   icon = coin13
   iconsize = {
-    offset = { 0 20 }
+    offset = { 0 25 }
     texture = "gfx/interface/icons/generic_icons/coin_icon_13.dds"
-    fontsize = 80
+    fontsize = 84
   }
 }
 
@@ -4367,7 +4394,7 @@ texticon = {
   iconsize = {
     offset = { 0 7 }
     texture = "gfx/interface/icons/ig_icons/armed_forces_30.dds"
-    fontsize = 20
+    fontsize = 22
   }
 }
 
@@ -4376,7 +4403,7 @@ texticon = {
   iconsize = {
     offset = { 0 7 }
     texture = "gfx/interface/icons/ig_icons/devout_30.dds"
-    fontsize = 20
+    fontsize = 22
   }
 }
 
@@ -4385,7 +4412,7 @@ texticon = {
   iconsize = {
     offset = { 0 7 }
     texture = "gfx/interface/icons/ig_icons/industrialists_30.dds"
-    fontsize = 20
+    fontsize = 22
   }
 }
 
@@ -4394,7 +4421,7 @@ texticon = {
   iconsize = {
     offset = { 0 7 }
     texture = "gfx/interface/icons/ig_icons/intelligensia_30.dds"
-    fontsize = 20
+    fontsize = 22
   }
 }
 
@@ -4403,7 +4430,7 @@ texticon = {
   iconsize = {
     offset = { 0 7 }
     texture = "gfx/interface/icons/ig_icons/landowners_30.dds"
-    fontsize = 20
+    fontsize = 22
   }
 }
 
@@ -4412,16 +4439,16 @@ texticon = {
   iconsize = {
     offset = { 0 7 }
     texture = "gfx/interface/icons/ig_icons/petty_bourgeoisie_30.dds"
-    fontsize = 20
+    fontsize = 22
   }
 }
 
 texticon = {
-  icon = politically_inactive
+  icon = politically_unaligned
   iconsize = {
     offset = { 0 7 }
-    texture = "gfx/interface/icons/ig_icons/politically_inactive_30.dds"
-    fontsize = 20
+    texture = "gfx/interface/icons/ig_icons/politically_unaligned_30.dds"
+    fontsize = 22
   }
 }
 
@@ -4430,7 +4457,7 @@ texticon = {
   iconsize = {
     offset = { 0 7 }
     texture = "gfx/interface/icons/ig_icons/rural_folk_30.dds"
-    fontsize = 20
+    fontsize = 22
   }
 }
 
@@ -4439,7 +4466,7 @@ texticon = {
   iconsize = {
     offset = { 0 7 }
     texture = "gfx/interface/icons/ig_icons/trade_unions_30.dds"
-    fontsize = 20
+    fontsize = 22
   }
 }
 
@@ -4459,6 +4486,24 @@ texticon = {
     offset = { 0 16 }
     texture = "gfx/interface/icons/generic_icons/trade.dds"
     fontsize = 100
+  }
+}
+
+texticon = {
+  icon = import
+  iconsize = {
+    offset = { 0 16 }
+    texture = "gfx/interface/icons/lens_toolbar_icons/trade_route_import_lens_option.dds"
+    fontsize = 66
+  }
+}
+
+texticon = {
+  icon = export
+  iconsize = {
+    offset = { 0 16 }
+    texture = "gfx/interface/icons/lens_toolbar_icons/trade_route_export_lens_option.dds"
+    fontsize = 66
   }
 }
 
@@ -4511,9 +4556,9 @@ texticon = {
 texticon = {
   icon = red_cross
   iconsize = {
-    offset = { 0 15 }
+    offset = { 0 13 }
     texture = "gfx/interface/icons/generic_icons/red_cross.dds"
-    fontsize = 120
+    fontsize = 140
   }
 }
 
@@ -4547,9 +4592,9 @@ texticon = {
 texticon = {
   icon = warning
   iconsize = {
-    offset = { 0 20 }
+    offset = { 0 27 }
     texture = "gfx/interface/icons/generic_icons/warning.dds"
-    fontsize = 120
+    fontsize = 110
   }
 }
 
@@ -4943,6 +4988,33 @@ texticon = {
 }
 
 texticon = {
+  icon = in_government
+  iconsize = {
+    offset = { 0 30 }
+    texture = "gfx/interface/icons/generic_icons/in_government_icon.dds"
+    fontsize = 90
+  }
+}
+
+texticon = {
+  icon = in_opposition
+  iconsize = {
+    offset = { 0 30 }
+    texture = "gfx/interface/icons/generic_icons/in_opposition_icon.dds"
+    fontsize = 90
+  }
+}
+
+texticon = {
+  icon = marginalized
+  iconsize = {
+    offset = { 0 30 }
+    texture = "gfx/interface/icons/generic_icons/marginalized.dds"
+    fontsize = 90
+  }
+}
+
+texticon = {
   icon = infamy
   iconsize = {
     offset = { 0 30 }
@@ -4993,5 +5065,14 @@ texticon = {
     offset = { 0 10 }
     texture = "gfx/interface/outliner/pinned_icon.dds"
     fontsize = 35
+  }
+}
+
+texticon = {
+  icon = popularity
+  iconsize = {
+    offset = { 0 20 }
+    texture = "gfx/interface/icons/generic_icons/popularity.dds"
+    fontsize = 100
   }
 }

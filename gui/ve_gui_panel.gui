@@ -182,16 +182,12 @@ types ve_gui_panel_types
 		blockoverride "back_button_onclick" {
 			onclick = "[GetVariableSystem.Clear('ve_tab_var')]"
 		}
-
-		
-
 		blockoverride "close_button_onclick" {
 			onclick = "[GetVariableSystem.Clear('ve_tab_var')]"
 		}
 	}
 }
-template
-ve_temptlate_gui_panel
+template ve_temptlate_gui_panel
 {
 	ve_gui_panel = {
 	}
