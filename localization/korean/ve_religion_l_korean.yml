@@ -101,10 +101,19 @@
  animist_aspect_text_6:0 "Convert Infidels"
  animist_aspect_text_7:0 "Religion Taxes"
  animist_aspect_text_8:0 "Religious Unity"
+ atheist_aspect_text_1:0 "Burn Templates"
+ atheist_aspect_text_2:0 "Raise Intellectual Generation"
+ atheist_aspect_text_3:0 "Improve Medicine"
+ atheist_aspect_text_4:0 "Prevent Bribery"
+ atheist_aspect_text_5:0 "Tax of Believe"
+ atheist_aspect_text_6:0 "Atheist Philosophers"
+ atheist_aspect_text_7:0 "National Unity"
+ atheist_aspect_text_8:0 "Academic Migration"
+ ve_missionary_mdf:0 "Active Missionary"
 
  ve_religion_passive_text:0 "[GetPlayer.GetStateReligion.GetName] Passive Bonuses"
  ve_idea_cancel_window_title:0 "Do you want to cancel [StateRegion.MakeScope.Var('idea_group')]"
- piety_cost:0 "Have at least 100 Piety and doesn't have the aspect's modifier."
+ piety_cost:0 "Have at least 125 Piety and doesn't have the aspect's modifier."
  ve_call_all_missionaries:0 "Calls all active missionaries"
 
  #HOLY SITES

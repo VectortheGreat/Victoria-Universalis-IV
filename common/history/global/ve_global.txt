@@ -108,6 +108,7 @@
 	}
 	every_country = {
 		set_missionary_cultural_missionary = yes
+		ve_law_change_effects = yes
 		set_point_system = yes
 		set_idea_buttons = yes
 		set_ideas = yes

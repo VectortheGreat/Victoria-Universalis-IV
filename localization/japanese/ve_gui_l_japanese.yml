@@ -54,8 +54,8 @@
  dev.1.desc:0 "Increase or decrease points here"
  dev.1.a:0 "#P +300 Idea Points"
  dev.1.b:0 "#N -300 Idea Points"
- dev.1.c:0 "#P +100 Piety"
- dev.1.d:0 "#N -100 Piety"
+ dev.1.c:0 "#P +125 Piety"
+ dev.1.d:0 "#N -125 Piety"
  dev.1.e:0 "#P +750 Culture Reform Points"
  dev.1.f:0 "#N -750 Culture Reform Points"
  dev.1.g:0 "#P +800 Splendors"
@@ -66,3 +66,7 @@
  dev.3.a:0 "#blue Easy"
  dev.3.b:0 "#yellow Medium"
  dev.3.c:0 "#red Hard"
+ 
+ event_mod_name:0 "#tooltippable_concept Victoria Universalis IV"
+ event_mod_tooltip:0 "#tooltip_header This event is part of #tooltippable_name Victoria Universalis IV #Y Mod"
+ innovative_flavor.1.icon: "yes"

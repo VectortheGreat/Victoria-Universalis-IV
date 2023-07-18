@@ -1,14 +1,124 @@
 ve_piety_aspect_cost = {
 	change_variable = {
 		name = piety_bar_point
-		subtract = 100
+		subtract = 125
+	}
+}
+
+ve_becoming_atheist = {
+	if = {
+		limit = {
+			country_has_state_religion = rel:atheist
+			OR = {
+				has_modifier = catholic_pasive_mdf
+				has_modifier = protestant_pasive_mdf
+				has_modifier = orthodox_pasive_mdf
+				has_modifier = coptic_pasive_mdf
+				has_modifier = sunni_pasive_mdf
+				has_modifier = shia_pasive_mdf
+				has_modifier = jewish_pasive_mdf
+				has_modifier = hindu_pasive_mdf
+				has_modifier = sikh_pasive_mdf
+				has_modifier = animist_pasive_mdf
+			}
+		}
+		remove_modifier = catholic_pasive_mdf
+		remove_modifier = protestant_pasive_mdf
+		remove_modifier = orthodox_pasive_mdf
+		remove_modifier = coptic_pasive_mdf
+		remove_modifier = sunni_pasive_mdf
+		remove_modifier = shia_pasive_mdf
+		remove_modifier = jewish_pasive_mdf
+		remove_modifier = hindu_pasive_mdf
+		remove_modifier = sikh_pasive_mdf
+		remove_modifier = animist_pasive_mdf
+		remove_modifier = catholic_aspect_1_mdf
+		remove_modifier = catholic_aspect_2_mdf
+		remove_modifier = catholic_aspect_3_mdf
+		remove_modifier = catholic_aspect_4_mdf
+		remove_modifier = catholic_aspect_5_mdf
+		remove_modifier = catholic_aspect_6_mdf
+		remove_modifier = catholic_aspect_7_mdf
+		remove_modifier = catholic_aspect_8_mdf
+		remove_modifier = protestant_aspect_1_mdf
+		remove_modifier = protestant_aspect_2_mdf
+		remove_modifier = protestant_aspect_3_mdf
+		remove_modifier = protestant_aspect_4_mdf
+		remove_modifier = protestant_aspect_5_mdf
+		remove_modifier = protestant_aspect_6_mdf
+		remove_modifier = protestant_aspect_7_mdf
+		remove_modifier = protestant_aspect_8_mdf
+		remove_modifier = orthodox_aspect_1_mdf
+		remove_modifier = orthodox_aspect_2_mdf
+		remove_modifier = orthodox_aspect_3_mdf
+		remove_modifier = orthodox_aspect_4_mdf
+		remove_modifier = orthodox_aspect_5_mdf
+		remove_modifier = orthodox_aspect_6_mdf
+		remove_modifier = orthodox_aspect_7_mdf
+		remove_modifier = orthodox_aspect_8_mdf
+		remove_modifier = coptic_aspect_1_mdf
+		remove_modifier = coptic_aspect_2_mdf
+		remove_modifier = coptic_aspect_3_mdf
+		remove_modifier = coptic_aspect_4_mdf
+		remove_modifier = coptic_aspect_5_mdf
+		remove_modifier = coptic_aspect_6_mdf
+		remove_modifier = coptic_aspect_7_mdf
+		remove_modifier = coptic_aspect_8_mdf
+		remove_modifier = sunni_aspect_1_mdf
+		remove_modifier = sunni_aspect_2_mdf
+		remove_modifier = sunni_aspect_3_mdf
+		remove_modifier = sunni_aspect_4_mdf
+		remove_modifier = sunni_aspect_5_mdf
+		remove_modifier = sunni_aspect_6_mdf
+		remove_modifier = sunni_aspect_7_mdf
+		remove_modifier = sunni_aspect_8_mdf
+		remove_modifier = shia_aspect_1_mdf
+		remove_modifier = shia_aspect_2_mdf
+		remove_modifier = shia_aspect_3_mdf
+		remove_modifier = shia_aspect_4_mdf
+		remove_modifier = shia_aspect_5_mdf
+		remove_modifier = shia_aspect_6_mdf
+		remove_modifier = shia_aspect_7_mdf
+		remove_modifier = shia_aspect_8_mdf
+		remove_modifier = jewish_aspect_1_mdf
+		remove_modifier = jewish_aspect_2_mdf
+		remove_modifier = jewish_aspect_3_mdf
+		remove_modifier = jewish_aspect_4_mdf
+		remove_modifier = jewish_aspect_5_mdf
+		remove_modifier = jewish_aspect_6_mdf
+		remove_modifier = jewish_aspect_7_mdf
+		remove_modifier = jewish_aspect_8_mdf
+		remove_modifier = hindu_aspect_1_mdf
+		remove_modifier = hindu_aspect_2_mdf
+		remove_modifier = hindu_aspect_3_mdf
+		remove_modifier = hindu_aspect_4_mdf
+		remove_modifier = hindu_aspect_5_mdf
+		remove_modifier = hindu_aspect_6_mdf
+		remove_modifier = hindu_aspect_7_mdf
+		remove_modifier = hindu_aspect_8_mdf
+		remove_modifier = sikh_aspect_1_mdf
+		remove_modifier = sikh_aspect_2_mdf
+		remove_modifier = sikh_aspect_3_mdf
+		remove_modifier = sikh_aspect_4_mdf
+		remove_modifier = sikh_aspect_5_mdf
+		remove_modifier = sikh_aspect_6_mdf
+		remove_modifier = sikh_aspect_7_mdf
+		remove_modifier = sikh_aspect_8_mdf
+		remove_modifier = animist_aspect_1_mdf
+		remove_modifier = animist_aspect_2_mdf
+		remove_modifier = animist_aspect_3_mdf
+		remove_modifier = animist_aspect_4_mdf
+		remove_modifier = animist_aspect_5_mdf
+		remove_modifier = animist_aspect_6_mdf
+		remove_modifier = animist_aspect_7_mdf
+		remove_modifier = animist_aspect_8_mdf
 	}
 }
 
 ve_religion_aspect_1_effect = {
 	if = {
 		limit = {
-			religion = rel:catholic
+			country_has_state_religion = rel:catholic
 		}
 		add_modifier = {
 			name = catholic_aspect_1_mdf
@@ -17,7 +127,7 @@ ve_religion_aspect_1_effect = {
 	}
 	else_if = {
 		limit = {
-			religion = rel:protestant
+			country_has_state_religion = rel:protestant
 		}
 		add_modifier = {
 			name = protestant_aspect_1_mdf
@@ -26,7 +136,7 @@ ve_religion_aspect_1_effect = {
 	}
 	else_if = {
 		limit = {
-			religion = rel:orthodox
+			country_has_state_religion = rel:orthodox
 		}
 		add_modifier = {
 			name = orthodox_aspect_1_mdf
@@ -35,7 +145,7 @@ ve_religion_aspect_1_effect = {
 	}
 	else_if = {
 		limit = {
-			religion = rel:oriental_orthodox
+			country_has_state_religion = rel:oriental_orthodox
 		}
 		add_modifier = {
 			name = coptic_aspect_1_mdf
@@ -44,7 +154,7 @@ ve_religion_aspect_1_effect = {
 	}
 	else_if = {
 		limit = {
-			religion = rel:sunni
+			country_has_state_religion = rel:sunni
 		}
 		add_modifier = {
 			name = sunni_aspect_1_mdf
@@ -53,7 +163,7 @@ ve_religion_aspect_1_effect = {
 	}
 	else_if = {
 		limit = {
-			religion = rel:shiite
+			country_has_state_religion = rel:shiite
 		}
 		add_modifier = {
 			name = shia_aspect_1_mdf
@@ -62,7 +172,7 @@ ve_religion_aspect_1_effect = {
 	}
 	else_if = {
 		limit = {
-			religion = rel:jewish
+			country_has_state_religion = rel:jewish
 		}
 		add_modifier = {
 			name = jewish_aspect_1_mdf
@@ -71,7 +181,7 @@ ve_religion_aspect_1_effect = {
 	}
 	else_if = {
 		limit = {
-			religion = rel:mahayana
+			country_has_state_religion = rel:mahayana
 		}
 		add_modifier = {
 			name = mahayana_aspect_1_mdf
@@ -80,7 +190,7 @@ ve_religion_aspect_1_effect = {
 	}
 	else_if = {
 		limit = {
-			religion = rel:gelugpa
+			country_has_state_religion = rel:gelugpa
 		}
 		add_modifier = {
 			name = mahayana_aspect_1_mdf
@@ -89,7 +199,7 @@ ve_religion_aspect_1_effect = {
 	}
 	else_if = {
 		limit = {
-			religion = rel:theravada
+			country_has_state_religion = rel:theravada
 		}
 		add_modifier = {
 			name = mahayana_aspect_1_mdf
@@ -98,7 +208,7 @@ ve_religion_aspect_1_effect = {
 	}
 	else_if = {
 		limit = {
-			religion = rel:hindu
+			country_has_state_religion = rel:hindu
 		}
 		add_modifier = {
 			name = hindu_aspect_1_mdf
@@ -107,7 +217,7 @@ ve_religion_aspect_1_effect = {
 	}
 	else_if = {
 		limit = {
-			religion = rel:shinto
+			country_has_state_religion = rel:shinto
 		}
 		add_modifier = {
 			name = mahayana_aspect_1_mdf
@@ -116,7 +226,7 @@ ve_religion_aspect_1_effect = {
 	}
 	else_if = {
 		limit = {
-			religion = rel:sikh
+			country_has_state_religion = rel:sikh
 		}
 		add_modifier = {
 			name = sikh_aspect_1_mdf
@@ -125,10 +235,19 @@ ve_religion_aspect_1_effect = {
 	}
 	else_if = {
 		limit = {
-			religion = rel:animist
+			country_has_state_religion = rel:animist
 		}
 		add_modifier = {
 			name = animist_aspect_1_mdf
+			months = 65
+		}
+	}
+	else_if = {
+		limit = {
+			country_has_state_religion = rel:atheist
+		}
+		add_modifier = {
+			name = atheist_aspect_1_mdf
 			months = 65
 		}
 	}
@@ -137,7 +256,7 @@ ve_religion_aspect_1_effect = {
 ve_religion_aspect_2_effect = {
 	if = {
 		limit = {
-			religion = rel:catholic
+			country_has_state_religion = rel:catholic
 		}
 		add_modifier = {
 			name = catholic_aspect_2_mdf
@@ -146,7 +265,7 @@ ve_religion_aspect_2_effect = {
 	}
 	else_if = {
 		limit = {
-			religion = rel:protestant
+			country_has_state_religion = rel:protestant
 		}
 		add_modifier = {
 			name = protestant_aspect_2_mdf
@@ -155,7 +274,7 @@ ve_religion_aspect_2_effect = {
 	}
 	else_if = {
 		limit = {
-			religion = rel:orthodox
+			country_has_state_religion = rel:orthodox
 		}
 		add_modifier = {
 			name = orthodox_aspect_2_mdf
@@ -164,7 +283,7 @@ ve_religion_aspect_2_effect = {
 	}
 	else_if = {
 		limit = {
-			religion = rel:oriental_orthodox
+			country_has_state_religion = rel:oriental_orthodox
 		}
 		add_modifier = {
 			name = coptic_aspect_2_mdf
@@ -173,7 +292,7 @@ ve_religion_aspect_2_effect = {
 	}
 	else_if = {
 		limit = {
-			religion = rel:sunni
+			country_has_state_religion = rel:sunni
 		}
 		add_modifier = {
 			name = sunni_aspect_2_mdf
@@ -182,7 +301,7 @@ ve_religion_aspect_2_effect = {
 	}
 	else_if = {
 		limit = {
-			religion = rel:shiite
+			country_has_state_religion = rel:shiite
 		}
 		add_modifier = {
 			name = shia_aspect_2_mdf
@@ -191,7 +310,7 @@ ve_religion_aspect_2_effect = {
 	}
 	else_if = {
 		limit = {
-			religion = rel:jewish
+			country_has_state_religion = rel:jewish
 		}
 		add_modifier = {
 			name = jewish_aspect_2_mdf
@@ -200,7 +319,7 @@ ve_religion_aspect_2_effect = {
 	}
 	else_if = {
 		limit = {
-			religion = rel:mahayana
+			country_has_state_religion = rel:mahayana
 		}
 		add_modifier = {
 			name = mahayana_aspect_2_mdf
@@ -209,7 +328,7 @@ ve_religion_aspect_2_effect = {
 	}
 	else_if = {
 		limit = {
-			religion = rel:gelugpa
+			country_has_state_religion = rel:gelugpa
 		}
 		add_modifier = {
 			name = mahayana_aspect_2_mdf
@@ -218,7 +337,7 @@ ve_religion_aspect_2_effect = {
 	}
 	else_if = {
 		limit = {
-			religion = rel:theravada
+			country_has_state_religion = rel:theravada
 		}
 		add_modifier = {
 			name = mahayana_aspect_2_mdf
@@ -227,7 +346,7 @@ ve_religion_aspect_2_effect = {
 	}
 	else_if = {
 		limit = {
-			religion = rel:hindu
+			country_has_state_religion = rel:hindu
 		}
 		add_modifier = {
 			name = hindu_aspect_2_mdf
@@ -236,7 +355,7 @@ ve_religion_aspect_2_effect = {
 	}
 	else_if = {
 		limit = {
-			religion = rel:shinto
+			country_has_state_religion = rel:shinto
 		}
 		add_modifier = {
 			name = mahayana_aspect_2_mdf
@@ -245,7 +364,7 @@ ve_religion_aspect_2_effect = {
 	}
 	else_if = {
 		limit = {
-			religion = rel:sikh
+			country_has_state_religion = rel:sikh
 		}
 		add_modifier = {
 			name = sikh_aspect_2_mdf
@@ -254,10 +373,19 @@ ve_religion_aspect_2_effect = {
 	}
 	else_if = {
 		limit = {
-			religion = rel:animist
+			country_has_state_religion = rel:animist
 		}
 		add_modifier = {
 			name = animist_aspect_2_mdf
+			months = 65
+		}
+	}
+	else_if = {
+		limit = {
+			country_has_state_religion = rel:atheist
+		}
+		add_modifier = {
+			name = atheist_aspect_2_mdf
 			months = 65
 		}
 	}
@@ -266,7 +394,7 @@ ve_religion_aspect_2_effect = {
 ve_religion_aspect_3_effect = {
 	if = {
 		limit = {
-			religion = rel:catholic
+			country_has_state_religion = rel:catholic
 		}
 		add_modifier = {
 			name = catholic_aspect_3_mdf
@@ -275,7 +403,7 @@ ve_religion_aspect_3_effect = {
 	}
 	else_if = {
 		limit = {
-			religion = rel:protestant
+			country_has_state_religion = rel:protestant
 		}
 		add_modifier = {
 			name = protestant_aspect_3_mdf
@@ -284,7 +412,7 @@ ve_religion_aspect_3_effect = {
 	}
 	else_if = {
 		limit = {
-			religion = rel:orthodox
+			country_has_state_religion = rel:orthodox
 		}
 		add_modifier = {
 			name = orthodox_aspect_3_mdf
@@ -293,7 +421,7 @@ ve_religion_aspect_3_effect = {
 	}
 	else_if = {
 		limit = {
-			religion = rel:oriental_orthodox
+			country_has_state_religion = rel:oriental_orthodox
 		}
 		add_modifier = {
 			name = coptic_aspect_3_mdf
@@ -302,7 +430,7 @@ ve_religion_aspect_3_effect = {
 	}
 	else_if = {
 		limit = {
-			religion = rel:sunni
+			country_has_state_religion = rel:sunni
 		}
 		add_modifier = {
 			name = sunni_aspect_3_mdf
@@ -311,7 +439,7 @@ ve_religion_aspect_3_effect = {
 	}
 	else_if = {
 		limit = {
-			religion = rel:shiite
+			country_has_state_religion = rel:shiite
 		}
 		add_modifier = {
 			name = shia_aspect_3_mdf
@@ -320,7 +448,7 @@ ve_religion_aspect_3_effect = {
 	}
 	else_if = {
 		limit = {
-			religion = rel:jewish
+			country_has_state_religion = rel:jewish
 		}
 		add_modifier = {
 			name = jewish_aspect_3_mdf
@@ -329,7 +457,7 @@ ve_religion_aspect_3_effect = {
 	}
 	else_if = {
 		limit = {
-			religion = rel:mahayana
+			country_has_state_religion = rel:mahayana
 		}
 		add_modifier = {
 			name = mahayana_aspect_3_mdf
@@ -338,7 +466,7 @@ ve_religion_aspect_3_effect = {
 	}
 	else_if = {
 		limit = {
-			religion = rel:gelugpa
+			country_has_state_religion = rel:gelugpa
 		}
 		add_modifier = {
 			name = mahayana_aspect_3_mdf
@@ -347,7 +475,7 @@ ve_religion_aspect_3_effect = {
 	}
 	else_if = {
 		limit = {
-			religion = rel:theravada
+			country_has_state_religion = rel:theravada
 		}
 		add_modifier = {
 			name = mahayana_aspect_3_mdf
@@ -356,7 +484,7 @@ ve_religion_aspect_3_effect = {
 	}
 	else_if = {
 		limit = {
-			religion = rel:hindu
+			country_has_state_religion = rel:hindu
 		}
 		add_modifier = {
 			name = hindu_aspect_3_mdf
@@ -365,7 +493,7 @@ ve_religion_aspect_3_effect = {
 	}
 	else_if = {
 		limit = {
-			religion = rel:shinto
+			country_has_state_religion = rel:shinto
 		}
 		add_modifier = {
 			name = mahayana_aspect_3_mdf
@@ -374,7 +502,7 @@ ve_religion_aspect_3_effect = {
 	}
 	else_if = {
 		limit = {
-			religion = rel:sikh
+			country_has_state_religion = rel:sikh
 		}
 		add_modifier = {
 			name = sikh_aspect_3_mdf
@@ -383,10 +511,19 @@ ve_religion_aspect_3_effect = {
 	}
 	else_if = {
 		limit = {
-			religion = rel:animist
+			country_has_state_religion = rel:animist
 		}
 		add_modifier = {
 			name = animist_aspect_3_mdf
+			months = 65
+		}
+	}
+	else_if = {
+		limit = {
+			country_has_state_religion = rel:atheist
+		}
+		add_modifier = {
+			name = atheist_aspect_3_mdf
 			months = 65
 		}
 	}
@@ -395,7 +532,7 @@ ve_religion_aspect_3_effect = {
 ve_religion_aspect_4_effect = {
 	if = {
 		limit = {
-			religion = rel:catholic
+			country_has_state_religion = rel:catholic
 		}
 		add_modifier = {
 			name = catholic_aspect_4_mdf
@@ -404,7 +541,7 @@ ve_religion_aspect_4_effect = {
 	}
 	else_if = {
 		limit = {
-			religion = rel:protestant
+			country_has_state_religion = rel:protestant
 		}
 		add_modifier = {
 			name = protestant_aspect_4_mdf
@@ -413,7 +550,7 @@ ve_religion_aspect_4_effect = {
 	}
 	else_if = {
 		limit = {
-			religion = rel:orthodox
+			country_has_state_religion = rel:orthodox
 		}
 		add_modifier = {
 			name = orthodox_aspect_4_mdf
@@ -422,7 +559,7 @@ ve_religion_aspect_4_effect = {
 	}
 	else_if = {
 		limit = {
-			religion = rel:oriental_orthodox
+			country_has_state_religion = rel:oriental_orthodox
 		}
 		add_modifier = {
 			name = coptic_aspect_4_mdf
@@ -431,7 +568,7 @@ ve_religion_aspect_4_effect = {
 	}
 	else_if = {
 		limit = {
-			religion = rel:sunni
+			country_has_state_religion = rel:sunni
 		}
 		add_modifier = {
 			name = sunni_aspect_4_mdf
@@ -440,7 +577,7 @@ ve_religion_aspect_4_effect = {
 	}
 	else_if = {
 		limit = {
-			religion = rel:shiite
+			country_has_state_religion = rel:shiite
 		}
 		add_modifier = {
 			name = shia_aspect_4_mdf
@@ -449,7 +586,7 @@ ve_religion_aspect_4_effect = {
 	}
 	else_if = {
 		limit = {
-			religion = rel:jewish
+			country_has_state_religion = rel:jewish
 		}
 		add_modifier = {
 			name = jewish_aspect_4_mdf
@@ -458,7 +595,7 @@ ve_religion_aspect_4_effect = {
 	}
 	else_if = {
 		limit = {
-			religion = rel:mahayana
+			country_has_state_religion = rel:mahayana
 		}
 		add_modifier = {
 			name = mahayana_aspect_4_mdf
@@ -467,7 +604,7 @@ ve_religion_aspect_4_effect = {
 	}
 	else_if = {
 		limit = {
-			religion = rel:gelugpa
+			country_has_state_religion = rel:gelugpa
 		}
 		add_modifier = {
 			name = mahayana_aspect_4_mdf
@@ -476,7 +613,7 @@ ve_religion_aspect_4_effect = {
 	}
 	else_if = {
 		limit = {
-			religion = rel:theravada
+			country_has_state_religion = rel:theravada
 		}
 		add_modifier = {
 			name = mahayana_aspect_4_mdf
@@ -485,7 +622,7 @@ ve_religion_aspect_4_effect = {
 	}
 	else_if = {
 		limit = {
-			religion = rel:hindu
+			country_has_state_religion = rel:hindu
 		}
 		add_modifier = {
 			name = hindu_aspect_4_mdf
@@ -494,7 +631,7 @@ ve_religion_aspect_4_effect = {
 	}
 	else_if = {
 		limit = {
-			religion = rel:shinto
+			country_has_state_religion = rel:shinto
 		}
 		add_modifier = {
 			name = mahayana_aspect_4_mdf
@@ -503,7 +640,7 @@ ve_religion_aspect_4_effect = {
 	}
 	else_if = {
 		limit = {
-			religion = rel:sikh
+			country_has_state_religion = rel:sikh
 		}
 		add_modifier = {
 			name = sikh_aspect_4_mdf
@@ -512,10 +649,19 @@ ve_religion_aspect_4_effect = {
 	}
 	else_if = {
 		limit = {
-			religion = rel:animist
+			country_has_state_religion = rel:animist
 		}
 		add_modifier = {
 			name = animist_aspect_4_mdf
+			months = 65
+		}
+	}
+	else_if = {
+		limit = {
+			country_has_state_religion = rel:atheist
+		}
+		add_modifier = {
+			name = atheist_aspect_4_mdf
 			months = 65
 		}
 	}
@@ -524,7 +670,7 @@ ve_religion_aspect_4_effect = {
 ve_religion_aspect_5_effect = {
 	if = {
 		limit = {
-			religion = rel:catholic
+			country_has_state_religion = rel:catholic
 		}
 		add_modifier = {
 			name = catholic_aspect_5_mdf
@@ -533,7 +679,7 @@ ve_religion_aspect_5_effect = {
 	}
 	else_if = {
 		limit = {
-			religion = rel:protestant
+			country_has_state_religion = rel:protestant
 		}
 		add_modifier = {
 			name = protestant_aspect_5_mdf
@@ -542,7 +688,7 @@ ve_religion_aspect_5_effect = {
 	}
 	else_if = {
 		limit = {
-			religion = rel:orthodox
+			country_has_state_religion = rel:orthodox
 		}
 		add_modifier = {
 			name = orthodox_aspect_5_mdf
@@ -551,7 +697,7 @@ ve_religion_aspect_5_effect = {
 	}
 	else_if = {
 		limit = {
-			religion = rel:oriental_orthodox
+			country_has_state_religion = rel:oriental_orthodox
 		}
 		add_modifier = {
 			name = coptic_aspect_5_mdf
@@ -560,7 +706,7 @@ ve_religion_aspect_5_effect = {
 	}
 	else_if = {
 		limit = {
-			religion = rel:sunni
+			country_has_state_religion = rel:sunni
 		}
 		add_modifier = {
 			name = sunni_aspect_5_mdf
@@ -569,7 +715,7 @@ ve_religion_aspect_5_effect = {
 	}
 	else_if = {
 		limit = {
-			religion = rel:shiite
+			country_has_state_religion = rel:shiite
 		}
 		add_modifier = {
 			name = shia_aspect_5_mdf
@@ -578,7 +724,7 @@ ve_religion_aspect_5_effect = {
 	}
 	else_if = {
 		limit = {
-			religion = rel:jewish
+			country_has_state_religion = rel:jewish
 		}
 		add_modifier = {
 			name = jewish_aspect_5_mdf
@@ -587,7 +733,7 @@ ve_religion_aspect_5_effect = {
 	}
 	else_if = {
 		limit = {
-			religion = rel:mahayana
+			country_has_state_religion = rel:mahayana
 		}
 		add_modifier = {
 			name = mahayana_aspect_5_mdf
@@ -596,7 +742,7 @@ ve_religion_aspect_5_effect = {
 	}
 	else_if = {
 		limit = {
-			religion = rel:gelugpa
+			country_has_state_religion = rel:gelugpa
 		}
 		add_modifier = {
 			name = mahayana_aspect_5_mdf
@@ -605,7 +751,7 @@ ve_religion_aspect_5_effect = {
 	}
 	else_if = {
 		limit = {
-			religion = rel:theravada
+			country_has_state_religion = rel:theravada
 		}
 		add_modifier = {
 			name = mahayana_aspect_5_mdf
@@ -614,7 +760,7 @@ ve_religion_aspect_5_effect = {
 	}
 	else_if = {
 		limit = {
-			religion = rel:hindu
+			country_has_state_religion = rel:hindu
 		}
 		add_modifier = {
 			name = hindu_aspect_5_mdf
@@ -623,7 +769,7 @@ ve_religion_aspect_5_effect = {
 	}
 	else_if = {
 		limit = {
-			religion = rel:shinto
+			country_has_state_religion = rel:shinto
 		}
 		add_modifier = {
 			name = mahayana_aspect_5_mdf
@@ -632,7 +778,7 @@ ve_religion_aspect_5_effect = {
 	}
 	else_if = {
 		limit = {
-			religion = rel:sikh
+			country_has_state_religion = rel:sikh
 		}
 		add_modifier = {
 			name = sikh_aspect_5_mdf
@@ -641,10 +787,19 @@ ve_religion_aspect_5_effect = {
 	}
 	else_if = {
 		limit = {
-			religion = rel:animist
+			country_has_state_religion = rel:animist
 		}
 		add_modifier = {
 			name = animist_aspect_5_mdf
+			months = 65
+		}
+	}
+	else_if = {
+		limit = {
+			country_has_state_religion = rel:atheist
+		}
+		add_modifier = {
+			name = atheist_aspect_5_mdf
 			months = 65
 		}
 	}
@@ -653,7 +808,7 @@ ve_religion_aspect_5_effect = {
 ve_religion_aspect_6_effect = {
 	if = {
 		limit = {
-			religion = rel:catholic
+			country_has_state_religion = rel:catholic
 		}
 		add_modifier = {
 			name = catholic_aspect_6_mdf
@@ -662,7 +817,7 @@ ve_religion_aspect_6_effect = {
 	}
 	else_if = {
 		limit = {
-			religion = rel:protestant
+			country_has_state_religion = rel:protestant
 		}
 		add_modifier = {
 			name = protestant_aspect_6_mdf
@@ -671,7 +826,7 @@ ve_religion_aspect_6_effect = {
 	}
 	else_if = {
 		limit = {
-			religion = rel:orthodox
+			country_has_state_religion = rel:orthodox
 		}
 		add_modifier = {
 			name = orthodox_aspect_6_mdf
@@ -680,7 +835,7 @@ ve_religion_aspect_6_effect = {
 	}
 	else_if = {
 		limit = {
-			religion = rel:oriental_orthodox
+			country_has_state_religion = rel:oriental_orthodox
 		}
 		add_modifier = {
 			name = coptic_aspect_6_mdf
@@ -689,7 +844,7 @@ ve_religion_aspect_6_effect = {
 	}
 	else_if = {
 		limit = {
-			religion = rel:sunni
+			country_has_state_religion = rel:sunni
 		}
 		add_modifier = {
 			name = sunni_aspect_6_mdf
@@ -698,7 +853,7 @@ ve_religion_aspect_6_effect = {
 	}
 	else_if = {
 		limit = {
-			religion = rel:shiite
+			country_has_state_religion = rel:shiite
 		}
 		add_modifier = {
 			name = shia_aspect_6_mdf
@@ -707,7 +862,7 @@ ve_religion_aspect_6_effect = {
 	}
 	else_if = {
 		limit = {
-			religion = rel:jewish
+			country_has_state_religion = rel:jewish
 		}
 		add_modifier = {
 			name = jewish_aspect_6_mdf
@@ -716,7 +871,7 @@ ve_religion_aspect_6_effect = {
 	}
 	else_if = {
 		limit = {
-			religion = rel:mahayana
+			country_has_state_religion = rel:mahayana
 		}
 		add_modifier = {
 			name = mahayana_aspect_6_mdf
@@ -725,7 +880,7 @@ ve_religion_aspect_6_effect = {
 	}
 	else_if = {
 		limit = {
-			religion = rel:gelugpa
+			country_has_state_religion = rel:gelugpa
 		}
 		add_modifier = {
 			name = mahayana_aspect_6_mdf
@@ -734,7 +889,7 @@ ve_religion_aspect_6_effect = {
 	}
 	else_if = {
 		limit = {
-			religion = rel:theravada
+			country_has_state_religion = rel:theravada
 		}
 		add_modifier = {
 			name = mahayana_aspect_6_mdf
@@ -743,7 +898,7 @@ ve_religion_aspect_6_effect = {
 	}
 	else_if = {
 		limit = {
-			religion = rel:hindu
+			country_has_state_religion = rel:hindu
 		}
 		add_modifier = {
 			name = hindu_aspect_6_mdf
@@ -752,7 +907,7 @@ ve_religion_aspect_6_effect = {
 	}
 	else_if = {
 		limit = {
-			religion = rel:shinto
+			country_has_state_religion = rel:shinto
 		}
 		add_modifier = {
 			name = mahayana_aspect_6_mdf
@@ -761,7 +916,7 @@ ve_religion_aspect_6_effect = {
 	}
 	else_if = {
 		limit = {
-			religion = rel:sikh
+			country_has_state_religion = rel:sikh
 		}
 		add_modifier = {
 			name = sikh_aspect_6_mdf
@@ -770,10 +925,19 @@ ve_religion_aspect_6_effect = {
 	}
 	else_if = {
 		limit = {
-			religion = rel:animist
+			country_has_state_religion = rel:animist
 		}
 		add_modifier = {
 			name = animist_aspect_6_mdf
+			months = 65
+		}
+	}
+	else_if = {
+		limit = {
+			country_has_state_religion = rel:atheist
+		}
+		add_modifier = {
+			name = atheist_aspect_6_mdf
 			months = 65
 		}
 	}
@@ -782,7 +946,7 @@ ve_religion_aspect_6_effect = {
 ve_religion_aspect_7_effect = {
 	if = {
 		limit = {
-			religion = rel:catholic
+			country_has_state_religion = rel:catholic
 		}
 		add_modifier = {
 			name = catholic_aspect_7_mdf
@@ -791,7 +955,7 @@ ve_religion_aspect_7_effect = {
 	}
 	else_if = {
 		limit = {
-			religion = rel:protestant
+			country_has_state_religion = rel:protestant
 		}
 		add_modifier = {
 			name = protestant_aspect_7_mdf
@@ -800,7 +964,7 @@ ve_religion_aspect_7_effect = {
 	}
 	else_if = {
 		limit = {
-			religion = rel:orthodox
+			country_has_state_religion = rel:orthodox
 		}
 		add_modifier = {
 			name = orthodox_aspect_7_mdf
@@ -809,7 +973,7 @@ ve_religion_aspect_7_effect = {
 	}
 	else_if = {
 		limit = {
-			religion = rel:oriental_orthodox
+			country_has_state_religion = rel:oriental_orthodox
 		}
 		add_modifier = {
 			name = coptic_aspect_7_mdf
@@ -818,7 +982,7 @@ ve_religion_aspect_7_effect = {
 	}
 	else_if = {
 		limit = {
-			religion = rel:sunni
+			country_has_state_religion = rel:sunni
 		}
 		add_modifier = {
 			name = sunni_aspect_7_mdf
@@ -827,7 +991,7 @@ ve_religion_aspect_7_effect = {
 	}
 	else_if = {
 		limit = {
-			religion = rel:shiite
+			country_has_state_religion = rel:shiite
 		}
 		add_modifier = {
 			name = shia_aspect_7_mdf
@@ -836,7 +1000,7 @@ ve_religion_aspect_7_effect = {
 	}
 	else_if = {
 		limit = {
-			religion = rel:jewish
+			country_has_state_religion = rel:jewish
 		}
 		add_modifier = {
 			name = jewish_aspect_7_mdf
@@ -845,7 +1009,7 @@ ve_religion_aspect_7_effect = {
 	}
 	else_if = {
 		limit = {
-			religion = rel:mahayana
+			country_has_state_religion = rel:mahayana
 		}
 		add_modifier = {
 			name = mahayana_aspect_7_mdf
@@ -854,7 +1018,7 @@ ve_religion_aspect_7_effect = {
 	}
 	else_if = {
 		limit = {
-			religion = rel:gelugpa
+			country_has_state_religion = rel:gelugpa
 		}
 		add_modifier = {
 			name = mahayana_aspect_7_mdf
@@ -863,7 +1027,7 @@ ve_religion_aspect_7_effect = {
 	}
 	else_if = {
 		limit = {
-			religion = rel:theravada
+			country_has_state_religion = rel:theravada
 		}
 		add_modifier = {
 			name = mahayana_aspect_7_mdf
@@ -872,7 +1036,7 @@ ve_religion_aspect_7_effect = {
 	}
 	else_if = {
 		limit = {
-			religion = rel:hindu
+			country_has_state_religion = rel:hindu
 		}
 		add_modifier = {
 			name = hindu_aspect_7_mdf
@@ -881,7 +1045,7 @@ ve_religion_aspect_7_effect = {
 	}
 	else_if = {
 		limit = {
-			religion = rel:shinto
+			country_has_state_religion = rel:shinto
 		}
 		add_modifier = {
 			name = mahayana_aspect_7_mdf
@@ -890,7 +1054,7 @@ ve_religion_aspect_7_effect = {
 	}
 	else_if = {
 		limit = {
-			religion = rel:sikh
+			country_has_state_religion = rel:sikh
 		}
 		add_modifier = {
 			name = sikh_aspect_7_mdf
@@ -899,10 +1063,19 @@ ve_religion_aspect_7_effect = {
 	}
 	else_if = {
 		limit = {
-			religion = rel:animist
+			country_has_state_religion = rel:animist
 		}
 		add_modifier = {
 			name = animist_aspect_7_mdf
+			months = 65
+		}
+	}
+	else_if = {
+		limit = {
+			country_has_state_religion = rel:atheist
+		}
+		add_modifier = {
+			name = atheist_aspect_7_mdf
 			months = 65
 		}
 	}
@@ -911,7 +1084,7 @@ ve_religion_aspect_7_effect = {
 ve_religion_aspect_8_effect = {
 	if = {
 		limit = {
-			religion = rel:catholic
+			country_has_state_religion = rel:catholic
 		}
 		add_modifier = {
 			name = catholic_aspect_8_mdf
@@ -920,7 +1093,7 @@ ve_religion_aspect_8_effect = {
 	}
 	else_if = {
 		limit = {
-			religion = rel:protestant
+			country_has_state_religion = rel:protestant
 		}
 		add_modifier = {
 			name = protestant_aspect_8_mdf
@@ -929,7 +1102,7 @@ ve_religion_aspect_8_effect = {
 	}
 	else_if = {
 		limit = {
-			religion = rel:orthodox
+			country_has_state_religion = rel:orthodox
 		}
 		add_modifier = {
 			name = orthodox_aspect_8_mdf
@@ -938,7 +1111,7 @@ ve_religion_aspect_8_effect = {
 	}
 	else_if = {
 		limit = {
-			religion = rel:oriental_orthodox
+			country_has_state_religion = rel:oriental_orthodox
 		}
 		add_modifier = {
 			name = coptic_aspect_8_mdf
@@ -947,7 +1120,7 @@ ve_religion_aspect_8_effect = {
 	}
 	else_if = {
 		limit = {
-			religion = rel:sunni
+			country_has_state_religion = rel:sunni
 		}
 		add_modifier = {
 			name = sunni_aspect_8_mdf
@@ -956,7 +1129,7 @@ ve_religion_aspect_8_effect = {
 	}
 	else_if = {
 		limit = {
-			religion = rel:shiite
+			country_has_state_religion = rel:shiite
 		}
 		add_modifier = {
 			name = shia_aspect_8_mdf
@@ -965,7 +1138,7 @@ ve_religion_aspect_8_effect = {
 	}
 	else_if = {
 		limit = {
-			religion = rel:jewish
+			country_has_state_religion = rel:jewish
 		}
 		add_modifier = {
 			name = jewish_aspect_8_mdf
@@ -975,10 +1148,10 @@ ve_religion_aspect_8_effect = {
 	else_if = {
 		limit = {
 			OR = {
-				religion = rel:mahayana
-				religion = rel:gelugpa
-				religion = rel:theravada
-				religion = rel:shinto
+				country_has_state_religion = rel:mahayana
+				country_has_state_religion = rel:gelugpa
+				country_has_state_religion = rel:theravada
+				country_has_state_religion = rel:shinto
 			}
 		}
 		add_modifier = {
@@ -988,7 +1161,7 @@ ve_religion_aspect_8_effect = {
 	}
 	else_if = {
 		limit = {
-			religion = rel:hindu
+			country_has_state_religion = rel:hindu
 		}
 		add_modifier = {
 			name = hindu_aspect_8_mdf
@@ -997,7 +1170,7 @@ ve_religion_aspect_8_effect = {
 	}
 	else_if = {
 		limit = {
-			religion = rel:sikh
+			country_has_state_religion = rel:sikh
 		}
 		add_modifier = {
 			name = sikh_aspect_8_mdf
@@ -1006,10 +1179,19 @@ ve_religion_aspect_8_effect = {
 	}
 	else_if = {
 		limit = {
-			religion = rel:animist
+			country_has_state_religion = rel:animist
 		}
 		add_modifier = {
 			name = animist_aspect_8_mdf
+			months = 65
+		}
+	}
+	else_if = {
+		limit = {
+			country_has_state_religion = rel:atheist
+		}
+		add_modifier = {
+			name = atheist_aspect_8_mdf
 			months = 65
 		}
 	}

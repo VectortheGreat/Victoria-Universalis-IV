@@ -375,7 +375,7 @@ ve_age_bonus_1 = {
 			}
 			custom_tooltip = {
 				text = splendor_default_bonus
-				var:ve_splender_points >= 800
+				splendor_cost_trigger = yes
 			}
 		}
 		trigger_else_if = {
@@ -384,7 +384,7 @@ ve_age_bonus_1 = {
 			}
 			custom_tooltip = {
 				text = splendor_default_bonus
-				var:ve_splender_points >= 800
+				splendor_cost_trigger = yes
 			}
 		}
 		trigger_else_if = {
@@ -393,7 +393,7 @@ ve_age_bonus_1 = {
 			}
 			custom_tooltip = {
 				text = splendor_default_bonus
-				var:ve_splender_points >= 800
+				splendor_cost_trigger = yes
 			}
 		}
 	}
@@ -467,7 +467,7 @@ ve_age_bonus_2 = {
 			}
 			custom_tooltip = {
 				text = splendor_default_bonus
-				var:ve_splender_points >= 800
+				splendor_cost_trigger = yes
 			}
 		}
 		trigger_else_if = {
@@ -476,7 +476,7 @@ ve_age_bonus_2 = {
 			}
 			custom_tooltip = {
 				text = splendor_default_bonus
-				var:ve_splender_points >= 800
+				splendor_cost_trigger = yes
 			}
 		}
 		trigger_else_if = {
@@ -485,7 +485,7 @@ ve_age_bonus_2 = {
 			}
 			custom_tooltip = {
 				text = splendor_default_bonus
-				var:ve_splender_points >= 800
+				splendor_cost_trigger = yes
 			}
 		}
 	}
@@ -559,7 +559,7 @@ ve_age_bonus_3 = {
 			}
 			custom_tooltip = {
 				text = splendor_default_bonus
-				var:ve_splender_points >= 800
+				splendor_cost_trigger = yes
 			}
 		}
 		trigger_else_if = {
@@ -568,7 +568,7 @@ ve_age_bonus_3 = {
 			}
 			custom_tooltip = {
 				text = splendor_default_bonus
-				var:ve_splender_points >= 800
+				splendor_cost_trigger = yes
 			}
 		}
 		trigger_else_if = {
@@ -577,7 +577,7 @@ ve_age_bonus_3 = {
 			}
 			custom_tooltip = {
 				text = splendor_default_bonus
-				var:ve_splender_points >= 800
+				splendor_cost_trigger = yes
 			}
 		}
 	}
@@ -651,7 +651,7 @@ ve_age_bonus_4 = {
 			}
 			custom_tooltip = {
 				text = splendor_default_bonus
-				var:ve_splender_points >= 800
+				splendor_cost_trigger = yes
 			}
 		}
 		trigger_else_if = {
@@ -660,7 +660,7 @@ ve_age_bonus_4 = {
 			}
 			custom_tooltip = {
 				text = splendor_default_bonus
-				var:ve_splender_points >= 800
+				splendor_cost_trigger = yes
 			}
 		}
 		trigger_else_if = {
@@ -669,7 +669,7 @@ ve_age_bonus_4 = {
 			}
 			custom_tooltip = {
 				text = splendor_default_bonus
-				var:ve_splender_points >= 800
+				splendor_cost_trigger = yes
 			}
 		}
 	}
@@ -743,7 +743,7 @@ ve_age_bonus_5 = {
 			}
 			custom_tooltip = {
 				text = splendor_default_bonus
-				var:ve_splender_points >= 800
+				splendor_cost_trigger = yes
 			}
 		}
 		trigger_else_if = {
@@ -752,7 +752,7 @@ ve_age_bonus_5 = {
 			}
 			custom_tooltip = {
 				text = splendor_default_bonus
-				var:ve_splender_points >= 800
+				splendor_cost_trigger = yes
 			}
 		}
 		trigger_else_if = {
@@ -761,7 +761,7 @@ ve_age_bonus_5 = {
 			}
 			custom_tooltip = {
 				text = splendor_default_bonus
-				var:ve_splender_points >= 800
+				splendor_cost_trigger = yes
 			}
 		}
 	}
@@ -835,7 +835,7 @@ ve_age_bonus_6 = {
 			}
 			custom_tooltip = {
 				text = splendor_default_bonus
-				var:ve_splender_points >= 800
+				splendor_cost_trigger = yes
 			}
 		}
 		trigger_else_if = {
@@ -844,7 +844,7 @@ ve_age_bonus_6 = {
 			}
 			custom_tooltip = {
 				text = splendor_default_bonus
-				var:ve_splender_points >= 800
+				splendor_cost_trigger = yes
 			}
 		}
 		trigger_else_if = {
@@ -853,7 +853,7 @@ ve_age_bonus_6 = {
 			}
 			custom_tooltip = {
 				text = splendor_default_bonus
-				var:ve_splender_points >= 800
+				splendor_cost_trigger = yes
 			}
 		}
 	}
@@ -927,7 +927,7 @@ ve_age_bonus_7 = {
 			}
 			custom_tooltip = {
 				text = ve_age_1_bonus_7_tt
-				var:ve_splender_points >= 800
+				splendor_cost_trigger = yes
 				exists = c:GBR
 				this = c:GBR
 			}
@@ -938,7 +938,7 @@ ve_age_bonus_7 = {
 			}
 			custom_tooltip = {
 				text = ve_age_2_bonus_7_tt
-				var:ve_splender_points >= 800
+				splendor_cost_trigger = yes
 				exists = c:BEL
 				this = c:BEL
 			}
@@ -949,7 +949,7 @@ ve_age_bonus_7 = {
 			}
 			custom_tooltip = {
 				text = ve_age_3_bonus_7_tt
-				var:ve_splender_points >= 800
+				splendor_cost_trigger = yes
 				global_country_ranking <= 5
 				NOT = {
 					has_modifier = age_3_bonus_8
@@ -1027,7 +1027,7 @@ ve_age_bonus_8 = {
 			}
 			custom_tooltip = {
 				text = ve_age_1_bonus_8_tt
-				var:ve_splender_points >= 800
+				splendor_cost_trigger = yes
 				exists = c:NET
 				this = c:NET
 			}
@@ -1038,7 +1038,7 @@ ve_age_bonus_8 = {
 			}
 			custom_tooltip = {
 				text = ve_age_2_bonus_8_tt
-				var:ve_splender_points >= 800
+				splendor_cost_trigger = yes
 				exists = c:USA
 				this = c:USA
 			}
@@ -1049,7 +1049,7 @@ ve_age_bonus_8 = {
 			}
 			custom_tooltip = {
 				text = ve_age_3_bonus_8_tt
-				var:ve_splender_points >= 800
+				splendor_cost_trigger = yes
 				global_country_ranking >= 5
 				NOT = {
 					has_modifier = age_3_bonus_7
@@ -1127,7 +1127,7 @@ ve_age_bonus_9 = {
 			}
 			custom_tooltip = {
 				text = ve_age_1_bonus_9_tt
-				var:ve_splender_points >= 800
+				splendor_cost_trigger = yes
 				OR = {
 					AND = {
 						exists = c:JAP
@@ -1146,7 +1146,7 @@ ve_age_bonus_9 = {
 			}
 			custom_tooltip = {
 				text = ve_age_2_bonus_9_tt
-				var:ve_splender_points >= 800
+				splendor_cost_trigger = yes
 				exists = c:FRA
 				this = c:FRA
 			}
@@ -1157,7 +1157,7 @@ ve_age_bonus_9 = {
 			}
 			custom_tooltip = {
 				text = ve_age_3_bonus_9_tt
-				var:ve_splender_points >= 800
+				splendor_cost_trigger = yes
 				exists = c:GER
 				this = c:GER
 			}
@@ -1234,7 +1234,7 @@ ve_age_bonus_10 = {
 			}
 			custom_tooltip = {
 				text = ve_age_1_bonus_10_tt
-				var:ve_splender_points >= 800
+				splendor_cost_trigger = yes
 				OR = {
 					country_has_primary_culture = cu:north_italian
 					country_has_primary_culture = cu:south_italian
@@ -1247,7 +1247,7 @@ ve_age_bonus_10 = {
 			}
 			custom_tooltip = {
 				text = ve_age_2_bonus_10_tt
-				var:ve_splender_points >= 800
+				splendor_cost_trigger = yes
 				exists = c:AUS
 				this = c:AUS
 			}
@@ -1258,7 +1258,7 @@ ve_age_bonus_10 = {
 			}
 			custom_tooltip = {
 				text = ve_age_3_bonus_10_tt
-				var:ve_splender_points >= 800
+				splendor_cost_trigger = yes
 				exists = c:GBR
 				this = c:GBR
 			}
@@ -1345,7 +1345,7 @@ ve_age_bonus_11 = {
 			}
 			custom_tooltip = {
 				text = ve_age_1_bonus_11_tt
-				var:ve_splender_points >= 800
+				splendor_cost_trigger = yes
 				OR = {
 					country_has_primary_culture = cu:north_german
 					country_has_primary_culture = cu:south_german
@@ -1358,7 +1358,7 @@ ve_age_bonus_11 = {
 			}
 			custom_tooltip = {
 				text = ve_age_2_bonus_11_tt
-				var:ve_splender_points >= 800
+				splendor_cost_trigger = yes
 				exists = c:RUS
 				this = c:RUS
 			}
@@ -1369,7 +1369,7 @@ ve_age_bonus_11 = {
 			}
 			custom_tooltip = {
 				text = ve_age_3_bonus_11_tt
-				var:ve_splender_points >= 800
+				splendor_cost_trigger = yes
 				exists = c:RUS
 				this = c:RUS
 			}

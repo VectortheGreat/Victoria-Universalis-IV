@@ -1918,63 +1918,63 @@ boost_idea_group = {
 		switch = {
 			trigger = scope:idea_group
 			flag:innovative_idea = {
-				var:idea_point_pool >= 300
+				idea_cost_trigger = yes
 				has_variable = can_go_innovative
 			}
 			flag:economic_idea = {
-				var:idea_point_pool >= 300
+				idea_cost_trigger = yes
 				has_variable = can_go_economic
 			}
 			flag:administrative_idea = {
-				var:idea_point_pool >= 300
+				idea_cost_trigger = yes
 				has_variable = can_go_administrative
 			}
 			flag:ethnocentrism_idea = {
-				var:idea_point_pool >= 300
+				idea_cost_trigger = yes
 				has_variable = can_go_ethnocentrism
 			}
 			flag:politics_idea = {
-				var:idea_point_pool >= 300
+				idea_cost_trigger = yes
 				has_variable = can_go_politics
 			}
 			flag:diplomatic_idea = {
-				var:idea_point_pool >= 300
+				idea_cost_trigger = yes
 				has_variable = can_go_diplomatic
 			}
 			flag:trade_idea = {
-				var:idea_point_pool >= 300
+				idea_cost_trigger = yes
 				has_variable = can_go_trade
 			}
 			flag:qualification_idea = {
-				var:idea_point_pool >= 300
+				idea_cost_trigger = yes
 				has_variable = can_go_qualification
 			}
 			flag:humanist_idea = {
-				var:idea_point_pool >= 300
+				idea_cost_trigger = yes
 				has_variable = can_go_humanist
 			}
 			flag:syndicalism_idea = {
-				var:idea_point_pool >= 300
+				idea_cost_trigger = yes
 				has_variable = can_go_syndicalism
 			}
 			flag:offensive_idea = {
-				var:idea_point_pool >= 300
+				idea_cost_trigger = yes
 				has_variable = can_go_offensive
 			}
 			flag:defensive_idea = {
-				var:idea_point_pool >= 300
+				idea_cost_trigger = yes
 				has_variable = can_go_defensive
 			}
 			flag:naval_idea = {
-				var:idea_point_pool >= 300
+				idea_cost_trigger = yes
 				has_variable = can_go_naval
 			}
 			flag:militarization_idea = {
-				var:idea_point_pool >= 300
+				idea_cost_trigger = yes
 				has_variable = can_go_militarization
 			}
 			flag:imperialist_idea = {
-				var:idea_point_pool >= 300
+				idea_cost_trigger = yes
 				has_variable = can_go_imperialist
 			}
 		}

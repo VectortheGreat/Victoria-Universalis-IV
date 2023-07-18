@@ -283,7 +283,7 @@ ve_ai_choose_idea = {
 ve_ai_boost_idea = {
 	if = {
 		limit = {
-			var:idea_point_pool >= 300
+			idea_cost_trigger = yes
 			has_variable = can_go_innovative
 			NOT = {
 				has_variable = innovative_idea_completed
@@ -294,7 +294,7 @@ ve_ai_boost_idea = {
 	}
 	if = {
 		limit = {
-			var:idea_point_pool >= 300
+			idea_cost_trigger = yes
 			has_variable = can_go_economic
 			NOT = {
 				has_variable = economic_idea_completed
@@ -305,7 +305,7 @@ ve_ai_boost_idea = {
 	}
 	if = {
 		limit = {
-			var:idea_point_pool >= 300
+			idea_cost_trigger = yes
 			has_variable = can_go_administrative
 			NOT = {
 				has_variable = administrative_idea_completed
@@ -316,7 +316,7 @@ ve_ai_boost_idea = {
 	}
 	if = {
 		limit = {
-			var:idea_point_pool >= 300
+			idea_cost_trigger = yes
 			has_variable = can_go_ethnocentrism
 			NOT = {
 				has_variable = ethnocentrism_idea_completed
@@ -327,7 +327,7 @@ ve_ai_boost_idea = {
 	}
 	if = {
 		limit = {
-			var:idea_point_pool >= 300
+			idea_cost_trigger = yes
 			has_variable = can_go_politics
 			NOT = {
 				has_variable = politics_idea_completed
@@ -338,7 +338,7 @@ ve_ai_boost_idea = {
 	}
 	if = {
 		limit = {
-			var:idea_point_pool >= 300
+			idea_cost_trigger = yes
 			has_variable = can_go_diplomatic
 			NOT = {
 				has_variable = diplomatic_idea_completed
@@ -349,7 +349,7 @@ ve_ai_boost_idea = {
 	}
 	if = {
 		limit = {
-			var:idea_point_pool >= 300
+			idea_cost_trigger = yes
 			has_variable = can_go_trade
 			NOT = {
 				has_variable = trade_idea_completed
@@ -360,7 +360,7 @@ ve_ai_boost_idea = {
 	}
 	if = {
 		limit = {
-			var:idea_point_pool >= 300
+			idea_cost_trigger = yes
 			has_variable = can_go_qualification
 			NOT = {
 				has_variable = qualification_idea_completed
@@ -371,7 +371,7 @@ ve_ai_boost_idea = {
 	}
 	if = {
 		limit = {
-			var:idea_point_pool >= 300
+			idea_cost_trigger = yes
 			has_variable = can_go_humanist
 			NOT = {
 				has_variable = humanist_idea_completed
@@ -382,7 +382,7 @@ ve_ai_boost_idea = {
 	}
 	if = {
 		limit = {
-			var:idea_point_pool >= 300
+			idea_cost_trigger = yes
 			has_variable = can_go_syndicalism
 			NOT = {
 				has_variable = syndicalism_idea_completed
@@ -393,7 +393,7 @@ ve_ai_boost_idea = {
 	}
 	if = {
 		limit = {
-			var:idea_point_pool >= 300
+			idea_cost_trigger = yes
 			has_variable = can_go_offensive
 			NOT = {
 				has_variable = offensive_idea_completed
@@ -404,7 +404,7 @@ ve_ai_boost_idea = {
 	}
 	if = {
 		limit = {
-			var:idea_point_pool >= 300
+			idea_cost_trigger = yes
 			has_variable = can_go_defensive
 			NOT = {
 				has_variable = defensive_idea_completed
@@ -415,7 +415,7 @@ ve_ai_boost_idea = {
 	}
 	if = {
 		limit = {
-			var:idea_point_pool >= 300
+			idea_cost_trigger = yes
 			has_variable = can_go_naval
 			NOT = {
 				has_variable = naval_idea_completed
@@ -426,7 +426,7 @@ ve_ai_boost_idea = {
 	}
 	if = {
 		limit = {
-			var:idea_point_pool >= 300
+			idea_cost_trigger = yes
 			has_variable = can_go_militarization
 			NOT = {
 				has_variable = militarization_idea_completed
@@ -437,7 +437,7 @@ ve_ai_boost_idea = {
 	}
 	if = {
 		limit = {
-			var:idea_point_pool >= 300
+			idea_cost_trigger = yes
 			has_variable = can_go_imperialist
 			NOT = {
 				has_variable = imperialist_idea_completed
@@ -451,7 +451,7 @@ ve_ai_boost_idea = {
 ve_ai_uses_religion = {
 	if = {
 		limit = {
-			var:piety_bar_point >= 100
+			piety_cost_trigger = yes
 		}
 		random_list = {
 			12 = {
@@ -645,7 +645,7 @@ ve_ai_uses_religion = {
 ve_ai_uses_culture = {
 	if = {
 		limit = {
-			var:culture_reform_point >= 750
+			culture_cost_trigger = yes
 			var:selected_reform_value == 0
 		}
 		random_list = {
@@ -744,7 +744,7 @@ ve_ai_uses_culture = {
 	}
 	else_if = {
 		limit = {
-			var:culture_reform_point >= 750
+			culture_cost_trigger = yes
 			var:selected_reform_value == 1
 		}
 		random_list = {
@@ -816,7 +816,7 @@ ve_ai_uses_culture = {
 	}
 	else_if = {
 		limit = {
-			var:culture_reform_point >= 750
+			culture_cost_trigger = yes
 			var:selected_reform_value == 2
 		}
 		random_list = {
@@ -888,7 +888,7 @@ ve_ai_uses_culture = {
 	}
 	else_if = {
 		limit = {
-			var:culture_reform_point >= 750
+			culture_cost_trigger = yes
 			var:selected_reform_value == 3
 		}
 		random_list = {
@@ -960,7 +960,7 @@ ve_ai_uses_culture = {
 	}
 	else_if = {
 		limit = {
-			var:culture_reform_point >= 750
+			culture_cost_trigger = yes
 			var:selected_reform_value == 4
 		}
 		random_list = {
@@ -1032,7 +1032,7 @@ ve_ai_uses_culture = {
 	}
 	else_if = {
 		limit = {
-			var:culture_reform_point >= 750
+			culture_cost_trigger = yes
 			var:selected_reform_value == 5
 		}
 		random_list = {
@@ -1104,7 +1104,7 @@ ve_ai_uses_culture = {
 	}
 	else_if = {
 		limit = {
-			var:culture_reform_point >= 750
+			culture_cost_trigger = yes
 			var:selected_reform_value == 6
 		}
 		random_list = {
@@ -1181,7 +1181,7 @@ ve_ai_uses_age_bonuses = {
 		}
 		if = {
 			limit = {
-				var:ve_splender_points >= 800
+				splendor_cost_trigger = yes
 				NOT = {
 					has_variable = ai_special_bonus_taken_age_1
 				}
@@ -1255,7 +1255,7 @@ ve_ai_uses_age_bonuses = {
 		}
 		else_if = {
 			limit = {
-				var:ve_splender_points >= 800
+				splendor_cost_trigger = yes
 			}
 			random_list = {
 				17 = {
@@ -1351,7 +1351,7 @@ ve_ai_uses_age_bonuses = {
 		}
 		if = {
 			limit = {
-				var:ve_splender_points >= 800
+				splendor_cost_trigger = yes
 				NOT = {
 					has_variable = ai_special_bonus_taken_age_2
 				}
@@ -1413,7 +1413,7 @@ ve_ai_uses_age_bonuses = {
 		}
 		else_if = {
 			limit = {
-				var:ve_splender_points >= 800
+				splendor_cost_trigger = yes
 			}
 			random_list = {
 				17 = {
@@ -1509,7 +1509,7 @@ ve_ai_uses_age_bonuses = {
 		}
 		if = {
 			limit = {
-				var:ve_splender_points >= 800
+				splendor_cost_trigger = yes
 				NOT = {
 					has_variable = ai_special_bonus_taken_age_3
 				}
@@ -1582,7 +1582,7 @@ ve_ai_uses_age_bonuses = {
 		}
 		else_if = {
 			limit = {
-				var:ve_splender_points >= 800
+				splendor_cost_trigger = yes
 			}
 			random_list = {
 				17 = {

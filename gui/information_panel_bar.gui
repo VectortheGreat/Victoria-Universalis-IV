@@ -18,6 +18,7 @@
 @spacing_widget_2_position = 510
 
 @maplist_position = 530
+@victoria_universalis = 590
 
 types information_panel_bar_types {
 	type information_panel_bar = widget {
@@ -664,7 +665,7 @@ types information_panel_bar_types {
 					size = { 100% @spacing_widget_size }
 				}
 				sidebar_label_button_small = {
-					position = { -100 590 }
+					position = { -100 @victoria_universalis }
 					blockoverride "onclick" {
 						onclick = "[InformationPanelBar.ClosePanel]"
 						onclick = "[MapListPanelManager.CloseCurrentPanel]"
@@ -674,12 +675,12 @@ types information_panel_bar_types {
 				}
 
 				sidebar_label_text_small = {
-					position = { -100 590 }
+					position = { -100 @victoria_universalis }
 					text = "VE_BTN"
 				}
 
 				widget = {
-					position = { 0 590 }
+					position = { 0 @victoria_universalis }
 					using = clickthrough_blocker
 					using = sidebar_button_size_small
 					using = selected_sidepanel_animation_small
@@ -701,7 +702,7 @@ types information_panel_bar_types {
 				}
 
 				sidebar_tooltip_area_small = {
-					position = { 0 590 }
+					position = { 0 @victoria_universalis }
 					tooltip = "VE_TOOLTIP"
 				}
 			}

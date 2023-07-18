@@ -243,3 +243,17 @@ golden_age_3_obj_trigger = {
 		}
 	}
 }
+
+piety_cost_trigger = {
+	piety_value >= 125
+}
+
+splendor_cost_trigger = {
+	splender_points_value >= 800
+}
+idea_cost_trigger = {
+	idea_point_value >= 300
+}
+culture_cost_trigger = {
+	culture_reform_point_value >= 750
+}

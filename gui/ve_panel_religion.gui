@@ -197,16 +197,16 @@ ve_gui_panel_types
 						visible = no
 					}
 				}
-				hbox = {
+				vbox = {
 					#Aspect Modifiers
 					using = main_bg
 					layoutpolicy_horizontal = expanding
-					margin = {
-						0
-						20
-					}
 					hbox = {
 						layoutpolicy_horizontal = expanding
+						margin = {
+							0
+							20
+						}
 						vbox = {
 							#Aspect 1
 							spacing = 10
@@ -250,9 +250,9 @@ ve_gui_panel_types
 							textbox = {
 								raw_text = "[GetPlayer.GetCustom('religion_aspect_text_1')]"
 								using = fontsize_xxl
-								align = nobaseline
-								elide = left
-								autoresize = yes
+								align = center|nobaseline
+								#elide = left
+								#autoresize = yes
 							}
 						}
 						vbox = {
@@ -297,9 +297,7 @@ ve_gui_panel_types
 							textbox = {
 								raw_text = "[GetPlayer.GetCustom('religion_aspect_text_2')]"
 								using = fontsize_xxl
-								align = nobaseline
-								elide = left
-								autoresize = yes
+								align = center|nobaseline
 							}
 						}
 						vbox = {
@@ -344,9 +342,7 @@ ve_gui_panel_types
 							textbox = {
 								raw_text = "[GetPlayer.GetCustom('religion_aspect_text_3')]"
 								using = fontsize_xxl
-								align = nobaseline
-								elide = left
-								autoresize = yes
+								align = center|nobaseline
 							}
 						}
 						vbox = {
@@ -391,10 +387,15 @@ ve_gui_panel_types
 							textbox = {
 								raw_text = "[GetPlayer.GetCustom('religion_aspect_text_4')]"
 								using = fontsize_xxl
-								align = nobaseline
-								elide = left
-								autoresize = yes
+								align = center|nobaseline
 							}
+						}
+					}
+					hbox = {
+						layoutpolicy_horizontal = expanding
+						margin = {
+							0
+							20
 						}
 						vbox = {
 							#Aspect 5
@@ -438,9 +439,7 @@ ve_gui_panel_types
 							textbox = {
 								raw_text = "[GetPlayer.GetCustom('religion_aspect_text_5')]"
 								using = fontsize_xxl
-								align = nobaseline
-								elide = left
-								autoresize = yes
+								align = center|nobaseline
 							}
 						}						
 						vbox = {
@@ -485,9 +484,7 @@ ve_gui_panel_types
 							textbox = {
 								raw_text = "[GetPlayer.GetCustom('religion_aspect_text_6')]"
 								using = fontsize_xxl
-								align = nobaseline
-								elide = left
-								autoresize = yes
+								align = center|nobaseline
 							}
 						}
 						vbox = {
@@ -532,9 +529,7 @@ ve_gui_panel_types
 							textbox = {
 								raw_text = "[GetPlayer.GetCustom('religion_aspect_text_7')]"
 								using = fontsize_xxl
-								align = nobaseline
-								elide = left
-								autoresize = yes
+								align = center|nobaseline
 							}
 						}
 						vbox = {
@@ -579,9 +574,7 @@ ve_gui_panel_types
 							textbox = {
 								raw_text = "[GetPlayer.GetCustom('religion_aspect_text_8')]"
 								using = fontsize_xxl
-								align = nobaseline
-								elide = left
-								autoresize = yes
+								align = center|nobaseline
 							}
 						}
 					}

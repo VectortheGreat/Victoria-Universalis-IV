@@ -1253,7 +1253,7 @@ types war_panel
 							using = tooltip_above	
 							datacontext = "[Truce.GetFirstCountry]"
 							blockoverride "flag_tooltip" {
-								tooltip = "[Truce.GetTruceDate]"
+								tooltip = "[Truce.GetTruceExpirationDesc]"
 							}
 						}			
 					}

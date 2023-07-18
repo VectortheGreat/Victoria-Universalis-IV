@@ -498,7 +498,7 @@ reform_bar_effects = {
 balance_missionaries = {
 	if = {
 		limit = {
-			var:avaible_missionaries < 0
+			avaible_missionaries < 0
 		}
 		every_scope_state = {
 			limit = {
@@ -509,7 +509,7 @@ balance_missionaries = {
 		}
 		set_variable = {
 			name = avaible_missionaries
-			value = var:total_missionaries
+			value = total_missionaries
 		}
 	}
 }
@@ -524,14 +524,14 @@ call_missionaries_effect = {
 	}
 	set_variable = {
 		name = avaible_missionaries
-		value = var:total_missionaries
+		value = total_missionaries
 	}
 }
 
 balance_cultural_missionaries = {
 	if = {
 		limit = {
-			var:avaible_culture_missionaries < 0
+			avaible_culture_missionaries < 0
 		}
 		every_scope_state = {
 			limit = {
@@ -542,7 +542,7 @@ balance_cultural_missionaries = {
 		}
 		set_variable = {
 			name = avaible_culture_missionaries
-			value = var:total_culture_missionaries
+			value = total_culture_missionaries
 		}
 	}
 }
@@ -557,35 +557,20 @@ call_cultural_missionaries_effect = {
 	}
 	set_variable = {
 		name = avaible_culture_missionaries
-		value = var:total_culture_missionaries
+		value = total_culture_missionaries
 	}
 }
 
 prevent_annex_foreign_missionary = {
 	if = {
 		limit = {
-			var:avaible_missionaries > var:total_missionaries
+			avaible_missionaries > total_missionaries
 		}
 		call_missionaries_effect = yes
 	}
 	else_if = {
 		limit = {
-			var:total_missionaries < my_script_value
-		}
-		call_missionaries_effect = yes
-	}
-}
-
-prevent_annex_foreign_missionary = {
-	if = {
-		limit = {
-			var:avaible_missionaries > var:total_missionaries
-		}
-		call_missionaries_effect = yes
-	}
-	else_if = {
-		limit = {
-			var:total_missionaries < my_script_value
+			total_missionaries < my_script_value
 		}
 		call_missionaries_effect = yes
 	}
@@ -594,13 +579,13 @@ prevent_annex_foreign_missionary = {
 prevent_annex_foreign_missionary = {
 	if = {
 		limit = {
-			var:avaible_missionaries > var:total_missionaries
+			avaible_missionaries > total_missionaries
 		}
 		call_missionaries_effect = yes
 	}
 	else_if = {
 		limit = {
-			var:total_missionaries < my_script_value
+			total_missionaries < my_script_value
 		}
 		call_missionaries_effect = yes
 	}
@@ -609,13 +594,13 @@ prevent_annex_foreign_missionary = {
 prevent_annex_foreign_missionary = {
 	if = {
 		limit = {
-			var:avaible_missionaries > var:total_missionaries
+			avaible_missionaries > total_missionaries
 		}
 		call_missionaries_effect = yes
 	}
 	else_if = {
 		limit = {
-			var:total_missionaries < my_script_value
+			total_missionaries < my_script_value
 		}
 		call_missionaries_effect = yes
 	}
@@ -624,13 +609,13 @@ prevent_annex_foreign_missionary = {
 prevent_annex_foreign_missionary = {
 	if = {
 		limit = {
-			var:avaible_missionaries > var:total_missionaries
+			avaible_missionaries > total_missionaries
 		}
 		call_missionaries_effect = yes
 	}
 	else_if = {
 		limit = {
-			var:total_missionaries < my_script_value
+			total_missionaries < my_script_value
 		}
 		call_missionaries_effect = yes
 	}
@@ -639,13 +624,28 @@ prevent_annex_foreign_missionary = {
 prevent_annex_foreign_missionary = {
 	if = {
 		limit = {
-			var:avaible_missionaries > var:total_missionaries
+			avaible_missionaries > total_missionaries
 		}
 		call_missionaries_effect = yes
 	}
 	else_if = {
 		limit = {
-			var:total_missionaries < active_missionary_value
+			total_missionaries < my_script_value
+		}
+		call_missionaries_effect = yes
+	}
+}
+
+prevent_annex_foreign_missionary = {
+	if = {
+		limit = {
+			avaible_missionaries > total_missionaries
+		}
+		call_missionaries_effect = yes
+	}
+	else_if = {
+		limit = {
+			total_missionaries < active_missionary_value
 		}
 		call_missionaries_effect = yes
 	}
@@ -654,13 +654,115 @@ prevent_annex_foreign_missionary = {
 prevent_annex_foreign_cultural_missionary = {
 	if = {
 		limit = {
-			var:avaible_culture_missionaries > var:total_culture_missionaries
+			avaible_culture_missionaries > total_culture_missionaries
 		}
 		call_cultural_missionaries_effect = yes
 	}
 	else_if = {
 		limit = {
-			var:total_culture_missionaries < active_cultural_missionary_value
+			total_culture_missionaries < active_cultural_missionary_value
+		}
+		call_cultural_missionaries_effect = yes
+	}
+}
+
+ve_law_change_effects = {
+	if = {
+		limit = {
+			has_law = law_type:law_state_religion
+			total_missionaries != 3
+		}
+		set_variable = {
+			name = total_missionaries
+			value = 3
+		}
+		call_missionaries_effect = yes
+	}
+	else_if = {
+		limit = {
+			has_law = law_type:law_freedom_of_conscience
+			total_missionaries != 1
+		}
+		set_variable = {
+			name = total_missionaries
+			value = ve_change_religion_law_effects
+		}
+		call_missionaries_effect = yes
+	}
+	else_if = {
+		limit = {
+			has_law = law_type:law_state_atheism
+			total_missionaries != 3
+		}
+		set_variable = {
+			name = total_missionaries
+			value = 3
+		}
+		call_missionaries_effect = yes
+	}
+	else_if = {
+		limit = {
+			has_law = law_type:law_total_separation
+			total_missionaries != 0
+		}
+		set_variable = {
+			name = total_missionaries
+			value = 0
+		}
+		call_missionaries_effect = yes
+	}
+	if = {
+		limit = {
+			has_law = law_type:law_ethnostate
+			total_culture_missionaries != 4
+		}
+		set_variable = {
+			name = total_culture_missionaries
+			value = 4
+		}
+		call_cultural_missionaries_effect = yes
+	}
+	else_if = {
+		limit = {
+			has_law = law_type:law_national_supremacy
+			total_culture_missionaries != 3
+		}
+		set_variable = {
+			name = total_culture_missionaries
+			value = 3
+		}
+		call_cultural_missionaries_effect = yes
+	}
+	else_if = {
+		limit = {
+			has_law = law_type:law_racial_segregation
+			total_culture_missionaries != 2
+		}
+		set_variable = {
+			name = total_culture_missionaries
+			value = 2
+		}
+		call_cultural_missionaries_effect = yes
+	}
+	else_if = {
+		limit = {
+			has_law = law_type:law_cultural_exclusion
+			total_culture_missionaries != 1
+		}
+		set_variable = {
+			name = total_culture_missionaries
+			value = 1
+		}
+		call_cultural_missionaries_effect = yes
+	}
+	else_if = {
+		limit = {
+			has_law = law_type:law_multicultural
+			total_culture_missionaries != 0
+		}
+		set_variable = {
+			name = total_culture_missionaries
+			value = 0
 		}
 		call_cultural_missionaries_effect = yes
 	}

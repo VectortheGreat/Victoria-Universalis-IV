@@ -2,7 +2,7 @@
 	script_context = player_country
 	texture = "gfx/interface/intelligensia.dds"
 	valid = {
-		var:idea_point_pool >= 300
+		idea_cost_trigger = yes
 		var:national_idea_pool < 56
 	}
 	type = alert
@@ -12,7 +12,7 @@ max_piety = {
 	script_context = player_country
 	texture = "gfx/interface/catholic.dds"
 	valid = {
-		var:piety_bar_point >= 100
+		piety_cost_trigger = yes
 	}
 	type = alert
 }
@@ -21,7 +21,7 @@ max_culture_reform_point = {
 	script_context = player_country
 	texture = "gfx/interface/monarch_cultures_icon.dds"
 	valid = {
-		var:culture_reform_point >= 750
+		culture_cost_trigger = yes
 	}
 	type = alert
 }
@@ -30,7 +30,7 @@ can_unlock_age_bonus = {
 	script_context = player_country
 	texture = "gfx/interface/icon_splendor_tiny.dds"
 	valid = {
-		var:ve_splender_points >= 800
+		splendor_cost_trigger = yes
 		trigger_if = {
 			limit = {
 				has_global_variable = ve_age_1_started
@@ -84,7 +84,7 @@ can_use_missionary = {
 	script_context = player_country
 	valid = {
 		has_variable = avaible_missionaries
-		var:avaible_missionaries >= 1
+		avaible_missionaries >= 1
 		NOT = {
 			has_law = law_type:law_total_separation
 		}
@@ -97,7 +97,7 @@ can_use_culture_missionary = {
 	script_context = player_country
 	valid = {
 		has_variable = avaible_culture_missionaries
-		var:avaible_culture_missionaries >= 1
+		avaible_culture_missionaries >= 1
 		NOT = {
 			has_law = law_type:law_multicultural
 		}

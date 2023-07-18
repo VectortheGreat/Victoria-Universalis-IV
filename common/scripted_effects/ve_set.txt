@@ -6,55 +6,9 @@ set_missionary_cultural_missionary = {
 				has_variable = avaible_culture_missionaries
 			}
 		}
-		if = {
-			limit = {
-				has_law = law_type:law_ethnostate
-			}
-			set_variable = {
-				name = avaible_culture_missionaries
-				value = 4
-			}
-			set_variable = ve_had_ethnostate_law
-		}
-		else_if = {
-			limit = {
-				has_law = law_type:law_national_supremacy
-			}
-			set_variable = {
-				name = avaible_culture_missionaries
-				value = 3
-			}
-			set_variable = ve_had_national_supremacy_law
-		}
-		else_if = {
-			limit = {
-				has_law = law_type:law_racial_segregation
-			}
-			set_variable = {
-				name = avaible_culture_missionaries
-				value = 2
-			}
-			set_variable = ve_had_racial_segregation_law
-		}
-		else_if = {
-			limit = {
-				has_law = law_type:law_cultural_exclusion
-			}
-			set_variable = {
-				name = avaible_culture_missionaries
-				value = 1
-			}
-			set_variable = ve_had_cultural_exclusion_law
-		}
-		else_if = {
-			limit = {
-				has_law = law_type:law_multicultural
-			}
-			set_variable = {
-				name = avaible_culture_missionaries
-				value = 0
-			}
-			set_variable = ve_had_multicultural_law
+		set_variable = {
+			name = avaible_culture_missionaries
+			value = ve_set_citizenship_law_effects
 		}
 	}
 	if = {
@@ -63,50 +17,9 @@ set_missionary_cultural_missionary = {
 				has_variable = total_culture_missionaries
 			}
 		}
-		if = {
-			limit = {
-				has_law = law_type:law_ethnostate
-			}
-			set_variable = {
-				name = total_culture_missionaries
-				value = 4
-			}
-		}
-		else_if = {
-			limit = {
-				has_law = law_type:law_national_supremacy
-			}
-			set_variable = {
-				name = total_culture_missionaries
-				value = 3
-			}
-		}
-		else_if = {
-			limit = {
-				has_law = law_type:law_racial_segregation
-			}
-			set_variable = {
-				name = total_culture_missionaries
-				value = 2
-			}
-		}
-		else_if = {
-			limit = {
-				has_law = law_type:law_cultural_exclusion
-			}
-			set_variable = {
-				name = total_culture_missionaries
-				value = 1
-			}
-		}
-		else_if = {
-			limit = {
-				has_law = law_type:law_multicultural
-			}
-			set_variable = {
-				name = total_culture_missionaries
-				value = 0
-			}
+		set_variable = {
+			name = ve_total_culture_missionaries
+			value = ve_set_citizenship_law_effects
 		}
 	}
 	if = {
@@ -115,32 +28,9 @@ set_missionary_cultural_missionary = {
 				has_variable = avaible_missionaries
 			}
 		}
-		if = {
-			limit = {
-				has_law = law_type:law_state_religion
-			}
-			set_variable = {
-				name = avaible_missionaries
-				value = 3
-			}
-			set_variable = ve_had_state_religion_law
-		}
-		else_if = {
-			limit = {
-				has_law = law_type:law_freedom_of_conscience
-			}
-			set_variable = {
-				name = avaible_missionaries
-				value = 1
-			}
-			set_variable = ve_had_freedom_of_conscience
-		}
-		else = {
-			set_variable = {
-				name = avaible_missionaries
-				value = 0
-			}
-			set_variable = ve_had_total_separation
+		set_variable = {
+			name = ve_avaible_missionaries
+			value = ve_set_religion_law_effects
 		}
 	}
 	if = {
@@ -149,29 +39,9 @@ set_missionary_cultural_missionary = {
 				has_variable = total_missionaries
 			}
 		}
-		if = {
-			limit = {
-				has_law = law_type:law_state_religion
-			}
-			set_variable = {
-				name = total_missionaries
-				value = 3
-			}
-		}
-		else_if = {
-			limit = {
-				has_law = law_type:law_freedom_of_conscience
-			}
-			set_variable = {
-				name = total_missionaries
-				value = 1
-			}
-		}
-		else = {
-			set_variable = {
-				name = total_missionaries
-				value = 0
-			}
+		set_variable = {
+			name = ve_total_missionaries
+			value = ve_set_religion_law_effects
 		}
 	}
 }
@@ -680,7 +550,7 @@ set_national_idea = {
 religion_passive_bonuses = {
 	if = {
 		limit = {
-			religion = rel:catholic
+			country_has_state_religion = rel:catholic
 		}
 		add_modifier = {
 			name = catholic_pasive_mdf
@@ -689,7 +559,7 @@ religion_passive_bonuses = {
 	}
 	else_if = {
 		limit = {
-			religion = rel:protestant
+			country_has_state_religion = rel:protestant
 		}
 		add_modifier = {
 			name = protestant_pasive_mdf
@@ -698,7 +568,7 @@ religion_passive_bonuses = {
 	}
 	else_if = {
 		limit = {
-			religion = rel:orthodox
+			country_has_state_religion = rel:orthodox
 		}
 		add_modifier = {
 			name = orthodox_pasive_mdf
@@ -707,7 +577,7 @@ religion_passive_bonuses = {
 	}
 	else_if = {
 		limit = {
-			religion = rel:oriental_orthodox
+			country_has_state_religion = rel:oriental_orthodox
 		}
 		add_modifier = {
 			name = coptic_pasive_mdf
@@ -716,7 +586,7 @@ religion_passive_bonuses = {
 	}
 	else_if = {
 		limit = {
-			religion = rel:sunni
+			country_has_state_religion = rel:sunni
 		}
 		add_modifier = {
 			name = sunni_pasive_mdf
@@ -725,7 +595,7 @@ religion_passive_bonuses = {
 	}
 	else_if = {
 		limit = {
-			religion = rel:shiite
+			country_has_state_religion = rel:shiite
 		}
 		add_modifier = {
 			name = shia_pasive_mdf
@@ -734,7 +604,7 @@ religion_passive_bonuses = {
 	}
 	else_if = {
 		limit = {
-			religion = rel:jewish
+			country_has_state_religion = rel:jewish
 		}
 		add_modifier = {
 			name = jewish_pasive_mdf
@@ -744,10 +614,10 @@ religion_passive_bonuses = {
 	else_if = {
 		limit = {
 			OR = {
-				religion = rel:mahayana
-				religion = rel:gelugpa
-				religion = rel:theravada
-				religion = rel:shinto
+				country_has_state_religion = rel:mahayana
+				country_has_state_religion = rel:gelugpa
+				country_has_state_religion = rel:theravada
+				country_has_state_religion = rel:shinto
 			}
 		}
 		add_modifier = {
@@ -757,7 +627,7 @@ religion_passive_bonuses = {
 	}
 	else_if = {
 		limit = {
-			religion = rel:hindu
+			country_has_state_religion = rel:hindu
 		}
 		add_modifier = {
 			name = hindu_pasive_mdf
@@ -766,7 +636,7 @@ religion_passive_bonuses = {
 	}
 	else_if = {
 		limit = {
-			religion = rel:sikh
+			country_has_state_religion = rel:sikh
 		}
 		add_modifier = {
 			name = sikh_pasive_mdf
@@ -775,10 +645,19 @@ religion_passive_bonuses = {
 	}
 	else_if = {
 		limit = {
-			religion = rel:animist
+			country_has_state_religion = rel:animist
 		}
 		add_modifier = {
 			name = animist_pasive_mdf
+			months = -1
+		}
+	}
+	else_if = {
+		limit = {
+			country_has_state_religion = rel:atheist
+		}
+		add_modifier = {
+			name = atheist_pasive_mdf
 			months = -1
 		}
 	}
