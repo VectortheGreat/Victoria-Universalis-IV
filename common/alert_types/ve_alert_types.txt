@@ -22,6 +22,10 @@ max_culture_reform_point = {
 	texture = "gfx/interface/monarch_cultures_icon.dds"
 	valid = {
 		culture_cost_trigger = yes
+		NOR = {
+			has_variable = supremacy_7_on
+			has_variable = intellectual_7_on
+		}
 	}
 	type = alert
 }

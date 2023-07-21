@@ -5,7 +5,7 @@ national_supremacy_mdf_1 = {
 
 national_supremacy_mdf_2 = {
 	icon = gfx/interface/monarch_cultures_icon.dds
-	state_education_access_add = 0.03
+	state_education_access_add = 0.01
 }
 
 national_supremacy_mdf_3 = {
@@ -40,7 +40,7 @@ intellectual_nation_mdf_1 = {
 
 intellectual_nation_mdf_2 = {
 	icon = gfx/interface/monarch_cultures_icon.dds
-	state_education_access_wealth_add = 0.02
+	state_education_access_wealth_add = 0.003
 }
 
 intellectual_nation_mdf_3 = {

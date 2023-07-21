@@ -21,7 +21,7 @@ innovative_idea_4_mdf = {
 innovative_idea_5_mdf = {
 	icon = gfx/interface/icon_ideas.dds
 	country_tech_spread_mult = 0.1
-	state_education_access_wealth_add = 0.003
+	state_education_access_wealth_add = 0.002
 }
 
 innovative_idea_6_mdf = {
@@ -132,7 +132,7 @@ economic_idea_4_mdf = {
 
 economic_idea_5_mdf = {
 	icon = gfx/interface/icon_ideas.dds
-	state_tax_collection_mult = 0.08
+	state_tax_collection_mult = 0.06
 }
 
 economic_idea_6_mdf = {
@@ -263,7 +263,7 @@ administrative_idea_7_mdf = {
 
 qualification_idea_1_mdf = {
 	icon = gfx/interface/icon_ideas.dds
-	state_migration_push_mult = -0.1
+	state_migration_push_mult = -0.25
 }
 
 qualification_idea_2_mdf = {
@@ -273,17 +273,18 @@ qualification_idea_2_mdf = {
 
 qualification_idea_3_mdf = {
 	icon = gfx/interface/icon_ideas.dds
-	country_society_tech_cost_mult = -0.05
+	country_society_tech_cost_mult = -0.075
 }
 
 qualification_idea_4_mdf = {
 	icon = gfx/interface/icon_ideas.dds
 	building_arts_academy_throughput_mult = 0.2
+	building_university_throughput_mult = 0.2
 }
 
 qualification_idea_5_mdf = {
 	icon = gfx/interface/icon_ideas.dds
-	state_pop_qualifications_mult = 0.25
+	state_pop_qualifications_mult = 0.35
 }
 
 qualification_idea_6_mdf = {
@@ -401,7 +402,7 @@ humanist_idea_2_mdf = {
 humanist_idea_3_mdf = {
 	icon = gfx/interface/icon_ideas.dds
 	country_agitator_slots_add = 1
-	country_revolution_progress_add = -0.05
+	state_radicals_from_discrimination_mult = -0.2
 }
 
 humanist_idea_4_mdf = {
@@ -507,17 +508,17 @@ syndicalism_idea_1_mdf = {
 
 syndicalism_idea_2_mdf = {
 	icon = gfx/interface/icon_ideas.dds
-	state_construction_mult = 0.1
+	state_construction_mult = 0.08
 }
 
 syndicalism_idea_3_mdf = {
 	icon = gfx/interface/icon_ideas.dds
-	state_mortality_mult = -0.03
+	state_mortality_mult = -0.02
 }
 
 syndicalism_idea_4_mdf = {
 	icon = gfx/interface/icon_ideas.dds
-	state_birth_rate_mult = 0.03
+	state_birth_rate_mult = 0.015
 }
 
 syndicalism_idea_5_mdf = {
@@ -562,7 +563,7 @@ imperialist_idea_4_mdf = {
 
 imperialist_idea_5_mdf = {
 	icon = gfx/interface/icon_ideas.dds
-	country_max_declared_interests_mult = 0.2
+	country_max_declared_interests_mult = 0.1
 }
 
 imperialist_idea_6_mdf = {

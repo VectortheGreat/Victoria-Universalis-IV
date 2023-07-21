@@ -1,40 +1,44 @@
 ﻿piety_value = {
 	add = var:piety_bar_point
 }
+
 idea_point_value = {
 	add = var:idea_point_pool
 }
+
 culture_reform_point_value = {
 	add = var:culture_reform_point
 }
+
 splender_points_value = {
 	add = var:ve_splender_points
 }
+
 monthly_splender_points = {
 	if = {
 		limit = {
 			is_ai = no
 		}
-		add = 3	#1260 for 35 years. 
+		add = 3		#1260 for 35 years. 
 	}
 	else = {
 		if = {
 			limit = {
 				has_global_variable = ve_easy
 			}
-			add = 2		#840 for 35 years.
+			add = 2			#840 for 35 years.
 		}
 		else_if = {
 			limit = {
 				has_global_variable = ve_medium
 			}
-			add = 3		#1260 for 35 years.
+			add = 3			#1260 for 35 years.
 		}
 		else_if = {
 			limit = {
 				has_global_variable = ve_hard
 			}
-			add = 4		#1680 for 35 years. 
+			add = 4			#1680 for 35 years. 
 		}
 	}
 	if = {
@@ -935,6 +939,7 @@ monthly_splender_points = {
 		}
 	}
 }
+
 monthly_culture_reform_point = {
 	if = {
 		limit = {
@@ -946,55 +951,56 @@ monthly_culture_reform_point = {
 			limit = {
 				is_ai = no
 			}
-			add = 7		# 840 for 10 years.
+			add = 7			# 840 for 10 years.
 		}
 		else = {
 			if = {
 				limit = {
 					has_global_variable = ve_easy
 				}
-				add = 5		# 600 for 10 years.
+				add = 5				# 600 for 10 years.
 			}
 			else_if = {
 				limit = {
 					has_global_variable = ve_medium
 				}
-				add = 7		# 840 for 10 years.
+				add = 7				# 840 for 10 years.
 			}
 			else_if = {
 				limit = {
 					has_global_variable = ve_hard
 				}
-				add = 9		# 1080 for 10 years.
+				add = 9				# 1080 for 10 years.
 			}
 		}
 	}
 }
+
 monthly_idea_points = {
 	if = {
 		limit = {
 			is_ai = no
 		}
-		add = 13	#1560 for 10 years.
+		add = 13		#1560 for 10 years.
 	}
 	else = {
 		if = {
 			limit = {
 				has_global_variable = ve_easy
 			}
-			add = 10		#1200 for 10 years.
+			add = 10			#1200 for 10 years.
 		}
 		else_if = {
 			limit = {
 				has_global_variable = ve_medium
 			}
-			add = 13		#1560 for 10 years.
+			add = 13			#1560 for 10 years.
 		}
 		else_if = {
 			limit = {
 				has_global_variable = ve_hard
 			}
-			add = 16		#1920 for 10 years.
+			add = 16			#1920 for 10 years.
 		}
 	}
 	if = {
@@ -1035,19 +1041,19 @@ monthly_piety_points = {
 			limit = {
 				has_global_variable = ve_easy
 			}
-			add = 2		# 120 for 5 years.
+			add = 2			# 120 for 5 years.
 		}
 		else_if = {
 			limit = {
 				has_global_variable = ve_medium
 			}
-			add = 4		# 240 for 5 years.
+			add = 4			# 240 for 5 years.
 		}
 		else_if = {
 			limit = {
 				has_global_variable = ve_hard
 			}
-			add = 6		# 360 for 5 years.
+			add = 6			# 360 for 5 years.
 		}
 	}
 	if = {
@@ -1113,12 +1119,15 @@ monthly_piety_points = {
 avaible_missionaries = {
 	add = var:avaible_missionaries
 }
+
 total_missionaries = {
 	add = var:total_missionaries
 }
+
 avaible_culture_missionaries = {
 	add = var:avaible_culture_missionaries
 }
+
 total_culture_missionaries = {
 	add = var:total_culture_missionaries
 }
@@ -1149,6 +1158,7 @@ ve_set_religion_law_effects = {
 		add = 0
 	}
 }
+
 ve_set_citizenship_law_effects = {
 	if = {
 		limit = {
@@ -1208,6 +1218,7 @@ ve_change_religion_law_effects = {
 		value = 0
 	}
 }
+
 ve_change_citizenship_law_effects = {
 	if = {
 		limit = {

@@ -139,7 +139,7 @@ ger_idea_4 = {
 
 ger_idea_5 = {
 	icon = gfx/interface/intelligensia.dds
-	state_accepted_birth_rate_mult = 0.05
+	state_accepted_birth_rate_mult = 0.02
 }
 
 ger_idea_6 = {
@@ -281,8 +281,8 @@ tur_idea_1 = {
 
 tur_idea_2 = {
 	icon = gfx/interface/intelligensia.dds
-	country_tech_spread_mult = 0.15
-	state_education_access_add = 0.025
+	country_tech_spread_mult = 0.1
+	state_education_access_add = 0.015
 }
 
 tur_idea_3 = {
@@ -389,7 +389,7 @@ jap_idea_1 = {
 
 jap_idea_2 = {
 	icon = gfx/interface/intelligensia.dds
-	state_education_access_add = 0.025
+	state_education_access_add = 0.015
 }
 
 jap_idea_3 = {
@@ -468,7 +468,7 @@ usa_idea_6 = {
 
 usa_idea_7 = {
 	icon = gfx/interface/intelligensia.dds
-	country_minting_mult = 0.25
+	country_minting_mult = 0.2
 }
 
 generic_idea_tradition_1 = {

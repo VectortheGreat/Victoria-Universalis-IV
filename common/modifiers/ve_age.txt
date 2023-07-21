@@ -74,7 +74,7 @@ age_2_bonus_2 = {
 
 age_2_bonus_3 = {
 	icon = gfx/interface/icon_splendor_tiny.dds
-	country_revolution_secession_speed_add = -0.1
+	country_agitator_slots_add = 1
 }
 
 age_2_bonus_4 = {
@@ -100,7 +100,7 @@ age_2_bonus_7 = {
 
 age_2_bonus_8 = {
 	icon = gfx/interface/icon_splendor_tiny.dds
-	country_minting_mult = 0.2
+	country_minting_mult = 0.1
 }
 
 age_2_bonus_9 = {
@@ -120,7 +120,7 @@ age_2_bonus_11 = {
 
 age_3_bonus_1 = {
 	icon = gfx/interface/icon_splendor_tiny.dds
-	state_birth_rate_mult = 0.05
+	state_birth_rate_mult = 0.03
 }
 
 age_3_bonus_2 = {
