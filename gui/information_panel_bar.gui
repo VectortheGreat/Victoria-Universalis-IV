@@ -1,4 +1,4 @@
-#positions for sidepanel buttons 
+#positions for sidepanel buttons
 #(they cant be in flowcontainer because of the way the label buttons is set up to scale with the longest localized text)
 @budget_position = 50
 @buildings_position = 100
@@ -13,12 +13,13 @@
 @culture_position = 350
 @population_position = 390
 @journal_position = 430
-@outliner_position = 470
+@outliner_position = 530
+@companies_position = 470
 
 @spacing_widget_2_position = 510
 
-@maplist_position = 530
-@victoria_universalis = 590
+@maplist_position = 600
+@victoria_universalis = 642
 
 types information_panel_bar_types {
 	type information_panel_bar = widget {
@@ -84,7 +85,7 @@ types information_panel_bar_types {
 		### SIDEBAR BACKGROUND
 		icon = {
 			texture = "gfx/interface/main_hud/sidebar_bg.dds"
-			size = { 50 670 }
+			size = { 50 620 }
 			position = { 0 -17 }
 
 			using = hud_shiny_effect
@@ -100,12 +101,14 @@ types information_panel_bar_types {
 			onmousehierarchyleave = "[PdxGuiInterruptThenTriggerAllAnimations('show_sidebar_labels','hide_sidebar_labels')]"
 
 			container = {
+				name = "ingame_sidebar_buttons_container" # Do not rename otherwise `UiValidityCheck`s will just pretend to work
 				### POLITICS
 				sidebar_label_button = {
 					position = { -100 0 }
 					blockoverride "onclick" {
 						onclick = "[GetVariableSystem.Clear('ve_tab_var')]"
 						onclick = "[InformationPanelBar.OpenPanelCycleTabs('politics', 'default|interest_groups|laws|institutions')]"
+						onclick = "[GetVariableSystem.Clear('politics_overview_exile_pool')]"
 						input_action = "open_politics"
 					}
 				}
@@ -130,6 +133,7 @@ types information_panel_bar_types {
 						}
 						onclick = "[GetVariableSystem.Clear('ve_tab_var')]"
 						onclick = "[InformationPanelBar.OpenPanelCycleTabs('politics', 'default|interest_groups|laws|institutions')]"
+						onclick = "[GetVariableSystem.Clear('politics_overview_exile_pool')]"
 
 						animated_progresspie = {
 							parentanchor = center
@@ -271,7 +275,7 @@ types information_panel_bar_types {
 					position = { -100 @military_position }
 					blockoverride "onclick" {
 						onclick = "[GetVariableSystem.Clear('ve_tab_var')]"
-						onclick = "[InformationPanelBar.OpenPanelCycleTabs('military', 'army|garrison|navy')]"
+						onclick = "[InformationPanelBar.OpenPanelCycleTabs('military', 'army|navy')]"
 						input_action = "open_military"
 					}
 				}
@@ -296,7 +300,7 @@ types information_panel_bar_types {
 							visible = "[InformationPanelBar.IsPanelOpen('military')]"
 						}
 						onclick = "[GetVariableSystem.Clear('ve_tab_var')]"
-						onclick = "[InformationPanelBar.OpenPanelCycleTabs('military', 'army|garrison|navy')]"
+						onclick = "[InformationPanelBar.OpenPanelCycleTabs('military', 'army|navy')]"
 					}
 				}
 				sidebar_tooltip_area = {
@@ -400,7 +404,6 @@ types information_panel_bar_types {
 							alwaystransparent = yes
 						}
 					}
-					
 					textbox = {
 						parentanchor = right|top
 						position = { -2 2 }
@@ -421,6 +424,46 @@ types information_panel_bar_types {
 					tooltip = "BUTTON_TECHNOLOGY"
 					input_action = "open_technology"
 				}
+
+				### COMPANIES
+				sidebar_label_button_small = {
+					enabled = "[GetMetaPlayer.GetPlayedOrObservedCountry.IsValid]"
+					position = { -100 @companies_position }
+					blockoverride "onclick" {
+						onclick = "[InformationPanelBar.OpenPanelCycleTabs('companies', 'default|potential_companies')]"
+						input_action = "open_companies"
+					}
+				}
+				sidebar_label_text_small = {
+					position = { -100 @companies_position }
+					text = "COMPANIES_OVERVIEW"
+				}
+				widget = {
+					name = "tutorial_highlight_companies"
+					enabled = "[GetMetaPlayer.GetPlayedOrObservedCountry.IsValid]"
+					position = { 0 @companies_position }
+					using = clickthrough_blocker
+					using = sidebar_button_size_small
+					using = selected_sidepanel_animation_small
+					blockoverride "selected_visibility" {
+						visible = "[InformationPanelBar.IsPanelOpen('companies')]"
+					}
+					sidepanel_button_small = {
+						blockoverride "icon" {
+							texture = "gfx/interface/main_hud/companies_btn.dds"
+						}
+						blockoverride "button_selected" {
+							visible = "[InformationPanelBar.IsPanelOpen('companies')]"
+						}
+						onclick = "[InformationPanelBar.OpenPanel('companies')]"
+						onclick = "[GetVariableSystem.Clear('ve_tab_var')]"
+					}
+				}
+				sidebar_tooltip_area_small = {
+					position = { 0 @companies_position }
+					tooltip = "BUTTON_COMPANIES_OVERVIEW"
+					input_action = "open_companies"
+				}	
 
 				### CULTURE
 				sidebar_label_button_small = {
