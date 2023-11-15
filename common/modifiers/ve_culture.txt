@@ -30,7 +30,7 @@ national_supremacy_mdf_6 = {
 
 national_supremacy_mdf_7 = {
 	icon = gfx/interface/monarch_cultures_icon.dds
-	country_army_power_projection_mult = 0.05
+	country_prestige_from_army_power_projection_mult = 0.05
 }
 
 intellectual_nation_mdf_1 = {

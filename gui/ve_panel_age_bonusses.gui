@@ -203,10 +203,9 @@ types ve_gui_panel_types
 														using = default_button_action
 														size = { 100% 40 }
 														text = "ve_golden_age"
-														tooltip = "ve_golden_age_tt"
+														tooltip = "[GetScriptedGui('ve_golden_age').BuildTooltip(GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
 														onclick = "[GetScriptedGui('ve_golden_age').Execute( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
 														enabled = "[GetScriptedGui('ve_golden_age').IsValid(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
-														tooltip = "[GetScriptedGui('ve_golden_age').BuildTooltip(GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
 														using = tooltip_below
 													}
 												}

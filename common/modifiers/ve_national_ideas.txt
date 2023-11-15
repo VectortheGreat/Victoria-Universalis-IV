@@ -10,7 +10,7 @@ gbr_idea_tradition_2 = {
 
 gbr_idea_bonus = {
 	icon = gfx/interface/intelligensia.dds
-	country_navy_power_projection_mult = 0.2
+	country_prestige_from_navy_power_projection_mult = 0.2
 }
 
 gbr_idea_1 = {
@@ -20,9 +20,9 @@ gbr_idea_1 = {
 
 gbr_idea_2 = {
 	icon = gfx/interface/intelligensia.dds
-	country_society_tech_cost_mult = -0.05
-	country_production_tech_cost_mult = -0.05
-	country_military_tech_cost_mult = -0.05
+	country_production_tech_research_speed_mult = 0.05
+	country_military_tech_research_speed_mult = 0.05
+	country_society_tech_research_speed_mult = 0.05
 }
 
 gbr_idea_3 = {
@@ -82,7 +82,7 @@ fra_idea_3 = {
 
 fra_idea_4 = {
 	icon = gfx/interface/intelligensia.dds
-	building_group_bg_manufacturing_throughput_mult = 0.1	#unutma
+	building_group_bg_manufacturing_throughput_add = 0.1
 }
 
 fra_idea_5 = {
@@ -119,7 +119,7 @@ ger_idea_bonus = {
 ger_idea_1 = {
 	icon = gfx/interface/intelligensia.dds
 	country_tech_spread_mult = 0.1
-	building_university_throughput_mult = 0.1
+	building_university_throughput_add = 0.1
 }
 
 ger_idea_2 = {
@@ -229,7 +229,7 @@ rus_idea_1 = {
 
 rus_idea_2 = {
 	icon = gfx/interface/intelligensia.dds
-	country_military_tech_cost_mult = -0.075
+	country_military_tech_research_speed_mult = 0.075
 }
 
 rus_idea_3 = {
@@ -256,7 +256,7 @@ rus_idea_6 = {
 
 rus_idea_7 = {
 	icon = gfx/interface/intelligensia.dds
-	country_army_power_projection_mult = 0.15
+	country_prestige_from_army_power_projection_mult = 0.15
 }
 
 tur_idea_tradition_1 = {
@@ -299,7 +299,7 @@ tur_idea_4 = {
 tur_idea_5 = {
 	icon = gfx/interface/intelligensia.dds
 	market_land_trade_capacity_add = 10
-	building_railway_mine_throughput_mult = 0.1
+	building_railway_mine_throughput_add = 0.1
 }
 
 tur_idea_6 = {
@@ -372,9 +372,9 @@ jap_idea_tradition_1 = {
 
 jap_idea_tradition_2 = {
 	icon = gfx/interface/intelligensia.dds
-	country_society_tech_cost_mult = -0.05
-	country_production_tech_cost_mult = -0.05
-	country_military_tech_cost_mult = -0.05
+	country_production_tech_research_speed_mult = 0.05
+	country_military_tech_research_speed_mult = 0.05
+	country_society_tech_research_speed_mult = 0.05
 }
 
 jap_idea_bonus = {

@@ -15,17 +15,17 @@ ve_no_art_worth_preserving = {
 
 ve_focus_production = {
 	icon = gfx/interface/icon_splendor_tiny.dds
-	country_production_tech_cost_mult = -0.1
+	country_production_tech_research_speed_mult = 0.01
 }
 
 ve_focus_society = {
 	icon = gfx/interface/icon_splendor_tiny.dds
-	country_society_tech_cost_mult = -0.1
+	country_society_tech_research_speed_mult = 0.1
 }
 
 ve_focus_military = {
 	icon = gfx/interface/icon_splendor_tiny.dds
-	country_military_tech_cost_mult = -0.1
+	country_military_tech_research_speed_mult = 0.01
 }
 
 ve_weak_bureaucracy = {
@@ -41,7 +41,7 @@ ve_support_new_model_bureaucracy = {
 
 ve_military_theory = {
 	icon = gfx/interface/icon_splendor_tiny.dds
-	country_military_tech_cost_mult = -0.1
+	country_military_tech_research_speed_mult = 0.01
 }
 
 ve_economy_improvements = {
