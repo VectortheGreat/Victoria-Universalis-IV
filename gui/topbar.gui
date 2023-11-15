@@ -18,7 +18,7 @@ types topbar_components
 			direction = vertical
 			spacing = 1
 		
-			#FIRST
+			###VANILLA
 			flowcontainer = {
 				visible = "[GetMetaPlayer.GetPlayedOrObservedCountry.IsValid]"
 				layoutpolicy_vertical = expanding
@@ -193,7 +193,8 @@ types topbar_components
 			### EXTRA INFO
 			flowcontainer = {
 				name = "extra_info"
-				layoutpolicy_vertical = expanding			
+				layoutpolicy_vertical = expanding
+				using = hide_ve_mod_topbar
 
 				background = {
 					using = dark_area_rounded
@@ -395,12 +396,12 @@ types topbar_components
 					using = zz_colonization_colonial_capacity
 				}
 			}
-			###SECONDARY
+			###VICTORIA UNIVERSALIS
 			flowcontainer = {
 				name = "victoria_universalis_topbar"
 				layoutpolicy_vertical = expanding
+				using = hide_ve_mod_topbar
 				alwaystransparent = no
-				visible = "[GetScriptedGui('ve_top_bar').IsShown(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
 				# position = { 130 40 }
 				block "animation" {
 					position = { 0 0 }
