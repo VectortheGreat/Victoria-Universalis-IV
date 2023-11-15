@@ -189,12 +189,34 @@ types topbar_components
 						align = left|nobaseline
 					}
 				}
+				flowcontainer = {
+					minimumsize = { 28 28 }
+					maximumsize = { 28 28 }
+					tooltip = "tgr_ve_topbar"
+					spacing = 2
+					margin_left = 10
+					using = tooltip_below
+					button_icon_round_toggle = {
+						using = glow_button
+						size = { 28 28 }
+						blockoverride "on_click" {
+							onclick = "[GetScriptedGui('ve_top_bar').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+						}
+						icon = {
+							size = { 25 25 }
+							name = inflation_icon
+							texture = "gfx/interface/buttons/button_icons/reset.dds"
+							position = { 2 2 }
+						}
+					}
+				}
 			}
 			### EXTRA INFO
 			flowcontainer = {
 				name = "extra_info"
 				layoutpolicy_vertical = expanding
-				using = hide_ve_mod_topbar
+				# using = hide_ve_mod_topbar
+				visible = "[GetScriptedGui('ve_top_bar').IsShown(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
 
 				background = {
 					using = dark_area_rounded
@@ -399,8 +421,9 @@ types topbar_components
 			###VICTORIA UNIVERSALIS
 			flowcontainer = {
 				name = "victoria_universalis_topbar"
+				visible = "[Not(GetScriptedGui('ve_top_bar').IsShown(GuiScope.SetRoot(GetPlayer.MakeScope).End))]"
 				layoutpolicy_vertical = expanding
-				using = hide_ve_mod_topbar
+				#using = hide_ve_mod_topbar
 				alwaystransparent = no
 				# position = { 130 40 }
 				block "animation" {
@@ -582,7 +605,7 @@ types topbar_components
 			using = hud_visibility
 			datacontext = "[AccessMetaPlayer.AccessPlayedOrObservedCountry]"
 			using = clickthrough_blocker
-			size = { 705 120 }
+			size = { 725 120 }
 			allow_outside = yes
 			resizeparent = yes
 			

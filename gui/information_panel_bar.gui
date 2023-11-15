@@ -21,6 +21,10 @@
 @maplist_position = 600
 @victoria_universalis = 642
 
+template ve_clear_tab_bar {
+	onclick = "[GetVariableSystem.Clear('ve_tab_var')]"
+}
+
 types information_panel_bar_types {
 	type information_panel_bar = widget {
 		name = "information_panel_bar"
@@ -106,7 +110,7 @@ types information_panel_bar_types {
 				sidebar_label_button = {
 					position = { -100 0 }
 					blockoverride "onclick" {
-						onclick = "[GetVariableSystem.Clear('ve_tab_var')]"
+						using = ve_clear_tab_bar
 						onclick = "[InformationPanelBar.OpenPanelCycleTabs('politics', 'default|interest_groups|laws|institutions')]"
 						onclick = "[GetVariableSystem.Clear('politics_overview_exile_pool')]"
 						input_action = "open_politics"
@@ -131,7 +135,7 @@ types information_panel_bar_types {
 						blockoverride "button_selected" {
 							visible = "[InformationPanelBar.IsPanelOpen('politics')]"
 						}
-						onclick = "[GetVariableSystem.Clear('ve_tab_var')]"
+						using = ve_clear_tab_bar
 						onclick = "[InformationPanelBar.OpenPanelCycleTabs('politics', 'default|interest_groups|laws|institutions')]"
 						onclick = "[GetVariableSystem.Clear('politics_overview_exile_pool')]"
 
@@ -157,7 +161,7 @@ types information_panel_bar_types {
 				sidebar_label_button = {
 					position = { -100 @budget_position }
 					blockoverride "onclick" {
-						onclick = "[GetVariableSystem.Clear('ve_tab_var')]"
+						using = ve_clear_tab_bar
 						onclick = "[InformationPanelBar.OpenPanelCycleTabs('budget', 'default|states|assets')]"
 						input_action = "open_budget"
 					}
@@ -182,7 +186,7 @@ types information_panel_bar_types {
 						blockoverride "button_selected" {
 							visible = "[InformationPanelBar.IsPanelOpen('budget')]"
 						}
-						onclick = "[GetVariableSystem.Clear('ve_tab_var')]"
+						using = ve_clear_tab_bar
 						onclick = "[InformationPanelBar.OpenPanelCycleTabs('budget', 'default|states|assets')]"
 					}
 				}
@@ -196,7 +200,7 @@ types information_panel_bar_types {
 				sidebar_label_button = {
 					position = { -100 @buildings_position }
 					blockoverride "onclick" {
-						onclick = "[GetVariableSystem.Clear('ve_tab_var')]"
+						using = ve_clear_tab_bar
 						onclick = "[InformationPanelBar.OpenPanelCycleTabs('production_methods', 'urban|rural|development|construction_queues')]"
 						input_action = "open_buildings"
 					}
@@ -221,7 +225,7 @@ types information_panel_bar_types {
 						blockoverride "button_selected" {
 							visible = "[InformationPanelBar.IsPanelOpen('production_methods')]"
 						}
-						onclick = "[GetVariableSystem.Clear('ve_tab_var')]"
+						using = ve_clear_tab_bar
 						onclick = "[InformationPanelBar.OpenPanelCycleTabs('production_methods', 'urban|rural|development|construction_queues')]"
 					}
 				}
@@ -235,7 +239,7 @@ types information_panel_bar_types {
 				sidebar_label_button = {
 					position = { -100 @trade_position }
 					blockoverride "onclick" {
-						onclick = "[GetVariableSystem.Clear('ve_tab_var')]"
+						using = ve_clear_tab_bar
 						onclick = "[InformationPanelBar.OpenMarketPanelCycleTabs(AccessPlayer.AccessFirstMarket, 'market', 'default|trade_routes|trade_suggestions|states')]"
 						input_action = "open_market"
 					}
@@ -260,7 +264,7 @@ types information_panel_bar_types {
 						blockoverride "button_selected" {
 							visible = "[InformationPanelBar.IsPanelOpen('market')]"
 						}
-						onclick = "[GetVariableSystem.Clear('ve_tab_var')]"
+						using = ve_clear_tab_bar
 						onclick = "[InformationPanelBar.OpenMarketPanelCycleTabs(AccessPlayer.AccessFirstMarket, 'market', 'default|trade_routes|trade_suggestions|states')]"
 					}
 				}
@@ -274,7 +278,7 @@ types information_panel_bar_types {
 				sidebar_label_button = {
 					position = { -100 @military_position }
 					blockoverride "onclick" {
-						onclick = "[GetVariableSystem.Clear('ve_tab_var')]"
+						using = ve_clear_tab_bar
 						onclick = "[InformationPanelBar.OpenPanelCycleTabs('military', 'army|navy')]"
 						input_action = "open_military"
 					}
@@ -299,7 +303,7 @@ types information_panel_bar_types {
 						blockoverride "button_selected" {
 							visible = "[InformationPanelBar.IsPanelOpen('military')]"
 						}
-						onclick = "[GetVariableSystem.Clear('ve_tab_var')]"
+						using = ve_clear_tab_bar
 						onclick = "[InformationPanelBar.OpenPanelCycleTabs('military', 'army|navy')]"
 					}
 				}
@@ -323,7 +327,7 @@ types information_panel_bar_types {
 					enabled = "[GetMetaPlayer.GetPlayedOrObservedCountry.IsValid]"
 					position = { -100 @diplomatic_position }
 					blockoverride "onclick" {
-						onclick = "[GetVariableSystem.Clear('ve_tab_var')]"
+						using = ve_clear_tab_bar
 						onclick = "[InformationPanelBar.OpenPanelCycleTabs('diplomatic_overview', 'default|release_subject')]"
 						input_action = "open_diplomatic"
 					}
@@ -349,7 +353,7 @@ types information_panel_bar_types {
 						blockoverride "button_selected" {
 							visible = "[InformationPanelBar.IsPanelOpen('diplomatic_overview')]"
 						}
-						onclick = "[GetVariableSystem.Clear('ve_tab_var')]"
+						using = ve_clear_tab_bar
 						onclick = "[InformationPanelBar.OpenPanelCycleTabs('diplomatic_overview', 'default|release_subject')]"
 					}
 				}
@@ -364,7 +368,7 @@ types information_panel_bar_types {
 					enabled = "[GetMetaPlayer.GetPlayedOrObservedCountry.IsValid]"
 					position = { -100 @technology_position }
 					blockoverride "onclick" {
-						onclick = "[GetVariableSystem.Clear('ve_tab_var')]"
+						using = ve_clear_tab_bar
 						onclick = "[InformationPanelBar.OpenPanelCycleTabs('tech_tree', 'production|military|society')]"
 						input_action = "open_technology"
 					}
@@ -390,7 +394,7 @@ types information_panel_bar_types {
 						blockoverride "button_selected" {
 							visible = "[InformationPanelBar.IsPanelOpen('tech_tree')]"
 						}
-						onclick = "[GetVariableSystem.Clear('ve_tab_var')]"
+						using = ve_clear_tab_bar
 						onclick = "[InformationPanelBar.OpenPanelCycleTabs('tech_tree', 'production|military|society')]"
 
 						animated_progresspie = {
@@ -456,7 +460,7 @@ types information_panel_bar_types {
 							visible = "[InformationPanelBar.IsPanelOpen('companies')]"
 						}
 						onclick = "[InformationPanelBar.OpenPanel('companies')]"
-						onclick = "[GetVariableSystem.Clear('ve_tab_var')]"
+						using = ve_clear_tab_bar
 					}
 				}
 				sidebar_tooltip_area_small = {
@@ -470,7 +474,7 @@ types information_panel_bar_types {
 					enabled = "[GetMetaPlayer.GetPlayedOrObservedCountry.IsValid]"
 					position = { -100 @culture_position }
 					blockoverride "onclick" {
-						onclick = "[GetVariableSystem.Clear('ve_tab_var')]"
+						using = ve_clear_tab_bar
 						onclick = "[InformationPanelBar.OpenPanelCycleTabs('culture', 'default|nation_formation')]"
 						input_action = "open_culture"
 					}
@@ -496,7 +500,7 @@ types information_panel_bar_types {
 						blockoverride "button_selected" {
 							visible = "[InformationPanelBar.IsPanelOpen('culture')]"
 						}
-						onclick = "[GetVariableSystem.Clear('ve_tab_var')]"
+						using = ve_clear_tab_bar
 						onclick = "[InformationPanelBar.OpenPanelCycleTabs('culture', 'default|nation_formation')]"
 					}
 				}
@@ -511,7 +515,7 @@ types information_panel_bar_types {
 					enabled = "[GetMetaPlayer.GetPlayedOrObservedCountry.IsValid]"
 					position = { -100 @population_position }
 					blockoverride "onclick" {
-						onclick = "[GetVariableSystem.Clear('ve_tab_var')]"
+						using = ve_clear_tab_bar
 						onclick = "[InformationPanelBar.OpenPanelCycleTabs('pops_overview', 'default|population_charts|pop_list')]"
 						input_action = "open_population"
 					}
@@ -537,7 +541,7 @@ types information_panel_bar_types {
 						blockoverride "button_selected" {
 							visible = "[InformationPanelBar.IsPanelOpen('pops_overview')]"
 						}
-						onclick = "[GetVariableSystem.Clear('ve_tab_var')]"
+						using = ve_clear_tab_bar
 						onclick = "[InformationPanelBar.OpenPanelCycleTabs('pops_overview', 'default|population_charts|pop_list')]"
 					}
 				}
@@ -552,7 +556,7 @@ types information_panel_bar_types {
 					enabled = "[GetMetaPlayer.GetPlayedOrObservedCountry.IsValid]"
 					position = { -100 @journal_position }
 					blockoverride "onclick" {
-						onclick = "[GetVariableSystem.Clear('ve_tab_var')]"
+						using = ve_clear_tab_bar
 						onclick = "[InformationPanelBar.OpenPanelCycleTabs('journal', 'default|decisions')]"
 						input_action = "open_journal"
 					}
@@ -584,7 +588,7 @@ types information_panel_bar_types {
 						blockoverride "button_selected" {
 							visible = "[InformationPanelBar.IsPanelOpen('journal')]"
 						}
-						onclick = "[GetVariableSystem.Clear('ve_tab_var')]"
+						using = ve_clear_tab_bar
 						onclick = "[InformationPanelBar.OpenPanelCycleTabs('journal', 'default|decisions')]"
 					}
 					textbox = {
@@ -612,7 +616,7 @@ types information_panel_bar_types {
 					enabled = "[GetMetaPlayer.GetPlayedOrObservedCountry.IsValid]"
 					position = { -100 @outliner_position }
 					blockoverride "onclick" {
-						onclick = "[GetVariableSystem.Clear('ve_tab_var')]"
+						using = ve_clear_tab_bar
 						onclick = "[InformationPanelBar.OpenPanel('outliner')]"
 						input_action = "open_outliner"
 					}
@@ -639,7 +643,7 @@ types information_panel_bar_types {
 						blockoverride "button_selected" {
 							visible = "[InformationPanelBar.IsPanelOpen('outliner')]"
 						}
-						onclick = "[GetVariableSystem.Clear('ve_tab_var')]"
+						using = ve_clear_tab_bar
 						onclick = "[InformationPanelBar.OpenPanel('outliner')]"
 					}
 				}
@@ -661,7 +665,7 @@ types information_panel_bar_types {
 
 					position = { -100 @maplist_position }
 					blockoverride "onclick" {
-						onclick = "[GetVariableSystem.Clear('ve_tab_var')]"
+						using = ve_clear_tab_bar
 						onclick = "[MapListPanelManager.ToggleCurrentPanel]"
 						input_action = map_list
 					}
@@ -687,7 +691,7 @@ types information_panel_bar_types {
 						blockoverride "button_selected" {
 							visible = "[MapListPanelManager.IsVisible]"
 						}
-						onclick = "[GetVariableSystem.Clear('ve_tab_var')]"
+						using = ve_clear_tab_bar
 						onclick = "[MapListPanelManager.ToggleCurrentPanel]"
 					}
 				}
