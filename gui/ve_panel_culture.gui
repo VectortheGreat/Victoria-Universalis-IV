@@ -59,6 +59,7 @@ types ve_gui_panel_types
 								vbox = {
 									spacing = 10
 									tooltip = "ve_cultural_missionary_tt"
+									visible = "[GetScriptedGui('ve_hide_culture_missionary_topbar').IsShown(GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
 									textbox = {
 										text = "ve_cultural_missionary"
 										default_format = "#tooltippable_name"

@@ -279,7 +279,7 @@ types information_panel_bar_types {
 					position = { -100 @military_position }
 					blockoverride "onclick" {
 						using = ve_clear_tab_bar
-						onclick = "[InformationPanelBar.OpenPanelCycleTabs('military', 'army|navy')]"
+						onclick = "[InformationPanelBar.OpenPanelCycleTabs('military', 'army|mobilization|navy')]"
 						input_action = "open_military"
 					}
 				}
@@ -304,7 +304,7 @@ types information_panel_bar_types {
 							visible = "[InformationPanelBar.IsPanelOpen('military')]"
 						}
 						using = ve_clear_tab_bar
-						onclick = "[InformationPanelBar.OpenPanelCycleTabs('military', 'army|navy')]"
+						onclick = "[InformationPanelBar.OpenPanelCycleTabs('military', 'army|mobilization|navy')]"
 					}
 				}
 				sidebar_tooltip_area = {

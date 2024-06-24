@@ -80,7 +80,6 @@ template map_list_panels {
 	state_pollution_map_list_panel = {}
 	activate_conscription_center_map_list_panel = {}
 	front_map_list_panel = {}
-	recruit_commanders_map_list_panel = {}
 	military_formation_map_list_panel = {}
 	military_formation_deploy_map_list_panel = {}
 }

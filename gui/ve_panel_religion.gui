@@ -55,6 +55,7 @@ ve_gui_panel_types
 						 layoutpolicy_horizontal = expanding
 						vbox = {
 							spacing = 10
+							visible = "[GetScriptedGui('ve_hide_missionary_topbar').IsShown(GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
 							tooltip = "ve_missionary_tt"
 							textbox = {
 								text = "ve_missionaries"

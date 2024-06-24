@@ -192,9 +192,7 @@ types topbar_components
 				flowcontainer = {
 					minimumsize = { 28 28 }
 					maximumsize = { 28 28 }
-					tooltip = "tgr_ve_topbar"
-					spacing = 2
-					margin_left = 10
+					tooltip = "ve_topbar"
 					using = tooltip_below
 					button_icon_round_toggle = {
 						using = glow_button
@@ -605,7 +603,7 @@ types topbar_components
 			using = hud_visibility
 			datacontext = "[AccessMetaPlayer.AccessPlayedOrObservedCountry]"
 			using = clickthrough_blocker
-			size = { 725 120 }
+			size = { 725 100 }
 			allow_outside = yes
 			resizeparent = yes
 			
@@ -989,50 +987,50 @@ types topbar_components
 			}
 			
 			### LOCK TOGGLE FOR SECONDARY ROW OF ICONS
-			# button_icon_round_toggle = {
-			# 	visible = "[GetMetaPlayer.GetPlayedOrObservedCountry.IsValid]"
-			# 	size = { 24 24 }
-			# 	parentanchor = bottom|right
-			# 	position = { -30 -9 }
+			button_icon_round_toggle = {
+				visible = "[GetMetaPlayer.GetPlayedOrObservedCountry.IsValid]"
+				size = { 24 24 }
+				parentanchor = bottom|right
+				position = { -30 -9 }
 				
-			# 	alpha = 0
+				alpha = 0
 				
-			# 	state = {
-			# 		name = show_topbar_secondary_stats
-			# 		delay = 0.15
-			# 		alpha = 1
-			# 		duration = 0.15
-			# 		using = Animation_Curve_Default
-			# 	}
-			# 	state = {
-			# 		name = hide_topbar_secondary_stats
-			# 		alpha = 0
-			# 		duration = 0
-			# 		using = Animation_Curve_Default
-			# 	}
+				state = {
+					name = show_topbar_secondary_stats
+					delay = 0.15
+					alpha = 1
+					duration = 0.15
+					using = Animation_Curve_Default
+				}
+				state = {
+					name = hide_topbar_secondary_stats
+					alpha = 0
+					duration = 0
+					using = Animation_Curve_Default
+				}
 				
-			# 	blockoverride "on_click" {
-			# 		onclick = "[GetVariableSystem.Toggle('more_topbar_info')]"
-			# 	}
-			# 	blockoverride "view_1" {
-			# 		visible = "[GetVariableSystem.Exists('more_topbar_info')]"
-			# 	}
-			# 	blockoverride "view_2" {
-			# 		visible = "[Not(GetVariableSystem.Exists('more_topbar_info'))]"
-			# 	}
-			# 	blockoverride "icon_1" {
-			# 		texture = "gfx/interface/buttons/button_icons/unlock.dds"
-			# 	}
-			# 	blockoverride "icon_2" {
-			# 		texture = "gfx/interface/buttons/button_icons/lock.dds"
-			# 	}
-			# 	blockoverride "tooltip_1" {
-			# 		tooltip = "LOCK_TOPBAR"
-			# 	}
-			# 	blockoverride "tooltip_2" {
-			# 		tooltip = "UNLOCK_TOPBAR"
-			# 	}
-			# }
+				blockoverride "on_click" {
+					onclick = "[GetVariableSystem.Toggle('more_topbar_info')]"
+				}
+				blockoverride "view_1" {
+					visible = "[GetVariableSystem.Exists('more_topbar_info')]"
+				}
+				blockoverride "view_2" {
+					visible = "[Not(GetVariableSystem.Exists('more_topbar_info'))]"
+				}
+				blockoverride "icon_1" {
+					texture = "gfx/interface/buttons/button_icons/unlock.dds"
+				}
+				blockoverride "icon_2" {
+					texture = "gfx/interface/buttons/button_icons/lock.dds"
+				}
+				blockoverride "tooltip_1" {
+					tooltip = "LOCK_TOPBAR"
+				}
+				blockoverride "tooltip_2" {
+					tooltip = "UNLOCK_TOPBAR"
+				}
+			}
 			
 			### FLAG
 			fancy_flag = {

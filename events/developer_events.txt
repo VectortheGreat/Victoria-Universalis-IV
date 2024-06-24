@@ -237,10 +237,34 @@ dev.2 = {
 	option = {
 		name = dev.2.a
 		default_option = yes
-		set_global_variable = ve_age_2_started
-		remove_global_variable = ve_age_1_started
-		remove_global_variable = ve_age_3_started
-		set_global_variable = age_2_started_trigger
+		# set_global_variable = ve_age_2_started
+		# remove_global_variable = ve_age_1_started
+		# remove_global_variable = ve_age_3_started
+		# set_global_variable = age_2_started_trigger
+		# create_diplomatic_pact = {
+		# 	country = c:BRZ
+		# 	type = puppet
+		# }
+		# create_diplomatic_pact = {
+		# 	country = c:AGJ
+		# 	type = puppet
+		# }
+		# create_diplomatic_pact = {
+		# 	country = c:PRG
+		# 	type = puppet
+		# }
+		# create_diplomatic_pact = {
+		# 	country = c:URU
+		# 	type = puppet
+		# }
+		annex = c:BRZ
+		annex = c:AGJ
+		annex = c:PRG
+		annex = c:URU
+		annex = c:ARJ
+		annex = c:CHL
+		annex = c:CLM
+		annex = c:VNZ
 		# set_state_religion = rel:atheist
 	}
 	option = {
