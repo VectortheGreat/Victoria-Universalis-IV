@@ -75,6 +75,9 @@ types vfx_types {
 			ignore_in_debug_draw = yes
 			gfxtype = jomini_entitygfx
 
+			shaderfile = "gfx/FX/pdxgui_default.shader"
+			effectname = "PdxGuiDefault"
+
 			block "parent_anchor" {}
 			block "position" {}
 			block "size" {
@@ -147,7 +150,7 @@ types windows {
 					elide = right
 					fontsize_min = 14
 					parentanchor = hcenter
-					align = center|nobaseline
+					align = hcenter|nobaseline
 					using = header_font
 					using = header_font_size
 					default_format = "#header"
@@ -219,6 +222,7 @@ types windows {
 			flowcontainer = {
 				direction = vertical
 				resizeparent = yes
+
 				block "side_margins" {
 					margin = { 50 0 }
 				}
@@ -226,6 +230,7 @@ types windows {
 				block "bottom_margin" {
 					margin_bottom = 30
 				}
+
 				block "top_margin" {
 					margin_top = 100
 				}
@@ -281,6 +286,7 @@ types windows {
 				parentanchor = hcenter
 				autoresize = yes
 				align = nobaseline
+				block "second_text_properties" {}
 			}
 		}
 	}
@@ -410,10 +416,12 @@ types windows {
 							button_icon_pin = {
 								size = { 100% 100% }
 								block "pin_properties" {}
+								input_action = "toggle_pin"
 							}
 							button_icon_unpin = {
 								size = { 100% 100% }
 								block "unpin_properties" {}
+								input_action = "toggle_pin"
 							}
 						}
 
@@ -428,6 +436,7 @@ types windows {
 							button_icon_zoom = {
 								size = { 100% 100% }
 								block "goto_properties" {}
+								input_action = "zoom_to"
 							}
 						}
 
@@ -599,17 +608,19 @@ types windows {
 				flowcontainer = {
 					spacing = 5
 
-					textbox = {
-						using = fontsize_large
-						autoresize = yes
-						max_width = 395
-						fontsize_min = 14
-						elide = right
-						align = center|nobaseline
-						parentanchor = vcenter
+					block "window_header_container_line_two" {
+						textbox = {
+							using = fontsize_large
+							autoresize = yes
+							max_width = 395
+							fontsize_min = 14
+							elide = right
+							align = center|nobaseline
+							parentanchor = vcenter
 
-						block "window_header_name_line_two" {
-							raw_text = "Default Window Line Two"
+							block "window_header_name_line_two" {
+								raw_text = "Default Window Line Two"
+							}
 						}
 					}
 
@@ -730,10 +741,13 @@ types windows {
 		vbox = {
 			using = clickthrough_blocker
 			margin_top = 100
-			margin_right = 45
 			margin_left = 50
 			layoutpolicy_vertical = expanding
 			layoutpolicy_horizontal = preferred
+
+			block "content_margin_right" {
+				margin_right = 45
+			}
 
 			### header text / back / close
 			widget = {
@@ -772,12 +786,16 @@ types windows {
 				}
 
 				close_button_large = {	
-					position = { -11 15 }
+					name = "tutorial_highlight_close_button"
 					parentanchor = top|right
+					# onclick = "[InformationPanelBar.ClosePanel]"	### VICTORIA UNIVERSALIS - DO NOT CHANGE THIS
 					block "close_button_onclick" {
 						onclick = "[InformationPanelBar.ClosePanel]"	### VICTORIA UNIVERSALIS - DO NOT CHANGE THIS
 					}
 					shortcut = "close_window"
+						block "close_button_position" {
+						position = { -11 15 }
+					}
 				}
 			}
 
@@ -800,8 +818,11 @@ types windows {
 			}
 		}
 
-		scrollbarpolicy_horizontal = always_off
+			scrollbarpolicy_horizontal = as_needed
 
+		scrollbar_horizontal = {
+			using = horizontal_scrollbar
+		}
 		scrollbar_vertical = {
 			using = vertical_scrollbar
 		}
@@ -817,10 +838,10 @@ types windows {
 }
 
 template fullscreen_show {
-	visible = "[Or(Or(Or(InformationPanelBar.IsPanelOpen('politics'), InformationPanelBar.IsPanelOpen('politics_panel_change_law')), InformationPanelBar.IsPanelOpen('tech_tree')), GetVariableSystem.Exists('ve_tab_var'))]"
+	visible = "[Or(Or(Or(Or(Or(Or(InformationPanelBar.IsPanelOpen('politics'), InformationPanelBar.IsPanelOpen('politics_panel_change_law')), InformationPanelBar.IsPanelOpen('tech_tree')), InformationPanelBar.IsPanelOpen('pop_browser')), InformationPanelBar.IsPanelOpen('building_browser')), InformationPanelBar.IsPanelOpen('countries')), GetVariableSystem.Exists('ve_tab_var'))]"
 }
 template fullscreen_hide {
-	visible = "[Not(Or(Or(Or(InformationPanelBar.IsPanelOpen('politics'), InformationPanelBar.IsPanelOpen('politics_panel_change_law')), InformationPanelBar.IsPanelOpen('tech_tree')), GetVariableSystem.Exists('ve_tab_var')))]"
+	visible = "[Not(Or(Or(Or(Or(Or(Or(InformationPanelBar.IsPanelOpen('politics'), InformationPanelBar.IsPanelOpen('politics_panel_change_law')), InformationPanelBar.IsPanelOpen('tech_tree')), InformationPanelBar.IsPanelOpen('pop_browser')), InformationPanelBar.IsPanelOpen('building_browser')), InformationPanelBar.IsPanelOpen('countries')), GetVariableSystem.Exists('ve_tab_var')))]"
 }
 
 template hide_ve_mod_topbar {
