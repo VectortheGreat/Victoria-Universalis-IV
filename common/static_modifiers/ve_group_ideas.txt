@@ -26,7 +26,7 @@ innovative_idea_5_mdf = {
 
 innovative_idea_6_mdf = {
 	icon = gfx/interface/icon_ideas.dds
-	state_urbanization_mult = 0.15
+	state_urbanization_per_level_mult = -0.15
 }
 
 innovative_idea_7_mdf = {
@@ -242,7 +242,7 @@ administrative_idea_3_mdf = {
 administrative_idea_4_mdf = {
 	icon = gfx/interface/icon_ideas.dds
 	country_authority_add = 250
-	country_decree_cost_mult = -0.2
+	state_decree_cost_mult = -0.2
 }
 
 administrative_idea_5_mdf = {
@@ -295,23 +295,15 @@ qualification_idea_6_mdf = {
 
 qualification_idea_7_mdf = {
 	icon = gfx/interface/icon_ideas.dds
-	building_output_porcelain_mult = 0.075
-	building_output_meat_mult = 0.075
-	building_output_fruit_mult = 0.075
-	building_output_liquor_mult = 0.075
-	building_output_wine_mult = 0.075
-	building_output_tea_mult = 0.075
-	building_output_coffee_mult = 0.075
-	building_output_sugar_mult = 0.075
-	building_output_tobacco_mult = 0.075
-	building_output_opium_mult = 0.075
-	building_output_automobiles_mult = 0.075
-	building_output_telephones_mult = 0.075
-	building_output_radios_mult = 0.075
-	building_output_luxury_clothes_mult = 0.075
-	building_output_luxury_furniture_mult = 0.075
-	building_output_gold_mult = 0.075
-	building_output_fine_art_mult = 0.075
+	goods_output_liquor_mult = 0.1
+	goods_output_wine_mult = 0.1
+	goods_output_fabric_mult = 0.1
+	goods_output_fruit_mult = 0.1
+	goods_output_sugar_mult = 0.1
+	goods_output_radio_mult = 0.1
+	goods_output_silk_mult = 0.1
+	goods_output_electricity_mult = 0.1
+	goods_output_oil_mult = 0.1
 }
 
 naval_idea_1_mdf = {
@@ -332,7 +324,7 @@ naval_idea_3_mdf = {
 
 naval_idea_4_mdf = {
 	icon = gfx/interface/icon_ideas.dds
-	country_ignores_landing_craft_penalty = yes
+	country_ignores_landing_craft_penalty_bool = yes
 }
 
 naval_idea_5_mdf = {
@@ -460,7 +452,8 @@ militarization_idea_6_mdf = {
 
 militarization_idea_7_mdf = {
 	icon = gfx/interface/icon_ideas.dds
-	front_advancement_speed_mult = 0.2
+	military_formation_movement_speed_mult = 0.15
+	military_formation_mobilization_speed_mult = 0.15
 }
 
 politics_idea_1_mdf = {

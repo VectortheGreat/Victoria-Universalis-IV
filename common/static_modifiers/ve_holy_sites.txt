@@ -1,6 +1,6 @@
 roma_hs_mdf = {
 	icon = gfx/interface/monument.dds
-	state_urbanization_mult = 0.1
+	state_urbanization_per_level_mult = -0.1
 }
 
 cologne_hs_mdf = {

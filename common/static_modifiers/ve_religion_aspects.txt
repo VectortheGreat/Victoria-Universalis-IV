@@ -79,8 +79,8 @@ protestant_aspect_4_mdf = {
 
 protestant_aspect_5_mdf = {
 	icon = gfx/interface/catholic.dds
-	country_trade_route_exports_add = 10
-	country_trade_route_imports_add = 10
+	country_trade_route_cost_mult = -0.1
+	country_trade_route_quantity_mult = 0.2
 }
 
 protestant_aspect_6_mdf = {
@@ -331,7 +331,7 @@ jewish_aspect_4_mdf = {
 
 jewish_aspect_5_mdf = {
 	icon = gfx/interface/catholic.dds
-	state_urbanization_mult = 0.1
+	state_urbanization_per_level_mult = -0.1
 	state_accepted_birth_rate_mult = 0.015
 }
 
@@ -360,7 +360,7 @@ mahayana_pasive_mdf = {
 
 mahayana_aspect_1_mdf = {
 	icon = gfx/interface/catholic.dds
-	state_urbanization_mult = 0.1
+	state_urbanization_per_level_mult = -0.1
 	state_infrastructure_from_population_add = 0.1
 }
 
@@ -452,7 +452,7 @@ hindu_aspect_7_mdf = {
 
 hindu_aspect_8_mdf = {
 	icon = gfx/interface/catholic.dds
-	country_decree_cost_mult = -0.1
+	state_decree_cost_mult = -0.1
 }
 
 sikh_pasive_mdf = {
@@ -498,7 +498,7 @@ sikh_aspect_6_mdf = {
 
 sikh_aspect_7_mdf = {
 	icon = gfx/interface/catholic.dds
-	state_urbanization_mult = 0.15
+	state_urbanization_per_level_mult = -0.15
 	state_mortality_mult = -0.025
 }
 

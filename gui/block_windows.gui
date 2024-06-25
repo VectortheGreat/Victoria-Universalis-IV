@@ -788,7 +788,6 @@ types windows {
 				close_button_large = {	
 					name = "tutorial_highlight_close_button"
 					parentanchor = top|right
-					# onclick = "[InformationPanelBar.ClosePanel]"	### VICTORIA UNIVERSALIS - DO NOT CHANGE THIS
 					block "close_button_onclick" {
 						onclick = "[InformationPanelBar.ClosePanel]"	### VICTORIA UNIVERSALIS - DO NOT CHANGE THIS
 					}
