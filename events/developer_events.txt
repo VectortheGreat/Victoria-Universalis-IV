@@ -257,14 +257,17 @@ dev.2 = {
 		# 	country = c:URU
 		# 	type = puppet
 		# }
-		annex = c:BRZ
-		annex = c:AGJ
-		annex = c:PRG
-		annex = c:URU
-		annex = c:ARJ
-		annex = c:CHL
-		annex = c:CLM
-		annex = c:VNZ
+		# annex = c:BRZ
+		# annex = c:AGJ
+		# annex = c:PRG
+		# annex = c:URU
+		# annex = c:ARJ
+		# annex = c:CHL
+		# annex = c:CLM
+		# annex = c:VNZ
+		set_global_variable = ve_age_3_started
+		remove_global_variable = ve_age_1_started
+		remove_global_variable = ve_age_2_started
 		# set_state_religion = rel:atheist
 	}
 	option = {

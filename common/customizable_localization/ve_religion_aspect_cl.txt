@@ -212,6 +212,25 @@
 	}
 	text = {
 		trigger = {
+			country_has_state_religion = rel:confucian
+			piety_cost_trigger = yes
+		}
+		localization_key = confucian_aspect_1
+	}
+	text = {
+		trigger = {
+			country_has_state_religion = rel:confucian
+			OR = {
+				var:piety_bar_point < 125
+				NOT = {
+					has_modifier = mahayana_aspect_1_mdf
+				}
+			}
+		}
+		localization_key = confucian_aspect_1_black
+	}
+	text = {
+		trigger = {
 			country_has_state_religion = rel:hindu
 			piety_cost_trigger = yes
 		}
@@ -499,6 +518,25 @@ religion_aspect_2 = {
 			}
 		}
 		localization_key = shinto_aspect_2_black
+	}
+	text = {
+		trigger = {
+			country_has_state_religion = rel:confucian
+			piety_cost_trigger = yes
+		}
+		localization_key = confucian_aspect_2
+	}
+	text = {
+		trigger = {
+			country_has_state_religion = rel:confucian
+			OR = {
+				var:piety_bar_point < 125
+				NOT = {
+					has_modifier = mahayana_aspect_2_mdf
+				}
+			}
+		}
+		localization_key = confucian_aspect_2_black
 	}
 	text = {
 		trigger = {
@@ -792,6 +830,25 @@ religion_aspect_3 = {
 	}
 	text = {
 		trigger = {
+			country_has_state_religion = rel:confucian
+			piety_cost_trigger = yes
+		}
+		localization_key = confucian_aspect_3
+	}
+	text = {
+		trigger = {
+			country_has_state_religion = rel:confucian
+			OR = {
+				var:piety_bar_point < 125
+				NOT = {
+					has_modifier = mahayana_aspect_3_mdf
+				}
+			}
+		}
+		localization_key = confucian_aspect_3_black
+	}
+	text = {
+		trigger = {
 			country_has_state_religion = rel:hindu
 			piety_cost_trigger = yes
 		}
@@ -1079,6 +1136,25 @@ religion_aspect_4 = {
 			}
 		}
 		localization_key = shinto_aspect_4_black
+	}
+	text = {
+		trigger = {
+			country_has_state_religion = rel:confucian
+			piety_cost_trigger = yes
+		}
+		localization_key = confucian_aspect_4
+	}
+	text = {
+		trigger = {
+			country_has_state_religion = rel:confucian
+			OR = {
+				var:piety_bar_point < 125
+				NOT = {
+					has_modifier = mahayana_aspect_4_mdf
+				}
+			}
+		}
+		localization_key = confucian_aspect_4_black
 	}
 	text = {
 		trigger = {
@@ -1372,6 +1448,25 @@ religion_aspect_5 = {
 	}
 	text = {
 		trigger = {
+			country_has_state_religion = rel:confucian
+			piety_cost_trigger = yes
+		}
+		localization_key = confucian_aspect_5
+	}
+	text = {
+		trigger = {
+			country_has_state_religion = rel:confucian
+			OR = {
+				var:piety_bar_point < 125
+				NOT = {
+					has_modifier = mahayana_aspect_5_mdf
+				}
+			}
+		}
+		localization_key = confucian_aspect_5_black
+	}
+	text = {
+		trigger = {
 			country_has_state_religion = rel:hindu
 			piety_cost_trigger = yes
 		}
@@ -1659,6 +1754,25 @@ religion_aspect_6 = {
 			}
 		}
 		localization_key = shinto_aspect_6_black
+	}
+	text = {
+		trigger = {
+			country_has_state_religion = rel:confucian
+			piety_cost_trigger = yes
+		}
+		localization_key = confucian_aspect_6
+	}
+	text = {
+		trigger = {
+			country_has_state_religion = rel:confucian
+			OR = {
+				var:piety_bar_point < 125
+				NOT = {
+					has_modifier = mahayana_aspect_6_mdf
+				}
+			}
+		}
+		localization_key = confucian_aspect_6_black
 	}
 	text = {
 		trigger = {
@@ -1952,6 +2066,25 @@ religion_aspect_7 = {
 	}
 	text = {
 		trigger = {
+			country_has_state_religion = rel:confucian
+			piety_cost_trigger = yes
+		}
+		localization_key = confucian_aspect_7
+	}
+	text = {
+		trigger = {
+			country_has_state_religion = rel:confucian
+			OR = {
+				var:piety_bar_point < 125
+				NOT = {
+					has_modifier = mahayana_aspect_7_mdf
+				}
+			}
+		}
+		localization_key = confucian_aspect_7_black
+	}
+	text = {
+		trigger = {
 			country_has_state_religion = rel:hindu
 			piety_cost_trigger = yes
 		}
@@ -2242,6 +2375,25 @@ religion_aspect_8 = {
 	}
 	text = {
 		trigger = {
+			country_has_state_religion = rel:confucian
+			piety_cost_trigger = yes
+		}
+		localization_key = confucian_aspect_8
+	}
+	text = {
+		trigger = {
+			country_has_state_religion = rel:confucian
+			OR = {
+				var:piety_bar_point < 125
+				NOT = {
+					has_modifier = mahayana_aspect_8_mdf
+				}
+			}
+		}
+		localization_key = confucian_aspect_8_black
+	}
+	text = {
+		trigger = {
 			country_has_state_religion = rel:hindu
 			piety_cost_trigger = yes
 		}
@@ -2387,6 +2539,12 @@ religion_aspect_9 = {
 			country_has_state_religion = rel:shinto
 		}
 		localization_key = shinto_aspect_9
+	}
+	text = {
+		trigger = {
+			country_has_state_religion = rel:confucian
+		}
+		localization_key = confucian_aspect_9
 	}
 	text = {
 		trigger = {
@@ -2537,6 +2695,7 @@ holy_site_1 = {
 				country_has_state_religion = rel:gelugpa
 				country_has_state_religion = rel:theravada
 				country_has_state_religion = rel:shinto
+				country_has_state_religion = rel:confucian
 			}
 			owns_entire_state_region = STATE_CENTRAL_INDIA
 		}
@@ -2549,6 +2708,7 @@ holy_site_1 = {
 				country_has_state_religion = rel:gelugpa
 				country_has_state_religion = rel:theravada
 				country_has_state_religion = rel:shinto
+				country_has_state_religion = rel:confucian
 			}
 			NOT = {
 				owns_entire_state_region = STATE_CENTRAL_INDIA
@@ -2712,6 +2872,7 @@ holy_site_2 = {
 				country_has_state_religion = rel:gelugpa
 				country_has_state_religion = rel:theravada
 				country_has_state_religion = rel:shinto
+				country_has_state_religion = rel:confucian
 			}
 			owns_entire_state_region = STATE_SHANDONG
 		}
@@ -2724,6 +2885,7 @@ holy_site_2 = {
 				country_has_state_religion = rel:gelugpa
 				country_has_state_religion = rel:theravada
 				country_has_state_religion = rel:shinto
+				country_has_state_religion = rel:confucian
 			}
 			NOT = {
 				owns_entire_state_region = STATE_SHANDONG
@@ -2887,6 +3049,7 @@ holy_site_3 = {
 				country_has_state_religion = rel:gelugpa
 				country_has_state_religion = rel:theravada
 				country_has_state_religion = rel:shinto
+				country_has_state_religion = rel:confucian
 			}
 			owns_entire_state_region = STATE_BURMA
 		}
@@ -2899,6 +3062,7 @@ holy_site_3 = {
 				country_has_state_religion = rel:gelugpa
 				country_has_state_religion = rel:theravada
 				country_has_state_religion = rel:shinto
+				country_has_state_religion = rel:confucian
 			}
 			NOT = {
 				owns_entire_state_region = STATE_BURMA
@@ -3062,6 +3226,7 @@ holy_site_4 = {
 				country_has_state_religion = rel:gelugpa
 				country_has_state_religion = rel:theravada
 				country_has_state_religion = rel:shinto
+				country_has_state_religion = rel:confucian
 			}
 			owns_entire_state_region = STATE_KANSAI
 		}
@@ -3074,6 +3239,7 @@ holy_site_4 = {
 				country_has_state_religion = rel:gelugpa
 				country_has_state_religion = rel:theravada
 				country_has_state_religion = rel:shinto
+				country_has_state_religion = rel:confucian
 			}
 			NOT = {
 				owns_entire_state_region = STATE_KANSAI
@@ -3221,6 +3387,7 @@ holy_site_5 = {
 				country_has_state_religion = rel:gelugpa
 				country_has_state_religion = rel:theravada
 				country_has_state_religion = rel:shinto
+				country_has_state_religion = rel:confucian
 			}
 			owns_entire_state_region = STATE_HIMALAYAS
 		}
@@ -3233,6 +3400,7 @@ holy_site_5 = {
 				country_has_state_religion = rel:gelugpa
 				country_has_state_religion = rel:theravada
 				country_has_state_religion = rel:shinto
+				country_has_state_religion = rel:confucian
 			}
 			NOT = {
 				owns_entire_state_region = STATE_HIMALAYAS
@@ -3326,6 +3494,7 @@ religion_aspect_text_1 = {
 				country_has_state_religion = rel:gelugpa
 				country_has_state_religion = rel:theravada
 				country_has_state_religion = rel:shinto
+				country_has_state_religion = rel:confucian
 			}
 		}
 		localization_key = mahayana_aspect_text_1
@@ -3408,6 +3577,7 @@ religion_aspect_text_2 = {
 				country_has_state_religion = rel:gelugpa
 				country_has_state_religion = rel:theravada
 				country_has_state_religion = rel:shinto
+				country_has_state_religion = rel:confucian
 			}
 		}
 		localization_key = mahayana_aspect_text_2
@@ -3490,6 +3660,7 @@ religion_aspect_text_3 = {
 				country_has_state_religion = rel:gelugpa
 				country_has_state_religion = rel:theravada
 				country_has_state_religion = rel:shinto
+				country_has_state_religion = rel:confucian
 			}
 		}
 		localization_key = mahayana_aspect_text_3
@@ -3572,6 +3743,7 @@ religion_aspect_text_4 = {
 				country_has_state_religion = rel:gelugpa
 				country_has_state_religion = rel:theravada
 				country_has_state_religion = rel:shinto
+				country_has_state_religion = rel:confucian
 			}
 		}
 		localization_key = mahayana_aspect_text_4
@@ -3654,6 +3826,7 @@ religion_aspect_text_5 = {
 				country_has_state_religion = rel:gelugpa
 				country_has_state_religion = rel:theravada
 				country_has_state_religion = rel:shinto
+				country_has_state_religion = rel:confucian
 			}
 		}
 		localization_key = mahayana_aspect_text_5
@@ -3736,6 +3909,7 @@ religion_aspect_text_6 = {
 				country_has_state_religion = rel:gelugpa
 				country_has_state_religion = rel:theravada
 				country_has_state_religion = rel:shinto
+				country_has_state_religion = rel:confucian
 			}
 		}
 		localization_key = mahayana_aspect_text_6
@@ -3818,6 +3992,7 @@ religion_aspect_text_7 = {
 				country_has_state_religion = rel:gelugpa
 				country_has_state_religion = rel:theravada
 				country_has_state_religion = rel:shinto
+				country_has_state_religion = rel:confucian
 			}
 		}
 		localization_key = mahayana_aspect_text_7
@@ -3900,6 +4075,7 @@ religion_aspect_text_8 = {
 				country_has_state_religion = rel:gelugpa
 				country_has_state_religion = rel:theravada
 				country_has_state_religion = rel:shinto
+				country_has_state_religion = rel:confucian
 			}
 		}
 		localization_key = mahayana_aspect_text_8

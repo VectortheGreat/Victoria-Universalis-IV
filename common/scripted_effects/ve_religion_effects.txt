@@ -226,6 +226,15 @@ ve_religion_aspect_1_effect = {
 	}
 	else_if = {
 		limit = {
+			country_has_state_religion = rel:confucian
+		}
+		add_modifier = {
+			name = mahayana_aspect_1_mdf
+			months = 65
+		}
+	}
+	else_if = {
+		limit = {
 			country_has_state_religion = rel:sikh
 		}
 		add_modifier = {
@@ -356,6 +365,15 @@ ve_religion_aspect_2_effect = {
 	else_if = {
 		limit = {
 			country_has_state_religion = rel:shinto
+		}
+		add_modifier = {
+			name = mahayana_aspect_2_mdf
+			months = 65
+		}
+	}
+	else_if = {
+		limit = {
+			country_has_state_religion = rel:confucian
 		}
 		add_modifier = {
 			name = mahayana_aspect_2_mdf
@@ -502,6 +520,15 @@ ve_religion_aspect_3_effect = {
 	}
 	else_if = {
 		limit = {
+			country_has_state_religion = rel:confucian
+		}
+		add_modifier = {
+			name = mahayana_aspect_3_mdf
+			months = 65
+		}
+	}
+	else_if = {
+		limit = {
 			country_has_state_religion = rel:sikh
 		}
 		add_modifier = {
@@ -632,6 +659,15 @@ ve_religion_aspect_4_effect = {
 	else_if = {
 		limit = {
 			country_has_state_religion = rel:shinto
+		}
+		add_modifier = {
+			name = mahayana_aspect_4_mdf
+			months = 65
+		}
+	}
+	else_if = {
+		limit = {
+			country_has_state_religion = rel:confucian
 		}
 		add_modifier = {
 			name = mahayana_aspect_4_mdf
@@ -778,6 +814,15 @@ ve_religion_aspect_5_effect = {
 	}
 	else_if = {
 		limit = {
+			country_has_state_religion = rel:confucian
+		}
+		add_modifier = {
+			name = mahayana_aspect_5_mdf
+			months = 65
+		}
+	}
+	else_if = {
+		limit = {
 			country_has_state_religion = rel:sikh
 		}
 		add_modifier = {
@@ -908,6 +953,15 @@ ve_religion_aspect_6_effect = {
 	else_if = {
 		limit = {
 			country_has_state_religion = rel:shinto
+		}
+		add_modifier = {
+			name = mahayana_aspect_6_mdf
+			months = 65
+		}
+	}
+	else_if = {
+		limit = {
+			country_has_state_religion = rel:confucian
 		}
 		add_modifier = {
 			name = mahayana_aspect_6_mdf
@@ -1054,6 +1108,15 @@ ve_religion_aspect_7_effect = {
 	}
 	else_if = {
 		limit = {
+			country_has_state_religion = rel:confucian
+		}
+		add_modifier = {
+			name = mahayana_aspect_7_mdf
+			months = 65
+		}
+	}
+	else_if = {
+		limit = {
 			country_has_state_religion = rel:sikh
 		}
 		add_modifier = {
@@ -1152,6 +1215,7 @@ ve_religion_aspect_8_effect = {
 				country_has_state_religion = rel:gelugpa
 				country_has_state_religion = rel:theravada
 				country_has_state_religion = rel:shinto
+				country_has_state_religion = rel:confucian
 			}
 		}
 		add_modifier = {

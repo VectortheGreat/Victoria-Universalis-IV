@@ -105,6 +105,14 @@ ve_aspect_button_1 = {
 			}
 			trigger_else_if = {
 				limit = {
+					country_has_state_religion = rel:confucian
+				}
+				NOT = {
+					has_modifier = mahayana_aspect_1_mdf
+				}
+			}
+			trigger_else_if = {
+				limit = {
 					country_has_state_religion = rel:sikh
 				}
 				NOT = {
@@ -235,6 +243,14 @@ ve_aspect_button_2 = {
 			trigger_else_if = {
 				limit = {
 					country_has_state_religion = rel:shinto
+				}
+				NOT = {
+					has_modifier = mahayana_aspect_2_mdf
+				}
+			}
+			trigger_else_if = {
+				limit = {
+					country_has_state_religion = rel:confucian
 				}
 				NOT = {
 					has_modifier = mahayana_aspect_2_mdf
@@ -379,6 +395,14 @@ ve_aspect_button_3 = {
 			}
 			trigger_else_if = {
 				limit = {
+					country_has_state_religion = rel:confucian
+				}
+				NOT = {
+					has_modifier = mahayana_aspect_3_mdf
+				}
+			}
+			trigger_else_if = {
+				limit = {
 					country_has_state_religion = rel:sikh
 				}
 				NOT = {
@@ -509,6 +533,14 @@ ve_aspect_button_4 = {
 			trigger_else_if = {
 				limit = {
 					country_has_state_religion = rel:shinto
+				}
+				NOT = {
+					has_modifier = mahayana_aspect_4_mdf
+				}
+			}
+			trigger_else_if = {
+				limit = {
+					country_has_state_religion = rel:confucian
 				}
 				NOT = {
 					has_modifier = mahayana_aspect_4_mdf
@@ -653,6 +685,14 @@ ve_aspect_button_5 = {
 			}
 			trigger_else_if = {
 				limit = {
+					country_has_state_religion = rel:confucian
+				}
+				NOT = {
+					has_modifier = mahayana_aspect_5_mdf
+				}
+			}
+			trigger_else_if = {
+				limit = {
 					country_has_state_religion = rel:sikh
 				}
 				NOT = {
@@ -783,6 +823,14 @@ ve_aspect_button_6 = {
 			trigger_else_if = {
 				limit = {
 					country_has_state_religion = rel:shinto
+				}
+				NOT = {
+					has_modifier = mahayana_aspect_6_mdf
+				}
+			}
+			trigger_else_if = {
+				limit = {
+					country_has_state_religion = rel:confucian
 				}
 				NOT = {
 					has_modifier = mahayana_aspect_6_mdf
@@ -927,6 +975,14 @@ ve_aspect_button_7 = {
 			}
 			trigger_else_if = {
 				limit = {
+					country_has_state_religion = rel:confucian
+				}
+				NOT = {
+					has_modifier = mahayana_aspect_7_mdf
+				}
+			}
+			trigger_else_if = {
+				limit = {
 					country_has_state_religion = rel:sikh
 				}
 				NOT = {
@@ -1064,6 +1120,14 @@ ve_aspect_button_8 = {
 			}
 			trigger_else_if = {
 				limit = {
+					country_has_state_religion = rel:confucian
+				}
+				NOT = {
+					has_modifier = mahayana_aspect_8_mdf
+				}
+			}
+			trigger_else_if = {
+				limit = {
 					country_has_state_religion = rel:sikh
 				}
 				NOT = {
@@ -1166,6 +1230,7 @@ ve_holy_site_1 = {
 					country_has_state_religion = rel:gelugpa
 					country_has_state_religion = rel:theravada
 					country_has_state_religion = rel:shinto
+					country_has_state_religion = rel:confucian
 				}
 			}
 			owns_entire_state_region = STATE_CENTRAL_INDIA
@@ -1254,6 +1319,7 @@ ve_holy_site_1 = {
 					country_has_state_religion = rel:gelugpa
 					country_has_state_religion = rel:theravada
 					country_has_state_religion = rel:shinto
+					country_has_state_religion = rel:confucian
 				}
 			}
 			add_modifier = {
@@ -1334,6 +1400,7 @@ ve_holy_site_2 = {
 					country_has_state_religion = rel:gelugpa
 					country_has_state_religion = rel:theravada
 					country_has_state_religion = rel:shinto
+					country_has_state_religion = rel:confucian
 				}
 			}
 			owns_entire_state_region = STATE_SHANDONG
@@ -1420,6 +1487,7 @@ ve_holy_site_2 = {
 					country_has_state_religion = rel:gelugpa
 					country_has_state_religion = rel:theravada
 					country_has_state_religion = rel:shinto
+					country_has_state_religion = rel:confucian
 				}
 			}
 			add_modifier = {
@@ -1500,6 +1568,7 @@ ve_holy_site_3 = {
 					country_has_state_religion = rel:gelugpa
 					country_has_state_religion = rel:theravada
 					country_has_state_religion = rel:shinto
+					country_has_state_religion = rel:confucian
 				}
 			}
 			owns_entire_state_region = STATE_BURMA
@@ -1586,6 +1655,7 @@ ve_holy_site_3 = {
 					country_has_state_religion = rel:gelugpa
 					country_has_state_religion = rel:theravada
 					country_has_state_religion = rel:shinto
+					country_has_state_religion = rel:confucian
 				}
 			}
 			add_modifier = {
@@ -1665,6 +1735,7 @@ ve_holy_site_4 = {
 					country_has_state_religion = rel:gelugpa
 					country_has_state_religion = rel:theravada
 					country_has_state_religion = rel:shinto
+					country_has_state_religion = rel:confucian
 				}
 			}
 			owns_entire_state_region = STATE_KANSAI
@@ -1753,6 +1824,7 @@ ve_holy_site_4 = {
 					country_has_state_religion = rel:gelugpa
 					country_has_state_religion = rel:theravada
 					country_has_state_religion = rel:shinto
+					country_has_state_religion = rel:confucian
 				}
 			}
 			add_modifier = {
@@ -1827,6 +1899,7 @@ ve_holy_site_5 = {
 					country_has_state_religion = rel:gelugpa
 					country_has_state_religion = rel:theravada
 					country_has_state_religion = rel:shinto
+					country_has_state_religion = rel:confucian
 				}
 			}
 			owns_entire_state_region = STATE_HIMALAYAS
@@ -1906,6 +1979,7 @@ ve_holy_site_5 = {
 					country_has_state_religion = rel:gelugpa
 					country_has_state_religion = rel:theravada
 					country_has_state_religion = rel:shinto
+					country_has_state_religion = rel:confucian
 				}
 			}
 			add_modifier = {

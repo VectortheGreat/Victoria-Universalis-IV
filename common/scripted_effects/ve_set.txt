@@ -618,6 +618,7 @@ religion_passive_bonuses = {
 				country_has_state_religion = rel:gelugpa
 				country_has_state_religion = rel:theravada
 				country_has_state_religion = rel:shinto
+				country_has_state_religion = rel:confucian
 			}
 		}
 		add_modifier = {

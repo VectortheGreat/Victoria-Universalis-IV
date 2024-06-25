@@ -1,21 +1,20 @@
 ve_monthly_points = {
-	change_variable  = {
+	change_variable = {
 		name = piety_bar_point
 		add = monthly_piety_points
 	}
-	change_variable  = {
+	change_variable = {
 		name = idea_point_pool
 		add = monthly_idea_points
 	}
-	change_variable  = {
+	change_variable = {
 		name = culture_reform_point
 		add = monthly_culture_reform_point
 	}
-	change_variable  = {
+	change_variable = {
 		name = ve_splender_points
 		add = monthly_splender_points
 	}
-	
 }
 
 ve_holy_site_effects = {
@@ -811,6 +810,7 @@ ve_holy_site_effects = {
 				country_has_state_religion = rel:gelugpa
 				country_has_state_religion = rel:theravada
 				country_has_state_religion = rel:shinto
+				country_has_state_religion = rel:confucian
 			}
 		}
 		if = {

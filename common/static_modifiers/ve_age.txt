@@ -161,7 +161,7 @@ age_3_bonus_8 = {
 
 age_3_bonus_9 = {
 	icon = gfx/interface/icon_splendor_tiny.dds
-	front_advancement_speed_mult = 0.15
+	military_formation_movement_speed_mult = 0.15
 }
 
 age_3_bonus_10 = {
