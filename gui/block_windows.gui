@@ -610,13 +610,13 @@ types windows {
 
 					block "window_header_container_line_two" {
 						textbox = {
+							parentanchor = vcenter
 							using = fontsize_large
 							autoresize = yes
-							max_width = 395
+							max_width = 390
 							fontsize_min = 14
 							elide = right
-							align = center|nobaseline
-							parentanchor = vcenter
+							align = hcenter|nobaseline
 
 							block "window_header_name_line_two" {
 								raw_text = "Default Window Line Two"
@@ -792,6 +792,7 @@ types windows {
 						onclick = "[InformationPanelBar.ClosePanel]"	### VICTORIA UNIVERSALIS - DO NOT CHANGE THIS
 					}
 					shortcut = "close_window"
+
 						block "close_button_position" {
 						position = { -11 15 }
 					}
@@ -822,6 +823,7 @@ types windows {
 		scrollbar_horizontal = {
 			using = horizontal_scrollbar
 		}
+
 		scrollbar_vertical = {
 			using = vertical_scrollbar
 		}
