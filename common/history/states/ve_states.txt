@@ -1,5 +1,12 @@
 ﻿STATES = {
 	s:STATE_MINSK = {
+		create_state = {
+			country = c:RUS
+			owned_provinces = { x0161E0 x0A89D7 x16A8B5 x21175E x235156 x26722B x28C9D9 x2EB844 x2FD0B1 x416161 x41A0E0 x4B3105 x51F4A4 x557F9F x716052 x80DFDF x80E061 x80E0A0 xA16195 xA36969 xC06C1A xC3D50D xC9C7AF xEDA68C xEFAEC6 xF05D59 }
+		}
+		
+		add_homeland = cu:russian
+		add_homeland = cu:byelorussian
 		add_to_global_variable_list = {
 			name = adm_ideas
 			target = this
@@ -11,6 +18,15 @@
 		add_to_list = exclude_state_region
 	}
 	s:STATE_LOUISIANA = {
+		create_state = {
+			country = c:USA
+			owned_provinces = { x39D7A2 xC51912 x9A7554 x13B0C7 x4FA3C4 x86BC13 xC1273E x371B1B xC0F080 x0CF7A4 x68C793 x216122 x1BF244 x9E96B6 xC62139 xBF79F5 xAC4818 x18D465 xC07080 x131940 x71BEC1 xEE0FAA x7EF4B8 x403095 xEFB99C x2BEBAE xD658E7 xA4EE3C }
+		}
+		
+		add_homeland = cu:dixie
+		add_homeland = cu:afro_american
+		add_homeland = cu:cajun
+		add_homeland = cu:afro_antillean
 		add_to_global_variable_list = {
 			name = adm_ideas
 			target = this
@@ -22,6 +38,13 @@
 		add_to_list = exclude_state_region
 	}
 	s:STATE_NEW_YORK = {
+		create_state = {
+			country = c:USA
+			owned_provinces = { x1BAD55 x377E55 xFC18F1 xDB0967 x99CB10 xB08000 xD534B1 x75F2A6 x300080 x38C881 x260926 x9CC56A x4B0747 xBA53D0 x70C080 x195B49 xE217B5 x8C059D xB343E6 x308000 x2CA754 xE7BE2D x01D042 xB00080 xA6BED5 x235E9F xEDC7DA x3CB274 x73A16C x42D496 xFCF1BE xA7B5FE x05187E x9484F3 xEC2EAA }
+		}
+		
+		add_homeland = cu:yankee
+		add_homeland = cu:iroquoian
 		add_to_global_variable_list = {
 			name = adm_ideas
 			target = this
@@ -33,6 +56,12 @@
 		add_to_list = exclude_state_region
 	}
 	s:STATE_VIRGINIA = {
+		create_state = {
+			country = c:USA
+			owned_provinces = { xC0B0C0 x50F06C x90316A xC8ABE0 x4BD8B5 x056BA1 x76D2B5 xB5B538 xF00080 x304080 xBF8CE2 x40B0C0 x79AC2A x806B93 x9D6816 xB0C000 xAA8809 x08C98C xF13564 xC070C0 x29E263 x355247 x8D147E x8E2B78 x95CEBC xF47C46 x764809 x7C5B12 }
+		}	
+		
+		add_homeland = cu:dixie	
 		add_to_global_variable_list = {
 			name = adm_ideas
 			target = this
@@ -44,6 +73,12 @@
 		add_to_list = exclude_state_region
 	}
 	s:STATE_LOWER_EGYPT = {
+		create_state = {
+			country = c:EGY
+			owned_provinces = { x409060 x2050A0 x7ABE4B x50D0E0 x5011E0 x48E2A5 x6F13AD xD050E0 xF47AAA xA0D020 xC09060 xC37990 }
+		}
+		
+		add_homeland = cu:misri
 		add_to_global_variable_list = {
 			name = adm_ideas
 			target = this
@@ -55,6 +90,12 @@
 		add_to_list = exclude_state_region
 	}
 	s:STATE_HOME_COUNTIES = {
+		create_state = {
+			country = c:GBR
+			owned_provinces = { xE0E0C0 x7543C8 x60E0C0 x58D3AE x625993 x39F45B x19CECD x800020 xE060C0 }
+		}
+		
+		add_homeland = cu:british
 		add_to_global_variable_list = {
 			name = dip_ideas
 			target = this
@@ -66,6 +107,12 @@
 		add_to_list = exclude_state_region
 	}
 	s:STATE_LANCASHIRE = {
+		create_state = {
+			country = c:GBR
+			owned_provinces = { x410CE6 x60E000 xE0E000 xA242B2 xE06000 xE74158 x65617C x137263 }
+		}
+		
+		add_homeland = cu:british
 		add_to_global_variable_list = {
 			name = dip_ideas
 			target = this
@@ -77,6 +124,18 @@
 		add_to_list = exclude_state_region
 	}
 	s:STATE_PROVENCE = {
+		create_state = {
+			country = c:SAR
+			owned_provinces = { x5080E0 }
+		}
+
+		create_state = {
+			country = c:FRA
+			owned_provinces = { x3040E0 x31C0DF x6D5E3F xB040E0 xB0C060 xB0C0E0 xC03918 xCB9C34 }
+		}
+		
+		add_homeland = cu:french
+		add_homeland = cu:occitan
 		add_to_global_variable_list = {
 			name = dip_ideas
 			target = this
@@ -88,6 +147,12 @@
 		add_to_list = exclude_state_region
 	}
 	s:STATE_NORMANDY = {
+		create_state = {
+			country = c:FRA
+			owned_provinces = { x065CAE x0B7098 x1020C0 x65728E x79C0E6 x9020C0 x90A040 xA786BB xB06080 xB8903B xD642B5 }
+		}
+		
+		add_homeland = cu:french
 		add_to_global_variable_list = {
 			name = dip_ideas
 			target = this
@@ -99,6 +164,12 @@
 		add_to_list = exclude_state_region
 	}
 	s:STATE_ANDALUSIA = {
+		create_state = {
+			country = c:SPA
+			owned_provinces = { x4E5464 xB1108A x911497 x801020 x53634F x4A1438 x3C4E5B x58E3EB x809020 x2B6ABC xD06000 x59202C }
+		}
+		
+		add_homeland = cu:spanish
 		add_to_global_variable_list = {
 			name = dip_ideas
 			target = this
@@ -110,6 +181,12 @@
 		add_to_list = exclude_state_region
 	}
 	s:STATE_HOLLAND = {
+		create_state = {
+			country = c:NET
+			owned_provinces = { x777732 x80C0A0 xC04021 x01C0A0 }
+		}
+		
+		add_homeland = cu:dutch
 		add_to_global_variable_list = {
 			name = mil_ideas
 			target = this
@@ -121,6 +198,26 @@
 		add_to_list = exclude_state_region
 	}
 	s:STATE_BALUCHISTAN = {
+		create_state = {
+			country = c:OMA
+			state_type = treaty_port
+			owned_provinces = { xB7B2BD }
+		}
+		create_state = {
+			country = c:KAL
+			owned_provinces = { x0279A0 x0BAF8C x1161D9 x1D0224 x2B7441 x35754E x3C9B5F x43F4B8 x4529BD x4B2EAD x4DC3FF x4F800F x556C63 x56CF62 x5CBA3C x61D696 x626396 x62BEAA  x6D6D6B x782112 x7D60E7 x8DC922 x954C12 x97C017 xA3655B xB2AAA7 xBAE3D2 xBB836E xC6D9E8 xCD77FD xD4EC50  xD6DD8A xDEE571 xDF30A0  xE7A309 xE92A58 xEC696F xF78D0D  x1EF53E }
+		}
+		create_state = {
+			country = c:MAK
+			owned_provinces = { x978421 x4E09C5 xF9577D x45F2DD x113E0B x7FE584 xC070E0 xC6E602 xB0F79E x407060 x951063 x8ED831 x2E7961 xE87BBF x968562 x675BCE x2FF46D }
+		}
+		create_state = {
+			country = c:KAN
+			owned_provinces = { xE712E1 xF1414C x17D8AB x3EFD1E x109CC0 x4070E0 x9EED5C xA55509 xD575B0 }
+		}
+		add_claim = c:BIC
+		add_homeland = cu:baluchi
+		add_homeland = cu:pashtun
 		add_to_global_variable_list = {
 			name = mil_ideas
 			target = this
@@ -131,7 +228,13 @@
 		}
 		add_to_list = exclude_state_region
 	}
-	s:STATE_SOUTH_BENGAL = {
+	s:STATE_EAST_BENGAL = {
+		create_state = {
+			country = c:BIC
+			owned_provinces = { x025A94 x0C82AB x117060 x1E0385 x30B0A0 x3C68C9 x3E5D45 x40F5CE x4123FE x474C54 x475FC4 x55F631 x6F1170 x71E2DE x92DA2C x93E9F4 xA605E3 xAC2CB6 xB06FC2 xC81678 xCA47BA xCB5C0A xD06FA1 xD28E5F xD2E951 xDA53DA xDFA414 xE6CD14 xF04684 xF3A964 }
+		}
+		
+		add_homeland = cu:bengali
 		add_to_global_variable_list = {
 			name = mil_ideas
 			target = this
@@ -143,6 +246,18 @@
 		add_to_list = exclude_state_region
 	}
 	s:STATE_DOBRUDJA = {
+		create_state = {
+			country = c:TUR
+			owned_provinces = { xD9E021 xB06121 x7f25cd x7763F3 x940C8D xA3D7CE x316021 }
+		}
+		create_state = {
+			country = c:RUS
+			owned_provinces = { x50F5CB }
+		}
+		
+		add_homeland = cu:bulgarian
+		add_homeland = cu:romanian
+		add_homeland = cu:turkish
 		add_to_global_variable_list = {
 			name = mil_ideas
 			target = this
@@ -154,6 +269,13 @@
 		add_to_list = exclude_state_region
 	}
 	s:STATE_BASRA = {
+		create_state = {
+			country = c:TUR
+			owned_provinces = { xDABB9C x00F060 x68C89A xDB6370 x6CBE21 x807060 x7CAD29 x2050E0 x93CB74 xF1BF17 x88ADC8 x9F9CCA xBE6A23 x1D7F5E x1CC9CC xFE18C1 x41F864 }
+		}
+		
+		add_homeland = cu:mashriqi
+		add_homeland = cu:bedouin
 		add_to_global_variable_list = {
 			name = mil_ideas
 			target = this

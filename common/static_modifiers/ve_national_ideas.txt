@@ -32,7 +32,7 @@ gbr_idea_3 = {
 
 gbr_idea_4 = {
 	icon = gfx/interface/intelligensia.dds
-	state_colony_growth_creation_mult = 0.15
+	state_colony_growth_creation_factor = 0.15
 }
 
 gbr_idea_5 = {
@@ -57,7 +57,7 @@ fra_idea_tradition_1 = {
 
 fra_idea_tradition_2 = {
 	icon = gfx/interface/intelligensia.dds
-	political_movement_radicalism_mult = -0.1
+	political_movement_radicalism_add = -0.1
 }
 
 fra_idea_bonus = {
@@ -67,7 +67,7 @@ fra_idea_bonus = {
 
 fra_idea_1 = {
 	icon = gfx/interface/intelligensia.dds
-	state_urbanization_add = 10	#Unutma
+	state_urbanization_per_level_add = 10
 }
 
 fra_idea_2 = {
@@ -77,7 +77,9 @@ fra_idea_2 = {
 
 fra_idea_3 = {
 	icon = gfx/interface/intelligensia.dds
-	state_radicals_from_discrimination_mult = -0.15
+	country_radicalism_increases_violent_hostility_mult = -0.02
+	country_radicalism_increases_cultural_erasure_mult = -0.02
+	country_radicalism_increases_open_prejudice_mult = -0.02
 }
 
 fra_idea_4 = {
@@ -139,7 +141,7 @@ ger_idea_4 = {
 
 ger_idea_5 = {
 	icon = gfx/interface/intelligensia.dds
-	state_accepted_birth_rate_mult = 0.02
+	state_birth_rate_mult = 0.02
 }
 
 ger_idea_6 = {
@@ -198,7 +200,9 @@ aus_idea_5 = {
 
 aus_idea_6 = {
 	icon = gfx/interface/intelligensia.dds
-	state_radicals_from_discrimination_mult = -0.2
+	country_radicalism_increases_open_prejudice_mult = -0.025
+	country_radicalism_increases_second_rate_citizen_mult = -0.025
+	country_radicalism_increases_full_acceptance_mult = -0.025
 }
 
 aus_idea_7 = {
@@ -266,7 +270,9 @@ tur_idea_tradition_1 = {
 
 tur_idea_tradition_2 = {
 	icon = gfx/interface/intelligensia.dds
-	state_radicals_from_discrimination_mult = -0.05
+	country_radicalism_increases_violent_hostility_mult = -0.025
+	country_radicalism_increases_cultural_erasure_mult = -0.025
+	country_radicalism_increases_open_prejudice_mult = -0.025
 }
 
 tur_idea_bonus = {
@@ -436,7 +442,9 @@ usa_idea_bonus = {
 
 usa_idea_1 = {
 	icon = gfx/interface/intelligensia.dds
-	state_radicals_from_discrimination_mult = -0.1
+	country_radicalism_increases_open_prejudice_mult = -0.02
+	country_radicalism_increases_second_rate_citizen_mult = -0.02
+	country_radicalism_increases_full_acceptance_mult = -0.02
 }
 
 usa_idea_2 = {

@@ -1,6 +1,7 @@
 catholic_pasive_mdf = {
 	icon = gfx/interface/catholic.dds
-	state_loyalists_from_sol_change_accepted_religion_mult = 0.05
+	country_loyalism_increases_second_rate_citizen_mult = 0.15
+	country_loyalism_increases_full_acceptance_mult = 0.15
 	state_conversion_mult = 0.2
 }
 
@@ -45,7 +46,9 @@ catholic_aspect_7_mdf = {
 
 catholic_aspect_8_mdf = {
 	icon = gfx/interface/catholic.dds
-	state_loyalists_from_sol_change_mult = 0.1
+	country_loyalism_increases_violent_hostility_mult = 0.1
+	country_loyalism_increases_cultural_erasure_mult = 0.1
+	country_loyalism_increases_open_prejudice_mult = 0.1
 }
 
 protestant_pasive_mdf = {
@@ -73,7 +76,7 @@ protestant_aspect_3_mdf = {
 
 protestant_aspect_4_mdf = {
 	icon = gfx/interface/catholic.dds
-	state_colony_growth_creation_mult = 0.03
+	state_colony_growth_creation_factor = 0.03
 	state_colony_growth_speed_mult = 0.03
 }
 
@@ -100,7 +103,8 @@ protestant_aspect_8_mdf = {
 
 orthodox_pasive_mdf = {
 	icon = gfx/interface/catholic.dds
-	state_loyalists_from_sol_change_accepted_religion_mult = 0.05
+	country_loyalism_increases_second_rate_citizen_mult = 0.15
+	country_loyalism_increases_full_acceptance_mult = 0.15
 	country_authority_mult = 0.05
 }
 
@@ -152,7 +156,8 @@ orthodox_aspect_8_mdf = {
 
 coptic_pasive_mdf = {
 	icon = gfx/interface/catholic.dds
-	state_loyalists_from_sol_change_accepted_religion_mult = 0.05
+	country_loyalism_increases_second_rate_citizen_mult = 0.15
+	country_loyalism_increases_full_acceptance_mult = 0.15
 	battle_defense_owned_province_mult = 0.15
 }
 
@@ -301,7 +306,8 @@ shia_aspect_8_mdf = {
 
 jewish_pasive_mdf = {
 	icon = gfx/interface/catholic.dds
-	state_loyalists_from_sol_change_accepted_religion_mult = 0.05
+	country_loyalism_increases_second_rate_citizen_mult = 0.15
+	country_loyalism_increases_full_acceptance_mult = 0.15
 	country_bureaucracy_mult = 0.05
 }
 
@@ -332,7 +338,7 @@ jewish_aspect_4_mdf = {
 jewish_aspect_5_mdf = {
 	icon = gfx/interface/catholic.dds
 	state_urbanization_per_level_mult = -0.1
-	state_accepted_birth_rate_mult = 0.015
+	state_birth_rate_mult = 0.015
 }
 
 jewish_aspect_6_mdf = {
@@ -355,7 +361,8 @@ jewish_aspect_8_mdf = {
 mahayana_pasive_mdf = {
 	icon = gfx/interface/catholic.dds
 	country_production_tech_research_speed_mult = 0.05
-	state_loyalists_from_sol_change_accepted_religion_mult = 0.05
+	country_loyalism_increases_second_rate_citizen_mult = 0.15
+	country_loyalism_increases_full_acceptance_mult = 0.15
 }
 
 mahayana_aspect_1_mdf = {
@@ -399,12 +406,15 @@ mahayana_aspect_7_mdf = {
 
 mahayana_aspect_8_mdf = {
 	icon = gfx/interface/catholic.dds
-	state_radicals_from_discrimination_mult = -0.1
+	country_radicalism_increases_open_prejudice_mult = -0.025
+	country_radicalism_increases_second_rate_citizen_mult = -0.025
+	country_radicalism_increases_full_acceptance_mult = -0.025
 }
 
 hindu_pasive_mdf = {
 	icon = gfx/interface/catholic.dds
-	state_loyalists_from_sol_change_accepted_religion_mult = 0.05
+	country_loyalism_increases_second_rate_citizen_mult = 0.15
+	country_loyalism_increases_full_acceptance_mult = 0.15
 	country_war_exhaustion_casualties_mult = -0.05
 }
 
@@ -509,7 +519,8 @@ sikh_aspect_8_mdf = {
 
 animist_pasive_mdf = {
 	icon = gfx/interface/catholic.dds
-	state_loyalists_from_sol_change_accepted_religion_mult = 0.05
+	country_loyalism_increases_second_rate_citizen_mult = 0.15
+	country_loyalism_increases_full_acceptance_mult = 0.15
 	building_training_rate_mult = 0.075
 }
 
@@ -561,12 +572,16 @@ animist_aspect_8_mdf = {
 #Missionary
 ve_missionary_mdf = {
 	icon = gfx/interface/catholic.dds
-	state_radicals_from_discrimination_mult = 0.5
+	state_radicalism_increases_violent_hostility_mult = 0.2
+	state_radicalism_increases_cultural_erasure_mult = 0.2
+	state_radicalism_increases_open_prejudice_mult = 0.2
 }
 
 ve_diffusionist_mdf = {
 	icon = gfx/interface/catholic.dds
-	state_radicals_from_discrimination_mult = 0.5
+	state_radicalism_increases_violent_hostility_mult = 0.2
+	state_radicalism_increases_cultural_erasure_mult = 0.2
+	state_radicalism_increases_open_prejudice_mult = 0.2
 }
 
 atheist_pasive_mdf = {
