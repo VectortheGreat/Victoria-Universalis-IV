@@ -236,7 +236,9 @@ administrative_idea_2_mdf = {
 
 administrative_idea_3_mdf = {
 	icon = gfx/interface/icon_ideas.dds
-	state_radicals_from_discrimination_mult = -0.1
+	country_radicalism_increases_violent_hostility_mult = -0.02
+	country_radicalism_increases_cultural_erasure_mult = -0.02
+	country_radicalism_increases_open_prejudice_mult = -0.02
 }
 
 administrative_idea_4_mdf = {
@@ -289,8 +291,11 @@ qualification_idea_5_mdf = {
 
 qualification_idea_6_mdf = {
 	icon = gfx/interface/icon_ideas.dds
-	state_rich_standard_of_living_add = 2
-	state_middle_standard_of_living_add = 1
+	country_standard_of_living_full_acceptance_add = 2
+	country_standard_of_living_second_rate_citizen_add = 2
+	country_standard_of_living_open_prejudice_add = 1
+	country_standard_of_living_cultural_erasure_add = 1
+	country_standard_of_living_violent_hostility_add = 1
 }
 
 qualification_idea_7_mdf = {
@@ -356,13 +361,13 @@ ethnocentrism_idea_2_mdf = {
 
 ethnocentrism_idea_3_mdf = {
 	icon = gfx/interface/icon_ideas.dds
-	state_accepted_birth_rate_mult = 0.02
+	state_birth_rate_mult = 0.02
 }
 
 ethnocentrism_idea_4_mdf = {
 	icon = gfx/interface/icon_ideas.dds
-	state_loyalists_from_sol_change_accepted_religion_mult = 0.05
-	state_loyalists_from_sol_change_accepted_culture_mult = 0.05
+	country_loyalism_increases_second_rate_citizen_mult = 0.25
+	country_loyalism_increases_full_acceptance_mult = 0.25
 }
 
 ethnocentrism_idea_5_mdf = {
@@ -387,14 +392,18 @@ humanist_idea_1_mdf = {
 
 humanist_idea_2_mdf = {
 	icon = gfx/interface/icon_ideas.dds
-	state_loyalists_from_sol_change_mult = 0.1
+	country_loyalism_increases_violent_hostility_mult = 0.1
+	country_loyalism_increases_cultural_erasure_mult = 0.1
+	country_loyalism_increases_open_prejudice_mult = 0.1
 	state_turmoil_effects_mult = -0.05
 }
 
 humanist_idea_3_mdf = {
 	icon = gfx/interface/icon_ideas.dds
 	country_agitator_slots_add = 1
-	state_radicals_from_discrimination_mult = -0.2
+	country_radicalism_increases_violent_hostility_mult = -0.03
+	country_radicalism_increases_cultural_erasure_mult = -0.03
+	country_radicalism_increases_open_prejudice_mult = -0.03
 }
 
 humanist_idea_4_mdf = {
@@ -561,7 +570,7 @@ imperialist_idea_5_mdf = {
 
 imperialist_idea_6_mdf = {
 	icon = gfx/interface/icon_ideas.dds
-	state_colony_growth_creation_mult = 0.1
+	state_colony_growth_creation_factor = 0.1
 	building_group_bg_mining_throughput_add = 0.1
 }
 

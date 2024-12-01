@@ -9,8 +9,334 @@
 @panel_width_plus_30 = 570			# used to be 490
 @panel_width_plus_70 = 610			# used to be 530
 
+state_change_name_popup_type = {
+	name = state_change_name_popup
+}
+
 types state_panel_types
 {
+	type state_change_name_popup_type = default_popup
+	{
+		datacontext = "[StateNameChangePopup.GetState]"
+
+		blockoverride "window_header_name"
+		{
+			text = "CUSTOMIZE_STATE"
+		}
+
+		blockoverride "header_close_button_visibility"
+		{
+			visible = yes
+		}
+
+		blockoverride "header_close_button"
+		{
+			visible = yes
+			onclick = "[PopupManager.HideStateChangeName]"
+		}
+
+		blockoverride "entire_scrollarea"
+		{
+			flowcontainer = {
+				direction = vertical
+
+				# "Choose State Name" section
+				flowcontainer = {
+					direction = vertical	
+					spacing = 2
+
+					textbox = {
+						size = { 420 40 }
+						align = left|nobaseline
+						autoresize = yes
+						using = fontsize_large
+						text = "STATE_NAME"
+					}
+
+					divider_clean = {}
+
+					widget = {
+								size = { 0 8 }
+								}
+
+					# Set a custom name
+					editbox = {
+						visible = yes
+						background = {
+							using = text_edit_bg
+						}
+
+						# The name is referenced in code. If you change it, it will no longer get properly reset
+						name = "state_name_edit"
+						ontextedited = "[StateNameChangePopup.OnEditName]"
+						maxcharacters = 30
+						size = { 420 40 }
+						margin_left = 10
+						alwaystransparent = no
+						focuspolicy = all
+						focus_on_visible = yes
+						align = left|nobaseline
+					}
+					
+					widget = {
+						size = { 420 10 }
+					}
+				}
+				
+				# "Choose City Name" section
+				flowcontainer = {
+					direction = vertical	
+					spacing = 2
+					visible = "[StateNameChangePopup.ShouldHaveCityHub]"
+
+					textbox = {
+						size = { 420 40 }
+						align = left|nobaseline
+						autoresize = yes
+						using = fontsize_large
+						text = "CITY_NAME"
+					}
+
+					divider_clean = {}
+
+					widget = {
+								size = { 0 8 }
+								}
+
+					# Set a custom name
+					editbox = {
+						visible = yes
+						background = {
+							using = text_edit_bg
+						}
+
+						# The name is referenced in code. If you change it, it will no longer get properly reset
+						name = "city_name_edit"
+						ontextedited = "[StateNameChangePopup.OnEditCityName]"
+						maxcharacters = 30
+						size = { 420 40 }
+						margin_left = 10
+						alwaystransparent = no
+						focuspolicy = all
+						focus_on_visible = yes
+						align = left|nobaseline
+					}
+					
+					widget = {
+						size = { 420 10 }
+					}
+				}
+				
+				# "Choose Port Name" section
+				flowcontainer = {
+					direction = vertical	
+					spacing = 2
+					visible = "[StateNameChangePopup.ShouldHavePortHub]"
+
+					textbox = {
+						size = { 420 40 }
+						align = left|nobaseline
+						autoresize = yes
+						using = fontsize_large
+						text = "PORT_NAME"
+					}
+
+					divider_clean = {}
+
+					widget = {
+								size = { 0 8 }
+								}
+
+					# Set a custom name
+					editbox = {
+						visible = yes
+						background = {
+							using = text_edit_bg
+						}
+
+						# The name is referenced in code. If you change it, it will no longer get properly reset
+						name = "port_name_edit"
+						ontextedited = "[StateNameChangePopup.OnEditPortName]"
+						maxcharacters = 30
+						size = { 420 40 }
+						margin_left = 10
+						alwaystransparent = no
+						focuspolicy = all
+						focus_on_visible = yes
+						align = left|nobaseline
+					}
+					
+					widget = {
+						size = { 420 10 }
+					}
+				}
+				
+				# "Choose Farm Name" section
+				flowcontainer = {
+					direction = vertical	
+					spacing = 2
+					visible = "[StateNameChangePopup.ShouldHaveFarmHub]"
+
+					textbox = {
+						size = { 420 40 }
+						align = left|nobaseline
+						autoresize = yes
+						using = fontsize_large
+						text = "FARM_NAME"
+					}
+
+					divider_clean = {}
+
+					widget = {
+								size = { 0 8 }
+								}
+
+					# Set a custom name
+					editbox = {
+						visible = yes
+						background = {
+							using = text_edit_bg
+						}
+
+						# The name is referenced in code. If you change it, it will no longer get properly reset
+						name = "farm_name_edit"
+						ontextedited = "[StateNameChangePopup.OnEditFarmName]"
+						maxcharacters = 30
+						size = { 420 40 }
+						margin_left = 10
+						alwaystransparent = no
+						focuspolicy = all
+						focus_on_visible = yes
+						align = left|nobaseline
+					}
+					
+					widget = {
+						size = { 420 10 }
+					}
+				}
+				
+				# "Choose Mine Name" section
+				flowcontainer = {
+					direction = vertical	
+					spacing = 2
+					visible = "[StateNameChangePopup.ShouldHaveMineHub]"
+
+					textbox = {
+						size = { 420 40 }
+						align = left|nobaseline
+						autoresize = yes
+						using = fontsize_large
+						text = "MINE_NAME"
+					}
+
+					divider_clean = {}
+
+					widget = {
+								size = { 0 8 }
+								}
+
+					# Set a custom name
+					editbox = {
+						visible = yes
+						background = {
+							using = text_edit_bg
+						}
+
+						# The name is referenced in code. If you change it, it will no longer get properly reset
+						name = "mine_name_edit"
+						ontextedited = "[StateNameChangePopup.OnEditMineName]"
+						maxcharacters = 30
+						size = { 420 40 }
+						margin_left = 10
+						alwaystransparent = no
+						focuspolicy = all
+						focus_on_visible = yes
+						align = left|nobaseline
+					}
+					
+					widget = {
+						size = { 420 10 }
+					}
+				}
+				
+				# "Choose Wood Name" section
+				flowcontainer = {
+					direction = vertical	
+					spacing = 2
+					visible = "[StateNameChangePopup.ShouldHaveWoodHub]"
+
+					textbox = {
+						size = { 420 40 }
+						align = left|nobaseline
+						autoresize = yes
+						using = fontsize_large
+						text = "WOOD_NAME"
+					}
+
+					divider_clean = {}
+
+					widget = {
+								size = { 0 8 }
+								}
+
+					# Set a custom name
+					editbox = {
+						visible = yes
+						background = {
+							using = text_edit_bg
+						}
+
+						# The name is referenced in code. If you change it, it will no longer get properly reset
+						name = "wood_name_edit"
+						ontextedited = "[StateNameChangePopup.OnEditWoodName]"
+						maxcharacters = 30
+						size = { 420 40 }
+						margin_left = 10
+						alwaystransparent = no
+						focuspolicy = all
+						focus_on_visible = yes
+						align = left|nobaseline
+					}
+					
+					widget = {
+						size = { 420 10 }
+					}
+				}
+			}
+		}
+
+		blockoverride "fixed_bottom"
+		{
+			button = {
+				using = default_button_action
+				parentanchor = hcenter
+				size = { 420 50 }
+				using = fontsize_large
+				enabled = "[IsValid(StateNameChangePopup.Confirm)]"
+				onclick = "[Execute(StateNameChangePopup.Confirm)]"
+				tooltip = "[GetDesc(StateNameChangePopup.Confirm)]"
+				onclick = "[PopupManager.HideStateChangeName]"
+				using = default_content_fade
+
+				flowcontainer = {
+					parentanchor = center
+
+					textbox = {
+						parentanchor = vcenter
+						autoresize = yes
+						align = center|nobaseline
+						text = "CONFIRM"
+					}
+				}
+			}
+		}
+		
+		blockoverride "bottom_margin"
+		{
+			margin_bottom = 50
+		}
+	}
+
 	type states_panel =  default_block_window_two_lines {
 		name = "states_panel"
 		datacontext = "[StatesPanel.AccessState]"
@@ -32,6 +358,18 @@ types state_panel_types
 				tooltip = "GO_TO_BUTTON_COUNTRY"
 				input_action = "go_to_details"
 			}
+		}
+
+		blockoverride "edit_visibility" {
+			visible = "[StatesPanel.GetState.GetCountry.IsPlayer]"
+		}
+		
+		blockoverride "edit_tooltip" {
+			tooltip = "CUSTOMIZE_STATE_NAMES"
+		}
+		
+		blockoverride "edit_properties" {
+			onclick = "[PopupManager.ShowStateChangeName(StatesPanel.GetState.Self)]"
 		}
 
 		blockoverride "fixed_top" {
@@ -717,22 +1055,67 @@ types state_panel_types
 				}
 			}
 
+			# Harvest conditions and Famine
+			flowcontainer = {
+				parentanchor = top|right
+				widgetanchor = top|right
+				position =  { -15 65 }
+				spacing = 5
+
+				# Harvest conditions
+				flowcontainer = {
+					visible = "[Not(IsDataModelEmpty(State.GetHarvestConditions))]"
+					datamodel = "[State.GetHarvestConditions]"
+					spacing = 5
+	
+					item = {
+						icon = {
+							size = { 45 45 }
+							using = tooltip_se
+							onmousehierarchyenter = "[AccessHighlightManager.HighlightHarvestConditionArea(HarvestCondition.GetArea.Self)]"
+							onmousehierarchyleave = "[AccessHighlightManager.RemoveHighlight]"
+							alwaystransparent = no
+							texture = "[HarvestCondition.GetType.GetIcon]"
+							
+							tooltipwidget = {
+								FancyTooltip_HarvestCondition = {}
+							}
+						}
+					}
+				}
+
+				# Famine icon
+				icon = {
+					visible = "[State.HasFamine]"
+					tooltip = "[State.GetFamineDesc]"
+					using = tooltip_se
+					size = { 50 50 }
+					texture = "gfx/interface/backgrounds/round_button_bg.dds"
+					using = clickthrough_blocker
+
+					icon = {
+						size = { 50 50 }
+						parentanchor = center
+						texture = "gfx/interface/icons/famine_icons/famine_icon.dds"
+					}
+				}
+			}
+
 			### TIMED MODIFIERS
 			flowcontainer = {
 				parentanchor = bottom|right
 				widgetanchor = bottom|right
 				position =  { -20 -20 }
-
 				datamodel = "[State.GetTimedModifiers]"
 				spacing = 5
-
 				using = clickthrough_blocker
 
 				item = {
 					icon = {
-						tooltip = "[TimedModifier.GetTooltip]"
-						texture = "[TimedModifier.GetIcon]"
 						size = { 30 30 }
+						tooltip = "[TimedModifier.GetTooltip]"
+						using = tooltip_se
+						texture = "[TimedModifier.GetIcon]"
 					}
 				}
 			}
@@ -918,32 +1301,39 @@ types state_panel_types
 		widget = {
 			size = { 530 160 }
 			parentanchor = hcenter
-			scissor = yes
 
 			background = {
 				using = entry_bg_simple
 			}
 
-			flowcontainer = {
-				visible = yes
-				datamodel = "[State.GetSamplePops]"
-				margin_top = 20
-				spacing = -35
-				scale = 0.85
+			widget = {
 				parentanchor = right|vcenter
-				item = {
-					container = {
-						pop_portrait_medium_male = {
-							blockoverride "portrait_button" {
-								button = {
-									size = { 100% 100% }
-									onclick = "[InformationPanelBar.OpenPopDetailsPanel(Pop.AccessSelf)]"
+				size = { 300 225 }
+
+				# POP - Middle - This is at the top so that the left and right pop portaits does not get overlapped by the middle pop.
+				pop_portraits_datamodel = {
+					parentanchor = center
+
+					blockoverride "datamodel" {
+						datamodel = "[DataModelSubSpan(State.GetSamplePops, '(int32)1', '(int32)1')]"
+					}
+				}
+
+				# POP - Left
+				pop_portraits_datamodel = {
+					parentanchor = vcenter
+
+					blockoverride "datamodel" {
+						datamodel = "[DataModelFirst(State.GetSamplePops, '(int32)1')]"
 								}
 							}
-							tooltipwidget = {
-								FancyTooltip_Pop = {}
-							}
-						}
+
+				# POP - Right
+				pop_portraits_datamodel = {
+					parentanchor = vcenter|right
+
+					blockoverride "datamodel" {
+						datamodel = "[DataModelLast(State.GetSamplePops, '(int32)1')]"
 					}
 				}
 			}
@@ -1018,14 +1408,11 @@ types state_panel_types
 		}
 
 		flowcontainer = {
+			parentanchor = hcenter
 			margin = { 10 10 }
 			spacing = 10
-			margin_bottom = 0
-
-
-				flowcontainer = {
-				spacing = 10
-				direction = vertical
+			wrap_count = 2
+			ignoreinvisible = yes
 
 				state_panel_status_item_small = {
 					visible = "[State.IsCapitalState]"
@@ -1254,8 +1641,9 @@ types state_panel_types
 					}
 
 					blockoverride "goto" {
+					visible = "[State.IsOwner(GetPlayer)]"
 						tooltip = "GO_TO_BUTTON_CONSTRUCTION_QUEUE"
-						onclick = "[InformationPanelBar.OpenPanelTab('production_methods', 'construction_queues')]"
+					onclick = "[InformationPanelBar.OpenConstructionPanel(GetPlayer.Self)]"
 					}
 				}
 
@@ -1315,11 +1703,51 @@ types state_panel_types
 						text = "STATE_PANEL_POLLUTION"
 					}
 				}
+
+			# Food security - Mild Starvation
+			state_panel_status_item_small = {
+				datacontext = "[State.GetFoodSecurity]"
+				visible = "[And(And(GreaterThan_int64(FoodSecurity.GetNumStarvingPops, '(int64)0'), Not(State.HasFamine)), Not(GreaterThan_CFixedPoint(FoodSecurity.GetPercentageStarvingPopsSevere, '(CFixedPoint)0.02')))]"
+				tooltip = "STATE_FOOD_SECURITY_TOOLTIP"
+
+				blockoverride "texture" {
+					texture = "gfx/interface/icons/famine_icons/famine_icon.dds"
+				}
+
+				blockoverride "name" {
+					text = "STATE_FOOD_SECURITY"
+				}
 			}
 
-			flowcontainer = {
-				spacing = 10
-				direction = vertical
+			# Food security - Severe Starvation
+			state_panel_status_item_small = {
+				datacontext = "[State.GetFoodSecurity]"
+
+				visible = "[And(GreaterThan_CFixedPoint(FoodSecurity.GetPercentageStarvingPopsSevere, '(CFixedPoint)0.02'), Not(State.HasFamine))]"
+				tooltip = "STATE_FOOD_SECURITY_TOOLTIP"
+
+				blockoverride "texture" {
+					texture = "gfx/interface/icons/famine_icons/famine_icon.dds"
+				}
+
+				blockoverride "name" {
+					text = "STATE_FOOD_SECURITY"
+				}
+			}
+
+			# Food security - Famine
+			state_panel_status_item_small = {
+				visible = "[State.HasFamine]"
+				tooltip = "STATE_FOOD_SECURITY_TOOLTIP"
+
+				blockoverride "texture" {
+					texture = "gfx/interface/icons/famine_icons/famine_icon.dds"
+				}
+
+				blockoverride "name" {
+					text = "STATE_FOOD_SECURITY"
+				}
+			}
 
 				state_panel_status_item_small = {
 					visible = "[State.HasTurmoilEffects]"
@@ -1486,7 +1914,7 @@ types state_panel_types
 					}
 
 					blockoverride "name" {
-						raw_text = "Inactive [concept_treaty_port]"
+					text = "TREATY_PORT_INACTIVE"
 					}
 				}
 
@@ -1499,22 +1927,12 @@ types state_panel_types
 
 					blockoverride "name" {
 						text = "TOOLTIP_CLAIMS"
-					}
-				}
 			}
 		}
 
-		dynamicgridbox = {
-			visible = "[Not(IsDataModelEmpty(State.AccessStateRegion.AccessTraits))]"
 			datamodel = "[State.AccessStateRegion.AccessTraits]"
-			datamodel_wrap = 2
-			flipdirection = yes
 
 			item = {
-				flowcontainer = {
-					margin_left = 10
-					margin_top = 10
-
 					state_panel_status_item_small = {
 						tooltip = TOOLTIP_STATE_TRAIT
 						onmousehierarchyenter = "[AccessHighlightManager.HighlightStateTrait(StateTrait.Self)]"
@@ -1527,7 +1945,6 @@ types state_panel_types
 
 						blockoverride "name" {
 							text = "STATE_TRAIT_STATUS"
-						}
 					}
 				}
 			}
@@ -1536,7 +1953,7 @@ types state_panel_types
 		flowcontainer = {
 			margin = { 10 10 }
 			spacing = 10
-			margin_top = 10
+			margin_top = 0
 			maximumsize = { 550 -1 }
 
 			### NATIONAL FOCUSES
@@ -1701,18 +2118,32 @@ types state_panel_types
 						size = { 180 40 }
 						widget = {
 							parentanchor = center
-						  	size = { 175 35 }
+						  	size = { 170 35 }
 						 	background = {
 								using = entry_bg_simple
 						  	}
 						  	textbox = {
-								parentanchor = center
+								parentanchor = left|vcenter
 								autoresize = yes
-							  	align = hcenter|nobaseline
+							  	align = nobaseline
 							  	max_width = 165
 							  	fontsize_min = 14
 							  	elide = right
-							  	text = "[CulturalCommunity.GetCulture.GetName]"
+							 	text = "[CulturalCommunity.GetCulture.GetNameNoFormatting|v]"
+							 	position = { 10 0 }
+						  	}
+
+						  	textbox = {
+						  		visible = "[NotZero_CFixedPoint(CulturalCommunity.GetLocalAcceptanceDifference)]"
+								parentanchor = right|vcenter
+								autoresize = yes
+							  	align = nobaseline
+							  	text = "[CulturalCommunity.GetLocalAcceptanceDifference|+=0]"
+							  	position = { -10 0 }
+						  	}
+
+						  	tooltipwidget = {
+						 		FancyTooltip_CulturalCommunity = {}
 						  	}
 					   	}
 					}
@@ -2298,6 +2729,31 @@ types state_panel_types
 		parentanchor = vcenter
 	}
 
+	type pop_portraits_datamodel = flowcontainer {
+		scale = 0.80
+
+		block "datamodel" {
+			datamodel = "[State.GetSamplePops]"
+		}
+
+		item = {
+			container = {
+				pop_portrait_medium = {
+					blockoverride "portrait_button" {
+						button = {
+							size = { 100% 100% }
+							onclick = "[InformationPanelBar.OpenPopDetailsPanel(Pop.AccessSelf)]"
+						}
+					}
+
+					tooltipwidget = {
+						FancyTooltip_Pop = {}
+					}
+				}
+			}
+		}
+	}
+
 	type state_panel_condensed = flowcontainer {
 		ignoreinvisible = yes
 		direction = vertical
@@ -2535,7 +2991,7 @@ types state_panel_types
 						}
 
 						blockoverride "name" {
-							text = "Inactive [concept_treaty_port]"
+							text = "INACTIVE_TREATY_PORT"
 						}
 					}
 				}
@@ -2989,34 +3445,41 @@ types state_panel_types
 							blockoverride "title" {}
 							blockoverride "labels" {}
 							blockoverride "background" {}
+
 							blockoverride "piechartsize" {
 								size = { 90 90 }
 							}
+
 							blockoverride "chart_button_position" {
 								position = { 8 -8 }
 							}
+
 							blockoverride "chart_button_button_position" {
 								position = { 0 0 }
 							}
 						}
+
 						state_ig_piechart = {
 							blockoverride "title" {}
 							blockoverride "labels" {}
 							blockoverride "background" {}
+
 							blockoverride "piechartsize" {
 								size = { 90 90 }
 							}
+
 							blockoverride "chart_button_position" {
 								position = { 8 -8 }
 							}
+
 							blockoverride "chart_button_button_position" {
 								position = { 0 0 }
+							}
 							}
 						}
 					}
 				}
 
-			}
 			flowcontainer = {
 				ignoreinvisible = yes
 				direction = vertical
@@ -3024,11 +3487,52 @@ types state_panel_types
 
 				building_item_condensed = {
 					datacontext = "[StatesPanel.AccessBuilding('building_urban_center')]"
+
 					tooltipwidget = {
 						FancyTooltip_Building = {}
 					}
+
 					blockoverride "text" {
 						text = "TOTAL_URBAN_CENTERS"
+					}
+				}
+
+				building_item_condensed = {
+					visible = "[GreaterThan_int32(Building.GetExpansionLevel, '(int32)0')]"
+					datacontext = "[StatesPanel.AccessBuilding('building_trade_center')]"
+
+					tooltipwidget = {
+						FancyTooltip_Building = {}
+					}
+
+					blockoverride "text" {
+						text = "TOTAL_TRADE_CENTER"
+					}
+				}
+
+				building_item_condensed = {
+					visible = "[GreaterThan_int32(Building.GetExpansionLevel, '(int32)0')]"
+					datacontext = "[StatesPanel.AccessBuilding('building_manor_house')]"
+
+					tooltipwidget = {
+						FancyTooltip_Building = {}
+					}
+
+					blockoverride "text" {
+						text = "TOTAL_MANOR_HOUSE"
+					}
+				}
+
+				building_item_condensed = {
+					visible = "[GreaterThan_int32(Building.GetExpansionLevel, '(int32)0')]"
+					datacontext = "[StatesPanel.AccessBuilding('building_financial_district')]"
+
+					tooltipwidget = {
+						FancyTooltip_Building = {}
+					}
+
+					blockoverride "text" {
+						text = "TOTAL_FINANCIAL_DISTRICT"
 					}
 				}
 
@@ -3051,10 +3555,12 @@ types state_panel_types
 				}
 
 				building_item_condensed = {
+					datacontext = "[StatesPanel.AccessSubsistenceBuilding]"
+
 					tooltipwidget = {
 						FancyTooltip_Building = {}
 					}
-					datacontext = "[StatesPanel.AccessSubsistenceBuilding]"
+
 					blockoverride "text" {
 						text = "UNUSED_ARABLE"
 					}
@@ -3066,6 +3572,42 @@ types state_panel_types
 
 					item = {
 						building_item_condensed = {}
+					}
+				}
+
+				building_item_condensed = {
+					datacontext = "[StatesPanel.AccessBuilding('building_barracks')]"
+
+					tooltipwidget = {
+						FancyTooltip_Building = {}
+					}
+
+					blockoverride "text" {
+						text = "TOTAL_BARRACKS"
+					}
+				}
+
+				building_item_condensed = {
+					datacontext = "[StatesPanel.AccessBuilding('building_conscription_center')]"
+
+					tooltipwidget = {
+						FancyTooltip_Building = {}
+					}
+
+					blockoverride "text" {
+						text = "TOTAL_CONSCRIPTION_CENTER"
+					}
+				}
+
+				building_item_condensed = {
+					datacontext = "[StatesPanel.AccessBuilding('building_naval_base')]"
+
+					tooltipwidget = {
+						FancyTooltip_Building = {}
+					}
+
+					blockoverride "text" {
+						text = "TOTAL_CONSCRIPTION_CENTER"
 					}
 				}
 
@@ -3191,61 +3733,167 @@ types building_item_types
 {
 	### BUILDING HEADER ITEM ITEM
 	type header_building_item = widget {
-		size = { @panel_width 45 }
-
-		button = {
-			using = default_button
 			size = { @panel_width 40 }
-			parentanchor = vcenter
-			alpha = "[TransparentIfFalse(Building.IsActive)]"
-			onclick = "[InformationPanelBar.OpenBuildingDetailsPanel(Building.AccessSelf)]"
-		}
 
 		flowcontainer = {
-			position = { 15 0 }
 			parentanchor = vcenter
 			spacing = 10
 
 			icon = {
-				texture = "[Building.GetTexture]"
-				size = { 50 50 }
 				parentanchor = vcenter
+				size = { 35 35 }
+				texture = "[Building.GetIcon]"
 			}
 
 			textbox = {
+				parentanchor = vcenter
+				autoresize = yes
+				align = nobaseline
+				default_format = "#title"
+				max_width = 180
+				fontsize_min = 14
+				elide = right
+
 				block "text" {
 					text = ""
 				}
-				autoresize = yes
-				align = left|nobaseline
-				default_format = "#title"
-				parentanchor = vcenter
 			}
 
 			textbox = {
-				tooltip = "[Building.GetEmploymentTooltip]"
-				align = left|nobaseline
-				autoresize = yes
-				text = "[Building.GetExpansionLevelDesc]"
-				using = fontsize_xl
 				parentanchor = vcenter
+				align = nobaseline
+				autoresize = yes
+				using = fontsize_xl
+				tooltip = "[Building.GetEmploymentTooltip]"
+				text = "[Building.GetExpansionLevelDesc]"
+			}
+
+			button_icon_goto = {
+				parentanchor = vcenter
+				size = { 30 30 }
+				using = tooltip_above
+				tooltip = "GO_TO_BUTTON_BUILDING"
+				onclick = "[InformationPanelBar.OpenBuildingDetailsPanel(Building.AccessSelf)]"
+			}
+		}
+
+		flowcontainer = {
+			parentanchor = right|vcenter
+			position = { -10 0 }
+			spacing = 5
+
+			block "property_portfolio_barchart" {
+				property_portfolio_stacked_bar_chart_short = {
+					parentanchor = vcenter
+
+					blockoverride "barchart_size" {
+						size = { 150 30 }
+					}
+
+					blockoverride "barchart_item_margins" {
+						margin = { 10 0 }
+					}
+
+					blockoverride "barchart_item_icon_size" {
+						size = { 22 22 }
+					}
+				}
+			}
+
+			### subsidize + productivity
+			flowcontainer = {
+				parentanchor = vcenter
+				spacing = 5
+
+				widget = {
+					visible = "[Building.GetBuildingType.CanBeSubsidized]"
+					size = { 30 30 }
+					parentanchor = vcenter
+					
+					icon = {
+						visible = "[Building.IsSubsidized]"
+						size = { 130% 130% }
+						using = rotate_glow_blue
+						alwaystransparent = yes
+						parentanchor = center
+						using = default_fade_in_out
+					}
+
+					button_icon_round_action = {
+						visible = "[Building.IsSubsidized]"
+						size = { 100% 100% }
+						enabled = "[IsValid( Building.ToggleSubsidies )]"
+						onclick = "[Execute( Building.ToggleSubsidies )]" 
+						tooltip = "SUBSIDIZED_YES"
+						using = icon_toggle_single_off_sound
+						
+						blockoverride "icon" {
+							texture = "gfx/interface/production_methods/subsidized.dds"
+						}
+
+						blockoverride "icon_size" {
+							size = { 80% 80% }
+						}
+					}
+					
+					button_icon_round_action = {
+						visible = "[Not(Building.IsSubsidized)]"
+						size = { 100% 100% }							
+						enabled = "[IsValid( Building.ToggleSubsidies )]"
+						onclick = "[Execute( Building.ToggleSubsidies )]" 
+						tooltip = "SUBSIDIZED_NO"
+						using = icon_toggle_single_on_sound
+						
+						blockoverride "icon" {
+							texture = "gfx/interface/production_methods/subsidized_not.dds"
+						}
+						
+						blockoverride "icon_size" {
+							size = { 80% 80% }
+						}
 			}
 		}
 
 		textbox = {
-			visible = "[And(And(Building.IsSelfFunded, Building.IsActive), Not(Building.IsSubsistenceBuilding))]"
+					visible = "[And(And(And(Not(Building.IsGovernmentFunded), Building.IsActive), Not(Building.IsSubsidized)), Not(Building.IsSubsistenceBuilding))]"
+					parentanchor = vcenter
+					minimumsize = { 60 -1 }
+					autoresize = yes
+					alpha = "[TransparentIfFalse(Building.IsActive)]"
+					align = right|nobaseline
+					max_width = 52
+					fontsize_min = 12
 			raw_text = "#v @money![Building.GetAverageAnnualEarningsPerEmployeeFormatted|1+]#!"
+				}
+				
+				textbox = {
+					visible = "[And(Building.GetBuildingType.CanBeSubsidized, Building.IsSubsidized)]"
+					parentanchor = vcenter
+					minimumsize = { 60 -1 }
 			autoresize = yes
 			align = right|nobaseline
-			parentanchor = right|vcenter
-			position = { -15 0 }
+					max_width = 52
+					fontsize_min = 12
+					raw_text = "#N @money!#bold -[Building.GetSubsidies|D]#!"
+				}
+
+				textbox = {
+					visible = "[And(And(And(Building.IsGovernmentFunded, Building.IsActive), Not(Building.IsSubsidized)), Not(Building.IsSubsistenceBuilding))]"
+					parentanchor = vcenter
+					minimumsize = { 60 -1 }
+					autoresize = yes
+					alpha = "[TransparentIfFalse(Building.IsActive)]"
+					align = right|nobaseline
+					raw_text = "#N @money!-[Building.GetGovernmentExpenses|D-]#!"
+				}
+			}
 		}
 
 		flowcontainer = {
 			visible = "[And(And(Building.IsSelfFunded, Building.IsActive), Building.IsSubsistenceBuilding)]"
 			datacontext = "[Building.AccessPopsList]"
 			datacontext = "[Building]"
-			datamodel = "[PopList.AccessPopList]"
+			datamodel = "[PopList.GetItems]"
 			position = { -15 0 }
 			parentanchor = right|vcenter
 
@@ -3274,7 +3922,7 @@ types building_item_types
 		icon = {
 			visible = yes
 			alpha = "[TransparentIfFalse(Building.IsActive)]"
-			texture = "[Building.GetTexture]"
+			texture = "[Building.GetIcon]"
 			size = { 100% 100% }
 		}
 
@@ -3383,11 +4031,12 @@ types building_item_types
 					### EXPAND BUTTON
 					expand_building_button = {
 						visible = no
+						parentanchor = bottom|right
+						widgetanchor = bottom|right
+
 						block "expand_button_placement" {
 							position = { -5 -5 }
 						}
-						parentanchor = bottom|right
-						widgetanchor = bottom|right
 						
 						blockoverride "button_size" {
 							size = { 29 29 }
@@ -3398,6 +4047,7 @@ types building_item_types
 					container = {
 						position = { -5 4 }
 						parentanchor = top|right
+
 						flowcontainer = {
 							parentanchor = right
 							direction = vertical
@@ -3411,14 +4061,16 @@ types building_item_types
 								autoresize = yes
 								minimumsize = { 23 27 }
 								margin_right = 6
-
 								using = tooltip_above
 								tooltip = "TOOLTIP_BUILDING_PRODUCTIVITY"
+
 								tooltipwidget = {
 									GraphTooltip_Productivity = {}
 								}
+
 								background = {
 									using = dark_area
+									alpha = 0.5
 								}
 							}
 
@@ -3466,6 +4118,7 @@ types building_item_types
 
 									background = {
 										using = dark_area
+										alpha = 0.5
 									}
 								}
 
@@ -3481,6 +4134,7 @@ types building_item_types
 										parentanchor = center
 										using = default_fade_in_out
 									}
+
 									button_icon_round_action = {
 										size = { 100% 100% }
 										visible = "[And(Building.GetBuildingType.CanBeSubsidized,Building.IsSubsidized)]"
@@ -3492,6 +4146,7 @@ types building_item_types
 										blockoverride "icon" {
 											texture = "gfx/interface/production_methods/subsidized.dds"
 										}
+
 										blockoverride "icon_size" {
 											size = { 80% 80% }
 										}
@@ -3508,6 +4163,7 @@ types building_item_types
 										blockoverride "icon" {
 											texture = "gfx/interface/production_methods/subsidized_not.dds"
 										}
+
 										blockoverride "icon_size" {
 											size = { 80% 80% }
 										}
@@ -3739,7 +4395,7 @@ types building_item_types
 				icon = {
 					alpha = "[TransparentIfFalse(Building.IsActive)]"
 					size = { 45 45 }
-					texture = "[Building.GetTexture]"
+					texture = "[Building.GetIcon]"
 				}
 
 

@@ -30,7 +30,7 @@ wittenberg_hs_mdf = {
 
 prag_hs_mdf = {
 	icon = gfx/interface/monument.dds
-	political_movement_radicalism_mult = -0.15
+	political_movement_radicalism_add = -0.15
 }
 
 canterbury_hs_mdf = {
@@ -40,7 +40,8 @@ canterbury_hs_mdf = {
 
 constantinople_hs_mdf = {
 	icon = gfx/interface/monument.dds
-	state_loyalists_from_sol_change_accepted_religion_mult = 0.075
+	country_loyalism_increases_second_rate_citizen_mult = 0.2
+	country_loyalism_increases_full_acceptance_mult = 0.2
 }
 
 alexandria_hs_mdf = {
@@ -115,7 +116,7 @@ ise_grand_shrine_hs_mdf = {
 
 lumbini_hs_mdf = {
 	icon = gfx/interface/monument.dds
-	state_accepted_birth_rate_mult = 0.02
+	state_birth_rate_mult = 0.02
 }
 
 mathura_hs_mdf = {
