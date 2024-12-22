@@ -51,16 +51,16 @@ types topbar_components
 				
 				flowcontainer = {
 					name = "tutorial_highlight_gdp"
-					minimumsize = { 90 30 }
-					maximumsize = { 90 30 }
+					minimumsize = { 88 30 }
+					maximumsize = { 88 30 }
 					spacing = 2
 					using = GDP_tooltip_with_graph
 					using = tooltip_below
 
-					onmousehierarchyenter = "[SelectMapModeByKey('mm_gdp')]"
-					onmousehierarchyleave = "[UnforceMapMode]"
+					onmousehierarchyenter = "[SetTempMapModeByKey('mm_gdp')]"
+					onmousehierarchyleave = "[RemoveTempMapMode]"
 					alwaystransparent = no
-					
+
 					icon = {
 						texture = "gfx/interface/icons/generic_icons/gdp.dds"
 						size = { @secondary_icon_size @secondary_icon_size }
@@ -71,19 +71,21 @@ types topbar_components
 						raw_text = "#variable [Country.GetGDP|1*]#!"
 						autoresize = yes
 						align = left|nobaseline
+						elide = right
+						fontsize_min = 12
 					}
 				}
 				
 				flowcontainer = {
-					minimumsize = { 90 30 }
-					maximumsize = { 90 30 }
+					minimumsize = { 84 30 }
+					maximumsize = { 84 30 }
 					spacing = 2
-					tooltip = "LITERACY_TOOLTIP"
+					using = literacy_tooltip_with_graph
 					using = tooltip_below
-					onmousehierarchyenter = "[SelectMapModeByKey('mm_literacy')]"
-					onmousehierarchyleave = "[UnforceMapMode]"
+					onmousehierarchyenter = "[SetTempMapModeByKey('mm_literacy')]"
+					onmousehierarchyleave = "[RemoveTempMapMode]"
 					alwaystransparent = no
-			
+
 					icon = {
 						texture = "gfx/interface/icons/generic_icons/literacy.dds"
 						size = { @secondary_icon_size @secondary_icon_size }
@@ -94,18 +96,20 @@ types topbar_components
 						raw_text = "#variable [Country.GetIncorporatedLiteracyRate|%1]#!"
 						autoresize = yes
 						align = left|nobaseline
+						elide = right
+						fontsize_min = 12
 					}
 				}
 				flowcontainer = {
-					minimumsize = { 90 30 }
-					maximumsize = { 90 30 }
+					minimumsize = { 68 30 }
+					maximumsize = { 68 30 }
 					spacing = 2
 					using = average_standard_of_living_tooltip_with_graph
 					using = tooltip_below
-					onmousehierarchyenter = "[SelectMapModeByKey('mm_standard_of_living')]"
-					onmousehierarchyleave = "[UnforceMapMode]"
+					onmousehierarchyenter = "[SetTempMapModeByKey('mm_standard_of_living')]"
+					onmousehierarchyleave = "[RemoveTempMapMode]"
 					alwaystransparent = no
-				
+
 					textbox = {
 						parentanchor = vcenter
 						text = "[LabelingHelper.GetIconForStandardOfLivingCFixedPoint(Country.GetAverageSoLByPopulation)|v]"
@@ -119,19 +123,21 @@ types topbar_components
 						text = "[Country.GetFormattedStandardOfLivingAll|v]"
 						autoresize = yes
 						align = left|nobaseline
-						margin_left = 3
+						elide = right
+						fontsize_min = 12
+						margin_right = 3
 					}
 				}
 				flowcontainer = {
-					minimumsize = { 90 30 }
-					maximumsize = { 90 30 }
-					spacing = 2	
+					minimumsize = { 78 30 }
+					maximumsize = { 78 30 }
+					spacing = 2
 					using = population_tooltip_with_graph
 					using = tooltip_below
-					onmousehierarchyenter = "[SelectMapModeByKey('mm_population')]"
-					onmousehierarchyleave = "[UnforceMapMode]"
+					onmousehierarchyenter = "[SetTempMapModeByKey('mm_population')]"
+					onmousehierarchyleave = "[RemoveTempMapMode]"
 					alwaystransparent = no
-			
+
 					icon = {
 						texture = "gfx/interface/icons/generic_icons/population.dds"
 						size = { @secondary_icon_size @secondary_icon_size }
@@ -142,19 +148,22 @@ types topbar_components
 						raw_text = "#variable [Country.GetTotalPopulation|D]#!"
 						autoresize = yes
 						align = left|nobaseline
+						elide = right
+						fontsize_min = 12
+						margin_right = 3
 					}
 				}
 				flowcontainer = {
-					minimumsize = { 90 30 }
-					maximumsize = { 90 30 }
-					spacing = 2	
+					minimumsize = { 76 30 }
+					maximumsize = { 76 30 }
+					spacing = 2
 					using = radicals_tooltip_with_graph
 					using = tooltip_below
-					onmousehierarchyenter = "[SelectMapModeByKey('mm_radicals')]"
-					onmousehierarchyleave = "[UnforceMapMode]"
-					alpha = "[TransparentIfZero_int32(Country.GetNumRadicals)]"
+					onmousehierarchyenter = "[SetTempMapModeByKey('mm_radicals')]"
+					onmousehierarchyleave = "[RemoveTempMapMode]"
+					alpha = "[TransparentIfZero_int64(Country.GetNumRadicals)]"
 					alwaystransparent = no
-			
+
 					icon = {
 						texture = "gfx/interface/icons/generic_icons/population_radical.dds"
 						size = { @secondary_icon_size @secondary_icon_size }
@@ -165,18 +174,21 @@ types topbar_components
 						raw_text = "#variable [Country.GetNumRadicals|D]#!"
 						autoresize = yes
 						align = left|nobaseline
+						elide = right
+						fontsize_min = 12
 					}
 				}
 				flowcontainer = {
-					minimumsize = { 90 30 }
-					maximumsize = { 90 30 }
-					spacing = 2	
+					minimumsize = { 76 30 }
+					maximumsize = { 76 30 }
+					spacing = 2
 					using = loyalists_tooltip_with_graph
 					using = tooltip_below
-					onmousehierarchyenter = "[SelectMapModeByKey('mm_loyalists')]"
-					onmousehierarchyleave = "[UnforceMapMode]"
-					alpha = "[TransparentIfZero_int32(Country.GetNumLoyalists)]"
+					onmousehierarchyenter = "[SetTempMapModeByKey('mm_loyalists')]"
+					onmousehierarchyleave = "[RemoveTempMapMode]"
+					alpha = "[TransparentIfZero_int64(Country.GetNumLoyalists)]"
 					alwaystransparent = no
+
 					icon = {
 						texture = "gfx/interface/icons/generic_icons/population_loyalist.dds"
 						size = { @secondary_icon_size @secondary_icon_size }
@@ -187,6 +199,8 @@ types topbar_components
 						raw_text = "#variable [Country.GetNumLoyalists|D]#!"
 						autoresize = yes
 						align = left|nobaseline
+						elide = right
+						fontsize_min = 12
 					}
 				}
 				flowcontainer = {
@@ -896,10 +910,10 @@ types topbar_components
 									}
 								}
 							}
-							}
+						}
 							
 							### MONEY
-							container = {
+						container = {
 								name = "tutorial_highlight_treasury"
 								layoutpolicy_vertical = expanding
 								
@@ -965,7 +979,7 @@ types topbar_components
 										}
 									}
 								}
-							}
+						}
 						
 						}
 						
@@ -1062,8 +1076,8 @@ types topbar_components
 		size = { 57 57 }
 		position = { -4 78 }
 		
-		onclick = "[MapListPanelManager.ToggleCurrentPanel]"
-		onclick = "[SelectMapModeByKey('mm_default')]"
+		onclick = "[MapListPanelManager.OpenCurrentPanel]"
+		onclick = "[SetTempMapModeByKey('mm_default')]"
 
 		### RANK
 		rank_badge = {

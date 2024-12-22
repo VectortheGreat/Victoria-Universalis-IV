@@ -64,12 +64,13 @@ age_1_bonus_11 = {
 
 age_2_bonus_1 = {
 	icon = gfx/interface/icon_splendor_tiny.dds
-	country_suppression_ig_attraction_mult = -0.25
+	country_law_enactment_max_setbacks_add = 1
 }
 
 age_2_bonus_2 = {
 	icon = gfx/interface/icon_splendor_tiny.dds
 	country_resource_discovery_chance_mult = 0.2
+	country_institution_colonial_affairs_max_investment_add = 1
 }
 
 age_2_bonus_3 = {
@@ -79,7 +80,9 @@ age_2_bonus_3 = {
 
 age_2_bonus_4 = {
 	icon = gfx/interface/icon_splendor_tiny.dds
-	political_movement_radicalism_mult = -0.1
+	country_radicalism_increases_violent_hostility_mult = -0.03
+	country_radicalism_increases_cultural_erasure_mult = -0.03
+	country_radicalism_increases_open_prejudice_mult = -0.03
 }
 
 age_2_bonus_5 = {
